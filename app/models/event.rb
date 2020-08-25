@@ -1,10 +1,10 @@
 class Event < ApplicationRecord
   belongs_to :user
-  
+
   has_many :rsvps
   has_many :users, through: :rsvps
 
-  has_many :comments
+  has_many :comments, optional: true
 
   validates :date_time, presence: true
   validates :title, presence: true
