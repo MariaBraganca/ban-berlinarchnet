@@ -1,2 +1,23 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- This is an experience -->
+
+<!-- Banner -->
+<%= cl_image_tag("banners/banner3", :class => 'banner') %>
+
+<!-- Avatar -->
+<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-large') %>
+
+<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar') %>
+
+<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-bordered') %>
+
+<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-square') %>
+
+<!-- Button -->
+
+<%= link_to 'Events', events_path, :class => "button-inverse" %>
+
+<%= link_to 'Offices', events_path, :class => "button-inverse" %>
+
+<%= link_to 'Jobs', events_path, :class => "button-inverse" %>
+
+<%= link_to 'Post', events_path, :class => "button-inverse" %>
