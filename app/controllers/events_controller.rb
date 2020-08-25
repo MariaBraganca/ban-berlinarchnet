@@ -5,10 +5,13 @@ class EventsController < ApplicationController
   end
 
   def show
-
+    authorize @event
+    @rsvp = Rsvp.new
   end
 
   def new
+    @event = Event.new
+    @user = current_user
   end
 
   def edit
@@ -24,5 +27,4 @@ class EventsController < ApplicationController
     params.require(:event).permit(:date_time, :location, :title, :description)
   end
 
-end
 end
