@@ -1,15 +1,71 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class = 'container p-3 my-3'>
+<h1>Event</h1>
+
+<!--test code-->
+<h3>Event <%= @event.title %></h3>
+<img src ='https://source.unsplash.com/500x400/?Architecture' alt = 'alternative photo' %>
+<!--test code-->
+
+<div class = 'container p-3 my-3'>
+<div class="row">
+    <div class="col-12 col-lg-3">
+        <p>About </p>
+    </div>
+    <div class = 'col-12 col-lg-9'>
+   <p>Description: <%= @event.description %></p>
+    </div>
+</div>
+</div>
+
+<div class = 'container p-3 my-3'>
+    <div class="row">
+        <div class="col-12 col-lg-3">
+            <p>When <%= @event.date_time %></p>
+            <p>Location <%= @event.location %></p>
+        </div>
+        <div class = 'col-12 col-lg-9'>
+            <p>Description: <%= @event.description %></p>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-12 col-lg-3">
+            <p>Attending </p>
+        </div>
+        <div class = 'col-12 col-lg-9'>
+
+        </div>
+    </div>
+
+
+   <div class="row">
+        <div class="col-12 col-lg-3">
+            <p>Photos </p>
+        </div>
+        <div class = 'col-12 col-lg-9'>
+
+        </div>
+    </div>
+
 
 <div class="row">
-    <div class="col-12 col-lg-6">
-        <p><%= @event.title %></p>
-        <p><%= @event.description %></p>
-        <p>Date and time:<%= @event.date_time %></p>
-  </div>
-<<<<<<< HEAD
-    </div>
-=======
+        <div class="col-12 col-lg-3">
+            <p>Comments </p>
+        </div>
+        <div class = 'col-12 col-lg-9'>
+
+        </div>
     </div>
 
->>>>>>> 554399eb5376c9f61be1cf4a7147d3981f2b72a8
+<div class = 'show p-3 my-3'>
+    <% if policy(Rsvp).create? %>
+        <%= form_tag event_rsvps_path(@event), method: :post do %>
+            <%= submit_tag "Attend", class: "btn btn-primary" %>
+        <% end %>
+    <% end %>
+  </div>
+
+  <div class = 'show p-3 my-3'>
+    <%= link_to 'Back to all events', events_path, class: 'btn btn-primary' %>
+  </div>
