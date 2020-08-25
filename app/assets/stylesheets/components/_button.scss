@@ -1,0 +1,27 @@
+.btn-call {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: #ef233c;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-call:hover {
+    background: #d90429;
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-flat {
+    color: black;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: 1px solid black;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-flat:hover {
+    background: black;
+    color: white;
+    text-decoration: none;
+  }

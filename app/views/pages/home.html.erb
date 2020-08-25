@@ -1,23 +1,22 @@
 <!-- This is an experience -->
 
 <!-- Banner -->
-<%= cl_image_tag("banners/banner3", :class => 'banner') %>
+<%= cl_image_tag("banners/banner3", :class => 'banner mb-3') %>
 
+<div class="container">
 <!-- Avatar -->
-<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-large') %>
-
-<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar') %>
-
-<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-bordered') %>
-
-<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-square') %>
-
+	<div class="mb-3">
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-large') %>
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar') %>
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-bordered') %>
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-square') %>
+	</div>
 <!-- Button -->
-
-<%= link_to 'Events', events_path, :class => "button-inverse" %>
-
-<%= link_to 'Offices', events_path, :class => "button-inverse" %>
-
-<%= link_to 'Jobs', events_path, :class => "button-inverse" %>
-
-<%= link_to 'Post', events_path, :class => "button-inverse" %>
+	<div class="mb-3">
+		<%= link_to 'Join', '#', :class => "btn-call" %>
+		<%= link_to 'Events', events_path, :class => "btn-flat" %>
+		<%= link_to 'Offices', events_path, :class => "btn-flat" %>
+		<%= link_to 'Jobs', events_path, :class => "btn-flat" %>
+		<%= link_to 'Post', events_path, :class => "btn-flat" %>
+	</div>
+</div>
