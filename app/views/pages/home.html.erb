@@ -1,2 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- This is an experience -->
+
+<!-- Banner -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/db5jh0zwo/image/upload/v1598357124/banners/banner4.jpg);">
+	<div class="container">
+		<%#= cl_image_tag("banners/banner3", :class => 'banner mb-3') %>
+		<h1>Berlin Architectural Network</h1>
+		<p>Exchange knowledge</p>
+		<%= link_to 'Join', '#', :class => "btn btn-call" %>
+		<%#= simple_form_for(@user) do |f| %>
+			<%#= f.input :email, placeholder: 'user@domain.com' %>
+			<%#= f.submit 'Join', :class => "btn btn-call" %>
+		<%# end%>
+	</div>
+</div>
+
+<div class="container">
+<!-- Avatar -->
+	<div class="mb-3">
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-large') %>
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar') %>
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-bordered') %>
+		<%= cl_image_tag("users/avatar1", gravity: :face, :class => 'avatar-square') %>
+	</div>
+
+<!-- Events -->
+	<div class="mb-5">
+		<%= link_to 'Events', events_path, :class => "btn btn-flat mb-3" %>
+		<div class="row">
+			<div class="col-3">
+				<%= render "shared/card-event" %>
+			</div>
+		</div>		
+	</div>
+
+<!-- Offices and Openings-->
+	<div class="mb-5">
+		<div class="row">
+			<div class="col-6">
+				<%= link_to 'Offices', offices_path, :class => "btn btn-flat mb-3" %>
+				<%= render "shared/card-office" %>
+			</div>
+			<div class="col-6">
+				<%= link_to 'Openings', '#', :class => "btn btn-flat mb-3" %>
+				<%= render "shared/card-opening" %>
+			</div>
+		</div>		
+	</div>
+
+<!-- Blog -->
+	<div class="mb-3">
+		<%= link_to 'Post', posts_path, :class => "btn btn-flat mb-3" %>
+		<%= render "shared/card-post" %>
+	</div>
+</div>
