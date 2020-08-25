@@ -4,7 +4,7 @@ class Office < ApplicationRecord
 
     has_many :ratings
 
-    has_many :comments, optional: true
+    has_many :comments
     has_one_attached :photo
     validates :name, presence: true, uniqueness: true
     validates :location, presence: true

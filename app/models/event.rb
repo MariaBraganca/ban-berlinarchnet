@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :rsvps
   has_many :users, through: :rsvps
 
-  has_many :comments, optional: true
+  has_many :comments
 
   validates :date_time, presence: true
   validates :title, presence: true
