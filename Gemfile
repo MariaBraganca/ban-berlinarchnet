@@ -37,6 +37,9 @@ gem 'pundit'
 # Cloudinary gem
 gem 'cloudinary', '~> 1.12.0'
 
+# Faker gem
+gem 'faker'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
@@ -47,7 +50,6 @@ gem 'cloudinary', '~> 1.12.0'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-gem 'faker'
 end
 
 group :development do
