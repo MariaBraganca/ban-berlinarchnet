@@ -1,85 +1,126 @@
-<div class = 'container p-3 my-3'>
-<h1>Event</h1>
-
-<!--test code-->
-<h3>Event <%= @event.title %></h3>
-<img src ='https://source.unsplash.com/500x400/?Architecture' alt = 'alternative photo' %>
-<!--test code-->
-
-<div class = 'container p-3 my-3'>
-<div class="row">
-    <div class="col-12 col-lg-3">
-        <p>About </p>
-    </div>
-    <div class = 'col-12 col-lg-9'>
-   <p>Description: <%= @event.description %></p>
-    </div>
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/500x400/?Architecture);">
+	<div class="container">
+		<h1><%= @event.title%></h1>
+		<p>Exchange knowledge</p>
+            <% if policy(Rsvp).create? %>
+                <%= form_tag event_rsvps_path(@event), method: :post do %>
+                    <%= submit_tag "Attend", class: "btn btn-primary" %>
+                <% end %>
+            <% end %>
+	</div>
 </div>
-</div>
+    <div class = 'container'>
+        <h3><%= @event.title %></h3>
+    </div>
+
+    <div class = 'container p-3 my-3'>  
+        <div class="row">       
+            <div class="col-12 col-lg-3">
+                <p>About </p>
+            </div>
+                <div class = 'col-12 col-lg-9'>
+                    <p>Description: <%= @event.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>  
 
 <div class = 'container p-3 my-3'>
     <div class="row">
         <div class="col-12 col-lg-3">
-            <p>When <%= @event.date_time %></p>
-            <p>Location <%= @event.location %></p>
+            <p>When: <%= @event.date_time %></p>
+            <p>Location: <%= @event.location %></p>
         </div>
         <div class = 'col-12 col-lg-9'>
-        <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @marker.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+            <div id="map"
+                style="width: 100%; height: 600px;"
+                data-markers="<%= @marker.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+            </div>
         </div>
     </div>
+
+    <div class = 'container p-3 my-3'>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <p>Attending </p>
+            </div>
+            <div class = 'col-12 col-lg-9'>
+
+                    <% @event.users.each do |user| %>
+                        <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large') %>
+                        <p><%= user.first_name %> <%= user.last_name %> <%= user.email %></p>
+                    <% end %>
+            </div>
+        </div>
+    </div>
+<div class = 'container p-3 my-3'>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <p>Organizer </p>
+            </div>
+                <div class = 'col-12 col-lg-9'>
+                    <%= @event.user.first_name %>, <%= @event.user.last_name %></p></h1>
+                </div>
+        </div>
 </div>
 
 
-
+  <div class = 'container p-3 my-3'>
     <div class="row">
-        <div class="col-12 col-lg-3">
-            <p>Attending </p>
-        </div>
-        <div class = 'col-12 col-lg-9'>
-
-        </div>
+            <div class="col-12 col-lg-3">
+                <p>Photos </p>
+            </div>
+            <div class = 'col-12 col-lg-9'>
+                <%= cl_image_tag(@event.cl_img_tag, :class => 'avatar-square' )%>
+            </div>
     </div>
+  </div>
 
-
-   <div class="row">
-        <div class="col-12 col-lg-3">
-            <p>Photos </p>
+  <div class = 'container p-3 my-3'>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <p>Comments </p>
+            </div>
+            <div class = 'col-12 col-lg-9'>
+                <% @event.comments.each do |comment| %>
+                    <p><%= comment.date %> <%= comment.content %><%= comment.user.first_name %> <%= comment.user.last_name %></p>
+                <% end %>
+            </div>
+            </div>
         </div>
-        <div class = 'col-12 col-lg-9'>
+     </div>
 
+    <div class = 'container p-3 my-3'>
+        <div class="row">
+            <div class = 'show p-3 my-3'>
+                <% if policy(Rsvp).create? %>
+                    <%= form_tag event_rsvps_path(@event), method: :post do %>
+                        <%= submit_tag "Attend", class: "btn btn-primary" %>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class = 'show p-3 my-3'>
+                    <%= link_to 'Back to all events', events_path, class: 'btn btn-primary' %>
+            </div>          
         </div>
-    </div>
+    </div> 
 
-
-<div class="row">
-        <div class="col-12 col-lg-3">
-            <p>Comments </p>
-        </div>
-        <div class = 'col-12 col-lg-9'>
-
-        </div>
-    </div>
-
-<div class = 'show p-3 my-3'>
-    <% if policy(Rsvp).create? %>
-        <%= form_tag event_rsvps_path(@event), method: :post do %>
-            <%= submit_tag "Attend", class: "btn btn-primary" %>
+        <% if policy(Comment).create? %>
+        <%= link_to "New comment", new_comment_path %>
         <% end %>
-    <% end %>
-  </div>
+      
 
-   <% if policy(@event).destroy? %>
-    <%= link_to "Destroy", event_path(@event), class: 'btn btn-primary' %>
-  <% end %>
-
-  <% if policy(@event).edit? %>
-    <%= link_to "Update", edit_event_path(@event), class: 'btn btn-primary' %>
-  <% end %>
-
-
-  <div class = 'show p-3 my-3'>
-    <%= link_to 'Back to all events', events_path, class: 'btn btn-primary' %>
-  </div>
+    <div class = 'container p-3 my-3'>
+        <div class="row">
+            <% if policy(@event).edit? %>
+                <%= link_to "Update", edit_event_path(@event), class: 'btn btn-primary' %>
+            <% end %>
+        </div> 
+        <div class = 'show p-3 my-3'> 
+            <% if policy(@event).destroy? %>
+                <%= link_to "Destroy", event_path(@event), class: 'btn btn-primary' %>
+            <% end %>
+        </div> 
+    </div> 
+</div>
