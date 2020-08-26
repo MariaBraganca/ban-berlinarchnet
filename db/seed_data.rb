@@ -90,7 +90,9 @@ mit. Es verrät, welche Ideen und Werte zu einem räumlichen Konzept und seiner 
 #                 13_159, 13_187, 13_189, 13_347, 13_349, 13_351, 13_353, 13_355,
 #                 10_115, 13_357]
 
-POSTAL_CODES = [13_086]
+
+POSTAL_CODES = [10_117, 10_119, 10_178, 10_179, 10_243, 10_245, 10_247, 10_249]
+
 
 # _____________________USERS_________________________________________
 
@@ -98,8 +100,11 @@ TEAM_MEMBER_NAME = %I(ekaterina zeljka maria hristian)
 
 # _____________________BERLIN ADDRESSES______________________________
 
-BERLIN_ADDRESES = ['Checkpoint Charlie, Berlin', 'Schloßstraße 9, Berlin',
-                   'Johannisstraße 20,Berlin', 'Mulackstraße, Berlin',
-                   'Auguststraße 11-13, Berlin', 'Alexanderstraße 7, Berlin',
-                   'Skalitzer Str. 45, Berlin', 'Goebenstraße 23, Berlin',
-                   'Kantstraße 17, Berlin', 'Frankfurter Allee 27, Berlin']
+BERLIN_ADDRESES = ['Checkpoint Charlie, 10117 Berlin', 'Schloßstraße 9, 12163 Berlin',
+                   'Johannisstraße 20, 10117 Berlin', 'Mulackstraße 12, 10119 Berlin',
+                   'Auguststraße 11, 10117 Berlin', 'Alexanderstraße 7, 10178 Berlin',
+                   'Skalitzer Str. 45, 10997 Berlin', 'Goebenstraße 23, 10783 Berlin',
+                   'Kantstraße 17, 10623 Berlin', 'Frankfurter Allee 27, 10247 Berlin',
+                   'Turmstraße 29, 10551 Berlin', 'Heidestraße 18, 10557 Berlin',
+                   'Mehringdamm 32, 10961 Berlin', 'Mainzer Str. 8, 10715 Berlin',
+                   'Markstraße 16, 13409 Berlin', 'Roelckestraße 142, 13086 Berlin']

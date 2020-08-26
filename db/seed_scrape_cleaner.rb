@@ -43,6 +43,12 @@ POSTAL_CODES.each do |plz|
       cleaned_studio.delete(cleaned_studio)
     elsif cleaned_studio[:external_url].nil?
       cleaned_studio.delete(cleaned_studio)
+    elsif cleaned_studio[:external_url].include? 'http.//'
+      cleaned_studio.delete(cleaned_studio)
+    elsif cleaned_studio[:external_url].include? 'htp'
+      cleaned_studio.delete(cleaned_studio)
+    elsif cleaned_studio[:external_url].include? 'http//:'
+      cleaned_studio.delete(cleaned_studio)
     elsif cleaned_studio[:external_url].include? 'at'
       cleaned_studio.delete(cleaned_studio)
     else
