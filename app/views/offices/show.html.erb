@@ -14,6 +14,17 @@
 			<div class="col-9">
 				<p><%= @office.description %></p>
 			</div>
+			<!-- Ratings -->
+			<div class="col-3">
+				<p class="heading-flat">Ratings</p>
+			</div>
+			<div class="col-9">
+				<% @office.ratings.each do |rating| %>
+					<p><%= rating.culture %> <i class="fas fa-star"></i></p>
+					<p><%= rating.salary %> <i class="fas fa-star"></i></p>
+					<p><%= rating.architecture %> <i class="fas fa-star"></i></p>
+				<% end %>
+			</div>
 			<!-- Website -->
 			<div class="col-3">
 				<p class="heading-flat">Website</p>
