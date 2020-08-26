@@ -1,10 +1,17 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :destroy]
   skip_before_action :authenticate_user!, only: [ :index, :show]
+
   def index
+    @events = Event.all
+    @user = User.find_by(email: @user)
+    @user_events = Event.where(user_id: @user.id)
+
   end
 
   def show
+    @comment = Comment.new
+    @events = Event.all
     @rsvp = Rsvp.new
     authorize @event
 
