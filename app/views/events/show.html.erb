@@ -107,7 +107,7 @@
     </div> 
 
         <% if policy(Comment).create? %>
-        <%= link_to "New comment", new_comment_path %>
+        <%= link_to "New Comment", new_comment_path(@comment), class: 'btn btn-primary' %>
         <% end %>
       
 

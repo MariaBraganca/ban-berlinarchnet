@@ -6,6 +6,9 @@ class CommentPolicy < ApplicationPolicy
       scope.all
     end
 
+    def new?
+      return true
+    end
 
     def create?
       return true
