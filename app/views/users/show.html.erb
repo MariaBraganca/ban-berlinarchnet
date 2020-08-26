@@ -1,2 +1,22 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class= 'banner-show'>
+  <%= cl_image_tag("patterns/pattern#{rand(1..4)}", :class => "banner-show-img mb-5") %>
+  <h1><%= @user.first_name %>  <%= @user.last_name %></h1>
+  <h2><%= @user.description %></h2>
+</div>
+
+
+
+
+<dir class="container">
+<% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
+<%=   cl_image_tag(@user.photo.key, :class => "avatar-large-user-showpage")  %>
+<% elsif @user.id <= 30  %> <!-- user is seeded -->
+<%=   cl_image_tag(@user.cl_img_tag, :class => "avatar-large-user-showpage") %>
+<% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+<%=   cl_image_tag("logo/logo1", :class => "avatar-large-user-showpage") %>
+<% end %>
+
+
+<h1> EMAIL: <%= @user.email %></h1>
+
+</dir>
