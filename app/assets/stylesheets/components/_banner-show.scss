@@ -1,0 +1,17 @@
+.banner-show {
+	position: relative;
+}
+
+.banner-show .banner-show-img {
+  width: 100%;
+	height: 500px;
+	object-position: center;
+	object-fit: cover;
+}
+
+.banner-show h1 {
+	position: absolute;
+	top: 225px;
+	padding-left: 200px;
+	font-weight: 700;
+}
