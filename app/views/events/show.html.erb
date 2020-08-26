@@ -71,6 +71,15 @@
     <% end %>
   </div>
 
+   <% if policy(@event).destroy? %>
+    <%= link_to "Destroy", event_path(@event), class: 'btn btn-primary' %>
+  <% end %>
+
+  <% if policy(@event).edit? %>
+    <%= link_to "Update", edit_event_path(@event), class: 'btn btn-primary' %>
+  <% end %>
+
+
   <div class = 'show p-3 my-3'>
     <%= link_to 'Back to all events', events_path, class: 'btn btn-primary' %>
   </div>
