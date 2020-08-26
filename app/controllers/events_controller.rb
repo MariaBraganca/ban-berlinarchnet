@@ -7,6 +7,12 @@ class EventsController < ApplicationController
   def show
     @rsvp = Rsvp.new
     authorize @event
+
+    @marker = [
+      {
+        lat: @event.latitude,
+        lng: @event.longitude
+      }]
   end
 
   def new
