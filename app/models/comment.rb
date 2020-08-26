@@ -1,8 +1,4 @@
 class Comment < ApplicationRecord
-
-  validates :post_id, numericality: true, allow_nil: true
-  validates :event_id, numericality: true, allow_nil: true
-  validates :office_id, numericality: true, allow_nil: true
   validates :date, presence: true
   validates :content, presence: true
 
