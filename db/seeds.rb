@@ -26,8 +26,7 @@ CLEAN_OFFICE_ARRAY.each do |elementos|
              description: OFFICE_DESCRIPTIONS.sample,
              cl_img_tag: "offices/office#{rand(1..48)}",
              url: elementos[:external_url])
-  # puts "________#{terminal_counter}__ out of #{n_offices}______Offices Saved!_____________________"
-  puts Office.find(terminal_counter)[:url]
+  puts "________#{terminal_counter}__ out of #{n_offices}______Offices Saved!_____________________"
   terminal_counter += 1
 end
 
@@ -48,7 +47,7 @@ TEAM_MEMBER_NAME.each do |name|
               password: '123456',
               first_name: name.capitalize,
               last_name: 'Lastname',
-              description: 'Test')
+              description: 'Coder by day | Coder by night')
 puts "___#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'___"
 terminal_counter += 1
 end
@@ -73,7 +72,7 @@ n_users.times do
               first_name: Faker::Name.first_name ,
               last_name: Faker::Name.last_name,
               description: 'Test',
-              cl_img_tag: "users/user#{rand(1..3)}")
+              cl_img_tag: "users/user#{rand(1..12)}")
   puts "___#{terminal_counter} out of #{n_users} Fake users created___"
   terminal_counter += 1
 end
