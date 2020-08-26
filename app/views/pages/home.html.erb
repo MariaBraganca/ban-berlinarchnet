@@ -1,2 +1,72 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- This is an experience -->
+
+<!-- Banner -->
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/db5jh0zwo/image/upload/v1598357124/banners/banner4.jpg);">
+	<div class="container">
+		<%#= cl_image_tag("banners/banner3", :class => 'banner mb-3') %>
+		<h1>BAN - Berlin Architectural Network</h1>
+		<p>Exchange knowledge</p>
+		<%= link_to 'Join', '#', :class => "btn btn-call" %>
+		<%#= simple_form_for(@user) do |f| %>
+			<%#= f.input :email, placeholder: 'user@domain.com' %>
+			<%#= f.submit 'Join', :class => "btn btn-call" %>
+		<%# end%>
+	</div>
+</div>
+
+<div class="container">
+
+<!-- Events -->
+	<div class="mb-5">
+		<div class="row">
+			<div class="col-3">
+				<%= link_to 'Events', events_path, :class => "btn btn-flat mb-3" %>
+				<p>Check out the latest events!</p>
+			</div>
+			<div class="col-3">
+				<%= render "shared/card-event" %>
+			</div>
+		</div>		
+	</div>
+
+<!-- Offices -->
+	<div class="mb-5">
+		<div class="row">
+			<div class="col-3">
+				<%= link_to 'Offices', offices_path, :class => "btn btn-flat mb-3" %>
+				<p>Check out the best rated offices!</p>
+			</div>
+			<div class="col-9">
+				<%= render "shared/card-office" %>
+			</div>
+
+		</div>		
+	</div>
+
+<!-- Openings -->
+
+	<div class="mb-5">
+		<div class="row">
+			<div class="col-3">
+				<%= link_to 'Jobs', '#', :class => "btn btn-flat mb-3" %>
+				<p>Check out the latest jobs!</p>
+			</div>
+			<div class="col-9">
+				<%= render "shared/card-opening" %>
+			</div>
+		</div>		
+	</div>
+
+<!-- Blog -->
+	<div class="mb-3">
+		<div class="row">
+			<div class="col-3">
+				<%= link_to 'Blog', posts_path, :class => "btn btn-flat mb-3" %>
+				<p>Check out the latest posts!</p>
+			</div>
+			<div class="col-9">
+				<%= render "shared/card-post" %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -16,6 +16,7 @@ POSTAL_CODES.each do |plz|
     n_items_page = 1
     root_xpath = '/html/body/div[1]/div[2]/div/section/div[2]/div/div'
 
+
     while n_items_page <= 50
       studio = { external_name:     html_doc.xpath("#{root_xpath}/ul[#{n_items_page}]/li/div[1]").text.strip,
                  external_location: html_doc.xpath("#{root_xpath}/ul[#{n_items_page}]/li/div[3]/div[4]").text.strip + ', ' +

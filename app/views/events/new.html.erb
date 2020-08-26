@@ -1,2 +1,15 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="container justify-content-center">
+  <div class="row">
+    <div class="col-md-8">
+      <%= simple_form_for ([@event]) do |f| %>
+      <div class="form-inputs justify-content-center">
+        <%= f.input :date_time, as: :string %>
+        <%= f.input :location, as: :string %>
+        <%= f.input :description, as: :text %>
+        <%= f.input :title, as: :string  %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
