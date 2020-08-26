@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_171924) do
+ActiveRecord::Schema.define(version: 2020_08_26_123727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2020_08_25_171924) do
   create_table "comments", force: :cascade do |t|
     t.datetime "date"
     t.text "content"
-    t.bigint "post_id"
-    t.bigint "event_id"
-    t.bigint "office_id"
+    t.bigint "post_id", null: false
+    t.bigint "event_id", null: false
+    t.bigint "office_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_171924) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "url"
     t.string "cl_img_tag"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "openings", force: :cascade do |t|
