@@ -5,8 +5,8 @@
   object-fit: cover;
 }
 .avatar-large {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -15,7 +15,7 @@
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 1px 2px rgba(27, 19, 19, 0.2);
+  box-shadow: 0 1px 2px #1a0c0c33;
   border: white 1px solid;
 }
 .avatar-square {
@@ -26,8 +26,35 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
-
-/* 
+.avatar-user-showpage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.avatar-large-user-showpage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(27, 19, 19, 1.2);
+  object-fit: cover;
+}
+.avatar-bordered-user-showpage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 2px rgba(27, 19, 19, 0.2);
+  border: white 1px solid;
+}
+.avatar-square-user-showpage {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+/*
 .avatar-large {
   width: 56px;
   border-radius: 50%;
