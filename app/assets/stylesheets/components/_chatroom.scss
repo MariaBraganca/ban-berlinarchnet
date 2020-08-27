@@ -30,6 +30,12 @@
   border-radius: 50%
 }
 
+.message-avatar {
+  align-items: center;
+  display: flex;
+
+}
+
 .main-messages-container {
   flex-grow: 1;
   padding: 16px;
