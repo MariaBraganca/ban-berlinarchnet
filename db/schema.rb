@@ -101,6 +101,8 @@ ActiveRecord::Schema.define(version: 2020_08_26_125957) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "url"
     t.string "cl_img_tag"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "openings", force: :cascade do |t|

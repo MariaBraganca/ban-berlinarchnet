@@ -41,5 +41,6 @@ document.addEventListener('turbolinks:load', () => {
 import 'mapbox-gl/dist/mapbox-gl.css';
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
-
-initMapbox();
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
