@@ -1,0 +1,33 @@
+.card-experience {
+    overflow: hidden;
+    height: 140px;
+    display: flex;
+    margin: 10px;
+    // align-items: center;
+  }
+
+  .card-experience h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .card-experience p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+
+  .card-experience .card-experience-infos {
+    padding: 0px;
+  }
+
+  .card-experience .card-experience-img {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 100%;
+    width: 220px;
+    object-fit: cover;
+  }

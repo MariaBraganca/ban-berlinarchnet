@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
 
-  has_many :comments
+  has_many :comments, dependent: :nullify
 
   validates :date, presence: true
   validates :title, presence: true

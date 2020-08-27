@@ -1,2 +1,63 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class= 'banner-show'>
+  <%= cl_image_tag("patterns/pattern#{rand(1..4)}", :class => "banner-show-img mb-5") %>
+  <h1><%= @user.first_name %>  <%= @user.last_name %></h1>
+
+</div>
+
+
+
+
+<dir class="container">
+
+
+<h1> EMAIL: <%= @user.email %></h1>
+
+</dir>
+
+<div class="container">
+<!-- SEED TEST CODE -->
+  <div class="mb-5">
+    <div class="row">
+      <!-- About -->
+      <div class="col-3">
+        <p class="heading-flat mb-3">About</p>
+      </div>
+      <div class="col-4">
+        <!-- Avatar -->
+        <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
+        <%=   cl_image_tag(@user.photo.key, :class => "avatar-large-user-showpage")  %>
+        <% elsif @user.id <= 30  %> <!-- user is seeded -->
+        <%=   cl_image_tag(@user.cl_img_tag, :class => "avatar-large-user-showpage") %>
+        <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+        <%=   cl_image_tag("logo/logo1", :class => "avatar-large-user-showpage") %>
+        <% end %>
+      </div>
+      <div class="col-4">
+        <!-- Description -->
+        <p><%= @user.description %></p>
+      </div>
+      <!-- Website -->
+      <div class="col-3">
+        <p class="heading-flat mb-3">Experience</p>
+      </div>
+      <div class="col-9">
+      </div>
+      <!-- About -->
+      <div class="col-3">
+        <p class="heading-flat mb-3">Portfolio</p>
+      </div>
+      <div class="col-9">
+        <% @user.experiences.each do |experience|  %>
+        <%= render "shared/card-experience", experience_within: experience %>
+        <% end %>
+      </div>
+      <!-- Members -->
+      <div class="col-3">
+        <p class="heading-flat mb-3">Activity</p>
+      </div>
+      <div class="col-9">
+      </div>
+    </div>
+  </div>
+<!-- SEED TEST CODE -->
+</div>
