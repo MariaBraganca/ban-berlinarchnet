@@ -9,11 +9,11 @@ n_team_members = TEAM_MEMBER_NAME.size
 n_users = 30
 n_posts = 30
 n_events = 30
-n_experiences = 30
+n_experiences_per_user = 3
 n_openings = 30
 n_ratings = 30
 n_rsvps = 30
-n_comments = 50
+n_comments = 30
 
 phase = "office"
 puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
@@ -47,7 +47,8 @@ TEAM_MEMBER_NAME.each do |name|
               password: '123456',
               first_name: name.capitalize,
               last_name: 'Lastname',
-              description: 'Coder by day | Coder by night')
+              description: Faker::Lorem.paragraph(sentence_count: 20),
+              cl_img_tag: "logo/logo1")
 puts "___#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'___"
 terminal_counter += 1
 end
@@ -71,7 +72,7 @@ n_users.times do
               password: '123456',
               first_name: Faker::Name.first_name ,
               last_name: Faker::Name.last_name,
-              description: 'Test',
+              description: Faker::Lorem.paragraph(sentence_count: 20),
               cl_img_tag: "users/user#{rand(1..12)}")
   puts "___#{terminal_counter} out of #{n_users} Fake users created___"
   terminal_counter += 1
@@ -143,20 +144,26 @@ phase = "experience"
 puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
 
 terminal_counter = 1
-
-n_experiences.times do
-  Experience.create(start_date: Faker::Date.in_date_period(year: 2018, month: 2),
-                    end_date: Faker::Date.in_date_period(year: 2020, month: 6),
-                    job_position: "#{Faker::Job.employment_type} #{Faker::Job.seniority} #{Faker::Job.position} Architect",
-                    office_id: rand(1..n_offices),
-                    user_id: rand(1..n_users))
-
-  puts "___#{terminal_counter} out of #{n_experiences} Fake #{phase} created___"
-  terminal_counter += 1
+experienced_user = 1
+n_users.times do
+  start_year = rand(2014..2016)
+  n_experiences_per_user.times do
+    Experience.create(start_date: Faker::Date.in_date_period(year: start_year, month: rand(6..12)),
+                      end_date: Faker::Date.in_date_period(year: (start_year + 2), month: rand(1..5)),
+                      job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
+                      office_id: rand(1..n_offices),
+                      user_id: experienced_user)
+    puts "___#{terminal_counter} out of #{n_experiences_per_user} Fake #{phase} created___"
+    terminal_counter += 1
+    start_year += 2
+    end
+  experienced_user += 1
+  puts "___#{experienced_user} user with #{n_experiences_per_user} Fake #{phase} created___"
 end
 puts ""
 puts "Random #{phase} sample:"
-p Experience.find(rand(1..n_experiences))
+p Experience.find(rand(1..n_experiences_per_user))
+p Experience.where(user_id: 3)
 puts ""
 puts ""
 puts ""
@@ -274,7 +281,7 @@ puts "Sumber of seeds created:
 --User Acoounts #{n_users}
 --Posts: #{n_posts}
 --Events: #{n_events}
---Experiences: #{n_experiences}
+--Experiences: #{n_experiences_per_user}
 --Openings: #{n_openings}
 --Ratings: #{n_ratings}
 --RSVPS: #{n_rsvps}

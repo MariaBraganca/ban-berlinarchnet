@@ -91,7 +91,7 @@ mit. Es verrät, welche Ideen und Werte zu einem räumlichen Konzept und seiner 
 #                 10_115, 13_357]
 
 
-POSTAL_CODES = [10_117, 10_119, 10_178, 10_179, 10_243, 10_245, 10_247, 10_249]
+POSTAL_CODES = [10_117, 10_119, 10_178]
 
 
 # _____________________USERS_________________________________________
