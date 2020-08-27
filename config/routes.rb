@@ -14,15 +14,18 @@ Rails.application.routes.draw do
 
   resources :events do
     resources :rsvps, only: [:create, :destroy]
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:destroy]
+    post "event_comment", to: "comments#create_event_comment"
   end
 
   resources :posts do 
     resources :comments, only: [ :new, :create, :destroy]
+    post "post_comment", to: "comments#create_post_comment"
   end
   
   resources :offices, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
+    post "office_comment", to: "comments#create_office_comment"
   end
   
   resources :chatrooms, only: [:index, :show] do

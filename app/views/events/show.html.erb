@@ -140,12 +140,10 @@
             </div>
             <div class = 'col-12 col-lg-9'>
                 <% if user_signed_in? %>
-                    <%= simple_form_for ([@event, @comment]) do |f| %>
-                        <div class="form-inputs justify-content-center">
-                            <%= f.input :content %>          
-                            <%= f.button :submit, class: 'btn btn-primary' %>
-                    </div>
-                        <% end %>
+									<%= form_tag event_event_comment_path(@event), method: :post do |f| %>
+											<%= text_field_tag :content %>          
+											<%= submit_tag 'Submit', class: 'btn btn-primary' %>
+									<% end %>
                 <% end %>
             </div>
       </div>

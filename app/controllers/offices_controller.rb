@@ -2,6 +2,7 @@ class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
+    @offices = Office.all
   end
 
   def show
@@ -14,6 +15,7 @@ class OfficesController < ApplicationController
         lng: @office.longitude
       }]
 
+    # Averages 
     if @office.ratings.empty?
       @culture_average = 0
       @salary_average = 0
@@ -39,5 +41,7 @@ class OfficesController < ApplicationController
       @architecture_average = (total.sum / total.size).round
     end
 
+    @comment = Comment.new
+    
   end
 end
