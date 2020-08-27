@@ -14,6 +14,7 @@ class EventsController < ApplicationController
     @events = Event.all
     @rsvp = Rsvp.new
     authorize @event
+    
 
     @marker = [
       {
@@ -32,7 +33,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @user = User.find(current_user.id)
     authorize @event
-end
+  end
 
   def destroy
     @event.destroy

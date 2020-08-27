@@ -1,5 +1,11 @@
 class CommentsController < ApplicationController
 
+    def new
+        @event = Event.find(params[:event_id])
+        @comment = Comment.new
+        authorize @comment
+      end
+
     def create
         @event = Event.find(params[:event_id])
         @comment = Comment.new(comment_params)
@@ -11,8 +17,8 @@ class CommentsController < ApplicationController
         if @comment.save
             redirect_to event_path(@event)
           else
-            render :new
-          end
+            render 'events/show'
+        end
     end
 
     def comment_params
