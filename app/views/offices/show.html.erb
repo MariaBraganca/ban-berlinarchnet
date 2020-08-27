@@ -29,7 +29,6 @@
 			</div> 
 			<div class="col-9">
 				<div class="row">
-					<% @office.ratings.each do |rating| %>
 						<div class="col-2">
 							<p>CULTURE</p>
 							<p>SALARY</p>
@@ -37,31 +36,30 @@
 						</div>
 						<div class="col-2">
 							<p> 
-								<% rating.culture.round.times do %> 
+								<% @culture_average.times do %> 
 									<i class="fas fa-heart" style="color: #e53e3e"></i>
 								<% end %>
-								<% (5-rating.culture).round.times do %> 
+								<% (5-@culture_average).times do %> 
 									<i class="fas fa-heart" style="color: lightgray"></i>
 								<% end %>
 							</p>
 							<p> 
-								<% rating.salary.round.times do %>
+								<% @salary_average.times do %>
 									<i class="fas fa-euro-sign" style="color: #90be6d"></i>
 								<% end %>
-								<% (5-rating.salary).round.times do %> 
+								<% (5-@salary_average).times do %> 
 									<i class="fas fa-euro-sign" style="color: lightgray"></i>
 								<% end %>
 							</p>
 							<p> 
-								<% rating.architecture.round.times do %>
+								<% @architecture_average.times do %>
 									<i class="fas fa-star" style="color: #e9c46a"></i>
 								<% end %>
-								<% (5-rating.architecture).round.times do %> 
+								<% (5-@architecture_average).times do %> 
 									<i class="fas fa-star" style="color: lightgray"></i>
 								<% end %>
 							</p>
 						</div>
-					<% end %>
 				</div>
 			</div>
 			<!-- Projects -->
