@@ -8,14 +8,22 @@ class CommentPolicy < ApplicationPolicy
     end
   end
 
-    
-    def create?
-      return true
-    end
-    
-    def new?
-      create?
-    end
+  
+  def create_event_comment?
+    return true
+  end
+
+  def create_office_comment?
+    return true
+  end
+
+  def create_post_comment?
+    return true
+  end
+  
+  def new?
+    create?
+  end
     
 
 
