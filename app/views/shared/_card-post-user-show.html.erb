@@ -1,0 +1,13 @@
+<div class="card-post-user-show">
+	      <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
+        <%=   cl_image_tag(@user.photo.key, :class => 'av')  %>
+        <% elsif @user.id <= 30  %> <!-- user is seeded -->
+        <%=   cl_image_tag(@user.cl_img_tag, :class => 'av') %>
+        <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+        <%=   cl_image_tag("logo/logo1", :class => 'av') %>
+        <% end %>
+  <div class="card-post-infos-user-show">
+    <h2> <%=post_within.title %></h2>
+    <p>Posted: <%= post_within.date.strftime("%d.%m.%Y") %></p>
+  </div>
+</div>

@@ -8,12 +8,12 @@ n_offices = CLEAN_OFFICE_ARRAY.size
 n_team_members = TEAM_MEMBER_NAME.size
 n_users = 30
 n_posts = 30
-n_events = 30
+n_events = 130
 n_experiences_per_user = 3
 n_openings = 30
-n_ratings = 30
+n_ratings = 150
 n_rsvps = 30
-n_comments = 30
+n_comments = 150
 
 phase = "office"
 puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
@@ -48,7 +48,8 @@ TEAM_MEMBER_NAME.each do |name|
               first_name: name.capitalize,
               last_name: 'Lastname',
               description: Faker::Lorem.paragraph(sentence_count: 20),
-              cl_img_tag: "logo/logo1")
+              cl_img_tag: "logo/logo1",
+              seed_portfolio: "portfolios/portfolio1")
 puts "___#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'___"
 terminal_counter += 1
 end
@@ -73,7 +74,8 @@ n_users.times do
               first_name: Faker::Name.first_name ,
               last_name: Faker::Name.last_name,
               description: Faker::Lorem.paragraph(sentence_count: 20),
-              cl_img_tag: "users/user#{rand(1..12)}")
+              cl_img_tag: "users/user#{rand(1..12)}",
+              seed_portfolio: "portfolios/portfolio1")
   puts "___#{terminal_counter} out of #{n_users} Fake users created___"
   terminal_counter += 1
 end
@@ -146,16 +148,16 @@ puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::
 terminal_counter = 1
 experienced_user = 1
 n_users.times do
-  start_year = rand(2014..2016)
+  end_year = rand(2019..2022)
   n_experiences_per_user.times do
-    Experience.create(start_date: Faker::Date.in_date_period(year: start_year, month: rand(6..12)),
-                      end_date: Faker::Date.in_date_period(year: (start_year + 2), month: rand(1..5)),
+    Experience.create(end_date: Faker::Date.in_date_period(year: end_year, month: rand(1..5)),
+                      start_date: Faker::Date.in_date_period(year: (end_year - 2), month: rand(6..12)),
                       job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
                       office_id: rand(1..n_offices),
                       user_id: experienced_user)
     puts "___#{terminal_counter} out of #{n_experiences_per_user} Fake #{phase} created___"
     terminal_counter += 1
-    start_year += 2
+    end_year -= 2
     end
   experienced_user += 1
   puts "___#{experienced_user} user with #{n_experiences_per_user} Fake #{phase} created___"

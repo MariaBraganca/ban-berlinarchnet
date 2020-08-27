@@ -1,16 +1,16 @@
-.card-event {
+.card-event-user-show {
     overflow: hidden;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
-  .card-event h2 {
+  .card-event-user-show h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
   }
 
-  .card-event p {
+  .card-event-user-show p {
     font-size: 12px;
     line-height: 1.4;
     opacity: .7;
@@ -18,7 +18,7 @@
     margin-top: 8px;
   }
 
-  .card-event .card-event-infos {
+  .card-event-user-show .card-event-infos-user-show {
     padding: 16px;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@
     position: relative;
   }
 
-  .card-event .card-event-img {
+  .card-event-user-show .card-event-img-user-show {
     height: 200px;
     width: 100%;
     object-fit: cover;

@@ -6,8 +6,10 @@ class User < ApplicationRecord
   has_many :messages
   has_many :chatrooms, through: :messages
   has_many :comments
+  has_many :posts
 
   has_one_attached :photo
+  has_many_attached :portfolio_photos
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

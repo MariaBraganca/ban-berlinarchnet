@@ -10,8 +10,6 @@
 <dir class="container">
 
 
-<h1> EMAIL: <%= @user.email %></h1>
-
 </dir>
 
 <div class="container">
@@ -36,27 +34,62 @@
         <!-- Description -->
         <p><%= @user.description %></p>
       </div>
-      <!-- Website -->
+    </div>
+    <div class="row">
+      <!-- Experience -->
       <div class="col-3">
         <p class="heading-flat mb-3">Experience</p>
       </div>
-      <div class="col-9">
+      <div class="col-9"  style="position: relative;">
+        <% @user.experiences.each do |experience|  %>
+        <%= render "shared/card-experience", experience_within: experience %>
+        <% end %>
+        <div style = "height: 11px; border: 3px solid black;left: 130px; position:absolute; top: 149px;"></div>
       </div>
-      <!-- About -->
+    </div>
+    <div class="row">
+      <!-- Portfolio -->
       <div class="col-3">
         <p class="heading-flat mb-3">Portfolio</p>
       </div>
       <div class="col-9">
-        <% @user.experiences.each do |experience|  %>
-        <%= render "shared/card-experience", experience_within: experience %>
+        <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
+          <% @user.portfolio_photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 200, width: 250, crop: :fill, :class => "img-thumbnail p-3" %>
+          <% end %>
+        <% elsif @user.id <= 30  %> <!-- user is seeded -->
+          <%=   cl_image_tag(@user.seed_portfolio,  height: 200, width: 250, crop: :fill, :class => "img-thumbnail m-3") %>
+        <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+
+          <% if policy(@user).edit? %>
+            <%= simple_form_for(@user) do |f| %>
+              <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }, :label => "Add your Portfolio!" %>
+              <%= f.submit %>
+            <% end %>
+          <% end %>
         <% end %>
       </div>
+    </div>
+    <div class="row">
       <!-- Members -->
       <div class="col-3">
         <p class="heading-flat mb-3">Activity</p>
       </div>
-      <div class="col-9">
-      </div>
+
+        <% @user.events.each do |event|  %>
+        <div class="col-3">
+        <%= render "shared/card-event-user-show", event_within: event %>
+        </div>
+        <% end %>
+    </div>
+    <div class="row">
+        <% @user.posts.each do |post|  %>
+        <div class="col-3">
+        </div>
+        <div class="col-9">
+        <%= render "shared/card-post-user-show", post_within: post %>
+        </div>
+        <% end %>
     </div>
   </div>
 <!-- SEED TEST CODE -->
