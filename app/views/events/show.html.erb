@@ -1,4 +1,5 @@
-<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/500x400/?Architecture);">
+
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.cl_img_tag)%>);">
 	<div class="container">
 		<h1><%= @event.title%></h1>
 		<p>Exchange knowledge</p>
@@ -9,6 +10,7 @@
             <% end %>
 	</div>
 </div>
+
     <div class = 'container'>
         <h3><%= @event.title %></h3>
     </div>
@@ -25,17 +27,17 @@
         </div>
     </div>  
 
-<div class = 'container p-3 my-3'>
-    <div class="row">
-        <div class="col-12 col-lg-3">
-            <p class="heading-flat">Location </p>
-        </div>
-        <div class = 'col-12 col-lg-9'>
-            <p> <%= @event.date_time %></p>
-            <p><%= @event.location %></p>
+    <div class = 'container p-3 my-3'>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <p class="heading-flat">Location </p>
+            </div>
+            <div class = 'col-12 col-lg-9'>
+                <p> <%= @event.date_time %></p>
+                <p><%= @event.location %></p>
+            </div>
         </div>
     </div>
-</div>
 
 
     <div class = 'container p-3 my-3'>
@@ -50,31 +52,36 @@
             </div>
         </div>
     </div>
-
     <div class = 'container p-3 my-3'>
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                <p class="heading-flat">Attending </p>
-            </div>
-            <div class = 'col-12 col-lg-9'>
-
-                    <% @event.users.each do |user| %>
-                        <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large') %>
-                        <p><%= user.first_name %> <%= user.last_name %> <%= user.email %></p>
-                    <% end %>
-            </div>
+    <div class="row">
+        <div class="col-12 col-lg-3">
+				<p class="heading-flat mb-3">Attending</p>
+			</div>
+			<div class = 'col-12 col-lg-9'>
+				<div class="row mt-3">	
+					<% @event.users.each do |user| %>
+						<div class="col-3 text-center">
+							<%= link_to user_path(user) do %>
+								<%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
+							<% end %>
+								<p><%= user.first_name %> <%= user.last_name %></p>
+						</div>
+					<% end %>
+				</div>
+			</div>
         </div>
     </div>
-<div class = 'container p-3 my-3'>
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                <p class="heading-flat">Organizer </p>
-            </div>
-                <div class = 'col-12 col-lg-9'>
-                    <%= @event.user.first_name %>, <%= @event.user.last_name %></p></h1>
+            
+    <div class = 'container p-3 my-3'>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <p class="heading-flat">Organizer </p>
                 </div>
-        </div>
-</div>
+                    <div class = 'col-12 col-lg-9'>
+                        <%= @event.user.first_name %>, <%= @event.user.last_name %></p></h1>
+                    </div>
+            </div>
+    </div>
 
 
   <div class = 'container p-3 my-3'>
@@ -111,51 +118,38 @@
             </div>
             <div class = 'col-12 col-lg-9'>
                 <% @event.comments.each do |comment| %>
+                 <div class="card-comment">
+                      <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+                    <div class="card-comment-infos">
                     <p>Time: <%= comment.date %> </p>  
                      <p><%= comment.content %></p> 
                       <p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
-                      <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+                </div>
+                </div>
                 <% end %>
             </div>
             </div>
         </div>
      </div>
-
-  <div class = 'container p-3 my-3'>
-        <div class="row">
-            <div class="col-3">
-                <p class="heading-flat">Comments </p>
-            </div>
-            <div class = 'col-9'>
-                <div class="card-post">
-                    <% @event.comments.each do |comment| %>
-                        <%= cl_image_tag(comment.user.cl_img_tag, gravity: :face, :class => 'avatar-large') %>
-                            <div class="card-post-infos">
-                                <p><%= comment.content %></p> 
-                                <p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
-                            </div>
-                    <% end %>
-                </div>
-            </div>
-        </div>
     </div>
+
 
     <div class = 'container p-3 my-3'>
       <div class="row">
-        <div class = 'col-12 col-lg-3'>
+            <div class = 'col-12 col-lg-3'>
             </div>
-        <div class = 'col-12 col-lg-9'>
-        <% if user_signed_in? %>
-            <%= simple_form_for ([@event, @comment]) do |f| %>
-        <div class="form-inputs justify-content-center">
-        <%= f.input :content %>          
-        <%= f.button :submit, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
-        <% end %>
+            <div class = 'col-12 col-lg-9'>
+                <% if user_signed_in? %>
+                    <%= simple_form_for ([@event, @comment]) do |f| %>
+                        <div class="form-inputs justify-content-center">
+                            <%= f.input :content %>          
+                            <%= f.button :submit, class: 'btn btn-primary' %>
+                    </div>
+                        <% end %>
+                <% end %>
+            </div>
       </div>
-      </div>
-       </div>
+    </div>
 
 
 

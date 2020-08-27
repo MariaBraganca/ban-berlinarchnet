@@ -1,0 +1,31 @@
+.card-comment {
+    overflow: hidden;
+    height: 120px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+   
+  .card-comment h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .card-comment p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  
+  .card-comment .card-comment-infos {
+    padding: 16px;
+  }
+
+  .card-comment .avatar-large {
+    margin-left: 16px;
+  }
+  
