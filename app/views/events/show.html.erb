@@ -5,7 +5,7 @@
 		<p>Exchange knowledge</p>
             <% if policy(Rsvp).create? %>
                 <%= form_tag event_rsvps_path(@event), method: :post do %>
-                    <%= submit_tag "Attend", class: "btn btn-primary" %>
+                    <%= submit_tag "Attend", class: "btn btn-call" %>
                 <% end %>
             <% end %>
 	</div>
@@ -79,7 +79,7 @@
              <div class="col-12 col-lg-2">
                 <% if policy(Rsvp).create? %>
                     <%= form_tag event_rsvps_path(@event), method: :post do %>
-                        <%= submit_tag "Attend", class: "btn btn-primary" %>
+                        <%= submit_tag "Attend", class: "btn btn-call" %>
                     <% end %>
                 <% end %>
             </div>
@@ -113,8 +113,8 @@
         <div class="row">
           <div class="col-12 col-lg-3">
           </div>
-            <div class="col-12 col-lg-2">
-                    <%= link_to 'Back to all events', events_path, class: 'btn btn-primary' %>
+            <div class="col-12 col-lg-3">
+                    <%= link_to 'Back to all events', events_path, class: 'btn btn-call' %>
             </div>          
         </div>
     </div> 
@@ -148,10 +148,10 @@
             </div>
             <div class = 'col-12 col-lg-9'>
                 <% if user_signed_in? %>
-									<%= form_tag event_event_comment_path(@event), method: :post do |f| %>
-											<%= text_field_tag :content %>          
-											<%= submit_tag 'Submit', class: 'btn btn-primary' %>
-									<% end %>
+                    <%= form_tag event_event_comment_path(@event), method: :post do |f| %>
+                        <%= text_field_tag :content %>          
+                        <%= submit_tag 'Submit', class: 'btn btn-call' %>
+                    <% end %>
                 <% end %>
             </div>
       </div>
@@ -166,12 +166,12 @@
 
             <div class = 'col-12 col-lg-3'>
                 <% if policy(@event).edit? %>
-                    <%= link_to "Update", edit_event_path(@event), class: 'btn btn-primary' %>
+                    <%= link_to "Update", edit_event_path(@event), class: 'btn btn-call' %>
                 <% end %>
             </div>  
             <div class = 'col-12 col-lg-3'> 
                 <% if policy(@event).destroy? %>
-                    <%= link_to "Destroy", event_path(@event), class: 'btn btn-primary' %>
+                    <%= link_to "Destroy", event_path(@event), class: 'btn btn-call' %>
                 <% end %>
             </div> 
         </div> 
