@@ -13,5 +13,31 @@ class OfficesController < ApplicationController
         lat: @office.latitude,
         lng: @office.longitude
       }]
+
+    if @office.ratings.empty?
+      @culture_average = 0
+      @salary_average = 0
+      @architecture_average = 0
+    else
+      # Average Ratings for Culture
+      total = []
+      @office.ratings.each do |rating|
+        total << rating.culture
+      end
+      @culture_average = (total.sum / total.size).round
+      # Average Ratings for Salary
+      total = []
+      @office.ratings.each do |rating|
+        total << rating.salary
+      end
+      @salary_average = (total.sum / total.size).round
+      # Average Ratings for Architecture
+      total = []
+      @office.ratings.each do |rating|
+        total << rating.architecture
+      end
+      @architecture_average = (total.sum / total.size).round
+    end
+
   end
 end
