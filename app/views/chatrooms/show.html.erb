@@ -1,4 +1,4 @@
-<div class="container" style="border: 1px solid #000000">
+<div class="container mt-5 mb-5" style="border: 1px solid #000000">
   <div class="row justify-content-center">
    <div class="col-4" style="padding: 0px">
     <div class="convo-container">
@@ -7,7 +7,18 @@
       </div>
         <div class="inbox-chat">
           <% @chatrooms.each do |chatroom| %>
-          <%= link_to "##{chatroom.id}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
+            <%= link_to chatroom_path(chatroom), class: "list-group-item list-group-item-light #{'active' if chatroom == @chatroom}" do %>
+              <div class="chat-card">
+                <% other_user = chatroom.users.where.not(id: current_user.id).first %>
+                <% if other_user.photo.attached? %>
+                  <%= cl_image_tag(other_user.photo.key)%>
+                <% else %>
+                  <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-large" %>
+                <% end %>
+                <h6><%= other_user.first_name %> <%= other_user.last_name %></h6>
+              </div>
+                <p class="message-text-inbox"> <%= chatroom.messages.last.content %></p>
+            <% end %>
           <% end %>
       </div>
     </div>
@@ -19,7 +30,11 @@
         <% @chatroom.messages.each do |message| %>
         <div class="messages-container" id="message-<%= message.id %>">
             <div class="message-avatar">
-              <span class="dot"></span>
+              <% if message.user.photo.attached? %>
+                  <%= cl_image_tag(message.user.photo.key)%>
+                <% else %>
+                  <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-chat" %>
+                <% end %>
               <span><%= message.user.first_name %> <%= message.user.last_name %></span>
             </div>
             <div class="message-text">
