@@ -1,0 +1,36 @@
+.card-post-user-show {
+    overflow: hidden;
+    height: 120px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .card-post-user-show h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .card-post-user-show p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .card-post-user-show .card-post-infos-user-show {
+    padding: 16px;
+  }
+
+  .card-post-user-show  .av {
+    margin-left: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+  }

@@ -3,14 +3,13 @@
   <%= cl_image_tag("offices/office#{rand(1..16)}", :class => "card-experience-img") %>
   <div class="card-experience-infos">
     <% if experience_within.end_date > DateTime.now()   %>
-      <p>Currently working @ <strong><%= experience_within.office.name %> </strong></p>
+      <p>Currently working @ <strong><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %> </strong></p>
     <% else   %>
-      <p>Worked @ <strong><%= experience_within.office.name %> </strong></p>
+      <p>Worked @ <strong><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></strong></p>
     <% end %>
 
     <h3><%= experience_within.job_position %></h3>
-    <p><%= experience_within.office.location %></p>
-    <p><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date.strftime("%m.%Y") %></p>
+    <p><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date > DateTime.now() ? "present" : experience_within.end_date.strftime("%m.%Y") %></p>
 
 
   </div>
