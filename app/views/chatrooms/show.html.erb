@@ -1,28 +1,41 @@
-<!-- <div class="d-flex"> -->
-  <!-- <div class="list-group w-200px bg-white br-light"> -->
-    <%# @chatrooms.each do |chatroom| %>
-      <%#= link_to "##{chatroom}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
-    <%# end %>
-  <!-- </div> -->
-
-<div class="chatroom">
-  <h1>Chats</h1>
-
-
-  <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
-    <% @chatroom.messages.each do |message| %>
-      <div class="message-container" id="message-<%= message.id %>">
-        <i class="author">
-          <span><%= message.user.first_name %> <%= message.user.last_name %></span>
-          <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-        </i>
-        <p><%= message.content %></p>
+<div class="container" style="border: 1px solid #000000">
+  <div class="row justify-content-center">
+   <div class="col-4" style="padding: 0px">
+    <div class="convo-container">
+      <div class="messages-hd">
+        <h3>Chats</h3>
       </div>
-    <% end %>
-  </div>
+        <div class="inbox-chat">
+          <% @chatrooms.each do |chatroom| %>
+          <%= link_to "##{chatroom.id}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
+          <% end %>
+      </div>
+    </div>
+   </div>
 
-    <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-    <%= f.input :content, label: false, placeholder: "Message ##{@chatroom}" %>
-    <%= f.submit 'Send', :class => 'btn btn-primary' %>
-  <% end %>
+
+  <div class="col-8">
+    <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+        <% @chatroom.messages.each do |message| %>
+        <div class="messages-container" id="message-<%= message.id %>">
+            <div class="message-avatar">
+              <span class="dot"></span>
+              <span><%= message.user.first_name %> <%= message.user.last_name %></span>
+            </div>
+            <div class="message-text">
+              <p><%= message.content %></p>
+              <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
+            </div>
+          </div>
+        <% end %>
+    </div>
+
+        <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+        <%= f.input :content, label: false, placeholder: "Write a message..." %>
+        <%= f.submit 'Send', :class => 'btn-flat' %>
+      <% end %>
+    </div>
+  </div>
+ </div>
 </div>
+
