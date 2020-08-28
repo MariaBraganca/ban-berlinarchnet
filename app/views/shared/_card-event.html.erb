@@ -1,9 +1,16 @@
-<div class="card-event">
-  <%= cl_image_tag("events/event2", :class => "card-event-img") %>
-  <div class="card-event-infos">
-    <div>
-      <h2>Word Heritage in Berlin</h2>
-      <p>Short description here!</p>
-    </div>
+<% @events.each do |event| %>
+  <div class="col-3">
+    <%= link_to event_path(event) do %>
+      <div class="card-event">
+        <%= cl_image_tag(event.cl_img_tag, :class => "card-event-img") %>
+        <div class="card-event-infos">
+          <div>
+            <h2><%= event.title%></h2>
+            <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= event.location %></p>
+            <p><i class="fas fa-clock" style="color: gray"></i> <%= event.date_time %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-</div>
+<% end %>

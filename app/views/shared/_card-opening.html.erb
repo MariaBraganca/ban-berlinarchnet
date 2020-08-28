@@ -1,6 +1,11 @@
-<div class="card-opening">
-  <div class="card-opening-infos">
-    <h2>Job position</h2>
-    <p>Office</p>
+<% @openings.each do |opening| %>
+  <div class="card-opening mb-3">
+    <div class="card-office-infos">
+      <div>
+        <h2><%= opening.job_position %></h2>
+        <p><%= opening.office.name %></p>
+        <p><i class="fas fa-clock" style="color: gray"></i> <%= opening.date %></p>
+      </div>
+    </div>
   </div>
-</div>
+<% end %>
