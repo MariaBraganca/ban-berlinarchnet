@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   def index
     @events = policy_scope(Event).order(created_at: :desc)
     @user = User.find_by(email: @user)
-    @user_events = Event.where(user_id: @user.id)
 
   end
 
