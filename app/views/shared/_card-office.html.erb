@@ -1,7 +1,11 @@
-<div class="card-office">
-  <%= cl_image_tag("offices/office7", :class => "card-office-img") %>
-  <div class="card-office-infos">
-    <h2>Office Name</h2>
-    <p>Location</p>
+<% @offices.each do |office| %>
+  <div class="card-office mb-3">
+    <%= cl_image_tag(office.cl_img_tag, :class => "card-office-img") %>
+    <div class="card-office-infos">
+      <div>
+        <h2><%= office.name %></h2>
+        <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= office.location %></p>
+      </div>
+    </div>
   </div>
-</div>
+<% end %>
