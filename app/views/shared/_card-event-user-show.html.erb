@@ -2,8 +2,9 @@
   <%= cl_image_tag("events/event2", :class => "card-event-img-user-show") %>
   <div class="card-event-infos-user-show">
     <div>
-      <h2><%= event_within.title %></h2>
-      <p><%= event_within.date_time.strftime("%H:%M %d.%m.%Y") %> <%= event_within.location %></p>
+      <h2><%= link_to "#{event_within.title}", "/events/#{event_within.id}" %> </h2>
+      <p><%= event_within.date_time.strftime("%H:%M %d.%m.%Y") %> </p>
+       <p> <%= event_within.location %></p>
     </div>
   </div>
 </div>
