@@ -75,3 +75,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Geocoder gemfile
 
 gem 'geocoder'
+gem 'turbolinks_render'
