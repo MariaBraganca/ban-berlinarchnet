@@ -1,14 +1,17 @@
-<div class= 'banner-show'>
-  <%= cl_image_tag("patterns/pattern#{rand(1..4)}", :class => "banner-show-img mb-5") %>
+
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path("users/userBanner1")%>);">
+  <div class="container">
   <h1><%= @user.first_name %>  <%= @user.last_name %></h1>
 
+  </div>
 </div>
 
-
-
-
 <dir class="container">
-
+<% if policy(Chatroom).create? %>
+      <%= link_to 'Message', user_chatrooms_path(@user), method: :post, class: "btn btn-call"  %>
+          <%#= submit_tag "Message"%>
+      <%# end %>
+  <% end %>
 
 </dir>
 
@@ -20,17 +23,17 @@
       <div class="col-3">
         <p class="heading-flat mb-3">About</p>
       </div>
-      <div class="col-4">
+      <div class="col-3">
         <!-- Avatar -->
         <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
-        <%=   cl_image_tag(@user.photo.key, :class => "avatar-large-user-showpage")  %>
+        <%=   cl_image_tag(@user.photo.key , :transformation=>{:width=>200, :height=>200, :gravity=>"face", :radius=>"max", :crop=>"crop"})  %>
         <% elsif @user.id <= 30  %> <!-- user is seeded -->
         <%=   cl_image_tag(@user.cl_img_tag, :class => "avatar-large-user-showpage") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
         <%=   cl_image_tag("logo/logo1", :class => "avatar-large-user-showpage") %>
         <% end %>
       </div>
-      <div class="col-4">
+      <div class="col-6">
         <!-- Description -->
         <p><%= @user.description %></p>
       </div>
@@ -44,7 +47,6 @@
         <% @user.experiences.each do |experience|  %>
         <%= render "shared/card-experience", experience_within: experience %>
         <% end %>
-        <div style = "height: 11px; border: 3px solid black;left: 130px; position:absolute; top: 149px;"></div>
       </div>
     </div>
     <div class="row">
@@ -55,15 +57,15 @@
       <div class="col-9">
         <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
           <% @user.portfolio_photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 200, width: 250, crop: :fill, :class => "img-thumbnail p-3" %>
+            <%= cl_image_tag photo.key, :style => "height: 140px; width: 220px; margin: 10px;" %>
           <% end %>
         <% elsif @user.id <= 30  %> <!-- user is seeded -->
-          <%=   cl_image_tag(@user.seed_portfolio,  height: 200, width: 250, crop: :fill, :class => "img-thumbnail m-3") %>
+          <%=   cl_image_tag(@user.seed_portfolio, :style => "height: 140px; width: 220px; margin: 10px; margin-left: 0px;") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
 
           <% if policy(@user).edit? %>
             <%= simple_form_for(@user) do |f| %>
-              <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }, :label => "Add your Portfolio!" %>
+              <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }%>
               <%= f.submit %>
             <% end %>
           <% end %>

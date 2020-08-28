@@ -1,11 +1,13 @@
 <% @offices.each do |office| %>
-  <div class="card-office mb-3">
-    <%= cl_image_tag(office.cl_img_tag, :class => "card-office-img") %>
-    <div class="card-office-infos">
-      <div>
-        <h2><%= office.name %></h2>
-        <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= office.location %></p>
+  <%= link_to office_path(office) do %>
+    <div class="card-office mb-3">
+      <%= cl_image_tag(office.cl_img_tag, :class => "card-office-img") %>
+      <div class="card-office-infos">
+        <div>
+          <h2><%= office.name %></h2>
+          <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= office.location %></p>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>

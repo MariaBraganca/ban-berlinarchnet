@@ -1,11 +1,13 @@
 <% @posts.each do |post| %>
-  <div class="card-post mb-3">
-    <%= cl_image_tag(post.user.cl_img_tag, :class => "avatar-large") %>
-    <div class="card-post-infos">
-      <div>
-        <h2><%= post.title %></h2>
-        <p><%= post.user.first_name %> <%= post.user.last_name %></p>
+  <%= link_to post_path(post) do %>
+    <div class="card-post mb-3">
+      <%= cl_image_tag(post.user.cl_img_tag, :class => "avatar-large") %>
+      <div class="card-post-infos">
+        <div>
+          <h2><%= post.title %></h2>
+          <p><%= post.user.first_name %> <%= post.user.last_name %></p>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>

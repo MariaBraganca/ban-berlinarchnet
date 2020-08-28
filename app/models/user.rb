@@ -4,7 +4,8 @@ class User < ApplicationRecord
   has_many :rsvps
   has_many :events, through: :rsvps
   has_many :messages
-  has_many :chatrooms, through: :messages
+  has_many :chatrooms_as_user_one, source: :chatrooms, foreign_key: :user_one_id
+  has_many :chatrooms_as_user_two, source: :chatrooms, foreign_key: :user_two_id
   has_many :comments
   has_many :posts
 
@@ -15,4 +16,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # def chatrooms
+    # chatrooms_as_user_one + chatrooms_as_user_two
+  # end
 end

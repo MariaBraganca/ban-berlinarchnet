@@ -16,7 +16,7 @@
         <%= link_to "Offices", offices_path, class: "nav-link-menu" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Jobs", '#', class: "nav-link-menu" %>
+        <%= link_to "Jobs", openings_path, class: "nav-link-menu" %>
       </li>
       <li class="nav-item active">
         <%= link_to "Blog", posts_path, class: "nav-link-menu" %>
@@ -35,10 +35,16 @@
           <%#= link_to "Messages", "#", class: "nav-link"%>
         </li>
         <li class="nav-item dropdown">
-          <%= cl_image_tag "users/user1", gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= cl_image_tag("logo/logo1", :class => 'avatar') %>            
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Dashboard", "#", class: "dropdown-item" %>
-            <%= link_to "Messages", "#", class: "dropdown-item" %>
+            
+            <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
+            <%#= link_to "Messages", chatroom_path(current_user.chatrooms.last.id), class: "dropdown-item" unless current_user.chatrooms.empty? %>
+      
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
