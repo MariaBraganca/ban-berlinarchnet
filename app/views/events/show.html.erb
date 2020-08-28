@@ -92,9 +92,13 @@
                             <% @event.users.each do |user| %>
                                 <div class="col-3 text-center">
                                     <%= link_to user_path(user) do %>
-                                        <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
+                                        <% if user.photo.attached? %>
+                                            <%= cl_image_tag user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                                        <% else %>
+                                            <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>           
+                                        <% end %>
                                     <% end %>
-                                        <p><%= user.first_name %> <%= user.last_name %></p>
+                                    <p><%= user.first_name %> <%= user.last_name %></p>
                                 </div>
                             <% end %>
                         </div>
