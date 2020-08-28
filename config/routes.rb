@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :experiences
+    resources :chatrooms, only: [:create]
   end
 
   resources :experiences, only: [] do
@@ -18,16 +19,16 @@ Rails.application.routes.draw do
     post "event_comment", to: "comments#create_event_comment"
   end
 
-  resources :posts do 
+  resources :posts do
     resources :comments, only: [ :new, :create, :destroy]
     post "post_comment", to: "comments#create_post_comment"
   end
-  
+
   resources :offices, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
     post "office_comment", to: "comments#create_office_comment"
   end
-  
+
   resources :chatrooms, only: [:index, :show] do
     resources :messages, only: :create
   end

@@ -7,17 +7,24 @@
       </div>
         <div class="inbox-chat">
           <% @chatrooms.each do |chatroom| %>
-            <%= link_to chatroom_path(chatroom), class: "list-group-item list-group-item-light #{'active' if chatroom == @chatroom}" do %>
+            <%= link_to chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
-                <% other_user = chatroom.users.where.not(id: current_user.id).first %>
-                <% if other_user.photo.attached? %>
-                  <%= cl_image_tag(other_user.photo.key)%>
+                <% if chatroom.user_two.photo.attached? %>
+                  <%= cl_image_tag(chatroom.user_two.photo.key)%>
                 <% else %>
                   <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-large" %>
                 <% end %>
-                <h6><%= other_user.first_name %> <%= other_user.last_name %></h6>
+                <% if chatroom.user_one == current_user %>
+                  <h6 class="ml-3"><%= chatroom.user_two.first_name %> <%= chatroom.user_two.last_name %></h6>
+                <% else %>
+                  <h6 class="ml-3"><%= chatroom.user_one.first_name %> <%= chatroom.user_one.last_name %></h6>
+                <% end %>
               </div>
-                <p class="message-text-inbox"> <%= chatroom.messages.last.content %></p>
+              <% if chatroom.messages.empty? %>
+                <p class="message-text-inbox"></p>
+              <% else %>
+              <p class="message-text-inbox"><%= chatroom.messages.last.content  %></p>
+              <% end %>
             <% end %>
           <% end %>
       </div>

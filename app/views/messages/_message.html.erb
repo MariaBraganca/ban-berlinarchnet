@@ -1,7 +1,14 @@
-<div class="message-container" id="message-<%= message.id %>">
-  <i>
+<div class="messages-container" id="message-<%= message.id %>">
+  <div class="message-avatar">
+    <% if message.user.photo.attached? %>
+      <%= cl_image_tag(message.user.photo.key)%>
+    <% else %>
+      <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-chat" %>
+    <% end %>
     <span><%= message.user.first_name %> <%= message.user.last_name %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-  </i>
-  <p><%= message.content %></p>
+  </div>
+  <div class="message-text">
+    <p><%= message.content %></p>
+    <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
+  </div>
 </div>

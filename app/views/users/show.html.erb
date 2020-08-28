@@ -8,7 +8,11 @@
 
 
 <dir class="container">
-
+<% if policy(Chatroom).create? %>
+      <%= link_to 'Message', user_chatrooms_path(@user), method: :post, class: "btn btn-call"  %>
+          <%#= submit_tag "Message"%>
+      <%# end %>
+  <% end %>
 
 </dir>
 
