@@ -35,7 +35,11 @@
           <%#= link_to "Messages", "#", class: "nav-link"%>
         </li>
         <li class="nav-item dropdown">
-          <%= cl_image_tag current_user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= cl_image_tag("logo/logo1", :class => 'avatar') %>            
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Messages", chatroom_path(current_user), class: "dropdown-item" %>
