@@ -6,14 +6,14 @@ require 'faker'
 
 n_offices = CLEAN_OFFICE_ARRAY.size
 n_team_members = TEAM_MEMBER_NAME.size
-n_users = 30
-n_posts = 30
-n_events = 130
+n_users = 15
+n_posts = 15
+n_events = 15
 n_experiences_per_user = 3
-n_openings = 30
-n_ratings = 150
-n_rsvps = 30
-n_comments = 150
+n_openings = 15
+n_ratings = 15
+n_rsvps = 15
+n_comments = 15
 
 phase = "office"
 puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
@@ -25,7 +25,8 @@ CLEAN_OFFICE_ARRAY.each do |elementos|
              location: elementos[:external_location],
              description: OFFICE_DESCRIPTIONS.sample,
              cl_img_tag: "offices/office#{rand(1..48)}",
-             url: elementos[:external_url])
+             url: elementos[:external_url],
+             cl_img_project_tag: "projects/project#{rand(1..10)}")
   puts "________#{terminal_counter}__ out of #{n_offices}______Offices Saved!_____________________"
   terminal_counter += 1
 end

@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
         authorize @comment
 
         if @comment.save
-            redirect_to event_path(@event)
+            redirect_to event_path(@event, anchor: "comment-#{@comment.id}")
         else
             render 'events/show'
         end
