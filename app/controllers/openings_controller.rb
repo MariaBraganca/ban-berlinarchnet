@@ -1,6 +1,6 @@
 class OpeningsController < ApplicationController
 	def index
-		@openings = Openings.all
+		@openings = policy_scope(Opening).order(created_at: :desc)
 	end
 
 	def show
