@@ -8,6 +8,11 @@
                     <%= submit_tag "Attend", class: "btn btn-call" %>
                 <% end %>
             <% end %>
+              <%# if policy(Rsvp).destroy?%>
+                <%#= form_tag event_rsvp_path(@event), method: :delete do %>
+                    <%#= submit_tag "Delete", class: "btn btn-call" %>
+                <%# end %>
+              <%# end %>
 	</div>
 </div>
 
@@ -52,23 +57,26 @@
             </div>
         </div>
     </div>
+    
     <div class = 'container p-3 my-3'>
-    <div class="row">
-        <div class="col-12 col-lg-3">
-				<p class="heading-flat mb-3">Attending</p>
-			</div>
-			<div class = 'col-12 col-lg-9'>
-				<div class="row mt-3">	
-					<% @event.users.each do |user| %>
-						<div class="col-3 text-center">
-							<%= link_to user_path(user) do %>
-								<%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
-							<% end %>
-								<p><%= user.first_name %> <%= user.last_name %></p>
-						</div>
-					<% end %>
-				</div>
-			</div>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                    <p class="heading-flat mb-3">Attending</p>
+                </div>
+                    <div class = 'col-12 col-lg-9'>
+                        <div class="row mt-3">	
+                            <% @event.users.each do |user| %>
+                                <div class="col-3 text-center">
+                                    <%= link_to user_path(user) do %>
+                                        <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
+                                    <% end %>
+                                        <p><%= user.first_name %> <%= user.last_name %></p>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
     </div>
 
@@ -108,16 +116,6 @@
                 <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events' %>
             </div>
     </div>
-  </div>
-    <div class = 'container p-3 my-3'>
-        <div class="row">
-          <div class="col-12 col-lg-3">
-          </div>
-            <div class="col-12 col-lg-3">
-                    <%= link_to 'Back to all events', events_path, class: 'btn btn-call' %>
-            </div>          
-        </div>
-    </div> 
 
   <div class = 'container p-3 my-3'>
         <div class="row">
@@ -175,4 +173,14 @@
                 <% end %>
             </div> 
         </div> 
-    </div>
+  </div>
+
+    <div class = 'container p-3 my-3'>
+        <div class="row">
+          <div class="col-12 col-lg-3">
+          </div>
+            <div class="col-12 col-lg-3">
+                    <%= link_to 'Back to all events', events_path, class: 'btn btn-call' %>
+            </div>          
+        </div>
+    </div> 

@@ -14,6 +14,7 @@ class EventsController < ApplicationController
     @events = Event.all
     @rsvp = Rsvp.new
     authorize @event
+    authorize @rsvp
     
 
     @marker = [
