@@ -2,7 +2,7 @@ class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-    @offices = policy_scope(Office).order(created_at: :desc)
+    @offices = policy_scope(Office).order(:name)
   end
 
   def show
