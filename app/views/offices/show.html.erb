@@ -67,7 +67,8 @@
 			<div class="col-3">
 				<p class="heading-flat">Projects</p>
 			</div>
-			<div class="col-9">
+			<div class="col-9 mb-3">
+				<%= cl_image_tag(@office.cl_img_project_tag, :class => 'photos-events') %>
 			</div>
 			<!-- Location -->
 			<div class="col-3">
@@ -107,7 +108,11 @@
 					<div class = 'col-12 col-lg-9'>
 						<% @office.comments.each do |comment| %>
 							<div class="card-comment">
-									<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+								<% if comment.user.photo.attached? %>
+            			<%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
+          			<% else %>
+            			<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+          			<% end %>									
 								<div class="card-comment-infos">
 									<p>Time: <%= comment.date %> </p>  
 									<p><%= comment.content %></p> 
@@ -125,9 +130,9 @@
 					</div>
 					<div class = 'col-12 col-lg-9'>
 						<% if user_signed_in? %>
-							<%= form_tag office_office_comment_path(@office), method: :post do |f| %>
+							<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
 									<%= text_field_tag :content %>          
-									<%= submit_tag 'Submit', class: 'btn btn-primary' %>
+									<%= submit_tag 'Submit', class: 'btn btn-call' %>
 							<% end %>
 						<% end %>
 					</div>
@@ -136,5 +141,7 @@
 
 		</div>		
 	</div>
+
+	<%= link_to 'Back to all offices', offices_path, class: 'btn btn-flat mb-3' %>
 <!-- SEED TEST CODE -->
 </div>
