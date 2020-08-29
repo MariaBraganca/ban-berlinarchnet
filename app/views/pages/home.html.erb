@@ -9,7 +9,7 @@
 
 <div class="container">
 <!-- Events -->
-	<div class="mb-5">
+	<div>
 		<div class="row">
 			<div class="col-3">
 				<%= link_to 'Events', events_path, :class => "btn btn-flat mb-3" %>
@@ -26,7 +26,7 @@
 				<%= link_to 'Offices', offices_path, :class => "btn btn-flat mb-3" %>
 				<p>Check out the best rated offices!</p>
 			</div>
-			<div class="col-9">
+			<div class="col-9 px-0">
 				<%= render "shared/card-office" %>
 			</div>
 		</div>		
@@ -40,20 +40,20 @@
 				<%= link_to 'Jobs', openings_path, :class => "btn btn-flat mb-3" %>
 				<p>Check out the latest jobs!</p>
 			</div>
-			<div class="col-9">
+			<div class="col-9 white-board px-3 py-3">
 				<%= render "shared/card-opening" %>
 			</div>
 		</div>		
 	</div>
 
 <!-- Blog -->
-	<div class="mb-3">
+	<div class="mb-5">
 		<div class="row">
 			<div class="col-3">
 				<%= link_to 'Blog', posts_path, :class => "btn btn-flat mb-3" %>
 				<p>Check out the latest posts!</p>
 			</div>
-			<div class="col-9">
+			<div class="col-9 white-board">
 				<%= render "shared/card-post" %>
 			</div>
 		</div>

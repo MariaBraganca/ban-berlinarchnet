@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
   <%= link_to post_path(post) do %>
-    <div class="card-post mb-3">
+    <div class="card-post my-3">
       <%= cl_image_tag(post.user.cl_img_tag, :class => "avatar-large") %>
       <div class="card-post-infos">
         <div>
