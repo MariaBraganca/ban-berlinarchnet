@@ -16,29 +16,28 @@ def create
     @rsvp.save!
 
     if @rsvp.save
-      redirect_to event_path(@event)
+      redirect_to event_path(@event, anchor: "user-#{@rsvp.id}")
     else
       render :new
     end
 end
 
-#def destroy
+def destroy
 
-#@event = Event.find(params[:id])
-#@event = @rsvp.event_id
-#@rsvp.destroy
-#authorize @rsvp
-#redirect_to event_path(@rsvp.event)
+  @rsvp = Rsvp.find(params[:id])
+  @rsvp.destroy
+  authorize @rsvp
+  redirect_to event_path(@event)
 
-#end
+end
 
 private
   def rsvp_params
-    params.permit(:user_id, :event_id)
+    params.permit(:user_id, :event_id, :id)
   end
 
   def set_rsvp
-    @rsvp = Rsvp.find(params[:id])
+    @rsvp = Rsvp.find(params[:user_id])
   end
 
 end

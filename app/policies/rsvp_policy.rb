@@ -13,7 +13,7 @@ class RsvpPolicy < ApplicationPolicy
     return true
   end
 
-  #def destroy?
-    #true
-  #end
+  def destroy?
+    true
+  end
 end

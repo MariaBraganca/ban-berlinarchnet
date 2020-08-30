@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :experiences
+    resources :rsvps
     resources :chatrooms, only: [:create]
   end
 
