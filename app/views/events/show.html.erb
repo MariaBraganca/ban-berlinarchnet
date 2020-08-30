@@ -4,17 +4,18 @@
 		<h1><%= @event.title%></h1>
 		<p>Exchange knowledge</p>
 
+
             <% if policy(Rsvp).create? %>
-                <button type="button" class="btn btn-call" data-toggle="modal" data-target="#exampleModal">
-                    Attend
-                </button>
                 
+                    <button type="button" class="btn btn-call" data-toggle="modal" data-target="#exampleModal">
+                        Attend
+                    </button>
             <% end %>
-              <%# if policy(Rsvp).destroy?%>
-                <%#= form_tag event_rsvp_path(@event), method: :delete do %>
-                    <%#= submit_tag "Delete", class: "btn btn-call" %>
-                <%# end %>
-              <%# end %>
+              <% if policy(Rsvp).destroy?%>
+                <%= form_tag event_rsvp_path(@event.id, @event.rsvp_ids), method: :delete do %>
+                    <%= submit_tag "Delete", class: "btn btn-call" %>
+                <% end %>
+              <% end %>
 	</div>
 </div>
 
@@ -32,9 +33,9 @@
         You are attending the event <%= @event.title%>.
       </div>
       <div class="modal-footer">
-        <%= form_tag event_rsvps_path(@event),method: :post do %>
-            <%= submit_tag "Close", class: "btn btn-call"%>
-        <% end %>
+            <%= form_tag event_rsvps_path(@event, url: (event_path([@event], anchor:'user'))), method: :post do %>
+                <%= submit_tag "Close", class: "btn btn-call"%>
+            <% end %>
       </div>
     </div>
   </div>
@@ -92,13 +93,14 @@
                             <% @event.users.each do |user| %>
                                 <div class="col-3 text-center">
                                     <%= link_to user_path(user) do %>
+                                    
                                         <% if user.photo.attached? %>
                                             <%= cl_image_tag user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                                         <% else %>
                                             <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>           
                                         <% end %>
                                     <% end %>
-                                    <p><%= user.first_name %> <%= user.last_name %></p>
+                                     <p id="user-<%=user.id%>"><%= user.first_name %> <%= user.last_name %></p>   
                                 </div>
                             <% end %>
                         </div>
