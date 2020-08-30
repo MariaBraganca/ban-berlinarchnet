@@ -1,2 +1,11 @@
-<h1>Openings#index</h1>
-<p>Find me in app/views/openings/index.html.erb</p>
+<div class="container">
+	<div class="text-center my-5">
+		<h1>Job openings</h1>
+		<p>Check out the most recent job openings in Berlin!</p>
+	</div>
+	<div class="row justify-content-around mb-5">
+		<div class="col-9 white-board px-3 py-3">
+			<%= render "shared/card-opening" %>
+		</div>
+	</div>		
+</div>

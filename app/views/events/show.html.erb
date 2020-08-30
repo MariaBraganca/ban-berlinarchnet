@@ -1,15 +1,13 @@
-
+<!-- Banner -->
 <div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.cl_img_tag)%>);">
 	<div class="container">
 		<h1><%= @event.title%></h1>
-		<p>Exchange knowledge</p>
-
 
             <% if policy(Rsvp).create? %>
-                
-                    <button type="button" class="btn btn-call" data-toggle="modal" data-target="#exampleModal">
-                        Attend
-                    </button>
+                <button type="button" class="btn btn-call my-3" data-toggle="modal" data-target="#exampleModal">
+                    Attend
+                </button>
+
             <% end %>
               <% if policy(Rsvp).destroy?%>
                 <%= form_tag event_rsvp_path(@event.id, @event.rsvp_ids), method: :delete do %>
@@ -41,149 +39,100 @@
   </div>
 </div>
 
+	<!-- About and Details -->
     <div class = 'container'>
-        <h3><%= @event.title %></h3>
-    </div>
-
-    <div class = 'container p-3 my-3'>  
-        <div class="row">       
-            <div class="col-12 col-lg-3">
-                <p class="heading-flat">About </p>
+        <div class = 'row mb-5'>  
+            <div class="col-12 col-lg-8">
+                <h2 class="mb-5">About </h2>
+                <p>Description: <%= @event.description %></p>
             </div>
-                <div class = 'col-12 col-lg-9'>
-                    <p>Description: <%= @event.description %></p>
+            <div class="col-12 col-lg-4">
+                <h2 class="mb-5">Details </h2>
+                <p><i class="fas fa-clock" style="color: gray"></i> <%= @event.date_time.strftime("%H:%M %d.%m.%Y") %></p>
+                <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.location %></p>
+                <p><i class="fas fa-user" style="color: #E53E3E"></i> Organized by:</p>
+                <div class="text-center">
+                    <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar-large mb-3'), user_path(@event.user)  %>
+                    <p><%= @event.user.first_name %>, <%= @event.user.last_name %></p>
+                </div>
+            </div>
+        </div>  
+    </div>
+	<!-- Map -->
+        <div class="row mb-5">
+            <div class = 'col-12 col-lg-12'>
+                <div id="map"
+                    style="width: 100%; height: 500px;"
+                    data-markers="<%= @marker.to_json %>"
+                    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
                 </div>
             </div>
         </div>
-    </div>  
 
-    <div class = 'container p-3 my-3'>
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                <p class="heading-flat">Location </p>
-            </div>
-            <div class = 'col-12 col-lg-9'>
-                <p> <%= @event.date_time %></p>
-                <p><%= @event.location %></p>
-            </div>
-        </div>
-    </div>
+    <div class = 'container'>
 
-
-    <div class = 'container p-3 my-3'>
-        <div class="row">
-        <div class="col-12 col-lg-3">
-        </div>
-        <div class = 'col-12 col-lg-9'>
-            <div id="map"
-                style="width: 100%; height: 600px;"
-                data-markers="<%= @marker.to_json %>"
-                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-            </div>
-        </div>
-    </div>
-    
-    <div class = 'container p-3 my-3'>
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                    <p class="heading-flat mb-3">Attending</p>
-                </div>
-                    <div class = 'col-12 col-lg-9'>
-                        <div class="row mt-3">	
-                            <% @event.users.each do |user| %>
-                                <div class="col-3 text-center">
-                                    <%= link_to user_path(user) do %>
-                                    
-                                        <% if user.photo.attached? %>
-                                            <%= cl_image_tag user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                                        <% else %>
-                                            <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>           
-                                        <% end %>
-                                    <% end %>
-                                     <p id="user-<%=user.id%>"><%= user.first_name %> <%= user.last_name %></p>   
-                                </div>
+		<!-- Members -->
+        <div class="row mb-5">
+        	<h2 class="col-12 mb-5">Attending (<%= @event.users.length %>)</h2>
+            <div class = 'col-12 col-lg-12'>
+            	<div class="row mt-3">	
+                    <% @event.users.each do |user| %>
+                        <div class="col-3 text-center">
+                            <%= link_to user_path(user) do %>
+                                <% if user.photo.attached? %>
+                                    <%= cl_image_tag user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                                <% else %>
+                                    <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>         
+                                <% end %>
                             <% end %>
+                              <p id="user-<%=user.id%>"><%= user.first_name %> <%= user.last_name %></p>   
                         </div>
-                    </div>
+                    <% end %>
                 </div>
-            </div>    
-        </div>
-    </div>
-
-      <div class = 'container p-3 my-3'>
-        <div class="row">
-          <div class="col-12 col-lg-3">
-          </div>
-             <div class="col-12 col-lg-2">
                 <% if policy(Rsvp).create? %>
-                    <button type="button" class="btn btn-call" data-toggle="modal" data-target="#exampleModal">
-                        Attend
-                    </button>
-                <% end %>
+					<button type="button" class="btn btn-call mt-5" data-toggle="modal" data-target="#exampleModal">
+						Attend
+					</button>
+                <% end %> 
             </div>
         </div>
-    </div> 
-            
-    <div class = 'container p-3 my-3'>
-            <div class="row">
-                <div class="col-12 col-lg-3">
-                    <p class="heading-flat">Organizer </p>
-                </div>
-                    <div class = 'col-12 col-lg-9'>
-                        <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar-large mb-3'), user_path(@event.user)  %>
-                        <%= @event.user.first_name %>, <%= @event.user.last_name %></p></h1>
-                    </div>
-            </div>
-    </div>
-
-
-  <div class = 'container p-3 my-3'>
-    <div class="row">
-            <div class="col-12 col-lg-3">
-                <p class="heading-flat">Photos </p>
-            </div>
-            <div class = 'col-12 col-lg-9'>
+        <hr>
+	    <div class="row">
+            <!-- Photos -->
+            <div class = 'col-12 col-lg-6 mb-5'>
+            	<h2 class="mb-3">Photos</h2>
                 <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events' %>
             </div>
-    </div>
-
-  <div class = 'container p-3 my-3'>
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                <p class="heading-flat">Comments </p>
-            </div>
-            <div class = 'col-12 col-lg-9'>
-                <% @event.comments.each do |comment| %>
-                 <div class="card-comment" id="comment-<%=comment.id%>">
-                      <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-                    <div class="card-comment-infos">
-                    <p>Time: <%= comment.date %> </p>  
-                     <p><%= comment.content %></p> 
-                      <p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
-                </div>
-                </div>
-                <% end %>
-            </div>
-            </div>
-        </div>
-     </div>
-    </div>
-
-        <div class = 'container p-3 my-3'>
-        <div class="row">
-                <div class = 'col-12 col-lg-3'>
-                </div>
-                <div class = 'col-12 col-lg-9'>
+		    <!-- Comments -->
+            <div class = 'col-12 col-lg-6 mb-5'>
+                <h2 class="mb-3">Comments</h2>
+                <!-- Comments past-->
+                    <% @event.comments.each do |comment| %>
+                        <div class="card-comment mb-3 p-10" id="comment-<%= comment.id %>">
+                            <% if comment.user.photo.attached? %>
+            			        <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
+          			        <% else %>
+            			        <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+          			        <% end %>	
+                            <div class="card-comment-infos">
+                                <h6><%= comment.content %></h6> 
+                                <p>Time: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>  
+                                <p>Posted by: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
+                            </div>
+                        </div>
+                    <% end %>
+                    <!-- Comments past-->
                     <% if user_signed_in? %>
                         <%= form_tag event_event_comment_path(@event, url: (event_path([@event], anchor:'comments'))), method: :post do |f| %>
                             <%= text_field_tag :content %>          
                             <%= submit_tag 'Submit', class: 'btn btn-call' %>
                         <% end %>
                     <% end %>
-                </div>
+            </div>
         </div>
-    </div>
-
+        <!-- Go back to all events -->
+        <%= link_to 'Back to all events', events_path, class: 'btn btn-call' %>
+    </div>	
 
     <div class = 'container p-3 my-3'>
         <div class="row">
@@ -201,14 +150,8 @@
                 <% end %>
             </div> 
         </div> 
-  </div>
+    </div>
 
-    <div class = 'container p-3 my-3'>
-        <div class="row">
-          <div class="col-12 col-lg-3">
-          </div>
-            <div class="col-12 col-lg-3">
-                    <%= link_to 'Back to all events', events_path, class: 'btn btn-call' %>
-            </div>          
-        </div>
-    </div> 
+
+    
+

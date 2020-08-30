@@ -1,98 +1,83 @@
-
-<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path("users/userBanner1")%>);">
-  <div class="container">
-  <h1><%= @user.first_name %>  <%= @user.last_name %></h1>
-
-  </div>
-</div>
-
-<dir class="container">
-<% if policy(Chatroom).create? %>
-      <%= link_to 'Message', user_chatrooms_path(@user), method: :post, class: "btn btn-call"  %>
-          <%#= submit_tag "Message"%>
-      <%# end %>
-  <% end %>
-
-</dir>
-
 <div class="container">
-<!-- SEED TEST CODE -->
-  <div class="mb-5">
-    <div class="row">
+  <h1 class="text-center my-5">Dashboard</h1>
+  <div class="row mb-5">
+    <div class="col-6">
       <!-- About -->
-      <div class="col-3">
-        <p class="heading-flat mb-3">About</p>
-      </div>
-      <div class="col-3">
-        <!-- Avatar -->
+      <h2 class="mb-5">Hi i'm <%= @user.first_name %> <%= @user.last_name %>!</h2>
+      <!-- Avatar -->
+      <div class="text-center mb-3">
         <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
-        <%=   cl_image_tag(@user.photo.key , :transformation=>{:width=>200, :height=>200, :gravity=>"face", :radius=>"max", :crop=>"crop"})  %>
+          <%= cl_image_tag(@user.photo.key, :transformation => {:width=>200, :height=>200, :gravity=>"face", :radius=>"max", :crop=>"crop"})  %>
         <% elsif @user.id <= 30  %> <!-- user is seeded -->
-        <%=   cl_image_tag(@user.cl_img_tag, :class => "avatar-large-user-showpage") %>
+          <%= cl_image_tag(@user.cl_img_tag, :class => "avatar-large-user-showpage") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-        <%=   cl_image_tag("logo/logo1", :class => "avatar-large-user-showpage") %>
+          <%= cl_image_tag("logo/logo1", :class => "avatar-large-user-showpage") %>
         <% end %>
       </div>
-      <div class="col-6">
-        <!-- Description -->
-        <p><%= @user.description %></p>
+      <!-- Description -->
+      <p><%= @user.description %></p>
+      <!-- Message Button -->
+      <div class="text-center my-5">
+        <% if policy(Chatroom).create? %>
+          <%= link_to "Let's chat!", user_chatrooms_path(@user), method: :post, class: "btn btn-call" %>
+        <% end %>
       </div>
     </div>
-    <div class="row">
-      <!-- Experience -->
-      <div class="col-3">
-        <p class="heading-flat mb-3">Experience</p>
-      </div>
-      <div class="col-9"  style="position: relative;">
-        <% @user.experiences.each do |experience|  %>
+    <!-- Experience -->
+    <div class="col-6">
+      <h2 class="mb-3">Experience</h2>
+      <% @user.experiences.each do |experience|  %>
         <%= render "shared/card-experience", experience_within: experience %>
-        <% end %>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Portfolio -->
-      <div class="col-3">
-        <p class="heading-flat mb-3">Portfolio</p>
-      </div>
-      <div class="col-9">
-        <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
-          <% @user.portfolio_photos.each do |photo| %>
-            <%= cl_image_tag photo.key, :style => "height: 140px; width: 220px; margin: 10px;" %>
-          <% end %>
-        <% elsif @user.id <= 30  %> <!-- user is seeded -->
-          <%=   cl_image_tag(@user.seed_portfolio, :style => "height: 140px; width: 220px; margin: 10px; margin-left: 0px;") %>
-        <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-
-          <% if policy(@user).edit? %>
-            <%= simple_form_for(@user) do |f| %>
-              <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }%>
-              <%= f.submit %>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Members -->
-      <div class="col-3">
-        <p class="heading-flat mb-3">Activity</p>
-      </div>
-
-        <% @user.events.each do |event|  %>
-        <div class="col-3">
-        <%= render "shared/card-event-user-show", event_within: event %>
-        </div>
-        <% end %>
-    </div>
-    <div class="row">
-        <% @user.posts.each do |post|  %>
-        <div class="col-3">
-        </div>
-        <div class="col-9">
-        <%= render "shared/card-post-user-show", post_within: post %>
-        </div>
-        <% end %>
+      <% end %>
     </div>
   </div>
-<!-- SEED TEST CODE -->
+  <hr>
+  <!-- Portfolio -->
+  <div class="row">
+    <div class="col-12 mb-5">
+      <h2 class="mb-3">Portfolio</h2>
+      <!-- Portfolio Pictures -->
+      <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
+        <% @user.portfolio_photos.each do |photo| %>
+          <%= cl_image_tag photo.key, :style => "height: 140px; width: 220px; margin: 10px;" %>
+        <% end %>
+      <% elsif @user.id <= 30  %> <!-- user is seeded -->
+        <%=   cl_image_tag(@user.seed_portfolio, :class => "photos-events") %>
+      <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+        <% if policy(@user).edit? %>
+          <%= simple_form_for(@user) do |f| %>
+            <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }%>
+            <%= f.submit %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+  <!-- Members -->
+  <div class="row mb-5">
+    <h2 class="col-12 mb-3">Activity</h2>
+    <!-- Members Events -->
+    <% unless @user.events.empty? %>
+      <div class="col-6">
+        <div class="row">
+          <% @user.events.each do |event|  %>
+            <div class="col-6 mb-3">
+              <%= link_to event_path(event) do %>
+                <%= render "shared/card-event-user-show", event_within: event %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <!-- Members Posts -->
+    <div class="col-6">
+      <% @user.posts.each do |post|  %>
+        <%= link_to post_path(post) do %>
+          <%= render "shared/card-post-user-show", post_within: post %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

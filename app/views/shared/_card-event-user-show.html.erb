@@ -1,10 +1,10 @@
-<div class="card-event-user-show">
-  <%= cl_image_tag("events/event2", :class => "card-event-img-user-show") %>
-  <div class="card-event-infos-user-show">
-    <div>
-      <h2><%= link_to "#{event_within.title}", "/events/#{event_within.id}" %> </h2>
-      <p><%= event_within.date_time.strftime("%H:%M %d.%m.%Y") %> </p>
-       <p> <%= event_within.location %></p>
-    </div>
-  </div>
-</div>
+      <div class="card-event">
+        <%= cl_image_tag(event_within.cl_img_tag, :class => "card-event-img") %>
+        <div class="card-event-infos">
+          <div>
+            <h2><%= event_within.title %></h2>
+            <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= event_within.location %></p>
+            <p><i class="fas fa-clock" style="color: gray"></i> <%= event_within.date_time.strftime("%H:%M %d.%m.%Y") %></p>
+          </div>
+        </div>
+      </div>

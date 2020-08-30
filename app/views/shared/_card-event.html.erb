@@ -1,5 +1,5 @@
 <% @events.each do |event| %>
-  <div class="col-3">
+  <div class="col-3 mb-5">
     <%= link_to event_path(event) do %>
       <div class="card-event">
         <%= cl_image_tag(event.cl_img_tag, :class => "card-event-img") %>
