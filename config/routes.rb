@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'notifications/index'
   get 'chatrooms/show'
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :experiences
-    resources :rsvps
     resources :chatrooms, only: [:create]
   end
 
@@ -14,8 +14,10 @@ Rails.application.routes.draw do
     resources :ratings, only: :create
   end
 
+  resources :rsvps, only: :destroy
+
   resources :events do
-    resources :rsvps, only: [:create, :destroy]
+    resources :rsvps, only: [:create]
     resources :comments, only: [:destroy]
     post "event_comment", to: "comments#create_event_comment"
   end
@@ -35,5 +37,11 @@ Rails.application.routes.draw do
   end
 
   resources :openings, only: [:index, :show]
+
+  resources :notifications, only: [:index] do
+    collection do
+      post :mark_as_read
+    end
+  end
 
 end

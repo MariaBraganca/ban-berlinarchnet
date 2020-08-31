@@ -11,11 +11,12 @@ class EventsController < ApplicationController
   def show
     @comment = Comment.new
     @events = Event.all
-    @rsvp = Rsvp.new
+    @user_attending = !@event.users.none?{|user| user == current_user}
+    if @user_attending
+      @rsvp = @event.rsvps.find{|rsvp|rsvp.user == current_user}
+      #retrieve the corresponding rsvp
+    end
     authorize @event
-    authorize @rsvp
-    @rsvp.event_id = @event.id
-    
 
     @marker = [
       {
