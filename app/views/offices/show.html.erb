@@ -129,12 +129,14 @@
 					<div class = 'col-12 col-lg-3'>
 					</div>
 					<div class = 'col-12 col-lg-9'>
-						<% if user_signed_in? %>
-							<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
-									<%= text_field_tag :content %>          
-									<%= submit_tag 'Submit', class: 'btn btn-call' %>
+						<div class = "form">
+							<% if user_signed_in? %>
+								<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
+										<%= text_field_tag :content %>          
+										<%= submit_tag 'Submit', class: 'btn btn-call' %>
+								<% end %>
 							<% end %>
-						<% end %>
+						</div>
 					</div>
 				</div>
 			</div>

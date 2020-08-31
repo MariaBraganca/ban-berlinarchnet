@@ -1,6 +1,9 @@
 class RsvpsController < ApplicationController
   #before_action :set_rsvp, only: [:destroy]
 
+
+
+
 def new
 @event = Event.find(params[:event_id])
 @rsvp = Rsvp.new
@@ -13,22 +16,20 @@ def create
     @rsvp.user = current_user
     @rsvp.event = @event
     authorize @rsvp
-    @rsvp.save!
 
     if @rsvp.save
-      redirect_to event_path(@event, anchor: "user-#{@rsvp.id}")
+      redirect_to event_path(@event, anchor: "attending")
     else
       render :new
     end
 end
 
 def destroy
-
   @rsvp = Rsvp.find(params[:id])
   @rsvp.destroy
   authorize @rsvp
+  @event = @rsvp.event
   redirect_to event_path(@event)
-
 end
 
 private
