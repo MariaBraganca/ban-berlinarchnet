@@ -2,13 +2,17 @@
   float: left;
   border-bottom: 1px solid #000000;
   width: 100%;
+  vertical-align: middle;
+  background-color: #000000;
+  height: 50px;
 }
 
 .messages-hd h3 {
-  color: #000000;
+  color: #f4f4f4;
   font-weight: bold;
   font-size: 24px;
   margin-left: 5px;
+  line-height: 50px;
 }
 
 .convo-container {
@@ -61,20 +65,49 @@
 
 .message-text {
   flex-grow: 1;
-  padding-left: 48px;
+  padding-left: 58px;
 }
 
 .message-text-inbox {
-  padding-left: 78px;
+  padding-left: 98px;
   font-weight: lighter;
+  max-width: 180px;
+  max-height: 25px;
+  overflow: hidden;
 }
 
 .message-avatar {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .chat-card {
   display: flex;
   align-items: center;
   font-weight: bold;
+}
+
+.form- {
+  overflow: hidden;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+}
+
+.btn-message {
+  background-color: black;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: 1px solid black;
+  transition: background 0.3s ease;
+  float: right;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.btn-message:hover {
+  background-color: #1F1F1F;
+  color: white;
+  text-decoration: none;
 }

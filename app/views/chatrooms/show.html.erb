@@ -7,7 +7,7 @@
       </div>
         <div class="inbox-chat">
           <% @chatrooms.each do |chatroom| %>
-            <%= link_to chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" do %>
+            <%= link_to chatroom_path(chatroom), class: "list-group-item list-group-item-action list-group-item-light #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
                 <% if chatroom.user_two.photo.attached? %>
                   <%= cl_image_tag(chatroom.user_two.photo.key)%>
@@ -32,7 +32,10 @@
    </div>
 
 
-  <div class="col-8">
+  <div class="col-8" style="padding: 0px">
+    <div class="messages-hd">
+        <h3></h3>
+      </div>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
         <div class="messages-container" id="message-<%= message.id %>">
@@ -42,7 +45,7 @@
                 <% else %>
                   <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-chat" %>
                 <% end %>
-              <span><%= message.user.first_name %> <%= message.user.last_name %></span>
+              <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span>
             </div>
             <div class="message-text">
               <p><%= message.content %></p>
@@ -52,11 +55,14 @@
         <% end %>
     </div>
 
+
         <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+    <div class="form-">
         <%= f.input :content, label: false, placeholder: "Write a message..." %>
-        <%= f.submit 'Send', :class => 'btn-flat' %>
+        <%= f.submit 'Send', :class => 'btn-message' %>
       <% end %>
-    </div>
+  </div>
+  </div>
   </div>
  </div>
 </div>
