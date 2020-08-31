@@ -3,7 +3,9 @@
 	<div class="container">
 		<h1>BAN - Berlin Architectural Network</h1>
 		<p>Exchange knowledge</p>
-		<%= link_to 'Join', '#', :class => "btn btn-call" %>
+		<% unless user_signed_in? %>
+			<%= link_to 'Join', new_user_registration_path, :class => "btn btn-call" %>
+		<% end %>
 	</div>
 </div>
 
@@ -33,7 +35,6 @@
 	</div>
 
 <!-- Openings -->
-
 	<div class="mb-5">
 		<div class="row">
 			<div class="col-3">
