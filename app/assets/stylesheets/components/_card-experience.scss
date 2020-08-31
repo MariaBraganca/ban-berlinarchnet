@@ -7,6 +7,20 @@
     // align-items: center;
   }
 
+  .card-experience-two {
+    overflow: hidden;
+    align-items: center;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 10px;
+    // align-items: center;
+  }
+
   .card-experience h3 {
     font-size: 16px;
     margin-top: 0;

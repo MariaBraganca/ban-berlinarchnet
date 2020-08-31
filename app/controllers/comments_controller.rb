@@ -19,7 +19,8 @@ class CommentsController < ApplicationController
         if @comment.save
             redirect_to event_path(@event, anchor: "comment-#{@comment.id}")
         else
-            render 'events/show'
+            redirect_to event_path(@event, anchor: "comment-form")
+            flash[:validation] = "Cannot be empty"
         end
     end
 
