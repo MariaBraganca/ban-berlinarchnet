@@ -4,6 +4,7 @@
   width: 100%;
   vertical-align: middle;
   background-color: #000000;
+  height: 50px;
 }
 
 .messages-hd h3 {
@@ -11,7 +12,7 @@
   font-weight: bold;
   font-size: 24px;
   margin-left: 5px;
-  vertical-align: middle;
+  line-height: 50px;
 }
 
 .convo-container {
@@ -68,8 +69,11 @@
 }
 
 .message-text-inbox {
-  padding-left: 78px;
+  padding-left: 98px;
   font-weight: lighter;
+  max-width: 180px;
+  max-height: 25px;
+  overflow: hidden;
 }
 
 .message-avatar {
