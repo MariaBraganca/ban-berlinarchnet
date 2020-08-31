@@ -19,11 +19,12 @@
 
 .navbar-lewagon .nav-link-menu {
   color: white;
+  opacity: 0.75;
   margin: 30px;
   transition: background 0.3s ease;
 }
 
 .navbar-lewagon .nav-link-menu:hover {
   text-decoration: none;
-  opacity: 0.25;
+  opacity: 1;  
 }

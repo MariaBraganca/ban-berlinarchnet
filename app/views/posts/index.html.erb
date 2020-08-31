@@ -4,8 +4,12 @@
 		<p>Check out the most recent posts about architecture Berlin!</p>
 	</div>
 	<div class="row justify-content-around mb-5">
-		<div class="col-9 white-board px-3 py-3">
-			<%= render "shared/card-post" %>
+		<div class="col-9 white-board px-3">
+			<% @posts.each do |post| %>
+  			<%= link_to post_path(post) do %>
+					<%= render "shared/card-post", post_within: post %>
+				<% end %>
+			<% end %>
 		</div>
 	</div>		
 </div>
