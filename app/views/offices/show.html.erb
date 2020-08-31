@@ -5,26 +5,29 @@
 </div>
 
 <div class="container">
-<!-- SEED TEST CODE -->
-	<div class="mb-5">
+		<h2 class="my-5">Learn more!</h2>
+		<!-- About -->
 		<div class="row">
-			<!-- About -->
 			<div class="col-3">
 				<p class="heading-flat">About</p>
 			</div>
 			<div class="col-9">
 				<p><%= @office.description %></p>
 			</div>
-			<!-- Website -->
+		</div>
+		<!-- Website -->
+		<div class="row">
 			<div class="col-3">
 				<p class="heading-flat">Website</p>
 			</div>
 			<div class="col-9">
-				<%= link_to url_for(@office.url), :target => '_blank' do %>
+				<%= link_to url_for(@office.url), :style => 'color: blue', :target => '_blank' do %>
 					<%= @office.url %>
 				<% end %>
 			</div>
-			<!-- Ratings -->
+		</div>
+		<!-- Ratings -->
+		<div class="row">
 			<div class="col-3">
 				<p class="heading-flat">Ratings</p>
 			</div> 
@@ -63,30 +66,36 @@
 						</div>
 				</div>
 			</div>
-			<!-- Projects -->
-			<div class="col-3">
-				<p class="heading-flat">Projects</p>
-			</div>
-			<div class="col-9 mb-3">
-				<%= cl_image_tag(@office.cl_img_project_tag, :class => 'photos-events') %>
-			</div>
-			<!-- Location -->
+		</div>
+		<!-- Location -->
+		<div class="row mt-3">
 			<div class="col-3">
 				<p class="heading-flat mb-3">Location</p>
 			</div>
 			<div class="col-9">
-				<p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @office.location %></p>
 				<div id="map"
-					style="width: 100%; height: 500px;"
+					style="width: 100%; height: 300px;"
 					data-markers="<%= @marker.to_json %>"
 					data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 				</div>
+				<br>
+				<p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @office.location %></p>
 			</div>
+		</div>
+		<hr>
+		<!-- Projects -->
+		<div class="row">
+			<div class="col-12 mb-5">
+				<h2 class="mb-3">Projects</h2>
+				<%= cl_image_tag(@office.cl_img_project_tag, :class => 'photos-events') %>
+			</div>
+		</div>
+		<hr>
+		<!-- Members and Comments -->
+		<div class="row">
 			<!-- Members -->
-			<div class="col-3 mt-3">
-				<p class="heading-flat mb-3">Members</p>
-			</div>
-			<div class="col-9">
+			<div class="col-12 col-lg-6">
+				<h2 class="mb-3">Members (<%= @office.users.size %>)</h2>
 				<div class="row mt-3">	
 					<% @office.users.each do |user| %>
 						<div class="col-3 text-center">
@@ -99,49 +108,31 @@
 				</div>
 			</div>
 			<!-- Comments -->
-			<!-- Past -->
-			<div class = 'container p-3 my-3'>
-        <div class="row">
-					<div class="col-12 col-lg-3">
-						<p class="heading-flat">Comments </p>
+			<div class = 'col-12 col-lg-6'>
+				<h2 class="mb-3">Comments (<%= @office.comments.size %>)</h2>
+				<!-- Past -->
+				<% @office.comments.each do |comment| %>
+					<div class="card-comment mb-3">
+						<% if comment.user.photo.attached? %>
+							<%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
+						<% else %>
+							<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+						<% end %>									
+						<div class="card-comment-infos">
+							<p>Time: <%= comment.date %> </p>  
+							<p><%= comment.content %></p> 
+							<p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
+						</div>
 					</div>
-					<div class = 'col-12 col-lg-9'>
-						<% @office.comments.each do |comment| %>
-							<div class="card-comment">
-								<% if comment.user.photo.attached? %>
-            			<%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
-          			<% else %>
-            			<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-          			<% end %>									
-								<div class="card-comment-infos">
-									<p>Time: <%= comment.date %> </p>  
-									<p><%= comment.content %></p> 
-									<p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
-								</div>
-							</div>
-						<% end %>
-					</div>       	
-     		</div>
-    	</div>
-			<!-- New -->
-			<div class = 'container p-3 my-3'>
-				<div class="row">
-					<div class = 'col-12 col-lg-3'>
-					</div>
-					<div class = 'col-12 col-lg-9'>
-						<% if user_signed_in? %>
-							<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
-									<%= text_field_tag :content %>          
-									<%= submit_tag 'Submit', class: 'btn btn-call' %>
-							<% end %>
-						<% end %>
-					</div>
-				</div>
+				<% end %>
+				<!-- New -->
+				<% if user_signed_in? %>
+					<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
+							<%= text_field_tag :content %>          
+							<%= submit_tag 'Submit', class: 'btn btn-call' %>
+					<% end %>
+				<% end %>
 			</div>
-
 		</div>		
-	</div>
-
-	<%= link_to 'Back to all offices', offices_path, class: 'btn btn-flat mb-3' %>
-<!-- SEED TEST CODE -->
+	<%#	= link_to 'Back to all offices', offices_path, class: 'btn btn-flat mb-3' %>
 </div>

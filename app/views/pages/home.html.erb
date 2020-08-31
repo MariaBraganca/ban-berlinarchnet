@@ -13,13 +13,13 @@
 	<!-- Events -->
 	<div class="row my-5">
 		<!-- Event Infos -->
-		<div class="col-3">
+		<div class="col-12 col-lg-3">
 			<%= link_to 'Events', events_path, :class => "btn btn-call mb-3" %>
 			<p>Check out the latest events!</p>
 		</div>
 		<!-- Event Cards -->
 		<% @events.each do |event| %>
-			<div class="col-3">
+			<div class="col-12 col-lg-3 mb-3">
 				<%= link_to event_path(event) do %>
 						<%= render "shared/card-event", event_within: event %>
 				<% end %>
@@ -31,12 +31,12 @@
 	<!-- Offices -->
 	<div class="row my-5">
 		<!-- Office Infos -->
-		<div class="col-3">
+		<div class="col-12 col-lg-3">
 			<%= link_to 'Offices', offices_path, :class => "btn btn-call mb-3" %>
 			<p>Check out the best rated offices!</p>
 		</div>
 		<!-- Office Cards -->
-		<div class="col-9 px-0">
+		<div class="col-12 col-lg-9">
 			<% @offices.each do |office| %>
 				<%= link_to office_path(office) do %>
 					<%= render "shared/card-office", office_within: office %>
@@ -49,12 +49,12 @@
 	<!-- Openings -->
 	<div class="row my-5">
 		<!-- Openings Infos -->
-		<div class="col-3">
+		<div class="col-12 col-lg-3">
 			<%= link_to 'Jobs', openings_path, :class => "btn btn-call mb-3" %>
 			<p>Check out the latest jobs!</p>
 		</div>
 		<!-- Openings Cards -->
-		<div class="col-9 white-board px-3">
+		<div class="col-12 col-lg-9 white-board">
 			<% @openings.each do |opening| %>
 				<%= link_to opening_path(opening) do %>
 					<%= render "shared/card-opening", opening_within: opening %>
@@ -66,11 +66,11 @@
 	
 	<!-- Blog -->
 	<div class="row my-5">
-		<div class="col-3">
+		<div class="col-12 col-lg-3">
 			<%= link_to 'Blog', posts_path, :class => "btn btn-call mb-3" %>
 			<p>Check out the latest posts!</p>
 		</div>
-		<div class="col-9 white-board">
+		<div class="col-12 col-lg-9 white-board">
 			<% @posts.each do |post| %>
   			<%= link_to post_path(post) do %>
 					<%= render "shared/card-post", post_within: post %>
