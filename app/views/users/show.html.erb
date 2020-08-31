@@ -7,11 +7,11 @@
       <!-- Avatar -->
       <div class="text-center mb-3">
         <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
-          <%= cl_image_tag(@user.photo.key, :transformation => {:width=>200, :height=>200, :gravity=>"face", :radius=>"max", :crop=>"crop"})  %>
+          <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
         <% elsif @user.id <= 30  %> <!-- user is seeded -->
-          <%= cl_image_tag(@user.cl_img_tag, :class => "avatar-large-user-showpage") %>
+          <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-large-user-showpage") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-          <%= cl_image_tag("logo/logo1", :class => "avatar-large-user-showpage") %>
+          <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-large-user-showpage") %>
         <% end %>
       </div>
       <!-- Description -->
@@ -80,4 +80,5 @@
       <% end %>
     </div>
   </div>
+  <%#= link_to 'Edit Dashboard', edit_user_registration_path, :class => 'btn btn-outline-danger mb-3' %>
 </div>
