@@ -1,13 +1,9 @@
-<% @openings.each do |opening| %>
-  <%= link_to opening_path(opening) do %>
-    <div class="card-opening mb-3">
-      <div class="card-office-infos">
-        <div>
-          <h2><%= opening.job_position %></h2>
-          <p><%= opening.office.name %></p>
-          <p><i class="fas fa-clock" style="color: gray"></i> <%= opening.date %></p>
-        </div>
-      </div>
+<div class="card-opening mb-3">
+  <div class="card-office-infos">
+    <div>
+      <h2><%= opening_within.job_position %></h2>
+      <p><%= opening_within.office.name %></p>
+      <p><i class="fas fa-clock" style="color: gray"></i> <%= opening_within.date %></p>
     </div>
-  <% end %>
-<% end %>
+  </div>
+</div>

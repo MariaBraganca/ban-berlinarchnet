@@ -4,6 +4,12 @@
 		<p>Check our <%= @events.length %> Events in Berlin!</p>
 	</div>
 	<div class="row">
-		<%= render "shared/card-event" %>
+		<% @events.each do |event| %>
+			<div class="col-3 mb-5">
+				<%= link_to event_path(event) do %>
+						<%= render "shared/card-event", event_within: event %>
+				<% end %>
+			</div>
+		<% end %>
 	</div>		
 </div>

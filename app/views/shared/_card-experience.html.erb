@@ -1,16 +1,16 @@
 <% require 'date' %>
 
-    <div class="card-office mb-3">
-      <%= cl_image_tag(experience_within.office.cl_img_tag, :class => "card-office-img") %>
-      <div class="card-office-infos">
-        <div>
-          <h2><%= experience_within.job_position %></h2>
-          <% if experience_within.end_date > DateTime.now()   %>
-            <p>Currently working @ <strong><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %> </strong></p>
-          <% else   %>
-            <p>Worked @ <strong><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></strong></p>
-          <% end %>
-          <p><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date > DateTime.now() ? "present" : experience_within.end_date.strftime("%m.%Y") %></p>
-        </div>
-      </div>
+<div class="card-office mb-3">
+  <%= cl_image_tag(experience_within.office.cl_img_tag, :class => "card-office-img") %>
+  <div class="card-office-infos">
+    <div>
+      <h2><%= experience_within.job_position %></h2>
+      <% if experience_within.end_date > DateTime.now()   %>
+        <p>Currently working @ <strong><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %> </strong></p>
+      <% else   %>
+        <p>Worked @ <strong><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></strong></p>
+      <% end %>
+      <p><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date > DateTime.now() ? "present" : experience_within.end_date.strftime("%m.%Y") %></p>
     </div>
+  </div>
+</div>
