@@ -1,6 +1,7 @@
+require 'json'
 require_relative 'seed_scrape_cleaner'
 require_relative 'seed_data'
-require 'open-uri'
+# require 'open-uri'
 require 'nokogiri'
 require 'faker'
 
@@ -15,21 +16,38 @@ n_ratings = 15
 n_rsvps = 15
 n_comments = 15
 
+#Reading Jsons
+filepath = 'offices_projects.json'
+
+serialized_offices = File.read(filepath)
+
+offices = JSON.parse(serialized_offices)
+
 phase = "office"
 puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
 
 terminal_counter = 1
 
-CLEAN_OFFICE_ARRAY.each do |elementos|
-  Office.create(name: elementos[:external_name],
+# CLEAN_OFFICE_ARRAY.each do |elementos|
+#   Office.create(name: elementos[:external_name],
+#              location: elementos[:external_location],
+#              description: OFFICE_DESCRIPTIONS.sample,
+#              cl_img_tag: "offices/office#{rand(1..48)}",
+#              url: elementos[:external_url],
+#              cl_img_project_tag: "projects/project#{rand(1..10)}")
+#   puts "________#{terminal_counter}__ out of #{n_offices}______Offices Saved!_____________________"
+#   terminal_counter += 1
+# end
+
+p offices
+
+Office.create(name: elementos[:external_name],
              location: elementos[:external_location],
              description: OFFICE_DESCRIPTIONS.sample,
              cl_img_tag: "offices/office#{rand(1..48)}",
              url: elementos[:external_url],
              cl_img_project_tag: "projects/project#{rand(1..10)}")
-  puts "________#{terminal_counter}__ out of #{n_offices}______Offices Saved!_____________________"
-  terminal_counter += 1
-end
+
 
 puts ""
 puts ""
