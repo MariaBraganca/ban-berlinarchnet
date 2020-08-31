@@ -102,54 +102,30 @@
 							<%= link_to user_path(user) do %>
 								<%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
 							<% end %>
-								<p><%= user.first_name %> <%= user.last_name %></p>
+							<p><%= user.first_name %> <%= user.last_name %></p>
 						</div>
 					<% end %>
 				</div>
 			</div>
 			<!-- Comments -->
-
 			<!-- Past -->
-			<div class = 'container p-3 my-3'>
-        <div class="row">
-					<div class="col-12 col-lg-3">
-						<p class="heading-flat">Comments </p>
-					</div>
-					<div class = 'col-12 col-lg-9'>
-						<% @office.comments.each do |comment| %>
-							<div class="card-comment">
-								<% if comment.user.photo.attached? %>
-            			<%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
-          			<% else %>
-            			<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-          			<% end %>									
-								<div class="card-comment-infos">
-									<p>Time: <%= comment.date %> </p>  
-									<p><%= comment.content %></p> 
-									<p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
-								</div>
-							</div>
-						<% end %>
-					</div>       	
-     		</div>
-    	</div>
-			<!-- New -->
-			<div class = 'container p-3 my-3'>
-				<div class="row">
-					<div class = 'col-12 col-lg-3'>
-					</div>
-					<div class = 'col-12 col-lg-9'>
-						<div class = "form">
-							<% if user_signed_in? %>
-								<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
-										<%= text_field_tag :content %>          
-										<%= submit_tag 'Submit', class: 'btn btn-call' %>
-								<% end %>
-							<% end %>
-
-						</div>
-					</div>
-				<% end %>
+			<div class="col-12 col-lg-6">
+        <h2 class="mb-3">Comments (<%= @office.comments.size %>)</h2>
+        
+        <% @office.comments.each do |comment| %>
+          <div class="card-comment mb-3">
+            <% if comment.user.photo.attached? %>
+              <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
+            <% else %>
+              <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+            <% end %>									
+            <div class="card-comment-infos">
+              <p>Time: <%= comment.date %> </p>  
+              <p><%= comment.content %></p> 
+              <p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
+            </div>
+          </div>
+        <% end %>    	
 				<!-- New -->
 				<% if user_signed_in? %>
 					<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
