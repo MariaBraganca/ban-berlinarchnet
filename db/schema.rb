@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_08_31_134622) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +63,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "date_time"
+    t.string "date_time"
     t.string "location"
     t.text "description"
     t.bigint "user_id", null: false
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.string "cl_img_tag"
     t.float "latitude"
     t.float "longitude"
+    t.string "venue"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -97,6 +100,16 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "office_projects", force: :cascade do |t|
+    t.string "project_name"
+    t.string "project_img_url"
+    t.string "project_year"
+    t.string "project_typology"
+    t.bigint "office_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["office_id"], name: "index_office_projects_on_office_id"
+
   create_table "notifications", force: :cascade do |t|
     t.integer "recipient_id"
     t.integer "actor_id"
@@ -106,6 +119,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.string "notifiable_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+
   end
 
   create_table "offices", force: :cascade do |t|
@@ -115,14 +129,13 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "url"
-    t.string "cl_img_tag"
     t.float "latitude"
     t.float "longitude"
-    t.string "cl_img_project_tag"
+    t.string "banner_url"
   end
 
   create_table "openings", force: :cascade do |t|
-    t.datetime "date"
+    t.string "date"
     t.string "job_position"
     t.text "description"
     t.bigint "office_id", null: false
@@ -189,6 +202,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
   add_foreign_key "experiences", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "office_projects", "offices"
   add_foreign_key "openings", "offices"
   add_foreign_key "posts", "users"
   add_foreign_key "ratings", "offices"
