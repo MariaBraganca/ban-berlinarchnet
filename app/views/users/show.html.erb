@@ -39,9 +39,9 @@
       <!-- Portfolio Pictures -->
       <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
         <% @user.portfolio_photos.each do |photo| %>
-          <%= cl_image_tag photo.key, :style => "height: 140px; width: 220px; margin: 10px;" %>
+          <%= cl_image_tag photo.key, :class => "photos-events"%>
         <% end %>
-      <% elsif @user.id <= 30  %> <!-- user is seeded -->
+      <% elsif @user.id <= 39  %> <!-- user is seeded -->
         <% @user.seed_portfolio.each do |portfolio| %>
           <%= cl_image_tag(portfolio, :class => "photos-events") %>
         <% end %>
