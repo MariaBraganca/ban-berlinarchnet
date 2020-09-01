@@ -19,7 +19,8 @@ class CommentsController < ApplicationController
         if @comment.save
             redirect_to event_path(@event, anchor: "comment-#{@comment.id}")
         else
-            render 'events/show'
+            redirect_to event_path(@event, anchor: "comment-form")
+            flash[:validation] = "Cannot be empty"
         end
     end
 
@@ -34,9 +35,10 @@ class CommentsController < ApplicationController
         authorize @comment
 
         if @comment.save
-            redirect_to office_path(@office)
+            redirect_to office_path(@office, anchor: "comments-#{@comment.id}")
         else
-            render 'offices/show'
+            redirect_to office_path(@office, anchor: "comment-office")
+            flash[:validation] = "Cannot be empty"
         end
     end
 

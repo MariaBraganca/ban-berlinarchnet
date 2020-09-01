@@ -1,10 +1,9 @@
-class ChatroomPolicy < ApplicationPolicy
+class MessagePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(user_one: user).or(scope.where(user_two: user))
+      scope.all
     end
   end
-
   def show?
     true
   end

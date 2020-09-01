@@ -1,0 +1,24 @@
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Cancelation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        What a pitty! You have cancelled the event <%= @event.title%>.
+      </div>
+      <div class="modal-footer">
+        <% if @user_attending %>
+          <%= link_to "Confirm", rsvp_path(@rsvp), method: :delete, class: "btn btn-call" %>
+        <% end %>
+          <%= link_to "Stay", event_path(@event), class: "btn btn-call" %>
+      </div>
+    </div>
+  </div>
+</div>
