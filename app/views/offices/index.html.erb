@@ -4,7 +4,7 @@
 		<p>Check out these <%= @offices.length %> Offices listed in Berlin!</p>
 	</div>
 	<div class="row justify-content-around">
-		<div class="col-9">
+		<div class="col-12 col-lg-9">
 			<% @offices.each do |office| %>
 				<%= link_to office_path(office) do %>
 					<%= render "shared/card-office", office_within: office %>
