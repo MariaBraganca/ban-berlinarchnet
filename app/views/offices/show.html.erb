@@ -8,19 +8,19 @@
 		<h2 class="my-5">Learn more!</h2>
 		<!-- About -->
 		<div class="row">
-			<div class="col-3">
+			<div class="col-12 col-lg-3">
 				<p class="heading-flat">About</p>
 			</div>
-			<div class="col-9">
+			<div class="col-12 col-lg-9">
 				<p><%= @office.description %></p>
 			</div>
 		</div>
 		<!-- Website -->
 		<div class="row">
-			<div class="col-3">
+			<div class="col-12 col-lg-3">
 				<p class="heading-flat">Website</p>
 			</div>
-			<div class="col-9">
+			<div class="col-12 col-lg-9">
 				<%= link_to url_for(@office.url), :style => 'color: blue', :target => '_blank' do %>
 					<%= @office.url %>
 				<% end %>
@@ -28,17 +28,17 @@
 		</div>
 		<!-- Ratings -->
 		<div class="row">
-			<div class="col-3">
+			<div class="col-12 col-lg-3">
 				<p class="heading-flat">Ratings</p>
 			</div> 
-			<div class="col-9">
+			<div class="col-12 col-lg-9">
 				<div class="row">
-						<div class="col-2">
+						<div class="col-6 col-lg-2">
 							<p>CULTURE</p>
 							<p>SALARY</p>
 							<p>ARCHITECTURE</p>
 						</div>
-						<div class="col-2">
+						<div class="col-6 col-lg-2">
 							<p> 
 								<% @culture_average.times do %> 
 									<i class="fas fa-heart" style="color: #e53e3e"></i>
@@ -110,22 +110,21 @@
 			<!-- Comments -->
 			<!-- Past -->
 			<div class="col-12 col-lg-6">
-        <h2 class="mb-3">Comments (<%= @office.comments.size %>)</h2>
-        
-        <% @office.comments.each do |comment| %>
-          <div class="card-comment mb-3">
-            <% if comment.user.photo.attached? %>
-              <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
-            <% else %>
-              <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-            <% end %>									
-            <div class="card-comment-infos">
-              <p>Time: <%= comment.date %> </p>  
-              <p><%= comment.content %></p> 
-              <p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
-            </div>
-          </div>
-        <% end %>    	
+        		<h2 class="mb-3">Comments (<%= @office.comments.size %>)</h2>
+				<% @office.comments.each do |comment| %>
+					<div class="card-comment mb-3">
+						<% if comment.user.photo.attached? %>
+						<%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
+						<% else %>
+						<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+						<% end %>									
+						<div class="card-comment-infos">
+						<p>Time: <%= comment.date %> </p>  
+						<p><%= comment.content %></p> 
+						<p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
+						</div>
+					</div>
+				<% end %>    	
 				<!-- New -->
 				<% if user_signed_in? %>
 					<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
