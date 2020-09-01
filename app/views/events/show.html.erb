@@ -1,6 +1,6 @@
 <div class= "container">
-    <div class="row justify-content-around align-items mt-5 mb-3">
-        <div class="col-12 col-lg-8">
+    <div class="row justify-content-around align-items-end mt-5 mb-3">
+        <div class="col-12 col-lg-10">
             <h1><%= @event.title%></h1>
             <div class="d-flex align-items-center">
                 <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@event.user)  %>
@@ -8,17 +8,17 @@
             </div>
         </div>
         <!-- RSVP btn -->
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-2 align-bottom">
             <% if user_signed_in? %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-call btn-attend" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-attend" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>   
                 <% else%>
                     <%= render "shared/deleteModal" %>
-                    <button type="button" class="btn btn-call btn-attend" data-toggle="modal" data-target="#deleteModal">
-                        Update RSVP
+                    <button type="button" class="btn btn-call btn-delete" data-toggle="modal" data-target="#deleteModal">
+                        Unattend
                     </button>
                 <% end %>
             <% end %> 
@@ -66,7 +66,7 @@
     <!-- Members and Comments -->
     <div class="row mb-5">
 		<!-- Members -->
-        <div class = 'col-12 col-lg-6'>
+        <div class = 'col-12 col-lg-6' id = "attending">
             <h2>Attending (<%= @event.users.length %>)</h2>
             <div class="row mt-3">	
                 <% @event.users.each do |user| %>
@@ -86,13 +86,13 @@
             <% if user_signed_in? %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-call" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-call btn-attend-bottom" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>
                 <% else%>
                     <%= render "shared/deleteModal" %>
                     <button type="button" class="btn btn-call" data-toggle="modal" data-target="#deleteModal">
-                        Update RSPV
+                        Unattend
                     </button>
                 <% end %>
             <% end %>

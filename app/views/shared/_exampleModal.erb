@@ -11,10 +11,15 @@
       <div class="modal-body">
             You are attending the event <%= @event.title%>.
       </div>
+      
       <div class="modal-footer">
             <%= form_tag event_rsvps_path(@event), method: :post do |f| %>
                 <%= submit_tag "Close", class: "btn btn-call"%>
             <% end %>
+            
+           <%= link_to "Unattend", event_path(@event), class: "btn btn-call" %>
+           
+
       </div>
     </div>
   </div>
