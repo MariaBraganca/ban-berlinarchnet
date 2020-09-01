@@ -67,7 +67,7 @@
     <div class="row mb-5">
 		<!-- Members -->
         <div class = 'col-12 col-lg-6' id = "attending">
-            <h2>Attending (<%= @event.users.length %>)</h2>
+            <h2>Attending <span class="badge-number"><%= @event.users.length %></span></h2>
             <div class="row mt-3">	
                 <% @event.users.each do |user| %>
                     <div class="col-3 text-center mx-3">
@@ -99,7 +99,7 @@
         </div>
 		<!-- Comments -->
         <div class = 'col-12 col-lg-6 mb-5'>
-            <h2 class="mb-3">Comments (<%= @event.comments.length %>)</h2>
+            <h2 class="mb-3">Comments <span class="badge-number"><%= @event.comments.length %></span></h2>
             <!-- Comments past-->
             <% @event.comments.each do |comment| %>
                 <div class="card-comment mb-3 p-10" id="comment-<%= comment.id %>">
