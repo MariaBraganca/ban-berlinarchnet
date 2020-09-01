@@ -67,32 +67,76 @@ erreichen wir die vereinbarten Ziele und garantieren einen Projekterfolg.",
 seinem Bauherrn, dem Planungsprozess sowie den gesellschaftlichen Hintergründen seiner Entstehungszeit
 mit. Es verrät, welche Ideen und Werte zu einem räumlichen Konzept und seiner Erscheinung führten."]
 
+# _____________________Job Descriptions ___________________________
 
-# _____________________BERLIN POSTAL CODES_____________________________
+JOB_DESCRIPTIONS = ["Als diplomierte/r Architekt/in ETH/FH mit einigen Jahren Berufserfahrung überzeugen
+Sie durch Kompetenzen bei der Abwicklung von Bauprojekten, in Konzeption und Gestaltung sowie durch
+technisches Verständnis. Engagement, Kreativität und Freude an der Arbeit zeichnen Sie aus.
+Sie sind aufgeschlossen und kooperativ und fühlen sich in einem lebhaften und herausfordernden Umfeld wohl.
+Voraussetzung sind gute Deutschkenntnisse, weitere Landesprachen sowie Englisch sind von Vorteil.
+Sie bringen vertiefte 2D- und 3D- VectorWorks-Wissen mit. Kenntnisse in Bildbearbeitung,
+3D Visulisierungen sowie Flair für Innenausbau runden Ihr Profil ab.
+Bei uns finden Sie ein kreatives, offenes Arbeitsklima in modernem Umfeld,
+hohe Eigenverantwortung sowie individuelle Entwicklungsmöglichkeiten.",
+"Komplexe Bauten faszinieren Sie - Sie haben den Ehrgeiz, Spitäler, Sportstätten oder grosse
+Bürohäuser zu realisieren. Als diplomierte/r Architekt/in - vorzugsweise mit aktueller
+Weiterbildung im Projektmanagement und Kenntnissen des öffentlichen Beschaffungswesens
+in der Schweiz - überzeugen Sie durch Fachwissen, bewegen sich sicher im Spannungsfeld
+unterschiedlichster Bedürfnisse aller Projektbeteiligten und verfügen über ausgeprägte
+Führungsqualitäten, die Ihnen das Erreichen der Projektziele ermöglichen.
+Ihr ausgeprägtes Organisationsgeschick zeigt sich in Ihrer strukturierten und methodischen
+Arbeitsweise. Sie sind verantwortlich für die Planung, Überwachung und Steuerung des gesamten
+Planungs- und Bauprozesses. Sie kommunizieren verhandlungssicher in Deutsch, weitere Kenntnisse
+der anderen Landessprachen sowie Englisch sind von Vorteil.
+Sie erbringen überdurchschnittliche Leistungen und zeichnen sich durch Engagement und Freude
+an der selbständigen Arbeit aus. Information und Kommunikation bilden für Sie die Grundlage
+effizienter Teamarbeit. Problemfelder werden rasch erkannt, die entsprechenden Entscheide
+gefällt sowie Massnahmen ergriffen. Damit stellen Sie Ihr Durchsetzungsvermögen unter Beweis,
+arbeiten konzentriert und selbständig, ohne die Unternehmensziele aus den Augen zu verlieren.
+Bei uns finden Sie ein kreatives, offenes Arbeitsklima in modernem Umfeld, hohe
+Eigenverantwortung sowie individuelle Entwicklungsmöglichkeiten.",
+"Ihr Profil
 
-# POSTAL_CODES = [10_117, 10_119, 10_178, 10_179, 10_243, 10_245, 10_247, 10_249,
-#                 10_315, 10_317, 10_318, 10_319, 10_365, 10_367, 10_369, 10_405,
-#                 10_407, 10_409, 10_435, 10_437, 10_439, 10_551, 10_553, 10_555,
-#                 10_557, 10_559, 10_585, 10_587, 10_589, 10_623, 10_625, 10_627,
-#                 10_629, 10_707, 10_709, 10_711, 10_713, 10_715, 10_717, 10_719,
-#                 10_777, 10_779, 10_781, 10_783, 10_785, 10_787, 10_789, 10_823,
-#                 10_825, 10_827, 10_829, 10_961, 10_963, 10_965, 10_967, 10_969,
-#                 10_997, 10_999, 12_043, 12_045, 12_047, 12_049, 12_051, 12_053,
-#                 12_055, 12_057, 12_059, 12_099, 12_101, 12_103, 12_105, 12_107,
-#                 12_109, 12_157, 12_159, 12_161, 12_163, 12_165, 12_167, 12_169,
-#                 12_203, 12_205, 12_207, 12_209, 12_247, 12_249, 12_277, 12_279,
-#                 12_305, 12_307, 12_309, 12_347, 12_349, 12_351, 12_353, 12_355,
-#                 12_357, 12_359, 12_435, 12_437, 12_439, 12_459, 12_487, 12_489,
-#                 12_524, 12_526, 12_527, 12_555, 12_557, 12_559, 12_587, 12_589,
-#                 12_619, 12_621, 12_623, 12_627, 12_629, 12_679, 12_681, 12_683,
-#                 12_685, 12_687, 12_689, 13_051, 13_053, 13_055, 13_057, 13_059,
-#                 13_086, 13_088, 13_089, 13_125, 13_127, 13_129, 13_156, 13_158,
-#                 13_159, 13_187, 13_189, 13_347, 13_349, 13_351, 13_353, 13_355,
-#                 10_115, 13_357]
+Sie verfügen über einen Abschluss als Architekt/in. CAD Vectorworks,
+MS-Office und Adobe-Programme und Kommunikationsstärke in der deutschen
+Sprache sind für Sie selbstverständlich. Sie verfügen über mehrjährige Erfahrung
+in der Ausführungsplanung. Erfahrung in der Projektierung sowie in der Realisierung
+sind von Vorteil. Eine selbstständige, zuverlässige und sehr genaue Arbeitsweise sowie
+eine teamorientierte Art und ein souveräner Umgang mit Kollegen, Planern und Unternehmern
+runden Ihr Profil ab.
 
+Ihre Aufgaben
 
-POSTAL_CODES = [10_119, 10_178]
+Der Schwerpunkt Ihrer Aufgabe liegt in der Ausführungsplanung und Sie arbeiten an
+anspruchsvollen Bauprojekten mit. Sie erstellen Projekt-, Baubewilligungs-, Ausführungs-
+und Detailpläne. Sie organisieren und leiten Teile des Planungsteams selbstständig und
+sind für die qualitative und termingerechte Projektbearbeitung verantwortlich.
 
+Wir bieten
+
+Eine interessante und abwechslungsreiche Arbeitsstelle in einem engagierten,
+motivierten und aufgestellten Team. Zeitgemässe Arbeitsmittel, fortschrittliche
+Arbeitsbedingungen und Sozialleistungen.",
+"\"Berlin wächst\" – stetig ergeben sich neue Projekte und Zuständigkeiten für uns.
+Als landeseigener Immobiliendienstleister mit über 600 Mitarbeitern bewirtschaften
+wir eine Vielzahl von Immobilien wie zum Beispiel das Brandenburger Tor, das Rote Rathaus,
+Finanzämter und Feuerwachen. Sie haben Lust, ein einzigartiges Portfolio mit über
+5000 Liegenschaften mitzugestalten? Dann bewerben Sie sich jetzt bei uns."]
+
+# _____________________COMMENTS ___________________________
+
+COMMENTS = ["I Loved it!", "Amazing!", "Very good", "Fantastic", "Really cool people",
+            "Looking forward to see the architecture", "I love the architecture" "Very useful information",
+            "Really good experience", "Worth it!", "very good experience", "MORE!"]
+
+# _____________________USER DESCRIPTIONS___________________________
+
+USER_DESCRIPTIONS = ["Highly creative AIA registered architect with 9+ years experience. Seeking position as
+                      design architect with AECOM. Designed 25+ multi-million dollar jobs for DDG, at 30% less
+                      cost than competitors, with 15% less rework than colleagues. Received 15 client commendations.",
+                      "Enthusiastic architecture student, excelled in CAD design coursework. Won second place in the
+                      Better Philadelphia Architecture Competition for inexpensive design. Created 3D models for a hotel
+                      made of shipping containers."]
 
 # _____________________USERS_________________________________________
 
