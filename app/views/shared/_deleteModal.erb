@@ -11,13 +11,13 @@
         </button>
       </div>
       <div class="modal-body">
-        You have cancelled the event <%= @event.title%>.
+        What a pitty! You have cancelled the event <%= @event.title%>.
       </div>
       <div class="modal-footer">
         <% if @user_attending %>
-          <%= link_to "Close", rsvp_path(@rsvp), method: :delete, class: "btn btn-call" %>
+          <%= link_to "Confirm", rsvp_path(@rsvp), method: :delete, class: "btn btn-call" %>
         <% end %>
-          <%= link_to "Sure? Back!", event_path(@event), class: "btn btn-call" %>
+          <%= link_to "Stay", event_path(@event), class: "btn btn-call" %>
       </div>
     </div>
   </div>
