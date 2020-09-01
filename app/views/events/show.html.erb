@@ -1,6 +1,6 @@
 <div class= "container">
-    <div class="row justify-content-around align-items mt-5 mb-3">
-        <div class="col-12 col-lg-8">
+    <div class="row justify-content-around align-items-end mt-5 mb-3">
+        <div class="col-12 col-lg-10">
             <h1><%= @event.title%></h1>
             <div class="d-flex align-items-center">
                 <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@event.user)  %>
@@ -8,22 +8,23 @@
             </div>
         </div>
         <!-- RSVP btn -->
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-2 align-bottom">
             <% if user_signed_in? %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-call btn-attend" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-attend" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>   
                 <% else%>
                     <%= render "shared/deleteModal" %>
-                    <button type="button" class="btn btn-call btn-attend" data-toggle="modal" data-target="#deleteModal">
-                        Update RSVP
+                    <button type="button" class="btn btn-call btn-delete" data-toggle="modal" data-target="#deleteModal">
+                        Unattend
                     </button>
                 <% end %>
             <% end %> 
         </div> 
     </div>
+
     <hr>
     <!-- Photo and Map -->
     <div class = 'row my-5 justify-content-around'>
@@ -50,7 +51,8 @@
         <!-- Map -->
         <div class="col-12 col-lg-4">
             <h2 class="mb-3">Details </h2>
-            <p><i class="fas fa-clock" style="color: gray"></i> <%= @event.date_time.strftime("%H:%M %d.%m.%Y") %></p>
+            <p><i class="fas fa-clock" style="color: gray"></i> <%= @event.date_time %></p>
+            <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.venue %></p>
             <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.location %></p>
         </div>
     </div>
@@ -66,8 +68,9 @@
     <!-- Members and Comments -->
     <div class="row mb-5">
 		<!-- Members -->
-        <div class = 'col-12 col-lg-6'>
-            <h2>Attending (<%= @event.users.length %>)</h2>
+
+        <div class = 'col-12 col-lg-6' id = "attending">
+            <h2>Attending <span class="badge-number"><%= @event.users.length %></span></h2>
             <div class="row mt-3">	
                 <% @event.users.each do |user| %>
                     <div class="col-3 text-center mx-3">
@@ -81,25 +84,27 @@
                         <p><%= user.first_name %> <%= user.last_name %></p>   
                     </div>
                 <% end %>
+
             </div>
             <!-- RSVP btn -->
             <% if user_signed_in? %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-call" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-call btn-attend-bottom" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>
                 <% else%>
                     <%= render "shared/deleteModal" %>
                     <button type="button" class="btn btn-call" data-toggle="modal" data-target="#deleteModal">
-                        Update RSPV
+                        Unattend
                     </button>
                 <% end %>
+
             <% end %>
         </div>
 		<!-- Comments -->
         <div class = 'col-12 col-lg-6 mb-5'>
-            <h2 class="mb-3">Comments (<%= @event.comments.length %>)</h2>
+            <h2 class="mb-3">Comments <span class="badge-number"><%= @event.comments.length %></span></h2>
             <!-- Comments past-->
             <% @event.comments.each do |comment| %>
                 <div class="card-comment mb-3 p-10" id="comment-<%= comment.id %>">

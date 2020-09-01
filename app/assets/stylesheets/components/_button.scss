@@ -19,7 +19,7 @@
     border: 1px solid black;
     transition: background 0.3s ease;
   }
-  
+
   .btn-flat:hover {
     background: black;
     color: white;
@@ -27,6 +27,32 @@
   }
 
   .btn-attend {
+    width: 100%;
+    margin: 2px;
+        background-color: #226F54;
+    color: white;
+  }
+
+  .btn-attend-bottom {
+    width: 35%;
+    margin: 2px;
+    background-color: #226F54;
+    color: white;
+  }
+
+  .btn-attend-bottom:hover {
+    background: #133E2F;
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-attend:hover {
+    background: #133E2F;
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-delete {
     width: 100%;
     margin: 2px;
   }
@@ -109,3 +135,4 @@
 .btn-4 span:hover:after {
   width: 100%;
 }
+
