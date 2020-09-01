@@ -46,13 +46,13 @@
         <!-- Description -->
         <div class="col-12 col-lg-8">
             <h2 class="mb-3">About </h2>
-            <p>Description: <%= @event.description %></p>
+            <p><%= @event.description %></p>
         </div>
         <!-- Map -->
         <div class="col-12 col-lg-4">
             <h2 class="mb-3">Details </h2>
             <p><i class="fas fa-clock" style="color: gray"></i> <%= @event.date_time %></p>
-            <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.venue %></p>
+            <p><i class="fas fa-building" style="color: gray"></i> <%= @event.venue %></p>
             <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.location %></p>
         </div>
     </div>
@@ -68,12 +68,11 @@
     <!-- Members and Comments -->
     <div class="row mb-5">
 		<!-- Members -->
-
         <div class = 'col-12 col-lg-6' id = "attending">
             <h2>Attending <span class="badge-number"><%= @event.users.length %></span></h2>
             <div class="row mt-3">	
                 <% @event.users.each do |user| %>
-                    <div class="col-3 text-center mx-3">
+                    <div class="col-3 text-center m-3">
                         <%= link_to user_path(user) do %>
                             <% if user.photo.attached? %>
                                 <%= cl_image_tag(user.photo.key, gravity: :face, :class => 'avatar-large mb-3') %>
@@ -84,22 +83,20 @@
                         <p><%= user.first_name %> <%= user.last_name %></p>   
                     </div>
                 <% end %>
-
             </div>
             <!-- RSVP btn -->
             <% if user_signed_in? %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-call btn-attend-bottom" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-call btn-attend-bottom mb-5" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>
                 <% else%>
                     <%= render "shared/deleteModal" %>
-                    <button type="button" class="btn btn-call" data-toggle="modal" data-target="#deleteModal">
+                    <button type="button" class="btn btn-call mb-5" data-toggle="modal" data-target="#deleteModal">
                         Unattend
                     </button>
                 <% end %>
-
             <% end %>
         </div>
 		<!-- Comments -->

@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2020_08_31_134622) do
-
+ActiveRecord::Schema.define(version: 2020_09_01_102406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,16 +98,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "office_projects", force: :cascade do |t|
-    t.string "project_name"
-    t.string "project_img_url"
-    t.string "project_year"
-    t.string "project_typology"
-    t.bigint "office_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["office_id"], name: "index_office_projects_on_office_id"
-
   create_table "notifications", force: :cascade do |t|
     t.integer "recipient_id"
     t.integer "actor_id"
@@ -119,7 +107,17 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.string "notifiable_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
 
+  create_table "office_projects", force: :cascade do |t|
+    t.string "project_name"
+    t.string "project_img_url"
+    t.string "project_year"
+    t.string "project_typology"
+    t.bigint "office_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["office_id"], name: "index_office_projects_on_office_id"
   end
 
   create_table "offices", force: :cascade do |t|
@@ -185,7 +183,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "cl_img_tag"
-    t.string "seed_portfolio"
+    t.text "seed_portfolio", default: [], array: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

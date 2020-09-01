@@ -34,7 +34,7 @@
   <hr>
   <!-- Portfolio -->
   <div class="row">
-    <div class="col-12 col-lg-6 mb-5">
+    <div class="col-12 col-lg-12 mb-5">
       <h2 class="mb-3">Portfolio</h2>
       <!-- Portfolio Pictures -->
       <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
@@ -42,7 +42,9 @@
           <%= cl_image_tag photo.key, :style => "height: 140px; width: 220px; margin: 10px;" %>
         <% end %>
       <% elsif @user.id <= 30  %> <!-- user is seeded -->
-        <%=   cl_image_tag(@user.seed_portfolio, :class => "photos-events") %>
+        <% @user.seed_portfolio.each do |portfolio| %>
+          <%= cl_image_tag(portfolio, :class => "photos-events") %>
+        <% end %>
       <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
         <% if policy(@user).edit? %>
           <%= simple_form_for(@user) do |f| %>
