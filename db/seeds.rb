@@ -24,14 +24,14 @@ posts = JSON.parse(serialized_posts)
 #N of seeds
 n_offices = offices.size
 n_team_members = TEAM_MEMBER_NAME.size
-n_users = 50
+n_users = 35
 n_posts = posts.size
 n_events = events.size
 n_experiences_per_user = 3
 n_jobs = jobs.size
 n_ratings = 50
-n_rsvps = 50
-n_comments = 15
+n_rsvps = 10
+n_comments = 40
 
 #Seedings
 
@@ -47,7 +47,7 @@ offices.each do |office|
                 banner_url: office["banner_url"])
                 # cl_img_tag: "offices/office#{rand(1..48)}",
                 # cl_img_project_tag: "projects/project#{rand(1..10)}")
-                puts "=== Office seeded ======                ==="
+                puts "=== Office seeded <=>                ==="
 
     office["projects"].each do |project|
                 OfficeProject.create(office_id: project["office_id"],
@@ -55,7 +55,7 @@ offices.each do |office|
                                       project_img_url: project["project_img_url"],
                                       project_year: project["project_year"],
                                       project_typology: project["project_typology"])
-                puts "===               ====== Project seeded ==="
+                puts "===               <=> Project seeded ==="
               end
 end
 puts "
@@ -112,7 +112,7 @@ n_users.times do
               first_name: Faker::Name.first_name ,
               last_name: Faker::Name.last_name,
               description: USER_DESCRIPTIONS.sample,
-              cl_img_tag: "users/user#{rand(1..12)}",
+              cl_img_tag: "users/user#{terminal_counter}",
               seed_portfolio: ["portfolios/portfolio1", "portfolios/portfolio2", "portfolios/portfolio3"])
 
   puts "=== #{terminal_counter} out of #{n_users} Users seeded ==="
@@ -162,7 +162,7 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 events.each do |event|
-  Event.create(date_time: event["date"] + " " + event["time_start"] + " - " + event["time_end"],
+  Event.create!(date_time: event["date"] + " " + event["time_start"] + " - " + event["time_end"],
                title: event["title"],
                location: event["location"],
                venue: event["venue"],
@@ -198,12 +198,12 @@ n_users.times do
                       job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
                       office_id: rand(1..n_offices),
                       user_id: experienced_user)
-    puts "===                                      === #{terminal_counter} out of #{n_experiences_per_user} #{phase} seeded ==="
+    puts "===                                   <=> #{terminal_counter} out of #{n_experiences_per_user} #{phase} seeded ==="
     terminal_counter += 1
     end_year -= 2
     end
   experienced_user += 1
-  puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded ===                                   ==="
+  puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded <=>                                   ==="
 end
 puts "
 
@@ -270,10 +270,19 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 
 terminal_counter = 1
 
+ui = 1
 n_rsvps.times do
-  Rsvp.create(user_id: rand(1..n_users),
-              event_id: rand(1..n_events))
-
+events.each do |_|
+  Rsvp.create(user_id: (ui+5),
+              event_id: ui)
+  Rsvp.create(user_id: ui,
+              event_id: ui)
+  Rsvp.create(user_id: (ui+2),
+              event_id: ui)
+  Rsvp.create(user_id: (ui+1),
+              event_id: ui)
+  ui += 1
+end
   puts "=== #{terminal_counter} out of #{n_rsvps} #{phase}s seeded ==="
   terminal_counter += 1
 end
@@ -296,19 +305,19 @@ terminal_counter = 1
 
 n_comments.times do
   # Post Comment
-  Comment.create(post_id: rand(1..10),
+  Comment.create(post_id: rand(1..18),
                   user_id: rand(1..n_users),
                   date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
                   content: COMMENTS.sample)
 
   # Office Comment
-  Comment.create(office_id: rand(1..10),
+  Comment.create(office_id: rand(1..12),
                   user_id: rand(1..n_users),
                   date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
                   content: COMMENTS.sample)
 
   # Event Comment
-  Comment.create(event_id: rand(1..10),
+  Comment.create(event_id: rand(1..22),
                   user_id: rand(1..n_users),
                   date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
                   content: COMMENTS.sample)
