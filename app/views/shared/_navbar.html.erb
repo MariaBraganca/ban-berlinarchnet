@@ -1,14 +1,14 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= cl_image_tag("logo/logo1", :class => 'avatar') %>
   <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler menu-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="navbar navbar-collapse" id="menu">
-    <ul class="nav-item active mr-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <%= link_to "Events", events_path, class: "nav-link-menu" %>
       </li>
@@ -24,8 +24,7 @@
     </ul>
   </div>
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="" id="avatarDropdown">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
@@ -41,10 +40,8 @@
             <%= cl_image_tag "logo/logo1", gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Messages", chatroom_path(current_user.chatrooms_as_user_one.last.id), class: "dropdown-item" unless current_user.chatrooms_as_user_one.empty? %>
-
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
