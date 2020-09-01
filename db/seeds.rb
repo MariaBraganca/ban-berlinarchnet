@@ -22,16 +22,15 @@ serialized_posts = File.read(filepath)
 posts = JSON.parse(serialized_posts)
 
 #N of seeds
-
 n_offices = offices.size
 n_team_members = TEAM_MEMBER_NAME.size
-n_users = 15
+n_users = 50
 n_posts = posts.size
 n_events = events.size
 n_experiences_per_user = 3
 n_jobs = jobs.size
-n_ratings = 15
-n_rsvps = 15
+n_ratings = 50
+n_rsvps = 50
 n_comments = 15
 
 #Seedings
@@ -246,9 +245,9 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 n_ratings.times do
-  Rating.create(culture: rand(1..5),
-                salary: rand(1..5),
-                architecture: rand(1..5),
+  Rating.create(culture: rand(3..5),
+                salary: rand(3..5),
+                architecture: rand(3..5),
                 office_id: rand(1..n_offices))
 
   puts "=== #{terminal_counter} out of #{n_ratings}s #{phase} seeded ==="

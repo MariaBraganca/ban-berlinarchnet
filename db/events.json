@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "date": "August 25, 2020",
+    "date": "December 25, 2020",
     "time_start": "7:00 PM",
     "time_end": "9:00 PM",
     "title": "·ban networking \"Happy Hour!\"",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "date": "August 22, 2020",
+    "date": "December 22, 2020",
     "time_start": "2:00 PM",
     "time_end": "3:00 PM",
     "title": "·ban walks \"MVRDV Haus Berlin\"",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "date": "August 15, 2020",
+    "date": "December 15, 2020",
     "time_start": "10:00 AM",
     "time_end": "4:00 PM",
     "title": "·ban walks \"The modern housing estates: Unesco world heritage in Berlin\"",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "date": "August 9, 2020",
+    "date": "December 9, 2020",
     "time_start": "2:00 PM",
     "time_end": "3:00 PM",
     "title": "·ban walks \"Arctic Nordic Alpine - in Dialog with Landscape, Snøhetta\"",
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "date": "July 28, 2020",
+    "date": "November 28, 2020",
     "time_start": "7:00 PM",
     "time_end": "9:00 PM",
     "title": "·ban networking \"Happy Hour!\"",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "date": "July 14, 2020",
+    "date": "November 14, 2020",
     "time_start": "6:30 PM",
     "time_end": "8:30 PM",
     "title": "·ban workshop \"Master your Portfolio\"",
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "date": "July 6, 2020",
+    "date": "November 6, 2020",
     "time_start": "7:00 PM",
     "time_end": "9:00 PM",
     "title": "·ban talks \"Circular Economy in Construction\"",
@@ -78,18 +78,18 @@
   },
   {
     "id": 8,
-    "date": "June 30, 2020",
+    "date": "September 30, 2020",
     "time_start": "6:30 PM",
     "time_end": "8:30 PM",
     "title": "·ban networking \"Get back together!\"",
     "location_url": "https://www.google.com/maps/search/?api=1&query=52.517986%2C13.441352",
-    "venue": "James June Event GmbH",
+    "venue": "James September Event GmbH",
     "location": "Karl-Marx-Allee 93",
-    "description": "Dear ban-members,it's time to get back together! On June the 30th we would like to gather a small group in a safe event environment. We will meet outdoors in a Biergarten and mantain the required 1.5m distance between everyone so that you can feel safe and comfortable.Furthermore, by hosting a safe event over the next 14 days, Meetup will make a donation to Global Giving's Coronavirus Relief Fund.Come along if you’re looking forward to meet other architects in Berlin and help this cause.Hope you're all doing well.Furthermore, by hosting a safe event over the next 14 days, Meetup will make a donation to Global Giving's Coronavirus Relief Fund.Come along if you’re looking forward to meet other architects in Berlin and help this cause.Hope you're all doing well.Looking forward to see you in person again!"
+    "description": "Dear ban-members,it's time to get back together! On September the 30th we would like to gather a small group in a safe event environment. We will meet outdoors in a Biergarten and mantain the required 1.5m distance between everyone so that you can feel safe and comfortable.Furthermore, by hosting a safe event over the next 14 days, Meetup will make a donation to Global Giving's Coronavirus Relief Fund.Come along if you’re looking forward to meet other architects in Berlin and help this cause.Hope you're all doing well.Furthermore, by hosting a safe event over the next 14 days, Meetup will make a donation to Global Giving's Coronavirus Relief Fund.Come along if you’re looking forward to meet other architects in Berlin and help this cause.Hope you're all doing well.Looking forward to see you in person again!"
   },
   {
     "id": 9,
-    "date": "June 9, 2020",
+    "date": "September 9, 2020",
     "time_start": "6:30 PM",
     "time_end": "8:30 PM",
     "title": "BAN Talks: Agile Architecture",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "date": "April 30, 2020",
+    "date": "October 30, 2020",
     "time_start": "6:30 PM",
     "time_end": "8:00 PM",
     "title": "Remote Work in Architecture",
@@ -111,7 +111,7 @@
   },
   {
     "id": 11,
-    "date": "November 16, 2019",
+    "date": "November 16, 2020",
     "time_start": "4:35 PM",
     "time_end": "6:35 PM",
     "title": "Humanitarian Work - dream job or nightmare?",
@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "date": "October 30, 2019",
+    "date": "October 30, 2020",
     "time_start": "7:00 PM",
     "time_end": "9:00 PM",
     "title": "Doomsday Architecture",
@@ -133,7 +133,7 @@
   },
   {
     "id": 13,
-    "date": "September 29, 2019",
+    "date": "September 29, 2020",
     "time_start": "3:00 PM",
     "time_end": "5:00 PM",
     "title": "BAN exhb \"Walking through Walls\"",
@@ -144,7 +144,7 @@
   },
   {
     "id": 14,
-    "date": "September 15, 2019",
+    "date": "September 15, 2020",
     "time_start": "2:00 PM",
     "time_end": "4:00 PM",
     "title": "BAN Walk \"Spreepark!\"",
@@ -155,7 +155,7 @@
   },
   {
     "id": 15,
-    "date": "September 8, 2019",
+    "date": "October 8, 2020",
     "time_start": "1:15 PM",
     "time_end": "3:15 PM",
     "title": "BAN Kino \"PUSH - Für das Grundrecht auf wohnen\" ",
@@ -166,7 +166,7 @@
   },
   {
     "id": 16,
-    "date": "September 1, 2019",
+    "date": "October 1, 2020",
     "time_start": "8:30 AM",
     "time_end": "7:00 PM",
     "title": "BAN Trips #1 - Bauhaus 100",
@@ -177,7 +177,7 @@
   },
   {
     "id": 17,
-    "date": "August 22, 2019",
+    "date": "December 22, 2020",
     "time_start": "6:00 PM",
     "time_end": "8:00 PM",
     "title": "BAN Talks",
@@ -188,7 +188,7 @@
   },
   {
     "id": 18,
-    "date": "August 11, 2019",
+    "date": "December 11, 2020",
     "time_start": "3:00 PM",
     "time_end": "5:00 PM",
     "title": "BAN Networking",
@@ -199,7 +199,7 @@
   },
   {
     "id": 19,
-    "date": "July 14, 2019",
+    "date": "January 14, 2021",
     "time_start": "3:00 PM",
     "time_end": "5:00 PM",
     "title": "BAN Networking Session",
@@ -210,7 +210,7 @@
   },
   {
     "id": 20,
-    "date": "June 30, 2019",
+    "date": "January 30, 2021",
     "time_start": "2:00 PM",
     "time_end": "4:00 PM",
     "title": "BAN Walks",
@@ -221,7 +221,7 @@
   },
   {
     "id": 21,
-    "date": "April 27, 2018",
+    "date": "January 27, 2021",
     "time_start": "6:30 PM",
     "time_end": "11:55 PM",
     "title": "Gallery Weekend Berlin",
@@ -232,7 +232,7 @@
   },
   {
     "id": 22,
-    "date": "February 13, 2018",
+    "date": "December 13, 2020",
     "time_start": "6:30 PM",
     "time_end": "8:30 PM",
     "title": "Brainstorming Session \"Housing Architecture\"",
