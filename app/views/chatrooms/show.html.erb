@@ -1,18 +1,18 @@
-<div class="container mt-5 mb-5" style="border: 1px solid #000000">
+<div class="container-fluid mt-2" style="border: 1px solid #000000; height: 100vh">
   <div class="row justify-content-center">
-   <div class="col-4" style="padding: 0px">
+   <div class="col-3" style="padding: 0px">
     <div class="convo-container">
       <div class="messages-hd">
         <h3>Chats</h3>
       </div>
-        <div class="inbox-chat">
+        <div class="inbox-chat" id="chat-active">
           <% @chatrooms.each do |chatroom| %>
-            <%= link_to chatroom_path(chatroom), class: "list-group-item list-group-item-action list-group-item-light #{'active' if chatroom == @chatroom}" do %>
+            <%= link_to chatroom_path(chatroom), class: "chat-listing list-group-item  #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
                 <% if chatroom.user_two.photo.attached? %>
                   <%= cl_image_tag(chatroom.user_two.photo.key)%>
                 <% else %>
-                  <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-large" %>
+                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
                 <% end %>
                 <% if chatroom.user_one == current_user %>
                   <h6 class="ml-3"><%= chatroom.user_two.first_name %> <%= chatroom.user_two.last_name %></h6>
@@ -32,26 +32,34 @@
    </div>
 
 
-  <div class="col-8" style="padding: 0px">
-    <div class="messages-hd">
-        <h3></h3>
-      </div>
+  <div class="col-9" style="padding: 0px">
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
-        <div class="messages-container" id="message-<%= message.id %>">
-            <div class="message-avatar">
-              <% if message.user.photo.attached? %>
-                  <%= cl_image_tag(message.user.photo.key)%>
-                <% else %>
-                  <%= cl_image_tag "users/user1", gravity: :face, class: "avatar-chat" %>
-                <% end %>
-              <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span>
-            </div>
-            <div class="message-text">
-              <p><%= message.content %></p>
-              <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
-            </div>
-          </div>
+          <% if message.user == current_user %>
+          <!-- <div class="text-date d-flex flex-row-reverse"> -->
+          <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
+              <div class="message-text-out">
+                <p><%= message.content %></p>
+              </div>
+
+          <!-- </div> -->
+          <% else %>
+              <div class="messages-container" id="message-<%= message.id %>">
+                <div class="message-avatar">
+                  <% if message.user.photo.attached? %>
+                    <%= cl_image_tag(message.user.photo.key)%>
+                  <% else %>
+                    <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                  <% end %>
+                </div>
+                <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span>
+                <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
+                <div class="message-text-in">
+                  <p><%= message.content %></p>
+                </div>
+
+              </div>
+          <% end %>
         <% end %>
     </div>
 
