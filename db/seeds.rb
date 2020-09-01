@@ -77,12 +77,14 @@ puts "===:::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{pha
 terminal_counter = 1
 
 TEAM_MEMBER_NAME.each do |name|
-  User.create(email: "#{name}@test.com",
+  first_name = name.split[0]
+  last_name = name.split[1]
+  User.create(email: "#{first_name.downcase}@test.com",
               password: '123456',
-              first_name: name.capitalize,
-              last_name: 'Lastname',
+              first_name: first_name,
+              last_name: last_name,
               description: Faker::Lorem.paragraph(sentence_count: 20),
-              cl_img_tag: "logo/logo1",
+              cl_img_tag: "users/#{first_name}",
               seed_portfolio: "portfolios/portfolio1")
 
 puts "===#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'==="

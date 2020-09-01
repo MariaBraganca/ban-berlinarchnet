@@ -140,7 +140,7 @@ USER_DESCRIPTIONS = ["Highly creative AIA registered architect with 9+ years exp
 
 # _____________________USERS_________________________________________
 
-TEAM_MEMBER_NAME = %I(ekaterina zeljka maria hristian)
+TEAM_MEMBER_NAME = ["Ekaterina Tugarinova", "Zeljka Vujic", "Maria Braganca", "Hristian Bozinoski"]
 
 # _____________________BERLIN ADDRESSES______________________________
 
