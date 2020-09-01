@@ -11,7 +11,7 @@
   color: #f4f4f4;
   font-weight: bold;
   font-size: 24px;
-  margin-left: 5px;
+  margin-left: 23px;
   line-height: 50px;
 }
 
@@ -21,10 +21,13 @@
   border-right: 1px solid #000000;
   height: 100%;
   display: flex;
+  max-width: 300px;
+  // max-height: 80px;
 }
 
 .inbox-chat {
-  overflow: scroll;
+  overflow-x: scroll;
+  cursor: pointer;
 }
 
 
@@ -39,15 +42,16 @@
   flex-grow: 1;
   padding: 16px 0;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   flex-direction: column;
 }
 
 .chat-datetime {
-  display: block;
+  display: flex;
   font-size: 12px;
   // margin: 8px 0 0;
   color: #484348;
+  flex-direction: row-reverse;
 }
 
 
@@ -60,16 +64,33 @@
   padding: 0 1rem;
   padding-top: 1rem;
   overflow: scroll;
-  max-height: calc(100vh - 66px - 65px - 71px);
+  max-height: calc(90vh - 66px - 65px - 71px);
 }
 
-.message-text {
+.message-text-out {
+  display: flex;
+  flex-direction: row-reverse;
+
+    p {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: right;
+    }
+}
+
+.message-text-in {
   flex-grow: 1;
   padding-left: 58px;
+  border: 1px solid #000000;
+  // color: #ffffff;
+  max-width: 100%;
+  margin-right: 50%;
+  min-width: 30%;
 }
 
+
 .message-text-inbox {
-  padding-left: 98px;
+  padding-left: 58px;
   font-weight: lighter;
   max-width: 180px;
   max-height: 25px;
@@ -78,7 +99,7 @@
 
 .message-avatar {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .chat-card {
@@ -110,4 +131,25 @@
   background-color: #1F1F1F;
   color: white;
   text-decoration: none;
+}
+
+.chat-listing {
+  background-color: #F4F4F4F4;
+  max-height: 80px;
+}
+
+.active .chat-listing:hover {
+  background-color: #1F1F1F;
+  color: white;
+}
+
+.list-group-item.active {
+  background-color: #D6D6D6 !important;
+  color: black !important;
+  border-color:  #D6D6D6 !important;
+}
+
+.text-date {
+  margin-left: 50%;
+  // float: right;
 }
