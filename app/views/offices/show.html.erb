@@ -127,7 +127,7 @@
 				<% end %>    	
 				<!-- New -->
 				<% if user_signed_in? %>
-					<div class = "form" id= "comment-office">
+					<div class = "form" id= "comment-office" >
 						<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
 								<%= text_field_tag :content %>          
 								<%= submit_tag 'Submit', class: 'btn btn-call' %>
