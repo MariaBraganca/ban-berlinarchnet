@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="text-center my-5">Dashboard</h1>
   <div class="row mb-5">
-    <div class="col-6">
+    <div class="col-12 col-lg-6">
       <!-- About -->
       <h2 class="mb-5">Hi i'm <%= @user.first_name %> <%= @user.last_name %>!</h2>
       <!-- Avatar -->
@@ -24,7 +24,7 @@
       </div>
     </div>
     <!-- Experience -->
-    <div class="col-6">
+    <div class="col-12 col-lg-6">
       <h2 class="mb-3">Experience</h2>
       <% @user.experiences.each do |experience|  %>
         <%= render "shared/card-experience", experience_within: experience %>
@@ -34,7 +34,7 @@
   <hr>
   <!-- Portfolio -->
   <div class="row">
-    <div class="col-12 mb-5">
+    <div class="col-12 col-lg-12 mb-5">
       <h2 class="mb-3">Portfolio</h2>
       <!-- Portfolio Pictures -->
       <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
@@ -42,7 +42,9 @@
           <%= cl_image_tag photo.key, :style => "height: 140px; width: 220px; margin: 10px;" %>
         <% end %>
       <% elsif @user.id <= 30  %> <!-- user is seeded -->
-        <%=   cl_image_tag(@user.seed_portfolio, :class => "photos-events") %>
+        <% @user.seed_portfolio.each do |portfolio| %>
+          <%= cl_image_tag(portfolio, :class => "photos-events") %>
+        <% end %>
       <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
         <% if policy(@user).edit? %>
           <%= simple_form_for(@user) do |f| %>
@@ -56,13 +58,13 @@
   <hr>
   <!-- Members -->
   <div class="row mb-5">
-    <h2 class="col-12 mb-3">Activity</h2>
+    <h2 class="col-12 col-lg-12 mb-3">Activity</h2>
     <!-- Members Events -->
     <% unless @user.events.empty? %>
-      <div class="col-6">
+      <div class="col-12 col-lg-6">
         <div class="row">
           <% @user.events.each do |event|  %>
-            <div class="col-6 mb-3">
+            <div class="col-12 col-lg-6 mb-3">
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event-user-show", event_within: event %>
               <% end %>
@@ -72,10 +74,10 @@
       </div>
     <% end %>
     <!-- Members Posts -->
-    <div class="col-6">
+    <div class="col-12 col-lg-6">
       <% @user.posts.each do |post|  %>
         <%= link_to post_path(post) do %>
-          <%= render "shared/card-post-user-show", post_within: post %>
+          <%= render "shared/card-post-user-show",  post_within: post %>
         <% end %>
       <% end %>
     </div>

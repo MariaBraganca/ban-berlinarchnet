@@ -1,71 +1,108 @@
-require_relative 'seed_scrape_cleaner'
 require_relative 'seed_data'
-require 'open-uri'
-require 'nokogiri'
 require 'faker'
+require 'json'
 
-n_offices = CLEAN_OFFICE_ARRAY.size
+
+#Reading Jsons
+
+filepath = 'db/offices_projects.json'
+serialized_offices = File.read(filepath)
+offices = JSON.parse(serialized_offices)
+
+filepath = 'db/jobs.json'
+serialized_jobs = File.read(filepath)
+jobs = JSON.parse(serialized_jobs)
+
+filepath = 'db/events.json'
+serialized_events = File.read(filepath)
+events = JSON.parse(serialized_events)
+
+filepath = 'db/posts.json'
+serialized_posts = File.read(filepath)
+posts = JSON.parse(serialized_posts)
+
+#N of seeds
+n_offices = offices.size
 n_team_members = TEAM_MEMBER_NAME.size
-n_users = 15
-n_posts = 15
-n_events = 15
+n_users = 35
+n_posts = posts.size
+n_events = events.size
 n_experiences_per_user = 3
-n_openings = 15
-n_ratings = 15
-n_rsvps = 15
-n_comments = 15
+n_jobs = jobs.size
+n_ratings = 50
+n_rsvps = 10
+n_comments = 40
+
+#Seedings
 
 phase = "office"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
-terminal_counter = 1
 
-CLEAN_OFFICE_ARRAY.each do |elementos|
-  Office.create(name: elementos[:external_name],
-             location: elementos[:external_location],
-             description: OFFICE_DESCRIPTIONS.sample,
-             cl_img_tag: "offices/office#{rand(1..48)}",
-             url: elementos[:external_url],
-             cl_img_project_tag: "projects/project#{rand(1..10)}")
-  puts "________#{terminal_counter}__ out of #{n_offices}______Offices Saved!_____________________"
-  terminal_counter += 1
+offices.each do |office|
+  Office.create(name: office["name"],
+                location: office["location"],
+                url: office["url"],
+                description: OFFICE_DESCRIPTIONS.sample,
+                banner_url: office["banner_url"])
+                # cl_img_tag: "offices/office#{rand(1..48)}",
+                # cl_img_project_tag: "projects/project#{rand(1..10)}")
+                puts "=== Office seeded <=>                ==="
+
+    office["projects"].each do |project|
+                OfficeProject.create(office_id: project["office_id"],
+                                      project_name: project["project_name"],
+                                      project_img_url: project["project_img_url"],
+                                      project_year: project["project_year"],
+                                      project_typology: project["project_typology"])
+                puts "===               <=> Project seeded ==="
+              end
 end
+puts "
 
-puts ""
-puts ""
+
+
+"
 puts "Random #{phase} sample:"
-p Office.find(rand(1..n_offices))
-puts ""
-puts ""
-puts ""
+p Office.find(1)
+puts "
+
+
+
+"
 phase = "team user"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
 TEAM_MEMBER_NAME.each do |name|
-  User.create(email: "#{name}@test.com",
+  first_name = name.split[0]
+  last_name = name.split[1]
+  User.create(email: "#{first_name.downcase}@test.com",
               password: '123456',
-              first_name: name.capitalize,
-              last_name: 'Lastname',
+              first_name: first_name,
+              last_name: last_name,
               description: Faker::Lorem.paragraph(sentence_count: 20),
-              cl_img_tag: "logo/logo1",
+              cl_img_tag: "users/#{first_name}",
               seed_portfolio: "portfolios/portfolio1")
-puts "___#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'___"
+
+puts "===#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'==="
 terminal_counter += 1
 end
+puts "
 
-puts ""
-puts ""
+
+
+"
 puts "Random #{phase} sample:"
-p User.find(rand(1..n_team_members))
-puts ""
-puts ""
-puts ""
+p User.find(1)
+puts "
 
 
+
+"
 phase = "user"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
@@ -74,77 +111,82 @@ n_users.times do
               password: '123456',
               first_name: Faker::Name.first_name ,
               last_name: Faker::Name.last_name,
-              description: Faker::Lorem.paragraph(sentence_count: 20),
-              cl_img_tag: "users/user#{rand(1..12)}",
-              seed_portfolio: "portfolios/portfolio1")
-  puts "___#{terminal_counter} out of #{n_users} Fake users created___"
+              description: USER_DESCRIPTIONS.sample,
+              cl_img_tag: "users/user#{terminal_counter}",
+              seed_portfolio: ["portfolios/portfolio1", "portfolios/portfolio2", "portfolios/portfolio3"])
+
+  puts "=== #{terminal_counter} out of #{n_users} Users seeded ==="
   terminal_counter += 1
 end
+puts "
 
-puts ""
-puts ""
+
+
+"
 puts "Random #{phase} sample:"
-p User.find(rand(1..n_users))
-puts ""
-puts ""
-puts ""
+p User.find(1)
+puts "
 
 
+
+"
 phase = "post"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
-n_posts.times do
-  Post.create(title: Faker::Book.title,
-              date: Faker::Time.backward(days: rand(1..10), format: :long),
-              content: Faker::Lorem.paragraph(sentence_count: 50),
+posts.each do |post|
+  Post.create(title: post["title"],
+              date: post["date"],
+              content: post["content"],
               user_id: rand(1..n_users))
 
-  puts "___#{terminal_counter} out of #{n_posts} Fake Posts created___"
+  puts "=== #{terminal_counter} out of #{n_posts} Posts seeded ==="
   terminal_counter += 1
 end
+puts "
 
-puts ""
-puts ""
+
+
+"
 puts "Random #{phase} sample:"
-p Post.find(rand(1..n_posts))
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
+p Post.find(1)
+puts "
 
 
 
+"
 phase = "event"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
-n_events.times do
-  Event.create(date_time: Faker::Time.forward(days: rand(1..30),  period: :evening, format: :long),
-               location: BERLIN_ADDRESES.sample,
-               description: Faker::Lorem.paragraph(sentence_count: 50),
+events.each do |event|
+  Event.create!(date_time: event["date"] + " " + event["time_start"] + " - " + event["time_end"],
+               title: event["title"],
+               location: event["location"],
+               venue: event["venue"],
+               description: event["description"],
                user_id: rand(1..n_users),
-               title: Faker::Book.title,
-               cl_img_tag: "events/event#{rand(1..2)}")
+               cl_img_tag: "events/event#{event["id"]}")
 
-  puts "___#{terminal_counter} out of #{n_events} Fake Events created___"
+  puts "=== #{terminal_counter} out of #{n_events} Events seeded ==="
   terminal_counter += 1
 end
-puts ""
+puts "
+
+
+
+"
 puts "Random #{phase} sample:"
-p Event.find(rand(1..n_events))
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
+p Event.find(1)
+puts "
 
 
+
+"
 phase = "experience"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 experienced_user = 1
@@ -156,125 +198,136 @@ n_users.times do
                       job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
                       office_id: rand(1..n_offices),
                       user_id: experienced_user)
-    puts "___#{terminal_counter} out of #{n_experiences_per_user} Fake #{phase} created___"
+    puts "===                                   <=> #{terminal_counter} out of #{n_experiences_per_user} #{phase} seeded ==="
     terminal_counter += 1
     end_year -= 2
     end
   experienced_user += 1
-  puts "___#{experienced_user} user with #{n_experiences_per_user} Fake #{phase} created___"
+  puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded <=>                                   ==="
 end
-puts ""
+puts "
+
+
+
+"
 puts "Random #{phase} sample:"
-p Experience.find(rand(1..n_experiences_per_user))
 p Experience.where(user_id: 3)
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
+puts "
 
 
 
-phase = "opening"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+"
+phase = "jobs"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
-n_openings.times do
-  Opening.create(date: Faker::Date.in_date_period(year: 2020, month: rand(9..12)),
-                 job_position: "#{Faker::Job.employment_type} #{Faker::Job.seniority} #{Faker::Job.position} Architect",
-                 description: Faker::Lorem.paragraph(sentence_count: 50),
+jobs.each do |job|
+  Opening.create!(date: job["date"],
+                 job_position: job["job_position"],
+                 description: JOB_DESCRIPTIONS.sample,
                  office_id: rand(1..n_offices))
 
-  puts "___#{terminal_counter} out of #{n_openings} Fake #{phase} created___"
+  puts "=== #{terminal_counter} out of #{n_jobs} #{phase} seeded ==="
   terminal_counter += 1
 end
 puts ""
 puts "Random #{phase} sample:"
-p Opening.find(rand(1..n_openings))
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
+p Opening.find(1)
+puts "
 
 
+
+"
 phase = "rating"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
 n_ratings.times do
-  Rating.create(culture: rand(1..5),
-                salary: rand(1..5),
-                architecture: rand(1..5),
+  Rating.create(culture: rand(3..5),
+                salary: rand(3..5),
+                architecture: rand(3..5),
                 office_id: rand(1..n_offices))
 
-  puts "___#{terminal_counter} out of #{n_ratings} Fake #{phase} created___"
+  puts "=== #{terminal_counter} out of #{n_ratings}s #{phase} seeded ==="
   terminal_counter += 1
 end
-puts ""
+puts "
+
+
+
+"
 puts "Random #{phase} sample:"
-p Rating.find(rand(1..n_ratings))
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
+p Rating.find(1)
+puts "
 
 
+
+"
 phase = "rsvp"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
+ui = 1
 n_rsvps.times do
-  Rsvp.create(user_id: rand(1..n_users),
-              event_id: rand(1..n_events))
-
-  puts "___#{terminal_counter} out of #{n_rsvps} Fake #{phase} created___"
+events.each do |_|
+  Rsvp.create(user_id: (ui+5),
+              event_id: ui)
+  Rsvp.create(user_id: ui,
+              event_id: ui)
+  Rsvp.create(user_id: (ui+2),
+              event_id: ui)
+  Rsvp.create(user_id: (ui+1),
+              event_id: ui)
+  ui += 1
+end
+  puts "=== #{terminal_counter} out of #{n_rsvps} #{phase}s seeded ==="
   terminal_counter += 1
 end
-puts ""
+puts "
+
+
+
+"
 puts "Random #{phase} sample:"
-p Rsvp.find(rand(1..n_rsvps))
-puts ""
-puts ""
-puts ""
-puts ""
-puts ""
+p Rsvp.find(1)
+puts "
 
 
+
+"
 phase = "comment"
-puts ":::::::::#{phase}:::::::::::#{phase}::::::::::::::::::::#{phase}::::::::::::#{phase}::::::::::::"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
 
 n_comments.times do
   # Post Comment
-  Comment.create!(post_id: rand(1..n_posts),
+  Comment.create(post_id: rand(1..18),
                   user_id: rand(1..n_users),
-                  date: Faker::Time.forward(days: rand(1..30),  period: :evening, format: :long),
-                  content: Faker::Lorem.paragraph(sentence_count: 10))
+                  date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
+                  content: COMMENTS.sample)
 
   # Office Comment
-  Comment.create!(office_id: rand(1..n_offices),
+  Comment.create(office_id: rand(1..12),
                   user_id: rand(1..n_users),
-                  date: Faker::Time.forward(days: rand(1..30),  period: :evening, format: :long),
-                  content: Faker::Lorem.paragraph(sentence_count: 10))
+                  date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
+                  content: COMMENTS.sample)
 
   # Event Comment
-  Comment.create!(event_id: rand(1..n_events),
+  Comment.create(event_id: rand(1..22),
                   user_id: rand(1..n_users),
-                  date: Faker::Time.forward(days: rand(1..30),  period: :evening, format: :long),
-                  content: Faker::Lorem.paragraph(sentence_count: 10))
+                  date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
+                  content: COMMENTS.sample)
 
-  puts "___#{terminal_counter * 3} out of #{n_comments * 3} Fake Comments created___"
+  puts "=== #{terminal_counter * 3} out of #{n_comments * 3} #{phase}s seeded ==="
   terminal_counter += 1
 end
 puts ""
 puts "Random #{phase} sample:"
-p Comment.find(rand(1..n_comments))
+p Comment.find(1)
 puts ""
 
 
@@ -285,7 +338,7 @@ puts "Sumber of seeds created:
 --Posts: #{n_posts}
 --Events: #{n_events}
 --Experiences: #{n_experiences_per_user}
---Openings: #{n_openings}
+--Jobs: #{n_jobs}
 --Ratings: #{n_ratings}
 --RSVPS: #{n_rsvps}
 --Comments: #{n_comments}"

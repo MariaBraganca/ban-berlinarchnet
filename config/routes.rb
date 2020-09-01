@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :experiences
-    resources :rsvps
     resources :chatrooms, only: [:create]
   end
 
@@ -15,8 +14,10 @@ Rails.application.routes.draw do
     resources :ratings, only: :create
   end
 
+  resources :rsvps, only: :destroy
+
   resources :events do
-    resources :rsvps, only: [:create, :destroy]
+    resources :rsvps, only: [:create]
     resources :comments, only: [:destroy]
     post "event_comment", to: "comments#create_event_comment"
   end

@@ -35,6 +35,7 @@
   <div class="col-9" style="padding: 0px">
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
+
           <% if message.user == current_user %>
           <!-- <div class="text-date d-flex flex-row-reverse"> -->
           <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
@@ -60,6 +61,8 @@
 
               </div>
           <% end %>
+
+      
         <% end %>
     </div>
 

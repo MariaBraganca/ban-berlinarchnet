@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_134622) do
+ActiveRecord::Schema.define(version: 2020_09_01_102406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "date_time"
+    t.string "date_time"
     t.string "location"
     t.text "description"
     t.bigint "user_id", null: false
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.string "cl_img_tag"
     t.float "latitude"
     t.float "longitude"
+    t.string "venue"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -108,6 +109,17 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "office_projects", force: :cascade do |t|
+    t.string "project_name"
+    t.string "project_img_url"
+    t.string "project_year"
+    t.string "project_typology"
+    t.bigint "office_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["office_id"], name: "index_office_projects_on_office_id"
+  end
+
   create_table "offices", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -115,14 +127,13 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "url"
-    t.string "cl_img_tag"
     t.float "latitude"
     t.float "longitude"
-    t.string "cl_img_project_tag"
+    t.string "banner_url"
   end
 
   create_table "openings", force: :cascade do |t|
-    t.datetime "date"
+    t.string "date"
     t.string "job_position"
     t.text "description"
     t.bigint "office_id", null: false
@@ -160,33 +171,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.index ["user_id"], name: "index_rsvps_on_user_id"
   end
 
-  create_table "taggings", id: :serial, force: :cascade do |t|
-    t.integer "tag_id"
-    t.string "taggable_type"
-    t.integer "taggable_id"
-    t.string "tagger_type"
-    t.integer "tagger_id"
-    t.string "context", limit: 128
-    t.datetime "created_at"
-    t.index ["context"], name: "index_taggings_on_context"
-    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
-    t.index ["tag_id"], name: "index_taggings_on_tag_id"
-    t.index ["taggable_id", "taggable_type", "context"], name: "taggings_taggable_context_idx"
-    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
-    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
-    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
-    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
-    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
-  end
-
-  create_table "tags", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -199,7 +183,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "cl_img_tag"
-    t.string "seed_portfolio"
+    t.text "seed_portfolio", default: [], array: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -216,10 +200,10 @@ ActiveRecord::Schema.define(version: 2020_08_31_134622) do
   add_foreign_key "experiences", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "office_projects", "offices"
   add_foreign_key "openings", "offices"
   add_foreign_key "posts", "users"
   add_foreign_key "ratings", "offices"
   add_foreign_key "rsvps", "events"
   add_foreign_key "rsvps", "users"
-  add_foreign_key "taggings", "tags"
 end
