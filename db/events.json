@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "date": "Wednesday, October 30, 2019",
+    "date": "October 30, 2019",
     "time_start": "7:00 PM",
     "time_end": "9:00 PM",
     "title": "Doomsday Architecture",
@@ -172,7 +172,7 @@
     "title": "BAN Trips #1 - Bauhaus 100",
     "location_url": "https://www.google.com/maps/search/?api=1&query=52.521587%2C13.411099",
     "venue": "S-Bahn Kundenzentrum Alexanderplatz",
-    "location": "Alexanderpl.",
+    "location": "Alexanderplatz Berlin",
     "description": "Dear BAN People,We are doing our first BAN Trip to Dessau. This old, quaint little town in Saxony-Anhalt was home to one of the biggest movements in the 20th Century: the Bauhaus. Under the direction of Water Gropius, followed by Hannes Meyer and Mies van der Rohe, it revolutionized not only architecture but also arts, design, literature, and many other fields. It brought modernism to the foreground and transformed design education throughout the world.This year, Bauhaus is commemorating its centenary. For that, buildings were renovated and exhibitions were set up, which makes it a perfect opportunity for a trip to Dessau to check it all out.This is the proposed transportation schedule:9:07 (arrival 10:53) Alexanderplatz to Dessau HbfThis year, Bauhaus is commemorating its centenary. For that, buildings were renovated and exhibitions were set up, which makes it a perfect opportunity for a trip to Dessau to check it all out.This is the proposed transportation schedule:9:07 (arrival 10:53) Alexanderplatz to Dessau Hbf17:05 (arrival 18:54) Dessau Hbf to AlexanderplatzDepending on the number of attendees, we can buy Brandenburger Tickets; it costs 29EUR, but allows for up to five people to travel both ways. For that, we should meet about half an hour before the scheduled time."
   },
   {
@@ -221,7 +221,7 @@
   },
   {
     "id": 21,
-    "date": "Friday, April 27, 2018",
+    "date": "April 27, 2018",
     "time_start": "6:30 PM",
     "time_end": "11:55 PM",
     "title": "Gallery Weekend Berlin",

@@ -30,17 +30,14 @@
 		<div class="row">
 			<div class="col-3 col-lg-3">
 				<p class="heading-flat">Ratings</p>
-
 			</div> 
 			<div class="col-9 col-lg-9">
-
 				<div class="row">
 						<div class="col-6 col-lg-2">
 							<p>CULTURE</p>
 							<p>SALARY</p>
 							<p>ARCHITECTURE</p>
 						</div>
-
 						<div class="col-6 col-lg-2">
 							<p> 
 								<% @culture_average.times do %> 
@@ -69,24 +66,10 @@
 						</div>
 				</div>
 			</div>
-
-			<!-- Projects -->
-			<div class="col-3">
-				<p class="heading-flat">Projects</p>
-			</div>
-			<div class="col-9 mb-3">
-        <% @office.office_projects.each do |project|   %>
-          <%= image_tag(project.project_img_url, :class => 'photos-events') %>
-        <% end %>
-
-			</div>
-		
-
-
+		</div>
 		<!-- Location -->
 		<div class="row mt-3">
 			<div class="col-3 col-lg-3">
-
 				<p class="heading-flat mb-3">Location</p>
 			</div>
 			<div class="col-12 col-lg-9">
@@ -104,9 +87,10 @@
 		<div class="row">
 			<div class="col-12 mb-5">
 				<h2 class="mb-3">Projects</h2>
-				<%= cl_image_tag(@office.cl_img_project_tag, :class => 'photos-events') %>
+				<% @office.office_projects.each do |project|   %>
+          			<%= image_tag(project.project_img_url, :class => 'photos-events') %>
+        		<% end %>
 			</div>
-
 		</div>
 		<hr>
 		<!-- Members and Comments -->
@@ -127,7 +111,6 @@
 			</div>
 			<!-- Comments -->
 			<!-- Past -->
-
 			<div class="col-12 col-lg-6">
         		<h2 class="mb-3">Comments <span class="badge-number"><%= @office.comments.size %></span></h2>
 				<% @office.comments.each do |comment| %>
@@ -149,7 +132,7 @@
 					<div class = "form" id= "comment-office" >
 						<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
 								<%= text_field_tag :content %>          
-								<%= submit_tag 'Submit', class: 'btn btn-call' %>
+								<%= submit_tag 'Post', class: 'btn btn-flat' %>
 						<% end %>
 					</div> 
 					<% if flash[:validation]%>
@@ -159,7 +142,6 @@
 					<% end %>
 				<% end %>
 			</div>
-
 		</div>		
 	<%#	= link_to 'Back to all offices', offices_path, class: 'btn btn-flat mb-3' %>
 </div>

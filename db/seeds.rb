@@ -112,7 +112,7 @@ n_users.times do
               last_name: Faker::Name.last_name,
               description: USER_DESCRIPTIONS.sample,
               cl_img_tag: "users/user#{rand(1..12)}",
-              seed_portfolio: ["portfolios/portfolio1, portfolios/portfolio2, portfolios/portfolio3,"])
+              seed_portfolio: ["portfolios/portfolio1", "portfolios/portfolio2", "portfolios/portfolio3"])
 
   puts "=== #{terminal_counter} out of #{n_users} Users seeded ==="
   terminal_counter += 1
