@@ -1,4 +1,4 @@
-<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@office.cl_img_tag)%>);">
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@office.banner_url)%>);">
 	<div class="container">
 		<h1><%= @office.name%></h1>
 	</div>
@@ -27,7 +27,7 @@
 			<!-- Ratings -->
 			<div class="col-3">
 				<p class="heading-flat">Ratings</p>
-			</div> 
+			</div>
 			<div class="col-9">
 				<div class="row">
 						<div class="col-2">
@@ -36,27 +36,27 @@
 							<p>ARCHITECTURE</p>
 						</div>
 						<div class="col-2">
-							<p> 
-								<% @culture_average.times do %> 
+							<p>
+								<% @culture_average.times do %>
 									<i class="fas fa-heart" style="color: #e53e3e"></i>
 								<% end %>
-								<% (5-@culture_average).times do %> 
+								<% (5-@culture_average).times do %>
 									<i class="fas fa-heart" style="color: lightgray"></i>
 								<% end %>
 							</p>
-							<p> 
+							<p>
 								<% @salary_average.times do %>
 									<i class="fas fa-euro-sign" style="color: #90be6d"></i>
 								<% end %>
-								<% (5-@salary_average).times do %> 
+								<% (5-@salary_average).times do %>
 									<i class="fas fa-euro-sign" style="color: lightgray"></i>
 								<% end %>
 							</p>
-							<p> 
+							<p>
 								<% @architecture_average.times do %>
 									<i class="fas fa-star" style="color: #e9c46a"></i>
 								<% end %>
-								<% (5-@architecture_average).times do %> 
+								<% (5-@architecture_average).times do %>
 									<i class="fas fa-star" style="color: lightgray"></i>
 								<% end %>
 							</p>
@@ -68,7 +68,10 @@
 				<p class="heading-flat">Projects</p>
 			</div>
 			<div class="col-9 mb-3">
-				<%= cl_image_tag(@office.cl_img_project_tag, :class => 'photos-events') %>
+        <% @office.office_projects.each do |project|   %>
+          <%= image_tag(project.project_img_url, :class => 'photos-events') %>
+        <% end %>
+
 			</div>
 			<!-- Location -->
 			<div class="col-3">
@@ -87,7 +90,7 @@
 				<p class="heading-flat mb-3">Members</p>
 			</div>
 			<div class="col-9">
-				<div class="row mt-3">	
+				<div class="row mt-3">
 					<% @office.users.each do |user| %>
 						<div class="col-3 text-center">
 							<%= link_to user_path(user) do %>
@@ -112,15 +115,15 @@
             			<%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
           			<% else %>
             			<%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-          			<% end %>									
+          			<% end %>
 								<div class="card-comment-infos">
-									<p>Time: <%= comment.date %> </p>  
-									<p><%= comment.content %></p> 
+									<p>Time: <%= comment.date %> </p>
+									<p><%= comment.content %></p>
 									<p> User: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
 								</div>
 							</div>
 						<% end %>
-					</div>       	
+					</div>
      		</div>
     	</div>
 			<!-- New -->
@@ -131,7 +134,7 @@
 					<div class = 'col-12 col-lg-9'>
 						<% if user_signed_in? %>
 							<%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
-									<%= text_field_tag :content %>          
+									<%= text_field_tag :content %>
 									<%= submit_tag 'Submit', class: 'btn btn-call' %>
 							<% end %>
 						<% end %>
@@ -139,7 +142,7 @@
 				</div>
 			</div>
 
-		</div>		
+		</div>
 	</div>
 
 	<%= link_to 'Back to all offices', offices_path, class: 'btn btn-flat mb-3' %>

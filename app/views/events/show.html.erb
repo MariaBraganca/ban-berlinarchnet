@@ -41,14 +41,15 @@
 
 	<!-- About and Details -->
     <div class = 'container'>
-        <div class = 'row mb-5'>  
+        <div class = 'row mb-5'>
             <div class="col-12 col-lg-8">
                 <h2 class="mb-5">About </h2>
                 <p>Description: <%= @event.description %></p>
             </div>
             <div class="col-12 col-lg-4">
                 <h2 class="mb-5">Details </h2>
-                <p><i class="fas fa-clock" style="color: gray"></i> <%= @event.date_time.strftime("%H:%M %d.%m.%Y") %></p>
+                <p><i class="fas fa-clock" style="color: gray"></i> <%= @event.date_time %></p>
+                <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.venue %></p>
                 <p><i class="fas fa-map-marker-alt" style="color: #3fb1ce"></i> <%= @event.location %></p>
                 <p><i class="fas fa-user" style="color: #E53E3E"></i> Organized by:</p>
                 <div class="text-center">
@@ -56,7 +57,7 @@
                     <p><%= @event.user.first_name %>, <%= @event.user.last_name %></p>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 	<!-- Map -->
         <div class="row mb-5">
@@ -75,17 +76,17 @@
         <div class="row mb-5">
         	<h2 class="col-12 mb-5">Attending (<%= @event.users.length %>)</h2>
             <div class = 'col-12 col-lg-12'>
-            	<div class="row mt-3">	
+            	<div class="row mt-3">
                     <% @event.users.each do |user| %>
                         <div class="col-3 text-center">
                             <%= link_to user_path(user) do %>
                                 <% if user.photo.attached? %>
                                     <%= cl_image_tag user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                                 <% else %>
-                                    <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>         
+                                    <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
                                 <% end %>
                             <% end %>
-                              <p id="user-<%=user.id%>"><%= user.first_name %> <%= user.last_name %></p>   
+                              <p id="user-<%=user.id%>"><%= user.first_name %> <%= user.last_name %></p>
                         </div>
                     <% end %>
                 </div>
@@ -93,7 +94,7 @@
 					<button type="button" class="btn btn-call mt-5" data-toggle="modal" data-target="#exampleModal">
 						Attend
 					</button>
-                <% end %> 
+                <% end %>
             </div>
         </div>
         <hr>
@@ -113,10 +114,10 @@
             			        <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
           			        <% else %>
             			        <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-          			        <% end %>	
+          			        <% end %>
                             <div class="card-comment-infos">
-                                <h6><%= comment.content %></h6> 
-                                <p>Time: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>  
+                                <h6><%= comment.content %></h6>
+                                <p>Time: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>
                                 <p>Posted by: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
                             </div>
                         </div>
@@ -124,7 +125,7 @@
                     <!-- Comments past-->
                     <% if user_signed_in? %>
                         <%= form_tag event_event_comment_path(@event, url: (event_path([@event], anchor:'comments'))), method: :post do |f| %>
-                            <%= text_field_tag :content %>          
+                            <%= text_field_tag :content %>
                             <%= submit_tag 'Submit', class: 'btn btn-call' %>
                         <% end %>
                     <% end %>
@@ -132,7 +133,7 @@
         </div>
         <!-- Go back to all events -->
         <%= link_to 'Back to all events', events_path, class: 'btn btn-call' %>
-    </div>	
+    </div>
 
     <div class = 'container p-3 my-3'>
         <div class="row">
@@ -143,15 +144,15 @@
                 <% if policy(@event).edit? %>
                     <%= link_to "Update", edit_event_path(@event), class: 'btn btn-call' %>
                 <% end %>
-            </div>  
-            <div class = 'col-12 col-lg-3'> 
+            </div>
+            <div class = 'col-12 col-lg-3'>
                 <% if policy(@event).destroy? %>
                     <%= link_to "Destroy", event_path(@event), class: 'btn btn-call' %>
                 <% end %>
-            </div> 
-        </div> 
+            </div>
+        </div>
     </div>
 
 
-    
+
 

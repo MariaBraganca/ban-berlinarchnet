@@ -6,7 +6,7 @@ class Office < ApplicationRecord
   has_many :users, through: :experiences
 
   has_many :ratings
-  has_many :offices_projects
+  has_many :office_projects
 
   has_many :comments, dependent: :nullify
   has_one_attached :photo

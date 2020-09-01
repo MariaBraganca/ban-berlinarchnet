@@ -65,7 +65,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Office.find(rand(1..n_offices))
+p Office.find(1)
 puts "
 
 
@@ -94,7 +94,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p User.find(rand(1..n_team_members))
+p User.find(1)
 puts "
 
 
@@ -123,7 +123,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p User.find(rand(1..n_users))
+p User.find(1)
 puts "
 
 
@@ -149,7 +149,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Post.find(rand(1..n_posts))
+p Post.find(1)
 puts "
 
 
@@ -161,9 +161,10 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 events.each do |event|
-  Event.create(date_time: event["date"] + event["time_start"] + " - " + event["time_end"],
+  Event.create(date_time: event["date"] + " " + event["time_start"] + " - " + event["time_end"],
                title: event["title"],
-               location: event["venue"] + " " + event["location"],
+               location: event["location"],
+               venue: event["venue"],
                description: event["description"],
                user_id: rand(1..n_users),
                cl_img_tag: "events/event#{event["id"]}")
@@ -177,7 +178,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Event.find(rand(1..Event.all.size))
+p Event.find(1)
 puts "
 
 
@@ -201,7 +202,7 @@ n_users.times do
     end_year -= 2
     end
   experienced_user += 1
-  puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded ===                                 ==="
+  puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded ===                                   ==="
 end
 puts "
 
@@ -231,7 +232,7 @@ jobs.each do |job|
 end
 puts ""
 puts "Random #{phase} sample:"
-p Opening.find(rand(1..Opening.all.size))
+p Opening.find(1)
 puts "
 
 
@@ -257,7 +258,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Rating.find(rand(1..n_ratings))
+p Rating.find(1)
 puts "
 
 
@@ -281,7 +282,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Rsvp.find(rand(1..n_rsvps))
+p Rsvp.find(1)
 puts "
 
 
@@ -294,19 +295,19 @@ terminal_counter = 1
 
 n_comments.times do
   # Post Comment
-  Comment.create(post_id: rand(1..n_posts),
+  Comment.create(post_id: rand(1..10),
                   user_id: rand(1..n_users),
                   date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
                   content: COMMENTS.sample)
 
   # Office Comment
-  Comment.create(office_id: rand(1..n_offices),
+  Comment.create(office_id: rand(1..10),
                   user_id: rand(1..n_users),
                   date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
                   content: COMMENTS.sample)
 
   # Event Comment
-  Comment.create(event_id: rand(1..n_events),
+  Comment.create(event_id: rand(1..10),
                   user_id: rand(1..n_users),
                   date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
                   content: COMMENTS.sample)
@@ -316,7 +317,7 @@ n_comments.times do
 end
 puts ""
 puts "Random #{phase} sample:"
-p Comment.find(rand(1..n_comments))
+p Comment.find(1)
 puts ""
 
 

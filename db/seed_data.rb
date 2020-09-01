@@ -126,7 +126,7 @@ Finanzämter und Feuerwachen. Sie haben Lust, ein einzigartiges Portfolio mit ü
 # _____________________COMMENTS ___________________________
 
 COMMENTS = ["I Loved it!", "Amazing!", "Very good", "Fantastic", "Really cool people",
-            "Looking forward to see the architecture", "I love the architecture" "Very useful information",
+            "Looking forward to see the architecture", "I love the architecture", "Very useful information",
             "Really good experience", "Worth it!", "very good experience", "MORE!"]
 
 # _____________________USER DESCRIPTIONS___________________________

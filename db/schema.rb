@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_135209) do
+ActiveRecord::Schema.define(version: 2020_09_01_102406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_135209) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "date"
+    t.datetime "date"
     t.text "content"
     t.bigint "post_id"
     t.bigint "event_id"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_135209) do
     t.string "cl_img_tag"
     t.float "latitude"
     t.float "longitude"
+    t.string "venue"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
