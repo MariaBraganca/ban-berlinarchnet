@@ -8,7 +8,7 @@
       <div class="text-center mb-3">
         <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
           <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
-        <% elsif @user.id <= 30  %> <!-- user is seeded -->
+        <% elsif @user.id <= 39  %> <!-- user is seeded -->
           <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-large-user-showpage") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
           <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-large-user-showpage") %>
@@ -40,15 +40,17 @@
           <!-- Portfolio Pictures -->
           <div data-target="#carouselExample" data-slide-to="0">
             <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
-              <div class = "col-3">
+              <div class="col-3">
                 <% @user.portfolio_photos.each do |photo| %>
                   <%= cl_image_tag photo.key, :class => "photos-events"%>
                 <% end %>
               </div>
             <% elsif @user.id <= 39  %> <!-- user is seeded -->
+              <div>
               <% @user.seed_portfolio.each do |portfolio| %>
                 <%= cl_image_tag(portfolio, :class => "photos-events") %>
               <% end %>
+              </div>
             <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
               <% if policy(@user).edit? %>
                 <%= simple_form_for(@user) do |f| %>
@@ -70,10 +72,10 @@
     <h2 class="col-12 col-lg-12 mb-3">Activity</h2>
     <!-- Members Events -->
     <% unless @user.events.empty? %>
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-12 mb-5">
         <div class="row">
           <% @user.events.each do |event|  %>
-            <div class="col-12 col-lg-6 mb-3">
+            <div class='col-3 px-0'>
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event-user-show", event_within: event %>
               <% end %>
@@ -83,12 +85,16 @@
       </div>
     <% end %>
     <!-- Members Posts -->
-    <div class="col-12 col-lg-6">
-      <% @user.posts.each do |post|  %>
-        <%= link_to post_path(post) do %>
-          <%= render "shared/card-post-user-show",  post_within: post %>
+    <div class="col-12 col-lg-12 px-0">
+      <ul class="list-group list-group-flush">
+        <% @user.posts.each do |post|  %>
+          <li class="list-group-item col-6">
+            <%= link_to post_path(post) do %>
+              <%= render "shared/card-post-user-show",  post_within: post %>
+            <% end %>
+          </li>
         <% end %>
-      <% end %>
+      </ul>
     </div>
   </div>
   <%#= link_to 'Edit Dashboard', edit_user_registration_path, :class => 'btn btn-outline-danger mb-3' %>
