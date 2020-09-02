@@ -1,9 +1,7 @@
-<div class="card-post my-3">
+<div class="card-post">
   <%= cl_image_tag(post_within.user.cl_img_tag, :class => "avatar-large") %>
   <div class="card-post-infos">
-    <div>
-      <h2><%= post_within.title %></h2>
-      <p><%= post_within.user.first_name %> <%= post_within.user.last_name %></p>
-    </div>
+    <h2><%= post_within.title %></h2>
+    <p>Posted by: <%= post_within.user.first_name %> <%= post_within.user.last_name %></p>
   </div>
 </div>

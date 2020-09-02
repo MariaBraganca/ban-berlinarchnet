@@ -1,10 +1,10 @@
 .card-post {
     overflow: hidden;
     height: 120px;
-    border: 1px solid lightgray;
     display: flex;
     align-items: center;
     border-radius: 3px;
+    transition: all 0.3s ease;    
   }
    
   .card-post h2 {
@@ -29,3 +29,6 @@
     margin-left: 16px;
   }
   
+  .card-post:hover {
+    background-color: rgb(245, 245, 245);
+  }
