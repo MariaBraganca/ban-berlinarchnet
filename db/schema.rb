@@ -133,7 +133,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_102406) do
   end
 
   create_table "openings", force: :cascade do |t|
-    t.datetime "date"
+    t.string "date"
     t.string "job_position"
     t.text "description"
     t.bigint "office_id", null: false

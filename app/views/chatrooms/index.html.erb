@@ -1,0 +1,39 @@
+<div class="container mt-5" style="border: 1px solid #000000; max-height: 800px">
+  <div class="row justify-content-center">
+   <div class="col-3" style="padding: 0px">
+    <div class="convo-container">
+      <div class="messages-hd">
+        <h3>Chats</h3>
+      </div>
+        <div class="inbox-chat" id="chat-active">
+          <% @chatrooms.each do |chatroom| %>
+            <%= link_to chatroom_path(chatroom), class: "chat-listing list-group-item  #{'active' if chatroom == @chatroom}" do %>
+              <div class="chat-card">
+                <% if chatroom.user_two.photo.attached? %>
+                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar-chat") %>
+                <% else %>
+                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                <% end %>
+                <% if chatroom.user_one == current_user %>
+                  <h6 class="ml-3"><%= chatroom.user_two.first_name %> <%= chatroom.user_two.last_name %></h6>
+                <% else %>
+                  <h6 class="ml-3"><%= chatroom.user_one.first_name %> <%= chatroom.user_one.last_name %></h6>
+                <% end %>
+              </div>
+              <% if chatroom.messages.empty? %>
+                <p class="message-text-inbox"></p>
+              <% else %>
+              <p class="message-text-inbox"><%= chatroom.messages.last.content  %></p>
+              <% end %>
+            <% end %>
+          <% end %>
+      </div>
+    </div>
+   </div>
+
+
+  <div class="col-9" style="padding: 0px">Banana
+  </div>
+  </div>
+ </div>
+</div>
