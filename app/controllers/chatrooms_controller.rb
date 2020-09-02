@@ -1,4 +1,5 @@
 class ChatroomsController < ApplicationController
+  before_action :disabled_footer, only: [:show]
   def index
     @chatrooms = Chatroom.all
   end
