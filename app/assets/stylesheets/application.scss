@@ -13,3 +13,7 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+    background: rgb(249,245,245);
+    background: linear-gradient(180deg, rgba(249,245,245,1) 37%, rgba(233,233,233,1) 73%, rgba(208,208,208,1) 90%, rgba(193,193,193,0.9925012241224614) 100%);
+}
