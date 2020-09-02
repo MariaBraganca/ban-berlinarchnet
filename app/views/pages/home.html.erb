@@ -10,17 +10,10 @@
 </div>
 
 <div class="container">
-
-
 	<!-- Events -->
 	<div class="row my-5">
 		<!-- Event Infos -->
-		<div class="col-12 col-lg-3">
-			<%= link_to events_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
-				<span>Events</span>
-			<% end %>
-			<p>Check out the latest events!</p>
-		</div>
+		<h3 class="col-12 col-lg-3">Events</h3>
 		<!-- Event Cards -->
 		<div class="col-9 d-flex justify-content-between px-0 mb-3">
 			<% @events.each do |event| %>
@@ -29,19 +22,18 @@
 				<% end %>
 			<% end %>
 		</div>
+		<h2 class="col-12 col-lg-3"></h2>
+		<div class="col-9 px-0">
+			<%= link_to events_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
+				<span>Check out the latest events!</span>
+			<% end %>
+		</div>
 	</div>
 	<hr>
-
-
 	<!-- Offices -->
 	<div class="row my-5">
 		<!-- Office Infos -->
-		<div class="col-12 col-lg-3">
-			<%= link_to offices_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
-				<span>Offices</span>
-			<% end %>
-			<p>Check out the best rated offices!</p>
-		</div>
+		<h3 class="col-12 col-lg-3">Offices</h3>
 		<!-- Office Cards -->
 		<div class="col-12 col-lg-9 px-0">
 			<% @offices.each do |office| %>
@@ -49,46 +41,49 @@
 					<%= render "shared/card-office", office_within: office %>
 				<% end %>
 			<% end %>
-
+		</div>
+		<h2 class="col-12 col-lg-3"></h2>
+		<div class="col-9 text-right px-0">
+			<%= link_to offices_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
+				<span>Check out the best rated offices in Berlin!</span>
+			<% end %>
 		</div>
 	</div>
 	<hr>
-
-
 	<!-- Openings -->
 	<div class="row my-5">
 		<!-- Openings Infos -->
-		<div class="col-12 col-lg-3">
-			<%= link_to openings_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
-				<span>Jobs</span>
-			<% end %>
-			<p>Check out the latest jobs!</p>
-		</div>
+		<h3 class="col-12 col-lg-3">Jobs</h3>
 		<!-- Openings Cards -->
-		<div class="col-12 col-lg-9 white-board">
+		<div class="col-12 col-lg-9 white-board mb-3">
 			<% @openings.each do |opening| %>
 				<%= link_to opening_path(opening) do %>
 					<%= render "shared/card-opening", opening_within: opening %>
 				<% end %>
 			<% end %>
-
+		</div>
+		<h2 class="col-12 col-lg-3"></h2>
+		<div class="col-9 text-right px-0">
+			<%= link_to openings_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
+				<span>Check out the latest job openings in Berlin!</span>
+			<% end %>
 		</div>
 	</div>
 	<hr>
-	
 	<!-- Blog -->
 	<div class="row my-5">
-		<div class="col-12 col-lg-3">
-			<%= link_to openings_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
-				<span>Blog</span>
-			<% end %>
-			<p>Check out the latest posts!</p>
-		</div>
-		<div class="col-12 col-lg-9 white-board">
+		<h3 class="col-12 col-lg-3">Blog</h3>
+		<div class="col-12 col-lg-9 white-board mb-3">
 			<% @posts.each do |post| %>
   			<%= link_to post_path(post) do %>
 					<%= render "shared/card-post", post_within: post %>
 				<% end %>
+			<% end %>
+		</div>
+		<h2 class="col-12 col-lg-3"></h2>
+		<div class="col-9 text-right px-0">
+			<%= link_to posts_path, :class => "custom-btn btn-4 mb-3 text-center font-weight-bold" do %>
+				<span>Check out the latest blog posts!</span>
 			<% end %>
 		</div>
 	</div>
