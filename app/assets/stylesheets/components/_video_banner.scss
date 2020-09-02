@@ -3,67 +3,68 @@
 right: 0;
 top: 50px;
 min-width: 100%;
-
+height: 100%;
+object-fit: cover;
 }
 
 
-.banner {
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    padding: 225px 0;
+// .banner {
+//     width: 100%;
+//     height: 500px;
+//     background-size: cover;
+//     background-position: center;
+//     padding: 225px 0;
 
-  }
+//   }
 
-.banner_event {
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  padding: 200px 0;
+// .banner_event {
+//   width: 100%;
+//   height: 250px;
+//   background-size: cover;
+//   background-position: center;
+//   padding: 200px 0;
 
-}
+// }
 
-  .banner h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
-  }
+//   .banner h1 {
+//     margin: 0;
+//     color: white;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//     font-size: 32px;
+//     font-weight: bold;
+//   }
 
-  .banner p {
-    font-size: 20px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
+//   .banner p {
+//     font-size: 20px;
+//     color: white;
+//     opacity: .7;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   }
 
-  .banner_event h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
-  }
+//   .banner_event h1 {
+//     margin: 0;
+//     color: white;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//     font-size: 32px;
+//     font-weight: bold;
+//   }
 
-  .banner_event p {
-    font-size: 20px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
+//   .banner_event p {
+//     font-size: 20px;
+//     color: white;
+//     opacity: .7;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   }
 
-  .organized {
-    margin-top: 100px;
+//   .organized {
+//     margin-top: 100px;
 
-}
+// }
 
-.org-user {
-  margin-top: 65px;
+// .org-user {
+//   margin-top: 65px;
 
-}
+// }
 
 
 // .content-video  h1 {
