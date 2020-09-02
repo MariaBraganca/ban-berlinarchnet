@@ -188,28 +188,43 @@ puts "
 phase = "experience"
 puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
-terminal_counter = 1
-experienced_user = 1
-n_users.times do
+# terminal_counter = 1
+# experienced_user = 1
+# n_users.times do
+#   binding.pry
+#   end_year = rand(2019..2022)
+#   n_experiences_per_user.times do
+#     Experience.create(end_date: Faker::Date.in_date_period(year: end_year, month: rand(1..5)),
+#                       start_date: Faker::Date.in_date_period(year: (end_year - 2), month: rand(6..12)),
+#                       job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
+#                       office_id: rand(1..n_offices),
+#                       user_id: experienced_user)
+#     puts "===                                   <=> #{terminal_counter} out of #{n_experiences_per_user} #{phase} seeded ==="
+#     terminal_counter += 1
+#     end_year -= 2
+#     end
+#   experienced_user += 1
+#   puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded <=>                                   ==="
+# end
+puts "
+
+"
+
+User.all.each do |user|
+  office_ids = Office.pluck(:id)
   end_year = rand(2019..2022)
-  n_experiences_per_user.times do
+  3.times do
+    office_id = office_ids.sample
     Experience.create(end_date: Faker::Date.in_date_period(year: end_year, month: rand(1..5)),
                       start_date: Faker::Date.in_date_period(year: (end_year - 2), month: rand(6..12)),
                       job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
-                      office_id: rand(1..n_offices),
-                      user_id: experienced_user)
-    puts "===                                   <=> #{terminal_counter} out of #{n_experiences_per_user} #{phase} seeded ==="
-    terminal_counter += 1
+                      office_id: office_id,
+                      user: user)
+    office_ids.delete(office_id)
     end_year -= 2
-    end
-  experienced_user += 1
-  puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded <=>                                   ==="
+  end
 end
-puts "
 
-
-
-"
 puts "Random #{phase} sample:"
 p Experience.where(user_id: 3)
 puts "
