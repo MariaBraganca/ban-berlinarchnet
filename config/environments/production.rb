@@ -54,6 +54,10 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
+  # REDISCLOUD
+  config.action_cable.url = "wss://berlinarchnet.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = [ "https://berlinarchnet.herokuapp.com/", "http://berlinarchnet.herokuapp.com/" ]
+
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
