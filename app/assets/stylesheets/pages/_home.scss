@@ -3,3 +3,49 @@ a:link {
     text-decoration: none;
     font: color black;
 }
+
+
+#myVideo {
+
+  right: 0;
+  top: 50px;
+  min-width: 100%;
+
+}
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.overlay-container {
+  position: relative;
+  width: 50%;
+  max-width: 277px;
+  margin: 4px;
+}
+
+/* Make the overlay-img to responsive */
+.overlay-img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+/* The overlay effect - lays on top of the container and over the overlay-img */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.overlay-container:hover .overlay {
+  opacity: 1;
+}
