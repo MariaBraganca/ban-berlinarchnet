@@ -10,7 +10,7 @@
             <%= link_to chatroom_path(chatroom), class: "chat-listing list-group-item  #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
                 <% if chatroom.user_two.photo.attached? %>
-                  <%= cl_image_tag(chatroom.user_two.photo.key)%>
+                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar-chat") %>
                 <% else %>
                   <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
                 <% end %>
@@ -46,7 +46,7 @@
                 <small class="chat-datetime-in"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
                 <div class="message-avatar">
                   <% if message.user.photo.attached? %>
-                    <%= cl_image_tag(message.user.photo.key)%>
+                    <%= cl_image_tag(message.user.photo.key, :class => "avatar-chat")%>
                   <% else %>
                     <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar-chat" %>
                   <% end %>
