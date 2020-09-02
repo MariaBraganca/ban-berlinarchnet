@@ -185,8 +185,6 @@ puts "
 
 
 "
-phase = "experience"
-puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 # terminal_counter = 1
 # experienced_user = 1
@@ -206,10 +204,12 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 #   experienced_user += 1
 #   puts "=== user #{experienced_user} with #{n_experiences_per_user}s #{phase} seeded <=>                                   ==="
 # end
+phase = "experience"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 puts "
 
 "
-
+terminal_counter = 1
 User.all.each do |user|
   office_ids = Office.pluck(:id)
   end_year = rand(2019..2022)
@@ -220,11 +220,17 @@ User.all.each do |user|
                       job_position: "#{Faker::Job.employment_type} #{Faker::Job.position} Architect",
                       office_id: office_id,
                       user: user)
+    puts "=== #{terminal_counter} out of #{(User.count * 3) } #{phase}s seeded ==="
+    terminal_counter += 1
     office_ids.delete(office_id)
     end_year -= 2
   end
 end
+puts "
 
+
+
+"
 puts "Random #{phase} sample:"
 p Experience.where(user_id: 3)
 puts "
@@ -340,21 +346,25 @@ n_comments.times do
   puts "=== #{terminal_counter * 3} out of #{n_comments * 3} #{phase}s seeded ==="
   terminal_counter += 1
 end
-puts ""
+puts "
+
+
+"
 puts "Random #{phase} sample:"
 p Comment.find(1)
-puts ""
+puts "
 
 
+"
 puts "Sumber of seeds created:
---Offices: #{n_offices}
+--Offices: #{Office.all.count}
 --Team Member Accounts #{n_team_members}
---User Acoounts #{n_users}
---Posts: #{n_posts}
---Events: #{n_events}
---Experiences: #{n_experiences_per_user}
---Jobs: #{n_jobs}
---Ratings: #{n_ratings}
---RSVPS: #{n_rsvps}
---Comments: #{n_comments}"
+--User Accounts #{(User.all.count - 4)}
+--Posts: #{Post.all.count}
+--Events: #{Event.all.count}
+--Experiences: #{Experience.all.count}
+--Jobs: #{Opening.all.count}
+--Ratings: #{Rating.all.count}
+--RSVPS: #{Rsvp.all.count}
+--Comments: #{Comment.all.count}"
 
