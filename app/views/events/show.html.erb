@@ -56,17 +56,30 @@
             <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= @event.location %></p>
         </div>
     </div>
+    
     <hr>
     <!-- Photos -->
-    <div class="row mb-5">
-        <div class = 'col-12 col-lg-12'>
-            <h2 class="mb-3">Photos</h2>
-            <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events' %>
-            <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972065/event-gallery/omar-lopez-1qfy-jDc_jo-unsplash_ky8ivn.jpg", :class => 'photos-events', alt: "alttext" %>
-            <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972076/event-gallery/anastasia-dulgier-bkzjNDPQ3Hg-unsplash_nqx2ms.jpg", :class => 'photos-events', alt: "alttext" %>
-        </div>
-    </div>
+        <h2 class="mb-3">Photos</h2>
+            <div id="gallery" data-toggle="modal" data-target="#photoModal">
+                <div class="row mb-5">
+                    <div class ='col-3' data-target="#carouselExample" data-slide-to="0">
+                        <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events w-100' %>
+                    </div>
+                    <div class ='col-3' data-target="#carouselExample" data-slide-to="1"> 
+                        <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972065/event-gallery/omar-lopez-1qfy-jDc_jo-unsplash_ky8ivn.jpg", :class => 'photos-events w-100', alt: "alttext" %>
+                    </div>
+                    <div class = 'col-3' data-target="#carouselExample" data-slide-to="2">
+                        <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972076/event-gallery/anastasia-dulgier-bkzjNDPQ3Hg-unsplash_nqx2ms.jpg", :class => 'photos-events w-100', alt: "alttext" %>
+                    </div>
+                </div>
+            </div>
     <hr>
+    
+<!-- model for photos with carousel-->
+
+ <%= render "shared/photoModal" %>
+ 
+
     <!-- Members and Comments -->
     <div class="row mb-5">
 		<!-- Members -->

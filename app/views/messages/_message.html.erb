@@ -1,22 +1,22 @@
-  <% if message.user == current_user %>
+
+<% if message.user == current_user %>
+    <small class="chat-datetime-out"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
     <div class="message-text-out">
-      <p><%= message.content %></p>
+        <p><%= message.content %></p>
     </div>
-      <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
-  <% else %>
-    <div class="messages-container" id="message-<%= message.id %>">
-      <div class="message-avatar">
+<% else %>
+  <div class="messages-container" id="message-<%= message.id %>">
+    <small class="chat-datetime-in"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
+    <div class="message-avatar">
         <% if message.user.photo.attached? %>
           <%= cl_image_tag(message.user.photo.key)%>
         <% else %>
           <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar-chat" %>
         <% end %>
-
-      <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span>
+      <!-- <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span> -->
+     <div class="message-text-in">
+        <p><%= message.content %></p>
+     </div>
     </div>
-    <div class="message-text-in">
-      <p><%= message.content %></p>
-    </div>
-      <small class="chat-datetime"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
   </div>
 <% end %>

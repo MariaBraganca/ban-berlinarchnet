@@ -64,7 +64,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Office.find(1)
+p Office.find(rand(1..Office.all.count))
 puts "
 
 
@@ -95,7 +95,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p User.find(1)
+p User.find(rand(1..4))
 puts "
 
 
@@ -124,7 +124,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p User.find(1)
+p User.find(rand(1..User.all.count))
 puts "
 
 
@@ -150,7 +150,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Post.find(1)
+p Post.find(rand(1..Post.all.count))
 puts "
 
 
@@ -179,7 +179,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Event.find(1)
+p Event.find(rand(1..Event.all.count))
 puts "
 
 
@@ -244,7 +244,7 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 jobs.each do |job|
-  Opening.create!(date: job["date"],
+  Opening.create!(date: Faker::Time.forward(days: rand(10..40), period: :evening),
                  job_position: job["job_position"],
                  description: JOB_DESCRIPTIONS.sample,
                  office_id: rand(1..n_offices))
@@ -254,7 +254,7 @@ jobs.each do |job|
 end
 puts ""
 puts "Random #{phase} sample:"
-p Opening.find(1)
+p Opening.find(rand(1..Opening.all.count))
 puts "
 
 
@@ -280,7 +280,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Rating.find(1)
+p Rating.find(rand(1..Rating.all.count))
 puts "
 
 
@@ -313,7 +313,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Rsvp.find(1)
+p Rsvp.find(rand(1..Rsvp.all.count))
 puts "
 
 
@@ -328,19 +328,19 @@ n_comments.times do
   # Post Comment
   Comment.create(post_id: rand(1..18),
                   user_id: rand(1..n_users),
-                  date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
+                  date: Faker::Time.backward(days: rand(1..20), period: :evening),
                   content: COMMENTS.sample)
 
   # Office Comment
   Comment.create(office_id: rand(1..12),
                   user_id: rand(1..n_users),
-                  date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
+                  date: Faker::Time.backward(days: rand(1..20), period: :morning),
                   content: COMMENTS.sample)
 
   # Event Comment
   Comment.create(event_id: rand(1..22),
                   user_id: rand(1..n_users),
-                  date: Faker::Date.between(from: '2017-09-23', to: '2020-04-25'),
+                  date: Faker::Time.backward(days: rand(1..20), period: :evening),
                   content: COMMENTS.sample)
 
   puts "=== #{terminal_counter * 3} out of #{n_comments * 3} #{phase}s seeded ==="
@@ -351,7 +351,7 @@ puts "
 
 "
 puts "Random #{phase} sample:"
-p Comment.find(1)
+p Comment.find(rand(1..Comment.all.count))
 puts "
 
 
