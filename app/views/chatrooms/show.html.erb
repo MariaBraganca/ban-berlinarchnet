@@ -10,7 +10,9 @@
       </div>
         <div class="inbox-chat" id="chat-active">
           <% @chatrooms.each do |chatroom| %>
-            <%= link_to chatroom_path(chatroom), class: "chat-listing .list-group-flush list-group-item #{'active' if chatroom == @chatroom}" do %>
+            <% user_id = chatroom.user_two.id if chatroom.user_one == current_user %>
+            <% user_id = chatroom.user_one.id if chatroom.user_two == current_user %>
+            <%= link_to chatroom_path(chatroom), id: "user-#{user_id}", class: "chat-listing .list-group-flush list-group-item #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
                 <%# if the user is the current user, we are checking if he has a photo, if not we display the one that is already given; else we do the same for the other user but we are checking it on the chats "summary"%>
                 <% if chatroom.user_one == current_user %>
@@ -50,10 +52,12 @@
         <% @chatroom.messages.each do |message| %>
 
           <% if current_user == message.user %>
+            <div class="messages-container" id="message-<%= message.id %>">
               <small class="chat-datetime-out"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
               <div class="message-text-out">
                 <p><%= message.content %></p>
               </div>
+            </div>
           <% else %>
               <div class="messages-container" id="message-<%= message.id %>">
                 <small class="chat-datetime-in"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
