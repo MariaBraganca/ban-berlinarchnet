@@ -3,7 +3,9 @@
   <head>
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
-
+  
+    <%= stylesheet_link_tag "chatroom" if controller_name == "chatroom" %>
+ 
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
