@@ -29,7 +29,7 @@ n_posts = posts.size
 n_events = events.size
 n_experiences_per_user = 3
 n_jobs = jobs.size
-n_ratings = 50
+n_ratings = 100
 n_rsvps = 10
 n_comments = 40
 
@@ -266,9 +266,9 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 n_ratings.times do
-  Rating.create(culture: rand(3..5),
-                salary: rand(3..5),
-                architecture: rand(3..5),
+  Rating.create!(culture: rand(1..5),
+                salary: rand(1..5),
+                architecture: rand(1..5),
                 office_id: rand(1..n_offices))
 
   puts "=== #{terminal_counter} out of #{n_ratings}s #{phase} seeded ==="
