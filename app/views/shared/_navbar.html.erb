@@ -30,10 +30,10 @@
         <li class="nav-item active">
           <%#= link_to "Home", "#", class: "nav-link" %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <%#= link_to "Messages", "#", class: "nav-link"%>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item active dropdown">
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>

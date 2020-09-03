@@ -89,7 +89,7 @@
         <!-- <div class="mb-5" > -->
           <% @office.office_projects.each do |project|   %>
             <div class="overlay-container">
-              <%= image_tag(project.project_img_url, :class => 'photos-events overlay-img') %>
+              <%= image_tag(project.project_img_url, :class => 'photos-projects overlay-img') %>
               <div class="overlay"><%= project.project_name %></div>
             </div>
           <% end %>

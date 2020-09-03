@@ -5,6 +5,10 @@
   object-fit: cover;
 }
 
+.avatar:hover{
+  cursor: pointer;
+}
+
 .avatar-chat {
   width: 40px;
   height: 40px;
