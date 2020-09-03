@@ -1,4 +1,12 @@
 class Office < ApplicationRecord
+  
+  include PgSearch::Model
+  pg_search_scope :office_search, 
+    against: [ :name, :location ],
+    using: {
+      tsearch: { prefix: true }
+  }
+
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
@@ -13,4 +21,7 @@ class Office < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
   validates :url, presence: true, uniqueness: true
+
+
+
 end
