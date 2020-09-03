@@ -7,8 +7,7 @@ class OfficesController < ApplicationController
 
     if params[:query].present?
       @offices = Office.office_search(params[:query])
-      #@offices = Office.where("name ILIKE ?", "%#{params[:query]}%")
-      #@offices = Office.where("location ILIKE ?", "%#{params[:query]}%")
+
     else
 
       @offices = policy_scope(Office).order(:name)

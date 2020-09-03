@@ -1,7 +1,7 @@
 
 
 <!-- Delete Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade background-col" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -11,7 +11,8 @@
         </button>
       </div>
       <div class="modal-body">
-        What a pitty! You have cancelled the event <%= @event.title%>.
+        Oh no! So sorry to hear you are not attending <%= @event.title%>. Hope to see you in our next event!
+        <img src="https://media.giphy.com/media/2WxWfiavndgcM/giphy.gif" class = "gif" alt="this slowpoke moves"  width="100%" alt="404 image"/>    
       </div>
       <div class="modal-footer">
         <% if @user_attending %>
