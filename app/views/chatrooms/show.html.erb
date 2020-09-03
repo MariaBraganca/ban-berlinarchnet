@@ -1,4 +1,4 @@
-<div class="container mt-5" style="border: 1px solid #000000; max-height: 800px">
+<div class="container mt-5" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); max-height: 800px; border-radius: 6px">
   <div class="row justify-content-center">
    <div class="col-3" style="padding: 0px">
     <div class="convo-container">
@@ -7,13 +7,23 @@
       </div>
         <div class="inbox-chat" id="chat-active">
           <% @chatrooms.each do |chatroom| %>
-            <%= link_to chatroom_path(chatroom), class: "chat-listing list-group-item  #{'active' if chatroom == @chatroom}" do %>
+            <%= link_to chatroom_path(chatroom), class: "chat-listing .list-group-flush list-group-item #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
-                <% if chatroom.user_two.photo.attached? %>
-                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar-chat") %>
+                <%# if the user is the current user, we are checking if he has a photo, if not we display the one that is already given; else we do the same for the other user but we are checking it on the chats "summary"%>
+                <% if chatroom.user_one == current_user %>
+                  <% if chatroom.user_two.photo.attached? %>
+                    <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar-chat") %>
+                  <% else %>
+                    <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                  <% end %>
                 <% else %>
-                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                  <% if chatroom.user_one.photo.attached? %>
+                    <%= cl_image_tag(chatroom.user_one.photo.key, :class => "avatar-chat") %>
+                  <% else %>
+                    <%= cl_image_tag (chatroom.user_one.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                  <% end %>
                 <% end %>
+
                 <% if chatroom.user_one == current_user %>
                   <h6 class="ml-3"><%= chatroom.user_two.first_name %> <%= chatroom.user_two.last_name %></h6>
                 <% else %>
@@ -36,7 +46,7 @@
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
 
-          <% if message.user == current_user %>
+          <% if current_user == message.user %>
               <small class="chat-datetime-out"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
               <div class="message-text-out">
                 <p><%= message.content %></p>
