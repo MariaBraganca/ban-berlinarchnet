@@ -1,9 +1,6 @@
 class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
-  def index
-    @offices = policy_scope(Office).order(:name)
-  end
 
   def show
     @office = Office.find(params[:id])
@@ -15,7 +12,7 @@ class OfficesController < ApplicationController
         lng: @office.longitude
       }]
 
-    # Averages 
+    # Averages
     if @office.ratings.empty?
       @culture_average = 0
       @salary_average = 0
@@ -42,6 +39,17 @@ class OfficesController < ApplicationController
     end
 
     @comment = Comment.new
-    
+  end
+
+  def index
+    if !params[:order].present?
+      @offices = policy_scope(Office).order(:name)
+    elsif params[:order] == "@offices_arch"
+      @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
+    elsif params[:order] == "@offices_cult"
+      @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
+    elsif params[:order] == "@offices_sala"
+      @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
+    end
   end
 end

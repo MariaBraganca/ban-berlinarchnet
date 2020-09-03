@@ -7,6 +7,8 @@ class Office < ApplicationRecord
 
   has_many :ratings
   has_many :office_projects
+  # scope :ordered, -> { includes(:ratings).order('ratings.salary desc') }
+  # scope :ordered, -> { includes(:ratings).order(Rating.arel_table[:culture].desc) }
 
   has_many :comments, dependent: :nullify
   has_one_attached :photo

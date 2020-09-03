@@ -1,0 +1,27 @@
+#index-card {
+  position: relative;
+}
+
+#index-rating {
+  position: absolute;
+  left: 725px;
+  top: 20px;
+}
+
+#sorting-container {
+ white-space: nowrap;
+}
+
+.sorting-buttons {
+ display: inline;
+   padding: 5px;
+margin: 3px;
+}
+.sort-btn {
+background-color: white;
+padding: 5px;
+margin: 3px;
+border-radius: 5px;
+text-align: center;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

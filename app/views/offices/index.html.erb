@@ -1,15 +1,26 @@
 <div class="container">
 	<div class="text-center my-5">
 		<h1>Offices</h1>
-		<p>Check out these <%= @offices.length %> Offices listed in Berlin!</p>
+		<p>Check out these <%#= @offices.length %> Offices listed in Berlin!</p>
+
+    <div class="row justify-content-center"">
+  <div id="sorting-container" class="col-9 d-flex justify-content-center align-items-center">
+
+    <p class="sorting-buttons" >Sort By: </p>
+    <div class="sort-btn"><i class="fas fa-heart" style="color: #e53e3e"></i> <%= link_to "Culture", offices_path(order: '@offices_cult') %></div>
+    <div class="sort-btn"><i class="fas fa-star" style="color: #e9c46a"></i> <%= link_to "Architecture", offices_path(order: '@offices_arch') %></div>
+    <div class="sort-btn"><i class="fas fa-euro-sign" style="color: #90be6d"></i> <%= link_to "Salary", offices_path(order: '@offices_sala') %></div>
+
+</div>
+  </div>
 	</div>
 	<div class="row justify-content-around">
 		<div class="col-12 col-lg-9">
 			<% @offices.each do |office| %>
 				<%= link_to office_path(office) do %>
-					<%= render "shared/card-office", office_within: office %>
+					<%= render "shared/card-office-index", office_within: office %>
 				<% end %>
 			<% end %>
 		</div>
-	</div>		
+	</div>
 </div>
