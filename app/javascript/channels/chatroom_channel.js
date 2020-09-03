@@ -21,15 +21,32 @@ const initChatroomCable = () => {
           receivedMessageDiv.classList.add("message-text-out");
           receivedMessageAvatar.remove();
         }
+        receivedMessage.removeAttribute('id');
         receivedMessageDiv.removeAttribute('id');
         receivedMessageAvatar.removeAttribute('id');
         // make it scroll to the end of the conversation
         // find the conversation div
-        const messagesDiv = document.getElementById('messages');
         // scroll till the end
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+        // focus on the text_area again after submitting
+        document.querySelector("#message_content").focus()
       },
     });
+
+    //////////////////////////////////////
+    // Scroll the chat box on page load //
+    //////////////////////////////////////
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    //////////////////////////////////////
+    // Press enter to send the message //
+    //////////////////////////////////////
+    const form = document.querySelector("#new_message");
+    form.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') form.submit();
+    });
+    
   }
 }
 
