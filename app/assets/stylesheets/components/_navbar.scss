@@ -2,6 +2,10 @@
   justify-content: space-between;
   background-color: black;
   height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,6 +25,7 @@
   color: white;
   opacity: 0.75;
   margin: 30px;
+  z-index: 1;
   transition: background 0.3s ease;
 }
 

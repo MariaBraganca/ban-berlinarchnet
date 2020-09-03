@@ -1,7 +1,7 @@
 class ChatroomsController < ApplicationController
-  before_action :disabled_footer, only: [:show]
+  before_action :disabled_footer, only: [:index, :show]
   def index
-    @chatrooms = Chatroom.all
+    @chatrooms = policy_scope(Chatroom)
   end
 
   def show

@@ -1,0 +1,5 @@
+meta_product_name: "Berlin Architectural Network"
+meta_title: "Berlin Architectural Network - Get into Berlin's architecture scene."
+meta_description: "Berlin Architectural Network was created as a Meetup group in 2017 and has since attracted hundreds of architecture lovers who come together to support each other through collaboration and networked learning. We believe in transparency and adding value to the architecture ecosystem."
+meta_image: "favicon.png" # should exist in `app/assets/images/`
+twitter_account: "@berlin_ban"   # required for Twitter Cards

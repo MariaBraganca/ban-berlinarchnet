@@ -5,11 +5,15 @@
 	</div>
 	<div class="row justify-content-around mb-5">
 		<div class="col-12 col-lg-9 white-board px-3">
-			<% @openings.each do |opening| %>
-				<%= link_to opening_path(opening) do %>
-					<%= render "shared/card-opening", opening_within: opening %>
+			<ul class="list-group list-group-flush">
+				<% @openings.each do |opening| %>
+					<li class="list-group-item">
+					<%= link_to opening_path(opening) do %>
+						<%= render "shared/card-opening", opening_within: opening %>
+					<% end %>
+					</li>
 				<% end %>
-			<% end %>
+			</ul>
 		</div>
 	</div>
 </div>

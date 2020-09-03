@@ -1,4 +1,4 @@
-    <div class="card-post mb-3">
+    <div class="card-post">
       	<% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
           <%=   cl_image_tag(@user.photo.key, :class => 'avatar-large')  %>
         <% elsif @user.id <= 30  %> <!-- user is seeded -->
