@@ -1,7 +1,7 @@
 <div class= "container">
     <div class="row justify-content-around align-items-end mt-5 mb-3">
         <div class="col-12 col-lg-10">
-            <h1><%= @event.title%></h1>
+            <h1 class="font-weight-bold"><%= @event.title%></h1>
             <div class="d-flex align-items-center">
                 <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@event.user)  %>
                 <p class="pl-3">Hosted by: <%= @event.user.first_name %> <%= @event.user.last_name %></p>
