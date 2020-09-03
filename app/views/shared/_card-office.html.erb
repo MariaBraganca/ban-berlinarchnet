@@ -30,10 +30,10 @@
       <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= office_within.location %></p>
       <div class="d-flex">
         <% ((architecture_average + salary_average + culture_average) / 3 ).times do %>
-          <p><i class="fas fa-star" style="color: #E53E3E"></i></p>
+          <p><i class="fas fa-star" style="color: #e9c46a"></i></p>
         <% end %>
         <% (5-(architecture_average + salary_average + culture_average) / 3 ).times do %>
-          <p><i class="far fa-star" style="color: #E53E3E"></i></p>
+          <p><i class="fas fa-star" style="color: lightgray"></i></p>
         <% end %>
       </div>
     </div>
