@@ -2,7 +2,18 @@ class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
+
     @offices = policy_scope(Office).order(:name)
+
+    if params[:query].present?
+      @offices = Office.office_search(params[:query])
+      #@offices = Office.where("name ILIKE ?", "%#{params[:query]}%")
+      #@offices = Office.where("location ILIKE ?", "%#{params[:query]}%")
+    else
+
+      @offices = policy_scope(Office).order(:name)
+    end
+    
   end
 
   def show

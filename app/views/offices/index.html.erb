@@ -1,10 +1,20 @@
 <div class="container">
 	<div class="text-center my-5">
 		<h1>Offices</h1>
-		<p>Check out these <%= @offices.length %> Offices listed in Berlin!</p>
+
 	</div>
+
 	<div class="row justify-content-around">
 		<div class="col-12 col-lg-9">
+			<%= form_tag offices_path, method: :get, class: "searchbar" do %>
+				<%= text_field_tag :query,
+					params[:query],
+					id: "query",
+					placeholder: "Find an office"
+				%>
+  			<%= submit_tag "Search", class: "btn btn-call" %>
+			<% end %>
+
 			<% @offices.each do |office| %>
 				<%= link_to office_path(office) do %>
 					<%= render "shared/card-office", office_within: office %>
