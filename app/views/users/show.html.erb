@@ -69,9 +69,9 @@
 
   <!-- Members -->
   <div class="row mb-5">
-    <h2 class="col-12 col-lg-12 mb-3">My Events</h2>
     <!-- Members Events -->
     <% unless @user.events.empty? %>
+      <h2 class="col-12 col-lg-12 mb-3">My Events</h2>
       <div class="col-12 col-lg-12 mb-5">
         <div class="row">
           <% @user.events.each do |event|  %>
@@ -85,6 +85,7 @@
       </div>
     <% end %>
     <!-- Members Posts -->
+    <% unless @user.posts.empty? %>
     <h2 class="col-12 col-lg-12 mb-3">My Posts</h2>
     <div class="col-12 col-lg-6">
       <ul class="list-group list-group-flush">
@@ -97,6 +98,7 @@
         <% end %>
       </ul>
     </div>
+    <% end %>
   </div>
   <%#= link_to 'Edit Dashboard', edit_user_registration_path, :class => 'btn btn-outline-danger mb-3' %>
 </div>
