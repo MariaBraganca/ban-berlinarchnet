@@ -36,7 +36,7 @@
 
   <h2 class="mb-3">Portfolio</h2>
     <div id="gallery" data-toggle="modal" data-target="#portfolioModal">
-        <div class="row mb-5">
+        <div class="row mb-5 mx-0">
           <!-- Portfolio Pictures -->
           <div data-target="#carouselExample" data-slide-to="0">
             <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
@@ -69,13 +69,13 @@
 
   <!-- Members -->
   <div class="row mb-5">
-    <h2 class="col-12 col-lg-12 mb-3">Activity</h2>
+    <h2 class="col-12 col-lg-12 mb-3">My Events</h2>
     <!-- Members Events -->
     <% unless @user.events.empty? %>
       <div class="col-12 col-lg-12 mb-5">
         <div class="row">
           <% @user.events.each do |event|  %>
-            <div class='col-3 px-0'>
+            <div class='col-3'>
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event-user-show", event_within: event %>
               <% end %>
@@ -85,10 +85,11 @@
       </div>
     <% end %>
     <!-- Members Posts -->
-    <div class="col-12 col-lg-6 white-board">
+    <h2 class="col-12 col-lg-12 mb-3">My Posts</h2>
+    <div class="col-12 col-lg-6">
       <ul class="list-group list-group-flush">
         <% @user.posts.each do |post|  %>
-          <li class="list-group-item col-12">
+          <li class="list-group-item col-12 white-board">
             <%= link_to post_path(post) do %>
               <%= render "shared/card-post-user-show",  post_within: post %>
             <% end %>
