@@ -24,6 +24,9 @@
 					id: "query",
 					placeholder: "Find an office"
 				%>
+				<%= hidden_field_tag :order,
+					params[:order]
+				%>
   			<%= submit_tag "Search", class: "btn btn-call" %>
 			<% end %>
 

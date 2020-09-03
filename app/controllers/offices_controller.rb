@@ -6,19 +6,28 @@ class OfficesController < ApplicationController
 
     @offices = policy_scope(Office).order(:name)
 
-    if params[:query].present?
-      @offices = Office.office_search(params[:query])
+    
+    if params[:query].present? && params[:order].present?
+      if params[:order] == "@offices_arch"
+        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
+      elsif params[:order] == "@offices_cult"
+        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
+      elsif params[:order] == "@offices_sala"
+        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
+      end
+      offices_search = Office.office_search(params[:query])
+      @offices = offices_ordered & offices_search
 
-    else
-    if !params[:order].present?
-      @offices = policy_scope(Office).order(:name)
-    elsif params[:order] == "@offices_arch"
-      @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
-    elsif params[:order] == "@offices_cult"
-      @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
-    elsif params[:order] == "@offices_sala"
-      @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
-    end
+    elsif params[:order].present?
+      if params[:order] == "@offices_arch"
+        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
+      elsif params[:order] == "@offices_cult"
+        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
+      elsif params[:order] == "@offices_sala"
+        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
+      end
+    elsif params[:query].present?
+      @offices = Office.office_search(params[:query])
     end
    
   end
