@@ -85,10 +85,10 @@
       </div>
     <% end %>
     <!-- Members Posts -->
-    <div class="col-12 col-lg-12 px-0">
+    <div class="col-12 col-lg-6 white-board">
       <ul class="list-group list-group-flush">
         <% @user.posts.each do |post|  %>
-          <li class="list-group-item col-6">
+          <li class="list-group-item col-12">
             <%= link_to post_path(post) do %>
               <%= render "shared/card-post-user-show",  post_within: post %>
             <% end %>
