@@ -1,2 +1,78 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class= "container">
+    <div class="row justify-content-around align-items-top mt-5 mb-3">
+
+        <div class="col-12 col-lg-4">
+            <h5 class="red" >POST</h5>
+                <h2><%= @post.title%></h2>
+            <div class="d-flex align-items-center">
+                <p> <%= @post.date %></p>
+            </div>
+        </div>
+            
+        <div class="col-12 col-lg-6">
+            <img width="auto"
+  height="300px" src="https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80Q" alt="placeholder">
+        </div>
+    </div>
+
+    <hr>
+
+        
+    <!-- Content -->
+    <div class = 'row mb-5'>  
+        <!-- Button Sharing -->
+        <div class="col-12 col-lg-2">
+        
+        </div>
+        <!-- Text -->
+        <div class="col-12 col-lg-9">
+        <div class="d-flex align-items-center">
+                    <%= link_to cl_image_tag(@post.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@post.user)  %>
+                    <p class="pl-3">By <%= @post.user.first_name %> <%= @post.user.last_name %></p>
+                </div>
+            <h2 class="mb-3"></h2>
+            <p class= "post"><%= @post.content %></p>
+        </div>
+    </div>
+    
+    <hr>
+
+		<!-- Comments -->
+        <div class = 'row mb-5'>  
+        <!-- Button Sharing -->
+            <div class="col-12 col-lg-2">
+            </div>
+            <div class = 'col-12 col-lg-6 mb-5'>
+                <h2 class="mb-3">Comments <span class="badge-number"><%= @post.comments.length %></span></h2>
+                <!-- Comments past-->
+                <% @post.comments.each do |comment| %>
+                    <div class="card-comment mb-3 p-10" id="comment-<%= comment.id %>">
+                        <% if comment.user.photo.attached? %>
+                            <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
+                        <% else %>
+                            <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+                        <% end %>	
+                        <div class="card-comment-infos">
+                            <h6><%= comment.content %></h6> 
+                            <p>Time: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>  
+                            <p>Posted by: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
+                        </div>
+                    </div>
+                <% end %>
+            <!-- Comments past-->
+            <% if user_signed_in? %>
+                <div class = "form" id= "comment-form">
+                    <%= form_tag post_post_comment_path(@post, url: (post_path([@post], anchor:'comments'))), method: :post do |f| %>
+                        <%= text_field_tag :content %>          
+                        <%= submit_tag 'Post', class: 'btn btn-flat' %>
+                    <% end %>
+                </div>
+                <% if flash[:validation]%>
+                    <div>
+                        <%= flash[:validation] %>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+</div>
