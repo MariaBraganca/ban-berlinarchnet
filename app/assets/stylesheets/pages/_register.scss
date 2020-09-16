@@ -1,0 +1,21 @@
+#main-card {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+#left-image {
+  background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/c_scale,w_1015/v1600285315/polaroidville--NV9zA0NqRM-unsplash_1_1_ire2lf.jpg');
+  background-size: cover;
+}
+
+#right-form {
+  padding: 10px;
+
+}
+#left-image h1 {
+  font-size: 6em;
+
+}
