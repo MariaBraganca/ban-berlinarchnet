@@ -9,6 +9,9 @@
 #left-image {
   background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/c_scale,w_1015/v1600285315/polaroidville--NV9zA0NqRM-unsplash_1_1_ire2lf.jpg');
   background-size: cover;
+  padding-right: 0;
+  margin-right: 0;
+  background-position: left;
 }
 
 #right-form {
@@ -16,6 +19,7 @@
 
 }
 #left-image h1 {
-  font-size: 6em;
+  text-align: right;
+  font-size: 9em;
 
 }
