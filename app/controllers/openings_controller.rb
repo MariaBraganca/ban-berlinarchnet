@@ -6,7 +6,8 @@ class OpeningsController < ApplicationController
   end
 
   def show
-  	@opening = Opening.find(params[:id])
+    @opening = Opening.find(params[:id])
+    @offices = Office.all
   	authorize @opening
   end
 end
