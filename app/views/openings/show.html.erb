@@ -2,7 +2,16 @@
   <div class="row">
 		<div class="col-12 mb-3">
 			<h1 class="mt-5 mb-3"><strong><%= @opening.job_position %></strong></h1>
-			<h3><%= @opening.office.name %></h3>
+			<div class="d-flex align-items-center">
+				<% @offices.each do |office| %>
+					<% if office.name === @opening.office.name %>
+						<%= link_to office_path(office) do %>
+							<%= cl_image_tag(office.banner_url, :class => "avatar-large") %>
+						<% end %>
+					<% end %>
+				<% end %>
+				<h3 class="pl-3"><%= @opening.office.name %></h3>
+			</div>
 			<hr>
 		</div>
 		<div class="col-12 col-lg-9">
