@@ -34,3 +34,11 @@
 label {
   margin-bottom: 0.2em;
 }
+input, textarea {
+  border-radius: 10px !important;
+}
+#left-image  img{
+  bottom: 25px;
+  left: 20px;
+  position: absolute;
+}
