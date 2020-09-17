@@ -13,8 +13,8 @@
               Berlin Architecture Network
               </h1>
             </div>
-            <div class="col-md-6 text-right">
-              <i style= "font-size: 31px; padding: 50px; box-shadow: 0 0 4px black; border-radius: 153px; margin: 10px;"class="fas fa-user-plus"></i>
+            <div class="col-md-6">
+
             </div>
           </div>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -64,8 +64,11 @@
                 input_html: { class: "input-size", autocomplete: "Description" }%>
               </div>
             </div>
+            <div class="img-upload d-flex align-items-center">
+              <i style="font-size: 35px;" class="far fa-user-circle"></i><i style="font-size: 20px; padding: 5px;" class="fas fa-plus"></i>
             <%= f.input :photo, as: :file,
-            required: true %>
+            required: true, label: false %>
+            </div>
           </div>
           <div class="form-actions">
             <%= f.button :submit, "Sign up", :class => 'btn btn-message mb-3', :style => 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
