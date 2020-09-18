@@ -1,22 +1,36 @@
-#register-card {
+#login-card {
+  margin-top: 50px;
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-right: 10px;
   overflow: hidden;
+  min-width: 180px;
+  max-width: 580px;
 }
 
-#left-image {
-  background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/v1600371395/ezgif.com-gif-maker_1_furi0j.gif');
+#top-image {
+  background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/v1600421637/branden_ojvomv.gif');
   background-size: cover;
   padding-right: 0;
   margin-right: 0;
   background-position: left;
+  min-height: 275px;
 }
 
-#right-form {
-  padding: 10px;
+#login-logo {
+  position: absolute;
+  bottom: -50px;
+  left: 241px;
 }
+
+#login-form {
+ margin-top: 35px;
+}
+#user_email, #user_password {
+ height: 50px;
+}
+
+
 #right-form h1{
   padding: 10px;
   font-size: 2.2em;
