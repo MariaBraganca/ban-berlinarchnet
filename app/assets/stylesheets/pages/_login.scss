@@ -1,9 +1,11 @@
-#register-card {
+#login-card {
+  margin-top: 50px;
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-right: 10px;
   overflow: hidden;
+  min-width: 180px;
+  max-width: 580px;
 }
 
 #left-image {
