@@ -1,3 +1,7 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
 <div class="container justify-content-center">
   <div class="row">
     <div class="col-md-8">
@@ -12,4 +16,12 @@
       <% end %>
     </div>
   </div>
+  <script>
+    flatpickr("#event_date_time", {
+      enableTime: true,
+      dateFormat: "d-m-Y H:i",
+      minDate: "today"
+  });
+  </script>
 </div>
+
