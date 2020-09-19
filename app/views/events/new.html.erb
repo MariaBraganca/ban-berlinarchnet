@@ -1,13 +1,16 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
 </head>
 <div class="container justify-content-center">
   <div class="row">
     <div class="col-md-8">
       <%= simple_form_for ([@event]) do |f| %>
       <div class="form-inputs justify-content-center">
-        <%= f.input :date_time, as: :string %>
+        <%= f.input :date, as: :string %>
+        <%= f.input :start_time, as: :string %>
+        <%= f.input :end_time, as: :string %>
         <%= f.input :location, as: :string %>
         <%= f.input :description, as: :text %>
         <%= f.input :title, as: :string  %>
@@ -17,11 +20,37 @@
     </div>
   </div>
   <script>
-    flatpickr("#event_date_time", {
+    flatpickr("#event_date", {
       enableTime: true,
-      dateFormat: "d-m-Y H:i",
-      minDate: "today"
+      enableTime: false,
+      dateFormat: "d.m.Y",
+      minDate: "today",
   });
+    flatpickr("#event_start_time", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true,
+  });
+    flatpickr("#event_end_time", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true,
+  });
+      var placesAutocomplete = places({
+        appId: 'pl8XQR7LGT3A',
+        apiKey: '97cf4ef438588fd18d8ebb1f470b59bb',
+        container: document.querySelector('#event_location'),
+         templates: {
+            value: function(suggestion) {
+              return `${suggestion.name}, ${suggestion.postcode}, ${suggestion.city}`;
+            }
+          }
+        }).configure({
+          type: 'address'
+      });
+
   </script>
 </div>
 

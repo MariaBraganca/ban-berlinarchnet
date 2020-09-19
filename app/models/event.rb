@@ -8,7 +8,7 @@ class Event < ApplicationRecord
 
   has_many :comments
 
-  validates :date_time, presence: true
+  validates :date, presence: true
   validates :title, presence: true
   validates :location, presence: true
   validates :description, presence: true
