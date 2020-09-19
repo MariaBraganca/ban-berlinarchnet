@@ -69,6 +69,9 @@
             <div id="gallery" data-toggle="modal" data-target="#photoModal">
                 <div class="row mb-5">
                  <% if @event.event_photos.attached?  %>
+                 <div class ='col-3' data-target="#carouselExample" data-slide-to="0">
+                 <%=  cl_image_tag @event.cover_photo.key, :class => 'photos-events w-100'  %>
+                   </div>
                     <% @event.event_photos.each do |photo| %>
                     <div class ='col-3' data-target="#carouselExample" data-slide-to="0">
                       <%= cl_image_tag photo.key, :class => 'photos-events w-100' %>
