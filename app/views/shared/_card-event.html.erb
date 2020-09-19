@@ -1,5 +1,9 @@
 <div class="card-event">
-  <%= cl_image_tag(event_within.cl_img_tag, :class => "card-event-img") %>
+ <% if event_within.cover_photo.attached?  %>
+    <%= cl_image_tag(event_within.cover_photo.key, :class => "card-event-img") %>
+    <% else %>
+    <%= cl_image_tag(event_within.cl_img_tag, :class => "card-event-img") %>
+    <% end %>
   <div class="card-event-infos">
     <div>
       <h2><%= event_within.title%></h2>
