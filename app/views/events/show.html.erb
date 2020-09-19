@@ -30,7 +30,11 @@
     <div class = 'row my-5 justify-content-around'>
         <!-- Photo -->
         <div class="col-12 col-lg-8">
+          <% if @event.cover_photo.attached? %>
+            <%= link_to cl_image_tag(@event.cover_photo.key, :style => "width: 100%; height: 400px; object-fit: cover;") %>
+          <% else %>
             <%= cl_image_tag(@event.cl_img_tag, :style => "width: 100%; height: 400px; object-fit: cover;")%>
+            <% end %>
         </div>
         <!-- Map -->
         <div class="col-12 col-lg-4">
@@ -62,6 +66,13 @@
         <h2 class="mb-3">Photos</h2>
             <div id="gallery" data-toggle="modal" data-target="#photoModal">
                 <div class="row mb-5">
+                 <% if @event.event_photos.attached?  %>
+                    <% @event.event_photos.each do |photo| %>
+                    <div class ='col-3' data-target="#carouselExample" data-slide-to="0">
+                      <%= cl_image_tag photo.key, :class => 'photos-events w-100' %>
+                    </div>
+                    <% end %>
+                  <% else %>
                     <div class ='col-3' data-target="#carouselExample" data-slide-to="0">
                         <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events w-100' %>
                     </div>
@@ -71,6 +82,7 @@
                     <div class = 'col-3' data-target="#carouselExample" data-slide-to="2">
                         <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972076/event-gallery/anastasia-dulgier-bkzjNDPQ3Hg-unsplash_nqx2ms.jpg", :class => 'photos-events w-100', alt: "alttext" %>
                     </div>
+                  <% end %>
                 </div>
             </div>
     <hr>
