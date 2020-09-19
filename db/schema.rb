@@ -61,7 +61,9 @@ ActiveRecord::Schema.define(version: 2020_09_01_102406) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string "date_time"
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
     t.string "location"
     t.text "description"
     t.bigint "user_id", null: false

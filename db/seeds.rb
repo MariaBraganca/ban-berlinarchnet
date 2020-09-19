@@ -162,7 +162,9 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 events.each do |event|
-  Event.create!(date_time: event["date"] + " " + event["time_start"] + " - " + event["time_end"],
+  Event.create!(date: event["date"],
+                start_time: event["time_start"],
+                end_time:event["time_end"],
                title: event["title"],
                location: event["location"],
                venue: event["venue"],

@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @user = User.new
 
-    @events = Event.order(date_time: :desc).limit(3)
+    @events = Event.order(date: :desc).limit(3)
     @offices = Office.order(:name).limit(3)
     @openings = Opening.order(date: :desc).limit(3)
     @posts = Post.order(date: :desc).limit(3)
