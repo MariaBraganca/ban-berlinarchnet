@@ -6,6 +6,12 @@ class OfficesController < ApplicationController
 
     @offices = policy_scope(Office).order(:name)
 
+    @markers = @offices.geocoded.map do |office|
+      {
+        lat: office.latitude,
+        lng: office.longitude
+      }
+    end
     
     if params[:query].present? && params[:order].present?
       if params[:order] == "@offices_arch"

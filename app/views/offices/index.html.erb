@@ -2,18 +2,25 @@
 	<div class="text-center mt-5 mb-3"> 
 		<h1>Offices</h1>
 		<p>Check out these offices listed in Berlin!</p>
-
-    <div class="row justify-content-center">
-  <div id="sorting-container" class="col-9 d-flex justify-content-center align-items-center">
-
-    <p class="sorting-buttons" >Sort By: </p>
-    <div class="sort-btn"><i class="fas fa-heart" style="color: #e53e3e"></i> <%= link_to "Culture", offices_path(order: '@offices_cult') %></div>
-    <div class="sort-btn"><i class="fas fa-star" style="color: #e9c46a"></i> <%= link_to "Architecture", offices_path(order: '@offices_arch') %></div>
-    <div class="sort-btn"><i class="fas fa-euro-sign" style="color: #90be6d"></i> <%= link_to "Salary", offices_path(order: '@offices_sala') %></div>
-
-</div>
-  </div>
-
+		<!-- Offices Map -->
+		<div class="row justify-content-center">
+			<div class="col-9 mb-3">
+				<div id="map"
+					style="width: 100%; height: 300px;"
+					data-markers="<%= @markers.to_json %>"
+					data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+				</div>
+			</div>
+		</div>
+		<!-- Search -->
+    	<div class="row justify-content-center">
+			<div id="sorting-container" class="col-9 d-flex justify-content-center align-items-center">
+				<p class="sorting-buttons" >Sort By: </p>
+				<div class="sort-btn"><i class="fas fa-heart" style="color: #e53e3e"></i> <%= link_to "Culture", offices_path(order: '@offices_cult') %></div>
+				<div class="sort-btn"><i class="fas fa-star" style="color: #e9c46a"></i> <%= link_to "Architecture", offices_path(order: '@offices_arch') %></div>
+				<div class="sort-btn"><i class="fas fa-euro-sign" style="color: #90be6d"></i> <%= link_to "Salary", offices_path(order: '@offices_sala') %></div>
+			</div>
+  		</div>
 	</div>
 
 	<div class="row justify-content-around">
