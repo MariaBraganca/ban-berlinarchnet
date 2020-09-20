@@ -21,7 +21,8 @@ class EventsController < ApplicationController
     @marker = [
       {
         lat: @event.latitude,
-        lng: @event.longitude
+        lng: @event.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { event: @event })
       }]
   end
 
