@@ -52,8 +52,22 @@
        cursor:pointer;   
   }
 
- card-event-details {
+ .card-event-details {
     color: inherit; 
     text-decoration:none; 
     cursor:pointer;  
+}
+
+.event-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3px;
+}
+
+.event-details {
+  background-color: white; 
+  padding: 20px; 
+  border-radius: 3px;
 }
