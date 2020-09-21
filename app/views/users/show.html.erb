@@ -33,35 +33,34 @@
   </div>
   <hr>
   <!-- Portfolio -->
-
   <h2 class="mb-3">Portfolio</h2>
     <div id="gallery" data-toggle="modal" data-target="#portfolioModal">
-        <div class="row mb-5 mx-0">
-          <!-- Portfolio Pictures -->
-          <div data-target="#carouselExample" data-slide-to="0">
-            <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
-              <div class="col-3">
-                <% @user.portfolio_photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, :class => "photos-events"%>
-                <% end %>
-              </div>
-            <% elsif @user.id <= 39  %> <!-- user is seeded -->
-              <div>
-              <% @user.seed_portfolio.each do |portfolio| %>
-                <%= cl_image_tag(portfolio, :class => "photos-events") %>
+      <!-- Portfolio Pictures -->
+      <div data-target="#carouselExample" data-slide-to="0">
+        <div class="row mb-5">
+          <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
+              <% @user.portfolio_photos.each do |photo| %>
+                <div class="col-12 col-lg-3 mb-3">
+                  <%= cl_image_tag photo.key, :class => ""%>
+                </div>
               <% end %>
+          <% elsif @user.id <= 39  %> <!-- user is seeded -->
+            <% @user.seed_portfolio.each do |portfolio| %>
+              <div class="col-12 col-lg-3 mb-3">
+                <%= cl_image_tag(portfolio, :class => "photos-events") %>
               </div>
-            <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-              <% if policy(@user).edit? %>
-                <%= simple_form_for(@user) do |f| %>
-                  <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }%>
-                  <%= f.submit %>
-                <% end %>
+            <% end %>
+          <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+            <% if policy(@user).edit? %>
+              <%= simple_form_for(@user) do |f| %>
+                <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }%>
+                <%= f.submit %>
               <% end %>
             <% end %>
-          </div>  
+          <% end %>
         </div>  
-  </div>
+      </div>  
+    </div>
   <hr>
 
 <!-- model for portolio with carousel-->
@@ -75,7 +74,7 @@
       <div class="col-12 col-lg-12 mb-5">
         <div class="row">
           <% @user.events.each do |event|  %>
-            <div class='col-3'>
+            <div class='col-12 col-lg-3 mb-3'>
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event-user-show", event_within: event %>
               <% end %>
@@ -90,7 +89,7 @@
     <div class="col-12 col-lg-6">
       <ul class="list-group list-group-flush">
         <% @user.posts.each do |post|  %>
-          <li class="list-group-item col-12 white-board">
+          <li class="list-group-item col-12">
             <%= link_to post_path(post) do %>
               <%= render "shared/card-post-user-show",  post_within: post %>
             <% end %>
