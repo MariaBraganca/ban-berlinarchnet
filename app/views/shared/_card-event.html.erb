@@ -8,7 +8,7 @@
     <div>
       <h2><%= event_within.title%></h2>
       <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= event_within.location %></p>
-      <p><i class="fas fa-clock" style="color: gray"></i> <%= event_within.date %></p>
+      <p><i class="fas fa-calendar-check" style="color: gray"></i> <%= event_within.date.strftime('%d.%m.%Y') %></p>
     </div>
   </div>
 </div>
