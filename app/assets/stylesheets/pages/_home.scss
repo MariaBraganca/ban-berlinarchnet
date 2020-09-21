@@ -17,9 +17,8 @@ a:link {
 /* Container needed to position the overlay. Adjust the width as needed */
 .overlay-container {
   position: relative;
-  width: 50%;
-  max-width: 257px;
-  margin: 14px;
+  // max-width: 257px;
+  // margin: 14px;
 }
 
 /* Make the overlay-img to responsive */
@@ -30,13 +29,12 @@ a:link {
 }
 
 /* The overlay effect - lays on top of the container and over the overlay-img */
-.overlay {
+.overlay-text {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0);
+  left: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
   transition: .5s ease;
   opacity:0;
   color: white;
@@ -46,6 +44,6 @@ a:link {
 }
 
 /* When you mouse over the container, fade in the overlay title */
-.overlay-container:hover .overlay {
+.overlay-container:hover .overlay-text {
   opacity: 1;
 }
