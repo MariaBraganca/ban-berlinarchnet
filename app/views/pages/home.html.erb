@@ -92,12 +92,12 @@
 		<div class="col-12 col-lg-9">
 			<ul class="list-group list-group-flush">
 				<% @posts.each do |post| %>
-				<li class="list-group-item">
-					<%= link_to post_path(post) do %>
+					<li class="list-group-item">
+						<%= link_to post_path(post) do %>
 							<%= render "shared/card-post", post_within: post %>
 						<% end %>
-					<% end %>
-				</li>
+					</li>
+				<% end %>
 			</ul>
 		</div>
 		<h2 class="col-12 col-lg-3"></h2>
