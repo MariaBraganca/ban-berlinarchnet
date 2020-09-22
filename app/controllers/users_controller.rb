@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def index
+    @users = policy_scope(User).order(:last_name)
+  end
+
   def edit
   end
 
