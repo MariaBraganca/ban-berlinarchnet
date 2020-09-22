@@ -13,6 +13,14 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_many_attached :portfolio_photos
 
+  # PgSearch for users
+  include PgSearch::Model
+  pg_search_scope :search_by_name,
+    against: [ :first_name, :last_name ],
+    using: {
+      tsearch: { prefix: true } 
+    }
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

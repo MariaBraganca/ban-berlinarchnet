@@ -2,6 +2,13 @@ class UsersController < ApplicationController
 
   def index
     @users = policy_scope(User).order(:last_name)
+
+    if params[:query].present?
+      @users = User.search_by_name(params[:query])
+    else
+      @users
+    end
+
   end
 
   def edit
