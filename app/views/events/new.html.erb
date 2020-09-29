@@ -13,6 +13,9 @@
           <%= f.input :description, as: :text %>
         </div>
         <div class="col-md-4">
+            <%= f.input :cover_photo, as: :file, required: true, label: false %>
+            <%= f.input :event_photos, as: :file, input_html: { multiple: true }%>
+
         </div>
       </div>
       <div class="row">
