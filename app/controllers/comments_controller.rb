@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
         authorize @comment
       end
 
-    def create_event_comment  
+    def create_event_comment
         @event = Event.find(params[:event_id])
 
         @comment = Comment.new(comment_params)
@@ -54,9 +54,12 @@ class CommentsController < ApplicationController
 
         if @comment.save
             redirect_to post_path(@post)
+            CommentMailer.new_comment(@comment).deliver_now
         else
             render 'posts/show'
         end
+
+
     end
 
     def comment_params

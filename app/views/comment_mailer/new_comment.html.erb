@@ -1,0 +1,10 @@
+<p>
+A new comment was posted for your <%= @post.title %>
+</p>
+<blockquote>
+  <em><%= @comment.content %></em>
+</blockquote>
+<p>
+  To reply to this comment, please visit the item page at:
+  <%= link_to "Blogpost Page", post_url(@post) %>
+</p>
