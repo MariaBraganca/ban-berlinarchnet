@@ -6,6 +6,8 @@
 
   <div class="container">
     <div class="row mt-5" id="new-event-card">
+      <div class="col-md-12">
+      <h1 class = "text-center">Create a new event</h1>
       <%= simple_form_for ([@event]) do |f| %>
       <div class="row">
         <div class="col-md-8">
@@ -13,26 +15,24 @@
           <%= f.input :description, as: :text %>
         </div>
         <div class="col-md-4">
-            <%= f.input :cover_photo, as: :file, required: true, label: false %>
-            <%= f.input :event_photos, as: :file, input_html: { multiple: true }%>
-
+          <%= f.input :cover_photo, as: :file, required: true, label: 'Main Photo:' %>
+          <%= f.input :event_photos, as: :file, input_html: { multiple: true }%>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-          <%= f.input :date, as: :string %>
+
           <div class="row">
-            <div class="col-md-6">
-              <%= f.input :start_time, as: :string %>
-            </div>
-            <div class="col-md-6">
-              <%= f.input :end_time, as: :string %>
+            <div class="col-md-12">
+              <%= f.input :venue, as: :string  %>
+              <%= f.input :location, as: :string %>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <%= f.input :venue, as: :string  %>
-          <%= f.input :location, as: :string %>
+          <%= f.input :date, as: :string %>
+          <%= f.input :start_time, as: :string %>
+          <%= f.input :end_time, as: :string %>
         </div>
       </div>
       <div class="row">
@@ -51,6 +51,7 @@
         </div>
       </div>
       <% end %>
+      </div>
     </div>
   </div>
 
