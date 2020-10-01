@@ -2,6 +2,7 @@
 	<div class="text-center my-5">
 		<h1 class="font-weight-bold">Events</h1>
 		<p>Check out the lates architecture events in Berlin!</p>
+    <%= link_to "Create event", new_event_path, class: "btn btn-attend", style: 'width: 450px; padding: 10px;' if user_signed_in? %>
 	</div>
 	<div class="row">
 		<% @events.each do |event| %>
@@ -11,5 +12,5 @@
 				<% end %>
 			</div>
 		<% end %>
-	</div>		
+	</div>
 </div>
