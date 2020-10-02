@@ -14,18 +14,18 @@
       <div class="row">
         <div class="col-md-12">
           <div class="field">
-            <%= form.label :content %>
-            <%= form.rich_text_area :content %>
+            <%= form.rich_text_area :content, style: "min-height: 300px;" %>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
+          <%= form.file_field :photo, as: :file, required: true, label: 'Main Photo:' %>
         </div>
         <div class="col-md-4">
           <div class="field">
-            <button type="submit" class="btn btn-message mb-3" style = "width: -webkit-fill-available; height: 50px; margin: 0;">Save</button>
+            <button type="submit" class="btn btn-message mb-3 mt-3" style = "width: -webkit-fill-available; height: 50px; margin: 0;">Save</button>
           </div>
         </div>
       </div>
