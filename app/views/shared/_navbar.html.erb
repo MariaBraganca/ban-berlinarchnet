@@ -36,6 +36,7 @@
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Edit Profile", '/users/edit', class: "dropdown-item" %>
             <%# if user received messages is not empty, link_to the last received message %>
             <% if !current_user.chatrooms_as_user_two.empty? %>
               <%= link_to "Messages", chatroom_path(current_user.chatrooms_as_user_two.last.id), class: "dropdown-item" %>
