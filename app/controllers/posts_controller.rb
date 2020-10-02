@@ -11,8 +11,28 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+    authorize @post
+  end
+
+  def create
+    @post = Post.new(post_params)
+    @post.user = current_user
+    @post.date = Time.now
+    if @post.save
+      redirect_to post_path(@post)
+    else
+      render :new
+    end
+    authorize @post
   end
 
   def edit
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :content, :photo)
   end
 end
