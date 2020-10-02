@@ -4,43 +4,22 @@
       <h1 class = "mb-4 text-center">Create a new post</h1>
       <%= form_with(model: @post) do |form| %>
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="field">
             <%= form.label :title %>
             <%= form.text_field :title, class: "form-control" %>
           </div>
         </div>
-        <div class="col-md-4">
-        </div>
       </div>
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="field">
             <%= form.label :content %>
             <%= form.rich_text_area :content %>
           </div>
         </div>
-        <div class="col-md-4">
-        </div>
       </div>
-      <div class="row">
-        <div class="col-md-8">
-        </div>
-        <div class="col-md-4">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-        </div>
-        <div class="col-md-4">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-        </div>
-        <div class="col-md-4">
-        </div>
-      </div>
+
       <div class="row">
         <div class="col-md-8">
         </div>
