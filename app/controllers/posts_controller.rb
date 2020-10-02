@@ -28,6 +28,16 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
+    @user = User.find(current_user.id)
+    authorize @post
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update!(post_params)
+    redirect_to @post
+    authorize @post
   end
 
   private
