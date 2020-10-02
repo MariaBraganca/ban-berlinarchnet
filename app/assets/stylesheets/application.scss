@@ -1,3 +1,5 @@
+//= require actiontext
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -13,8 +15,6 @@
 @import "components/index";
 @import "pages/index";
 
-//= require actiontext
-@import "actiontext";
 
 
 body:not(#chatroom) {
