@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+    authorize @post
   end
 
   def edit
