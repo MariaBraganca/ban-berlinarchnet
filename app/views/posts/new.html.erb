@@ -1,2 +1,48 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="container">
+  <div class="row mt-5" id="new-event-card">
+    <div class="col-md-12">
+      <h1 class = "mb-4 text-center">Create a new post</h1>
+      <%= simple_form_for ([@post]) do |f| %>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.input :title, as: :string  %>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.input :content, as: :text, input_html: { style: "height: 135px" }%>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+          <%= f.button :submit, class: 'btn btn-message mb-3', style: 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
