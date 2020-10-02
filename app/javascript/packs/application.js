@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+// require("actiontext")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -25,6 +26,8 @@ require("channels")
 // External imports
 import "bootstrap";
 
+
+
 // CSS
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -37,3 +40,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
+
+require("trix")
+require("@rails/actiontext")

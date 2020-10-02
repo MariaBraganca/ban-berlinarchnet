@@ -13,6 +13,8 @@
 @import "components/index";
 @import "pages/index";
 
+//= require actiontext
+@import "actiontext";
 
 
 body:not(#chatroom) {
