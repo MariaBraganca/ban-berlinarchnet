@@ -7,21 +7,22 @@
         <div class="col-md-12">
           <div class="field">
             <%= form.label :title %>
-            <%= form.text_field :title, class: "form-control" %>
+            <%= form.text_field :title, class: "form-control", required: true %>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
           <div class="field">
-            <%= form.rich_text_area :content, style: "min-height: 300px;" %>
+            <%= form.rich_text_area :content, style: "min-height: 300px;", required: true %>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-8">
-          <%= form.file_field :photo, as: :file, required: true, label: 'Main Photo:' %>
+        <div class="col-md-8 mt-3 ">
+          <%= form.label :photo, "Cover Photo" %>
+          <%= form.file_field :photo, as: :file, required: true %>
         </div>
         <div class="col-md-4">
           <div class="field">
