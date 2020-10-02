@@ -15,6 +15,7 @@
         <% end %>
       </div>
       <!-- Description -->
+      <%= link_to "Edit Profile", '/users/edit', class: "dropdown-item", class: "btn btn-message mb-3 mt-3", style: "width: -webkit-fill-available" if current_user.id == @user.id %>
       <p><%= @user.description %></p>
       <!-- Message Button -->
       <div class="text-center my-5">
@@ -58,8 +59,8 @@
               <% end %>
             <% end %>
           <% end %>
-        </div>  
-      </div>  
+        </div>
+      </div>
     </div>
   <hr>
 
