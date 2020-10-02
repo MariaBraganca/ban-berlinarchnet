@@ -2,6 +2,7 @@
 	<div class="text-center my-5">
 		<h1 class="font-weight-bold">Blog</h1>
 		<p>Check out the most recent posts about architecture Berlin!</p>
+    <%= link_to "Create post", new_post_path, class: "btn btn-attend", style: 'width: 450px; padding: 10px;' if user_signed_in? %>
 	</div>
 	<div class="row justify-content-around mb-5">
 		<div class="col-12 col-lg-9 px-3">
@@ -15,5 +16,5 @@
 				</li>
 			</ul>
 		</div>
-	</div>		
+	</div>
 </div>
