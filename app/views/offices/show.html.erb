@@ -19,7 +19,6 @@
       </div>
       <div class="col-12 col-lg-9">
         <p><%= @office.description %></p>
-        <hr>  
       </div>
     </div>
     <!-- Website -->
@@ -28,10 +27,9 @@
         <p class="heading-flat">Website</p>
       </div>
       <div class="col-12 col-lg-9 mb-3">
-        <%= link_to url_for(@office.url), :style => 'color: blue', :target => '_blank' do %>
-          <%= @office.url %>
+        <%= link_to url_for(@office.url), :target => '_blank' do %>
+          <i class="fas fa-external-link-alt"></i> <%= @office.url %>
         <% end %>
-        <hr>
       </div>
     </div>
     <!-- Ratings -->
@@ -73,7 +71,6 @@
               </p>
             </div>
         </div>
-        <hr>
       </div>
     </div>
     <!-- Location -->
@@ -88,7 +85,6 @@
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
         <p class='mt-3'><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= @office.location %></p>
-        <hr>
       </div>
     </div>
     <!-- Openings -->
@@ -114,7 +110,7 @@
           </ul>
         </div>
       </div>
-    <% end%>
+    <% end %>
     <hr>
     <!-- Projects -->
     <div class="row">
