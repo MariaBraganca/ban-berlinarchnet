@@ -30,7 +30,7 @@ class User < ApplicationRecord
     # chatrooms_as_user_one + chatrooms_as_user_two
   # end
 
-  after_create :welcome_send
+  # after_create :welcome_send
 
   def welcome_send
     UserMailer.welcome_send(self).deliver
