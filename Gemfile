@@ -41,8 +41,12 @@ gem 'pundit'
 # Cloudinary gem
 gem 'cloudinary', '~> 1.12.0'
 
+# Rails Admin
+gem 'rails_admin', '~> 2.0'
+
 # Faker gem
 gem 'faker'
+
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
