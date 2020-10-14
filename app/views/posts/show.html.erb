@@ -1,10 +1,11 @@
 <div class= "container">
     <div class="row justify-content-around align-items-top mt-5 mb-3">
-
         <div class="col-12 col-lg-4">
             <h5 class="red" >POST</h5>
-            <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-message mb-3 mt-3", style: "width: -webkit-fill-available" if current_user.id == @post.user.id  %>
-                <h2><strong><%= @post.title%></strong></h2>
+            <% if current_user %>
+                <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-message mb-3 mt-3", style: "width: -webkit-fill-available" if current_user.id == @post.user.id  %>
+            <% end %>
+            <h2><strong><%= @post.title%></strong></h2>
             <div class="d-flex align-items-center">
                 <p><i class="fas fa-calendar-check" style="color: gray"></i> <%= @post.date.strftime('%d.%m.%Y')  %></p>
             </div>
