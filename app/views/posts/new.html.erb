@@ -3,6 +3,7 @@
     <div class="col-md-12">
       <h1 class = "mb-4 text-center">Create a new post</h1>
       <%= form_with(model: @post) do |form| %>
+        <!-- Title -->
         <div class="row">
           <div class="col-md-12">
             <div class="field">
@@ -11,6 +12,7 @@
             </div>
           </div>
         </div>
+        <!-- Title -->
         <div class="row">
           <div class="col-md-12">
             <div class="field">
@@ -18,6 +20,7 @@
             </div>
           </div>
         </div>
+        <!-- Photo and Submit -->
         <div class="row">
           <div class="col-md-8 mt-3 ">
             <%= form.label :photo, "Cover Photo" %>

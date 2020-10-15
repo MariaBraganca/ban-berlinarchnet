@@ -3,32 +3,35 @@
     <div class="col-md-12">
       <h1 class = "mb-4 text-center">Edit your post</h1>
       <%= form_with(model: @post) do |form| %>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="field">
-            <%= form.label :title %>
-            <%= form.text_field :title, class: "form-control", required: true %>
+        <!-- Title -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="field">
+              <%= form.label :title %>
+              <%= form.text_field :title, class: "form-control", required: true %>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="field">
-            <%= form.rich_text_area :content, style: "min-height: 300px;", required: true %>
+        <!-- Text -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="field">
+              <%= form.rich_text_area :content, style: "min-height: 300px;", required: true %>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 mt-3 ">
-          <%= form.label :photo, "Cover Photo" %>
-          <%= form.file_field :photo, as: :file, required: true %>
-        </div>
-        <div class="col-md-4">
-          <div class="field">
-            <button type="submit" class="btn btn-message mb-3 mt-3" style = "width: -webkit-fill-available; height: 50px; margin: 0;">Save</button>
+        <!-- Photo and Submit -->
+        <div class="row">
+          <div class="col-md-8 mt-3 ">
+            <%= form.label :photo, "Cover Photo" %>
+            <%= form.file_field :photo, as: :file, required: true %>
+          </div>
+          <div class="col-md-4">
+            <div class="field">
+              <button type="submit" class="btn btn-message mb-3 mt-3" style = "width: -webkit-fill-available; height: 50px; margin: 0;">Save</button>
+            </div>
           </div>
         </div>
-      </div>
       <% end %>
     </div>
   </div>
