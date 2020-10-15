@@ -1,5 +1,4 @@
 class Office < ApplicationRecord
-  
   include PgSearch::Model
   pg_search_scope :office_search, 
     against: [ :name, :location ],
@@ -24,7 +23,4 @@ class Office < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
   validates :url, presence: true, uniqueness: true
-
-
-
 end

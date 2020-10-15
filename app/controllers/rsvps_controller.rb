@@ -1,16 +1,12 @@
 class RsvpsController < ApplicationController
   #before_action :set_rsvp, only: [:destroy]
 
+  def new
+    @event = Event.find(params[:event_id])
+    @rsvp = Rsvp.new
+  end
 
-
-
-def new
-@event = Event.find(params[:event_id])
-@rsvp = Rsvp.new
-end
-
-
-def create
+  def create
     @event = Event.find(params[:event_id])
     @rsvp = Rsvp.new(rsvp_params)
     @rsvp.user = current_user
@@ -22,17 +18,18 @@ def create
     else
       render :new
     end
-end
+  end
 
-def destroy
-  @rsvp = Rsvp.find(params[:id])
-  @rsvp.destroy
-  authorize @rsvp
-  @event = @rsvp.event
-  redirect_to event_path(@event)
-end
+  def destroy
+    @rsvp = Rsvp.find(params[:id])
+    @rsvp.destroy
+    authorize @rsvp
+    @event = @rsvp.event
+    redirect_to event_path(@event)
+  end
 
-private
+  private
+
   def rsvp_params
     params.permit(:user_id, :event_id, :id)
   end
@@ -40,5 +37,4 @@ private
   def set_rsvp
     @rsvp = Rsvp.find(params[:user_id])
   end
-
 end

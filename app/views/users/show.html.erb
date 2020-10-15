@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container min-vh-100">
   <h1 class="text-center font-weight-bold my-5">Dashboard</h1>
   <div class="row mb-5">
     <div class="col-12 col-lg-6">
@@ -6,7 +6,7 @@
       <h2 class="mb-5">Hi, I'm <%= @user.first_name %> <%= @user.last_name %>!</h2>
       <!-- Avatar -->
       <div class="text-center mb-3">
-        <% if @user.photo.attached?  %> <!-- user has uploaded a profile pic -->
+        <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
           <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
         <% elsif @user.id <= 39  %> <!-- user is seeded -->
           <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-large-user-showpage") %>
@@ -64,7 +64,7 @@
     </div>
   <hr>
 
-<!-- model for portolio with carousel-->
+  <!-- model for portolio with carousel-->
   <%= render "shared/portfolioModal" %>
 
   <!-- Members -->

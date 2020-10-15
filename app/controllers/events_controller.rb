@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   def index
     @events = policy_scope(Event).order(created_at: :desc)
     @user = User.find_by(email: @user)
-
   end
 
   def show
@@ -37,12 +36,7 @@ class EventsController < ApplicationController
     @user = User.find(current_user.id)
     authorize @event
   end
-
-  def destroy
-    @event.destroy
-    redirect_to events_path
-  end
-
+  
   def create
     @event = Event.new(event_params)
     @event.user = current_user
@@ -54,6 +48,11 @@ class EventsController < ApplicationController
     authorize @event
   end
 
+  def destroy
+    @event.destroy
+    redirect_to events_path
+  end
+  
   private
 
   def set_event
@@ -63,5 +62,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:date, :start_time, :end_time, :location, :venue, :title, :description, :cover_photo, event_photos: [])
   end
-
 end

@@ -2,7 +2,7 @@
     <div class="row justify-content-around align-items-top mt-5 mb-3">
         <div class="col-12 col-lg-4">
             <h5 class="red" >POST</h5>
-            <% if current_user %>
+            <% if user_signed_in? %>
                 <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-message mb-3 mt-3", style: "width: -webkit-fill-available" if current_user.id == @post.user.id  %>
             <% end %>
             <h2><strong><%= @post.title%></strong></h2>
