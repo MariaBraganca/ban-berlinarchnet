@@ -3,5 +3,4 @@ class Opening < ApplicationRecord
 
   validates :date, presence: true
   validates :job_position, presence: true 
-
 end

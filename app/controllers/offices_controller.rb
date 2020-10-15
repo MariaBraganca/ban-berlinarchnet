@@ -1,9 +1,7 @@
 class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
-
   def index
-
     @offices = policy_scope(Office).order(:name)
 
     @markers = @offices.geocoded.map do |office|
@@ -36,9 +34,7 @@ class OfficesController < ApplicationController
     elsif params[:query].present?
       @offices = Office.office_search(params[:query])
     end
-   
   end
-
 
   def show
     @office = Office.find(params[:id])

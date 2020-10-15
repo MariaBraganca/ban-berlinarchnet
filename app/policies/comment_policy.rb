@@ -2,12 +2,10 @@ class CommentPolicy < ApplicationPolicy
   #before_action :set_comment, only: [:show, :destroy]
   #skip_before_action :authenticate_user!, only: [ :index, :show]
   class Scope < Scope
-
     def resolve
       scope.all
     end
   end
-
   
   def create_event_comment?
     return true
@@ -24,8 +22,6 @@ class CommentPolicy < ApplicationPolicy
   def new?
     create?
   end
-    
-
 
   private
 
