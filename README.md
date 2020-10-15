@@ -7,26 +7,26 @@ Together with my team from the Bootcamp at Le Wagon, we've built this web applic
 Building a social platform as the final project in only 2 week's time, required a good understanding of database architecture, overall enjoyable user experience as well as skills on time and product management.
 
 ## Team
-Maria Braganca (Product Owner)
-Hristian Bozinoski
-Ekaterina Tugarinova
-Zeljka Vujic
+* Hristian Bozinoski
+* Maria Braganca (Product Owner)
+* Ekaterina Tugarinova
+* Zeljka Vujic
 
 ## Web Stack
-Github
-Ruby on Rails
-PostgreSQL
-Heroku
+* Github
+* Ruby on Rails
+* PostgreSQL
+* Heroku
 
 ## Libraries
-Devise (authentication)
-Pundit (authorization)
-Cloudinary
-Geocoding with Mapbox
-PG Search
-Bootstrap
-AJAX in Rails
-Websocket and Action Cable
+* Devise (authentication)
+* Pundit (authorization)
+* Cloudinary
+* Geocoding with Mapbox
+* PG Search
+* Bootstrap
+* AJAX in Rails
+* Websocket and Action Cable
 
 ## Goal and Process
 The purpose of this project is to support architects, who are new to Berlin, on getting into the city's architecture scene and give the Meetup group an online presence.
