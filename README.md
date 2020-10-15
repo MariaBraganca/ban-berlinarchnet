@@ -1,8 +1,8 @@
 # BAN - Berlin Architectural Network
 
-Berlin Architectural Network is a Ruby on Rails Application built for the homonymous Meetup group, which I've created in 2017. Since then, it has attracted hundreds of architecture lovers who come together to support each other through collaboration and networked learning.
+Berlin Architectural Network is a Ruby on Rails Application built for the homonymous [Meetup group](https://www.meetup.com/BAN-Berlin-Architectural-Network/), which I've created in 2017. Since then, it has attracted hundreds of architecture lovers who come together to support each other through collaboration and networked learning.
 
-Together with my team from the Bootcamp at Le Wagon, we've built this web application from scratch with Ruby, HTML, CSS and JavaScript.
+Together with my team from the Bootcamp at Le Wagon, we've built this web application from scratch with Ruby, HTML, SCSS and JavaScript.
 
 Building a social platform as the final project in only 2 week's time, required a good understanding of database architecture, overall enjoyable user experience as well as skills on time and product management.
 
