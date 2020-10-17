@@ -1,15 +1,16 @@
 <div class= "container">
     <div class="row justify-content-between align-items-end mt-5 mb-3">
-        <div class="col-12 col-lg-10">
+        <div class="col-12 col-lg-8">
             <h1 class="font-weight-bold"><%= @event.title%></h1>
             <div class="d-flex align-items-center">
-                <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@event.user)  %>
+                <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar'), user_path(@event.user)  %>
                 <p class="pl-3">Hosted by: <%= @event.user.first_name %> <%= @event.user.last_name %></p>
             </div>
         </div>
         <!-- RSVP btn -->
-        <div class="col-12 col-lg-2 align-bottom">
+        <div class="col-12 col-lg-4">
             <% if user_signed_in? %>
+								<%= link_to "Edit event", edit_event_path(@event), class: "btn btn-edit mb-2", style: "width: -webkit-fill-available" if current_user.id == @event.user.id  %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
                     <button type="button" class="btn btn-attend" data-toggle="modal" data-target="#exampleModal">

@@ -9,6 +9,8 @@ class Event < ApplicationRecord
   has_one_attached :cover_photo
   has_many_attached :event_photos
 
+  has_rich_text :description
+
   validates :date, presence: true
   validates :title, presence: true
   validates :location, presence: true

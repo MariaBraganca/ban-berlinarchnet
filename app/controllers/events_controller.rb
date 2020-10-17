@@ -31,12 +31,6 @@ class EventsController < ApplicationController
     authorize @event
   end
 
-  def edit
-    @event = Event.find(params[:id])
-    @user = User.find(current_user.id)
-    authorize @event
-  end
-  
   def create
     @event = Event.new(event_params)
     @event.user = current_user
@@ -47,6 +41,20 @@ class EventsController < ApplicationController
     end
     authorize @event
   end
+
+  def edit
+    @event = Event.find(params[:id])
+    @user = User.find(current_user.id)
+    authorize @event
+  end
+  
+  def update
+    @event = Event.find(params[:id])
+    @event.update!(event_params)
+    redirect_to @event
+    authorize @event
+  end
+  
 
   def destroy
     @event.destroy
