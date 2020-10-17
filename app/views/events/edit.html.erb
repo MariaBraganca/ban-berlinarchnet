@@ -24,12 +24,12 @@
         </div>
         <div class="row">
           <div class="col-md-8 mt-3">
-            <%= f.input :cover_photo, as: :file, required: true, label: 'Main Photo:' %>
+            <%= f.input :cover_photo, as: :file, required: false, label: 'Main Photo:' %>
           </div>
         </div>
         <div class="row align-items-end">
           <div class="col-md-8">
-            <%= f.input :event_photos, as: :file, input_html: { multiple: true }%>
+            <%= f.input :event_photos, as: :file, input_html: { multiple: true } %>
           </div>
           <div class="col-md-4">
             <%= f.button :submit, class: 'btn btn-message mb-3', style: 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
