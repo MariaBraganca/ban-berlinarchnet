@@ -10,7 +10,7 @@
         <!-- RSVP btn -->
         <div class="col-12 col-lg-4">
             <% if user_signed_in? %>
-								<%= link_to "Edit event", edit_event_path(@event), class: "btn btn-edit mb-2", style: "width: -webkit-fill-available" if current_user.id == @event.user.id  %>
+				<%= link_to "Edit event", edit_event_path(@event), class: "btn btn-edit mb-2", style: "width: -webkit-fill-available" if current_user.id == @event.user.id  %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
                     <button type="button" class="btn btn-attend" data-toggle="modal" data-target="#exampleModal">
@@ -66,21 +66,24 @@
     <h2 class="mb-3">Photos</h2>
     <div id="gallery" data-toggle="modal" data-target="#photoModal">
         <div class="row mb-5">
-            <% if @event.event_photos.attached?  %>
+            <% if @event.event_photos.attached? %>
                 <div class ='col-12 col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
                     <%=  cl_image_tag @event.cover_photo.key, :class => 'photos-events w-100'  %>
                 </div>
+            <% else %>
+                <div class ='col-12 col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
+                    <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events w-100' %>
+                </div>
+            <% end %>
+						<% unless @event.event_photos.empty?  %>
                 <% @event.event_photos.each do |photo| %>
                     <div class ='col-12 col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
                         <%= cl_image_tag photo.key, :class => 'photos-events w-100' %>
                     </div>
                 <% end %>
             <% else %>
-                <div class ='col-12 col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
-                    <%= cl_image_tag @event.cl_img_tag, :class => 'photos-events w-100' %>
-                </div>
                 <div class ='col-12 col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="1">
-                    <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972065/event-gallery/omar-lopez-1qfy-jDc_jo-unsplash_ky8ivn.jpg", :class => 'photos-events w-100', alt: "alttext" %>
+                    <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1602945106/logo/logo3.png", :class => 'photos-events w-100', alt: "alttext" %>
                 </div>
                 <div class = 'col-12 col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="2">
                     <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972076/event-gallery/anastasia-dulgier-bkzjNDPQ3Hg-unsplash_nqx2ms.jpg", :class => 'photos-events w-100', alt: "alttext" %>
