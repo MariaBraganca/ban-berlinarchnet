@@ -7,25 +7,21 @@
           <!-- Carousel-->
           <div id="carouselExample" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <% if @event.event_photos.attached?  %>
-              <div class="carousel-item active">
-                <%= cl_image_tag @event.cover_photo.key, :class => 'd-block w-100' %>
-              </div>
-              <% @event.event_photos.each do |photo| %>
-              <div class="carousel-item">
-                <%= cl_image_tag photo.key, :class => 'd-block w-100' %>
-              </div>
-              <% end %>
+              <% if @event.cover_photo.attached? %>
+                <div class="carousel-item active">
+                  <%= cl_image_tag @event.cover_photo.key, :class => 'd-block w-100' %>
+                </div>
               <% else %>
-              <div class="carousel-item active">
-                <%= cl_image_tag @event.cl_img_tag, :class => 'd-block w-100' %>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1602945106/logo/logo3.png", :class => 'd-block w-100'%>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "https://res.cloudinary.com/db5jh0zwo/image/upload/v1598972076/event-gallery/anastasia-dulgier-bkzjNDPQ3Hg-unsplash_nqx2ms.jpg", :class => 'd-block w-100'%>
-              </div>
+                <div class="carousel-item active">
+                  <%= cl_image_tag @event.cl_img_tag, :class => 'd-block w-100' %>
+                </div>
+              <% end %>
+              <% unless @event.event_photos.empty? %>
+                <% @event.event_photos.each do |photo| %>
+                  <div class="carousel-item">
+                    <%= cl_image_tag photo.key, :class => 'd-block w-100' %>
+                  </div>
+                <% end %>
               <% end %>
             </div>
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
