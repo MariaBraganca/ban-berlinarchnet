@@ -26,13 +26,25 @@
     text-decoration: none;
   }
 
+  .btn-edit {
+    width: 100%;
+    margin-bottom: 6px;
+    background-color: black;
+    color: white;
+  }
+
+  .btn-edit:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  }
 
   .btn-attend {
     width: 100%;
-    margin: 2px;
     background-color: #226F54;
     color: white;
   }
+
 
   .btn-green {
 
@@ -40,7 +52,6 @@
   }
 
   .btn-green:hover {
-
     background: #133E2F;
     color: white;
     text-decoration: none;

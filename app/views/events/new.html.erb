@@ -1,59 +1,40 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
-</head>
-<div class="container">
-  <div class="row mt-5" id="new-event-card">
+<div class="container min-vh-100">
+  <div class="row my-5" id="new-event-card">
     <div class="col-md-12">
       <h1 class = "mb-4 text-center">Create a new event</h1>
       <%= simple_form_for ([@event]) do |f| %>
-      <div class="row">
-        <div class="col-md-8">
-          <%= f.input :title, as: :string  %>
+        <div class="row">
+          <div class="col-md-8">
+            <%= f.input :title, as: :string  %>
+          </div>
+          <div class="col-md-4">
+            <%= f.input :venue, as: :string  %>
+          </div>
         </div>
-        <div class="col-md-4">
-          <%= f.input :venue, as: :string  %>
+        <div class="row">
+          <div class="col-md-8">
+            <%= f.rich_text_area :description, style: "min-height: 300px;", required: true %>
+          </div>
+          <div class="col-md-4 mt-2">
+            <%= f.input :location, as: :string %>
+            <%= f.input :date, as: :string %>
+            <%= f.input :start_time, as: :string %>
+            <%= f.input :end_time, as: :string %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <%= f.input :description, as: :text, input_html: { style: "height: 135px" }%>
+        <div class="row">
+          <div class="col-md-8 mt-3">
+            <%= f.input :cover_photo, as: :file, required: true, label: 'Main Photo:' %>
+          </div>
         </div>
-        <div class="col-md-4">
-          <%= f.input :location, as: :string %>
-          <%= f.input :start_time, as: :string %>
+        <div class="row align-items-end">
+          <div class="col-md-8">
+            <%= f.input :event_photos, as: :file, input_html: { multiple: true }%>
+          </div>
+          <div class="col-md-4">
+            <%= f.button :submit, class: 'btn btn-message mb-3', style: 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <%= f.input :cover_photo, as: :file, required: true, label: 'Main Photo:' %>
-        </div>
-        <div class="col-md-4">
-          <%= f.input :end_time, as: :string %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <%= f.input :event_photos, as: :file, input_html: { multiple: true }%>
-        </div>
-        <div class="col-md-4">
-          <%= f.input :date, as: :string %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-        </div>
-        <div class="col-md-4">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-        </div>
-        <div class="col-md-4">
-          <%= f.button :submit, class: 'btn btn-message mb-3', style: 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
-        </div>
-      </div>
       <% end %>
     </div>
   </div>
