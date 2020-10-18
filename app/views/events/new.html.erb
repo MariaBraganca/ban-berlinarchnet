@@ -2,7 +2,7 @@
   <div class="row my-5" id="new-event-card">
     <div class="col-md-12">
       <h1 class = "mb-4 text-center">Create a new event</h1>
-      <%= simple_form_for ([@event]) do |f| %>
+      <%= simple_form_for(@event, remote: true) do |f| %>
         <div class="row">
           <div class="col-md-8">
             <%= f.input :title, as: :string  %>
