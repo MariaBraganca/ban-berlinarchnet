@@ -25,8 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 
-
-
 // CSS
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -34,11 +32,13 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // import { initSelect2 } from '../components/init_select2';
 
 import { initChatroomCable } from '../channels/chatroom_channel.js';
-
 import { initMapbox } from '../plugins/init_mapbox';
+
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initChatroomCable();
 })
 
 require("trix")
 require("@rails/actiontext")
+require("flatpickr");
