@@ -41,7 +41,7 @@ gem 'pundit'
 # Cloudinary gem
 gem 'cloudinary', '~> 1.12.0'
 
-# Rails Admin
+# Rails Admin gem
 gem 'rails_admin', '~> 2.0'
 
 # Faker gem

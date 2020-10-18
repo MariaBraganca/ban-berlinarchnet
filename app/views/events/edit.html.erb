@@ -2,13 +2,13 @@
   <div class="row my-5" id="new-event-card">
     <div class="col-md-12">
       <h1 class = "mb-4 text-center">Edit event</h1>
-      <%= simple_form_for ([@event]) do |f| %>
+      <%= simple_form_for(@event) do |f| %>
         <div class="row">
           <div class="col-md-8">
             <%= f.input :title, as: :string  %>
           </div>
           <div class="col-md-4">
-            <%= f.input :venue, as: :string  %>
+            <%= f.input :venue, as: :string %>
           </div>
         </div>
         <div class="row">
@@ -17,6 +17,8 @@
           </div>
           <div class="col-md-4 mt-2">
             <%= f.input :location, as: :string %>
+            <%= f.input :online, as: :boolean, boolean_style: :inline, label:"Online Event" %>
+            <%= f.input :online_link, as: :string, label: "Link" %>
             <%= f.input :date, as: :string %>
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
@@ -45,18 +47,21 @@
     enableTime: false,
     dateFormat: "d.m.Y",
     minDate: "today",
+    allowInput: true,
   });
   flatpickr("#event_start_time", {
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
     time_24hr: true,
+    allowInput: true,
   });
   flatpickr("#event_end_time", {
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
     time_24hr: true,
+    allowInput: true,
   });
   var placesAutocomplete = places({
     appId: 'pl8XQR7LGT3A',
@@ -69,5 +74,27 @@
   }
   }).configure({
   type: 'address'
+  });
+  // dependig on the current state of event
+  if(document.getElementById("event_online").checked) {
+    document.getElementById("event_location").disabled = true;
+    document.getElementById("event_venue").disabled = true;
+    document.querySelector('.event_online_link').style.display = "block";
+  } else {
+    document.getElementById("event_location").disabled = false;
+    document.getElementById("event_venue").disabled = false;
+    document.querySelector('.event_online_link').style.display = "none";
+  } 
+  // on click of event online checkbox
+  document.getElementById("event_online").addEventListener("click", (event) => {
+    if(document.getElementById("event_online").checked) {
+      document.getElementById("event_location").disabled = true;
+      document.getElementById("event_venue").disabled = true;
+      document.querySelector('.event_online_link').style.display = "block";
+    } else {
+      document.getElementById("event_location").disabled = false;
+      document.getElementById("event_venue").disabled = false;
+      document.querySelector('.event_online_link').style.display = "none";
+    }     
   });
 </script>

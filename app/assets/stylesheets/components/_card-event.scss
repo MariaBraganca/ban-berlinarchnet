@@ -70,4 +70,7 @@
   background-color: white; 
   padding: 20px; 
   border-radius: 3px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
