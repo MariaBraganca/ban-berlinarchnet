@@ -79,22 +79,27 @@
   if(document.getElementById("event_online").checked) {
     document.getElementById("event_location").disabled = true;
     document.getElementById("event_venue").disabled = true;
-    document.querySelector('.event_online_link').style.display = "block";
+    document.getElementById("event_location").value = "";
+    document.getElementById("event_venue").value = "";
+    document.querySelector(".event_online_link").style.display = "block";
   } else {
     document.getElementById("event_location").disabled = false;
     document.getElementById("event_venue").disabled = false;
-    document.querySelector('.event_online_link').style.display = "none";
+    document.querySelector(".event_online_link").style.display = "none";
   } 
   // on click of event online checkbox
   document.getElementById("event_online").addEventListener("click", (event) => {
     if(document.getElementById("event_online").checked) {
       document.getElementById("event_location").disabled = true;
       document.getElementById("event_venue").disabled = true;
-      document.querySelector('.event_online_link').style.display = "block";
+      document.getElementById("event_location").value = "";
+      document.getElementById("event_venue").value = "";
+      document.querySelector(".event_online_link").style.display = "block";
+      document.getElementById("event_online_link").value = "";
     } else {
       document.getElementById("event_location").disabled = false;
       document.getElementById("event_venue").disabled = false;
-      document.querySelector('.event_online_link').style.display = "none";
-    }      
+      document.querySelector(".event_online_link").style.display = "none";
+    }     
   });
 </script>
