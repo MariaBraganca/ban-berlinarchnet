@@ -165,12 +165,14 @@ events.each do |event|
   Event.create!(date: event["date"],
                 start_time: event["time_start"],
                 end_time:event["time_end"],
-               title: event["title"],
-               location: event["location"],
-               venue: event["venue"],
-               description: event["description"],
-               user_id: rand(1..n_users),
-               cl_img_tag: "events/event#{event["id"]}")
+                title: event["title"],
+                location: event["location"],
+                venue: event["venue"],
+                online: event["online"],
+                online_link: event["online_link"],
+                description: event["description"],
+                user_id: rand(1..n_users),
+                cl_img_tag: "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event#{event["id"]}")
 
   puts "=== #{terminal_counter} out of #{n_events} Events seeded ==="
   terminal_counter += 1
