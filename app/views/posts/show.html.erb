@@ -1,12 +1,12 @@
 <div class= "container min-vh-100">
   <!-- Head -->
   <div class="row justify-content-between align-items-top mt-5 mb-3">
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-6">
       <h5 class="red mb-3" >POST</h5>
-      <h2><strong><%= @post.title%></strong></h2>
+      <h1><strong><%= @post.title%></strong></h1>
       <p><i class="fas fa-calendar-check" style="color: gray"></i> Posted on the: <%= @post.date.strftime('%d.%m.%Y')  %></p>
       <% if user_signed_in? %>
-        <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-message my-3", style: "width: -webkit-fill-available" if current_user.id == @post.user.id  %>
+        <%= link_to "Edit post", edit_post_path(@post), class: "col-lg-6 btn btn-edit my-3", style: "width: -webkit-fill-available" if current_user.id == @post.user.id  %>
       <% end %>
     </div>
     <div class="col-12 col-lg-6">
