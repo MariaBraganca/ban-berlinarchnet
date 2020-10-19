@@ -52,7 +52,7 @@
             <h2 class="mb-3">Details</h2>
             <p><i class="fas fa-calendar-check" style="color: gray"></i> <%= @event.date.strftime('%d. %B, %Y') %> | <%= @event.start_time.strftime('%H:%M') %> to <%= @event.end_time.strftime('%H:%M')%></p>
             <% if @event.online %>
-                <p><i class="fas fa-building" style="color: #90be6d"></i> Online Event</p>                    
+                <p><i class="fas fa-signal" style="color: #90be6d"></i> Online Event</p>                    
                 <%= link_to url_for(@event.online_link), :target => '_blank' do %>
                     <i class="fas fa-external-link-alt" style="color: #E53E3E"></i> <%= @event.online_link %>
                 <% end %>

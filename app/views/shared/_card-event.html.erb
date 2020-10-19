@@ -7,7 +7,11 @@
   <div class="card-event-infos">
     <div>
       <h2><%= event_within.title%></h2>
-      <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= event_within.location %></p>
+      <% unless event_within.online %>
+        <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= event_within.location %></p>
+      <% else %>
+        <p><i class="fas fa-signal" style="color: #90be6d"></i>  Online Event</p>
+      <% end %>
       <p><i class="fas fa-calendar-check" style="color: gray"></i> <%= event_within.date.strftime('%d.%m.%Y') %></p>
     </div>
   </div>
