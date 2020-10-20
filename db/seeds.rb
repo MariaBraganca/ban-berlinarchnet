@@ -165,6 +165,7 @@ events.each do |event|
   Event.create!(date: event["date"],
                 start_time: event["time_start"],
                 end_time:event["time_end"],
+                format: event["format"],
                 title: event["title"],
                 location: event["location"],
                 venue: event["venue"],

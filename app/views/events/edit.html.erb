@@ -5,20 +5,21 @@
       <%= simple_form_for(@event, remote: true) do |f| %>
         <div class="row">
           <div class="col-md-8">
-            <%= f.input :title, as: :string  %>
+            <%= f.input :title, as: :string %>
           </div>
           <div class="col-md-4">
-            <%= f.input :venue, as: :string, required: true %>
+            <%= f.input :format, collection: $format %>
           </div>
         </div>
         <div class="row">
           <div class="col-md-8">
-            <%= f.rich_text_area :description, style: "min-height: 350px;", required: true %>
+            <%= f.rich_text_area :description, style: "min-height: 430px;" %>
           </div>
           <div class="col-md-4 mt-2">
-            <%= f.input :location, as: :string %>
             <%= f.input :online, as: :boolean, boolean_style: :inline, label:"Online Event" %>
-            <%= f.input :online_link, as: :string, label: "Link", required: true %>
+            <%= f.input :location, as: :string %>
+            <%= f.input :venue, as: :string, required: true %>
+            <%= f.input :online_link, as: :string, label: "Link" %>
             <%= f.input :date, as: :string %>
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
@@ -76,29 +77,29 @@
   type: 'address'
   });
   // dependig on the current state of event
-  if(document.getElementById("event_online").checked) {
-    document.getElementById("event_location").disabled = true;
-    document.getElementById("event_venue").disabled = true;
-    document.getElementById("event_location").value = "";
-    document.getElementById("event_venue").value = "";
+  if(document.querySelector("#event_online").checked) {
+    document.querySelector(".event_location").style.display = "none";
+    document.querySelector(".event_venue").style.display = "none";
     document.querySelector(".event_online_link").style.display = "block";
+    document.querySelector("#event_location").value = "";
+    document.querySelector("#event_venue").value = "";
   } else {
-    document.getElementById("event_location").disabled = false;
-    document.getElementById("event_venue").disabled = false;
+    document.querySelector(".event_location").style.display = "block";
+    document.querySelector(".event_venue").style.display = "block";
     document.querySelector(".event_online_link").style.display = "none";
   } 
   // on click of event online checkbox
-  document.getElementById("event_online").addEventListener("click", (event) => {
-    if(document.getElementById("event_online").checked) {
-      document.getElementById("event_location").disabled = true;
-      document.getElementById("event_venue").disabled = true;
-      document.getElementById("event_location").value = "";
-      document.getElementById("event_venue").value = "";
+  document.querySelector("#event_online").addEventListener("click", (event) => {
+    if(document.querySelector("#event_online").checked) {
+      document.querySelector(".event_location").style.display = "none";
+      document.querySelector(".event_venue").style.display = "none";
       document.querySelector(".event_online_link").style.display = "block";
-      document.getElementById("event_online_link").value = "";
+      document.querySelector("#event_location").value = "";
+      document.querySelector("#event_venue").value = "";
+      document.querySelector("#event_online_link").value = "";
     } else {
-      document.getElementById("event_location").disabled = false;
-      document.getElementById("event_venue").disabled = false;
+      document.querySelector(".event_location").style.display = "block";
+      document.querySelector(".event_venue").style.display = "block";
       document.querySelector(".event_online_link").style.display = "none";
     }     
   });
