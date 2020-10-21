@@ -7,9 +7,9 @@
         <%= f.error_notification %>
         <div class="row">
           <!-- Left column -->
-          <div class="col-12 col-lg-6">
+          <div class="col-lg-6">
             <!-- Avatar -->
-            <div class="text-center" style="margin-top: 2.1em; margin-bottom: 2.1em;">
+            <div class="text-center" style="margin-top: 1.4em; margin-bottom: 1.4em;">
               <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
                 <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
               <% elsif @user.id <= 39  %> <!-- user is seeded -->
@@ -32,15 +32,15 @@
             </div>
           </div>
           <!-- Right column -->
-          <div class="col-12 col-lg-6">
+          <div class="col-lg-6">
             <div class="row">
-              <div class="col-6">
+              <div class="col-lg-6">
                 <%= f.input :first_name,
                             required: true,
                             autofocus: true,
                             input_html: { autocomplete: "First Name" }%>
               </div>
-              <div class="col-6">
+              <div class="col-lg-6">
                 <%= f.input :last_name,
                             required: true,
                             input_html: { autocomplete: "Last Name" }%>
@@ -52,13 +52,13 @@
                         input_html: { autocomplete: "email" } %>
             <!-- Reset password -->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <%= f.input :password,
-                            hint: "Only if you want to reset your password",
                             required: false,
-                            input_html: { autocomplete: "new-password" } %>
+                            input_html: { autocomplete: "new-password" },
+                            label: "Reset Password" %>
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <%= f.input :password_confirmation,
                             required: false,
                             input_html: { autocomplete: "new-password" } %>
@@ -74,19 +74,19 @@
             </div>
             <!-- Authetication with current password -->
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-12">
                 <%= f.input :current_password,
-                          hint: "we need your current password to confirm your changes",
+                          hint: "Type your current password to confirm your changes",
                           required: true,
                           input_html: { autocomplete: "current-password" } %>
               </div>
             </div>
             <!-- Buttons -->
             <div class="row">
-              <div class=" col-6 form-actions">
-                <%= f.button :submit, "Update", :class => 'btn btn-call', :style => 'width: 100%' %>
+              <div class=" col-lg-6 form-actions">
+                <%= f.button :submit, "Update", :class => 'btn btn-call mb-3', :style => 'width: 100%' %>
               </div>
-              <div class=" col-6 form-actions">
+              <div class=" col-lg-6 form-actions">
                 <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure that you want do delete your ban account?" }, method: :delete, :class => 'btn btn-delete', :style => 'width: 100%' %>
               </div>
             </div>

@@ -1,61 +1,53 @@
 <div class="container min-vh-100">
   <div class="row my-5" id="register-card">
     <!-- Left Image -->
-    <div class="col-md-6" id="left-image">
+    <div class="col-lg-6" id="left-image">
       <!--
       <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_130/v1/logo/logo1" class="rounded-circle avatar" />
         -->
     </div>
     <!-- Form -->
-    <div class="col-12 col-md-6" id="right-form">
+    <div class="col-12 col-lg-6" id="right-form">
       <h1 class="corporate text-center"><span class="red">·ban</span>signup·</h1>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
         <div class="form-group">
           <!-- Name -->
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <%= f.input :first_name,
                           required: true,
                           autofocus: true,
                           input_html: { autocomplete: "First Name" } %>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <%= f.input :last_name,
                           required: true,
                           input_html: { autocomplete: "Last Name" } %>
             </div>
           </div>
           <!-- Email -->
-          <div class="row">
-            <div class="col-md-12">
-              <%= f.input :email,
-                          required: true,
-                          input_html: { autocomplete: "email" } %>
-            </div>
-          </div>
+          <%= f.input :email,
+                      required: true,
+                      input_html: { autocomplete: "email" } %>
           <!-- Password -->
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                           input_html: { autocomplete: "new-password" } %>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
             </div>
           </div>
           <!-- Description -->
-          <div class="row">
-            <div class="col-md-12">
-              <%= f.input :description,
-                          input_html: { class: "input-size", autocomplete: "Description" },
-                          label: "Tell us something about you 🧡" %>
-            </div>
-          </div>
+          <%= f.input :description,
+                      input_html: { class: "input-size", autocomplete: "Description" },
+                      label: "Tell us something about you 🧡" %>
           <!-- Photo -->
           <p style="margin-bottom: 0.2em;">Let us see your pretty face 😃</p>
           <div class="img-upload d-flex align-items-center">

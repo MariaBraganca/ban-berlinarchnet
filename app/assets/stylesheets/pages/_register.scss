@@ -9,6 +9,11 @@
   background-size: cover;
   background-position: center;
 }
+@media only screen and (max-width: 768px) {
+  #left-image {
+    padding-top: 70%;
+  }
+}
 #right-form {
   padding: 20px;
 }
