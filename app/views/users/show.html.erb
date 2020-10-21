@@ -37,30 +37,24 @@
   <h2 class="mb-3">Portfolio</h2>
     <div id="gallery" data-toggle="modal" data-target="#portfolioModal">
       <!-- Portfolio Pictures -->
-      <div data-target="#carouselExample" data-slide-to="0">
+      <div data-target="#carouselExampleSlidesOnly" data-slide-to="0">
         <div class="row mb-5">
           <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
               <% @user.portfolio_photos.each do |photo| %>
                 <div class="col-12 col-lg-3 mb-3">
-                  <%= cl_image_tag photo.key, :class => ""%>
+                  <%= cl_image_tag photo.key, :class => "photos-events"%>
                 </div>
               <% end %>
-          <% elsif @user.id <= 39  %> <!-- user is seeded -->
+          <% else @user.id <= 39  %> <!-- user is seeded -->
             <% @user.seed_portfolio.each do |portfolio| %>
               <div class="col-12 col-lg-3 mb-3">
                 <%= cl_image_tag(portfolio, :class => "photos-events") %>
               </div>
             <% end %>
-          <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-            <% if policy(@user).edit? %>
-              <%= simple_form_for(@user) do |f| %>
-                <%= f.input :portfolio_photos, as: :file, input_html: { multiple: true }%>
-                <%= f.submit %>
-              <% end %>
-            <% end %>
           <% end %>
         </div>
       </div>
+      <!-- user didn't upload a profile picture, default logo shows up -->
     </div>
   <hr>
 

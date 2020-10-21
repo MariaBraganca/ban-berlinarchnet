@@ -1,81 +1,74 @@
-<div class="container">
-  <div class="row mt-5" id="register-card">
-    <div class="col-md-12">
-      <div class="row">
-        <div id="left-image" class="col-md-6">
-          <h1>·ban</h1>
-              <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_130/v1/logo/logo1" class="rounded-circle" />
-        </div>
-        <div id="right-form" class="col-md-6">
+<div class="container min-vh-100">
+  <div class="row my-5" id="register-card">
+    <!-- Left Image -->
+    <div class="col-md-6" id="left-image">
+      <!--
+      <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_130/v1/logo/logo1" class="rounded-circle avatar" />
+        -->
+    </div>
+    <!-- Form -->
+    <div class="col-12 col-md-6" id="right-form">
+      <h1 class="corporate text-center"><span class="red">·ban</span>signup·</h1>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+        <div class="form-group">
+          <!-- Name -->
           <div class="row">
             <div class="col-md-6">
-              <h1>
-              Berlin Architecture Network
-              </h1>
+              <%= f.input :first_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "First Name" } %>
             </div>
             <div class="col-md-6">
-
+              <%= f.input :last_name,
+                          required: true,
+                          input_html: { autocomplete: "Last Name" } %>
             </div>
           </div>
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-md-6">
-                <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "First Name" }%>
-              </div>
-              <div class="col-md-6">
-                <%= f.input :last_name,
-                required: true,
-
-                input_html: { autocomplete: "Last Name" }%>
-              </div>
+          <!-- Email -->
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.input :email,
+                          required: true,
+                          input_html: { autocomplete: "email" } %>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= f.input :email,
-                required: true,
-
-                input_html: { autocomplete: "email" }%>
-              </div>
+          </div>
+          <!-- Password -->
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-              </div>
+            <div class="col-md-6">
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-              </div>
+          </div>
+          <!-- Description -->
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.input :description,
+                          input_html: { class: "input-size", autocomplete: "Description" },
+                          label: "Tell us something about you 🧡" %>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= f.input :description,
-
-                input_html: { class: "input-size", autocomplete: "Description" }%>
-              </div>
-            </div>
-            <div class="img-upload d-flex align-items-center">
-              <i style="font-size: 35px;" class="far fa-user-circle"></i><i style="font-size: 20px; padding: 5px;" class="fas fa-plus"></i>
+          </div>
+          <!-- Photo -->
+          <p style="margin-bottom: 0.2em;">Let us see your pretty face 😃</p>
+          <div class="img-upload d-flex align-items-center">
+            <i class="fas fa-user ml-2" style="font-size: 20px;"></i>
             <%= f.input :photo, as: :file,
-            required: true, label: false %>
-            </div>
+                        required: true, label: false %>
           </div>
-          <div class="form-actions">
-            <%= f.button :submit, "Sign up", :class => 'btn btn-message mb-3', :style => 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
-          </div>
-          <% end %>
         </div>
-      </div>
+        <!-- Submit -->
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", :class => 'btn btn-call', :style => 'width: 100%;' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

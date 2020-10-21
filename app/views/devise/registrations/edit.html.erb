@@ -1,84 +1,105 @@
-<div class="container">
-  <div class="row mt-5" id="register-card">
-    <div class="col-md-12">
-      <div class="row">
-        <div id="right-form" class="col-md-6">
-          <div class="row">
-            <div class="col-md-12 text-right">
-              <h1>Update your profile</h1>
+<div class="container min-vh-100">
+  <div class="row my-5" id="register-card">
+    <div class="col-12" id="right-form">
+      <!-- Name -->
+      <h1 class="corporate text-center"><span class="red">·ban</span>edit·</h1>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+        <div class="row">
+          <!-- Left column -->
+          <div class="col-12 col-lg-6">
+            <!-- Avatar -->
+            <div class="text-center" style="margin-top: 2.1em; margin-bottom: 2.1em;">
+              <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
+                <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
+              <% elsif @user.id <= 39  %> <!-- user is seeded -->
+                <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-large-user-showpage") %>
+              <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+                <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-large-user-showpage") %>
+              <% end %>
+            </div>
+            <!-- Description -->
+            <%= f.input :description,
+                        input_html: { class: "input-size", autocomplete: "Description" },
+                        label: "Tell us something about you 🧡" %>
+            <!-- Photo User -->
+            <p style="margin-bottom: 0.2em;">Let us see your pretty face 😃</p>
+            <div class="img-upload d-flex align-items-center mb-3">
+              <i class="fas fa-user ml-2" style="font-size: 20px;"></i>
+              <%= f.input :photo, as: :file,
+                          equired: true, 
+                          label: false %>
             </div>
           </div>
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <%= f.error_notification %>
-          <div class="form-group">
+          <!-- Right column -->
+          <div class="col-12 col-lg-6">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-6">
                 <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "First Name" }%>
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "First Name" }%>
+              </div>
+              <div class="col-6">
+                <%= f.input :last_name,
+                            required: true,
+                            input_html: { autocomplete: "Last Name" }%>
+              </div>
+            </div>
+            <!-- Email -->
+            <%= f.input :email,
+                        required: true,
+                        input_html: { autocomplete: "email" } %>
+            <!-- Reset password -->
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :password,
+                            hint: "Only if you want to reset your password",
+                            required: false,
+                            input_html: { autocomplete: "new-password" } %>
               </div>
               <div class="col-md-6">
-                <%= f.input :last_name,
-                required: true,
-                input_html: { autocomplete: "Last Name" }%>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= f.input :email,
-                required: true,
-
-                input_html: { autocomplete: "email" }%>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= f.input :password,
-                                hint: "leave it blank if you don't want to change it",
-                                required: false,
-                                input_html: { autocomplete: "new-password" } %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
                 <%= f.input :password_confirmation,
-                                required: false,
-                                input_html: { autocomplete: "new-password" } %>
+                            required: false,
+                            input_html: { autocomplete: "new-password" } %>
               </div>
             </div>
+            <!-- Photo Portfolio -->
+            <p style="margin-bottom: 0.2em;">Let us see your projects ⭐</p>
+            <div class="img-upload d-flex align-items-center mb-3">
+              <i class="fas fa-building ml-2" style="font-size: 20px;"></i>
+              <%= f.input :portfolio_photos, as: :file, 
+                          input_html: { multiple: true },
+                          label: false %>
+            </div>
+            <!-- Authetication with current password -->
             <div class="row">
               <div class="col-md-12">
                 <%= f.input :current_password,
-                                hint: "we need your current password to confirm your changes",
-                                required: true,
-                                input_html: { autocomplete: "current-password" } %>
+                          hint: "we need your current password to confirm your changes",
+                          required: true,
+                          input_html: { autocomplete: "current-password" } %>
               </div>
             </div>
+            <!-- Buttons -->
             <div class="row">
-              <div class="col-md-12">
-                <%= f.input :description,
-
-                input_html: { class: "input-size", autocomplete: "Description" }%>
+              <div class=" col-6 form-actions">
+                <%= f.button :submit, "Update", :class => 'btn btn-call', :style => 'width: 100%' %>
+              </div>
+              <div class=" col-6 form-actions">
+                <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure that you want do delete your ban account?" }, method: :delete, :class => 'btn btn-delete', :style => 'width: 100%' %>
               </div>
             </div>
-            <div class="img-upload d-flex align-items-center">
-              <i style="font-size: 35px;" class="far fa-user-circle"></i><i style="font-size: 20px; padding: 5px;" class="fas fa-plus"></i>
-            <%= f.input :photo, as: :file,
-            required: true, label: false %>
-            </div>
           </div>
-          <div class="form-actions">
-            <%= f.button :submit, "Update", :class => 'btn btn-message mb-3', :style => 'width: -webkit-fill-available; height: 50px; margin: 0;' %>
-            <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-danger mb-3', :style => 'width: -webkit-fill-available; margin: 0;' %>
-          </div>
-          <% end %>
         </div>
-        <div id="left-image" class="col-md-6 text-left">
-          <h1>·ban</h1>
-              <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_130/v1/logo/logo1" class="rounded-circle" />
-        </div>
-      </div>
+      <% end %>
     </div>
+    <!-- 
+    <div id="left-image" class="col-md-6">
+      
+      <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_130/v1/logo/logo1" class="rounded-circle" />
+      
+    </div>
+    -->
   </div>
 </div>

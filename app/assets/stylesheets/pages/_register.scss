@@ -2,34 +2,24 @@
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-right: 10px;
   overflow: hidden;
 }
-
 #left-image {
   background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/v1600371395/ezgif.com-gif-maker_1_furi0j.gif');
   background-size: cover;
-  padding-right: 0;
-  margin-right: 0;
-  background-position: left;
+  background-position: center;
 }
-
 #right-form {
-  padding: 10px;
+  padding: 20px;
 }
 #right-form h1{
-  padding: 10px;
   font-size: 2.2em;
-  padding-left: 0;
 }
-#left-image h1 {
-  text-align: right;
-  font-size: 9em;
-
+#user_email, #user_password, #user_password_confirmation, #user_current_password {
+  height: 42px;
 }
-
 #user_description {
-  margin-top: 0px;
+  min-height: 185px;
 }
 label {
   margin-bottom: 0.2em;
@@ -37,14 +27,14 @@ label {
 input, textarea {
   border-radius: 10px !important;
 }
-#left-image  img{
-  bottom: 25px;
-  left: 20px;
-  position: absolute;
-}
-
 .img-upload {
-  padding: 7px;
+  padding: 5px;
   border-radius: 10px;
   border: 1px solid #ced4da;
+}
+.form-group.file {
+  margin-bottom: 0;
+}
+.form-control-file {
+  margin-left: 15px;
 }

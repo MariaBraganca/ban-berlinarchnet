@@ -13,11 +13,11 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
-  def update?
+  def edit?
     true
   end
 
-  def edit?
+  def update?
     record == user
   end
 end

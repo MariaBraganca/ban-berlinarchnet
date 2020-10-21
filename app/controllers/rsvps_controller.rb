@@ -24,6 +24,7 @@ class RsvpsController < ApplicationController
     @rsvp = Rsvp.find(params[:id])
     @rsvp.destroy
     authorize @rsvp
+
     @event = @rsvp.event
     redirect_to event_path(@event)
   end
