@@ -1,5 +1,4 @@
 #login-card {
-  margin-top: 50px;
   background-color: white;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -7,43 +6,17 @@
   min-width: 180px;
   max-width: 580px;
 }
-
 #top-image {
   background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/v1600421637/branden_ojvomv.gif');
   background-size: cover;
-  padding-right: 0;
-  margin-right: 0;
-  background-position: left;
+  background-position: center;
   min-height: 275px;
 }
-
-#login-logo {
-  position: absolute;
-  bottom: -50px;
-  left: 241px;
-}
-
 #login-form {
- margin-top: 35px;
+  padding: 15px;
 }
-#user_email, #user_password {
- height: 50px;
-}
-
-
-#right-form h1{
-  padding: 10px;
+#login-form h1{
   font-size: 2.2em;
-  padding-left: 0;
-}
-#left-image h1 {
-  text-align: right;
-  font-size: 9em;
-
-}
-
-#user_description {
-  margin-top: 0px;
 }
 label {
   margin-bottom: 0.2em;
@@ -51,14 +24,4 @@ label {
 input, textarea {
   border-radius: 10px !important;
 }
-#left-image  img{
-  bottom: 25px;
-  left: 20px;
-  position: absolute;
-}
 
-.img-upload {
-  padding: 7px;
-  border-radius: 10px;
-  border: 1px solid #ced4da;
-}

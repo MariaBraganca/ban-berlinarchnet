@@ -27,7 +27,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    @user = current_user
+    # @user = current_user
     authorize @event
   end
 
@@ -44,7 +44,7 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
-    @user = User.find(current_user.id)
+    # @user = User.find(current_user.id)
     authorize @event
   end
   
