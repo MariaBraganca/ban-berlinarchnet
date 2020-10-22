@@ -2,8 +2,8 @@
 .btn-call {
   background-color: $call;
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px !important;
+  padding: 10px 25px;
+  border-radius: 5px !important;
   transition: background 0.5s ease;
 }
 .btn-call:hover {
@@ -15,8 +15,8 @@
 .btn-upload {
   color: $call;
   border: 1px solid $call;
-  padding: 8px 24px;
-  border-radius: 4px;
+  padding: 10px 25px;
+  border-radius: 5px !important;
   transition: background 0.5s ease;
 }
 .btn-upload:hover {
@@ -28,8 +28,8 @@
 .btn-attend {
   background-color: $hello;
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px !important;
+  padding: 10px 25px;
+  border-radius: 5px !important;
   transition: background 0.5s ease;
 }
 .btn-attend:hover {
@@ -41,8 +41,8 @@
 .btn-delete {
   background-color: $goodbye;
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px !important;
+  padding: 10px 25px;
+  border-radius: 5px !important;
   transition: background 0.5s ease;
 }
 .btn-delete:hover {

@@ -1,6 +1,6 @@
 <div class="container min-vh-100">
-  <div class="row mt-5" id="new-event-card">
-    <div class="col-md-12">
+  <div class="row mt-5" id="new-form-card">
+    <div class="col-12 px-0">
       <h1 class="corporate text-center"><span class="red">·ban</span>post new·</h1>
       <%= simple_form_for(@post, remote: true) do |f| %>
         <!-- Title -->
@@ -9,11 +9,11 @@
         <%= f.rich_text_area :content, style: "min-height: 300px;" %>
         <div class="row align-items-end">
           <!-- Tags -->
-          <div class="col-12 col-lg-6">
+          <div class="col-lg-6">
             <%= f.input :tag_list %>
           </div>
           <!-- Cover photo -->
-          <div class="col-12 col-lg-6 mb-3">
+          <div class="col-lg-6 mb-3">
             <%= f.input :photo, 
                         as: :file,
                         label: true  %>
