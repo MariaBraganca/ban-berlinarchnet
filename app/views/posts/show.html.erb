@@ -24,22 +24,19 @@
     </div>
   </div>
   <hr>
-  <!-- Content -->
-  <div class = 'row justify-content-center my-5'>
+  <!-- Tags and Date -->
+  <div class="row justify-content-center mt-5">
     <div class="col-12 col-lg-9">
-      <div class="d-flex justify-content-between">
-      <p>
-        <i class="fas fa-tags" style="font-size: 20px;"></i> 
-        <%= @post.tag_list %>
-      </p>
-      </div>
-      <p class= "post"><%= @post.content %></p>
+      <p><i class="fas fa-tags fa-lg mr-1"></i> <%= @post.tag_list %></p>
     </div>
     <div class="col-12 col-lg-3">
-      <p>
-        <i class="fas fa-calendar-check" style="font-size: 20px;"></i> 
-        Posted on the: <%= @post.date.strftime('%d.%m.%Y')  %>
-      </p>
+      <p><i class="fas fa-calendar-check fa-lg mr-1"></i> On the: <%= @post.date.strftime('%d. %B %Y') %></p>
+    </div>
+  </div>
+  <!-- Content -->
+  <div class = 'row mb-5 '>
+    <div class="col-12 col-lg-9">
+      <p class= "post"><%= @post.content %></p>
     </div>
   </div>
   <hr>

@@ -32,31 +32,24 @@
           </div>
         </div>
         <div class="row">
-          <!-- Cover Photo -->
           <div class="col-lg-8">
+            <!-- Cover Photo -->
             <%= f.input :cover_photo, 
                         as: :file, 
                         required: true, 
                         label: true %>
-          </div>
-          <!-- Submit -->
-          <div class="col-lg-4">
-            <%= f.button :submit, class: 'btn btn-call w-100' %>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Photos -->
-          <div class="col-lg-8">
+            <!-- Photos -->
             <%= f.input :event_photos, 
                         as: :file, 
                         input_html: { multiple: true },
                         label: true %>
           </div>
-          <!-- Delete-->
           <div class="col-lg-4">
+            <!-- Submit -->
+            <%= f.button :submit, class: 'btn btn-call w-100 mb-3' %>
+            <!-- Delete-->
             <%= link_to "Delete event", event_path(@event), data: { confirm: "Are you sure that you want do delete your event?" }, method: :delete, :class => 'btn btn-delete w-100' %>
-          </div>
-
+          </div>  
         </div>
       <% end %>
     </div>
@@ -143,7 +136,7 @@
   labelPhotos = document.querySelector(".event_event_photos").querySelector("label");
   labelPhotos.innerHTML = "<i class='fas fa-images fa-lg mr-2'></i>Upload more photos";
   
-  labelPhotos.classList.add("btn", "btn-upload", "w-100");
+  labelPhotos.classList.add("btn", "btn-upload", "w-100", "mb-3", "mb-lg-0");
   // Function handleFiles()  
   inputCover.addEventListener("change", handleFiles, false); 
   inputPhotos.addEventListener("change", handleFiles, false); 
