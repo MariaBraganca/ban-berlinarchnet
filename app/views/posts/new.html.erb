@@ -1,38 +1,50 @@
 <div class="container min-vh-100">
   <div class="row mt-5" id="new-event-card">
     <div class="col-md-12">
-      <h1 class = "mb-4 text-center">Create a new post</h1>
-      <%= form_with(model: @post) do |form| %>
+      <h1 class="corporate text-center"><span class="red">·ban</span>post new·</h1>
+      <%= simple_form_for(@post, remote: true) do |f| %>
         <!-- Title -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="field">
-              <%= form.label :title %>
-              <%= form.text_field :title, class: "form-control", required: true %>
-            </div>
-          </div>
-        </div>
+        <%= f.input :title, as: :string %>
         <!-- Content -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="field">
-              <%= form.rich_text_area :content, style: "min-height: 300px;", required: true %>
-            </div>
+        <%= f.rich_text_area :content, style: "min-height: 300px;" %>
+        <div class="row align-items-end">
+          <!-- Tags -->
+          <div class="col-12 col-lg-6">
+            <%= f.input :tag_list %>
+          </div>
+          <!-- Cover photo -->
+          <div class="col-12 col-lg-6 mb-3">
+            <%= f.input :photo, 
+                        as: :file,
+                        label: true  %>
+
           </div>
         </div>
-        <!-- Photo and Submit -->
-        <div class="row">
-          <div class="col-md-8 mt-3 ">
-            <%= form.label :photo, "Cover Photo" %>
-            <%= form.file_field :photo, as: :file, required: true %>
-          </div>
-          <div class="col-md-4">
-            <div class="field">
-              <button type="submit" class="btn btn-message mb-3 mt-3" style = "width: -webkit-fill-available; height: 50px; margin: 0;">Save</button>
-            </div>
+        <div class="row align-items-end">
+          <!-- Submit -->
+          <div class="col-12">
+              <%= f.button :submit, class: 'btn btn-call w-100' %>
           </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+<script>
+  input = document.querySelector("#post_photo");
+  input.style.display = "none";
+
+  label = document.querySelector(".post_photo").querySelector("label");
+  label.innerHTML = "<i class='fas fa-image fa-lg mr-2'></i>Upload cover photo";
+  
+  label.classList.add("btn", "btn-upload", "w-100", "mb-0");
+  
+  input.addEventListener("change", handleFiles, false); 
+  function handleFiles() {
+    if(input.files.length === 0) {
+      label.innerHTML = "<i class='fas fa-image fa-lg mr-2'></i>Upload cover photo";
+    } else {
+      label.innerHTML = `<i class='fas fa-image fa-lg mr-2'></i>${input.files[0]["name"]}`;
+    }
+  };
+</script>

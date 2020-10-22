@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
-
     def new
         @event = Event.find(params[:event_id])
         @comment = Comment.new
         authorize @comment
-      end
+    end
 
     def create_event_comment
         @event = Event.find(params[:event_id])
@@ -18,6 +17,7 @@ class CommentsController < ApplicationController
 
         if @comment.save
             redirect_to event_path(@event, anchor: "comment-#{@comment.id}")
+            # CommentMailer.new_comment(@comment).deliver_now
         else
             redirect_to event_path(@event, anchor: "comment-form")
             flash[:validation] = "Cannot be empty"
@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
         authorize @comment
 
         if @comment.save
-            redirect_to office_path(@office, anchor: "comments-#{@comment.id}")
+            redirect_to office_path(@office, anchor: "comment-#{@comment.id}")
         else
             redirect_to office_path(@office, anchor: "comment-office")
             flash[:validation] = "Cannot be empty"
@@ -53,15 +53,17 @@ class CommentsController < ApplicationController
         authorize @comment
 
         if @comment.save
-            redirect_to post_path(@post)
-            CommentMailer.new_comment(@comment).deliver_now
+            redirect_to post_path(@post, anchor: "comment-#{@comment.id}")
+            # CommentMailer.new_comment(@comment).deliver_now
         else
-            render 'posts/show'
+            redirect_to post_path(@post, anchor: "comment-form")
+            flash[:validation] = "Cannot be empty"
         end
     end
+
+    private
 
     def comment_params
         params.permit(:content)
     end
-
 end

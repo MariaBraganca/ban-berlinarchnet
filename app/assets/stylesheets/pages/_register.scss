@@ -23,9 +23,6 @@
 #user_email, #user_password, #user_password_confirmation, #user_current_password {
   height: 42px;
 }
-#user_description {
-  min-height: 185px;
-}
 label {
   margin-bottom: 0.2em;
 }
@@ -43,3 +40,4 @@ input, textarea {
 .form-control-file {
   margin-left: 15px;
 }
+

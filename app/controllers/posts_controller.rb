@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_event, only: [:show, :update, :destroy]
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
@@ -6,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @comment = Comment.new
     authorize @post
   end
 
@@ -34,7 +35,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to post_path(@post)
     else
@@ -43,9 +43,20 @@ class PostsController < ApplicationController
     authorize @post
   end
 
+  def destroy
+    @post.destroy
+    authorize @post
+    
+    redirect_to posts_path
+  end
+
   private
 
+  def set_event
+    @post = Post.find(params[:id])
+  end
+
   def post_params
-    params.require(:post).permit(:title, :content, :photo)
+    params.require(:post).permit(:title, :content, :photo, :tag_list)
   end
 end

@@ -1,9 +1,12 @@
 <div class="container min-vh-100">
-  <h1 class="text-center font-weight-bold my-5">Dashboard</h1>
+  <div class="d-flex justify-content-between align-items-center my-5">
+    <h1 class="corporate"><span class="red">·ban</span>dashboard</h1>
+    <%= link_to "Edit Profile", '/users/edit', class: "btn btn-upload" if current_user.id == @user.id %>
+  </div>
   <div class="row mb-5">
     <div class="col-12 col-lg-6">
       <!-- About -->
-      <h2 class="mb-5">Hi, I'm <%= @user.first_name %> <%= @user.last_name %>!</h2>
+      <h2 class="mb-5">Hi, I'm <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>!</h2>
       <!-- Avatar -->
       <div class="text-center mb-3">
         <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
@@ -15,7 +18,6 @@
         <% end %>
       </div>
       <!-- Description -->
-      <%= link_to "Edit Profile", '/users/edit', class: "dropdown-item", class: "btn btn-message mb-3 mt-3", style: "width: -webkit-fill-available" if current_user.id == @user.id %>
       <p><%= @user.description %></p>
       <!-- Message Button -->
       <div class="text-center my-5">

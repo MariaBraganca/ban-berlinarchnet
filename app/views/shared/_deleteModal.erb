@@ -11,14 +11,14 @@
         </button>
       </div>
       <div class="modal-body">
-        Oh no! So sorry to hear you are not attending <%= @event.title%>. Hope to see you in our next event!
+        <p>Oh no! So sorry to hear you are not attending the next <q><%= @event.title%></q> event. <b>Are you sure?</b> 😭</p>
         <img src="https://media.giphy.com/media/2WxWfiavndgcM/giphy.gif" class = "gif" alt="this slowpoke moves"  width="100%" alt="404 image"/>    
       </div>
       <div class="modal-footer">
         <% if @user_attending %>
-          <%= link_to "Confirm", rsvp_path(@rsvp), method: :delete, class: "btn btn-call" %>
+          <%= link_to "Confirm", rsvp_path(@rsvp), method: :delete, class: "btn btn-delete" %>
         <% end %>
-          <%= link_to "Stay", event_path(@event), class: "btn btn-call" %>
+          <%= link_to "Attend", event_path(@event), class: "btn btn-attend" %>
       </div>
     </div>
   </div>
