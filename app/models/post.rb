@@ -5,6 +5,8 @@ class Post < ApplicationRecord
   
   has_rich_text :content
 
+  acts_as_taggable_on :tags
+
   validates :date, presence: true
   validates :title, presence: true
   validates :content, presence: true

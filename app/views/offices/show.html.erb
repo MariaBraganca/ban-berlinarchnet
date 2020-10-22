@@ -164,7 +164,7 @@
           <div class = "form" id= "comment-office" >
             <%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
                 <%= text_field_tag :content %>
-                <%= submit_tag 'Post', class: 'btn btn-flat' %>
+                <%= submit_tag 'Post', class: 'btn btn-upload' %>
             <% end %>
           </div>
           <% if flash[:validation]%>
@@ -175,5 +175,4 @@
         <% end %>
       </div>
     </div>
-  <%# = link_to 'Back to all offices', offices_path, class: 'btn btn-flat mb-3' %>
 </div>

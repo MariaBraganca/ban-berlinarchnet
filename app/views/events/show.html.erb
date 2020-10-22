@@ -4,22 +4,22 @@
             <h5 class="corporate mb-3"><%= @event.format[0] %><span class="red"><%= @event.format[1,4] %></span><%= @event.format[5..-1] %></h5>
             <h1 class="font-weight-bold"><%= @event.title%></h1>
             <div class="d-flex align-items-center mb-3 mb-lg-0">
-                <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar'), user_path(@event.user)  %>
+                <%= link_to cl_image_tag(@event.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@event.user)  %>
                 <p class="pl-3">Hosted by: <%= @event.user.first_name %> <%= @event.user.last_name %></p>
             </div>
         </div>
         <!-- RSVP btn -->
         <div class="col-12 col-lg-4">
             <% if user_signed_in? %>
-				<%= link_to "Edit event", edit_event_path(@event), class: "btn btn-edit mb-2", style: "width: -webkit-fill-available" if current_user.id == @event.user.id %>
+				<%= link_to "Edit event", edit_event_path(@event), class: "btn btn-call w-100 mb-3" if current_user.id == @event.user.id %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-attend" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-attend w-100 mb-3" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>
                 <% else%>
                     <%= render "shared/deleteModal" %>
-                    <button type="button" class="btn btn-call btn-delete" data-toggle="modal" data-target="#deleteModal">
+                    <button type="button" class="btn btn-delete w-100 mb-3" data-toggle="modal" data-target="#deleteModal">
                         Unattend
                     </button>
                 <% end %>
@@ -119,12 +119,12 @@
             <% if user_signed_in? %>
                 <% unless @user_attending %>
                     <%= render "shared/exampleModal" %>
-                    <button type="button" class="btn btn-call btn-attend-bottom mb-5" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-attend mb-5" data-toggle="modal" data-target="#exampleModal">
                         Attend
                     </button>
                 <% else%>
                     <%= render "shared/deleteModal" %>
-                    <button type="button" class="btn btn-call mb-5" data-toggle="modal" data-target="#deleteModal">
+                    <button type="button" class="btn btn-delete mb-5" data-toggle="modal" data-target="#deleteModal">
                         Unattend
                     </button>
                 <% end %>
@@ -153,7 +153,7 @@
                 <div class = "form" id= "comment-form">
                     <%= form_tag event_event_comment_path(@event, url: (event_path([@event], anchor:'comments'))), method: :post do |f| %>
                         <%= text_field_tag :content %>
-                        <%= submit_tag 'Post', class: 'btn btn-flat' %>
+                        <%= submit_tag 'Post', class: 'btn btn-upload' %>
                     <% end %>
                 </div>
                 <% if flash[:validation]%>

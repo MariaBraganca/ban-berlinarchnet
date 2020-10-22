@@ -38,6 +38,9 @@ gem 'devise'
 # Pundit gem
 gem 'pundit'
 
+# Act as taggable
+gem 'acts-as-taggable-on', '~> 6.0'
+
 # Cloudinary gem
 gem 'cloudinary', '~> 1.12.0'
 
