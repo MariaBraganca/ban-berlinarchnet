@@ -1,7 +1,11 @@
 <div class="container min-vh-100">
-  <div class="d-flex justify-content-between align-items-center my-5">
-    <h1 class="corporate"><span class="red">·ban</span>dashboard</h1>
-    <%= link_to "Edit Profile", '/users/edit', class: "btn btn-upload" if current_user.id == @user.id %>
+  <div class="row justify-content-between align-items-center my-5">
+    <div class="col-lg-9">
+      <h1 class="corporate  text-center text-lg-left mb-3 mb-lg-0"><span class="red">·ban</span>dashboard</h1>
+    </div>
+    <div class="col-lg-3">
+      <%= link_to "Edit Profile", '/users/edit', class: "btn btn-upload w-100" if current_user.id == @user.id %>
+    </div>
   </div>
   <div class="row mb-5">
     <div class="col-12 col-lg-6">

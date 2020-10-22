@@ -127,7 +127,7 @@
   labelCover = document.querySelector(".event_cover_photo").querySelector("label");
   labelCover.innerHTML = "<i class='fas fa-image fa-lg mr-2'></i>Upload cover photo";
   
-  labelCover.classList.add("btn", "btn-upload", "w-100", "mb-0");
+  labelCover.classList.add("btn", "btn-upload", "w-100", "mb-3", "mb-lg-0");
   // Event photos
   inputPhotos = document.querySelector("#event_event_photos");
   inputPhotos.style.display = "none";
@@ -135,7 +135,7 @@
   labelPhotos = document.querySelector(".event_event_photos").querySelector("label");
   labelPhotos.innerHTML = "<i class='fas fa-images fa-lg mr-2'></i>Upload more photos";
   
-  labelPhotos.classList.add("btn", "btn-upload", "w-100", "mb-0");
+  labelPhotos.classList.add("btn", "btn-upload", "w-100", "mb-3", "mb-lg-0");
   // Function handleFiles()  
   inputCover.addEventListener("change", handleFiles, false); 
   inputPhotos.addEventListener("change", handleFiles, false); 

@@ -9,7 +9,7 @@
           <!-- Left column -->
           <div class="col-lg-6">
             <!-- Avatar -->
-            <div class="text-center mb-4">
+            <div class="text-center mb-4 mt-4 mt-lg-0">
               <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
                 <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
               <% elsif @user.id <= 39  %> <!-- user is seeded -->
@@ -44,14 +44,14 @@
                         input_html: { autocomplete: "email" } %>
             <!-- Reset password -->
             <div class="row">
-              <div class="col-6">
+              <div class="col-lg-6">
                 <%= f.input :password,
                             hint: "Only if you want to change your password",
                             required: false,
                             input_html: { autocomplete: "new-password" },
                             label: "New Password" %>
               </div>
-              <div class="col-6">
+              <div class="col-lg-6">
                 <%= f.input :password_confirmation,
                             required: false,
                             input_html: { autocomplete: "new-password" } %>
@@ -73,11 +73,11 @@
         </div>
         <div class="row align-items-center">
           <!-- Delete -->
-          <div class="col-lg-6 form-actions">
-            <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure that you want do delete your ban account?" }, method: :delete, :class => 'btn btn-delete w-100' %>
+          <div class="col-lg-6">
+            <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure that you want do delete your ban account?" }, method: :delete, :class => 'btn btn-delete w-100 mb-3 mb-lg-0' %>
           </div>
           <!-- Submit -->
-          <div class="col-lg-6 form-actions">
+          <div class="col-lg-6 ">
             <%= f.button :submit, "Update", :class => 'btn btn-call', :style => 'width: 100%' %>
           </div>
         </div>
