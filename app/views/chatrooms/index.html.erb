@@ -10,9 +10,9 @@
             <%= link_to chatroom_path(chatroom), class: "chat-listing list-group-item  #{'active' if chatroom == @chatroom}" do %>
               <div class="chat-card">
                 <% if chatroom.user_two.photo.attached? %>
-                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar-chat") %>
+                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar") %>
                 <% else %>
-                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar" %>
                 <% end %>
                 <% if chatroom.user_one == current_user %>
                   <h6 class="ml-3"><%= chatroom.user_two.first_name %> <%= chatroom.user_two.last_name %></h6>

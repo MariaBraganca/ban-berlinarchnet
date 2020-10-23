@@ -14,11 +14,11 @@
       <!-- Avatar -->
       <div class="text-center mb-3">
         <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
-          <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-large-user-showpage")  %>
+          <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
         <% elsif @user.id <= 39  %> <!-- user is seeded -->
-          <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-large-user-showpage") %>
+          <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-          <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-large-user-showpage") %>
+          <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-xl") %>
         <% end %>
       </div>
       <!-- Description -->
@@ -48,13 +48,13 @@
           <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
               <% @user.portfolio_photos.each do |photo| %>
                 <div class="col-12 col-lg-3 mb-3">
-                  <%= cl_image_tag photo.key, :class => "photos-events"%>
+                  <%= cl_image_tag photo.key, :class => "photos-gallery clickable"%>
                 </div>
               <% end %>
           <% else @user.id <= 39  %> <!-- user is seeded -->
             <% @user.seed_portfolio.each do |portfolio| %>
               <div class="col-12 col-lg-3 mb-3">
-                <%= cl_image_tag(portfolio, :class => "photos-events") %>
+                <%= cl_image_tag(portfolio, :class => "photos-gallery clickable") %>
               </div>
             <% end %>
           <% end %>
@@ -92,7 +92,7 @@
         <% @user.posts.each do |post|  %>
           <li class="list-group-item col-12">
             <%= link_to post_path(post) do %>
-              <%= render "shared/card-post-user-show",  post_within: post %>
+              <%= render "shared/card-post",  post_within: post %>
             <% end %>
           </li>
         <% end %>

@@ -17,15 +17,15 @@
                 <%# if the user is the current user, we are checking if he has a photo, if not we display the one that is already given; else we do the same for the other user but we are checking it on the chats "summary"%>
                 <% if chatroom.user_one == current_user %>
                   <% if chatroom.user_two.photo.attached? %>
-                    <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar-chat") %>
+                    <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar") %>
                   <% else %>
-                    <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                    <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar" %>
                   <% end %>
                 <% else %>
                   <% if chatroom.user_one.photo.attached? %>
-                    <%= cl_image_tag(chatroom.user_one.photo.key, :class => "avatar-chat") %>
+                    <%= cl_image_tag(chatroom.user_one.photo.key, :class => "avatar") %>
                   <% else %>
-                    <%= cl_image_tag (chatroom.user_one.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                    <%= cl_image_tag (chatroom.user_one.cl_img_tag), gravity: :face, class: "avatar" %>
                   <% end %>
                 <% end %>
 
@@ -63,9 +63,9 @@
                 <small class="chat-datetime-in"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
                 <div class="message-avatar">
                   <% if message.user.photo.attached? %>
-                    <%= cl_image_tag(message.user.photo.key, :class => "avatar-chat")%>
+                    <%= cl_image_tag(message.user.photo.key, :class => "avatar")%>
                   <% else %>
-                    <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar-chat" %>
+                    <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar" %>
                   <% end %>
                 <!-- <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span> -->
                 <div class="message-text-in">

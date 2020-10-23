@@ -46,7 +46,7 @@
       <h2 class="mb-3">Comments <span class="badge-number"><%= @post.comments.length %></span></h2>
       <!-- Comments past -->
       <% @post.comments.each do |comment| %>
-        <div class="card-comment mb-3 p-10" id="comment-<%= comment.id %>">
+        <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
           <% if comment.user.photo.attached? %>
             <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
           <% else %>
@@ -54,7 +54,7 @@
           <% end %>
           <div class="card-comment-infos">
             <h6><%= comment.content %></h6>
-            <p>Time: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>
+            <p>At: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>
             <p>Posted by: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
           </div>
         </div>
