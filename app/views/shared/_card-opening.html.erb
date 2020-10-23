@@ -1,7 +1,10 @@
 <div class="card-opening">
-  <div class="card-office-infos">
-      <h2><%= opening_within.job_position %></h2>
-      <p><%= opening_within.office.name %></p>
-      <p><i class="fas fa-calendar-check" style="color: gray"></i> <%= opening_within.date.strftime('%d.%m.%Y') %></p>
+  <div class="card-opening-infos w-100">
+    <div class="d-flex justify-content-between mb-2">
+      <h3 class="corporate"><span class="red">·ban</span>job</h3>
+      <h3 class="corporate red"><%= opening_within.date.strftime('%d.%m.%Y') %></h3>
+    </div>
+    <h1><%= opening_within.job_position %></h1>
+    <p><i class="fas fa-building fa-lg" style="color: gray;"></i> <%= opening_within.office.name %></p>
   </div>
 </div>

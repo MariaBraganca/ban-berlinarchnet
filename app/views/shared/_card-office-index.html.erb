@@ -1,72 +1,63 @@
 <div class="card-office mb-3" id="index-card">
   <%= cl_image_tag(office_within.banner_url, :class => "card-office-img") %>
   <div class="card-office-infos">
-    <div>
-
-  <%   if office_within.ratings.empty? %>
-  <%     culture_average = 0 %>
-  <%     salary_average = 0 %>
-  <%     architecture_average = 0 %>
-  <%   else %>
-  <%     # Average Ratings for Culture %>
-  <%     total = [] %>
-  <%     office_within.ratings.each do |rating| %>
-  <%       total << rating.culture %>
-  <%     end %>
-  <%     culture_average = (total.sum / total.size).round %>
-  <%     # Average Ratings for Salary %>
-  <%     total = [] %>
-  <%     office_within.ratings.each do |rating| %>
-  <%       total << rating.salary %>
-  <%     end %>
-  <%     salary_average = (total.sum / total.size).round %>
-  <%     # Average Ratings for Architecture %>
-  <%     total = [] %>
-  <%     office_within.ratings.each do |rating| %>
-  <%       total << rating.architecture %>
-  <%     end %>
-  <%     architecture_average = (total.sum / total.size).round %>
-  <%   end %>
-
-<div id="index-rating" class="">
-    <div class="d-flex justify-content-between text-left">
-  <p>
-    <% culture_average.times do %>
-      <i class="fas fa-heart" style="color: #e53e3e"></i>
+    <% if office_within.ratings.empty? %>
+      <% culture_average = 0 %>
+      <% salary_average = 0 %>
+      <% architecture_average = 0 %>
+    <% else %>
+      <!-- Average Ratings for Culture -->
+      <% total = [] %>
+      <% office_within.ratings.each do |rating| %>
+        <% total << rating.culture %>
+      <% end %>
+      <% culture_average = (total.sum / total.size).round %>
+      <!-- Average Ratings for Salary -->
+      <% total = [] %>
+      <% office_within.ratings.each do |rating| %>
+        <% total << rating.salary %>
+      <% end %>
+      <% salary_average = (total.sum / total.size).round %>
+      <!-- Average Ratings for Architecture -->
+      <% total = [] %>
+      <% office_within.ratings.each do |rating| %>
+        <% total << rating.architecture %>
+      <% end %>
+      <% architecture_average = (total.sum / total.size).round %>
     <% end %>
-    <% (5-culture_average).times do %>
-      <i class="fas fa-heart" style="color: lightgray"></i>
-    <% end %>
-  </p>
-   </div>
-
-    <div class="d-flex justify-content-between">
-  <p>
-    <% salary_average.times do %>
-      <i class="fas fa-euro-sign" style="color: #90be6d"></i>
-    <% end %>
-    <% (5-salary_average).times do %>
-      <i class="fas fa-euro-sign" style="color: lightgray"></i>
-    <% end %>
-  </p>
-  </div>
-
-    <div class="d-flex justify-content-between">
-  <p>
-    <% architecture_average.times do %>
-      <i class="fas fa-star" style="color: #e9c46a"></i>
-    <% end %>
-    <% (5-architecture_average).times do %>
-      <i class="fas fa-star" style="color: lightgray"></i>
-    <% end %>
-  </p>
-  </div>
-</div>
-      <h2><%= office_within.name %></h2>
-     <i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= office_within.location %></p>
-      <div class="d-flex">
-
+    <div id="index-rating" class="">
+      <div class="d-flex justify-content-between text-left">
+        <p>
+          <% culture_average.times do %>
+            <i class="fas fa-heart" style="color: #e53e3e"></i>
+          <% end %>
+          <% (5-culture_average).times do %>
+            <i class="fas fa-heart" style="color: lightgray"></i>
+          <% end %>
+        </p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p>
+          <% salary_average.times do %>
+            <i class="fas fa-euro-sign" style="color: #90be6d"></i>
+          <% end %>
+          <% (5-salary_average).times do %>
+            <i class="fas fa-euro-sign" style="color: lightgray"></i>
+          <% end %>
+        </p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p>
+          <% architecture_average.times do %>
+            <i class="fas fa-star" style="color: #e9c46a"></i>
+          <% end %>
+          <% (5-architecture_average).times do %>
+            <i class="fas fa-star" style="color: lightgray"></i>
+          <% end %>
+        </p>
       </div>
     </div>
+    <h2><%= office_within.name %></h2>
+    <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= office_within.location %></p>
   </div>
 </div>
