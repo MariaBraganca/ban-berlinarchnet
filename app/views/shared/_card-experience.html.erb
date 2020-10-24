@@ -2,7 +2,7 @@
 
 <div class="card-office mb-3">
   <%= cl_image_tag(experience_within.office.banner_url, :class => "card-office-img") %>
-  <div class="card-office-infos">
+  <div class="card-infos">
     <div>
       <h2><%= experience_within.job_position %></h2>
       <% if experience_within.end_date > DateTime.now()   %>

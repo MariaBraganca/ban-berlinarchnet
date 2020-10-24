@@ -1,13 +1,13 @@
-<header>
-  <div class="overlay"></div>
-  <%= cl_image_tag(@office.banner_url, :class => "banner-image")%>
-    <div class="container h-100">
-      <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
-          <h1 class="display-4 font-weight-bold"><%= @office.name %></h1>
+<header class="banner">
+    <div class="banner-overlay"></div>
+    <%= cl_image_tag(@office.banner_url, :class => "banner-image")%>
+      <div class="banner-container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-4 font-weight-bold"><%= @office.name %></h1>
+          </div>
         </div>
       </div>
-    </div>
 </header>
 
 <div class="container">
@@ -15,7 +15,7 @@
     <!-- About -->
     <div class="row mb-3">
       <div class="col-12 col-lg-3">
-        <p class="heading-flat">About</p>
+        <p class="office-heading">About</p>
       </div>
       <div class="col-12 col-lg-9">
         <p><%= @office.description %></p>
@@ -24,7 +24,7 @@
     <!-- Website -->
     <div class="row mb-3">
       <div class="col-12 col-lg-3">
-        <p class="heading-flat">Website</p>
+        <p class="office-heading">Website</p>
       </div>
       <div class="col-12 col-lg-9 mb-3">
         <%= link_to url_for(@office.url), :target => '_blank' do %>
@@ -35,7 +35,7 @@
     <!-- Ratings -->
     <div class="row mb-3">
       <div class="col-12 col-lg-3">
-        <p class="heading-flat">Ratings</p>
+        <p class="office-heading">Ratings</p>
       </div>
       <div class="col-12 col-lg-9">
         <div class="row">
@@ -76,7 +76,7 @@
     <!-- Location -->
     <div class="row mb-3">
       <div class="col-12 col-lg-3">
-        <p class="heading-flat mb-3">Location</p>
+        <p class="office-heading mb-3">Location</p>
       </div>
       <div class="col-12 col-lg-9">
         <div id="map"
@@ -91,7 +91,7 @@
     <% unless @office.openings.empty? %>
       <div class="row mb-5">
         <div class="col-12 col-lg-3">
-          <p class="heading-flat mb-3">Openings</p>
+          <p class="office-heading mb-3">Openings</p>
         </div>
         <div class="col-12 col-lg-9">
           <ul class="list-group list-group-flush">
@@ -147,9 +147,9 @@
             <% else %>
               <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
             <% end %>
-            <div class="card-comment-infos">
+            <div class="card-infos">
+              <p><%= comment.date.strftime("%H:%M | %d.%m.%Y") %> </p>
               <h6><%= comment.content %></h6>
-              <p>At: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>
               <p>Posted by: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
             </div>
           </div>

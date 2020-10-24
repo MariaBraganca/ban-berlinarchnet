@@ -1,20 +1,20 @@
 <!-- Banner -->
-<header>
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="https://res.cloudinary.com/db5jh0zwo/video/upload/v1599042195/ezgif.com-gif-maker_am5cdf.mp4" type="video/mp4">
-  </video>
-  <div class="container h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-4 font-weight-bold">BAN - Berlin Architectural Network</h1>
-        <p class="lead mb-3">Get into Berlin's architecture scene.</p>
-				<% unless user_signed_in? %>
-					<%= link_to 'Join', new_user_registration_path, :class => "btn btn-call"%>
-				<% end %>
-      </div>
-    </div>
-  </div>
+<header class="banner">
+		<div class="banner-overlay"></div>
+		<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="https://res.cloudinary.com/db5jh0zwo/video/upload/v1599042195/ezgif.com-gif-maker_am5cdf.mp4" type="video/mp4">
+		</video>
+		<div class="banner-container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100 text-white">
+					<h1 class="display-4 font-weight-bold">BAN - Berlin Architectural Network</h1>
+					<p class="lead mb-3">Get into Berlin's architecture scene.</p>
+					<% unless user_signed_in? %>
+						<%= link_to 'Join', new_user_registration_path, :class => "btn btn-call"%>
+					<% end %>
+				</div>
+			</div>
+		</div>
 </header>
 
 <div class="container">

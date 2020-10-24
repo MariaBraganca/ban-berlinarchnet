@@ -1,8 +1,55 @@
+// form card
+.form-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.form-infos {
+  padding: 20px;
+}
+.form-infos h1{
+  font-size: 2.2em;
+}
+// form tags
+input, textarea {
+  border-radius: 5px !important;
+}
+.form-control {
+  height: 46px;
+}
+// event edit
+.form-group.file {
+  margin-bottom: 0;
+}
+// form images
+#signup-img {
+  background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/v1600371395/ezgif.com-gif-maker_1_furi0j.gif');
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 768px) {
+  #signup-img {
+    padding-top: 70%;
+  }
+}
+#login-img {
+  background-image: url('https://res.cloudinary.com/dj9iphc8u/image/upload/v1600421637/branden_ojvomv.gif');
+  background-size: cover;
+  background-position: center;
+  min-height: 275px;
+}
+// Comments form
 input[type="text"] {
   width: 100%;
-  height: 42px;
+  height: 46px;
   padding: 12px 20px;
   margin-bottom: 10px;
   border-radius: 3px;
   border: 1px solid lightgray;
+}
+// Searchbar for Offices and Community
+#query {
+	height: 46px;
+	margin-bottom: 0;
 }

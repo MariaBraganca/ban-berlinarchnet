@@ -17,9 +17,9 @@
     <!-- Cover photo -->
     <div class="col-12 col-lg-6">
       <% if @post.photo.attached? %>
-          <%= cl_image_tag(@post.photo.key, :class => "event-img mb-3") %>
+          <%= cl_image_tag(@post.photo.key, :class => "cover-img mb-3") %>
       <% else %>
-          <img src="https://source.unsplash.com/800x600/?architecture" class="event-img mb-3" alt="placeholder">
+          <img src="https://source.unsplash.com/800x600/?architecture" class="cover-img mb-3" alt="placeholder">
       <% end %>
     </div>
   </div>
@@ -52,9 +52,9 @@
           <% else %>
             <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
           <% end %>
-          <div class="card-comment-infos">
+          <div class="card-infos">
+            <p><%= comment.date.strftime("%H:%M | %d.%m.%Y") %> </p>
             <h6><%= comment.content %></h6>
-            <p>At: <%= comment.date.strftime("%H:%M %d.%m.%Y") %> </p>
             <p>Posted by: <%= comment.user.first_name %> <%= comment.user.last_name %></p>
           </div>
         </div>
