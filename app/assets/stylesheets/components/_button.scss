@@ -11,7 +11,7 @@
   color: white;
   text-decoration: none;
 }
-// comments
+// upload and comments
 .btn-upload {
   color: $call;
   border: 1px solid $call;
@@ -50,7 +50,16 @@
   color: white;
   text-decoration: none;
 }
-
+// sort
+.sort-btn {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+.sort-btn:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+} 
 
 /**** CUSTOM BUTTON ****/
 .buttons-coll {

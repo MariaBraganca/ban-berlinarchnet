@@ -1,13 +1,10 @@
 <div class="container min-vh-100">
-  <div class="row my-5" id="register-card">
+  <div class="row form-card my-5">
     <!-- Left Image -->
-    <div class="col-lg-6" id="left-image">
-      <!--
-      <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_130/v1/logo/logo1" class="rounded-circle avatar" />
-        -->
+    <div class="col-lg-6" id="signup-img">
     </div>
     <!-- Form -->
-    <div class="col-12 col-lg-6" id="right-form">
+    <div class="col-lg-6 form-infos">
       <h1 class="corporate text-center"><span class="red">·ban</span>signup·</h1>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>

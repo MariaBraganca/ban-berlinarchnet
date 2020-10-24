@@ -1,13 +1,11 @@
 <div class="container min-vh-100">
   <div class="row justify-content-center my-5">
-    <div class="col-lg-6 px-0" id="login-card">
+    <div class="col-lg-6 form-card px-0">
       <!-- Top image -->
-      <div id="top-image">
-        <!-- 
-        <img alt="logo" src="https://res.cloudinary.com/db5jh0zwo/image/upload/c_scale,w_100/v1/logo/logo1" class="rounded-circle" id="login-logo" />
-        -->
-      </div>  
-      <div id="login-form">
+      <div id="login-img">
+      </div> 
+      <!-- Form details --> 
+      <div class="form-infos">
         <h1 class="corporate text-center"><span class="red">·ban</span>login·</h1>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">

@@ -1,28 +1,15 @@
 // Import your components CSS files here.
 @import "alert";
 @import "avatar";
-@import "navbar";
-
+@import 'banner';
 @import "button";
 @import "badge";
-
-@import "heading";
-
-@import "card-event";
-@import "card-office";
-@import "card-opening";
-@import "card-post";
-@import "card-experience";
-
-@import "footer";
-@import "chatroom";
-
-@import 'photos-gallery';
-@import 'comments';
-@import 'form';
-@import 'map';
-
-@import 'video_bootstrap';
+@import "card";
 @import 'carousel';
-@import 'search-bar';
+@import "chatroom";
+@import "footer";
+@import 'form';
+@import "heading";
 @import 'image';
+@import 'map';
+@import "navbar"; 

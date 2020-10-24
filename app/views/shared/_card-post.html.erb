@@ -1,12 +1,12 @@
 <div class="card-post">
   <%= cl_image_tag(post_within.user.cl_img_tag, :class => "avatar-large ml-3") %>
-  <div class="card-post-infos w-100">
+  <div class="card-infos w-100">
     <div class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><span class="red">·ban</span>post</h3>
       <h3 class="corporate red"><%= post_within.date.strftime('%d.%m.%Y') %></h3>
     </div>
-    <h1><%= post_within.title %></h1>
+    <h2><%= post_within.title %></h2>
     <p>Posted by: <%= post_within.user.first_name %> <%= post_within.user.last_name %></p>
-    <p><%= post_within.tag_list %></p>
+    <p><i class="fas fa-tags fa-lg gray mr-1"></i> <%= post_within.tag_list %></p>
   </div>
 </div>

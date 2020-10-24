@@ -1,16 +1,25 @@
-.heading-flat {
-    padding: 8px 0px;
-    border-top: 2px solid black;
-    float: left;
-    width: 50%;
-    font-weight: 700;
-}
 .corporate {
-    font-family: 'Share Tech Mono', monospace;
+	font-family: 'Share Tech Mono', monospace;
+}
+.office-heading {
+	padding: 8px 0px;
+	border-top: 2px solid black;
+	float: left;
+	width: 50%;
+	font-weight: 700;
 }
 .red {
-    color: $call;
+  color: $call;
 }
 .green {
-    color: $hello
+  color: $hello;
+}
+.yellow {
+  color: $star;
+}
+.blue {
+  color: $tag;
+}
+.gray {
+  color: darkgray;
 }

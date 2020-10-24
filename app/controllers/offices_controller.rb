@@ -1,4 +1,5 @@
 class OfficesController < ApplicationController
+  before_action :set_office, only: [:show]
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
@@ -37,7 +38,6 @@ class OfficesController < ApplicationController
   end
 
   def show
-    @office = Office.find(params[:id])
     authorize @office
 
     @marker = [
@@ -47,6 +47,17 @@ class OfficesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { office: @office })
       }]
 
+    set_average()
+    @comment = Comment.new
+  end
+
+  private
+
+  def set_office
+    @office = Office.find(params[:id])
+  end
+
+  def set_average
     # Averages
     if @office.ratings.empty?
       @culture_average = 0
@@ -54,25 +65,23 @@ class OfficesController < ApplicationController
       @architecture_average = 0
     else
       # Average Ratings for Culture
-      total = []
+      culture_ratings = []
       @office.ratings.each do |rating|
-        total << rating.culture
+        culture_ratings << rating.culture
       end
-      @culture_average = (total.sum / total.size).round
+      @culture_average = (culture_ratings.sum / culture_ratings.size).round
       # Average Ratings for Salary
-      total = []
+      salary_ratings = []
       @office.ratings.each do |rating|
-        total << rating.salary
+        salary_ratings << rating.salary
       end
-      @salary_average = (total.sum / total.size).round
+      @salary_average = (salary_ratings.sum / salary_ratings.size).round
       # Average Ratings for Architecture
-      total = []
+      architecture_ratings = []
       @office.ratings.each do |rating|
-        total << rating.architecture
+        architecture_ratings << rating.architecture
       end
-      @architecture_average = (total.sum / total.size).round
+      @architecture_average = (architecture_ratings.sum / architecture_ratings.size).round
     end
-
-    @comment = Comment.new
-  end 
+  end
 end
