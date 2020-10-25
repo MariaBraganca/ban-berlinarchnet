@@ -1,67 +1,63 @@
 <main class="container min-vh-100">
-	<!-- Header -->
+	<!-- ***************  HEADER OFFICE  **************** -->
 	<header class="text-center my-5">
 		<h1 class="font-weight-bold">Offices</h1>
 		<p>Check out architecture offices in Berlin!</p>
 	</header>
-	<!-- Main Section, row with 2 columns -->
-	<div class="row justify-content-center">
-		<!-- Right column -->
-		<div class="col-lg-6 mb-3">
-			<!-- Offices Map -->
+
+	<!-- ***************  SEARCH / SORT  **************** -->
+	<section class="my-5">
+		<!-- ***************  SEARCHBAR  **************** -->
+		<%= form_tag offices_path, method: :get, class: "searchbar" do %>
+			<section class="row justify-content-center">
+				<div class="col-lg-9 mb-3">
+					<%= text_field_tag :query,
+						params[:query],
+						id: "query",
+						placeholder: "Find an office"
+					%>
+				</div>
+				<div class="col-lg-3 mb-3">
+					<%= submit_tag "Search", class: "btn btn-call w-100" %>
+				</div>
+			</section>
+		<% end %>
+
+		<!-- ***************  SORTING  **************** -->
+		<section class="row justify-content-between align-items-center">
+			<div class="col-6 col-lg-3">
+				<button class="btn sort-btn w-100 mb-3"><i class="fas fa-sort-alpha-up"></i></i> <%= link_to "Alphabetic", offices_path %></button>
+			</div>
+			<div class="col-6 col-lg-3">
+				<button class="btn sort-btn w-100 mb-3"><i class="fas fa-star yellow"></i> <%= link_to "Architecture", offices_path(order: '@offices_arch') %></button>
+			</div>
+			<div class="col-lg-3 d-none d-lg-block">
+				<button class="btn sort-btn w-100 mb-3"><i class="fas fa-heart red"></i> <%= link_to "Culture", offices_path(order: '@offices_cult') %></button>
+			</div>
+			<div class="col-lg-3 d-none d-lg-block">
+				<button class="btn sort-btn w-100 mb-3"><i class="fas fa-euro-sign green"></i> <%= link_to "Salary", offices_path(order: '@offices_sala') %></button>
+			</div>
+		</section>
+	</section>
+
+	<!-- ***************  MAP / OFFICES  **************** -->
+	<section class="row justify-content-center">
+		<!-- ***************  MAP  **************** -->
+		<section class="d-none d-lg-block col-lg-6 mb-3">
 			<div id="map"
 				style="width: 100%; height: 85vh; position: -webkit-sticky; position: sticky; top: 90px;"
 				data-markers="<%= @markers.to_json %>"
 				data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 			</div>
-		</div>
-		<!-- Left column -->
-		<div class="col-lg-6">
-			<!-- Search section-->
-			<section>
-				<!-- Search Buttons-->
-				<div class="row justify-content-between align-items-center">
-					<div class="col-12 text-center mb-3">
-						<p class="my-lg-0" ><i class="fas fa-sort-amount-up fa-lg mr-1"></i>Filter by: </p>
-					</div>
-					<div class="col-12 col-lg-4">
-						<button class="btn sort-btn w-100 mb-3"><i class="fas fa-heart" style="color: #e53e3e"></i> <%= link_to "Culture", offices_path(order: '@offices_cult') %></button>
-					</div>
-					<div class="col-12 col-lg-4">
-						<button class="btn sort-btn w-100 mb-3"><i class="fas fa-star" style="color: #e9c46a"></i> <%= link_to "Architecture", offices_path(order: '@offices_arch') %></button>
-					</div>
-					<div class="col-12 col-lg-4">
-						<button class="btn sort-btn w-100 mb-3"><i class="fas fa-euro-sign" style="color: #90be6d"></i> <%= link_to "Salary", offices_path(order: '@offices_sala') %></button>
-					</div>
-				</div>
-			</section>
-				<!-- Searchbar-->
-				<%= form_tag offices_path, method: :get, class: "searchbar" do %>
-					<div class="row">
-						<div class="col-12 col-lg-9 mb-3">
-							<%= text_field_tag :query,
-								params[:query],
-								id: "query",
-								placeholder: "Find an office"
-							%>
-							<%= hidden_field_tag :order,
-								params[:order]
-							%>
-						</div>
-						<div class="col-12 col-lg-3 mb-3">
-							<%= submit_tag "Search", class: "btn btn-call w-100" %>
-						</div>
-					</div>
+		</section>
+
+		<!-- ***************  OFFICES  **************** -->
+		<section class="col-lg-6">
+			<% @offices.each do |office| %>
+				<%= link_to office_path(office) do %>
+					<%= render "shared/card-office", office_within: office %>
 				<% end %>
-			<!-- Offices section-->
-			<section>
-					<% @offices.each do |office| %>
-						<%= link_to office_path(office) do %>
-							<%= render "shared/card-office", 
-								office_within: office %>
-						<% end %>
-					<% end %>
-			</section>
-		</div>
-	</div>
+			<% end %>
+		</section>
+	</section>
 </main>

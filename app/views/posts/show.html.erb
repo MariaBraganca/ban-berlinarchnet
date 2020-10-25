@@ -55,7 +55,7 @@
   <section class = 'row my-5'>
     <div class = 'col-lg-6'>
       <h2 class="mb-3">Comments <span class="badge-number"><%= @post.comments.length %></span></h2>
-      <% @post.comments.each do |comment| %> <!-- PAST -->
+      <% @post.comments.each do |comment| %>
         <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
           <% if comment.user.photo.attached? %>
             <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
@@ -72,14 +72,14 @@
         </div>
       <% end %>
     
-      <% if user_signed_in? %> <!-- NEW -->
+      <% if user_signed_in? %> <!-- FORM -->
         <div class = "form" id= "comment-form">
           <%= form_tag post_post_comment_path(@post, url: (post_path([@post], anchor:'comments'))), method: :post do |f| %>
             <%= text_field_tag :content %>
             <%= submit_tag 'Post', class: 'btn btn-upload' %>
           <% end %>
         </div>
-        <% if flash[:validation]%>
+        <% if flash[:validation] %>
           <div>
             <%= flash[:validation] %>
           </div>

@@ -1,4 +1,4 @@
-<main class= "container">
+<main class= "container min-vh-100">
   <!-- ***************  HEADER EVENT  **************** -->
   <header class="row justify-content-between align-items-end my-5">
     <!-- ***************  INFO  **************** -->
@@ -141,7 +141,7 @@
     <!-- ***************  COMMENTS  **************** -->
     <section class='col-lg-6 mb-5'>
       <h2 class="mb-3">Comments <span class="badge-number"><%= @event.comments.length %></span></h2>
-      <% @event.comments.each do |comment| %> <!-- PAST -->
+      <% @event.comments.each do |comment| %>
         <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
           <% if comment.user.photo.attached? %>
             <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
@@ -158,7 +158,7 @@
         </div>
       <% end %>
 
-      <% if user_signed_in? %> <!-- NEW -->
+      <% if user_signed_in? %> <!-- FORM -->
         <div class = "form" id= "comment-form">
           <%= form_tag event_event_comment_path(@event, url: (event_path([@event], anchor:'comments'))), method: :post do |f| %>
             <%= text_field_tag :content %>

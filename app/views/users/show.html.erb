@@ -1,53 +1,81 @@
-<div class="container min-vh-100">
-  <header class="my-5">
-    <h5 class="corporate text-center text-lg-left mb-3"><span class="red">·ban</span>dashboard</h5>
-    <h1 class="font-weight-bold">Hi, I'm <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>!</h1>
+<main class="container min-vh-100">
+  <!-- ***************  HEADER USER  **************** -->
+  <header class="row justify-content-between align-items-end my-5">
+    <div class="col-lg-8">
+      <h5 class="corporate mb-3"><span class="red">·ban</span>dashboard</h5>
+      <h1 class="font-weight-bold mb-3 mb-lg-0">Hi, I'm <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>!</h1>
+    </div>
+    <% if current_user == @user %>
+      <div class="col-lg-4">
+        <button class='btn btn-upload w-100'><%= link_to 'Edit Dashboard', edit_user_registration_path %></button>
+      </div>
+    <% end %>
   </header>
-  <div class="row mb-5">
-    <div class="col-12 col-lg-6">
-      <!-- About -->
+
+  <!-- ***************  OVERVIEW  **************** -->
+  <section class="row mb-5">
+    <!-- ***************  ABOUT  **************** -->
+    <section class="col-12 col-lg-6">
       <h2 class="mb-5">About</h2>
-      <!-- Avatar -->
-      <div class="text-center mb-3">
-        <% if @user.photo.attached? %> <!-- user has uploaded a profile pic -->
+      <div class="text-center mb-3"> 
+        <% if @user.photo.attached? %>
           <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
-        <% elsif @user.id <= 39  %> <!-- user is seeded -->
+        <% elsif @user.cl_img_tag %>
           <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
-        <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+        <% else  %>
           <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-xl") %>
         <% end %>
       </div>
-      <!-- Description -->
       <p><%= @user.description %></p>
-      <!-- Message Button -->
-      <div class="text-center my-5">
-        <% if policy(Chatroom).create? %>
-          <%= link_to "Let's chat!", user_chatrooms_path(@user), method: :post, class: "btn btn-call" %>
+
+      <!-- ***************  CHAT  **************** -->
+      <section class="col-12 px-0 my-5">
+        <% if policy(Chatroom).create? && current_user != @user %>
+          <%= link_to "Let's chat!", user_chatrooms_path(@user), method: :post, class: "btn btn-call w-100" %>
         <% end %>
-      </div>
-    </div>
-    <!-- Experience -->
-    <div class="col-12 col-lg-6">
+      </section>
+    </section>
+
+    <!-- ***************  EXPERIENCE  **************** -->
+    <section class="col-12 col-lg-6">
       <h2 class="mb-3">Experience</h2>
-      <% @user.experiences.each do |experience|  %>
-        <%= render "shared/card-experience", experience_within: experience %>
+      <% unless @user.experiences.empty? %>
+        <% @user.experiences.each do |experience|  %>
+          <%= render "shared/card-experience", experience_within: experience %>
+        <% end %>
+      <% else %>
+        <% if current_user == @user %>
+          <p>Add working experiences to you dashboard!</p>
+        <% else %>
+          <p><%= @user.first_name %> hasn't added any working experiences yet.</p>
+        <% end %>
       <% end %>
-    </div>
-  </div>
+    </section>
+  </section>
   <hr>
-  <!-- Portfolio -->
-  <h2 class="mb-3">Portfolio</h2>
+
+  <!-- ***************  PORTFOLIO  **************** -->
+  <section class="my-5">
+    <h2 class="mb-3">Portfolio</h2>
+
+    <% if !@user.portfolio_photos.attached? && @user.seed_portfolio.empty? %>
+      <% if current_user == @user %>
+        <p>Upload photos from your projects!</p>
+      <% else %>
+        <p><%= @user.first_name %> didn't upload any projects yet.</p>
+      <% end %>
+    <% end %>
+
     <div id="gallery" data-toggle="modal" data-target="#portfolioModal">
-      <!-- Portfolio Pictures -->
       <div data-target="#carouselExampleSlidesOnly" data-slide-to="0">
         <div class="row mb-5">
-          <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
+          <% if @user.portfolio_photos.attached?  %> <!-- USER UPLOAD -->
               <% @user.portfolio_photos.each do |photo| %>
                 <div class="col-12 col-lg-3 mb-3">
                   <%= cl_image_tag photo.key, :class => "photos-gallery clickable"%>
                 </div>
               <% end %>
-          <% else @user.id <= 39  %> <!-- user is seeded -->
+          <% else %> <!-- SEED -->
             <% @user.seed_portfolio.each do |portfolio| %>
               <div class="col-12 col-lg-3 mb-3">
                 <%= cl_image_tag(portfolio, :class => "photos-gallery clickable") %>
@@ -56,22 +84,21 @@
           <% end %>
         </div>
       </div>
-      <!-- user didn't upload a profile picture, default logo shows up -->
     </div>
+
+    <%= render "shared/portfolioModal" %> <!-- MODAL -->
+  </section>
   <hr>
 
-  <!-- model for portolio with carousel-->
-  <%= render "shared/portfolioModal" %>
 
-  <!-- Members -->
-  <div class="row mb-5">
-    <!-- Members Events -->
+  <!-- ***************  EVENTS  **************** -->
+  <section class="row my-5">
+    <h2 class="col-12 mb-3">My Events</h2>
     <% unless @user.events.empty? %>
-      <h2 class="col-12 col-lg-12 mb-3">My Events</h2>
-      <div class="col-12 col-lg-12 mb-5">
+      <div class="col-12">
         <div class="row">
           <% @user.events.each do |event|  %>
-            <div class='col-12 col-lg-3 mb-3'>
+            <div class='col-lg-3 mb-3'>
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event", event_within: event %>
               <% end %>
@@ -79,22 +106,37 @@
           <% end %>
         </div>
       </div>
+    <% else %>
+      <% if current_user == @user %>
+        <p class="col-12">Check our events page to host or attend an event!</p>
+       <% else %>
+        <p class="col-12"><%= @user.first_name %> didn't host or attend any events yet.</p>
+      <% end %>
     <% end %>
-    <!-- Members Posts -->
+  </section>
+  <hr>
+
+  <!-- ***************  POSTS  **************** -->
+  <section class="row my-5">
+    <h2 class="col-12 mb-3">My Posts</h2>
     <% unless @user.posts.empty? %>
-    <h2 class="col-12 col-lg-12 mb-3">My Posts</h2>
-    <div class="col-12 col-lg-6">
-      <ul class="list-group list-group-flush">
-        <% @user.posts.each do |post|  %>
-          <li class="list-group-item col-12">
-            <%= link_to post_path(post) do %>
-              <%= render "shared/card-post",  post_within: post %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+      <div class="col-lg-6">
+        <ul class="list-group list-group-flush">
+          <% @user.posts.each do |post|  %>
+            <li class="list-group-item col-12">
+              <%= link_to post_path(post) do %>
+                <%= render "shared/card-post",  post_within: post %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% else %>
+      <% if current_user == @user %>
+        <p class="col-12">Check our blog page to write or read a post!</p>
+      <% else %>
+        <p class="col-12"><%= @user.first_name %> didn't write any blog posts yet.</p>
+      <% end %>
     <% end %>
-  </div>
-  <%#= link_to 'Edit Dashboard', edit_user_registration_path, :class => 'btn btn-outline-danger mb-3' %>
-</div>
+  </section>
+</main>

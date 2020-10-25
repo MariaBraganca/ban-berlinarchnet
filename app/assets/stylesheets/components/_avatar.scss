@@ -16,6 +16,12 @@
   border-radius: 50%;
   object-fit: cover;
 }
+.avatar-large-square {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  object-fit: cover;
+}
 // navbar
 .avatar:hover{
   cursor: pointer;

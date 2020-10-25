@@ -1,26 +1,32 @@
-<div class="container min-vh-100">
-  <div class="row">
-		<div class="col-12 mb-3">
-			<h1 class="mt-5 mb-3"><strong><%= @opening.job_position %></strong></h1>
-			<div class="d-flex align-items-center">
-				<% @offices.each do |office| %>
-					<% if office.name === @opening.office.name %>
-						<%= link_to office_path(office) do %>
-							<%= cl_image_tag(office.banner_url, :class => "avatar-large") %>
-						<% end %>
+<main class="container min-vh-100">
+	<!-- ***************  HEADER OPENING  **************** -->
+	<header class="my-5">
+		<h5 class="corporate mb-3"><span class="red">·ban</span>openings</h5>
+		<h1 class="font-weight-bold mb-3"><%= @opening.job_position %></h1>
+
+		<section class="d-flex align-items-center mb-3"> <!-- OFFICE -->
+			<% @offices.each do |office| %>
+				<% if office.name === @opening.office.name %>
+					<%= link_to office_path(office) do %>
+						<%= cl_image_tag(office.banner_url, :class => "avatar-large-square") %>
 					<% end %>
 				<% end %>
-				<h3 class="pl-3"><%= @opening.office.name %></h3>
-			</div>
-			<hr>
-		</div>
-		<div class="col-12 col-lg-9">
-			<h3>Job description</h3>
+			<% end %>
+			<h3 class="pl-3"><%= @opening.office.name %></h3>
+		</section>
+	</header>
+	<hr>
+
+	<!-- ***************  DESCRIPTION / DATE **************** -->
+  <section class="row my-5">
+		<section cass="col-12 col-lg-9"> <!-- DESCRIPTION -->
+			<h2 class="mb-3">Job description</h2>
 			<p><%= @opening.description %></p>
-		</div>
-		<div class="col-12 col-lg-3">
-			<h3>Details</h3>
+		</section>
+
+		<section class="col-12 col-lg-3"> <!-- DATE -->
+			<h3 class="mb-3">Details</h3>
 			<p><i class="fas fa-calendar-check" style="color: gray"></i> <%= @opening.date.strftime("%d.%m.%Y") %></p>
-		</div>
-  </div>
-</div>
+		</section>
+  </section>
+</main>

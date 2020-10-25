@@ -1,13 +1,6 @@
 .corporate {
 	font-family: 'Share Tech Mono', monospace;
 }
-.office-heading {
-	padding: 8px 0px;
-	border-top: 2px solid black;
-	float: left;
-	width: 50%;
-	font-weight: 700;
-}
 .red {
   color: $call;
 }
@@ -22,4 +15,7 @@
 }
 .gray {
   color: darkgray;
+}
+.light-gray {
+	color: lightgray;
 }
