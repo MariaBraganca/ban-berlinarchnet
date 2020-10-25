@@ -11,7 +11,7 @@ class Event < ApplicationRecord
 
   has_rich_text :description
 
-  $format = ["··ban networking", "-·ban talks", "<·ban walks", "×·ban workshop"]
+  $format = ["··bannetworking", "-·bantalks", "<·banwalks", "×·banworkshop"]
   
   validates :date, presence: true
   validates :format, inclusion: { in: $format }
