@@ -19,14 +19,14 @@
 
 	<!-- ***************  DESCRIPTION / DATE **************** -->
   <section class="row my-5">
-		<section cass="col-12 col-lg-9"> <!-- DESCRIPTION -->
+		<section class="col-lg-9"> <!-- DESCRIPTION -->
 			<h2 class="mb-3">Job description</h2>
 			<p><%= @opening.description %></p>
 		</section>
 
-		<section class="col-12 col-lg-3"> <!-- DATE -->
+		<section class="col-lg-3"> <!-- DATE -->
 			<h3 class="mb-3">Details</h3>
-			<p><i class="fas fa-calendar-check" style="color: gray"></i> <%= @opening.date.strftime("%d.%m.%Y") %></p>
+			<p><i class="fas fa-calendar-check fa-lg"></i> <%= @opening.date.strftime("%d. %B %Y") %></p>
 		</section>
   </section>
 </main>
