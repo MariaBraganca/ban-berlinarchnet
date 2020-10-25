@@ -24,12 +24,12 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
-    resources :comments, only: [ :new, :create, :destroy]
+    resources :comments, only: [:destroy]
     post "post_comment", to: "comments#create_post_comment"
   end
 
   resources :offices, only: [:index, :show] do
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:destroy]
     post "office_comment", to: "comments#create_office_comment"
   end
 

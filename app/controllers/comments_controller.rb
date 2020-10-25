@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
             # CommentMailer.new_comment(@comment).deliver_now
         else
             redirect_to event_path(@event, anchor: "comment-form")
-            flash[:validation] = "Cannot be empty"
+            flash[:validation] = "Comment cannot be empty!"
         end
     end
 
@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
             redirect_to office_path(@office, anchor: "comment-#{@comment.id}")
         else
             redirect_to office_path(@office, anchor: "comment-office")
-            flash[:validation] = "Cannot be empty"
+            flash[:validation] = "Comment cannot be empty!"
         end
     end
 
@@ -57,7 +57,7 @@ class CommentsController < ApplicationController
             # CommentMailer.new_comment(@comment).deliver_now
         else
             redirect_to post_path(@post, anchor: "comment-form")
-            flash[:validation] = "Cannot be empty"
+            flash[:validation] = "Comment cannot be empty!"
         end
     end
 

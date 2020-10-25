@@ -1,5 +1,11 @@
 <div class="card-post">
-  <%= cl_image_tag(post_within.user.cl_img_tag, :class => "avatar-large ml-3") %>
+  <% if post_within.user.photo.attached? %>
+    <%= cl_image_tag(post_within.user.photo.key, gravity: :face, :class => "avatar-large ml-3") %>
+  <% elsif post_within.user.cl_img_tag %>
+    <%= cl_image_tag(post_within.user.cl_img_tag, gravity: :face, :class => "avatar-large ml-3") %>
+  <% else  %>
+    <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large ml-3") %>
+  <% end %>
   <div class="card-infos w-100">
     <div class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><span class="red">·ban</span>post</h3>

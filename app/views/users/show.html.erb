@@ -6,15 +6,15 @@
   <div class="row mb-5">
     <div class="col-12 col-lg-6">
       <!-- About -->
-      <h2 class="mb-5">About me</h2>
+      <h2 class="mb-5">About</h2>
       <!-- Avatar -->
       <div class="text-center mb-3">
-        <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
+        <% if @user.photo.attached? %> <!-- user has uploaded a profile pic -->
           <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
         <% elsif @user.id <= 39  %> <!-- user is seeded -->
           <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
         <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-          <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-xl") %>
+          <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-xl") %>
         <% end %>
       </div>
       <!-- Description -->

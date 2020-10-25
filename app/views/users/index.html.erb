@@ -1,11 +1,13 @@
-<div class="container min-vh-100">
-	<div class="text-center my-5">
+<main class="container min-vh-100">
+	<!-- ***************  HEADER COMMUNITY  **************** -->
+	<header class="text-center my-5">
 		<h1 class="font-weight-bold">Community</h1>
 		<p>Check out our amazing Members!</p>
-	</div>
-	<!-- Search bar -->
+	</header>
+
+	<!-- ***************  SEARCHBAR  **************** -->
 	<%= form_tag users_path, method: :get, class: "searchbar" do %>
-		<div class="row justify-content-center my-5">
+		<section class="row justify-content-center my-5">
 			<div class="col-12 col-lg-7 mb-3">
 				<%= text_field_tag :query,
 					params[:query],
@@ -16,21 +18,25 @@
 			<div class="col-12 col-lg-2">
 				<%= submit_tag "Search", class: "btn btn-call w-100" %>
 			</div>
-		</div>
+		</section>
 	<% end %>
-	<!-- User avatars -->
-	<div class="row">
+
+	<!-- ***************  USERS  **************** -->
+	<section class="row">
 		<% @users.each do |user| %>
 			<div class="col-6 col-lg-3 text-center mb-5">
-					<%= link_to user_path(user) do %>
-							<% if user.photo.attached? %>
-									<%= cl_image_tag(user.photo.key, gravity: :face, :class => 'avatar-large mb-3') %>
-							<% else %>
-									<%= cl_image_tag(user.cl_img_tag, gravity: :face, :class => 'avatar-large mb-3') %>
-							<% end %>
+				<%= link_to user_path(user) do %>
+					<% if user.photo.attached? %>
+						<%= cl_image_tag(user.photo.key, gravity: :face, :class => 'avatar-large mb-3') %>
+					<% elsif user.cl_img_tag %>
+						<%= cl_image_tag(user.cl_img_tag, gravity: :face, :class => 'avatar-large mb-3') %>
+					<% else %>
+						<%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large mb-3") %>
 					<% end %>
-					<p><%= user.first_name %> <%= user.last_name %></p>
+				<% end %>
+				<p><%= user.first_name %> <%= user.last_name %></p>
 			</div>
 		<% end %>
-	</div>		
-</div>
+	</section>	
+
+</main>
