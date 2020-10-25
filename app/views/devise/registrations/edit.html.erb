@@ -12,10 +12,10 @@
             <div class="text-center mb-4 mt-4 mt-lg-0">
               <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
                 <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
-              <% elsif @user.id <= 39  %> <!-- user is seeded -->
+              <% elsif @user.cl_img_tag  %> <!-- user is seeded -->
                 <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
               <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
-                <%= cl_image_tag("logo/logo1", gravity: :face, :class => "avatar-xl") %>
+                <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-xl") %>
               <% end %>
             </div>
             <!-- Description -->

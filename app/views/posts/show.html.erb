@@ -1,56 +1,68 @@
-<div class= "container min-vh-100">
-  <!-- Header -->
-  <div class="row mt-5 mb-3">
-    <div class="col-12 col-lg-6">
+<main class= "container min-vh-100">
+  <!-- ***************  HEADER POST  **************** -->
+  <header class="row my-5">
+    <!-- ***************  INFO  **************** -->
+    <section class="col-lg-6">
       <h5 class="corporate"><span class="red">·ban</span>post</h5>
-      <!-- Name and Date -->
-      <h1><strong><%= @post.title%></strong></h1>
-      <div class="d-flex align-items-center">
-        <%= link_to cl_image_tag(@post.user.cl_img_tag, :class => 'avatar mb-3'), user_path(@post.user) %>
-        <p class="pl-3">By <%= @post.user.first_name %> <%= @post.user.last_name %></p>
+      <h1 class="font-weight-bold mb-3"><%= @post.title%></h1>
+      <div class="d-flex align-items-center"> <!-- USER -->
+        <%= link_to user_path(@post.user) do %>         
+          <% if @post.user.photo.attached? %>
+            <%= cl_image_tag(@post.user.photo.key, gravity: :face, :class => "avatar mb-3") %>
+          <% elsif @post.user.cl_img_tag %>
+            <%= cl_image_tag(@post.user.cl_img_tag, gravity: :face, :class => "avatar mb-3") %>
+          <% else  %>
+            <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar mb-3") %>
+          <% end %>
+        <% end %>
+        <p class="pl-3">Posted by: <%= @post.user.first_name %> <%= @post.user.last_name %></p>
       </div>
-      <!-- Edit  -->
-      <% if user_signed_in? %>
-        <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-call mb-3" if current_user.id == @post.user.id  %>
+      <% if user_signed_in? %> <!-- EDIT -->
+        <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-call mb-3" if current_user == @post.user  %>
       <% end %>
-    </div>
-    <!-- Cover photo -->
-    <div class="col-12 col-lg-6">
+    </section>
+
+    <!-- ***************  COVER PHOTO  **************** -->
+    <section class="col-lg-6">
       <% if @post.photo.attached? %>
           <%= cl_image_tag(@post.photo.key, :class => "cover-img mb-3") %>
       <% else %>
           <img src="https://source.unsplash.com/800x600/?architecture" class="cover-img mb-3" alt="placeholder">
       <% end %>
-    </div>
-  </div>
+    </section>
+  </header>
   <hr>
-  <!-- Tags and Date -->
-  <div class="row justify-content-center mt-5">
-    <div class="col-12 col-lg-9">
+
+  <!-- ***************  TAGS / DATE  **************** -->
+  <section class="row justify-content-center my-5">
+    <div class="col-lg-9"> <!-- TAGS -->
       <p><i class="fas fa-tags fa-lg mr-1"></i> <%= @post.tag_list %></p>
     </div>
-    <div class="col-12 col-lg-3">
+    <div class="col-lg-3"> <!-- DATE -->
       <p><i class="fas fa-calendar-check fa-lg mr-1"></i> On the: <%= @post.date.strftime('%d. %B %Y') %></p>
     </div>
-  </div>
-  <!-- Content -->
-  <div class = 'row mb-5 '>
-    <div class="col-12 col-lg-9">
+  </section>
+
+  <!-- ***************  CONTENT  **************** -->
+  <section class="row mb-5">
+    <div class="col-lg-9">
       <p class= "post"><%= @post.content %></p>
     </div>
-  </div>
+  </section>
   <hr>
-	<!-- Comments -->
-  <div class = 'row my-5'>
-    <div class = 'col-12 col-lg-6 mb-5'>
+
+	<!-- ***************  COMMENTS  **************** -->
+  <section class = 'row my-5'>
+    <div class = 'col-lg-6'>
       <h2 class="mb-3">Comments <span class="badge-number"><%= @post.comments.length %></span></h2>
-      <!-- Comments past -->
-      <% @post.comments.each do |comment| %>
+      <% @post.comments.each do |comment| %> <!-- PAST -->
         <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
           <% if comment.user.photo.attached? %>
             <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
-          <% else %>
+          <% elsif comment.user.cl_img_tag %>
             <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
+          <% else %>
+            <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large") %>
           <% end %>
           <div class="card-infos">
             <p><%= comment.date.strftime("%H:%M | %d.%m.%Y") %> </p>
@@ -59,20 +71,20 @@
           </div>
         </div>
       <% end %>
-      <!-- Comments new -->
-      <% if user_signed_in? %>
+    
+      <% if user_signed_in? %> <!-- NEW -->
         <div class = "form" id= "comment-form">
-            <%= form_tag post_post_comment_path(@post, url: (post_path([@post], anchor:'comments'))), method: :post do |f| %>
-                <%= text_field_tag :content %>
-                <%= submit_tag 'Post', class: 'btn btn-upload' %>
-            <% end %>
+          <%= form_tag post_post_comment_path(@post, url: (post_path([@post], anchor:'comments'))), method: :post do |f| %>
+            <%= text_field_tag :content %>
+            <%= submit_tag 'Post', class: 'btn btn-upload' %>
+          <% end %>
         </div>
         <% if flash[:validation]%>
-            <div>
-                <%= flash[:validation] %>
-            </div>
+          <div>
+            <%= flash[:validation] %>
+          </div>
         <% end %>
       <% end %>
     </div>
-  </div>
-</div>
+  </section>
+</main>
