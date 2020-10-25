@@ -1,10 +1,13 @@
-<div class="container min-vh-100">
-	<div class="text-center my-5">
+<main class="container min-vh-100">
+	<!-- ***************  HEADER OPENINGS  **************** -->
+	<header class="text-center my-5">
 		<h1 class="font-weight-bold">Job openings</h1>
 		<p>Check out job openings for architects in Berlin!</p>
-	</div>
-	<div class="row justify-content-around mb-5">
-		<div class="col-12 col-lg-9 px-3">
+	</header>
+
+	<!-- ***************  OPENINGS  **************** -->
+	<section class="row justify-content-around mb-5">
+		<div class="col-lg-6 px-3">
 			<ul class="list-group list-group-flush">
 				<% @openings.each do |opening| %>
 					<li class="list-group-item">
@@ -15,5 +18,5 @@
 				<% end %>
 			</ul>
 		</div>
-	</div>
-</div>
+	</section>
+</main>

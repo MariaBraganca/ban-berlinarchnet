@@ -1,23 +1,28 @@
-<div class="container min-vh-100">
-	<div class="row justify-content-center my-5">
-		<!-- Heading -->
-		<div class="col-12 text-center">
+<main class="container min-vh-100">
+	<!-- ***************  HEADER EVENT  **************** -->
+	<header class="row justify-content-center my-5">
+		<!-- ***************  INFO  **************** -->
+		<section class="col-12 text-center">
 			<h1 class="font-weight-bold">Events</h1>
 			<p>Check out the lates architecture events in Berlin!</p>
-		</div>
-		<!-- Create Event -->
-		<div class="col-12 col-lg-4">
-			<%= link_to "Create event", new_event_path, class: "btn btn-attend w-100" if user_signed_in? %>
-		</div>
-	</div>
-	<!-- Events -->
-	<div class="row">
+		</section>
+
+		<!-- ***************  CREATE EVENT **************** -->
+		<% if user_signed_in? %>
+			<section class="col-lg-6">
+				<button class="btn btn-attend w-100"><%= link_to "Create event", new_event_path %></button>
+			</section>
+		<% end %>
+	</header>
+
+	<!-- ***************  EVENTS  **************** -->
+	<section class="row my-5">
 		<% @events.each do |event| %>
-			<div class="col-12 col-lg-3 mb-5">
+			<div class="col-lg-3 mb-5">
 				<%= link_to event_path(event) do %>
 					<%= render "shared/card-event", event_within: event %>
 				<% end %>
 			</div>
 		<% end %>
-	</div>
-</div>
+	</section>
+</main>
