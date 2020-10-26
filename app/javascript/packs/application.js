@@ -7,7 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
+require("trix") // trix
+require("@rails/actiontext") // actiontext
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -33,12 +34,16 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { initChatroomCable } from '../channels/chatroom_channel.js';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initFlatpickr } from '../plugins/init_flatpickr';
+import { initUpload } from '../scripts/init_upload.js';
+import { initOnline } from '../scripts/init_online.js';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initChatroomCable();
+  initUpload();
+  initOnline();
+  initFlatpickr();
 })
 
-require("trix")
-require("@rails/actiontext")
-require("flatpickr");
+

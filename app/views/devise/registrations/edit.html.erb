@@ -1,122 +1,79 @@
-<div class="container min-vh-100">
-  <div class="row form-card my-5">
-    <div class="col-12 form-infos">
-      <!-- Name -->
+<main class="container min-vh-100">
+  <!-- ***************  USER EDIT FORM  **************** -->
+  <section class="row form-card my-5">
+     <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-12 form-infos">
       <h1 class="corporate text-center"><span class="red">·ban</span>member edit·</h1>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
         <div class="row">
-          <!-- Left column -->
-          <div class="col-lg-6">
-            <!-- Avatar -->
+          <div class="col-lg-6"> 
             <div class="text-center mb-4 mt-4 mt-lg-0">
-              <% if @user.photo.attached? %><!-- user has uploaded a profile pic -->
+              <% if @user.photo.attached? %>
                 <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
-              <% elsif @user.cl_img_tag  %> <!-- user is seeded -->
+              <% elsif @user.cl_img_tag  %>
                 <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
-              <% else  %> <!-- user didn't upload a profile picture, default logo shows up -->
+              <% else  %>
                 <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-xl") %>
               <% end %>
             </div>
-            <!-- Description -->
             <%= f.input :description,
                         input_html: { style: "height: 300px;", autocomplete: "Description" },
-                        label: "Tell us something about you 🧡" %>
+                        label: "Tell us something about you 🧡" %> <!-- DESCRIPTION -->
           </div>
-          <!-- Right column -->
           <div class="col-lg-6">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6"><!-- FIRST NAME -->
                 <%= f.input :first_name,
                             required: true,
                             autofocus: true,
-                            input_html: { autocomplete: "First Name" }%>
+                            input_html: { autocomplete: "First Name" } %> 
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6"> <!-- LAST NAME -->
                 <%= f.input :last_name,
                             required: true,
-                            input_html: { autocomplete: "Last Name" }%>
+                            input_html: { autocomplete: "Last Name" } %>
               </div>
             </div>
-            <!-- Email -->
             <%= f.input :email,
                         required: true,
-                        input_html: { autocomplete: "email" } %>
-            <!-- Reset password -->
+                        input_html: { autocomplete: "email" } %> <!-- EMAIL -->
             <div class="row">
               <div class="col-lg-6">
                 <%= f.input :password,
                             hint: "Only if you want to change your password",
                             required: false,
                             input_html: { autocomplete: "new-password" },
-                            label: "New Password" %>
+                            label: "New Password" %> <!-- RESET PASSWORD -->
               </div>
               <div class="col-lg-6">
                 <%= f.input :password_confirmation,
                             required: false,
-                            input_html: { autocomplete: "new-password" } %>
+                            input_html: { autocomplete: "new-password" } %> <!-- CONFIRM PASSWORD -->
               </div>
             </div>
-            <!-- Photo User -->
             <%= f.input :photo, as: :file,
-                        label: true %>
-            <!-- Photo Portfolio -->
+                        label_html: { class: "label-user" },
+                        label: true %> <!-- PHOTO USER -->
             <%= f.input :portfolio_photos, as: :file, 
                         input_html: { multiple: true },
-                        label: true %>
-            <!-- Authetication with current password -->
+                        label_html: { class: "label-projects" },
+                        label: true %> <!-- PHOTO PORTFOLIO -->
             <%= f.input :current_password,
                       hint: "Type your current password to confirm your changes",
                       required: true,
-                      input_html: { autocomplete: "current-password" } %>
+                      input_html: { autocomplete: "current-password" } %> <!-- AUTHENTICATION PASSWORD -->
           </div>
         </div>
         <div class="row align-items-center">
-          <!-- Delete -->
-          <div class="col-lg-6">
+          <div class="col-lg-6"> <!-- DELETE -->
             <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure that you want do delete your ban account?" }, method: :delete, :class => 'btn btn-delete w-100 mb-3 mb-lg-0' %>
           </div>
-          <!-- Submit -->
-          <div class="col-lg-6 ">
+          <div class="col-lg-6 "> <!-- SUBMIT -->
             <%= f.button :submit, "Update", :class => 'btn btn-call', :style => 'width: 100%' %>
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
-<script>
-  // Upload Buttons
-  // Cover photo
-  inputUser = document.querySelector("#user_photo");
-  inputUser.style.display = "none";
-
-  labelUser = document.querySelector(".user_photo").querySelector("label");
-  labelUser.innerHTML = "<i class='fas fa-user fa-lg mr-2'></i>Upload your photo";
-  
-  labelUser.classList.add("btn", "btn-upload", "w-100", "mb-3");
-  // Event photos
-  inputPortfolio = document.querySelector("#user_portfolio_photos");
-  inputPortfolio.style.display = "none";
-  
-  labelPortfolio = document.querySelector(".user_portfolio_photos").querySelector("label");
-  labelPortfolio.innerHTML = "<i class='fas fa-images fa-lg mr-2'></i>Upload your projects";
-  
-  labelPortfolio.classList.add("btn", "btn-upload", "w-100", "mb-3");
-  // Function handleFiles()  
-  inputUser.addEventListener("change", handleFiles, false); 
-  inputPortfolio.addEventListener("change", handleFiles, false); 
-
-  function handleFiles() {
-    if(inputUser.files.length === 0) {
-      labelUser.innerHTML = "<i class='fas fa-user fa-lg mr-2'></i>Upload your photo";
-    } else {
-      labelUser.innerHTML = `<i class='fas fa-user fa-lg mr-2'></i>${inputUser.files[0]["name"]}`;
-    }
-    if(inputPortfolio.files.length === 0) {
-      labelPortfolio.innerHTML = "<i class='fas fa-images fa-lg mr-2'></i>Upload your projects";
-    } else {
-      labelPortfolio.innerHTML = `<i class='fas fa-images fa-lg mr-2'></i>${inputPortfolio.files.length} projects selected;`;
-    }
-  };
-</script>
+    </section>
+  </section>
+</main>
