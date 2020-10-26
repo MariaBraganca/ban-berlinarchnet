@@ -1,78 +1,52 @@
-<div class="container min-vh-100">
-  <div class="row form-card my-5">
-    <!-- Left Image -->
-    <div class="col-lg-6" id="signup-img">
-    </div>
-    <!-- Form -->
-    <div class="col-lg-6 form-infos">
+<main class="container min-vh-100">
+  <!-- ***************  SIGNUP FORM  **************** -->
+  <section class="row form-card my-5">
+    <div class="col-lg-6" id="signup-img"></div>
+    <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-lg-6 form-infos">
       <h1 class="corporate text-center"><span class="red">·ban</span>signup·</h1>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
         <div class="form-group">
-          <!-- Name -->
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6"> <!-- FIRST NAME -->
               <%= f.input :first_name,
                           required: true,
                           autofocus: true,
                           input_html: { autocomplete: "First Name" } %>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6"> <!-- LAST NAME -->
               <%= f.input :last_name,
                           required: true,
                           input_html: { autocomplete: "Last Name" } %>
             </div>
           </div>
-          <!-- Email -->
           <%= f.input :email,
                       required: true,
-                      input_html: { autocomplete: "email" } %>
-          <!-- Password -->
+                      input_html: { autocomplete: "email" } %> <!-- EMAIL -->
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6"> <!-- RESET PASSWORD -->
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                           input_html: { autocomplete: "new-password" } %>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6"> <!-- CONFIRM PASSWORD -->
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
             </div>
           </div>
-          <!-- Description -->
           <%= f.input :description,
                       input_html: { style: "min-height: 185px;", autocomplete: "Description" },
-                      label: "Tell us something about you 🧡" %>
-          <!-- Photo -->
+                      label: "Tell us something about you 🧡" %> <!-- DESCRIPTION -->
           <%= f.input :photo, as: :file,
-                      required: true, 
-                      label: true %>
+                      required: true,
+                      label_html: { class: "label-user" },
+                      label: true %> <!-- PHOTO USER -->
         </div>
-        <!-- Submit -->
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up", :class => 'btn btn-call', :style => 'width: 100%;' %>
-        </div>
+        <%= f.button :submit, "Sign up", :class => 'btn btn-call', :style => 'width: 100%;' %> <!-- SUBMIT -->
       <% end %>
-    </div>
-  </div>
-</div>
-<script>
-  input = document.querySelector("#user_photo");
-  input.style.display = "none";
-
-  label = document.querySelector(".user_photo").querySelector("label");
-  label.innerHTML = "<i class='fas fa-user fa-lg mr-2'></i>Upload your photo";
-  
-  label.classList.add("btn", "btn-upload", "w-100", "mb-0");
-  
-  input.addEventListener("change", handleFiles, false); 
-  function handleFiles() {
-    if(input.files.length === 0) {
-      label.innerHTML = "<i class='fas fa-user fa-lg mr-2'></i>Upload your photo";
-    } else {
-      label.innerHTML = `<i class='fas fa-user fa-lg mr-2'></i>${input.files[0]["name"]}`;
-    }
-  };
-</script>
+    </section>
+  </section>
+</main>

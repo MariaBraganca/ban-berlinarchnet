@@ -1,53 +1,32 @@
-<div class="container min-vh-100">
-  <div class="row my-5 form-card">
-    <div class="col-12 form-infos">
+<main class="container min-vh-100">
+  <!-- ***************  POST EDIT FORM  **************** -->
+  <section class="row my-5 form-card">
+    <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-12 form-infos">
       <h1 class="corporate text-center"><span class="red">·ban</span>post edit·</h1>
       <%= simple_form_for(@post, remote: true) do |f| %>
-        <!-- Title -->
-        <%= f.input :title, as: :string %>
-        <!-- Content -->
-        <%= f.rich_text_area :content, style: "min-height: 300px;" %>
+        <%= f.input :title, as: :string %> <!-- TITLE -->
+        <%= f.rich_text_area :content, style: "min-height: 300px;" %> <!-- CONTENT -->
         <div class="row align-items-end">
-          <!-- Tags -->
-          <div class="col-lg-6">
+          <div class="col-lg-6"> <!-- TAGS -->
             <%= f.input :tag_list %>
           </div>
-          <!-- Cover photo -->
-          <div class="col-lg-6 mb-3">
+          <div class="col-lg-6 mb-3"> <!-- COVER PHOTO -->
             <%= f.input :photo, 
-                        as: :file, 
+                        as: :file,
+                        label_html: { class: "label-cover" },
                         label: true %>
           </div>
         </div>
         <div class="row align-items-end">
-          <!-- Delete -->
-          <div class="col-lg-6">
+          <div class="col-lg-6"> <!-- DELETE -->
             <%= link_to "Delete post", post_path(@post), data: { confirm: "Are you sure that you want do delete your post?" }, method: :delete, :class => 'btn btn-delete w-100 mb-3 mb-lg-0' %>
           </div>
-          <!-- Submit -->
-          <div class="col-lg-6">
+          <div class="col-lg-6"> <!-- SUBMIT -->
               <%= f.button :submit, class: 'btn btn-call w-100' %>
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
-<script>
-  input = document.querySelector("#post_photo");
-  input.style.display = "none";
-
-  label = document.querySelector(".post_photo").querySelector("label");
-  label.innerHTML = "<i class='fas fa-image fa-lg mr-2'></i>Upload cover photo";
-  
-  label.classList.add("btn", "btn-upload", "w-100", "mb-0");
-  
-  input.addEventListener("change", handleFiles, false); 
-  function handleFiles() {
-    if(input.files.length === 0) {
-      label.innerHTML = "<i class='fas fa-image fa-lg mr-2'></i>Upload cover photo";
-    } else {
-      label.innerHTML = `<i class='fas fa-image fa-lg mr-2'></i>${input.files[0]["name"]}`;
-    }
-  };
-</script>
+    </section>
+  </section>
+</main>

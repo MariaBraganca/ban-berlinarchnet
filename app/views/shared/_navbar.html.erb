@@ -39,7 +39,7 @@
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "Edit Profile", '/users/edit', class: "dropdown-item" %>
+            <%#= link_to "Edit Profile", '/users/edit', class: "dropdown-item" %>
             <%= link_to "Create event", new_event_path, class: "dropdown-item" %>
             <%= link_to "Create post", new_post_path, class: "dropdown-item" %>
             <%# if user received messages is not empty, link_to the last received message %>
