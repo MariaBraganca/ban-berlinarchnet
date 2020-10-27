@@ -13,10 +13,11 @@ class Event < ApplicationRecord
 
   $format = ["··bannetworking", "-·bantalks", "<·banwalks", "×·banworkshop"]
   
-  validates :date, presence: true
+  validates :start_date, presence: true
   validates :format, inclusion: { in: $format }
   validates :title, presence: true
   validates :location, presence: true, unless: :online
   validates :online, presence: true, unless: :location
+  validates :online_link, presence: true, if: :online
   validates :description, presence: true
 end

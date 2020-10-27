@@ -1,13 +1,15 @@
 <article class="card-event">
   <% if event_within.cover_photo.attached?  %>
     <%= cl_image_tag(event_within.cover_photo.key, :class => "card-event-img") %>
-    <% else %>
+  <% elsif event_within.cl_img_tag %>
     <%= cl_image_tag(event_within.cl_img_tag, :class => "card-event-img") %>
+  <% else %>
+    <%= cl_image_tag("logo/logo-placeholder", gravity: :face, :class => "card-event-img border-bottom") %>
   <% end %>
   <section class="card-infos">
     <div class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><%= event_within.format[0] %><span class="red"><%= event_within.format[1,4] %></span><%= event_within.format[5..-1] %></h3>
-      <h3 class="corporate red"><%= event_within.date.strftime('%d.%m.%Y') %></h3>
+      <h3 class="corporate red"><%= event_within.start_date.strftime('%d.%m.%Y') %></h3>
     </div>
     <h2 class="mb-3"><%= event_within.title%></h2>
     <% unless event_within.online %>

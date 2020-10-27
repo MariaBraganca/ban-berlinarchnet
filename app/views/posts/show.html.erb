@@ -27,7 +27,7 @@
       <% if @post.photo.attached? %>
           <%= cl_image_tag(@post.photo.key, :class => "cover-img mb-3") %>
       <% else %>
-          <img src="https://source.unsplash.com/800x600/?architecture" class="cover-img mb-3" alt="placeholder">
+          <%= cl_image_tag("logo/logo-placeholder", gravity: :face, :class => "cover-img mb-3") %>
       <% end %>
     </section>
   </header>
