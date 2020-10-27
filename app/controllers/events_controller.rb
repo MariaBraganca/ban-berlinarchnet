@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-    @events = policy_scope(Event).order(date: :desc)
+    @events = policy_scope(Event).order(start_date: :desc)
     @user = User.find_by(email: @user)
   end
 
@@ -71,6 +71,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:date, :start_time, :end_time, :format, :location, :venue, :title, :description, :online, :online_link, :cover_photo, event_photos: [])
+    params.require(:event).permit(:start_date, :end_date, :format, :location, :venue, :title, :description, :online, :online_link, :cover_photo, event_photos: [])
   end
 end

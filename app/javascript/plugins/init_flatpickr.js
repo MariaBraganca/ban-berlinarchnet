@@ -4,17 +4,11 @@ import 'flatpickr/dist/flatpickr.min.css'
 const initFlatpickr = () => {
   flatpickr(".datepicker", {
     enableTime: true,
-    enableTime: false,
-    dateFormat: "d.m.Y",
-    minDate: "today",
+    time_24hr: true,
+    dateFormat: "Y-m-d H:i",
+    altInput: true,
+    minDate: "today"
   });
-  flatpickr(".timepicker", {
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "H:i",
-    time_24hr: true
-  });
-
   const location =document.querySelector('#event_location')
   if(location) {
     var placesAutocomplete = places({
