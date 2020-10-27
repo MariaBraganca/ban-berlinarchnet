@@ -1,41 +1,38 @@
-<div class="card-office mb-3" id="">
-  <%= cl_image_tag(office_within.banner_url, :class => "card-office-img") %>
-  
-  <!-- Ratings, for the office index method -->
+<article class="card-list mb-3"> 
+  <!-- ***************  RATINGS INDEX CONTROLLER **************** -->
   <% if office_within.ratings.empty? %>
     <% culture_average = 0 %>
     <% salary_average = 0 %>
     <% architecture_average = 0 %>
   <% else %>
-    <!-- Average Ratings for Culture -->
     <% culture_ratings = [] %>
     <% office_within.ratings.each do |rating| %>
       <% culture_ratings << rating.culture %>
     <% end %>
-    <% culture_average = (culture_ratings.sum / culture_ratings.size).round %>
-    <!-- Average Ratings for Salary -->
+    <% culture_average = (culture_ratings.sum / culture_ratings.size).round %> <!-- CULTURE -->
+
     <% salary_ratings = [] %>
     <% office_within.ratings.each do |rating| %>
       <% salary_ratings << rating.salary %>
     <% end %>
-    <% salary_average = (salary_ratings.sum / salary_ratings.size).round %>
-    <!-- Average Ratings for Architecture -->
+    <% salary_average = (salary_ratings.sum / salary_ratings.size).round %> <!-- SALARY -->
+
     <% architecture_ratings = [] %>
     <% office_within.ratings.each do |rating| %>
       <% architecture_ratings << rating.architecture %>
     <% end %>
-    <% architecture_average = (architecture_ratings.sum / architecture_ratings.size).round %>
+    <% architecture_average = (architecture_ratings.sum / architecture_ratings.size).round %> <!-- ARCHITECTURE -->
   <% end %>
-  
-  <div class="card-infos w-100">
-    <div class="d-flex justify-content-between mb-2">
+
+  <%= cl_image_tag(office_within.banner_url, :class => "card-list-img") %>
+  <section class="card-infos w-100">
+    <header class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><span class="red">·ban</span>office</h3>
-    </div>
-    <!-- Name and location -->
+    </header>
     <h2><%= office_within.name %></h2>
     <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= office_within.location %></p>
-    <!-- Icons -->
-    <div class="row justify-content-between">
+    <!-- ***************  RATINGS  **************** -->
+    <section class="row justify-content-between">
       <div class="col-12 col-lg-4">
         <p>
           <% architecture_average.times do %>
@@ -66,6 +63,6 @@
           <% end %>
         </p>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
+  </section>
+</article>

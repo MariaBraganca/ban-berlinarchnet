@@ -1,4 +1,4 @@
-<!-- Banner -->
+<!-- ***************  HEADER HOMEPAGE  **************** -->
 <header class="banner">
 		<div class="banner-overlay"></div>
 		<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -17,97 +17,90 @@
 		</div>
 </header>
 
-<div class="container">
-	<!-- Events -->
-	<div class="row my-5">
-		<!-- Event Infos -->
-		<h2 class="col-12 col-lg-3 font-weight-bold">Events</h2>
-		<!-- Event Cards -->
-		<div class="col-12 col-lg-9">
-			<div class="row justify-content-between">
-				<% @events.each do |event| %>
-					<div class="col-12 col-lg-4 mb-3">
-						<%= link_to event_path(event) do %>
-								<%= render "shared/card-event", event_within: event %>
-						<% end %>
-					</div>
-				<% end %>
-			</div>
-		</div>
-		<h2 class="col-12 col-lg-3"></h2>
-		<div class="col-12 col-lg-9">
-			<%= link_to events_path, :class => "custom-btn btn-4 mt-4 text-center font-weight-bold" do %>
-				<span>Check out the latest events!</span>
+<main class="container">
+	<!-- ***************  EVENTS  **************** -->
+	<section class="my-5">
+		<header class="text-center">
+			<h2 class="font-weight-bold">Events</h2>
+			<button class="btn btn-upload mt-2 mb-5">
+				<%= link_to "Check out the latest events!", events_path %>
+			</button>
+		</header>
+		<!-- ***************  EVENT CARDS  **************** -->
+		<section class="row justify-content-between">
+			<% @events.each do |event| %>
+				<div class="col-md-6 col-lg-3 mb-3">
+					<%= link_to event_path(event) do %>
+							<%= render "shared/card-event", event_within: event %>
+					<% end %>
+				</div>
 			<% end %>
-		</div>
-	</div>
+		</section>
+	</section>
 	<hr>
-	<!-- Offices -->
-	<div class="row my-5">
-		<!-- Office Infos -->
-		<h2 class="col-12 col-lg-3 font-weight-bold">Offices</h2>
-		<!-- Office Cards -->
-		<div class="col-12 col-lg-9">
-			<% @offices.each do |office| %>
-				<%= link_to office_path(office) do %>
-					<%= render "shared/card-office", office_within: office %>
-				<% end %>
-			<% end %>
-		</div>
-		<h2 class="col-12 col-lg-3"></h2>
-		<div class="col-12 col-lg-9">
-			<%= link_to offices_path, :class => "custom-btn btn-4 mt-4 text-center font-weight-bold" do %>
-				<span>Check out the best rated offices!</span>
-			<% end %>
-		</div>
-	</div>
-	<hr>
-	<!-- Openings -->
-	<div class="row my-5">
-		<!-- Openings Infos -->
-		<h2 class="col-12 col-lg-3 font-weight-bold">Jobs</h2>
-		<!-- Openings Cards -->
-		<div class="col-12 col-lg-9">
-			<ul class="list-group list-group-flush">
-				<% @openings.each do |opening| %>
-					<li class="list-group-item">
-						<%= link_to opening_path(opening) do %>
-							<%= render "shared/card-opening", opening_within: opening %>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
-		</div>
-		<h2 class="col-12 col-lg-3"></h2>
-		<div class="col-12 col-lg-9">
-			<%= link_to openings_path, :class => "custom-btn btn-4 mt-5 text-center font-weight-bold" do %>
-				<span>Check out the latest job openings!</span>
-			<% end %>
-		</div>
-	</div>
-	<hr>
-	<!-- Blog -->
-	<div class="row my-5">
-		<h2 class="col-12 col-lg-3 font-weight-bold">Blog</h2>
-		<div class="col-12 col-lg-9">
-			<ul class="list-group list-group-flush">
-				<% @posts.each do |post| %>
-					<li class="list-group-item">
-						<%= link_to post_path(post) do %>
-							<%= render "shared/card-post", post_within: post %>
-						<% end %>
-					</li>
-				<% end %>
-			</ul>
-		</div>
-		<h2 class="col-12 col-lg-3"></h2>
-		<div class="col-12 col-lg-9">
-			<%= link_to posts_path, :class => "custom-btn btn-4 mt-5 text-center font-weight-bold" do %>
-				<span>Check out the latest blog posts!</span>
-			<% end %>
-		</div>
-	</div>
 
 
-</div>
+	<!-- ***************  OFFICES / OPENINGS  **************** -->
+	<section class="row my-5">
+		<!-- ***************  OFFICES  **************** -->
+		<section class="col-lg-6">
+			<header class="text-center">
+				<h2 class="font-weight-bold">Offices</h2>
+				<button class="btn btn-upload mt-2 mb-5">
+					<%= link_to "Check out the best rated offices!", offices_path %>
+				</button>
+			</header>
+			<!-- ***************  OFFICE CARDS  **************** -->
+			<section class="row">
+				<div class="col-12">
+					<% @offices.each do |office| %>
+							<%= link_to office_path(office) do %>
+								<%= render "shared/card-office", office_within: office %>
+							<% end %>
+					<% end %>
+				</div>
+			</section>
+		</section>
 
+		<!-- ***************  OPENINGS  **************** -->
+		<section class="col-lg-6">
+			<header class="text-center">
+				<h2 class="font-weight-bold">Jobs</h2>
+				<button class="btn btn-upload mt-2 mb-5">
+					<%= link_to "Check out the latest job openings!", openings_path %>
+				</button>
+			</header>
+			<!-- ***************  OPENING CARDS  **************** -->
+			<section class="row">
+				<div class="col-12">
+					<% @openings.each do |opening| %>
+							<%= link_to opening_path(opening) do %>
+								<%= render "shared/card-opening", opening_within: opening %>
+							<% end %>
+					<% end %>
+				</div>
+			</section>
+		</section>
+
+	</section>
+	<hr>
+
+	<!-- ***************  POSTS  **************** -->
+	<section class="my-5">
+		<header class="text-center">
+			<h2 class="font-weight-bold">Blog</h2>
+			<button class="btn btn-upload mt-2 mb-5">
+				<%= link_to "Check out the latest blog posts!", posts_path %>
+			</button>
+		</header>
+		<section class="row justify-content-between">
+			<% @posts.each do |post| %>
+				<div class="col-md-6 col-lg-3 mb-3">
+					<%= link_to post_path(post) do %>
+						<%= render "shared/card-post", post_within: post %>
+					<% end %>
+				</div>
+			<% end %>
+		</section>
+	</section>
+</main>

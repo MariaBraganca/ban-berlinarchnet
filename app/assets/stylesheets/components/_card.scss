@@ -13,8 +13,8 @@
   font-size: 12px;
   opacity: .75;
 }
-// Event
-.card-event {
+// Card square
+.card-square {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -22,16 +22,16 @@
   height: 300px;
   transition: all 0.3s ease;
 }
-.card-event:hover {
-    transform: scale(1.08);
+.card-square:hover {
+    transform: scale(1.05);
 }
-.card-event-img {
+.card-square-img {
   height: 150px;
   width: 100%;
   object-fit: cover;
 }
-// Office
-.card-office {
+// Card list
+.card-list {
   overflow: hidden;
   height: 150px;
   display: flex;
@@ -40,37 +40,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
-.card-office:hover {
-  transform: scale(1.08);
+.card-list:hover {
+  transform: scale(1.05);
 }
-.card-office-img {
+.card-list-img {
   height: 100%;
   width: 150px;
   object-fit: cover;
-}
-// Opening
-.card-opening {
-  overflow: hidden;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-.card-opening:hover {
-  background-color: rgb(245, 245, 245);
-}
-// Post
-.card-post {
-  overflow: hidden;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  border-radius: 3px;
-  transition: all 0.3s ease;    
-}
-.card-post:hover {
-  background-color: rgb(245, 245, 245);
 }
 // Comments
 .card-comment {

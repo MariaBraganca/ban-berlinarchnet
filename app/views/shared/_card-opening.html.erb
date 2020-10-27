@@ -1,10 +1,17 @@
-<div class="card-opening">
-  <div class="card-infos w-100">
-    <div class="d-flex justify-content-between mb-2">
+<article class="card-list mb-3">
+  <section class="card-infos w-100">
+    <header class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><span class="red">·ban</span>job</h3>
       <h3 class="corporate red"><%= opening_within.date.strftime('%d.%m.%Y') %></h3>
-    </div>
+    </header>
     <h2><%= opening_within.job_position %></h2>
-    <p>@ <%= opening_within.office.name %></p>
-  </div>
-</div>
+    <% if opening_within.office.banner_url %>
+      <div class="d-flex align-items-center">
+        <%= cl_image_tag(opening_within.office.banner_url, :class => "avatar-square mr-2") %>
+        <p class="my-0"> <%= opening_within.office.name %></p>
+      </div>
+    <% else %>
+      <p>@ <%= opening_within.office.name %></p>
+    <% end %>
+  </section>
+</article>

@@ -21,7 +21,7 @@
       <h2 class="mb-3">About</h2>
       <p><%= @office.description %></p>
       <%= link_to url_for(@office.url), :target => '_blank' do %>
-        <i class="fas fa-link fa-lg red"></i> <%= @office.url %>
+        <i class="fas fa-link fa-lg red mr-2"></i> <%= @office.url %>
       <% end %>
     </section>
 
@@ -37,26 +37,26 @@
         <div class="col-6">
           <p>
             <% @culture_average.times do %>
-              <i class="fas fa-heart fa-lg red"></i>
+              <i class="fas fa-heart red"></i>
             <% end %>
             <% (5-@culture_average).times do %>
-              <i class="fas fa-heart fa-lg light-gray"></i>
+              <i class="fas fa-heart light-gray"></i>
             <% end %>
           </p>
           <p>
             <% @salary_average.times do %>
-              <i class="fas fa-euro-sign fa-lg green"></i>
+              <i class="fas fa-euro-sign green"></i>
             <% end %>
             <% (5-@salary_average).times do %>
-              <i class="fas fa-euro-sign fa-lg light-gray"></i>
+              <i class="fas fa-euro-sign light-gray"></i>
             <% end %>
           </p>
           <p>
             <% @architecture_average.times do %>
-              <i class="fas fa-star fa-lg yellow"></i>
+              <i class="fas fa-star yellow"></i>
             <% end %>
             <% (5-@architecture_average).times do %>
-              <i class="fas fa-star fa-lg light-gray"></i>
+              <i class="fas fa-star light-gray"></i>
             <% end %>
           </p>
         </div>
@@ -78,15 +78,11 @@
     <section class="col-lg-6 mt-5 mt-lg-0">
       <h2 class="mb-3">Openings</h2>
       <% unless @office.openings.empty? %>
-        <ul class="list-group list-group-flush">
-          <% @office.openings.each do |opening| %>
-            <li class="list-group-item">
-              <%= link_to opening_path(opening) do %>
-                <%= render "shared/card-opening", opening_within: opening %>
-              <% end %>
-            </li>
+        <% @office.openings.each do |opening| %>
+          <%= link_to opening_path(opening) do %>
+            <%= render "shared/card-opening", opening_within: opening %>
           <% end %>
-        </ul>
+        <% end %>
       <% else %>
         <p>At the moment there are no openings availiable for this office. <br> Check office's webpage for more information.</p>
       <% end %>
