@@ -23,13 +23,11 @@
     </section>
 
     <!-- ***************  COVER PHOTO  **************** -->
-    <section class="col-lg-6">
-      <% if @post.photo.attached? %>
-          <%= cl_image_tag(@post.photo.key, :class => "cover-img mb-3") %>
-      <% else %>
-          <%= cl_image_tag("logo/logo-placeholder", gravity: :face, :class => "cover-img mb-3") %>
-      <% end %>
-    </section>
+    <% if @post.photo.attached? %>
+      <section class="col-lg-6">
+        <%= cl_image_tag(@post.photo.key, :class => "cover-img mb-3") %>
+      </section>
+    <% end %>
   </header>
   <hr>
 

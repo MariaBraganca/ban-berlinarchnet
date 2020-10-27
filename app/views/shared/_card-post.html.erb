@@ -1,18 +1,20 @@
-<div class="card-post">
-  <% if post_within.user.photo.attached? %>
-    <%= cl_image_tag(post_within.user.photo.key, gravity: :face, :class => "avatar-large ml-3") %>
-  <% elsif post_within.user.cl_img_tag %>
-    <%= cl_image_tag(post_within.user.cl_img_tag, gravity: :face, :class => "avatar-large ml-3") %>
-  <% else  %>
-    <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large ml-3") %>
-  <% end %>
-  <div class="card-infos w-100">
-    <div class="d-flex justify-content-between mb-2">
+<article class="card-square">
+  <section class="card-infos w-100">
+    <header class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><span class="red">·ban</span>post</h3>
       <h3 class="corporate red"><%= post_within.date.strftime('%d.%m.%Y') %></h3>
-    </div>
+    </header>
+    <section class="text-center mt-3 mb-4">
+      <% if post_within.user.photo.attached? %>
+        <%= cl_image_tag(post_within.user.photo.key, gravity: :face, :class => "avatar-large") %>
+      <% elsif post_within.user.cl_img_tag %>
+        <%= cl_image_tag(post_within.user.cl_img_tag, gravity: :face, :class => "avatar-large") %>
+      <% else  %>
+        <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large") %>
+      <% end %>
+    </section>
     <h2><%= post_within.title %></h2>
     <p>Posted by: <%= post_within.user.first_name %> <%= post_within.user.last_name %></p>
-    <p><i class="fas fa-tags fa-lg gray mr-1"></i> <%= post_within.tag_list %></p>
-  </div>
-</div>
+    <p><i class="fas fa-tags fa-lg blue mr-1"></i> <%= post_within.tag_list %></p>
+  </section>
+</article>
