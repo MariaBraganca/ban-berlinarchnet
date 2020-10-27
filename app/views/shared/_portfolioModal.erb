@@ -1,47 +1,46 @@
-    <div class="modal fade bd-example-modal-lg" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-body">
-            
-                        <!-- Carousel-->
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <% if @user.portfolio_photos.attached?  %> <!-- user has uploaded a profile pic -->
-                                    <% @user.portfolio_photos.map do |photo| %>
-                                        <% if @user.portfolio_photos.first == photo %>
-                                            <div class="carousel-item active">
-                                                <%= cl_image_tag(photo.key, :class => "carousel-filter") %>
-                                            </div>
-                                        <% else %>
-                                            <div class="carousel-item">
-                                                <%= cl_image_tag(photo.key, :class => "carousel-filter") %>
-                                            </div>
-                                        <% end %>
-                                    <% end %>
-                                <% else @user.id <= 39  %> <!-- user is seeded -->
-                                    <% @user.seed_portfolio.each do |portfolio| %>
-                                        <div class="carousel-item <%= "active" if @user.seed_portfolio.first == portfolio %>" >
-                                            <%= cl_image_tag(portfolio, :class => "carousel-filter") %>
-                                        </div>
-                                    <% end %>
-                                <% end %>    
-                            </div>    
-                            <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-call" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
+<div class="modal fade bd-example-modal-lg" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<div class="modal-body">
+					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<% if @user.portfolio_photos.attached?  %>
+								<% @user.portfolio_photos.map do |photo| %>
+									<% if @user.portfolio_photos.first == photo %>
+										<div class="carousel-item active">
+											<%= cl_image_tag(photo.key, :class => "carousel-filter") %>
+										</div>
+									<% else %>
+										<div class="carousel-item">
+											<%= cl_image_tag(photo.key, :class => "carousel-filter") %>
+										</div>
+									<% end %>
+								<% end %>
+							<% else %>
+								<% @user.seed_portfolio.each do |portfolio| %>
+									<div class="carousel-item <%= "active" if @user.seed_portfolio.first == portfolio %>">
+										<%= cl_image_tag(portfolio, :class => "carousel-filter") %>
+									</div>
+								<% end %>
+							<% end %>    
+						</div>    
+						<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+					<button type="button" class="btn btn-call" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
