@@ -1,0 +1,28 @@
+<div class="modal fade background-col" id="attendModal" tabindex="-1" role="dialog" aria-labelledby="attendModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="attendModalLabel">Congratulations!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      
+      <div class="modal-body">
+        <p>
+          You are attending the next <b><%= @event.title %></b> event.
+          You will meet <b><%= @event.users.length %> great members</b> of the <span class="corporate red">·ban</span> community. 😍<br>
+          See you there!
+        </p>
+       <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" class = "gif" alt="this slowpoke moves"  width="100%" alt="404 image"/>     
+      </div>
+      
+      <div class="modal-footer">
+        <%= form_tag event_rsvps_path(@event), method: :post do |f| %>
+          <%= submit_tag "Confirm", class: "btn btn-attend"%>
+        <% end %>
+        <%= link_to "Unattend", event_path(@event), class: "btn btn-delete" %>
+      </div>
+    </div>
+  </div>
+</div>

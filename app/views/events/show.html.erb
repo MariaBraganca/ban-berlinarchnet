@@ -24,8 +24,8 @@
       <% if user_signed_in? %>
         <%= link_to "Edit event", edit_event_path(@event), class: "btn btn-call w-100 mb-3" if current_user == @event.user %>
         <% unless @user_attending %>
-            <%= render "shared/exampleModal" %>
-            <button type="button" class="btn btn-attend w-100" data-toggle="modal" data-target="#exampleModal">
+            <%= render "shared/attendModal" %>
+            <button type="button" class="btn btn-attend w-100" data-toggle="modal" data-target="#attendModal">
                 Attend
             </button>
         <% else%>
@@ -127,8 +127,8 @@
       
       <% if user_signed_in? %> <!-- RSVP -->
         <% unless @user_attending %>
-          <%= render "shared/exampleModal" %>
-          <button type="button" class="btn btn-attend mb-5" data-toggle="modal" data-target="#exampleModal">
+          <%= render "shared/attendModal" %>
+          <button type="button" class="btn btn-attend mb-5" data-toggle="modal" data-target="#attendModal">
             Attend
           </button>
         <% else %>

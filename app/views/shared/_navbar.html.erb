@@ -2,12 +2,14 @@
   <%= link_to root_path, class: "" do %>
     <%= cl_image_tag("logo/logo1", :class => 'avatar') %>
   <% end %>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- ***************  COLLAPSE  **************** -->
+  <section class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <!-- ***************  MAIN MENU  **************** -->
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
         <%= link_to "Events", events_path, class: "nav-link" %>
@@ -26,10 +28,10 @@
       </li>
     </ul>
 
+    <!-- ***************  USER MENU  **************** -->
     <ul class="navbar-nav">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <!-- Avatar -->
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% elsif current_user.cl_img_tag %>
@@ -39,7 +41,6 @@
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
-            <%#= link_to "Edit Profile", '/users/edit', class: "dropdown-item" %>
             <%= link_to "Create event", new_event_path, class: "dropdown-item" %>
             <%= link_to "Create post", new_post_path, class: "dropdown-item" %>
             <%# if user received messages is not empty, link_to the last received message %>
@@ -61,5 +62,5 @@
         </li>
       <% end %>
     </ul>
-  </div>
+  </section>
 </nav>
