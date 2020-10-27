@@ -1,17 +1,22 @@
-<% require "date" %>
-
 <article class="card-list mb-3">
-  <%= cl_image_tag(experience_within.office.banner_url, :class => "card-list-img") %>
   <section class="card-infos">
     <header class="d-flex justify-content-between mb-2">
-      <h3 class="corporate"><span class="red">·ban</span>office</h3>
+      <h3 class="corporate"><span class="red">·ban</span>job</h3>
     </header>
     <h2><%= experience_within.job_position %></h2>
-    <% if experience_within.end_date > DateTime.now()   %>
-      <p>Currently working @ <b><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></b></p>
-    <% else   %>
-      <p>Worked @ <b><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></b></p>
-    <% end %>
-    <p><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date > DateTime.now() ? "present" : experience_within.end_date.strftime("%m.%Y") %></p>
+    
+    <section class="d-flex align-items-start">
+      <% if experience_within.office.banner_url %>
+        <%= cl_image_tag(experience_within.office.banner_url, :class => "avatar-square mr-2") %>      
+      <% end %>
+      <div>
+        <% if experience_within.end_date > DateTime.now()   %>
+          <p class="mb-1">Currently working @ <b><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></b></p>
+        <% else   %>
+          <p class="mb-1">Worked @ <b><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></b></p>
+        <% end %>
+        <p class="mb-0"><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date > DateTime.now() ? "present" : experience_within.end_date.strftime("%m.%Y") %></p>
+      </div>
+    </section>
   </section>
 </article>
