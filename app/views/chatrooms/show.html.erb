@@ -1,92 +1,93 @@
-
-<body id= "chatroom">
-<div class="container mt-5" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); max-height: 800px; border-radius: 6px">
-
-  <div class="row justify-content-center">
-   <div class="col-3" style="padding: 0px">
-    <div class="convo-container">
-      <div class="messages-hd">
-        <h3>Chats</h3>
+<main class="container min-vh-100" id="chatroom">
+  <!-- ***************  CHATROOM  **************** -->
+  <section class="row chatroom-card justify-content-center my-5">
+    <!-- ***************  INDEX  **************** -->
+    <section class="col-3 border-right">
+      <div class="border-bottom">
+        <h3 class="corporate text-center py-3 mb-0"><span class="red">ban</span><span class="d-none d-md-inline-block">chat</span></h3>
       </div>
-        <div class="inbox-chat" id="chat-active">
-          <% @chatrooms.each do |chatroom| %>
-            <% user_id = chatroom.user_two.id if chatroom.user_one == current_user %>
-            <% user_id = chatroom.user_one.id if chatroom.user_two == current_user %>
-            <%= link_to chatroom_path(chatroom), id: "user-#{user_id}", class: "chat-listing .list-group-flush list-group-item #{'active' if chatroom == @chatroom}" do %>
-              <div class="chat-card">
-                <%# if the user is the current user, we are checking if he has a photo, if not we display the one that is already given; else we do the same for the other user but we are checking it on the chats "summary"%>
-                <% if chatroom.user_one == current_user %>
-                  <% if chatroom.user_two.photo.attached? %>
-                    <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar") %>
-                  <% else %>
-                    <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar" %>
-                  <% end %>
+      <div id="chat-active">
+        <% @chatrooms.each do |chatroom| %>
+          <% user_id = chatroom.user_two.id if chatroom.user_one == current_user %>
+          <% user_id = chatroom.user_one.id if chatroom.user_two == current_user %>
+          <%= link_to chatroom_path(chatroom), id: "user-#{user_id}", class: "list-group-item #{'active' if chatroom == @chatroom}" do %>
+            <!-- ***************  CHATROOM CARD  **************** -->
+            <section class="chat-card">
+              <%# if the user is the current user, we are checking if he has a photo, if not we display the one that is already given; else we do the same for the other user but we are checking it on the chats "summary"%>
+              <% if chatroom.user_one == current_user %>
+                <% if chatroom.user_two.photo.attached? %>
+                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar") %>
                 <% else %>
-                  <% if chatroom.user_one.photo.attached? %>
-                    <%= cl_image_tag(chatroom.user_one.photo.key, :class => "avatar") %>
-                  <% else %>
-                    <%= cl_image_tag (chatroom.user_one.cl_img_tag), gravity: :face, class: "avatar" %>
-                  <% end %>
+                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar" %>
                 <% end %>
-
-                <% if chatroom.user_one == current_user %>
-                  <h6 class="ml-3"><%= chatroom.user_two.first_name %> <%= chatroom.user_two.last_name %></h6>
+              <% else %>
+                <% if chatroom.user_one.photo.attached? %>
+                  <%= cl_image_tag(chatroom.user_one.photo.key, :class => "avatar") %>
                 <% else %>
-                  <h6 class="ml-3"><%= chatroom.user_one.first_name %> <%= chatroom.user_one.last_name %></h6>
+                  <%= cl_image_tag (chatroom.user_one.cl_img_tag), gravity: :face, class: "avatar" %>
+                <% end %>
+              <% end %>
+              <div class="d-none d-md-block ml-md-3">
+                <% if chatroom.user_one == current_user %>
+                  <h6 class="my-0"><%= chatroom.user_two.first_name.capitalize %> <%= chatroom.user_two.last_name.capitalize %></h6>
+                <% else %>
+                  <h6 class="my-0"><%= chatroom.user_one.first_name.capitalize %> <%= chatroom.user_one.last_name.capitalize %></h6>
+                <% end %>
+                <% if chatroom.messages.empty? %>
+                  <p class="my-0"></p>
+                <% else %>
+                  <p class="my-0"><%= chatroom.messages.last.content %></p>
                 <% end %>
               </div>
-              <% if chatroom.messages.empty? %>
-                <p class="message-text-inbox"></p>
-              <% else %>
-              <p class="message-text-inbox"><%= chatroom.messages.last.content  %></p>
-              <% end %>
-            <% end %>
+            </section>
           <% end %>
+        <% end %>
       </div>
-    </div>
-   </div>
+    </section>
 
-
-  <div class="col-9" style="padding: 0px">
-    <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+    <!-- ***************  SHOW  **************** -->
+    <section class="col-9 px-0">
+      <div  class="border-bottom" id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
-
           <% if current_user == message.user %>
-            <div class="messages-container" id="message-<%= message.id %>">
+            <div id="message-<%= message.id %>">
               <small class="chat-datetime-out"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
               <div class="message-text-out">
                 <p><%= message.content %></p>
               </div>
             </div>
           <% else %>
-              <div class="messages-container" id="message-<%= message.id %>">
-                <small class="chat-datetime-in"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
-                <div class="message-avatar">
-                  <% if message.user.photo.attached? %>
-                    <%= cl_image_tag(message.user.photo.key, :class => "avatar")%>
-                  <% else %>
-                    <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar" %>
-                  <% end %>
+            <div id="message-<%= message.id %>">
+              <small class="chat-datetime-in"><%= message.created_at.strftime("%a %b %e  |  %l:%M%p") %></small>
+              <div class="">
+                <!-- 
+                <% if message.user.photo.attached? %>
+                  <%= cl_image_tag(message.user.photo.key, :class => "avatar")%>
+                <% else %>
+                  <%= cl_image_tag (message.user.cl_img_tag), gravity: :face, class: "avatar" %>
+                <% end %>
+                -->
                 <!-- <span class="ml-2"><%= message.user.first_name %> <%= message.user.last_name %></span> -->
                 <div class="message-text-in">
                   <p><%= message.content %></p>
                 </div>
-                </div>
-
               </div>
+            </div>
           <% end %>
         <% end %>
-    </div>
+      </div>
 
-
-        <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-    <div class="form-">
-        <%= f.input :content, input_html: { class: "chat-input"}, label: false, placeholder: "Write a message..." %>
-        <%= f.submit 'Send', :class => 'btn-message' %>
+      <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+        <section class="row p-3">
+          <div class="col-12 col-lg-9">
+            <%= f.input :content, input_html: { class: "w-100"}, label: false, placeholder: "Write a message..." %>
+          </div>
+          <div class="col-12 col-lg-3">
+            <%= f.submit 'Send', :class => 'btn btn-upload w-100' %>
+          </div>
+        </section>
       <% end %>
-  </div>
-  </div>
-  </div>
- </div>
-</div>
-</body>
+    </section>
+  </section>
+</main>
+

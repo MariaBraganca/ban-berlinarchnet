@@ -98,7 +98,7 @@
     <% unless @user.events.empty? %>
         <div class="row">
           <% @user.events.each do |event|  %>
-            <div class='col-lg-3 mb-3'>
+            <div class='col-md-6 col-lg-3 mb-3'>
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event", event_within: event %>
               <% end %>
@@ -107,9 +107,9 @@
         </div>
     <% else %>
       <% if current_user == @user %>
-        <p class="col-12">Check our events page to host or attend an event!</p>
+        <p>Check our events page to host or attend an event!</p>
        <% else %>
-        <p class="col-12"><%= @user.first_name %> didn't host or attend any events yet.</p>
+        <p><%= @user.first_name %> didn't host or attend any events yet.</p>
       <% end %>
     <% end %>
   </section>
@@ -121,7 +121,7 @@
     <% unless @user.posts.empty? %>
       <div class="row">
         <% @user.posts.each do |post| %>
-          <div class="col-lg-3 mb-3">
+          <div class="col-md-6 col-lg-3 mb-3">
             <%= link_to post_path(post) do %>
               <%= render "shared/card-post",  post_within: post %>
             <% end %>
@@ -130,9 +130,9 @@
       </div>
     <% else %>
       <% if current_user == @user %>
-        <p class="col-12">Check our blog page to write or read a post!</p>
+        <p>Check our blog page to write or read a post!</p>
       <% else %>
-        <p class="col-12"><%= @user.first_name %> didn't write any blog posts yet.</p>
+        <p><%= @user.first_name %> didn't write any blog posts yet.</p>
       <% end %>
     <% end %>
   </section>
