@@ -65,7 +65,7 @@
       <% if @event.online %>
         <p><i class="fas fa-signal fa-lg green mr-2"></i> Online Event</p>                    
         <%= link_to url_for(@event.online_link), :target => '_blank' do %>
-            <i class="fas fa-link fa-lg red mr-2"></i> <%= @event.online_link %>
+          <p class="link"><i class="fas fa-link fa-lg red mr-2"></i> <%= @event.online_link %></p>
         <% end %>
       <% else%>
         <p><i class="fas fa-building fa-lg green mr-2"></i> <%= @event.venue %></p>

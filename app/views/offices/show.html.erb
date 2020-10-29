@@ -21,7 +21,7 @@
       <h2 class="mb-3">About</h2>
       <p><%= @office.description %></p>
       <%= link_to url_for(@office.url), :target => '_blank' do %>
-        <i class="fas fa-link fa-lg red mr-2"></i> <%= @office.url %>
+        <p class="link mb-0"><i class="fas fa-link fa-lg red mr-2"></i> <%= @office.url %></p>
       <% end %>
     </section>
 
