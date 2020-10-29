@@ -22,9 +22,7 @@
 	<section class="my-5">
 		<header class="text-center">
 			<h2 class="font-weight-bold">Events</h2>
-			<button class="btn btn-upload mt-2 mb-5">
-				<%= link_to "Check out the latest events!", events_path %>
-			</button>
+			<p class="link mb-5"><%= link_to "Check out the latest events >", events_path %></p>
 		</header>
 		<!-- ***************  EVENT CARDS  **************** -->
 		<section class="row justify-content-between">
@@ -46,9 +44,7 @@
 		<section class="col-lg-6">
 			<header class="text-center">
 				<h2 class="font-weight-bold">Offices</h2>
-				<button class="btn btn-upload mt-2 mb-5">
-					<%= link_to "Check out the best rated offices!", offices_path %>
-				</button>
+				<p class="link mb-5"><%= link_to "Check out the best rated offices >", offices_path %></p>
 			</header>
 			<!-- ***************  OFFICE CARDS  **************** -->
 			<section class="row">
@@ -66,9 +62,7 @@
 		<section class="col-lg-6">
 			<header class="text-center">
 				<h2 class="font-weight-bold">Jobs</h2>
-				<button class="btn btn-upload mt-2 mb-5">
-					<%= link_to "Check out the latest job openings!", openings_path %>
-				</button>
+				<p class="link mb-5"><%= link_to "Check out the latest job openings >", openings_path %></p>
 			</header>
 			<!-- ***************  OPENING CARDS  **************** -->
 			<section class="row">
@@ -89,9 +83,7 @@
 	<section class="my-5">
 		<header class="text-center">
 			<h2 class="font-weight-bold">Blog</h2>
-			<button class="btn btn-upload mt-2 mb-5">
-				<%= link_to "Check out the latest blog posts!", posts_path %>
-			</button>
+			<p class="link mb-5"><%= link_to "Check out the latest blog posts >", posts_path %></p>
 		</header>
 		<section class="row justify-content-between">
 			<% @posts.each do |post| %>

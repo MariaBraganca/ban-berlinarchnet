@@ -60,4 +60,12 @@
 }
 .sort-btn:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-} 
+}
+// link im text
+p.link {
+  color: $call;
+}
+p.link:hover {
+  text-decoration: underline;
+  color: $call;
+}
