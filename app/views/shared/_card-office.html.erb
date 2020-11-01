@@ -1,4 +1,4 @@
-<article class="card-list mb-3"> 
+<article class="card-list mb-3">
   <!-- ***************  RATINGS INDEX CONTROLLER **************** -->
   <% if office_within.ratings.empty? %>
     <% culture_average = 0 %>
@@ -24,42 +24,44 @@
     <% architecture_average = (architecture_ratings.sum / architecture_ratings.size).round %> <!-- ARCHITECTURE -->
   <% end %>
 
-  <%= cl_image_tag(office_within.banner_url, :class => "card-list-img") %>
+  <% unless cl_image_tag(office_within.banner_url) %>
+    <%= cl_image_tag(office_within.banner_url, :class => "card-list-img") %>
+  <% end %>
   <section class="card-infos w-100">
     <header class="d-flex justify-content-between mb-2">
       <h3 class="corporate"><span class="red">·ban</span>office</h3>
     </header>
     <h2><%= office_within.name %></h2>
-    <p><i class="fas fa-map-marker-alt" style="color: #E53E3E"></i> <%= office_within.location %></p>
+    <p><i class="fas fa-map-marker-alt red"></i> <%= office_within.location %></p>
     <!-- ***************  RATINGS  **************** -->
     <section class="row justify-content-between">
       <div class="col-12 col-lg-4">
         <p>
           <% architecture_average.times do %>
-            <i class="fas fa-star" style="color: #e9c46a"></i>
+            <i class="fas fa-star yellow"></i>
           <% end %>
           <% (5-architecture_average).times do %>
-            <i class="fas fa-star" style="color: lightgray"></i>
+            <i class="fas fa-star light-gray"></i>
           <% end %>
         </p>
       </div>
       <div class="col-12 col-lg-4 d-none d-lg-block">
         <p>
           <% culture_average.times do %>
-            <i class="fas fa-heart" style="color: #e53e3e"></i>
+            <i class="fas fa-heart red"></i>
           <% end %>
           <% (5-culture_average).times do %>
-            <i class="fas fa-heart" style="color: lightgray"></i>
+            <i class="fas fa-heart light-gray"></i>
           <% end %>
         </p>
       </div>
       <div class="col-12 col-lg-4 d-none d-lg-block">
         <p>
           <% salary_average.times do %>
-            <i class="fas fa-euro-sign" style="color: #90be6d"></i>
+            <i class="fas fa-euro-sign green"></i>
           <% end %>
           <% (5-salary_average).times do %>
-            <i class="fas fa-euro-sign" style="color: lightgray"></i>
+            <i class="fas fa-euro-sign light-gray"></i>
           <% end %>
         </p>
       </div>

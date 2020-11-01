@@ -5,7 +5,11 @@ require 'json'
 
 #Reading Jsons
 
-filepath = 'db/offices_projects.json'
+# filepath = 'db/offices_projects.json'
+# serialized_offices = File.read(filepath)
+# offices = JSON.parse(serialized_offices)
+
+filepath = 'db/offices.json'
 serialized_offices = File.read(filepath)
 offices = JSON.parse(serialized_offices)
 
@@ -38,25 +42,27 @@ n_comments = 40
 phase = "office"
 puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
+terminal_counter = 1
 
 offices.each do |office|
   Office.create(name: office["name"],
                 location: office["location"],
-                url: office["url"],
-                description: OFFICE_DESCRIPTIONS.sample,
-                banner_url: office["banner_url"])
+                url: office["url"])
+                # description: OFFICE_DESCRIPTIONS.sample,
+                # banner_url: office["banner_url"])
                 # cl_img_tag: "offices/office#{rand(1..48)}",
                 # cl_img_project_tag: "projects/project#{rand(1..10)}")
-                puts "=== Office seeded <=>                ==="
+                puts "=== Office seeded <=> #{terminal_counter} out of #{n_offices} ==="
 
-    office["projects"].each do |project|
-                OfficeProject.create(office_id: project["office_id"],
-                                      project_name: project["project_name"],
-                                      project_img_url: project["project_img_url"],
-                                      project_year: project["project_year"],
-                                      project_typology: project["project_typology"])
-                puts "===               <=> Project seeded ==="
-              end
+    # office["projects"].each do |project|
+    #             OfficeProject.create(office_id: project["office_id"],
+    #                                   project_name: project["project_name"],
+    #                                   project_img_url: project["project_img_url"],
+    #                                   project_year: project["project_year"],
+    #                                   project_typology: project["project_typology"])
+    #             puts "===               <=> Project seeded ==="
+    #           end
+terminal_counter += 1
 end
 puts "
 
@@ -248,10 +254,12 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 jobs.each do |job|
+  office_ids = Office.pluck(:id)
+  office_id = office_ids.sample
   Opening.create!(date: Faker::Time.forward(days: rand(10..40), period: :evening),
                  job_position: job["job_position"],
                  description: JOB_DESCRIPTIONS.sample,
-                 office_id: rand(1..n_offices))
+                 office_id: office_id)
 
   puts "=== #{terminal_counter} out of #{n_jobs} #{phase} seeded ==="
   terminal_counter += 1
@@ -270,10 +278,12 @@ puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{p
 terminal_counter = 1
 
 n_ratings.times do
+  office_ids = Office.pluck(:id)
+  office_id = office_ids.sample
   Rating.create!(culture: rand(1..5),
                 salary: rand(1..5),
                 architecture: rand(1..5),
-                office_id: rand(1..n_offices))
+                office_id: office_id)
 
   puts "=== #{terminal_counter} out of #{n_ratings}s #{phase} seeded ==="
   terminal_counter += 1
