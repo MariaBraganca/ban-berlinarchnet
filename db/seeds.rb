@@ -47,32 +47,30 @@ terminal_counter = 1
 offices.each do |office|
   Office.create(name: office["name"],
                 location: office["location"],
-                url: office["url"])
+                url: office["url"],
                 # description: OFFICE_DESCRIPTIONS.sample,
-                # banner_url: office["banner_url"])
-                # cl_img_tag: "offices/office#{rand(1..48)}",
-                # cl_img_project_tag: "projects/project#{rand(1..10)}")
-                puts "=== Office seeded <=> #{terminal_counter} out of #{n_offices} ==="
-
-    # office["projects"].each do |project|
-    #             OfficeProject.create(office_id: project["office_id"],
-    #                                   project_name: project["project_name"],
-    #                                   project_img_url: project["project_img_url"],
-    #                                   project_year: project["project_year"],
-    #                                   project_typology: project["project_typology"])
-    #             puts "===               <=> Project seeded ==="
-    #           end
-terminal_counter += 1
+                banner_url: office["banner_url"])
+    unless office["projects"].nil?
+      office["projects"].each do |project|
+        project["id"] = Office.last.id
+        OfficeProject.create( office_id: project["id"],
+                              project_name: project["project_name"],
+                              project_img_url: project["project_img_url"],
+                              project_year: project["project_year"],
+                              project_typology: project["project_typology"])
+        puts "=== Project seeded ==="
+      end
+    end
+  puts "=== Office seeded <=> #{terminal_counter} out of #{n_offices} ==="
+  terminal_counter += 1
 end
 puts "
-
 
 
 "
 puts "Random #{phase} sample:"
 p Office.find(rand(1..Office.all.count))
 puts "
-
 
 
 "
@@ -92,8 +90,8 @@ TEAM_MEMBER_NAME.each do |name|
               cl_img_tag: "users/#{first_name}",
               seed_portfolio: "portfolios/portfolio1")
 
-puts "===#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'==="
-terminal_counter += 1
+  puts "===#{terminal_counter} out of #{n_team_members}, #{name}'s Account Created ---> Email: '#{name}@test.com', Password: '123456'==="
+  terminal_counter += 1
 end
 puts "
 

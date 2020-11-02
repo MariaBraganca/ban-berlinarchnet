@@ -1,5 +1,5 @@
 <!-- ***************  HEADER OFFICE  **************** -->
-<% unless cl_image_tag(@office.banner_url) %>
+<% unless @office.banner_url.nil? %>
   <header class="banner">
     <div class="banner-overlay"></div>
     <%= cl_image_tag(@office.banner_url, :class => "banner-image") %>
