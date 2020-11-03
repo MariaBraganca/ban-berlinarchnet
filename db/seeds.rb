@@ -48,8 +48,8 @@ offices.each do |office|
   Office.create(name: office["name"],
                 location: office["location"],
                 url: office["url"],
-                # description: OFFICE_DESCRIPTIONS.sample,
-                banner_url: office["banner_url"])
+                description: office["description"],
+                banner_url: office["projects"][0]["project_img_url"])
     unless office["projects"].nil?
       office["projects"].each do |project|
         project["id"] = Office.last.id
