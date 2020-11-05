@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Nokogiri gem
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+# Watir gem
+gem 'watir', '~> 6.16', '>= 6.16.5'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Act-as-taggable-on gem
