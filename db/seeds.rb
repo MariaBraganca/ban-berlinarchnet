@@ -278,9 +278,9 @@ terminal_counter = 1
 n_ratings.times do
   office_ids = Office.pluck(:id)
   office_id = office_ids.sample
-  Rating.create!(culture: rand(1..5),
-                salary: rand(1..5),
-                architecture: rand(1..5),
+  Rating.create!(culture: rand(3..5),
+                salary: rand(3..5),
+                architecture: rand(3..5),
                 office_id: office_id)
 
   puts "=== #{terminal_counter} out of #{n_ratings}s #{phase} seeded ==="
