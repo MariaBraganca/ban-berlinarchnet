@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require 'watir'
 
 class BaunetzScraper
   def self.get_office_projects(office_link, office)
@@ -7,6 +8,9 @@ class BaunetzScraper
 
     html_string = open(url).read
     html_doc = Nokogiri::HTML(html_string)
+
+    office_banner = html_doc.css('div.profile-image__image').css('img').attribute('src').value
+    office[:banner_url] = office_banner
 
     projects = []
     project = {}
@@ -75,9 +79,14 @@ class BaunetzScraper
 
       offices << office
     end
+
+    offices.uniq!{ |office| office[:name].downcase }
+    offices.uniq!{ |office| office[:url] }
+    offices.sort_by!{ |office| office[:name] }
+
+    p offices.count
+
     json = JSON.pretty_generate(offices)
     File.open("db/offices.json", 'w') { |file| file.write(json) }
   end
 end
-
-
