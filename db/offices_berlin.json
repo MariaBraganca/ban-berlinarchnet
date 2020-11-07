@@ -1,0 +1,5842 @@
+[
+  {
+    "name": "abcarius + burns architecture desgn",
+    "location": "Ackerstr. 1, 10115 Berlin",
+    "url": "www.abcariusburns.de"
+  },
+  {
+    "name": "Ulrich Müller Berlin",
+    "location": "Ackerstr. 10, 10115 Berlin",
+    "url": "www.architekturgalerieberlin.de"
+  },
+  {
+    "name": "daum architekten berlin",
+    "location": "Ackerstr. 14, 10115 Berlin",
+    "url": "www.daumarchitekten.de"
+  },
+  {
+    "name": "Bess - Büro für Architektur und Gestaltung",
+    "location": "Ackerstr. 162, 10115 Berlin",
+    "url": "www.berndbess.de"
+  },
+  {
+    "name": "usp architekten",
+    "location": "Ackerstr. 20, 10115 Berlin",
+    "url": "www.usp-architekten.de"
+  },
+  {
+    "name": "aumann architekten",
+    "location": "Ackerstr. 6, 10115 Berlin",
+    "url": "www.aumann-architekten.de"
+  },
+  {
+    "name": "marc benjamin drewes ARCHITEKTUREN",
+    "location": "Adalbertstr. 24, 10179 Berlin",
+    "url": "www.marcdrewes.com"
+  },
+  {
+    "name": "Chez Weitz",
+    "location": "Adalbertstr. 5, 10999 Berlin",
+    "url": "www.chezweitz.de"
+  },
+  {
+    "name": "Duncan McCauley GmbH und Co. KG",
+    "location": "Adalbertstr. 6, 10999 Berlin",
+    "url": "www.duncanmccauley.com"
+  },
+  {
+    "name": "Tactile Architecture",
+    "location": "Adalbertstr. 9, 10999 Berlin",
+    "url": "www.tactile-architecture.com"
+  },
+  {
+    "name": "Staab Architekten GmbH",
+    "location": "Akazienstr.  21, 10823 Berlin",
+    "url": "www.staab-architekten.com"
+  },
+  {
+    "name": "Dipl.-Ing.(FH) MSc. Dipl.-Kfm.(FH) studio weissschwarz",
+    "location": "Albrechtstr. 22, 10117 Berlin",
+    "url": "www.studioweissschwarz.de"
+  },
+  {
+    "name": "HENN GmbH",
+    "location": "Alexanderstr. 7, 10178 Berlin",
+    "url": "www.henn.com"
+  },
+  {
+    "name": "Kaden und Lager GmbH",
+    "location": "Alexanderstr. 7, 10178 Berlin",
+    "url": "www.kadenundlager.de"
+  },
+  {
+    "name": "Kadawittfeldarchitektur",
+    "location": "Alexanderstr. 7, 10178 Berlin",
+    "url": "www.kadawittfeldarchitektur.de"
+  },
+  {
+    "name": "ROBERTNEUN ARCHITEKTEN GmbH",
+    "location": "Alexandrinenstr. 118, 10969 Berlin",
+    "url": "www.robertneun.de"
+  },
+  {
+    "name": "Jahn, Mack & Partner, Architektur und Stadtplanung",
+    "location": "Alt Moabit 73, 10555 Berlin",
+    "url": "www.jahn-mack.de"
+  },
+  {
+    "name": "Drei Plus Planungsgruppe Achitekten und Ingenieure GmbH",
+    "location": "Alt Moabit 96, 10559 Berlin",
+    "url": "www.dreiplus.de"
+  },
+  {
+    "name": "ANH Hausbesitz GmbH & Co. KG",
+    "location": "Alt-Moabit 103, 10559 Berlin",
+    "url": "www.anh-hausbesitz.de"
+  },
+  {
+    "name": "PMS - AG Architekten und Ingenieure",
+    "location": "Alt-Moabit 134, 10557 Berlin",
+    "url": "www.pms-ag.de"
+  },
+  {
+    "name": "Bundesministerium des Innern, für Bau und Heimat",
+    "location": "Alt-Moabit 140, 10557 Berlin",
+    "url": "www.janschultheiss.de"
+  },
+  {
+    "name": "HMGB Architekten",
+    "location": "Alt-Moabit 19, 10559 Berlin",
+    "url": "hmgb.net"
+  },
+  {
+    "name": "Architekturladen-Berlin",
+    "location": "Alte Brauerei 16, 10965 Berlin",
+    "url": "www.architekturladen-berlin.de"
+  },
+  {
+    "name": "Gössler Kinz Kerber Schippmann Architekten PartG mbB",
+    "location": "Alte Jakobstr. 85, 10179 Berlin",
+    "url": "www.gkkk.de"
+  },
+  {
+    "name": "Architektenkammer Berlin Referent Fachbereich Planen und Bauen",
+    "location": "Alte Jakobstraße 149, 10969 Berlin",
+    "url": "www.ak-berlin.de"
+  },
+  {
+    "name": "Pfeiffer Architekten",
+    "location": "Alte Schönhauser Str. 29, 10119 Berlin",
+    "url": "www.pfeiffer-architekten.de"
+  },
+  {
+    "name": "AGP - Guigonis und Partner Architekten + Ingenieure",
+    "location": "Alte Schönhauser Str. 35, 10119 Berlin",
+    "url": "www.agp-berlin.com"
+  },
+  {
+    "name": "Hansen de Haen",
+    "location": "Altonaer St. 9, 10557 Berlin",
+    "url": "www.hansendehaen.de"
+  },
+  {
+    "name": "Atelier Eichhorn - architecture 4 public",
+    "location": "Altonaer Str. 12, 10557 Berlin",
+    "url": "www.atelier-eichhorn.de"
+  },
+  {
+    "name": "mna merten nibbes architekten PartG mbB",
+    "location": "Am Festungsgraben 1, 10117 Berlin",
+    "url": "www.merten-nibbes.de"
+  },
+  {
+    "name": "Vero Zadworna",
+    "location": "Am Friedrichshain 3, 10407 Berlin",
+    "url": "www.verozadworna.com"
+  },
+  {
+    "name": "MTTR Architekten + Stadtplaner",
+    "location": "Am Lokdepot 13, 10965 Berlin",
+    "url": "www.mttr.berlin"
+  },
+  {
+    "name": "OFFICE FOR ARCHITECTURE",
+    "location": "Am Lokdepot 4, 10965 Berlin",
+    "url": "www.marc-paulin.com"
+  },
+  {
+    "name": "GATE Gussmann Atelier",
+    "location": "Am Lokdepot 6, 10965 Berlin",
+    "url": "www.g-a-t-e.de"
+  },
+  {
+    "name": "GRUBER + POPP ARCHITEKTEN BDA",
+    "location": "Am Spreebord 5, 10589 Berlin",
+    "url": "www.gruberpopp.de"
+  },
+  {
+    "name": "Atelier Loidl Landschaftsarchitekten Berlin GmbH",
+    "location": "Am Tempelhofer Berg 6, 10965 Berlin",
+    "url": "www.atelier-loidl.de"
+  },
+  {
+    "name": "Stadler & Besch - Architekten",
+    "location": "Am Tempelhofer Berg 6, 10965 Berlin",
+    "url": "www.stadler-besch.de"
+  },
+  {
+    "name": "Studio Wessendorf",
+    "location": "Am Tempelhofer Berg 6, 10965 Berlin",
+    "url": "www.studio-wessendorf.de"
+  },
+  {
+    "name": "Tierpark Berlin-Friedrichsfelde GmbH",
+    "location": "Am Tierpark 125, 10319 Berlin",
+    "url": "www.tierpark-berlin.de"
+  },
+  {
+    "name": "Stephan Steck Architekt",
+    "location": "Am Volkspark 53, 10715 Berlin",
+    "url": "www.plan21.de"
+  },
+  {
+    "name": "interior design",
+    "location": "Am Zirkus 3, 10117 Berlin",
+    "url": "www.ute-vielberth.de"
+  },
+  {
+    "name": "BE+ Architekten",
+    "location": "Andreasstr. 10, 10243 Berlin",
+    "url": "www.beplus-architekten.de"
+  },
+  {
+    "name": "Liebscher-Tauber+Tauber Architekten PartG mbB",
+    "location": "Anklamer Str. 12, 10115 Berlin",
+    "url": "www.liebscher-tauber.de"
+  },
+  {
+    "name": "Obermann Janitschek + Partner",
+    "location": "Anklamer Str. 27, 10435 Berlin",
+    "url": "www.ojpa.de"
+  },
+  {
+    "name": "kwp-architekten",
+    "location": "Anklamer Str. 5, 10115 Berlin",
+    "url": "www.kwp-architekten.de"
+  },
+  {
+    "name": "Schlutt und Schuldt architekten Cooperation freie Architekten",
+    "location": "Anklamerstr. 35, 10115 Berlin",
+    "url": "www.schlutt-schuldt.de"
+  },
+  {
+    "name": "LA 21 Landschaftsarchitektur",
+    "location": "Ansbacher Str. 45, 10777 Berlin",
+    "url": "la-21.com"
+  },
+  {
+    "name": "Büro Phillipp Oswalt",
+    "location": "Apostel-Paulus-Str. 5, 10823 Berlin",
+    "url": "www.oswalt.de"
+  },
+  {
+    "name": "Stephanus Schmitz Architekt Dipl.-Ing  AP 5",
+    "location": "Apostel-Paulus-Str. 5, 10823 Berlin",
+    "url": "www.stephanusschmitz.de"
+  },
+  {
+    "name": "Kleinke Höhne",
+    "location": "Arndtstr. 26, 10965 Berlin",
+    "url": "www.kleinkehoehne.de"
+  },
+  {
+    "name": "Kéré Architecture GmbH",
+    "location": "Arndtstr. 34, 10965 Berlin",
+    "url": "www.kere-architecture.com"
+  },
+  {
+    "name": "IWB Projektbetreuung",
+    "location": "Aschaffenburger Str. 6, 10779 Berlin",
+    "url": "www.iwb-projektbetreuung.de"
+  },
+  {
+    "name": "Femke Hägen Gesellschaft von Architekten mbH",
+    "location": "Askanischer Platz 4, 10963 Berlin",
+    "url": "www.haberent.de"
+  },
+  {
+    "name": "brandt + simon architekten",
+    "location": "Auerstr. 14, 10249 Berlin",
+    "url": "www.brandtundsimon.de"
+  },
+  {
+    "name": "ENGELARCHITEKTEN",
+    "location": "Auguststr. 19, 10117 Berlin",
+    "url": "www.engelarchitekten.com"
+  },
+  {
+    "name": "A3 Architekten Berlin - Düsseldorf GmbH",
+    "location": "Auguststr. 27, 10117 Berlin",
+    "url": "www.a3architeketen.eu"
+  },
+  {
+    "name": "aquabit",
+    "location": "Auguststr. 35, 10119 Berlin",
+    "url": "www.aquabit.com"
+  },
+  {
+    "name": "Grüntuch Ernst Architekten BDA",
+    "location": "Auguststr. 51, 10119 Berlin",
+    "url": "www.gruentuchernst.de"
+  },
+  {
+    "name": "Grüntuch Ernst Architekten",
+    "location": "Auguststr. 51, 10119 Berlin",
+    "url": "gruentuchernst.de"
+  },
+  {
+    "name": "atelier le balto",
+    "location": "Auguststr. 69, 10117 Berlin",
+    "url": "www.lebalto.de"
+  },
+  {
+    "name": "Sinowenka-Landschaftsarchitekten",
+    "location": "Auguststr. 77, 10117 Berlin",
+    "url": "www.sinowenka-landschaftsarchitekten.de"
+  },
+  {
+    "name": "Ludloff Ludloff Architekten GmbH",
+    "location": "Auguststraße 91, 10117 Berlin",
+    "url": "www.ludloffludloff.de"
+  },
+  {
+    "name": "SWUP GmbH Landschaftsarchitektur, Stadtplanung und Mediation",
+    "location": "Babelsberger Str. 40, 10715 Berlin",
+    "url": "www.swup.de"
+  },
+  {
+    "name": "TOPOS Stadtplanung Landschaftsplanung Stadtforschung",
+    "location": "Badensche Str. 29, 10715 Berlin",
+    "url": "www.topos-planung.de"
+  },
+  {
+    "name": "Multiplan Bauplanungs GmbH",
+    "location": "Badensche Str. 33, 10715 Berlin",
+    "url": "ugk-berlin.de"
+  },
+  {
+    "name": "Harms Wulf Landschaftsarchitekten",
+    "location": "Baerwaldstr. 38, 10961 Berlin",
+    "url": "www.harmswulf-landschaftsarchitekten.de"
+  },
+  {
+    "name": "Dubois Muhler Neitzke Architekten + Ingenieure GbR",
+    "location": "Baerwaldstr.38, 10961 Berlin",
+    "url": "dmn-architekten.de"
+  },
+  {
+    "name": "sol.id.ar Architekten und Ingenieure",
+    "location": "Barstr. 10, 10713 Berlin",
+    "url": "www.solidar-pw.de"
+  },
+  {
+    "name": "HDR Planungsgesellschaft mbH",
+    "location": "Bayerischer Platz 1, 10779 Berlin",
+    "url": "www.hdrtmk.de"
+  },
+  {
+    "name": "Blaschke Hülsey Architekten Partnerschaftsgesellschaft mbB",
+    "location": "Belforter Str. 29, 10405 Berlin",
+    "url": "www.bhap.eu"
+  },
+  {
+    "name": "ka Koch Architektur Berlin",
+    "location": "Belziger Str. 23, 10823 Berlin",
+    "url": "www.ka-bln.de"
+  },
+  {
+    "name": "DENGLAB Architecture",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.denglab.com"
+  },
+  {
+    "name": "Freitag Hartmann Architekten GmbH",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.fh-architekten.de"
+  },
+  {
+    "name": "Arnold und Gladisch Gesellschaft von Architekten mbH",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.arnoldundgladisch.de"
+  },
+  {
+    "name": "Gabriele Fink. Architektur",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.gabriele-fink.de"
+  },
+  {
+    "name": "Gabriele Riesner Architektin",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.gabrieleriesner.de"
+  },
+  {
+    "name": "Fugmann Janotta und Partner Landschaftsarchitekten",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.fugmannjanotta.de"
+  },
+  {
+    "name": "AHLBORN · ARCHITEKTEN",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.ahlborn-architekten.de"
+  },
+  {
+    "name": "STUDIOKUBIK Architekten Fraunberg Güldenberg Partnerschaft mbB",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.studio-kubik.de"
+  },
+  {
+    "name": "Nedelykov Moreira Architekten",
+    "location": "Belziger Str. 25, 10823 Berlin",
+    "url": "www.nedelykov-moreira.com"
+  },
+  {
+    "name": "Prokosch + Partner Architekten",
+    "location": "Belziger Str. 71, 10823 Berlin",
+    "url": "www.prokosch.net"
+  },
+  {
+    "name": "Architekturbüro Beljatzky",
+    "location": "Belziger Straße 71, 10823 Berlin",
+    "url": "www.beljatzky.de"
+  },
+  {
+    "name": "kolor - Studio für Gestaltung",
+    "location": "Bergfriedstr. 22, 10969 Berlin",
+    "url": "www.kolor.de"
+  },
+  {
+    "name": "EDARE",
+    "location": "Bergmannstr.18, 10961 Berlin",
+    "url": "www.edare.de"
+  },
+  {
+    "name": "schmiedeknecht architekten",
+    "location": "Bergstr. 26, 10115 Berlin",
+    "url": "www.schmiedeknecht.de"
+  },
+  {
+    "name": "Studio Helmut Luck",
+    "location": "Bergstr. 62, 10115 Berlin",
+    "url": "www.helmutluck.com"
+  },
+  {
+    "name": "Müller Simon Architekten PartG mbB",
+    "location": "Bergstr. 73, 10115 Berlin",
+    "url": "www.ms-architekten.com"
+  },
+  {
+    "name": "schöningmosca Architekten",
+    "location": "Bernauer Str. 5, 10115 Berlin",
+    "url": "www.schoeningmosca.com"
+  },
+  {
+    "name": "Kai Hansen Architekten",
+    "location": "Bernauer Str. 6, 10115 Berlin",
+    "url": "www.kaihansen.net"
+  },
+  {
+    "name": "aspera-technics GmbH",
+    "location": "Bernburger Str. 30, 10963 Berlin",
+    "url": "www.aspera-technics.net"
+  },
+  {
+    "name": "Studio karhard® GbR",
+    "location": "Bevernstr. 5, 10997 Berlin",
+    "url": "www.karhard.de"
+  },
+  {
+    "name": "B+P Reiner Becker GmBH",
+    "location": "Bismarckstr. 121, 10625 Berlin",
+    "url": "www.bp-rb.de"
+  },
+  {
+    "name": "Winkens Architekten",
+    "location": "Bismarckstr. 63, 10627 Berlin",
+    "url": "www.winkens.de"
+  },
+  {
+    "name": "liventura Berlin",
+    "location": "Bismarckstr. 68, 10627 Berlin",
+    "url": "www.liventura.com"
+  },
+  {
+    "name": "amd.sigma strategic airport development GmbH",
+    "location": "Bismarckstr. 68, 10627 Berlin",
+    "url": "www.airport-dm.com"
+  },
+  {
+    "name": "GSAI Galandi Schirmer Architekten und Ingenieure GmbH",
+    "location": "Bismarckstr. 98, 10625 Berlin",
+    "url": "www.gsai.de"
+  },
+  {
+    "name": "Schwabe Projekt & Bauleitung",
+    "location": "Bismarckstraße 99, 10625 Berlin",
+    "url": "www.schwabe-bauleitung.de"
+  },
+  {
+    "name": "Schmitz-Planung",
+    "location": "Bleibtreustr. 10, 10623 Berlin",
+    "url": "www.schmitz-plan.de"
+  },
+  {
+    "name": "Berlin 2020 gGmbH c/o AIV zu Berlin",
+    "location": "Bleibtreustr. 33, 10707 Berlin",
+    "url": "www.bb2020.de"
+  },
+  {
+    "name": "Sigurd Larsen Design & Architecture",
+    "location": "Blücherstr. 14, 10961 Berlin",
+    "url": "www.sigurdlarsen.com"
+  },
+  {
+    "name": "Schernbeck Gruppe UG (haftungsbeschränkt)",
+    "location": "Blücherstr. 22, 10961 Berlin",
+    "url": "www.schernbeck-gruppe.de"
+  },
+  {
+    "name": "AZHAR ARCHITECTURE",
+    "location": "Blücherstr. 32, 10961 Berlin",
+    "url": "www.azhararchitecture.com"
+  },
+  {
+    "name": "Architekt Jens Ritter",
+    "location": "Boppstr. 10, 10967 Berlin",
+    "url": "www.studio-ritter.de"
+  },
+  {
+    "name": "ehrlich friedrich.architekten",
+    "location": "Boxhagener Str.43, 10245 Berlin",
+    "url": "www.ehrlichfriedrich.com"
+  },
+  {
+    "name": "EppleKlimberg Architekten PartGmbB",
+    "location": "Brandenburgische Str. 22, 10707 Berlin",
+    "url": "www.eppleklimberg.de"
+  },
+  {
+    "name": "BSK-ARCHITEKTEN Gesellschaft von Architekten mbH",
+    "location": "Brandenburgische Str. 86, 10713 Berlin",
+    "url": "www.bsk-architekten.de"
+  },
+  {
+    "name": "bplant Funke Stark Ingenieure UG",
+    "location": "Brunhildstr. 12, 10829 Berlin",
+    "url": "www.bplant.de"
+  },
+  {
+    "name": "buchner + wienke",
+    "location": "Brunnenstr. 10, 10119 Berlin",
+    "url": "www.buchnerundwienke.de"
+  },
+  {
+    "name": "Petersen Architekten Gesellschaft für Architektur + urbane Strategien mbH",
+    "location": "Brunnenstr. 156, 10115 Berlin",
+    "url": "www.petersenarchitekten.de"
+  },
+  {
+    "name": "Eberl-Pacan Gesellschaft von Architekten mbH Architekten + Ingenieure für Brandschutz",
+    "location": "Brunnenstr. 156, 10115 Berlin",
+    "url": "www.eberl-pacan.de"
+  },
+  {
+    "name": "planwerkstatt Freiraumplanung-Landschaftsentwicklung-Bauleitung",
+    "location": "Brunnenstr. 181, 10119 Berlin",
+    "url": "www.planwerkstatt.berlin"
+  },
+  {
+    "name": "Dr. Szamatolski + Partner GbR",
+    "location": "Brunnenstr. 181, 10119 Berlin",
+    "url": "www.szpartner.de"
+  },
+  {
+    "name": "Levin Monsigny Gesellschaft von Landschaftsarchitekten mbH",
+    "location": "Brunnenstr. 181, 10119 Berlin",
+    "url": "www.levin-monsigny.com"
+  },
+  {
+    "name": "Baufrösche GmbH",
+    "location": "Brunnenstr. 181, 10119 Berlin",
+    "url": "www.baufroesche.de"
+  },
+  {
+    "name": "Katrin Bastian | Landschaftsarchitektur",
+    "location": "Brunnenstr. 181, 10119 Berlin",
+    "url": "www.katrinbastian.de"
+  },
+  {
+    "name": "MILA / Jakob Tigges",
+    "location": "Brunnenstr. 191, 10119 Berlin",
+    "url": "www.mila-berlin.com"
+  },
+  {
+    "name": "KSV Krüger Schuberth Vandreike Planung und Kommunikation GmbH",
+    "location": "Brunnenstr. 196, 10119 Berlin",
+    "url": "www.ksv-network.de"
+  },
+  {
+    "name": "Hannes Hamann Landschaftsarchitekten bdla",
+    "location": "Brunnenstr. 9, 10119 Berlin",
+    "url": "www.hannes-hamann.de"
+  },
+  {
+    "name": "STUDIO EM04",
+    "location": "Buchberger Str. 27, 10365 Berlin",
+    "url": "www.annetteerlenwein.com"
+  },
+  {
+    "name": "paradoXcity",
+    "location": "Buchholzer Str. 20, 10437 Berlin",
+    "url": "www.paradoxcity.net"
+  },
+  {
+    "name": "Aukett + Heese GmbH",
+    "location": "Budapester Str. 43, 10787 Berlin",
+    "url": "www.aukett-heese.de"
+  },
+  {
+    "name": "Carola Schäfers Architekten BDA",
+    "location": "Bundesallee 19, 10717 Berlin",
+    "url": "www.csa-berlin.de"
+  },
+  {
+    "name": "Schwind & Wolf Architektenpartnerschaft",
+    "location": "Bundesallee 19, 10717 Berlin",
+    "url": "www.schwindundwolf.de"
+  },
+  {
+    "name": "Baldini Bleschke Architekten Partnerschaft mbB",
+    "location": "Bundesallee 213, 10719 Berlin",
+    "url": "www.baldinibleschke.de"
+  },
+  {
+    "name": "Gassmann + Grossmann Baumanagement GmbH Niederlassung Berlin",
+    "location": "Bundesallee 39, 10717 Berlin",
+    "url": "www.gagro.com"
+  },
+  {
+    "name": "Hanke + Partner Dipl.-Ing. - Landschaftsarchitekten",
+    "location": "Bundesplatz 17, 10715 Berlin",
+    "url": "www.hanke-partner.de"
+  },
+  {
+    "name": "Daniel Oppermann • Dipl. Ing. LandschaftsArchitekt",
+    "location": "Bundesratufer 4, 10555 Berlin",
+    "url": "www.d-oppermann.de"
+  },
+  {
+    "name": "IABU Prenzel & Partner GmbH",
+    "location": "Bänschstr. 46, 10247 Berlin",
+    "url": "www.iabu.de"
+  },
+  {
+    "name": "Heusner, Melmert GbR",
+    "location": "Böckhstr. 21, 10967 Berlin",
+    "url": "www.heusnermelmert"
+  },
+  {
+    "name": "MMST Architekten",
+    "location": "Bülowstr. 56, 10783 Berlin",
+    "url": "www.mmst-architekten.de"
+  },
+  {
+    "name": "COORDINATION sg design GmbH",
+    "location": "Bülowstr. 56, 10783 Berlin",
+    "url": "www.coordination-berlin.de"
+  },
+  {
+    "name": "Fiebig · Schönwälder · Zimmer GbR",
+    "location": "Bülowstr. 66, 10783 Berlin",
+    "url": "www.planungskultur.de"
+  },
+  {
+    "name": "DEH - Landschaft",
+    "location": "Bülowstr. 66, 10783 Berlin",
+    "url": "www.deh-landschaft.de"
+  },
+  {
+    "name": "BEP Architekten GmbH",
+    "location": "Bülowstr. 66, 10783 Berlin",
+    "url": "www.bep-architekten.de"
+  },
+  {
+    "name": "SANKON Sanierungskontrolle GmbH & Co. KG",
+    "location": "Bürgerheimstr. 17, 10365 Berlin",
+    "url": "www.sanierungskontrolle.de"
+  },
+  {
+    "name": "RENNER Architekten GmbH",
+    "location": "Bürgerheimstr. 5, 10365 Berlin",
+    "url": "www.r2-a.de"
+  },
+  {
+    "name": "Acosmic MediaArchitektur",
+    "location": "Büschingstr. 1, 10249 Berlin",
+    "url": "www.acosmic.berlin"
+  },
+  {
+    "name": "Architekturbüro BAT Jansen",
+    "location": "Carionweg 4, 10709 Berlin",
+    "url": "www.batj.de"
+  },
+  {
+    "name": "studio michael hilgers",
+    "location": "Carl-Herz-Ufer 31, 10961 Berlin",
+    "url": "www.michaelhilgers.de"
+  },
+  {
+    "name": "integral ... GmbH",
+    "location": "Carnotstraße 7, 10587 Berlin",
+    "url": "www.integral-gmbh.de"
+  },
+  {
+    "name": "HÖHNE Architekten BDA",
+    "location": "Caroline-von-Humboldt-Weg 38, 10117 Berlin",
+    "url": "www.stephan-hoehne-architekten.de"
+  },
+  {
+    "name": "IC Property Management GmbH",
+    "location": "Charlottenstr. 13, 10969 Berlin",
+    "url": "www.ic-group.de"
+  },
+  {
+    "name": "Busch . Eitel Freie Architekten",
+    "location": "Charlottenstr. 2, 10969 Berlin",
+    "url": "www.busch.eitel-architekten.de"
+  },
+  {
+    "name": "Hütten & Paläste",
+    "location": "Charlottenstr. 95, 10969 Berlin",
+    "url": "www.huettenundpalaeste.de"
+  },
+  {
+    "name": "HAHN HERTLING VON HANTELMANN Landschaftsarchitekten",
+    "location": "Charlottenstr. 95, 10969 Berlin",
+    "url": "www.hhvh-landschaftsarchitekten.de"
+  },
+  {
+    "name": "magma architecture",
+    "location": "Charlottenstr. 95, 10969 Berlin",
+    "url": "www.magmaarchitecture.com"
+  },
+  {
+    "name": "friedburg & Co. Gesellschaft für Landschafts- architektur mbH",
+    "location": "Charlottenstr. 95, 10969 Berlin",
+    "url": "www.friedburgco.de"
+  },
+  {
+    "name": "Rüdiger Baumann Generalplanung",
+    "location": "Charlottenstr. 95, 10969 Berlin",
+    "url": "www.rbgp.de"
+  },
+  {
+    "name": "IF-THEN",
+    "location": "Charlottenstr. 97, 10969 Berlin",
+    "url": "www.if-then.berlin"
+  },
+  {
+    "name": "DU Diederichs Projektmanagement AG & Co. KG",
+    "location": "Chausseestr. 25, 10115 Berlin",
+    "url": "www.du-diederichs.de"
+  },
+  {
+    "name": "s1projekt",
+    "location": "Chausseestr. 35, 10115 Berlin",
+    "url": "www.s1projekt.de"
+  },
+  {
+    "name": "weberbrunner berlin gmbh",
+    "location": "Chausseestr. 49, 10115 Berlin",
+    "url": "www.weberbrunner.de"
+  },
+  {
+    "name": "weberbrunner berlin",
+    "location": "Chausseestr. 49, 10115 Berlin",
+    "url": "www.weberbrunner.eu"
+  },
+  {
+    "name": "Zebralog GmbH & Co. KG",
+    "location": "Chausseestr. 8, 10115 Berlin",
+    "url": "www.zebralog.de"
+  },
+  {
+    "name": "DI Dr. Gumpinger I DI Kny-Hovie",
+    "location": "Chodowieckistr. 12, 10405 Berlin",
+    "url": "www.nauerschnig.com"
+  },
+  {
+    "name": "Hinrichs Wilkening Architekten",
+    "location": "Choriner Str. 46, 10435 Berlin",
+    "url": "www.hinrichs-wilkening.de"
+  },
+  {
+    "name": "playze",
+    "location": "Choriner Str. 50, 10435 Berlin",
+    "url": "playze.com"
+  },
+  {
+    "name": "Patrik Sonntag Architekt",
+    "location": "Choriner Str. 50, 10435 Berlin",
+    "url": "www.sonntag.biz"
+  },
+  {
+    "name": "ZOOMARCHITEKTEN GmbH",
+    "location": "Choriner Str. 54, 10435 Berlin",
+    "url": "www.zoomarchitekten.de"
+  },
+  {
+    "name": "ANNABAU Architektur und Landschaft",
+    "location": "Choriner Str. 55, 10435 Berlin",
+    "url": "www.annabau.com"
+  },
+  {
+    "name": "LEHMANN ARCHITEKTEN GmbH",
+    "location": "Choriner Str. 56, 10435 Berlin",
+    "url": "www.lehmann-architekten.de"
+  },
+  {
+    "name": "PLANPOPP architektur",
+    "location": "Choriner Str. 56, 10435 Berlin",
+    "url": "www.planpopp.de"
+  },
+  {
+    "name": "Bringmann Architekt",
+    "location": "Choriner Str. 57, 10435 Berlin",
+    "url": "www.bringmann-architekt.de"
+  },
+  {
+    "name": "GRÜN + BUNT Landschaftsarchitekten",
+    "location": "Choriner Str. 61, 10435 Berlin",
+    "url": "www.gruen-bunt.de"
+  },
+  {
+    "name": "HERBERT HUSSMANN ARCHITEKTEN",
+    "location": "Christburger Str. 12, 10405 Berlin",
+    "url": "www.herberthussmann.com"
+  },
+  {
+    "name": "TRU Architekten",
+    "location": "Christburger Str. 4, 10405 Berlin",
+    "url": "www.truarchitekten.de"
+  },
+  {
+    "name": "MAIER.WASMER Landschaftsarchitektur",
+    "location": "Christburger Str. 44, 10405 Berlin",
+    "url": "www.mwla.de"
+  },
+  {
+    "name": "rw+ Gesellschaft von Architekten mbH",
+    "location": "Christburger Str. 6, 10405 Berlin",
+    "url": "www.rwplus.de"
+  },
+  {
+    "name": "Pysall Architekten",
+    "location": "Christinenstr. 19, 10119 Berlin",
+    "url": "www.pysall.net"
+  },
+  {
+    "name": "Peter Pütz Architekt",
+    "location": "Christinenstr. 30, 10119 Berlin",
+    "url": "www.peter-puetz.de"
+  },
+  {
+    "name": "Hess Maurer Architekten",
+    "location": "Clara-Grunwald-Str. 36, 10317 Berlin",
+    "url": "www.hessmaurer.de"
+  },
+  {
+    "name": "UTB Projektmanagement GmbH",
+    "location": "Columbiadamm 25, 10965 Berlin",
+    "url": "www.utb-berlin.de"
+  },
+  {
+    "name": "Teichmann - Landschaftsarchitekten",
+    "location": "Columbiadamm 27, 10965 Berlin",
+    "url": "www.teichmann-la.de"
+  },
+  {
+    "name": "jablonka sieber + partner architekten",
+    "location": "Crellestr. 12, 10827 Berlin",
+    "url": "www.jablonka-sieber.de"
+  },
+  {
+    "name": "hochC Landschaftsarchitekten PartGmbB Lioba Lissner und Claus Herrmann",
+    "location": "Crellestr. 22, 10827 Berlin",
+    "url": "www.hochc.de"
+  },
+  {
+    "name": "Dagmar Gast LandschaftsArchitekten BDLA",
+    "location": "Crellestr. 29, 10827 Berlin",
+    "url": "www.dagmargast-la.de"
+  },
+  {
+    "name": "Studio klv GmbH & Co. KG",
+    "location": "Crellestr. 29, 10827 Berlin",
+    "url": "www.studioklv.de"
+  },
+  {
+    "name": "Carlos Zwick Architekten BDA",
+    "location": "Crellestr. 29, 10827 Berlin",
+    "url": "www.abz-berlin.net"
+  },
+  {
+    "name": "Office 33",
+    "location": "Crellestr. 29, 10827 Berlin",
+    "url": "www.office33.de"
+  },
+  {
+    "name": "Hager Partner AG",
+    "location": "Crellestr. 29, 10827 Berlin",
+    "url": "www.hager-ag.de"
+  },
+  {
+    "name": "M.A.T.O. Gesellschaft für Tragkonstruktion mbH",
+    "location": "Crellestr. 29, 10827 Berlin",
+    "url": "www.mato-tragkon.de"
+  },
+  {
+    "name": "winterfuchs Bauforschung",
+    "location": "Crellestr. 33, 10827 Berlin",
+    "url": "www.winterfuchs.de"
+  },
+  {
+    "name": "studionel",
+    "location": "Cuvrystr. 17, 10997 Berlin",
+    "url": "www.studionel.com"
+  },
+  {
+    "name": "[phase eins]. Eichelmann Hossbach Lehmhaus Architects BDA VBI",
+    "location": "Cuxhavener Str. 12, 10555 Berlin",
+    "url": "www.phase1.de"
+  },
+  {
+    "name": "Dipl.-Ing. Architekt BDA Stephan Y. Dietrich",
+    "location": "Damaschkestr. 34, 10711 Berlin",
+    "url": "www.stephandietrich.de"
+  },
+  {
+    "name": "TorgeGaaWercker ARCHITEKTEN",
+    "location": "Damaschkestr. 4, 10711 Berlin",
+    "url": "www.tgw-architekten.de"
+  },
+  {
+    "name": "q:arc Jakubeit & Rapp Partner Architekten mbB",
+    "location": "Danziger Str. 145, 10407 Berlin",
+    "url": "www.qarc.de"
+  },
+  {
+    "name": "guhl  architekten",
+    "location": "Danziger Str. 157, 10405 Berlin",
+    "url": "www.guhl-architekten.de"
+  },
+  {
+    "name": "Landschafts.Architektur Birgit Hammer",
+    "location": "Danziger Str. 168, 10407 Berlin",
+    "url": "www.birgithammer.de"
+  },
+  {
+    "name": "WFP Bernward Benedikt Jansen",
+    "location": "Danziger Str. 219, 10407 Berlin",
+    "url": "www.freiraeume.org"
+  },
+  {
+    "name": "raumpool - Habich Krieger Töchterle-Knuth Partnerschaft, Architekten",
+    "location": "Danziger Str. 44, 10435 Berlin",
+    "url": "www.raumpool.com"
+  },
+  {
+    "name": "constructconcept Architecture & Consulting",
+    "location": "Danziger Str. 44, 10435 Berlin",
+    "url": "www.constructconcept.com"
+  },
+  {
+    "name": "Studio SML",
+    "location": "Darmstädter Str. 8, 10707 Berlin",
+    "url": "www.mogos-lindemann.de"
+  },
+  {
+    "name": "BBS Landscape Engineering GmbH",
+    "location": "Derfflingerstr. 6, 10785 Berlin",
+    "url": "bbs-landscape.com"
+  },
+  {
+    "name": "ATELIER ZAFARI",
+    "location": "Diedenhofer Str. 6, 10405 Berlin",
+    "url": "www.atelier-zafari.com"
+  },
+  {
+    "name": "Buddensieg . Ockert . Architekten",
+    "location": "Dieffenbachstr. 37, 10967 Berlin",
+    "url": "www.boa-architekten.de"
+  },
+  {
+    "name": "Jens Casper Dipl.-Ing. Architekt BDA",
+    "location": "Dieffenbachstr. 47, 10967 Berlin",
+    "url": "www.jenscasper.com"
+  },
+  {
+    "name": "Granz + Zecher Gesellschaft von Architekten mbH",
+    "location": "Dircksenstr. 46, 10178 Berlin",
+    "url": "www.gz-architekten.de"
+  },
+  {
+    "name": "siebengrad",
+    "location": "Dirschauer Str. 14, 10245 Berlin",
+    "url": "www.siebengrad.eu"
+  },
+  {
+    "name": "ai3 architekten",
+    "location": "Dirschauer Str. 14, 10245 Berlin",
+    "url": "www.ai3architekten.de"
+  },
+  {
+    "name": "SBG Sachverständigengesellschaft mbH",
+    "location": "Dominicusstr. 3, 10823 Berlin",
+    "url": "www.sbgoldmann.de"
+  },
+  {
+    "name": "Schulte-Frohlinde Architekten",
+    "location": "Dresdener Str. 113, 10179 Berlin",
+    "url": "www.schulte-frohlinde.com"
+  },
+  {
+    "name": "ifau Heiß, Heinemann, Schmidt GbR",
+    "location": "Dresdener Str. 26, 10999 Berlin",
+    "url": "www.ifau.berlin.heimat.de"
+  },
+  {
+    "name": "Jürgen Pleuser Architekten",
+    "location": "Droysenstr. 7, 10629 Berlin",
+    "url": "www.pleuser-architekten.de"
+  },
+  {
+    "name": "Springer Architekten Gesellschaft mbH",
+    "location": "Dudenstr. 10, 10965 Berlin",
+    "url": "www.hs-arch.de"
+  },
+  {
+    "name": "Planungsbüro Förster",
+    "location": "Dudenstr. 15, 10965 Berlin",
+    "url": "www.planungsbuero-foerster.de"
+  },
+  {
+    "name": "Ingo Herrmann Architekt",
+    "location": "Dunckerstr. 59, 10439 Berlin",
+    "url": "www.ingo-herrmann-berlin.de"
+  },
+  {
+    "name": "m|o architektur",
+    "location": "Dunckerstr. 59, 10439 Berlin",
+    "url": "www.mo-architektur.de"
+  },
+  {
+    "name": "zanderroth architekten GmbH",
+    "location": "Dunckerstr. 63, 10439 Berlin",
+    "url": "www.zanderroth.de"
+  },
+  {
+    "name": "Karsten Schubert Architekt",
+    "location": "Dunckerstr. 70, 10437 Berlin",
+    "url": "www.karstenschubertarchitekt.de"
+  },
+  {
+    "name": "P L A N U N G S W E R K",
+    "location": "Dunckerstr. 87, 10437 Berlin",
+    "url": "www.planungswerk.de"
+  },
+  {
+    "name": "Studio OneWay",
+    "location": "Dänenstr. 17, 10439 Berlin",
+    "url": "www.studiooneway.net"
+  },
+  {
+    "name": "EUREF-Consultin Gesellschaft von Architekten und Ingenieuren mbH",
+    "location": "EUREF-Campus 13, 10829 Berlin",
+    "url": "www.euref.de"
+  },
+  {
+    "name": "Ulffers + Blank Architekten",
+    "location": "Ebersstr. 58, 10827 Berlin",
+    "url": "www.ulffers-blank-architekten.de"
+  },
+  {
+    "name": "KerShine Interior Design",
+    "location": "Ebertstr. 2, 10117 Berlin",
+    "url": "www.kershine.de"
+  },
+  {
+    "name": "Weyrauch - Architekten",
+    "location": "Eginhardstr. 29, 10318 Berlin",
+    "url": "www.weyrauch-architekten.de"
+  },
+  {
+    "name": "Bultmann & Team Gesellschaft von Architekten und Ingenieuren mbH",
+    "location": "Einemstr. 16, 10785 Berlin",
+    "url": "www.bultmann-team.de"
+  },
+  {
+    "name": "klm Architekten GbR",
+    "location": "Einsteinufer 63, 10587 Berlin",
+    "url": "www.klm-architekten.de"
+  },
+  {
+    "name": "Wirth + Birkenbeul Landschaftsarchitekten BDLA",
+    "location": "Einsteinufer 71, 10587 Berlin",
+    "url": "www.wb-la.de"
+  },
+  {
+    "name": "Hans Käsbohrer Architekt",
+    "location": "Eisenacher Str. 115, 10777 Berlin",
+    "url": "www.hanskaesbohrer.com"
+  },
+  {
+    "name": "Büro Stephan Westermann",
+    "location": "Elberfelder Str. 31, 10555 Berlin",
+    "url": "www.stephan-westermann.de"
+  },
+  {
+    "name": "HLP Architektur und Bauleitung Gesellschaft von Architekten mbH",
+    "location": "Elisabethkirchstr. 1, 10115 Berlin",
+    "url": "www.hlp-architekten.de"
+  },
+  {
+    "name": "bromsky Architekten",
+    "location": "Elisabethkirchstr. 13, 10119 Berlin",
+    "url": "www.bromsky.de"
+  },
+  {
+    "name": "A-DES Architektur Design",
+    "location": "Emser Str. 3, 10719 Berlin",
+    "url": "www.a-des.de"
+  },
+  {
+    "name": "Architekturbüro Christine Edmaier Dipl.-Ing. Architektin BDA",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.christine-edmaier.de"
+  },
+  {
+    "name": "Sedeño Bauplanung GmbH",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.sedeno-bauplanung.de"
+  },
+  {
+    "name": "SÄUM Architekten",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.saeum.eu"
+  },
+  {
+    "name": "STUDIO RAMOS",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.studioramos.de"
+  },
+  {
+    "name": "adb Ewerien und Obermann",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.adb-berlin.de"
+  },
+  {
+    "name": "PERACKIS.ARCHITEKTEN",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.perackis.de"
+  },
+  {
+    "name": "SHS Architekten Stelzner Herbert Sütterle GbR",
+    "location": "Emser Str. 40, 10719 Berlin",
+    "url": "www.shsarchitekten.de"
+  },
+  {
+    "name": "BEATE KLING GmbH",
+    "location": "Emser Str. 9, 10719 Berlin",
+    "url": "www.beatekling.de"
+  },
+  {
+    "name": "carsten gerhards architekten und designer",
+    "location": "Engelbeckenhöfe Leuschnerdamm 13, 10999 Berlin",
+    "url": "www.carstengerhards.de"
+  },
+  {
+    "name": "FRANK SCHIFFER ARCHITEKTEN GmbH",
+    "location": "Engeldamm 20, 10179 Berlin",
+    "url": "www.frankschiffer.com"
+  },
+  {
+    "name": "scarchitekten",
+    "location": "Engeldamm 34, 10179 Berlin",
+    "url": "www.scarchitekten.de"
+  },
+  {
+    "name": "Rimpau & Bauer Architekten PartG mbB",
+    "location": "Erich-Weinert-Str. 26, 10439 Berlin",
+    "url": "www.rimpaubauer.com"
+  },
+  {
+    "name": "Akelius GmbH",
+    "location": "Erkelenzdamm 11, 10999 Berlin",
+    "url": "www.akelius.de"
+  },
+  {
+    "name": "Bräuer Architekten",
+    "location": "Erkelenzdamm 59, 10999 Berlin",
+    "url": "www.braeuer-architekten.de"
+  },
+  {
+    "name": "Oehring + Lux Studio",
+    "location": "Erkelenzdamm 59, 10999 Berlin",
+    "url": "www.oehringlux.de"
+  },
+  {
+    "name": "KOLB RIPKE Gesellschaft von Architekten mbH",
+    "location": "Erkelenzdamm 59, 10999 Berlin",
+    "url": "www.kolbripke.de"
+  },
+  {
+    "name": "MNDesign Studio Architecture",
+    "location": "Erkelenzdamm 59, 10999 Berlin",
+    "url": "www.m-n-design.net"
+  },
+  {
+    "name": "plajer & franz studio",
+    "location": "Erkelenzdamm 59, 10999 Berlin",
+    "url": "www.plajer-franz.de"
+  },
+  {
+    "name": "KEHRER Architekten",
+    "location": "Erkelenzdamm 59, 10999 Berlin",
+    "url": "www.kehrerarchitekten.de"
+  },
+  {
+    "name": "BUZWAN MORELL ARCHITEKTEN  Partnerschaftsgesellschaft mbB",
+    "location": "Esmarchstr. 27, 10407 Berlin",
+    "url": "www.buzwanmorell.de"
+  },
+  {
+    "name": "cka czyborra klingbeil architekturwerkstatt Partnerschaft mbB",
+    "location": "Esmarchstr. 3, 10407 Berlin",
+    "url": "www.cka.berlin"
+  },
+  {
+    "name": "scope projektnavigation Matthias Kolle + Anne Wandke GbR",
+    "location": "Esmarchstr. 3, 10407 Berlin",
+    "url": "www.scope-projektnavigation.de"
+  },
+  {
+    "name": "Künstlerhaus St. Lukas",
+    "location": "Fasanenstr. 13, 10623 Berlin",
+    "url": "www.smalte-berlin.de"
+  },
+  {
+    "name": "Müller-Stüler und Höll Gesellschaft von Architekten mbH",
+    "location": "Fasanenstr. 13, 10623 Berlin",
+    "url": "www.msh-architekten.de"
+  },
+  {
+    "name": "TROCKELS ARCHITEKTEN",
+    "location": "Fasanenstr. 28, 10719 Berlin",
+    "url": "www.trockels.eu"
+  },
+  {
+    "name": "WvM Berlin Immobilien + Projektentwicklung",
+    "location": "Fasanenstr. 41, 10719 Berlin",
+    "url": "www.wvm.de"
+  },
+  {
+    "name": "Prof. Kollhoff Generalplanungs GmbH",
+    "location": "Fasanenstr. 70, 10719 Berlin",
+    "url": "www.kollhoff.de"
+  },
+  {
+    "name": "2A BauArt GmbH",
+    "location": "Fasanenstr. 74, 10719 Berlin",
+    "url": "www.2a-bauart.de"
+  },
+  {
+    "name": "Bundesanstalt für Immobilienaufgaben Facility Management",
+    "location": "Fasanenstr. 87, 10623 Berlin",
+    "url": "www.bundesimmobilien.de"
+  },
+  {
+    "name": "SCHARABI Architekten",
+    "location": "Fehrbelliner Str. 91, 10119 Berlin",
+    "url": "www.scharabi.de"
+  },
+  {
+    "name": "Teske Schwiede + Partner",
+    "location": "Feurigstr. 54, 10827 Berlin",
+    "url": "www.teske-schwiede.de"
+  },
+  {
+    "name": "atelier van Geisten",
+    "location": "Fidicinstr. 24, 10965 Berlin",
+    "url": "www.van-geisten.de"
+  },
+  {
+    "name": "Architekt Robert Lassenius",
+    "location": "Finnländische Str. 14, 10439 Berlin",
+    "url": "www.lassenius.de"
+  },
+  {
+    "name": "b2.architekten Boek Benneckenstein Partnerschaft mbB",
+    "location": "Finowstr. 8, 10247 Berlin",
+    "url": "www.b-zwei-architekten.de"
+  },
+  {
+    "name": "Architektengruppe PLANSTADT",
+    "location": "Flotowstr. 9, 10555 Berlin",
+    "url": "www.planstadt.de"
+  },
+  {
+    "name": "OuterRim Architecture",
+    "location": "Fraenkelufer 34, 10999 Berlin",
+    "url": "www.or-architecture.de"
+  },
+  {
+    "name": "Stiftung SPI",
+    "location": "Frankfurter Allee 35, 10247 Berlin",
+    "url": "www.stiftung-spi.de"
+  },
+  {
+    "name": "MAN MADE LAND Bohne Lundquist Mellier GbR",
+    "location": "Frankfurter Allee 53, 10247 Berlin",
+    "url": "www.manmadeland.de"
+  },
+  {
+    "name": "Ticket B",
+    "location": "Frankfurter Tor 1, 10243 Berlin",
+    "url": "www.ticket-b.de"
+  },
+  {
+    "name": "Architekturbüro Wieland Vajen",
+    "location": "Frankfurter Tor 1, 10243 Berlin",
+    "url": "www.wielandvajen.de"
+  },
+  {
+    "name": "Dechamps Architekten",
+    "location": "Franklinstr. 12, 10587 Berlin",
+    "url": "www.dechamps-architekten.de"
+  },
+  {
+    "name": "LIN Architekten und Urbanisten",
+    "location": "Franklinstr. 15, 10587 Berlin",
+    "url": "www.lin-a.com"
+  },
+  {
+    "name": "a-base | büro für architektur",
+    "location": "Franklinstr. 15, 10587 Berlin",
+    "url": "www.a-base.de"
+  },
+  {
+    "name": "Sweco GmbH",
+    "location": "Franklinstr. 28, 10587 Berlin",
+    "url": "www.sweco-gmbh.de"
+  },
+  {
+    "name": "Ludes Generalplaner",
+    "location": "Franklinstr. 28, 10587 Berlin",
+    "url": "www.ludes-architekten.de"
+  },
+  {
+    "name": "BSQB/Büro für Stadt, Quartier und Beteiligung",
+    "location": "Franz Mehring Platz 1, 10243 Berlin",
+    "url": "www.bsqb.de"
+  },
+  {
+    "name": "SDARC - Seipelt Dluzniewski Architekten",
+    "location": "Franz-Mehring-Platz 1, 10243 Berlin",
+    "url": "www.sdarc.de"
+  },
+  {
+    "name": "Kreuzberg + Broniecki ²",
+    "location": "Franz-Mehring-Platz 1, 10243 Berlin",
+    "url": "www.kreuzberg-broniecki.de"
+  },
+  {
+    "name": "HOLZWARTH Landschaftsarchitektur",
+    "location": "Friedenstr. 1, 10249 Berlin",
+    "url": "www.holzwarth-landschaftsarchitektur.de"
+  },
+  {
+    "name": "Project Architecture Company",
+    "location": "Friedenstr. 16, 10249 Berlin",
+    "url": "www.project.ac"
+  },
+  {
+    "name": "Brokking Architekten",
+    "location": "Friedrichsberger Str. 5, 10243 Berlin",
+    "url": "www.brokking.de"
+  },
+  {
+    "name": "Datenflug GmbH",
+    "location": "Friedrichstr. 122, 10117 Berlin",
+    "url": "www.datenflug.de"
+  },
+  {
+    "name": "Anderhalten Architekten Gesellschaft von Architekten mbH",
+    "location": "Friedrichstr. 127, 10117 Berlin",
+    "url": "www.anderhalten.com"
+  },
+  {
+    "name": "Grossmann Schmitz-Engels Architekten Partnerschaftsgesellschaft",
+    "location": "Friedrichstr. 128, 10117 Berlin",
+    "url": "www.gse-architekten.de"
+  },
+  {
+    "name": "Zahra Breshna Consulting",
+    "location": "Friedrichstr. 171, 10117 Berlin",
+    "url": "www.breshna-consulting.com"
+  },
+  {
+    "name": "IGP Ingenieur AG",
+    "location": "Friedrichstr. 185, 10117 Berlin",
+    "url": "www.igp-ag.com"
+  },
+  {
+    "name": "Bicon Generalplanung GmbH",
+    "location": "Friedrichstr. 187, 10117 Berlin",
+    "url": "www.bcgp.de"
+  },
+  {
+    "name": "Ronski + Burke Architekten und Ingenieure",
+    "location": "Friedrichstr. 206, 10969 Berlin",
+    "url": "www.rb-architekten.de"
+  },
+  {
+    "name": "blochers partners",
+    "location": "Friedrichstr. 210, 10969 Berlin",
+    "url": "www.blocherspartner.com"
+  },
+  {
+    "name": "Blocher Partners",
+    "location": "Friedrichstr. 210, 10969 Berlin",
+    "url": "www.blocherpartners.com"
+  },
+  {
+    "name": "kappes ipg gmbh ingenieur- und planungsgesellschaft",
+    "location": "Friedrichstr. 60, 10117 Berlin",
+    "url": "www.kappes-partner.com"
+  },
+  {
+    "name": "Hirschmüller Schindele Architekten BDA",
+    "location": "Friesenstr. 15, 10965 Berlin",
+    "url": "www.hsarchitekten.com"
+  },
+  {
+    "name": "M4 Architekten Ingenieure",
+    "location": "Fritschestr. 23, 10585 Berlin",
+    "url": "www.m4-architektur.de"
+  },
+  {
+    "name": "raspé_architekten",
+    "location": "Fritschestr. 24, 10585 Berlin",
+    "url": "www.raspe-architekten.de"
+  },
+  {
+    "name": "c/o atelier 8",
+    "location": "Fritschestr. 64, 10585 Berlin",
+    "url": "www.atelier8.eu"
+  },
+  {
+    "name": "Consequent GmbH",
+    "location": "Fritschestr. 74, 10585 Berlin",
+    "url": "www.consequent-gmbh.de"
+  },
+  {
+    "name": "Büro für Garten- und Landschaftsarchitektur",
+    "location": "Gasteiner Str. 3, 10717 Berlin",
+    "url": "www.hartmut-teske.de"
+  },
+  {
+    "name": "LPG Landesweite Planungsgesellschaft mbH",
+    "location": "Gaudystr. 12, 10437 Berlin",
+    "url": "www.lpgmbh.de"
+  },
+  {
+    "name": "THOMAS RABE ARCHITEKT",
+    "location": "Gaudystr. 21, 10437 Berlin",
+    "url": "www.rabethomas.de"
+  },
+  {
+    "name": "__ grigoleit Landschaftsarchitektur -  Umweltplanung",
+    "location": "Gaudystr. 7, 10437 Berlin",
+    "url": "www.buero-grigoleit.de"
+  },
+  {
+    "name": "HDR GmbH",
+    "location": "Geneststr. 5, 10829 Berlin",
+    "url": "www.hdrinc.com"
+  },
+  {
+    "name": "büro west • drepper wasmuth",
+    "location": "Geneststr. 5, 10829 Berlin",
+    "url": "www.buero-west.de"
+  },
+  {
+    "name": "c/o Bürogemeinschaft M. Kruska",
+    "location": "Genthiner Str. 8, 10785 Berlin",
+    "url": "www.futurb.de"
+  },
+  {
+    "name": "ARTektur",
+    "location": "Geusenstr. 14, 10317 Berlin",
+    "url": "www.artektur.com"
+  },
+  {
+    "name": "st.arc - Städtebau und Architektur Ilma Kornmüller und Ute Sprickmann-Kerkerinck",
+    "location": "Geßlerstr. 21, 10829 Berlin",
+    "url": "www.st-arc.com"
+  },
+  {
+    "name": "Büro GIORNO",
+    "location": "Gierkezeile 36, 10585 Berlin",
+    "url": "www.giorno.org"
+  },
+  {
+    "name": "FPB Freie Planungsgruppe Berlin",
+    "location": "Giesebrechtstr. 10, 10629 Berlin",
+    "url": "www.fpb.de"
+  },
+  {
+    "name": "Architekturbüro Schasler GmbH",
+    "location": "Giesebrechtstr. 20, 10629 Berlin",
+    "url": "www.schasler.de"
+  },
+  {
+    "name": "Zander und Metzner Gesellschaft von Architekten mbH",
+    "location": "Giesebrechtstr. 5, 10629 Berlin",
+    "url": "www.metzner-architekt.de"
+  },
+  {
+    "name": "Lützow 7 Müller Wehberg Landschaftsarchitekten PartG mbB",
+    "location": "Giesebrechtstraße 10, 10629 Berlin",
+    "url": "www.luetzow7.de"
+  },
+  {
+    "name": "ENNO SCHNEIDER ARCHITEKTEN Prof. Dr. Schneider + Co. GmbH . Berlin . Detmold",
+    "location": "Gipsstr. 6, 10119 Berlin",
+    "url": "www.ennoschneider-architekten.de"
+  },
+  {
+    "name": "PEB+ Harm Reccius Architekten",
+    "location": "Gipsstr. 9, 10119 Berlin",
+    "url": "www.peb-plus.de"
+  },
+  {
+    "name": "film|form",
+    "location": "Glasbläserallee 34, 10245 Berlin",
+    "url": "www.film-form.com"
+  },
+  {
+    "name": "Fable Architektur",
+    "location": "Gleimstr. 43, 10437 Berlin",
+    "url": "www.fable.berlin"
+  },
+  {
+    "name": "MONO Architekten",
+    "location": "Glogauer Str. 6, 10999 Berlin",
+    "url": "www.monoarchitekten.de"
+  },
+  {
+    "name": "Urban Catalyst GmbH",
+    "location": "Glogauer Str. 6, 10999 Berlin",
+    "url": "www.polinnahauck.de"
+  },
+  {
+    "name": "brethdelacalle Architekten Part mbB",
+    "location": "Glogauer Str. 6, 10999 Berlin",
+    "url": "www.brethdellacalle.com"
+  },
+  {
+    "name": "Architektenbüro Katsarski",
+    "location": "Gneisenaustr. 19, 10961 Berlin",
+    "url": "www.katsarski.de"
+  },
+  {
+    "name": "gruppe F Landschaftsarchitekten",
+    "location": "Gneisenaustr. 41, 10961 Berlin",
+    "url": "www.gruppef.com"
+  },
+  {
+    "name": "Franz Reschke Landschaftsarchitektur",
+    "location": "Gneisenaustr. 42, 10961 Berlin",
+    "url": "www.franzreschke.de"
+  },
+  {
+    "name": "Eingartner Khorrami Architekten BDA",
+    "location": "Gneisenaustr. 66, 10961 Berlin",
+    "url": "www.eingartner-khorrami.de"
+  },
+  {
+    "name": "rundzwei Architekten BDA",
+    "location": "Goethestr. 2, 10623 Berlin",
+    "url": "www.rundzwei.de"
+  },
+  {
+    "name": "Klaus Schlosser Architekten BDA",
+    "location": "Goethestr. 2, 10623 Berlin",
+    "url": "www.klausschlosserarchitekten.com"
+  },
+  {
+    "name": "Marina Stankovic Architekten BDA",
+    "location": "Goethestr. 2, 10623 Berlin",
+    "url": "www.stankovicarchitekten.de"
+  },
+  {
+    "name": "Gülink Architekten",
+    "location": "Goethestr. 3, 10623 Berlin",
+    "url": "www.guelink.com"
+  },
+  {
+    "name": "heike hanada  laboratory of art and architecture",
+    "location": "Goethestr. 69, 10625 Berlin",
+    "url": "www.heikehanada.de"
+  },
+  {
+    "name": "Zerr •  Hapke Architekten",
+    "location": "Goethestr. 72, 10625 Berlin",
+    "url": "www.zhn-architekten.de"
+  },
+  {
+    "name": "D+S Architekten Dölle Maas Schweer GbR",
+    "location": "Goltzstr. 36, 10781 Berlin",
+    "url": "www.ds-architekten.de"
+  },
+  {
+    "name": "wbs3architekten",
+    "location": "Goltzstr. 6, 10781 Berlin",
+    "url": "www.wbs3architekten.de"
+  },
+  {
+    "name": "Aptoplan Service GmbH",
+    "location": "Goslarer Ufer 29, 10589 Berlin",
+    "url": "www.aptoplan-service.de"
+  },
+  {
+    "name": "J·M·J - Architekten",
+    "location": "Gotenstr. 6, 10829 Berlin",
+    "url": "www.jmj-architekten.de"
+  },
+  {
+    "name": "Architekturbüro von Karger",
+    "location": "Graefestr. 8, 10967 Berlin",
+    "url": "www.jvk-architekten.de"
+  },
+  {
+    "name": "Witschurke Architekten",
+    "location": "Granseerstr. 6, 10435 Berlin",
+    "url": "www.witschurke.de"
+  },
+  {
+    "name": "Studio Schultz Granberg",
+    "location": "Greifenhagener Str. 26, 10437 Berlin",
+    "url": "www.schultzgranberg.org"
+  },
+  {
+    "name": "plancontext GmbH",
+    "location": "Greifenhagener Str. 39, 10437 Berlin",
+    "url": "www.plancontext.de"
+  },
+  {
+    "name": "sopha GmbH",
+    "location": "Greifenhagener Str. 40, 10437 Berlin",
+    "url": "www.sopha.de"
+  },
+  {
+    "name": "cobuss architekten",
+    "location": "Greifenhagener Str. 55, 10437 Berlin",
+    "url": "www.cobuss.org"
+  },
+  {
+    "name": "zukauskas | architekten+",
+    "location": "Greifswalder Str. 200, 10405 Berlin",
+    "url": "www.zukauskas-architects.com"
+  },
+  {
+    "name": "winkelmüller.architekten gmbh",
+    "location": "Greifswalder Str. 33, 10405 Berlin",
+    "url": "www.wm-architekten.com"
+  },
+  {
+    "name": "GFP Real Estate Concepts GmbH",
+    "location": "Greifswalder Str. 5, 10405 Berlin",
+    "url": "www.gfp-group.de"
+  },
+  {
+    "name": "Schüssler-Plan Ingenieurgesellschaft mbH",
+    "location": "Greifswalder Str. 80, 10405 Berlin",
+    "url": "www.schuessler-plan.de"
+  },
+  {
+    "name": "Büro13 Architekten",
+    "location": "Griebenowstr. 23, 10435 Berlin",
+    "url": "www.buero13.de"
+  },
+  {
+    "name": "GRAETZ Gesellschaft von Architekten mbH",
+    "location": "Grimmstr. 10, 10967 Berlin",
+    "url": "www.graetz-architekten.de"
+  },
+  {
+    "name": "Anja Schacht Architekten BDA c/o Hüning",
+    "location": "Grimmstr. 11, 10967 Berlin",
+    "url": "www.schachtarchitekten.de"
+  },
+  {
+    "name": "jomad integrative architektur",
+    "location": "Grimmstr. 13, 10967 Berlin",
+    "url": "www.kochstelle.com"
+  },
+  {
+    "name": "Planungsbüro Brakel",
+    "location": "Grogörschenstr. 15, 10829 Berlin",
+    "url": "www.planbb.de"
+  },
+  {
+    "name": "Preibisz Architekten",
+    "location": "Grolmanstr. 27, 10623 Berlin",
+    "url": "apcon-berlin.de"
+  },
+  {
+    "name": "Georg Bumiller Gesellschaft von Architekten mbH",
+    "location": "Großbeerenstr. 13, 10963 Berlin",
+    "url": "www.bumillerarchitekten.de"
+  },
+  {
+    "name": "Trautmann Landschaftsarchitekten",
+    "location": "Großbeerenstr. 55, 10965 Berlin",
+    "url": "www.trautmann-la.de"
+  },
+  {
+    "name": "KA-3",
+    "location": "Großbeerenstr. 57, 10965 Berlin",
+    "url": "www.ka-3-berlin.de"
+  },
+  {
+    "name": "Schmidt-Seifert | Landschaftsarchitekten",
+    "location": "Großbeerenstr. 71, 10963 Berlin",
+    "url": "www.winkelmeier.net"
+  },
+  {
+    "name": "widak siegert gmbh",
+    "location": "Grunewaldstr. 18, 10823 Berlin",
+    "url": "wsg.berlin"
+  },
+  {
+    "name": "Julie Biron Architektin",
+    "location": "Grünberger Str. 16, 10243 Berlin",
+    "url": "www.juliebiron.eu"
+  },
+  {
+    "name": "fundbüro-design",
+    "location": "Gubener Str. 30, 10243 Berlin",
+    "url": "www.fundb"
+  },
+  {
+    "name": "Lang & Ortmann Planungsgesellschaft mbH & Co. KG",
+    "location": "Gubitzstr. 49, 10409 Berlin",
+    "url": "www.luop.de"
+  },
+  {
+    "name": "Heinle, Wischer und Partner  Freie Architekten",
+    "location": "Gutenbergstr. 4, 10587 Berlin",
+    "url": "www.heinlewischerpartner.de"
+  },
+  {
+    "name": "Arnke Häntsch Mattmüller Gesellschaft von Architekten mbH",
+    "location": "Gutenbergstr. 4, 10587 Berlin",
+    "url": "www.ahm-architekten.de"
+  },
+  {
+    "name": "Schmidhuber Brand Experience GmbH",
+    "location": "Gutenbergstr. 4, 10587 Berlin",
+    "url": "www.schmidhuber.de"
+  },
+  {
+    "name": "Architecture+Design",
+    "location": "Gärtnerstr. 6, 10245 Berlin",
+    "url": "www.polatzek.info"
+  },
+  {
+    "name": "bence zólyom architektur",
+    "location": "Göhrener Str. 5, 10437 Berlin",
+    "url": "www.bz-architektur.de"
+  },
+  {
+    "name": "Büro Fischer",
+    "location": "Görlitzer Str. 32, 10997 Berlin",
+    "url": "www.ausstellungsarchitekt.de"
+  },
+  {
+    "name": "plus 4930 architektur",
+    "location": "Görlitzer Str. 52, 10997 Berlin",
+    "url": "www.p4930.de"
+  },
+  {
+    "name": "pro.b Projektentwicklung & Projektsteuerung GmbH & Co. KG",
+    "location": "Haasestr. 1, 10245 Berlin",
+    "url": "www.pro-b.net"
+  },
+  {
+    "name": "Building Construction Logistics GmbH Region Nord Ost",
+    "location": "Habersaathstr. 58, 10115 Berlin",
+    "url": "www.blc-baulogistik.com"
+  },
+  {
+    "name": "Bernrieder . Sieweke Lagemann . Architekten BDA GmbH",
+    "location": "Hagelberger Str. 4, 10965 Berlin",
+    "url": "www.bsl-architekten.de"
+  },
+  {
+    "name": "Steiner Weißenberger Architekten GmbH",
+    "location": "Hagelberger Str. 53, 10965 Berlin",
+    "url": "www.steiner-weissenberger.de"
+  },
+  {
+    "name": "Hüffer • Ramin",
+    "location": "Hagelberger Str. 53, 10965 Berlin",
+    "url": "www.hueffer-ramin.de"
+  },
+  {
+    "name": "COSA City Object Space Architecture Christine Lara Hoff & Sierra Boaz Cobb GbR",
+    "location": "Hagenauer Str. 10, 10435 Berlin",
+    "url": "www.c-o-s-a.com"
+  },
+  {
+    "name": "Berlinovo Grundstücksentwicklungs GmbH",
+    "location": "Hallesches Ufer 74, 10963 Berlin",
+    "url": "www.bgg-berlin.com"
+  },
+  {
+    "name": "ONWS | Lege Marten Partner Architektin Beratender Betriebswirt PartG",
+    "location": "Hans-Otto-Straße 25, 10407 Berlin",
+    "url": "www.onws.de"
+  },
+  {
+    "name": "Hild und K Berlin GmbH",
+    "location": "Hardenbergplatz 2, 10623 Berlin",
+    "url": "www.hildundk.de"
+  },
+  {
+    "name": "Witte Projektmanagement GmbH",
+    "location": "Hardenbergstr. 27, 10623 Berlin",
+    "url": "www.witte-pm.de"
+  },
+  {
+    "name": "HW Ingenieure GmbH",
+    "location": "Hardenbergstr. 27, 10623 Berlin",
+    "url": "www.hw-ing.de"
+  },
+  {
+    "name": "gmp International GmbH",
+    "location": "Hardenbergstr. 4, 10623 Berlin",
+    "url": "www.gmp-architekten.de"
+  },
+  {
+    "name": "GfB  Alvarez & Schepers",
+    "location": "Hardenbergstr. 4, 10623 Berlin",
+    "url": "www.gf-berlin.de"
+  },
+  {
+    "name": "von Gerkan, Marg und Partner",
+    "location": "Hardenbergstr. 4, 10623 Berlin",
+    "url": "www.gmp.de"
+  },
+  {
+    "name": "dhl-architekten",
+    "location": "Hardenbergstr. 7, 10623 Berlin",
+    "url": "www.dhl-architekten.de"
+  },
+  {
+    "name": "LIVFE architects",
+    "location": "Hardenbergstr. 9, 10623 Berlin",
+    "url": "www.livfe.eu"
+  },
+  {
+    "name": "ZWEIDREI Architekten",
+    "location": "Hasenheide 16, 10967 Berlin",
+    "url": "www.zweidrei.eu"
+  },
+  {
+    "name": "Abelmann Vielain Pock Architekten BDA",
+    "location": "Hasenheide 61, 10967 Berlin",
+    "url": "www.avp-architekten.de"
+  },
+  {
+    "name": "Christoph Wagner Architekten",
+    "location": "Hasenheide 9, 10967 Berlin",
+    "url": "www.c-wagner.de"
+  },
+  {
+    "name": "Synarchitects GmbH",
+    "location": "Hasenheide 9, 10967 Berlin",
+    "url": "www.synarchitects.com"
+  },
+  {
+    "name": "Kara + Brodrück Architekten GbR",
+    "location": "Hasenheide 94, 10967 Berlin",
+    "url": "www.kara-brodrueck.de"
+  },
+  {
+    "name": "rds energies GmbH",
+    "location": "Hauptstr. 117, 10827 Berlin",
+    "url": "www.rdsenergies.com"
+  },
+  {
+    "name": "P B Projekt Berlin GmbH",
+    "location": "Hauptstr. 117, 10827 Berlin",
+    "url": "www.planbest-berlin.de"
+  },
+  {
+    "name": "AFF Gesellschaft von Architekten mbH",
+    "location": "Hauptstr. 13, 10317 Berlin",
+    "url": "www.aff-architekten.com"
+  },
+  {
+    "name": "TDB Landschaftsarchitektur Thomanek Duquesnoy Boemans",
+    "location": "Hauptstr. 23, 10827 Berlin",
+    "url": "www.tdb-berlin.de"
+  },
+  {
+    "name": "Architekturbüro Rahl",
+    "location": "Hauptstr. 58, 10827 Berlin",
+    "url": "www.rahl.de"
+  },
+  {
+    "name": "BACHER Landschaftsarchitekten",
+    "location": "Hauptstr. 6, 10827 Berlin",
+    "url": "www.bacher-la.de"
+  },
+  {
+    "name": "HG Merz GmbH | merz merz gmbh & co. kg",
+    "location": "Hauptstr. 8, 10827 Berlin",
+    "url": "www.merzmerz.plus"
+  },
+  {
+    "name": "Schulz und Schulz Architekten GmbH",
+    "location": "Hauptstraße 101, 10827 Berlin",
+    "url": "www.schulz-und-schulz.com"
+  },
+  {
+    "name": "Gerber Architekten",
+    "location": "Hausvogteiplatz 12, 10117 Berlin",
+    "url": "www.gerberarchitekten.de"
+  },
+  {
+    "name": "Coordination Berlin",
+    "location": "Hedemannstr. 14, 10969 Berlin",
+    "url": "www.coordination-berlin.com"
+  },
+  {
+    "name": "Bettina Koenen Raumgestaltung",
+    "location": "Hedemannstr. 7, 10963 Berlin",
+    "url": "www.koenenarchitektur.de"
+  },
+  {
+    "name": "GRAFT Gesellschaft von Architekten mbH",
+    "location": "Heidestr. 50, 10557 Berlin",
+    "url": "www.graftlab.com"
+  },
+  {
+    "name": "MARTIN PRENN ARCHITEKTEN",
+    "location": "Heidestr. 50, 10557 Berlin",
+    "url": "www.martinprenn.com"
+  },
+  {
+    "name": "Atelier PK Architekten",
+    "location": "Heidestr. 50, 10557 Berlin",
+    "url": "www.atelier-pk.com"
+  },
+  {
+    "name": "THOMAS STADLER ARCHITEKTEN",
+    "location": "Heidestr. 50, 10557 Berlin",
+    "url": "www.thomas-stadler.net"
+  },
+  {
+    "name": "a.i.k. architekten in karlshorst",
+    "location": "Heiligenberger Str. 20, 10318 Berlin",
+    "url": "www.architekten-karlshorst.de"
+  },
+  {
+    "name": "BAU International University of Applied Sciences",
+    "location": "Heinrich-Heine-Str. 15, 10179 Berlin",
+    "url": "www.bauinternational-berlin.de"
+  },
+  {
+    "name": "BATEK ARCHITEKTEN",
+    "location": "Heinrich-Roller-Str. 20, 10405 Berlin",
+    "url": "www.batekarchitekten.com"
+  },
+  {
+    "name": "Buschmeyer + Cai Architekten PartGmbB",
+    "location": "Heinrich-Roller-Str. 22, 10405 Berlin",
+    "url": "www.buschmeyercai.de"
+  },
+  {
+    "name": "riedel.skambas",
+    "location": "Heinrich-Roller-Str. 8, 10405 Berlin",
+    "url": "www.riedelskambas.com"
+  },
+  {
+    "name": "Arin Burda Architekten Partnerschaft",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.arinburda.com"
+  },
+  {
+    "name": "windisch - architekt",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.architekt-windisch.de"
+  },
+  {
+    "name": "Riegler Riewe Architekten",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.rieglerriewe.de"
+  },
+  {
+    "name": "A O Berlin Architektur und Organisation",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.ao-berlin.de"
+  },
+  {
+    "name": "melzerarchitekten",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.melzer-architekten.eu"
+  },
+  {
+    "name": "Feddersen Gesellschaft von Architekten mbH",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.feddersen-architekten.de"
+  },
+  {
+    "name": "Beissert und Hengge Garten- und Landschaftsarchitekten",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.beissertundhengge.de"
+  },
+  {
+    "name": "Kohlfaerber & Vasic Gesellschaft von Architekten mbH",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.kohlfaerber.de"
+  },
+  {
+    "name": "AfB Architekten für Baudurchführung Klaus Kiek GmbH",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.afbberlin.com"
+  },
+  {
+    "name": "CMB ARCHITECTURE",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.cmb-architecture.de"
+  },
+  {
+    "name": "Ulrich Borgert Braun & Schlockermann Architekten GmbH",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.ubbs-architekten.de"
+  },
+  {
+    "name": "bmh architekten- und ingenieur gmbh",
+    "location": "Helmholtzstr. 2, 10587 Berlin",
+    "url": "www.bmh-ibw-architekten.de"
+  },
+  {
+    "name": "Kleihues + Kleihues Gesellschaft von Architekten mbH",
+    "location": "Helmholtzstr. 42, 10587 Berlin",
+    "url": "www.kleihues.com"
+  },
+  {
+    "name": "klaus schuwerk architects",
+    "location": "Helmholtzstr. 42, 10587 Berlin",
+    "url": "www.schuwerk.com"
+  },
+  {
+    "name": "HEINE PROJEKT Beratung | Koordination | Freiraumplanung",
+    "location": "Helmholtzstr. 42, 10587 Berlin",
+    "url": "www.heine-projekt.de"
+  },
+  {
+    "name": "WAF Architekten Wewelsiep Asipowicz Forsting Partnerschaft mbB",
+    "location": "Helmstr. 4, 10827 Berlin",
+    "url": "www.waf-architects.com"
+  },
+  {
+    "name": "KONSTRUKKT Gesellschaft von Architekten mbH",
+    "location": "Hessische Str. 11, 10115 Berlin",
+    "url": "www.konstrukkt.net"
+  },
+  {
+    "name": "deadline",
+    "location": "Hessische Str. 5, 10115 Berlin",
+    "url": "www.deadline.de"
+  },
+  {
+    "name": "DOMINIK UHRMEISTER ARCHITEKT",
+    "location": "Hildegard-Marcusson-Str. 31, 10317 Berlin",
+    "url": "www.d-uhrmeister.de"
+  },
+  {
+    "name": "raumwandler GmbH Uwe Licht",
+    "location": "Hirtenstr. 18, 10178 Berlin",
+    "url": "www.raumwandler.de"
+  },
+  {
+    "name": "götz bellmann architekten Dr.-Ing. Bellmann Gesellschaft von Architekten mbH",
+    "location": "Hochkirchstr. 5, 10829 Berlin",
+    "url": "www.bellmannarchitekten.de"
+  },
+  {
+    "name": "URBITECTEN / Frank Görres + Planer Architekten",
+    "location": "Hochkirchstraße 8, 10829 Berlin",
+    "url": "www.architect-frank-goerres.de"
+  },
+  {
+    "name": "AKP Architekten Kauschke + Partner",
+    "location": "Hohenzollerndamm 12, 10717 Berlin",
+    "url": "www.architekten-kauschke.de"
+  },
+  {
+    "name": "Fischer + Werner Partnerschaft",
+    "location": "Hohenzollerndamm 184, 10713 Berlin",
+    "url": "www.fw-architekten.de"
+  },
+  {
+    "name": "W+P Landschaften",
+    "location": "Holsteiner Ufer 22, 10557 Berlin",
+    "url": "www.wp-landschaften.de"
+  },
+  {
+    "name": "MHB Planungs- und Ingenieurgesellschaft mbH",
+    "location": "Hufelandstr. 11, 10407 Berlin",
+    "url": "www.mhb-planer.de"
+  },
+  {
+    "name": "Autzen & Reimers Architekten und Stadtplaner",
+    "location": "Hufelandstr. 22, 10407 Berlin",
+    "url": "www.autzen-reimers.de"
+  },
+  {
+    "name": "jp3 Architektur & Gestaltung",
+    "location": "Hufelandstr. 24, 10407 Berlin",
+    "url": "www.jp3.de"
+  },
+  {
+    "name": "KOM Architekturbüro",
+    "location": "Händelallee 3, 10557 Berlin",
+    "url": "www.kom-a.de"
+  },
+  {
+    "name": "birgitwolf-architektur",
+    "location": "Immanuelkirchstr. 34, 10405 Berlin",
+    "url": "www.birgitwolf-architektur.de"
+  },
+  {
+    "name": "Freudenberg Architekten, Gesellschaft für Planung, Bauleitung und Projektsteuerung mbH",
+    "location": "Innsbrucker Str. 37, 10825 Berlin",
+    "url": "www.afm-architektur.de"
+  },
+  {
+    "name": "heike könig architekten",
+    "location": "Innsbrucker Str. 56, 10825 Berlin",
+    "url": "www.hk-arch.de"
+  },
+  {
+    "name": "Leibenatus Stockburger Wittayer Architekten Ingenieure",
+    "location": "Inselstr. 1, 10179 Berlin",
+    "url": "www.lsw-berlin.de"
+  },
+  {
+    "name": "oliver mang architekten",
+    "location": "Invalidenstr. 34, 10115 Berlin",
+    "url": "www.m-arc.de"
+  },
+  {
+    "name": "walk | architekten",
+    "location": "Invalidenstr. 7, 10115 Berlin",
+    "url": "www.walk-architekten.com"
+  },
+  {
+    "name": "SMAP Seeger Müller Architekten Partnerschaft mbB",
+    "location": "Invalidenstr. 7, 10115 Berlin",
+    "url": "www.seegermueller.de"
+  },
+  {
+    "name": "Philipp Eller Architekten",
+    "location": "Jablonskistr. 29, 10405 Berlin",
+    "url": "www.eller-architekten.de"
+  },
+  {
+    "name": "Eike Becker_Architekten",
+    "location": "Jean-Monnet-Str. 2, 10557 Berlin",
+    "url": "www.eikebeckerarchitekten.com"
+  },
+  {
+    "name": "Eicke Becker Architekten",
+    "location": "Jean-Monnet-Str. 2, 10557 Berlin",
+    "url": "www.eb-a.de"
+  },
+  {
+    "name": "Architekturbüro Manon de Bont",
+    "location": "Joachim-Friedrich-Str. 48, 10711 Berlin",
+    "url": "www.manondebont.com"
+  },
+  {
+    "name": "HEIDENREICH & SPRINGER ARCHITEKTEN",
+    "location": "Joachim-Friedrich-Str. 53, 10711 Berlin",
+    "url": "www.springerarchitekten.de"
+  },
+  {
+    "name": "Karin Ocker Architektin",
+    "location": "Joachim-Kartnatz-Allee 43, 10557 Berlin",
+    "url": "www.karinocker.de"
+  },
+  {
+    "name": "omniCon Gesellschaft für innovatives Bauen mbH",
+    "location": "Joachimstalerstraße 20, 10719 Berlin",
+    "url": "www.omnicon.de"
+  },
+  {
+    "name": "ARUP Deutschland GmbH",
+    "location": "Joachimsthaler Str. 41, 10623 Berlin",
+    "url": "www.arup.com"
+  },
+  {
+    "name": "David Chipperfield Architects Gesellschaft von Architekten mbH",
+    "location": "Joachimstr. 11, 10119 Berlin",
+    "url": "www.davidchipperfield.co.uk"
+  },
+  {
+    "name": "David Chipperfield Architects",
+    "location": "Joachimstr. 11, 10119 Berlin",
+    "url": "davidchipperfield.com"
+  },
+  {
+    "name": "Hübner + Oehmig",
+    "location": "Joachimstr. 17, 10119 Berlin",
+    "url": "www.huebner-oehmig.de"
+  },
+  {
+    "name": "Hagebusch Architekten Industriebau + ökologisches Bauen",
+    "location": "Johanniter Str. 13, 10961 Berlin",
+    "url": "www.hagebusch-architekten.de"
+  },
+  {
+    "name": "guba + sgard landschaftsarchitekten",
+    "location": "John-Schehr-Str. 32, 10407 Berlin",
+    "url": "www.gubasgard.de"
+  },
+  {
+    "name": "Kaufmann und Schneider GbR Architekten + Ingenieure",
+    "location": "Kaiser-Friedrich-Str. 27, 10585 Berlin",
+    "url": "www.gesundheitsbauten.de"
+  },
+  {
+    "name": "Albert Armbruster Büro für Landschaftsarchitektur",
+    "location": "Kaiser-Friedrich-Str. 90, 10585 Berlin",
+    "url": "www.armbruster-landschaftsarchitektur.de"
+  },
+  {
+    "name": "Göx Architekten",
+    "location": "Kaiser-Friedrich-Str. 90, 10585 Berlin",
+    "url": "www.goex-architekten.de"
+  },
+  {
+    "name": "die raumplaner slapa & die raumplaner gmbh",
+    "location": "Kaiser-Friedrich-Str. 90, 10585 Berlin",
+    "url": "www.die-raumplaner.de"
+  },
+  {
+    "name": "Burckhardt+Partner",
+    "location": "Kaiserin-Augusta-Allee 14, 10553 Berlin",
+    "url": "www.burckhardtpartner.de"
+  },
+  {
+    "name": "ABM Berlin",
+    "location": "Kaiserin-Augusta-Allee 33, 10589 Berlin",
+    "url": "www.abmbauberlin.de"
+  },
+  {
+    "name": "KOSER Projektmanagement",
+    "location": "Kamminer Str. 35, 10589 Berlin",
+    "url": "www.koser-projektmanagement.de"
+  },
+  {
+    "name": "SGPLANDSCHAFTSRAUM",
+    "location": "Kantstr. 110, 10627 Berlin",
+    "url": "www.sgplandschaftsraum.de"
+  },
+  {
+    "name": "ppU ProUrban",
+    "location": "Kantstr. 134, 10625 Berlin",
+    "url": "www.prourban.com"
+  },
+  {
+    "name": "Hufnagel Architekten",
+    "location": "Kantstr. 138, 10623 Berlin",
+    "url": "www.hufnagel-architekten.de"
+  },
+  {
+    "name": "eins bis neun architekten ingenieure",
+    "location": "Kantstr. 138, 10623 Berlin",
+    "url": "www.einsbisneun-architekten.de"
+  },
+  {
+    "name": "Heide & von Beckerath",
+    "location": "Kantstr. 152, 10623 Berlin",
+    "url": "www.heidevonbeckerath.com"
+  },
+  {
+    "name": "larsson architekten",
+    "location": "Kantstr. 153, 10623 Berlin",
+    "url": "www.larssonarchitekten.de"
+  },
+  {
+    "name": "Hascher Jehle Architektur",
+    "location": "Kantstr. 17, 10623 Berlin",
+    "url": "www.hascherjehle.de"
+  },
+  {
+    "name": "Arcus Architekten Ingenieure",
+    "location": "Kantstr. 41, 10625 Berlin",
+    "url": "www.arcus.de"
+  },
+  {
+    "name": "Bosch & Partner GmbH",
+    "location": "Kantstr. 63, 10627 Berlin",
+    "url": "www.boschpartner.de"
+  },
+  {
+    "name": "Arthur Fischer Architekten",
+    "location": "Kantstr. 98, 10627 Berlin",
+    "url": "www.arthurfischer.de"
+  },
+  {
+    "name": "contentismissing",
+    "location": "Karl-Liebknecht-Str. 9, 10178 Berlin",
+    "url": "www.contentismissing.net"
+  },
+  {
+    "name": "SOLLICH ARCHITEKTEN",
+    "location": "Karl-Marx-Allee 102, 10243 Berlin",
+    "url": "www.sollich-architekten.de"
+  },
+  {
+    "name": "Peter W. Schmidt Architekten GmbH",
+    "location": "Karl-Marx-Allee 103, 10243 Berlin",
+    "url": "www.pws.eu"
+  },
+  {
+    "name": "Henningsen Landschaftsarchitekten PartGmbB",
+    "location": "Karl-Marx-Allee 143, 10243 Berlin",
+    "url": "www.henningsen-berlin.de"
+  },
+  {
+    "name": "LORENZUNDMICKEL Architekten",
+    "location": "Karl-Marx-Allee 79, 10243 Berlin",
+    "url": "www.lorenzundmickel.de"
+  },
+  {
+    "name": "el:ch landschaftsarchitekten",
+    "location": "Karl-Marx-Allee 79, 10243 Berlin",
+    "url": "www.elch.la"
+  },
+  {
+    "name": "DAVID MEYER Architektur und Design",
+    "location": "Karl-Marx-Allee 81, 10243 Berlin",
+    "url": "www.davidmeyer.de"
+  },
+  {
+    "name": "heberle • mayer Büro für Architektur und Städtebau",
+    "location": "Karl-Marx-Allee 81, 10243 Berlin",
+    "url": "www.heberle-mayer.de"
+  },
+  {
+    "name": "ludeschervonspreckelsen architekten",
+    "location": "Karl-Marx-Allee 82, 10243 Berlin",
+    "url": "www.studioberlin.net"
+  },
+  {
+    "name": "c/o Barbara Ludescher",
+    "location": "Karl-Marx-Allee 82, 10243 Berlin",
+    "url": "www.pauhof.com"
+  },
+  {
+    "name": "BAP. Architekten & Ingenieure GmbH",
+    "location": "Karl-Marx-Allee 83, 10243 Berlin",
+    "url": "www.bap.info"
+  },
+  {
+    "name": "Michels Architekturbüro GmbH",
+    "location": "Karl-Marx-Allee 90, 10243 Berlin",
+    "url": "www.mic-arc.de"
+  },
+  {
+    "name": "Kebnekaise Studio",
+    "location": "Karl-Marx-Allee 91, 10243 Berlin",
+    "url": "www.vonkebnekaise.de"
+  },
+  {
+    "name": "Henrich Rauschning Architekt",
+    "location": "Karlsruher Str. 23, 10711 Berlin",
+    "url": "www.architekt-rauschning.de"
+  },
+  {
+    "name": "Uta Henklein Landschaftsarchitektur",
+    "location": "Kaskelstr. 19, 10317 Berlin",
+    "url": "www.utahenklein.com"
+  },
+  {
+    "name": "JP Hartmann Architekt",
+    "location": "Kaskelstr. 42, 10317 Berlin",
+    "url": "www.jphartmann.de"
+  },
+  {
+    "name": "Hinz Architekten",
+    "location": "Kaskelstr.32, 10317 Berlin",
+    "url": "www.hinzarchitekten.de"
+  },
+  {
+    "name": "S M A Q",
+    "location": "Kastanienallee 10, 10435 Berlin",
+    "url": "www.smaq.net"
+  },
+  {
+    "name": "Ralf F. Schlagge-Architekten",
+    "location": "Kastanienallee 11, 10435 Berlin",
+    "url": "www.schlagge-architekten.de"
+  },
+  {
+    "name": "Remise 1. OG links",
+    "location": "Kastanienallee 21, 10435 Berlin",
+    "url": "www.krigar.de"
+  },
+  {
+    "name": "Studiobaft",
+    "location": "Kastanienallee 29, 10435 Berlin",
+    "url": "www.studiobaft.com"
+  },
+  {
+    "name": "Studio Makdasi",
+    "location": "Kastanienallee 29, 10435 Berlin",
+    "url": "www.studiomakdasi.com"
+  },
+  {
+    "name": "Architekturwerk Gesellschaft von Architekten mbH",
+    "location": "Kastanienallee 42, 10119 Berlin",
+    "url": "www.architekturwerke.de"
+  },
+  {
+    "name": "darenberg + chmielewski",
+    "location": "Kastanienallee 43, 10119 Berlin",
+    "url": "www.dundc.de"
+  },
+  {
+    "name": "tecton GmbH",
+    "location": "Kastanienallee 74, 10435 Berlin",
+    "url": "www.tecton-berlin.de"
+  },
+  {
+    "name": "BSM Beratungsgesellschaft für Stadterneuerung und Modernisierung mbH",
+    "location": "Katharinenstr. 19, 10711 Berlin",
+    "url": "www.bsm-berlin.de"
+  },
+  {
+    "name": "Dipl.-Ing. Architekt F.-W. Groefke",
+    "location": "Katharinenstr. 8, 10711 Berlin",
+    "url": "www.f-wgroefke.de"
+  },
+  {
+    "name": "Klaus Theo Brenner - Stadtarchitektur",
+    "location": "Katharinenstr. 8, 10711 Berlin",
+    "url": "www.klaustheobrenner.de"
+  },
+  {
+    "name": "MAFEU Architektur",
+    "location": "Katzbachstr. 11, 10965 Berlin",
+    "url": "www.mafeu.de"
+  },
+  {
+    "name": "Kartenbeck und Lang Architekten",
+    "location": "Katzbachstr. 24, 10965 Berlin",
+    "url": "www.kartenbeckundlang.com"
+  },
+  {
+    "name": "KOPPERROTH Architektur und Stadtumbau PartG mbB",
+    "location": "Katzbachstr. 24, 10965 Berlin",
+    "url": "www.kopperroth.de"
+  },
+  {
+    "name": "Berliner Immobilienmanagement GmbH",
+    "location": "Keibelstr. 36, 10178 Berlin",
+    "url": "www.bim-berlin.de"
+  },
+  {
+    "name": "NORBERT SACHS ARCHITEKT BDA",
+    "location": "Keithstr. 14, 10787 Berlin",
+    "url": "www.norbert-sachs.com"
+  },
+  {
+    "name": "huber staudt architekten bda",
+    "location": "Keithstr. 2, 10787 Berlin",
+    "url": "www.huberstaudtarchitekten.de"
+  },
+  {
+    "name": "Keintzel Achitekten",
+    "location": "Keithstr. 2, 10787 Berlin",
+    "url": "www.keintzel-architekten.de"
+  },
+  {
+    "name": "Mola Architekten GmbH BDA",
+    "location": "Keithstr. 2, 10787 Berlin",
+    "url": "www.mola-architekten.de"
+  },
+  {
+    "name": "ARW-Planungsgemeinschaft K. Auffermann - J. Wischnewski",
+    "location": "Keithstr. 2, 10787 Berlin",
+    "url": "www.arw-architekten.de"
+  },
+  {
+    "name": "Kirsten Schemel Architekten BDA",
+    "location": "Keithstr. 2, 10787 Berlin",
+    "url": "www.k-s-architekten.de"
+  },
+  {
+    "name": "Mola + Winkelmüller Architekten GmbH",
+    "location": "Keithstr. 2, 10787 Berlin",
+    "url": "www.mw-arch.de"
+  },
+  {
+    "name": "Specht, Kalleja + Partner",
+    "location": "Keplerstr. 8, 10589 Berlin",
+    "url": "www.skp-ingenieure.com"
+  },
+  {
+    "name": "arch.id architektur - quartiert - entwicklung Inka Drohn GmbH",
+    "location": "Kinzigstr. 29, 10247 Berlin",
+    "url": "www.archid.de"
+  },
+  {
+    "name": "Herzog & de Meuron",
+    "location": "Klosterstr. 44, 10179 Berlin",
+    "url": "www.herzogdemeuron.com"
+  },
+  {
+    "name": "Goderbauer Architects",
+    "location": "Klosterstr. 44, 10179 Berlin",
+    "url": "www.goderbauer.com"
+  },
+  {
+    "name": "Felgendreher Olfs Köchling Atelier 432",
+    "location": "Klosterstr. 44, 10179 Berlin",
+    "url": "www.f-o-k.net"
+  },
+  {
+    "name": "Thomas Baecker Bettina Kraus Architekten",
+    "location": "Klosterstr. 44, 10179 Berlin",
+    "url": "www.tbbk.de"
+  },
+  {
+    "name": "c/o HLZFR. GmbH",
+    "location": "Klosterstr. 44, 10179 Berlin",
+    "url": "www.hlzfr.com"
+  },
+  {
+    "name": "neo Projektsteuerung und Bau- management GmbH",
+    "location": "Klosterstr. 62, 10179 Berlin",
+    "url": "www.neo-pb.com"
+  },
+  {
+    "name": "TSSB Berlin",
+    "location": "Klosterstr. 62, 10179 Berlin",
+    "url": "www.tssb.de"
+  },
+  {
+    "name": "Alfred Meistermann Architekt",
+    "location": "Knaackstr. 33, 10405 Berlin",
+    "url": "www.meistermann-architekt.de"
+  },
+  {
+    "name": "J. MAYER H. Architekten",
+    "location": "Knesebeckstr. 30, 10623 Berlin",
+    "url": "www.jmayerh.de"
+  },
+  {
+    "name": "Kaup + Wiegand Gesellschaft von Architekten mbH",
+    "location": "Knesebeckstr. 32, 10623 Berlin",
+    "url": "www.kaupwiegand.de"
+  },
+  {
+    "name": "Gekko-Real-Estate",
+    "location": "Knesebeckstr. 33, 10623 Berlin",
+    "url": "www.gekko-real-estate.de"
+  },
+  {
+    "name": "Deubzer König Architekten GmbH",
+    "location": "Knesebeckstr. 77, 10623 Berlin",
+    "url": "www.deubzerkoenigarchitekten.de"
+  },
+  {
+    "name": "DIERKS & CRAMER ArchitektenPartGmbB",
+    "location": "Knesebeckstr. 86, 10623 Berlin",
+    "url": "www.dierkscramer.com"
+  },
+  {
+    "name": "Hohenzollern Architekten",
+    "location": "Knesebeckstr. 95, 10623 Berlin",
+    "url": "www.hohenzollern-architekten.de"
+  },
+  {
+    "name": "Georg v. Gayl - Landschaftsarchitekten",
+    "location": "Knesebeckstr. 95, 10623 Berlin",
+    "url": "www.georgvongayl.de"
+  },
+  {
+    "name": "bfs d flachsbarth schultz",
+    "location": "Kochstr. 27, 10969 Berlin",
+    "url": "www.bfs-design.com"
+  },
+  {
+    "name": "Rüthnick Architekten Ingenieure Partnerschaft mbB",
+    "location": "Kohlfurter Str. 41, 10999 Berlin",
+    "url": "www.ruethnick.com"
+  },
+  {
+    "name": "BE Berlin GmbH",
+    "location": "Kohlfurter Str. 41, 10999 Berlin",
+    "url": "www.baumschlager-eberle.com"
+  },
+  {
+    "name": "Nolting Architektur",
+    "location": "Kohlfurter Str. 6, 10999 Berlin",
+    "url": "www.noltingarchitektur.de"
+  },
+  {
+    "name": "Shivani Shankar Chakraborty",
+    "location": "Kohlfurter Str. 6, 10999 Berlin",
+    "url": "www.shivani-chakraborty.com"
+  },
+  {
+    "name": "MARC KOCHER ARCHITEKTEN - BERLIN",
+    "location": "Kollwitzstr. 28, 10405 Berlin",
+    "url": "www.kocher-architekten.com"
+  },
+  {
+    "name": "/denker /zimmer architekten",
+    "location": "Kollwitzstr. 66, 10435 Berlin",
+    "url": "www.denkerzimmer.de"
+  },
+  {
+    "name": "Sauer Architekten",
+    "location": "Konstanzer Str. 55, 10707 Berlin",
+    "url": "www.sauerarchitekten-berlin.de"
+  },
+  {
+    "name": "hgp Architekten Ingenieure + Planer",
+    "location": "Konstanzer Str. 6, 10707 Berlin",
+    "url": "www.hgplan.de"
+  },
+  {
+    "name": "M - OST",
+    "location": "Kopenhagener Str. 14, 10437 Berlin",
+    "url": "www.m-ost.pl"
+  },
+  {
+    "name": "Kubeneck Architekten",
+    "location": "Kopenhagener Str. 15, 10437 Berlin",
+    "url": "www.kubeneck.de"
+  },
+  {
+    "name": "Schrölkamp Architektur",
+    "location": "Kopenhagener Str. 23, 10437 Berlin",
+    "url": "www.schroelkamp.de"
+  },
+  {
+    "name": "Nickles Odgers GbR",
+    "location": "Kopenhagener Str. 31, 10437 Berlin",
+    "url": "www.noa.berlin"
+  },
+  {
+    "name": "+1 architekten",
+    "location": "Kopenhagener Str. 42, 10437 Berlin",
+    "url": "www.plus1architekten.de"
+  },
+  {
+    "name": "dannenberg*architekten",
+    "location": "Kopischstr. 2, 10965 Berlin",
+    "url": "www.dannenberg-architekten.de"
+  },
+  {
+    "name": "buero eins punkt null",
+    "location": "Kottbusser Damm 70, 10967 Berlin",
+    "url": "www.buero-1-0.de"
+  },
+  {
+    "name": "BUERO STEFFEN",
+    "location": "Kottbusser Damm 70, 10967 Berlin",
+    "url": "www.buerosteffen.de"
+  },
+  {
+    "name": "TELEINTERNETCAFE Architektur und Urbanismus",
+    "location": "Kottbusser Damm 74, 10967 Berlin",
+    "url": "www.teleinternetcafe.de"
+  },
+  {
+    "name": "TH Treibhaus",
+    "location": "Kottbusser Damm 74, 10967 Berlin",
+    "url": "www.treibhausberlin.de"
+  },
+  {
+    "name": "Bundesministerium des Inneren, für Bau und Heimat, Ref. BW | 1",
+    "location": "Krausenstr. 17, 10117 Berlin",
+    "url": "www.bmi.bund.de"
+  },
+  {
+    "name": "altri architetti",
+    "location": "Krausnickstr. 10, 10115 Berlin",
+    "url": "www.altriarchitetti.com"
+  },
+  {
+    "name": "TONIC ARCHITEKTEN",
+    "location": "Krausnickstr. 14, 10115 Berlin",
+    "url": "www.tonic-architekten.de"
+  },
+  {
+    "name": "braun•busse",
+    "location": "Kreuzbergstr. 27, 10965 Berlin",
+    "url": "www.braunbusse.de"
+  },
+  {
+    "name": "braun•busse•architekten•",
+    "location": "Kreuzbergstr. 27, 10965 Berlin",
+    "url": "www.braunbusse-architekten.de"
+  },
+  {
+    "name": "Wiechers Beck Gesellschaft von Architekten mbH",
+    "location": "Kreuzbergstr. 30, 10965 Berlin",
+    "url": "www.wiechers-beck.de"
+  },
+  {
+    "name": "Putzmann Cierpka Binder Architekten PartG mbB",
+    "location": "Kreuzbergstr. 30, 10965 Berlin",
+    "url": "www.pcb-architekten.de"
+  },
+  {
+    "name": "c/o PCB Architekten - b u e n g e r   LA Atelier für Gestaltung",
+    "location": "Kreuzbergstr. 30, 10965 Berlin",
+    "url": "www.phrank-und-phrei.de"
+  },
+  {
+    "name": "Studio Loes",
+    "location": "Kreuzbergstr. 37, 10965 Berlin",
+    "url": "www.studio-loes.com"
+  },
+  {
+    "name": "werk A architektur",
+    "location": "Kreuzbergstr. 7, 10965 Berlin",
+    "url": "www.werk-a-architektur.de"
+  },
+  {
+    "name": "SARIAS Investment GmbH",
+    "location": "Kronenstr. 1, 10117 Berlin",
+    "url": "www.sarias.de"
+  },
+  {
+    "name": "Vielmo Architekten",
+    "location": "Kronprinzendamm 15, 10711 Berlin",
+    "url": "www.vielmo.de"
+  },
+  {
+    "name": "Kondor Wessels Planungsgesellschaft mbH",
+    "location": "Kronprinzendamm 15, 10711 Berlin",
+    "url": "www.kondorwessels.com"
+  },
+  {
+    "name": "A2F Architekten GmbH",
+    "location": "Kuglerstr. 16, 10439 Berlin",
+    "url": "a2f.de"
+  },
+  {
+    "name": "Studio Kristina Wiese",
+    "location": "Kuglerstr. 6, 10439 Berlin",
+    "url": "www.kristinawiese.de"
+  },
+  {
+    "name": "Rother · Architekten Designer",
+    "location": "Kurfürstendamm 125, 10711 Berlin",
+    "url": "www.rother-rother.de"
+  },
+  {
+    "name": "y.es Gesellschaft von Architekten mbH",
+    "location": "Kurfürstendamm 154, 10709 Berlin",
+    "url": "www.y-es.de"
+  },
+  {
+    "name": "CLAUS NEUMANN ARCHITEKTEN",
+    "location": "Kurfürstendamm 170, 10707 Berlin",
+    "url": "www.cn-architekten.de"
+  },
+  {
+    "name": "Abeln Architekten+Ingenieure",
+    "location": "Kurfürstendamm 177, 10707 Berlin",
+    "url": "www.abeln-architekten.de"
+  },
+  {
+    "name": "Müller Reimann Generalplaner AAB Gesellschaft von Architekten mbH",
+    "location": "Kurfürstendamm 178, 10707 Berlin",
+    "url": "www.mueller-reimann.de"
+  },
+  {
+    "name": "Müller-Reimann Architekten",
+    "location": "Kurfürstendamm 178, 10707 Berlin",
+    "url": "www.mueller-reeimann.de"
+  },
+  {
+    "name": "Weinmiller Großmann Architekten PartGmbB",
+    "location": "Kurfürstendamm 178, 10707 Berlin",
+    "url": "www.weinmillergrossmann.de"
+  },
+  {
+    "name": "OBSTFELDER ARCHITEKTEN Bayerhaus",
+    "location": "Kurfürstendamm 178, 10707 Berlin",
+    "url": "www.obstfelderarchitekten.de"
+  },
+  {
+    "name": "concarus Real Estate Invest GmbH",
+    "location": "Kurfürstendamm 179, 10707 Berlin",
+    "url": "www.concarus.de"
+  },
+  {
+    "name": "APOProjekt GmbH",
+    "location": "Kurfürstendamm 195, 10707 Berlin",
+    "url": "www.apoprojekt.de"
+  },
+  {
+    "name": "Lika Valentien Architektur + Design",
+    "location": "Kurfürstendamm 200, 10719 Berlin",
+    "url": "www.lika-valentien.de"
+  },
+  {
+    "name": "RALFSTRÄTER ARCHITEKT",
+    "location": "Kurfürstendamm 200, 10719 Berlin",
+    "url": "www.ralfstraeter.com"
+  },
+  {
+    "name": "Maske + Suhren Architekten und Designer Gesellschaft von Architekten mbH",
+    "location": "Kurfürstendamm 22, 10719 Berlin",
+    "url": "www.maskesuhren.de"
+  },
+  {
+    "name": "AMO Planungsgruppe Mohtachem",
+    "location": "Kurfürstendamm 36, 10719 Berlin",
+    "url": "www.amoplan.com"
+  },
+  {
+    "name": "baumgarten simon architekten BDA Gesellschaft von Architekten mbH",
+    "location": "Kurfürstendamm 45, 10719 Berlin",
+    "url": "www.baumgartensimon.de"
+  },
+  {
+    "name": "KSP Jürgen Engel Architekten GmbH",
+    "location": "Kurfürstendamm 48, 10707 Berlin",
+    "url": "www.ksp-architekten.de"
+  },
+  {
+    "name": "IBW, André Wegner",
+    "location": "Kurfürstendamm 61, 10707 Berlin",
+    "url": "www.ibwing.de"
+  },
+  {
+    "name": "JENSCH+PARTNER",
+    "location": "Kurfürstendamm 63, 10707 Berlin",
+    "url": "www.jensch-und-partner.de"
+  },
+  {
+    "name": "Collignon Architektur und Design GmbH",
+    "location": "Kurfürstendamm 67, 10707 Berlin",
+    "url": "www.collignonarchitektur.com"
+  },
+  {
+    "name": "Stuke Architekten",
+    "location": "Kurfürstendamm 90, 10709 Berlin",
+    "url": "www.stuke-architekten.de"
+  },
+  {
+    "name": "Pasztori & Simons Architekten PartmbB",
+    "location": "Kurfürstenstr. 13, 10785 Berlin",
+    "url": "www.pasztorisimons.com"
+  },
+  {
+    "name": "GKK Ingenieurgesellschaft für Hochbau mbH",
+    "location": "Kurfürstenstr. 83, 10787 Berlin",
+    "url": "www.gkk-berlin.de"
+  },
+  {
+    "name": "Studio LUP GbR",
+    "location": "Kurfürstenstr. 9, 10785 Berlin",
+    "url": "www.lup.archi"
+  },
+  {
+    "name": "GfP - Gesellschaft für Planung",
+    "location": "Kurfürstenstraße 33, 10785 Berlin",
+    "url": "www.gfp-stadtplanung.de"
+  },
+  {
+    "name": "herrburg Landschaftsarchitekten",
+    "location": "Käthe-Niederkirchner-Str. 28, 10407 Berlin",
+    "url": "www.herrburg.de"
+  },
+  {
+    "name": "Zplus Landschaftsarchitektur",
+    "location": "Käthe-Niederkirchner-Str. 7, 10407 Berlin",
+    "url": "www.zplus.eu"
+  },
+  {
+    "name": "100Landschaftsarchitektur",
+    "location": "Käthe-Niederkirchner-Str. 7, 10407 Berlin",
+    "url": "www.100land.de"
+  },
+  {
+    "name": "korzynietz architekten + partner",
+    "location": "Königswinterstr. 27, 10318 Berlin",
+    "url": "www.korzynietz-architekten.de"
+  },
+  {
+    "name": "studio O",
+    "location": "Köpenicker Chaussee 31, 10317 Berlin",
+    "url": "www.studioo.cc"
+  },
+  {
+    "name": "Antonia Lippmann Architects",
+    "location": "Köpenicker Chaussee 33, 10317 Berlin",
+    "url": "www.antonialippmann.com"
+  },
+  {
+    "name": "SGP Projektmanagement GmbH",
+    "location": "Köpenicker Str. 125, 10179 Berlin",
+    "url": "www.streletzki-gruppe.de"
+  },
+  {
+    "name": "mmrtg | architekten gmbh",
+    "location": "Köpenicker Str. 148, 10997 Berlin",
+    "url": "www.mmrtg.de"
+  },
+  {
+    "name": "agu | Goldmann Landschaftsarchitektur BDLA",
+    "location": "Köpenicker Str. 154, 10997 Berlin",
+    "url": "www.agu-goldmann.de"
+  },
+  {
+    "name": "A24 Landschaft Landschafttsarchitektur GmbH",
+    "location": "Köpenicker Str. 154, 10997 Berlin",
+    "url": "www.a24-landschaft.de"
+  },
+  {
+    "name": "Sabrina Schreiber, Henrik Frölich Architekten GbR",
+    "location": "Köpenicker Str. 154, 10997 Berlin",
+    "url": "www.froelichschreiber.de"
+  },
+  {
+    "name": "mcksn c/o Contexplan",
+    "location": "Köpenicker Str. 154, 10997 Berlin",
+    "url": "www.mcksn.de"
+  },
+  {
+    "name": "MEKADO Gesellschaft von Architekten mbH",
+    "location": "Köpenicker Str. 154, 10997 Berlin",
+    "url": "www.mekado.eu"
+  },
+  {
+    "name": "welter + welter architekten BDA",
+    "location": "Köpenicker Str. 48, 10179 Berlin",
+    "url": "www.welterwelter.com"
+  },
+  {
+    "name": "thoma architekten",
+    "location": "Köpenicker Str. 48, 10179 Berlin",
+    "url": "www.thoma-architekten.de"
+  },
+  {
+    "name": "Grübe-Architekten",
+    "location": "Köpenicker Str. 48, 10179 Berlin",
+    "url": "www.gruebethoma-architekten.de"
+  },
+  {
+    "name": "Wahl und Bauer Architekten DAZ Aufgang E",
+    "location": "Köpenicker Str. 48, 10179 Berlin",
+    "url": "www.wahlundbauer.de"
+  },
+  {
+    "name": "KNY & WEBER ARCHITEKTEN",
+    "location": "Köpenicker Str. 48, 10179 Berlin",
+    "url": "www.kny-weber.de"
+  },
+  {
+    "name": "Klinkenberg Architekten Berlin",
+    "location": "Köpenicker Str. 8, 10997 Berlin",
+    "url": "www.klinkenberg-architekten.de"
+  },
+  {
+    "name": "Kampmann Fiedler Fabianski Architekten PartGmbB",
+    "location": "Köpenicker Str. 9, 10997 Berlin",
+    "url": "www.kampmann-partner.de"
+  },
+  {
+    "name": "Fabian Berthold Architekt BDA",
+    "location": "Körnerstr. 19, 10785 Berlin",
+    "url": "www.berthold-architekten.de"
+  },
+  {
+    "name": "HUNDERTGUT",
+    "location": "Körnerstr. 19, 10785 Berlin",
+    "url": "www.hundertgut.de"
+  },
+  {
+    "name": "LEGEER Architekten",
+    "location": "Kürfürstenstr. 5, 10785 Berlin",
+    "url": "www.legeer.de"
+  },
+  {
+    "name": "LANGHOFF Architekten",
+    "location": "Landhausstr. 13, 10717 Berlin",
+    "url": "www.langhoff-architekten.de"
+  },
+  {
+    "name": "A. LANGHOFF ARCHITEKTEN",
+    "location": "Landhausstr. 13, 10717 Berlin",
+    "url": "www.gap-berlin.de"
+  },
+  {
+    "name": "pro garten - landschaftsarchitektur",
+    "location": "Langenscheidtstr. 3, 10827 Berlin",
+    "url": "www.progarten-berlin.de"
+  },
+  {
+    "name": "hsarchitekten - Helge Schulz",
+    "location": "Langenscheidtstr. 9, 10827 Berlin",
+    "url": "www.hsarchitekt.de"
+  },
+  {
+    "name": "Holland Papert & Birnbaum",
+    "location": "Lausitzer Str. 10, 10999 Berlin",
+    "url": "www.hpb-architekten.de"
+  },
+  {
+    "name": "Häger Flemmig Architekten Partnerschaft mbB",
+    "location": "Lausitzer Str. 10, 10999 Berlin",
+    "url": "www.hfarchitekten.de"
+  },
+  {
+    "name": "Bauereignis Sütterlin Wagner",
+    "location": "Legiendamm 14, 10179 Berlin",
+    "url": "www.bauereignis.de"
+  },
+  {
+    "name": "sinai Gesellschaft von Landschaftsarchitekten mbH",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.sinai.de"
+  },
+  {
+    "name": "Sauerbruch Hutton",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.sauerbruchhutton.com"
+  },
+  {
+    "name": "herschel transformarchitekten",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.transformarchitekten.de"
+  },
+  {
+    "name": "Feyerherm • Schultz • Zander Dipl.-Ing. Architekten",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.fsz-architekten.de"
+  },
+  {
+    "name": "Ingenieurbüro Jörg Gerdes",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.ib-gerdes.com"
+  },
+  {
+    "name": "sauerbruch hutton Gesellschaft von Architekten mbH",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.sauerbruchhutton.de"
+  },
+  {
+    "name": "Wuermle + Spaeth Architekten",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.wuermle-spaeth.de"
+  },
+  {
+    "name": "architekturbüro engelbrecht",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.architekturbuero-engelbrecht.de"
+  },
+  {
+    "name": "Dennerlein-Architektur",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.dennerlein-architektur.de"
+  },
+  {
+    "name": "Thiessen Architekten im studio engelbrecht",
+    "location": "Lehrter Str. 57, 10557 Berlin",
+    "url": "www.thiessenarchitekten.de"
+  },
+  {
+    "name": "Dienstleistung Denkmal DD Gesellschaft von Architekten und Sachverständigen mbH",
+    "location": "Leibnitzstr. 33, 10625 Berlin",
+    "url": "www.dienstleistung-denkmal.de"
+  },
+  {
+    "name": "EXTERN Garten- und Landschaftsarchitektur",
+    "location": "Leibnizstr. 28, 10625 Berlin",
+    "url": "externlandscape.wixsite.com"
+  },
+  {
+    "name": "se.g architekten (Studio Eichstädt.Gresser)",
+    "location": "Leibnizstr. 33, 10625 Berlin",
+    "url": "www.se-g.com"
+  },
+  {
+    "name": "Frank Augustin Diplom-Ingenieur Architekt",
+    "location": "Leibnizstr. 33, 10625 Berlin",
+    "url": "www.frank-augustin-architekt.de"
+  },
+  {
+    "name": "Architekturbüro Günther Hasenberg",
+    "location": "Leibnizstr. 33, 10625 Berlin",
+    "url": "www.hasenberg-architekt.de"
+  },
+  {
+    "name": "CAMA A Architektur",
+    "location": "Leibnizstr. 33, 10625 Berlin",
+    "url": "www.camaberlin.de"
+  },
+  {
+    "name": "Ortner & Ortner Baukunst",
+    "location": "Leibnizstr. 60, 10629 Berlin",
+    "url": "www.ortner-ortner.com"
+  },
+  {
+    "name": "GKK & Partner",
+    "location": "Leibnizstr. 60, 10629 Berlin",
+    "url": "www.gkk-partner.de"
+  },
+  {
+    "name": "Ortner & Ortner Baukunst Gesellschaft von Architekten mbH",
+    "location": "Leibnizstr. 60, 10629 Berlin",
+    "url": "www.ortner-ortner.de"
+  },
+  {
+    "name": "Blumers Architekten GbR",
+    "location": "Leibnizstr. 80, 10625 Berlin",
+    "url": "www.blumers-architekten.de"
+  },
+  {
+    "name": "nied A architekten   Sascha Klein",
+    "location": "Leibnizstr. 86, 10625 Berlin",
+    "url": "www.nied-a.de"
+  },
+  {
+    "name": "D/Form GmbH",
+    "location": "Leibnizstraße 33, 10625 Berlin",
+    "url": "www.d-form.eu"
+  },
+  {
+    "name": "ac.ka - architektur",
+    "location": "Leipziger  Str. 60, 10117 Berlin",
+    "url": "www.acka.eu"
+  },
+  {
+    "name": "Omurga GmbH & Has Mimarlik Ltd.",
+    "location": "Leipziger Str. 114, 10117 Berlin",
+    "url": "www.omurga.de"
+  },
+  {
+    "name": "Studio Schwitalla",
+    "location": "Leipziger Str. 119, 10117 Berlin",
+    "url": "www.studioschwitalla.org"
+  },
+  {
+    "name": "SITZLER ARCHITEKTUR",
+    "location": "Leipziger Str. 48, 10117 Berlin",
+    "url": "www.sitzler.info"
+  },
+  {
+    "name": "OOW",
+    "location": "Leipziger Str. 56, 10117 Berlin",
+    "url": "www.oow.berlin"
+  },
+  {
+    "name": "Judith Schneider LANDSCHAFTSARCHITEKTUR",
+    "location": "Leopoldstr. 8, 10317 Berlin",
+    "url": "www.js-landschaft.de"
+  },
+  {
+    "name": "BHBVT",
+    "location": "Leuschnerdamm 13, 10999 Berlin",
+    "url": "www.bhbvt.de"
+  },
+  {
+    "name": "neo.studio neumann schneider architekten Partnerschaftsgesellschaft mbB",
+    "location": "Leuschnerdamm 13, 10999 Berlin",
+    "url": "www.neo-studio.de"
+  },
+  {
+    "name": "BRAND PULSES // HAACKE ID",
+    "location": "Leuschnerdamm 13, 10999 Berlin",
+    "url": "www.haacke-id.com"
+  },
+  {
+    "name": "neininger.nocke.architekten&designer",
+    "location": "Leuschnerdamm 23, 10999 Berlin",
+    "url": "www.neiningernocke.de"
+  },
+  {
+    "name": "Architekturbüro Freiwald",
+    "location": "Leuschnerdamm 23, 10999 Berlin",
+    "url": "www.thomasfreiwald.com"
+  },
+  {
+    "name": "Baasner Stadtplaner GmbH",
+    "location": "Levetzowstr. 10, 10555 Berlin",
+    "url": "www.baasner-stadtplaner.de"
+  },
+  {
+    "name": "Herzog & Partner",
+    "location": "Libauer Str. 12, 10245 Berlin",
+    "url": "www.herzogundpartner.com"
+  },
+  {
+    "name": "subsolar GbR Herbert + Lohmann",
+    "location": "Libauer Str. 20, 10245 Berlin",
+    "url": "www.subsolar.net"
+  },
+  {
+    "name": "SEBASTIAN FILIP JANICKI architekturstudio",
+    "location": "Liebigstr. 1, 10247 Berlin",
+    "url": "www.sfja.de"
+  },
+  {
+    "name": "raumHOCH GmbH",
+    "location": "Liegnitzer Str. 30, 10999 Berlin",
+    "url": "www.raumhoch.de"
+  },
+  {
+    "name": "TEGEL PROJEKT GMBH",
+    "location": "Lietzenburger Str. 107, 10707 Berlin",
+    "url": "www.tegelprojekt.de"
+  },
+  {
+    "name": "Planergemeinschaft für Stadt und Raum eG",
+    "location": "Lietzenburger Str. 44, 10789 Berlin",
+    "url": "www.planergemeinschaft.de"
+  },
+  {
+    "name": "Ten Brinke.Berlin",
+    "location": "Lietzenburger Str. 46, 10789 Berlin",
+    "url": "tenbrinke-berlin.com"
+  },
+  {
+    "name": "Stauber Associates project-services GmbH",
+    "location": "Lietzenburger Str. 51, 10789 Berlin",
+    "url": "www.project-s.de"
+  },
+  {
+    "name": "BRH Generalplaner",
+    "location": "Lietzenburger Str. 51, 10789 Berlin",
+    "url": "www.brh-berlin.de"
+  },
+  {
+    "name": "Herbst Kunkler Architekten GmbH",
+    "location": "Lindenstr. 76, 10969 Berlin",
+    "url": "www.reimarherbstarchitekten.de"
+  },
+  {
+    "name": "SAUERZAPFE ARCHITEKTEN GmbH",
+    "location": "Lindenstr. 91, 10969 Berlin",
+    "url": "www.sauerzapfearchitekten.de"
+  },
+  {
+    "name": "Architekten Loewenberg und Rocneanu GbR ATHEOREM",
+    "location": "Linienstr. 121, 10115 Berlin",
+    "url": "www.atheorem.de"
+  },
+  {
+    "name": "Pott Architects GmbH",
+    "location": "Linienstr. 144, 10115 Berlin",
+    "url": "www.pottarchitects.com"
+  },
+  {
+    "name": "VOGT Landschaft GmbH",
+    "location": "Linienstr. 155, 10115 Berlin",
+    "url": "www.vogt-la.ch"
+  },
+  {
+    "name": "LANGHOF Planungsgesellschaft mbH",
+    "location": "Linienstr. 214, 10119 Berlin",
+    "url": "www.langhof.com"
+  },
+  {
+    "name": "KUULA Landschaftsarchitekten",
+    "location": "Linienstr. 52, 10119 Berlin",
+    "url": "www.kuula.de"
+  },
+  {
+    "name": "TSPA - Thomas Stellmach Planung & Architektur",
+    "location": "Lobechstr. 30, 10969 Berlin",
+    "url": "www.tspa.eu"
+  },
+  {
+    "name": "plattformberlin.",
+    "location": "Lobeckstr. 30, 10969 Berlin",
+    "url": "www.plattformberlin.com"
+  },
+  {
+    "name": "apool ARCHITEKTEN",
+    "location": "Lottumstr. 1, 10119 Berlin",
+    "url": "www.apool.eu"
+  },
+  {
+    "name": "Kusus + Kusus Architekten BDA",
+    "location": "Luisenstr. 31, 10117 Berlin",
+    "url": "www.kusus-architekten.de"
+  },
+  {
+    "name": "Nickel Architekten",
+    "location": "Lychener Str. 11, 10437 Berlin",
+    "url": "www.nickelarchitekten.de"
+  },
+  {
+    "name": "Atelier für Design und Architektur",
+    "location": "Lübecker Str. 14, 10559 Berlin",
+    "url": "www.adapt.com"
+  },
+  {
+    "name": "fl!nk architekten",
+    "location": "Lübecker Str. 46, 10559 Berlin",
+    "url": "www.flink-architekten.de"
+  },
+  {
+    "name": "MARS Architekten GbR",
+    "location": "Lüneburger Str. 6, 10557 Berlin",
+    "url": "www.mars-berlin.com"
+  },
+  {
+    "name": "Architekturbüro Creutzfeldt",
+    "location": "Lüneburger Str. 6, 10557 Berlin",
+    "url": "www.creutzfeldt.eu"
+  },
+  {
+    "name": "Schultes Frank Architekten",
+    "location": "Lützowplatz 7, 10785 Berlin",
+    "url": "www.schultesfrank.de"
+  },
+  {
+    "name": "BAL Bauplanungs- und Steuerungs GmbH",
+    "location": "Lützowplatz 7, 10785 Berlin",
+    "url": "www.bal-berlin.de"
+  },
+  {
+    "name": "PA GmbH Pätzold Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.pa-b.de"
+  },
+  {
+    "name": "Dörr Wimmer Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.dlw-architekten.de"
+  },
+  {
+    "name": "Joachim Kleine Allekotte Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.kleineallekotte-architekten.com"
+  },
+  {
+    "name": "LXSY - Le Roux Sichrovsky Architekten PartGmbB",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.lxsy.de"
+  },
+  {
+    "name": "D. Kloster - Architekten & Ingenieure GmbH",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.dkarchitekten.de"
+  },
+  {
+    "name": "Doppler Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.doppler-architekten.de"
+  },
+  {
+    "name": "Planungsgruppe Stadt + Dorf Prof. Dr. Rudolf Schäfer und Partner GbR",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.pgruppe.de"
+  },
+  {
+    "name": "StudioC",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.studioc.de"
+  },
+  {
+    "name": "Heydorn Eaton Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.heydorneaton.de"
+  },
+  {
+    "name": "Mussotter + Poeverlein Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.mparchitekten.com"
+  },
+  {
+    "name": "wla Wolfgang Latzel Architekten",
+    "location": "Lützowstr. 102, 10785 Berlin",
+    "url": "www.latzelarchitekten.de"
+  },
+  {
+    "name": "Hierholzer Architekten BDA",
+    "location": "Lützowstr. 88, 10785 Berlin",
+    "url": "www.hierholzer-architekten.de"
+  },
+  {
+    "name": "C4C Achatzi Dahms Schriner Partnerschaft von Architekten mbB",
+    "location": "Lützowstr. 93, 10785 Berlin",
+    "url": "www.c4c-berlin.de"
+  },
+  {
+    "name": "Hella Rolfes Architekten BDA",
+    "location": "Lützowstraße 102, 10785 Berlin",
+    "url": "www.rolfes-architekten.com"
+  },
+  {
+    "name": "Landschaftsarchitekturbüro Bacher",
+    "location": "Maaßenstr. 9, 10777 Berlin",
+    "url": "www.bacher-landschaftsarchitekt.de"
+  },
+  {
+    "name": "SR · Stadt- und Regionalplanung",
+    "location": "Maaßenstr. 9, 10777 Berlin",
+    "url": "www.sr-planung.de"
+  },
+  {
+    "name": "RUSTLER SCHRIEVER ARCHITEKTEN PartG mbB",
+    "location": "Maienstr. 4, 10787 Berlin",
+    "url": "www.rustlerschriever.com"
+  },
+  {
+    "name": "Büro Blau - räume. bildung. dialoge",
+    "location": "Mansfelder Str. 48, 10709 Berlin",
+    "url": "www.bueroblau.de"
+  },
+  {
+    "name": "silke sschlömer architekt",
+    "location": "Manteuffelstr. 102, 10997 Berlin",
+    "url": "www.schloemerarchitekt.de"
+  },
+  {
+    "name": "STUDIO VOS",
+    "location": "Manteuffelstr. 77, 10999 Berlin",
+    "url": "www.studio-vos.com"
+  },
+  {
+    "name": "TRIAD Berlin Projektgesellschaft mbH",
+    "location": "Marburger Str. 3, 10789 Berlin",
+    "url": "www.triad.de"
+  },
+  {
+    "name": "jesterressel",
+    "location": "Marchlewskistr. 34, 10243 Berlin",
+    "url": "www.jesterressel.de"
+  },
+  {
+    "name": "DMSW Architekten",
+    "location": "Mariannenplatz 23, 10997 Berlin",
+    "url": "www.dmsw.de"
+  },
+  {
+    "name": "Büro Kiefer",
+    "location": "Mariannenplatz 23, 10997 Berlin",
+    "url": "www.buero-kiefer.de"
+  },
+  {
+    "name": "mrp Projektsteuerung",
+    "location": "Mariannenplatz 23, 10997 Berlin",
+    "url": "www.mrp-berlin.de"
+  },
+  {
+    "name": "capatti staubach Urbane Landschaften",
+    "location": "Mariannenplatz 23, 10997 Berlin",
+    "url": "www.capattistaubach.de"
+  },
+  {
+    "name": "Visionkay Kayat + Kayat UG",
+    "location": "Marienstr. 10, 10117 Berlin",
+    "url": "www.nadiakayatarchitects.com"
+  },
+  {
+    "name": "Georg • Scheel • Wetzel Architekten GmbH",
+    "location": "Marienstr. 10, 10117 Berlin",
+    "url": "www.georgscheelwetzel.com"
+  },
+  {
+    "name": "Winterer + Mohr Architektinnen GmbH",
+    "location": "Marienstr. 19, 10117 Berlin",
+    "url": "www.winterer-mohr.eu"
+  },
+  {
+    "name": "Architekturbüro Kay Wieland",
+    "location": "Markgraf-Albrecht-Str. 1, 10711 Berlin",
+    "url": "www.abkw.de"
+  },
+  {
+    "name": "Rainer Seiferth Architekt",
+    "location": "Markgrafendamm 35, 10245 Berlin",
+    "url": "www.rainerseiferth.com"
+  },
+  {
+    "name": "de+ architekten gmbh",
+    "location": "Markgrafenstr. 86, 10969 Berlin",
+    "url": "www.dilling-euler.de"
+  },
+  {
+    "name": "bfstudio Partnerschaft von Architekten mbB",
+    "location": "Markgrafenstr. 88, 10969 Berlin",
+    "url": "www.bfstudio-architekten.de"
+  },
+  {
+    "name": "STP Architekten",
+    "location": "Markgrafenstr. 88, 10969 Berlin",
+    "url": "www.stp-architekten.de"
+  },
+  {
+    "name": "Senatsverwaltung für Wirtschaft",
+    "location": "Martin-Luther-Str. 105, 10825 Berlin",
+    "url": "www.berlin.de"
+  },
+  {
+    "name": "Florentine Raspé Ingenieure & Architekten",
+    "location": "Martin-Luther-Str. 11, 10777 Berlin",
+    "url": "www.florentine-raspe.de"
+  },
+  {
+    "name": "Petra und Paul Kahlfeldt Architekten PartG mbB",
+    "location": "Martin-Luther-Straße 46, 10779 Berlin",
+    "url": "www.kahlfeldt-architekten.de"
+  },
+  {
+    "name": "AndreasThiele.Architekten",
+    "location": "Max-Beer-Str. 17, 10119 Berlin",
+    "url": "www.thiele-architekten.de"
+  },
+  {
+    "name": "Architekturbüro Jürgens",
+    "location": "Mehringdamm 101, 10965 Berlin",
+    "url": "www.juergens-architekten.de"
+  },
+  {
+    "name": "6MW Planungsbüro für Raum und Energie",
+    "location": "Mehringdamm 119, 10965 Berlin",
+    "url": "www.6mw.de"
+  },
+  {
+    "name": "Bollinger + Fehlig Architekten GmbH",
+    "location": "Mehringdamm 33, 10961 Berlin",
+    "url": "www.bollinger-fehlig.de"
+  },
+  {
+    "name": "Claudius Markworth Architektur",
+    "location": "Mehringdamm 89, 10965 Berlin",
+    "url": "www.c-markworth.com"
+  },
+  {
+    "name": "MK Götz M. Keller Gesellschaft von Architekten mbH",
+    "location": "Meierottostr. 1, 10719 Berlin",
+    "url": "www.mk-architekten.com"
+  },
+  {
+    "name": "HORTEC Garten- und Landschaftsplanung",
+    "location": "Meierottostr. 7, 10719 Berlin",
+    "url": "www.hortec-berlin.de"
+  },
+  {
+    "name": "Bode • Williams + Partner",
+    "location": "Meraner Str. 42, 10825 Berlin",
+    "url": "www.bwp-landschaftsarchitektur.de"
+  },
+  {
+    "name": "sieglundalbert Gesellschaft von Architekten mbH",
+    "location": "Methfesselstr. 9, 10965 Berlin",
+    "url": "www.sieglundalbert.de"
+  },
+  {
+    "name": "Ziegler Kilian Architekten",
+    "location": "Metzer Str. 11, 10405 Berlin",
+    "url": "www.ziegler-kilian-architekten.de"
+  },
+  {
+    "name": "RAUMPLUSKLANG ARCHITEKTUR",
+    "location": "Metzer Str. 16, 10405 Berlin",
+    "url": "www.raumplusklang.com"
+  },
+  {
+    "name": "PERSCH Bauplanung",
+    "location": "Michaelkirchplatz 24, 10179 Berlin",
+    "url": "www.persch-bauplanung.de"
+  },
+  {
+    "name": "BCO Architekten Busch-Wameling, Gotaut, Schleipen & Wameling Partnerschaft mbB",
+    "location": "Mittenwalder Str. 11, 10961 Berlin",
+    "url": "www.bco-architekten.com"
+  },
+  {
+    "name": "Joachim Hesse + Partner GmbH",
+    "location": "Mittenwalder Str. 46, 10961 Berlin",
+    "url": "www.hesse-partner.de"
+  },
+  {
+    "name": "Hoyer Architekten Berlin BDA",
+    "location": "Molkenmarkt 2, 10179 Berlin",
+    "url": "www.hab-architektur.de"
+  },
+  {
+    "name": "De Giovannini Architekten GmbH",
+    "location": "Mollstr. 3, 10178 Berlin",
+    "url": "www.degiovannini.ch"
+  },
+  {
+    "name": "Architekt Markus Funke",
+    "location": "Mommsenstr. 32, 10629 Berlin",
+    "url": "www.mfa-architekten.de"
+  },
+  {
+    "name": "Sting Architekten",
+    "location": "Mommsenstr. 5, 10629 Berlin",
+    "url": "www.sting-architekten.de"
+  },
+  {
+    "name": "Christoph Kohl Architekten GmbH",
+    "location": "Mommsenstr. 5, 10629 Berlin",
+    "url": "christophkohl.com"
+  },
+  {
+    "name": "Sting Architekten GmbH",
+    "location": "Mommsenstr. 5, 10629 Berlin",
+    "url": "www.stingarchitekten.de"
+  },
+  {
+    "name": "Reinhard Geiger Architekten",
+    "location": "Mommsenstr. 51, 10629 Berlin",
+    "url": "www.rgeiger-architekten.de"
+  },
+  {
+    "name": "de vos architekten",
+    "location": "Mommsenstr. 57, 10629 Berlin",
+    "url": "www.devos-architekten.de"
+  },
+  {
+    "name": "Baumeister und Dietzsch Architekten",
+    "location": "Mommsenstr. 70, 10629 Berlin",
+    "url": "www.baumeister-dietzsch.de"
+  },
+  {
+    "name": "GROBE GmbH",
+    "location": "Monbijouplatz 8, 10178 Berlin",
+    "url": "www.grobe-architekten.de"
+  },
+  {
+    "name": "akai . Büro für Architektur + Gestaltung",
+    "location": "Monumentenstr. 13, 10829 Berlin",
+    "url": "www.akai-berlin.de"
+  },
+  {
+    "name": "Stefan Bernard Landschaftsarchitekten",
+    "location": "Monumentenstr. 33, 10829 Berlin",
+    "url": "www.stefanbernard.de"
+  },
+  {
+    "name": "Sackmann Payer Architects",
+    "location": "Monumentenstr. 33, 10829 Berlin",
+    "url": "www.sackmannpayer.com"
+  },
+  {
+    "name": "relais Landschaftsarchitekten Heck Mommsen PartGmbB",
+    "location": "Monumentenstr. 33, 10829 Berlin",
+    "url": "www.relaisla.de"
+  },
+  {
+    "name": "plateau landschaftsarchitekten böringer diehl gleue hilt schäfer Partnerschaft mbB",
+    "location": "Monumentenstr. 33, 10829 Berlin",
+    "url": "www.plateau-la.de"
+  },
+  {
+    "name": "hb°architektur",
+    "location": "Moritzstr. 6, 10969 Berlin",
+    "url": "www.hbarchitektur.de"
+  },
+  {
+    "name": "Architekturbüro Dr. Mertens Architekt BDA",
+    "location": "Märkisches Ufer 34, 10179 Berlin",
+    "url": "www.mertarch.de"
+  },
+  {
+    "name": "Architekturbüro Dr. Mertens, Architekt BDA",
+    "location": "Märkisches Ufer 34, 10179 Berlin",
+    "url": null
+  },
+  {
+    "name": "PLAANPOOL Architekten Tangerding Kurth PartGmbB",
+    "location": "Märkisches Ufer 34, 10179 Berlin",
+    "url": "www.plaanpool.de"
+  },
+  {
+    "name": "Architekturbüro Dr. Mertens",
+    "location": "Märkisches Ufer 34, 10179 Berlin",
+    "url": "www.martarch.de"
+  },
+  {
+    "name": "ROZYNSKI STURM Architekten",
+    "location": "Möckernstr. 111, 10963 Berlin",
+    "url": "www.r-s-architekten.com"
+  },
+  {
+    "name": "insar | schwartze, wesseling und partner",
+    "location": "Möckernstr. 111, 10963 Berlin",
+    "url": "www.insar.de"
+  },
+  {
+    "name": "hutterreimann Landschaftsarchitektur GmbH",
+    "location": "Möckernstr. 68, 10965 Berlin",
+    "url": "www.hr-c.net"
+  },
+  {
+    "name": "FABRIK°B Architekten",
+    "location": "Möckernstr. 68, 10965 Berlin",
+    "url": "www.fabrikb.com"
+  },
+  {
+    "name": "Hutchinson & Partners",
+    "location": "Möckernstr. 68, 10965 Berlin",
+    "url": "www.hutchinsonsandpartners.com"
+  },
+  {
+    "name": "dichter Architekturgesellschaft mbH",
+    "location": "Möckernstraße 68, 10965 Berlin",
+    "url": "www.raoulkunz.com"
+  },
+  {
+    "name": "DAHM Architekten + Ingenieure",
+    "location": "Mühlenstr. 34, 10243 Berlin",
+    "url": "www.dahm-ai.de"
+  },
+  {
+    "name": "M+K Architekten",
+    "location": "Münzstr. 15, 10178 Berlin",
+    "url": "www.mkp-architekten.de"
+  },
+  {
+    "name": "Gil und Weingärtner GmbH",
+    "location": "Münzstr. 22, 10178 Berlin",
+    "url": "www.gil-weingaertner.com"
+  },
+  {
+    "name": "stingvanbeeck architekten PartG mbB",
+    "location": "Nassauische Str. 21, 10717 Berlin",
+    "url": "www.stingvanbeeck.de"
+  },
+  {
+    "name": "KEBE + SCHOBERTH Dipl.-Ing. Architekten TU-SIA",
+    "location": "Nestorstr. 36, 10709 Berlin",
+    "url": "www.kebe-schoberth.de"
+  },
+  {
+    "name": "Architekturbüro  André Janka",
+    "location": "Neue Blumenstr. 24, 10179 Berlin",
+    "url": "www.janka-architekten.de"
+  },
+  {
+    "name": "POLA Landschaftsarchitekten GmbH",
+    "location": "Neue Schönhause Str. 16, 10178 Berlin",
+    "url": "www.pola-berlin.de"
+  },
+  {
+    "name": "Davide Rizzo GmbH",
+    "location": "Neue Schönhauser Str. 2, 10178 Berlin",
+    "url": "www.daviderizzo.de"
+  },
+  {
+    "name": "RHWL Architects",
+    "location": "Neue Schönhauser Str. 9, 10178 Berlin",
+    "url": "www.rhwl.com"
+  },
+  {
+    "name": "JWA | JAN WIESE ARCHITEKTEN",
+    "location": "Neuenburger Str. 13, 10969 Berlin",
+    "url": "www.janwiesearchitekten.de"
+  },
+  {
+    "name": "LA.BAR Landschaftsarchitekten bdla",
+    "location": "Neuenburger Str. 23, 10969 Berlin",
+    "url": "www.la-bar.de"
+  },
+  {
+    "name": "Külby + Külby",
+    "location": "Neuenburgerstr. 19, 10969 Berlin",
+    "url": "www.kuelby.de"
+  },
+  {
+    "name": "Quick Bäckmann Quick - Architekten BDA",
+    "location": "Niebuhrstr. 10, 10629 Berlin",
+    "url": "www.qbq-architekten.de"
+  },
+  {
+    "name": "Hemprich Tophof Architekten",
+    "location": "Niebuhrstr. 2, 10629 Berlin",
+    "url": "www.hemprichtophof.de"
+  },
+  {
+    "name": "dekokarchitekten",
+    "location": "Niebuhrstr. 75, 10629 Berlin",
+    "url": "www.dekok.de"
+  },
+  {
+    "name": "MUH Berlin",
+    "location": "Niederbarnimstr. 10, 10247 Berlin",
+    "url": "www.muhberlin.de"
+  },
+  {
+    "name": "Röske Architektur",
+    "location": "Nollendorfplatz 8, 10777 Berlin",
+    "url": "www.roeske-architekten.de"
+  },
+  {
+    "name": "enertektum",
+    "location": "Nostitzstr. 15, 10961 Berlin",
+    "url": "www.enertektum.de"
+  },
+  {
+    "name": "ARK Architekten Rettinger+ Kutzborski",
+    "location": "Nostitzstr. 30, 10965 Berlin",
+    "url": "www.ark-berlin.de"
+  },
+  {
+    "name": "roedig.schop architekten",
+    "location": "Obentrautstr. 72, 10963 Berlin",
+    "url": "www.roedig-schop.de"
+  },
+  {
+    "name": "ioo Elwardt & Lattermann Gesellschaft von Architekten mbH",
+    "location": "Obentrautstr. 72, 10963 Berlin",
+    "url": "www.ioobln.de"
+  },
+  {
+    "name": "stoeckert architekten",
+    "location": "Obentrautstr. 72, 10963 Berlin",
+    "url": "www.christianstoeckert.de"
+  },
+  {
+    "name": "Plan und Recht GmbH",
+    "location": "Oderberger Str. 40, 10435 Berlin",
+    "url": "www.planundrecht.de"
+  },
+  {
+    "name": "Ebers-Architekten",
+    "location": "Oderberger Str. 56, 10435 Berlin",
+    "url": "www.ebers-architekten.de"
+  },
+  {
+    "name": "mintus:heyn | living spaces",
+    "location": "Odinstr. 21, 10318 Berlin",
+    "url": "www.mintusheyn.com"
+  },
+  {
+    "name": "phase 5 berlin GmbH",
+    "location": "Ohlauer Str. 43, 10999 Berlin",
+    "url": "www.phase5berlin.com"
+  },
+  {
+    "name": "Phase 5 GmbH",
+    "location": "Ohlauer Str. 43, 10999 Berlin",
+    "url": "www.phase5.com"
+  },
+  {
+    "name": "FRANK WITTMER ARCHITEKT",
+    "location": "Olivaer Platz 15, 10707 Berlin",
+    "url": "www.wittmer-architekten.de"
+  },
+  {
+    "name": "THOMAS BEYER ARCHITEKTEN",
+    "location": "Oranienburger Str. 16, 10178 Berlin",
+    "url": "beyerarchitekten.de"
+  },
+  {
+    "name": "HKA Hastrich Keuthage Architekten",
+    "location": "Oranienburger Str. 17, 10178 Berlin",
+    "url": "www.hka-architekten.de"
+  },
+  {
+    "name": "cpm architekten GmbH",
+    "location": "Oranienburger Str. 27, 10117 Berlin",
+    "url": "www.cpm-architekten.de"
+  },
+  {
+    "name": "Gränitz GmbH",
+    "location": "Oranienplatz 1, 10999 Berlin",
+    "url": "www.graenitz-architektur.de"
+  },
+  {
+    "name": "MAX DUDLER Architekt",
+    "location": "Oranienplatz 4, 10999 Berlin",
+    "url": "www.maxdudler.com"
+  },
+  {
+    "name": "Eckert Negwer Suselbeek ENS Architekten BDA",
+    "location": "Oranienplatz 4, 10999 Berlin",
+    "url": "www.eckertnegwersuselbeek.de"
+  },
+  {
+    "name": "Max Dudler",
+    "location": "Oranienplatz 4, 10999 Berlin",
+    "url": "www.maxdudler.de"
+  },
+  {
+    "name": "Zierhut Architekten Architektur + Denkmalpflege",
+    "location": "Oranienstr. 164, 10969 Berlin",
+    "url": "www.zierhut-architekten.de"
+  },
+  {
+    "name": "Krüger Brand Architekten",
+    "location": "Oranienstr. 183, 10999 Berlin",
+    "url": "www.kruegerbrand-architekten.com"
+  },
+  {
+    "name": "SEBASTIAN TREESE Architekten Partnerschaft mbB",
+    "location": "Oranienstr. 183, 10999 Berlin",
+    "url": "www.sebastiantreese.de"
+  },
+  {
+    "name": "Reiter Architekten PartGmbB",
+    "location": "Oranienstr. 183, 10999 Berlin",
+    "url": "www.reiterarchitekten.de"
+  },
+  {
+    "name": "urban essences rolf j. teloh",
+    "location": "Oranienstr. 22, 10999 Berlin",
+    "url": "www.urban-essences.com"
+  },
+  {
+    "name": "CORNELIA ERNST ARCHITEKTEN",
+    "location": "Oranienstr. 24, 10999 Berlin",
+    "url": "www.ernst-architekten.com"
+  },
+  {
+    "name": "kleyer.koblitz.letzel.freivogel gesellschaft von architekten mbh",
+    "location": "Oranienstr. 25, 10999 Berlin",
+    "url": "www.kklf.de"
+  },
+  {
+    "name": "Blanc • Scheidel und Kollegen Garten- & Landschaftsarchitekten",
+    "location": "Oranienstr. 37, 10999 Berlin",
+    "url": "www.kollegen-berlin.de"
+  },
+  {
+    "name": "Stilkonzil - Jan Rützel",
+    "location": "Palais am Festungsgraben 1, 10117 Berlin",
+    "url": "www.stilkonzil.de"
+  },
+  {
+    "name": "Helm Westhaus Architekten PartGmbB",
+    "location": "Palais am Festungsgraben 1, 10117 Berlin",
+    "url": "www.helmwesthaus.de"
+  },
+  {
+    "name": "Eller + Eller Architekten GmbH",
+    "location": "Panoramastr. 1, 10178 Berlin",
+    "url": "www.eller-eller.de"
+  },
+  {
+    "name": "Eller + Eller Architekten",
+    "location": "Panoramastr. 1, 10178 Berlin",
+    "url": "www.eller-eller.eu"
+  },
+  {
+    "name": "Studio B - Bernhard Klein",
+    "location": "Pappelallee 18, 10437 Berlin",
+    "url": "www.scivari.com"
+  },
+  {
+    "name": "kaiserarchitektur",
+    "location": "Pappelallee 24, 10437 Berlin",
+    "url": "www.kaiserarchitektur.de"
+  },
+  {
+    "name": "Löser Lott Architekten GmbH",
+    "location": "Pappelallee 6, 10437 Berlin",
+    "url": "www.loeserlott.de"
+  },
+  {
+    "name": "hastenteufelarchitektenbda",
+    "location": "Pappelallee 78, 10437 Berlin",
+    "url": "www.hastenteufel.de"
+  },
+  {
+    "name": "Eckert + Honegger Architekten mbH",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.eckert-honegger.de"
+  },
+  {
+    "name": "KIM NALLEWEG Architekten",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.kimnalleweg.de"
+  },
+  {
+    "name": "TECTUR PartG mbB",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.tectur.de"
+  },
+  {
+    "name": "Büro Kaminski",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.buero-kaminski.de"
+  },
+  {
+    "name": "Maas Architektur",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.maas-architektur.de"
+  },
+  {
+    "name": "Rave Architekten",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.rave-architekten.de"
+  },
+  {
+    "name": "vn-a visual network art architecture",
+    "location": "Pariser Str. 44, 10707 Berlin",
+    "url": "www.vn-a.de"
+  },
+  {
+    "name": "HAAS | Architekten BDA",
+    "location": "Pariser Str. 6, 10719 Berlin",
+    "url": "www.haas-architekten.de"
+  },
+  {
+    "name": "HOIDN WANG PARTNER Prof. Barbara Hoidn und Prof. Dr. h.c. Wilfried Wang",
+    "location": "Pariser Str. 6, 10719 Berlin",
+    "url": "www.hoidnwang.de"
+  },
+  {
+    "name": "Pinardi Architekten",
+    "location": "Pariser Str. 63, 10719 Berlin",
+    "url": "www.pinardi-architekten.de"
+  },
+  {
+    "name": "Kim Nalleg Architekten",
+    "location": "Pariser Straße 44, 10707 Berlin",
+    "url": "www.kimnalleweg.com"
+  },
+  {
+    "name": "einsarchitektur",
+    "location": "Pasteurstr. 23, 10407 Berlin",
+    "url": "www.einsarchitektur.de"
+  },
+  {
+    "name": "b1323",
+    "location": "Paul-Lincke-Ufer 1, 10999 Berlin",
+    "url": "www.1323.biz"
+  },
+  {
+    "name": "büroberlin Ruth Schroers + Julia Neubauer",
+    "location": "Paul-Lincke-Ufer 30, 10999 Berlin",
+    "url": "www.bueroberlin.net"
+  },
+  {
+    "name": "as-if architekten PartGmbB",
+    "location": "Paul-Lincke-Ufer 30, 10999 Berlin",
+    "url": "www.as-if.info"
+  },
+  {
+    "name": "REALARCHITEKTUR GmbH",
+    "location": "Paul-Lincke-Ufer 41, 10999 Berlin",
+    "url": "www.realarchitektur.de"
+  },
+  {
+    "name": "Reinhard Architekten",
+    "location": "Paul-Lincke-Ufer 44, 10999 Berlin",
+    "url": "www.reinhard-architekten.de"
+  },
+  {
+    "name": "Boss & Frey Architekten",
+    "location": "Paul-Lincke-Ufer 8, 10999 Berlin",
+    "url": "www.boss-frey.de"
+  },
+  {
+    "name": "Art3 Projektentwicklng GmbH",
+    "location": "Paulstr. 11, 10557 Berlin",
+    "url": "www.artdrei.de"
+  },
+  {
+    "name": "TINNAPPELMETZ",
+    "location": "Pestalozzistr. 23, 10625 Berlin",
+    "url": "www.tinnappelmetz.com"
+  },
+  {
+    "name": "Mihlan TGA Baumanagement",
+    "location": "Pestalozzistr. 29, 10625 Berlin",
+    "url": "www.tga-bau.de"
+  },
+  {
+    "name": "Obermeyer Planen + Beraten GmbH",
+    "location": "Pettenkofer Str. 4, 10247 Berlin",
+    "url": "www.opb.de"
+  },
+  {
+    "name": "Mobilität & Verkehr - Strategie & Planung c/o Bürozentrum Friedrichshain",
+    "location": "Pettenkoferstraße 16, 10247 Berlin",
+    "url": "www.burkhardhorn.de"
+  },
+  {
+    "name": "Wiegand/Hoffmann Gesellschaft von Architekten mbH",
+    "location": "Pfalzburger Str. 12, 10719 Berlin",
+    "url": "www.wiegandhoffmann.de"
+  },
+  {
+    "name": "Patzschke Schwebel Planungsgesellschaft mbH",
+    "location": "Pfalzburger Str. 42, 10717 Berlin",
+    "url": "www.patzschke-schwebel.de"
+  },
+  {
+    "name": "Büro Horn Architekt",
+    "location": "Pfalzburger Str. 43, 10717 Berlin",
+    "url": "www.buero-horn-berlin.de"
+  },
+  {
+    "name": "SABINE KASSNER ARCHITEKTIN",
+    "location": "Pfalzburger Str. 53, 10717 Berlin",
+    "url": "www.sabinekassner-architektur.de"
+  },
+  {
+    "name": "annahopp architekten",
+    "location": "Pfalzburger Str. 61, 10719 Berlin",
+    "url": "www.annahopp.com"
+  },
+  {
+    "name": "joachim hopp | pool achitekt",
+    "location": "Pfalzburger Str. 61, 10719 Berlin",
+    "url": "www.poolarchitekt.de"
+  },
+  {
+    "name": "wiewiorra hopp schwark architekten",
+    "location": "Pfalzburger Str. 61, 10719 Berlin",
+    "url": "www.whs-architekten.de"
+  },
+  {
+    "name": "léonwohlhage Gesellschaft von Architekten mbH",
+    "location": "Pfalzburger Str. 74, 10719 Berlin",
+    "url": "www.leonwohlhage.de"
+  },
+  {
+    "name": "CORDES-SCHMID Planquadrat | Büro für Landschaftsarchitektur",
+    "location": "Pfarrstr. 135, 10317 Berlin",
+    "url": "www.cordes-schmid-landschaftsarchitektur.de"
+  },
+  {
+    "name": "ARCHITEKTURBÜRO LS",
+    "location": "Pfuelstraße 5, 10997 Berlin",
+    "url": "www.ls-architekt.de"
+  },
+  {
+    "name": "BAEK Architekten",
+    "location": "Planckstr. 20, 10117 Berlin",
+    "url": "www.baek-architekten.com"
+  },
+  {
+    "name": "PEANUTZ Architekten",
+    "location": "Platz der Vereinten Nationen 25, 10249 Berlin",
+    "url": "www.peanutz-architekten.de"
+  },
+  {
+    "name": "c. fischer Innenarchitekten",
+    "location": "Pohlstr. 1, 10785 Berlin",
+    "url": "www.fischerinnen.de"
+  },
+  {
+    "name": "Wild - Atelier für Architektur, Bühne und Design",
+    "location": "Pohlstr. 26, 10785 Berlin",
+    "url": "www.andreawild.com"
+  },
+  {
+    "name": "planland Planungsgruppe Landschaftsentwicklung",
+    "location": "Pohlstr. 58, 10785 Berlin",
+    "url": "www.planland.de"
+  },
+  {
+    "name": "Atelier Aescht",
+    "location": "Pohlstr. 64, 10785 Berlin",
+    "url": "www.atelieraescht.com"
+  },
+  {
+    "name": "Reinhard Groszmann Architekten Berlin ökologische architektur",
+    "location": "Pohlstr. 64, 10785 Berlin",
+    "url": "www.oekologischbauen-rga.de"
+  },
+  {
+    "name": "Architekturbüro Schneidewind",
+    "location": "Pommersche Str. 12, 10707 Berlin",
+    "url": "www.architekturbuero-schneidewind.de"
+  },
+  {
+    "name": "Dürr Gesellschaft von Architekten für Planung, Projekt- und Kostenmanagement mbH",
+    "location": "Poststr. 12, 10178 Berlin",
+    "url": "www.duerr-architekten.de"
+  },
+  {
+    "name": "Cushman & Wakefield LLP",
+    "location": "Potsdamer Platz 5, 10785 Berlin",
+    "url": "www.cushmanwakefield.de"
+  },
+  {
+    "name": "kkd architekten",
+    "location": "Potsdamer Str. 100, 10785 Berlin",
+    "url": "www.kkd-architekten.de"
+  },
+  {
+    "name": "archimation",
+    "location": "Potsdamer Str. 102, 10785 Berlin",
+    "url": "www.archimation.com"
+  },
+  {
+    "name": "TREILING architekten",
+    "location": "Potsdamer Str. 105, 10785 Berlin",
+    "url": "treiling.com"
+  },
+  {
+    "name": "KSB Architekten + Ingenieure Kummer Sannig Bausch",
+    "location": "Potsdamer Str. 162, 10783 Berlin",
+    "url": "www.kummer-sannig-bausch.de"
+  },
+  {
+    "name": "degewo AG",
+    "location": "Potsdamer Str. 60, 10785 Berlin",
+    "url": "www.degewo.de"
+  },
+  {
+    "name": "GKK+ARCHITEKTEN Gesellschaft von Architekten mbH",
+    "location": "Potsdamer Str. 92, 10785 Berlin",
+    "url": "www.gkk-architekten.de"
+  },
+  {
+    "name": "Heneghan Peng Architects",
+    "location": "Potsdamer Str. 98, 10785 Berlin",
+    "url": "www.hparc.com"
+  },
+  {
+    "name": "bgmr Landschaftsarchitekten",
+    "location": "Prager Platz 6, 10779 Berlin",
+    "url": "www.bgmr.de"
+  },
+  {
+    "name": "Büro für Raumgestaltung",
+    "location": "Prenzlauer Allee 181, 10405 Berlin",
+    "url": "www.florencegirod.com"
+  },
+  {
+    "name": "STATTARCHITEKT",
+    "location": "Prenzlauer Allee 209, 10405 Berlin",
+    "url": "www.stattarchitekt.de"
+  },
+  {
+    "name": "Gorenflos Architekten - Gesellschaft  von Architekten mbH",
+    "location": "Prenzlauer Allee 237, 10405 Berlin",
+    "url": "www.gorenflos-architekten.de"
+  },
+  {
+    "name": "NÄGELIARCHITEKTEN Gudrun Sack - Walter Nägeli",
+    "location": "Prenzlauer Allee 7, 10405 Berlin",
+    "url": "www.naegeliarchitekten.de"
+  },
+  {
+    "name": "Architektur / Kommunikation im Raum",
+    "location": "Prinzenstr. 84, 10969 Berlin",
+    "url": "www.m2sb.de"
+  },
+  {
+    "name": "KNOWSPACE architecture + cities",
+    "location": "Prinzenstr. 85, 10969 Berlin",
+    "url": "www.knowspace.eu"
+  },
+  {
+    "name": "Allenkaufmann Studio",
+    "location": "Prinzenstr. 85, 10969 Berlin",
+    "url": "www.allenkaufmann.de"
+  },
+  {
+    "name": "Beusterien . Architekturbüro B.AB",
+    "location": "Prinzessinnenstr. 1, 10969 Berlin",
+    "url": "www.b-ab.de"
+  },
+  {
+    "name": "Transstruktura - Architektur, Stadt, Objekt",
+    "location": "Prinzessinnenstr. 1, 10969 Berlin",
+    "url": "www.transstruktura.com"
+  },
+  {
+    "name": "Atelier Borgelt + Jost Architektur und Stadtplanung",
+    "location": "Prinzessinnenstr. 1, 10969 Berlin",
+    "url": "www.atelier-borgelt-jost.de"
+  },
+  {
+    "name": "deluse architects",
+    "location": "Prinzessinnenstr. 30, 10969 Berlin",
+    "url": "www.delusearchitects.com"
+  },
+  {
+    "name": "baukind UG (haftungsbeschränkt)",
+    "location": "Prinzessinnenstr. 30, 10969 Berlin",
+    "url": "www.baukind.de"
+  },
+  {
+    "name": "Perspektive Gesellschaft für Bauberatung und Betreuung mbH",
+    "location": "Pufendorfstr. 11, 10249 Berlin",
+    "url": "www.perspektive-bauberatung.de"
+  },
+  {
+    "name": "K1 Landschaftsarchitekten Kuhn Klapka GmbH",
+    "location": "Raabestr. 2, 10405 Berlin",
+    "url": "www.k1-berlin.de"
+  },
+  {
+    "name": "BPR Dr. Schäpertöns Consult GmbH & Co. KG",
+    "location": "Rankestr. 5, 10789 Berlin",
+    "url": "www.bpr-consult.com"
+  },
+  {
+    "name": "A53 Gesellschaft von Architekten mbH",
+    "location": "Raumerstr. 26, 10437 Berlin",
+    "url": "www.a53-architekten.de"
+  },
+  {
+    "name": "CSA architekten",
+    "location": "Raumerstr. 7, 10437 Berlin",
+    "url": "www.a-csa.de"
+  },
+  {
+    "name": "aim architektur management Busse  Architekten Ingenieure",
+    "location": "Regensburger Str. 25, 10777 Berlin",
+    "url": "www.aim-architekten.de"
+  },
+  {
+    "name": "GIESE Consult GmbH",
+    "location": "Regensburger Str. 28, 10777 Berlin",
+    "url": "www.giese-projekt.de"
+  },
+  {
+    "name": "Grubert Verhülsdonk Architekten PartG mbB",
+    "location": "Reichenberger Str. 113, 10999 Berlin",
+    "url": "www.grubertverhuelsdonk.de"
+  },
+  {
+    "name": "ff Architekten Feldhusen und Fleckenstein",
+    "location": "Reichenberger Str. 113, 10999 Berlin",
+    "url": "www.ff-architekten.de"
+  },
+  {
+    "name": "Quergebäude Etage 3",
+    "location": "Reichenberger Str. 113, 10999 Berlin",
+    "url": "www.s-pretsch.de"
+  },
+  {
+    "name": "WES LandschaftsArchitektur",
+    "location": "Reichenberger Str. 124, 10999 Berlin",
+    "url": "www.wes-la.de"
+  },
+  {
+    "name": "Partner und Partner Architekten",
+    "location": "Reichenberger Str. 124, 10999 Berlin",
+    "url": "www.partnerundpartner.com"
+  },
+  {
+    "name": "nonconform ideenwerkstatt GmbH",
+    "location": "Reichenberger Str. 124, 10999 Berlin",
+    "url": "www.nonconform.at"
+  },
+  {
+    "name": "ROMED ARCHITEKTEN",
+    "location": "Reichenberger Str. 47, 10999 Berlin",
+    "url": "www.romed.de"
+  },
+  {
+    "name": "Gestaltungsatelier Kirchner",
+    "location": "Reinhardtstr. 10, 10117 Berlin",
+    "url": "www.architekt-kirchner.de"
+  },
+  {
+    "name": "Busse & Partner Projektsteuerer, Architekten Ingenieure GmbH",
+    "location": "Reinhardtstr. 17, 10117 Berlin",
+    "url": "www.busse-partner.de"
+  },
+  {
+    "name": "PKS Kommunikations- und Strategieberatung GmbH",
+    "location": "Reinhardtstr. 34, 10117 Berlin",
+    "url": "www.pks-gmbh.net"
+  },
+  {
+    "name": "matzke I architekten",
+    "location": "Reinhardtstr. 37, 10117 Berlin",
+    "url": "www.matzkearchitekten.de"
+  },
+  {
+    "name": "raumbewegung",
+    "location": "Revaler Str. 25, 10245 Berlin",
+    "url": "www.raumbewegung.de"
+  },
+  {
+    "name": "Büro Claus H. Bellmer",
+    "location": "Revaler Str. 99, 10245 Berlin",
+    "url": "clausbellmer.wordpress.com"
+  },
+  {
+    "name": "SL/A Stefan Lippert / Architekt",
+    "location": "Rheinsberger Str. 37, 10435 Berlin",
+    "url": "www.stefanlippert.com"
+  },
+  {
+    "name": "barbara willecke planung · freiraum",
+    "location": "Richard-Sorge-Str. 73, 10249 Berlin",
+    "url": "www.planungfreiraum.de"
+  },
+  {
+    "name": "Architektur-und Bauplanungsbüro",
+    "location": "Richard-Sorge-Str. 79, 10249 Berlin",
+    "url": "www.architektin-otto.de"
+  },
+  {
+    "name": "stk stratmann + krebs",
+    "location": "Ringbahnstr. 12, 10711 Berlin",
+    "url": "www.stk-berlin.de"
+  },
+  {
+    "name": "Richter Musikowski GmbH",
+    "location": "Ritterstr. 2, 10969 Berlin",
+    "url": "www.rihtermusikowski.com"
+  },
+  {
+    "name": "Nailis Architekten",
+    "location": "Ritterstr. 8, 10969 Berlin",
+    "url": "www.nailis-architekten.de"
+  },
+  {
+    "name": "RAUmKONZEPTE",
+    "location": "Ritterstr. 8, 10969 Berlin",
+    "url": "www.rau-m-konzepte.de"
+  },
+  {
+    "name": "Augustus Management & Architecture GmbH",
+    "location": "Rosa-Luxemburg-Str. 14, 10178 Berlin",
+    "url": "www.augustus.berlin"
+  },
+  {
+    "name": "TRUTZ VON STUCKRAD PENNER GbR",
+    "location": "Rosa-Luxemburg-Str. 37, 10178 Berlin",
+    "url": "www.trutzvonstuckradpenner.de"
+  },
+  {
+    "name": "Bundschuh Architekten",
+    "location": "Rosa-Luxemburg-Str. 45, 10178 Berlin",
+    "url": "www.bundschuh.net"
+  },
+  {
+    "name": "Tchoban Voss Architekten GmbH",
+    "location": "Rosenthaler Str. 40, 10178 Berlin",
+    "url": "www.tchobanvoss.de"
+  },
+  {
+    "name": "Diener & Diener Architekten",
+    "location": "Rosenthaler Str. 40, 10178 Berlin",
+    "url": "www.dienerdiener.ch"
+  },
+  {
+    "name": "Hyphen A",
+    "location": "Rosenthaler Str. 51, 10178 Berlin",
+    "url": "www.hyphen.archi"
+  },
+  {
+    "name": "BELLI MEESE Architekturbüro Steinhöfel Weigelt PartG mbB",
+    "location": "Rosenthaler Str. 61, 10119 Berlin",
+    "url": "www.bellimeese.com"
+  },
+  {
+    "name": "studiowerkstatt",
+    "location": "Rostocker Str. 51, 10553 Berlin",
+    "url": "www.studiowerkstatt.de"
+  },
+  {
+    "name": "planquadrat-a Architekturbüro Ina Stöckel",
+    "location": "Rotherstraße 29, 10245 Berlin",
+    "url": "www.planquadrat-a.de"
+  },
+  {
+    "name": "KINZO Architekten GmbH",
+    "location": "Rudi-Dutschke-Str. 26, 10969 Berlin",
+    "url": "www.kinzo-berlin.de"
+  },
+  {
+    "name": "GBP Architekten",
+    "location": "Rudi-Dutschke-Str. 26, 10969 Berlin",
+    "url": "www.gbp-architekten.de"
+  },
+  {
+    "name": "studio pitliberman Gesellschaft von Architekten mbH",
+    "location": "Rudolfstr. 11, 10245 Berlin",
+    "url": "www.pitlibermann.com"
+  },
+  {
+    "name": "studioinges Architektur und Städtebau",
+    "location": "Rykestr. 2, 10405 Berlin",
+    "url": "www.studioinges.de"
+  },
+  {
+    "name": "Franke-Thommes & Kollegen Architekten und Ingenieure Partnerschaft mbB",
+    "location": "Rykestr. 32, 10405 Berlin",
+    "url": "www.twarchitekten.de"
+  },
+  {
+    "name": "Franke - Thommes & Kollegen - Architekten und Ingenieur PartGmbB",
+    "location": "Rykestr. 32, 10405 Berlin",
+    "url": "www.frankearchitekten.de"
+  },
+  {
+    "name": "Architekturbüro Kohler",
+    "location": "Rykestr. 32, 10405 Berlin",
+    "url": "www.kohlerplanung.de"
+  },
+  {
+    "name": "Panter Architekten",
+    "location": "Rückerstr. 4, 10119 Berlin",
+    "url": "www.panter-architekten.de"
+  },
+  {
+    "name": "ELLWART . ARCHITEKTEN",
+    "location": "S-Bahnbogen 405, 10557 Berlin",
+    "url": "www.ue-a.de"
+  },
+  {
+    "name": "Laboratory for Visionary Architecture (LAVA) Berlin GmbH",
+    "location": "Saarbrücker Str. 24, 10405 Berlin",
+    "url": "l-a-v-a.net"
+  },
+  {
+    "name": "McFIT GLOBALGROUP GmbH Creative Office Berlin",
+    "location": "Saarbrücker Str. 38, 10405 Berlin",
+    "url": "www.mcfit-global-group.com"
+  },
+  {
+    "name": "KEC Planungsgesellschaft mbH",
+    "location": "Salzufer 8, 10587 Berlin",
+    "url": "www.kec-berlin.com"
+  },
+  {
+    "name": "[BEST] projekte für baukultur und stadt",
+    "location": "Savignyplatz 6, 10623 Berlin",
+    "url": "www.best-bb.de"
+  },
+  {
+    "name": "MRP Consult Germany GmbH",
+    "location": "Savignyplatz 9, 10623 Berlin",
+    "url": "www.mrp-hotels.com"
+  },
+  {
+    "name": "Bunte Architekten",
+    "location": "Schenkendorfstr. 6, 10965 Berlin",
+    "url": "www.bunte-architekten.com"
+  },
+  {
+    "name": "VAMED VSB-BPS GmbH",
+    "location": "Schicklerstr. 5, 10179 Berlin",
+    "url": "www.vamed.de"
+  },
+  {
+    "name": "Bertsch Architekten PartG mbB",
+    "location": "Schillerstr. 12, 10625 Berlin",
+    "url": "www.bertsch-architekten.de"
+  },
+  {
+    "name": "Moratz & Stolze Planungsgesellschaft mbH",
+    "location": "Schillerstr. 59, 10627 Berlin",
+    "url": "www.moratz-stolze.de"
+  },
+  {
+    "name": "Barkow Leibinger",
+    "location": "Schillerstr. 94, 10625 Berlin",
+    "url": "www.barkowleibinger.com"
+  },
+  {
+    "name": "Heribert Neuwöhner Architekturbüro",
+    "location": "Schillerstr. 94, 10625 Berlin",
+    "url": "www.naarchitekten.de"
+  },
+  {
+    "name": "Dreß & Wucherpfennig Architekten",
+    "location": "Schillerstr. 94, 10625 Berlin",
+    "url": "www.dress-wucherpfennig.de"
+  },
+  {
+    "name": "DGI Bauwerk Gesellschaft von Architekten mbH",
+    "location": "Schillstr. 9, 10785 Berlin",
+    "url": "www.dgi-bauwerk.de"
+  },
+  {
+    "name": "DGI Bauwerk",
+    "location": "Schillstr. 9, 10785 Berlin",
+    "url": "dgi-bauwerk.de"
+  },
+  {
+    "name": "Herwarth + Holz Planung und Architektur",
+    "location": "Schinkelplatz 5, 10117 Berlin",
+    "url": "www.herwarth-holz.eu"
+  },
+  {
+    "name": "Casa Nova Architekten BDA Reinhold - von Lengerke - Schulze",
+    "location": "Schleiermacherstr. 8, 10961 Berlin",
+    "url": "www.cnarch.de"
+  },
+  {
+    "name": "ZRS Architekten GvA mbH",
+    "location": "Schlesiche Str. 26, 10997 Berlin",
+    "url": "www.zrs.berlin"
+  },
+  {
+    "name": "Wilk-Salinas Gesellschaft von Architekten mbH",
+    "location": "Schlesische Str. 12, 10997 Berlin",
+    "url": "www.wilk-salinas.com"
+  },
+  {
+    "name": "TPMT Architekten GmbH",
+    "location": "Schlesische Str. 12, 10997 Berlin",
+    "url": "www.tpmt.eu"
+  },
+  {
+    "name": "Wiebke Lemme Architekten",
+    "location": "Schlesische Str. 12, 10997 Berlin",
+    "url": "www.wiebkelemme.de"
+  },
+  {
+    "name": "F/F - Design & Architektur",
+    "location": "Schlesische Str. 25, 10997 Berlin",
+    "url": "www.fabianvonferrari.com"
+  },
+  {
+    "name": "von Ferrari & Walter Architekten PartGmbB",
+    "location": "Schlesische Str. 25, 10997 Berlin",
+    "url": "www.fffw-arch.com"
+  },
+  {
+    "name": "Bruno Fioretti Marquez Architekten",
+    "location": "Schlesische Str. 26, 10997 Berlin",
+    "url": "www.bfm.berlin"
+  },
+  {
+    "name": "de Winder Architekten GmbH",
+    "location": "Schlesische Str. 26, 10997 Berlin",
+    "url": "www.dewinder.de"
+  },
+  {
+    "name": "ZRS Architekten Gesellschaft von Architekten mbH",
+    "location": "Schlesische Str. 26, 10997 Berlin",
+    "url": "www.zrs-berlin.de"
+  },
+  {
+    "name": "Nieto Sobejano Arquitectos GmbH",
+    "location": "Schlesische Str. 26, 10997 Berlin",
+    "url": "www.nietosobejano.com"
+  },
+  {
+    "name": "n+1 Architekten",
+    "location": "Schlesische Str. 26, 10997 Berlin",
+    "url": "www.nplus1.de"
+  },
+  {
+    "name": "Bruno Fioretti Marquez",
+    "location": "Schlesische Str. 26, 10997 Berlin",
+    "url": "www.bfm-architekten.de"
+  },
+  {
+    "name": "Geier • Maass Architekten GmbH",
+    "location": "Schlesische Str. 27, 10997 Berlin",
+    "url": "www.geier-maass-architekten.de"
+  },
+  {
+    "name": "Gewers & Pudewill GmbH",
+    "location": "Schlesische Str. 27, 10997 Berlin",
+    "url": "www.gewers-pudewill.com"
+  },
+  {
+    "name": "Glass Kramer Löbbert Gesellschaft von Architekten mbH",
+    "location": "Schlesische Str. 27, 10997 Berlin",
+    "url": "www.glasskramerloebbert.de"
+  },
+  {
+    "name": "ENZMANN / ETTEL Freie Architekten BDA",
+    "location": "Schlesische Str. 28, 10997 Berlin",
+    "url": "www.enzmann-ettel.de"
+  },
+  {
+    "name": "Staehr + Partner Architekten",
+    "location": "Schlesische Str. 28, 10997 Berlin",
+    "url": "www.staehr-partner.com"
+  },
+  {
+    "name": "Scheidt Kasprusch Gesellschaft von Architekten mbH",
+    "location": "Schlesische Str. 29, 10997 Berlin",
+    "url": "www.ska-architekten.de"
+  },
+  {
+    "name": "Augustin und Frank Architekten",
+    "location": "Schlesische Str. 29, 10997 Berlin",
+    "url": "www.augustinundfrank.de"
+  },
+  {
+    "name": "CKRS Architekten",
+    "location": "Schlesische Str. 29, 10997 Berlin",
+    "url": "www.ckrs-architekten.de"
+  },
+  {
+    "name": "Clarke und Kuhn Freie Architekten Berlin",
+    "location": "Schlesische Str. 29, 10997 Berlin",
+    "url": "www.clarkeundkuhn.de"
+  },
+  {
+    "name": "Gerhard Spangenberg Felix Partzsch Architekten Partnerschaftsgesellschaft mbB",
+    "location": "Schlesische Str. 30, 10997 Berlin",
+    "url": "www.felixpartzsch.com"
+  },
+  {
+    "name": "orange architekten Tschada Weber PartG mbB",
+    "location": "Schlesische Str. 31, 10997 Berlin",
+    "url": "www.orange-architekten.de"
+  },
+  {
+    "name": "Anne Lampen Architekten GmbH",
+    "location": "Schlesische Str. 31, 10997 Berlin",
+    "url": "www.anne-lampen.de"
+  },
+  {
+    "name": "Atelier Marco Unterhaslberger Ausstellungen & Markenwelten",
+    "location": "Schlesische Str. 31, 10997 Berlin",
+    "url": "www.muhb.de"
+  },
+  {
+    "name": "concept + design",
+    "location": "Schliemannstr. 15, 10437 Berlin",
+    "url": "www.conceptplusdesign.com"
+  },
+  {
+    "name": "ebnerfrey architekten Christian Ebner, Robert Frey",
+    "location": "Schliemannstr. 18, 10437 Berlin",
+    "url": "www.ebnerfrey.de"
+  },
+  {
+    "name": "Trilith | Gesellschaft für Bauplanung, Gutachten und Bauleitung mbH",
+    "location": "Schlüterstr. 45, 10707 Berlin",
+    "url": "www.trilith-berlin.de"
+  },
+  {
+    "name": "Daniela Himburg - Architektin und Bausachverständige",
+    "location": "Schlüterstr. 64, 10625 Berlin",
+    "url": "www.architektur-himburg.de"
+  },
+  {
+    "name": "Rössel Brandschutz Sachverständige für vorbeugenden Brandschutz",
+    "location": "Schmiedehof 16, 10965 Berlin",
+    "url": "www.roesselbrandschutz.de"
+  },
+  {
+    "name": "Glockenweiß GmbH",
+    "location": "Schmiedehof 20, 10965 Berlin",
+    "url": "www.glockenweiss.de"
+  },
+  {
+    "name": "kataneo Architektur",
+    "location": "Schreinerstr. 30, 10247 Berlin",
+    "url": "www.kataneo.de"
+  },
+  {
+    "name": "HWP Planungsgesellschaft",
+    "location": "Schumannstr. 5, 10117 Berlin",
+    "url": "www.hwp-planung.de"
+  },
+  {
+    "name": "ArchitektenSocietät Birkel Unger & Partner",
+    "location": "Schwarzbacher Str. 7, 10711 Berlin",
+    "url": "www.architektensocietaet.de"
+  },
+  {
+    "name": "häfner jiménez betcke jarosch landschaftsarchitektur gmbh",
+    "location": "Schwedter Str. 263, 10119 Berlin",
+    "url": "www.haefner-jimenez.de"
+  },
+  {
+    "name": "plan | werk Architektur Interior Design Generalplanung",
+    "location": "Schwedter Str. 34, 10435 Berlin",
+    "url": "www.plan-werk.org"
+  },
+  {
+    "name": "Möhring Architekten",
+    "location": "Schwedter Str. 34, 10435 Berlin",
+    "url": "www.moehring-architekten.de"
+  },
+  {
+    "name": "Ester Bruzkus Architekten",
+    "location": "Schwedter Str. 34, 10435 Berlin",
+    "url": "www.esterbruzkus.com"
+  },
+  {
+    "name": "Bonauer Bölling Partnerschaft von Architekten mbB",
+    "location": "Schwedter Str. 34, 10435 Berlin",
+    "url": "www.bonauerboelling.com"
+  },
+  {
+    "name": "raumscript Marco Mehlin",
+    "location": "Schwedter Str. 34, 10435 Berlin",
+    "url": "www.raumscript.de"
+  },
+  {
+    "name": "birke zimmermann landschaftsarchitekten",
+    "location": "Schwedter Str. 47, 10435 Berlin",
+    "url": "www.birkezimmermann.de"
+  },
+  {
+    "name": "blaufisch architekten",
+    "location": "Schwiebusser Str.42, 10965 Berlin",
+    "url": "www.blaufisch-architekten.de"
+  },
+  {
+    "name": "Thomas Kröger Architekten GmbH",
+    "location": "Schöneberger Ufer 59, 10785 Berlin",
+    "url": "www.thomaskroeger.net"
+  },
+  {
+    "name": "Planungsbüro Cibis",
+    "location": "Schöneberger Ufer 59, 10785 Berlin",
+    "url": "www.cibis-architekten.de"
+  },
+  {
+    "name": "heinhaus + honnef architekten Partnerschaftsgesellschaft mbB",
+    "location": "Schönfließer Str. 3, 10439 Berlin",
+    "url": "www.hplush-architekten.de"
+  },
+  {
+    "name": "architektur und bauwesen",
+    "location": "Schönhauser Allee 12, 10119 Berlin",
+    "url": "www.arkitectura.de"
+  },
+  {
+    "name": "Kretschmer Tauscher Landschaftsarchitekten Partnergesellschaft mbB",
+    "location": "Schönhauser Allee 146, 10435 Berlin",
+    "url": "www.kreta-berlin.de"
+  },
+  {
+    "name": "SSF Ingenieure AG Beratende Ingenieure im Bauwesen",
+    "location": "Schönhauser Allee 149, 10435 Berlin",
+    "url": "www.ssf-ing.de"
+  },
+  {
+    "name": "Reichwald Schultz Architekten c/o Atelierwerk",
+    "location": "Schönhauser Allee 156, 10435 Berlin",
+    "url": "www.reichwaldschultz.de"
+  },
+  {
+    "name": "Ackermann + Renner Architekten GmbH",
+    "location": "Schönhauser Allee 167, 10435 Berlin",
+    "url": "www.ackermann-renner.de"
+  },
+  {
+    "name": "büro STADTLANDPROJEKTE",
+    "location": "Schönhauser Allee 182, 10119 Berlin",
+    "url": "www.stadtlandprojekte.de"
+  },
+  {
+    "name": "ILArchitektur",
+    "location": "Schönhauser Allee 182, 10119 Berlin",
+    "url": "www.ilarchitektur.de"
+  },
+  {
+    "name": "PÈREZBATISTA",
+    "location": "Schönhauser Allee 182, 10119 Berlin",
+    "url": "www.nestor"
+  },
+  {
+    "name": "DEEKEN ARCHITEKTEN",
+    "location": "Schönhauser Allee 182, 10119 Berlin",
+    "url": "www.deeken-architektur.de"
+  },
+  {
+    "name": "Wolf + Hansen Dental-Depot",
+    "location": "Schönhauser Allee 188, 10119 Berlin",
+    "url": "www.wolf-hansen.de"
+  },
+  {
+    "name": "IOX Architekten",
+    "location": "Schönhauser Allee 26, 10435 Berlin",
+    "url": "www.www.iox-architekten.de"
+  },
+  {
+    "name": "Fabrik N° 40 Architekten Weiß & Faust",
+    "location": "Schönhauser Allee 40, 10435 Berlin",
+    "url": "www.weiss-faust.de"
+  },
+  {
+    "name": "EINSNEUNARCHITEKTEN",
+    "location": "Schönhauser Allee 42, 10435 Berlin",
+    "url": "www.einsneunarchitekten.de"
+  },
+  {
+    "name": "MQ Real Estate",
+    "location": "Schönhauser Allee 44, 10435 Berlin",
+    "url": "www.mqre.de"
+  },
+  {
+    "name": "LOVE architecture and urbanism ZT GmbH",
+    "location": "Schönhauser Allee 6, 10119 Berlin",
+    "url": "www.love-home.com"
+  },
+  {
+    "name": "HPP Architekten GmbH",
+    "location": "Schützenstr. 6, 10117 Berlin",
+    "url": "www.hpp.com"
+  },
+  {
+    "name": "Hoskins Architects",
+    "location": "Seelower Str. 5, 10439 Berlin",
+    "url": "www.hoskinsarchitects.com"
+  },
+  {
+    "name": "BERND ALBERS Gesellschaft von Architekten mbH",
+    "location": "Segitzdamm 2, 10969 Berlin",
+    "url": "www.berndalbers-berlin.de"
+  },
+  {
+    "name": "trafo architekten ingenieure",
+    "location": "Senefelderstr. 1, 10437 Berlin",
+    "url": "www.trafo-architekten.de"
+  },
+  {
+    "name": "n|vier Architekten",
+    "location": "Seumestr. 25, 10245 Berlin",
+    "url": "n-vier.de"
+  },
+  {
+    "name": "Hölzer + Co Planungsgesellschaft mbH",
+    "location": "Sickingenstr. 20, 10553 Berlin",
+    "url": "www.hl-co.de"
+  },
+  {
+    "name": "MRBS Architekten und Ingenieure PartGmbB",
+    "location": "Siemensstr. 4, 10551 Berlin",
+    "url": "www.ab-mrbs.de"
+  },
+  {
+    "name": "Bosch Göhring Architekten PartmbB",
+    "location": "Simplonstr. 59, 10245 Berlin",
+    "url": "www.boschgoehring.de"
+  },
+  {
+    "name": "Leibenatus Stockburger Wittayer Architekten Ingenieure Partnerschaft mbB",
+    "location": "Skalitzer Str. 138, 10999 Berlin",
+    "url": "www.lsw-architektur.de"
+  },
+  {
+    "name": "TOPOTEK 1 Gesellschaft von Landschaftsarchitekten mbH",
+    "location": "Sophienstr. 18, 10178 Berlin",
+    "url": "www.topotek1.de"
+  },
+  {
+    "name": "Büro 213 Architekten GmbH Architektur und Interiordesign",
+    "location": "Sophienstr. 18, 10178 Berlin",
+    "url": "www.zweieinsdrei.de"
+  },
+  {
+    "name": "BRAUN und  BRAUN Architektur und Interior",
+    "location": "Sophienstr. 21, 10178 Berlin",
+    "url": "www.braunundbraun.com"
+  },
+  {
+    "name": "Winking • Froh Architekten BDA",
+    "location": "Sophienstr. 22, 10178 Berlin",
+    "url": "www.winking-froh.de"
+  },
+  {
+    "name": "MEYER-GROHBRUEGGE",
+    "location": "Sophienstr. 25, 10178 Berlin",
+    "url": "www.meyer-grohbruegge.com"
+  },
+  {
+    "name": "Sonoko GmbH",
+    "location": "Sophienstr. 26, 10178 Berlin",
+    "url": "www.united-land.de"
+  },
+  {
+    "name": "platena+jagusch.architekten, Partnerschaftsgesellschaft mbB",
+    "location": "Sophienstr. 33, 10178 Berlin",
+    "url": "www.pja-berlin.de"
+  },
+  {
+    "name": "richter+wittenbecher.architekten",
+    "location": "Sophienstr. 33, 10178 Berlin",
+    "url": "www.zwo4.com"
+  },
+  {
+    "name": "Hilmer & Sattler und Albrecht Gesellschaft von Architekten mbH",
+    "location": "Sophienstr. 33, 10178 Berlin",
+    "url": "www.h-s-a.de"
+  },
+  {
+    "name": "KVL Projektmanagement Berlin GmbH",
+    "location": "Spichernstr. 2, 10777 Berlin",
+    "url": "www.kvlgroup.com"
+  },
+  {
+    "name": "ATELIER D ARCHITETTURA",
+    "location": "Spreeufer 2, 10178 Berlin",
+    "url": "www.adarch.de"
+  },
+  {
+    "name": "Studio Sven Pfeiffer",
+    "location": "Sredzkistr. 19, 10435 Berlin",
+    "url": "www.svenpfeiffer.de"
+  },
+  {
+    "name": "Emde Architekten",
+    "location": "Sredzkistr. 30, 10435 Berlin",
+    "url": "www.markusemde.de"
+  },
+  {
+    "name": "LIKE architecture BERLIN",
+    "location": "Steinstr. 15, 10119 Berlin",
+    "url": "www.likearchitecture.com"
+  },
+  {
+    "name": "RaumstarArchitekten",
+    "location": "Stendaler Str. 4, 10559 Berlin",
+    "url": "www.raumstar.de"
+  },
+  {
+    "name": "Bezirksamt Pankow Abt. Stadtentwicklung",
+    "location": "Storkower Str. 97, 10407 Berlin",
+    "url": "www.verwalt-berlin.de"
+  },
+  {
+    "name": "Ellwanger Chabert Architekten",
+    "location": "Stralauer Platz 32, 10243 Berlin",
+    "url": "www.ecarchitekten.de"
+  },
+  {
+    "name": "Deimel Oelschläger Architekten Partnerschaft",
+    "location": "Stralauer Platz 34, 10243 Berlin",
+    "url": "www.deo-berlin.de"
+  },
+  {
+    "name": "pbr Planungsbüro Rohling AG",
+    "location": "Stralauer Platz 34, 10243 Berlin",
+    "url": "www.pbr.de"
+  },
+  {
+    "name": "BAU+ architekten",
+    "location": "Straßburger Str. 19, 10405 Berlin",
+    "url": "www.bauplus-berlin.de"
+  },
+  {
+    "name": "S.T.E.R.N. GmbH",
+    "location": "Straßburger Straße 55, 10405 Berlin",
+    "url": "www.stern-berlin.de"
+  },
+  {
+    "name": "TU Berlin - Fakultät VI (Office A53) Institut für Architektur",
+    "location": "Straße des 127, 10623 Berlin",
+    "url": "www.habitat-unit.de"
+  },
+  {
+    "name": "Bundesamt für Bauwesen und Raumordnung Referat A2",
+    "location": "Straße des 17, 10623 Berlin",
+    "url": "www.bbr.bund.de"
+  },
+  {
+    "name": "TU Berlin - Urban Design and Architecture",
+    "location": "Straße des 17, 10623 Berlin",
+    "url": "cud.architektur.tu-berlin.de"
+  },
+  {
+    "name": "KLAUS ROTH architekten bda",
+    "location": "Strelitzer Str. 61, 10115 Berlin",
+    "url": "www.klaus-roth.de"
+  },
+  {
+    "name": "wolff:architekten",
+    "location": "Strelitzer Str. 71, 10115 Berlin",
+    "url": "www.wolffarchitekten.com"
+  },
+  {
+    "name": "Numrich Albrecht Klumpp Gesellschaft von Architekten mbH",
+    "location": "Stromstr. 3, 10555 Berlin",
+    "url": "www.nak-architekten.de"
+  },
+  {
+    "name": "Numrich Albrecht Klumpp Architekten",
+    "location": "Stromstr. 3, 10555 Berlin",
+    "url": "www.nak-architektebn.de"
+  },
+  {
+    "name": "Lützow 7 Garten- und Landschaftsarchitekten",
+    "location": "Stubbenkammerstr. 9, 10437 Berlin",
+    "url": "www.olafstaack.de"
+  },
+  {
+    "name": "atelier 4d Architekten",
+    "location": "Stuttgarter Platz 16, 10627 Berlin",
+    "url": "www.atelier4d-architekten.de"
+  },
+  {
+    "name": "WindStone Consultants GmbH",
+    "location": "Stülerstr. 11, 10787 Berlin",
+    "url": "www.windstone-consultants.com"
+  },
+  {
+    "name": "ERCHINGER WURFBAUM",
+    "location": "Swindemünder Str. 14, 10435 Berlin",
+    "url": "www.erchingerwurfbaum.de"
+  },
+  {
+    "name": "Bergander garten und landschaftsarchitektur",
+    "location": "Sybelstr. 48, 10629 Berlin",
+    "url": "www.bergander-la.de"
+  },
+  {
+    "name": "L-Plan Lichtplanung",
+    "location": "Sächsische Str. 6, 10707 Berlin",
+    "url": "www.l-plan.de"
+  },
+  {
+    "name": "Formwerk GmbH",
+    "location": "Tauentzienstr. 14, 10789 Berlin",
+    "url": "www.formwerk.com"
+  },
+  {
+    "name": "Krieger + Mielke Architekten",
+    "location": "Tauentzienstr. 18, 10789 Berlin",
+    "url": "www.architekten-km.de"
+  },
+  {
+    "name": "C.M. LAUTE ARCHITEKTUR - CMLA",
+    "location": "Tauentzienstr. 4, 10789 Berlin",
+    "url": "www.cmla.de"
+  },
+  {
+    "name": "Eurocres Consulting GmbH Europa Center, 17. Stock",
+    "location": "Tauentzienstr. 9, 10789 Berlin",
+    "url": "www.eurocres.com"
+  },
+  {
+    "name": "platena + jagusch.architekten Partnerschaftsgesellschaft mbB",
+    "location": "Tauentzienstr. 9, 10789 Berlin",
+    "url": "pja-berlin.com"
+  },
+  {
+    "name": "Jordi & Keller Architekten",
+    "location": "Tegeler Weg 2, 10589 Berlin",
+    "url": "www.jordi-keller.de"
+  },
+  {
+    "name": "Artur Gärtner Architektengesellschaft mbH",
+    "location": "Tempelhofer Ufer 1, 10961 Berlin",
+    "url": "www.gaertner-architekten.com"
+  },
+  {
+    "name": "Realace GmbH",
+    "location": "Tempelhofer Ufer 32, 10963 Berlin",
+    "url": "www.realace.de"
+  },
+  {
+    "name": "eZeit Ingenieure GmbH Gesellschaft von Architekten mbH",
+    "location": "Tempelhofer Weg 69, 10829 Berlin",
+    "url": "www.holthuizen.com"
+  },
+  {
+    "name": "EUREF-Consulting Gesellschaft von Architekten und Ingenieuren mbH",
+    "location": "Torgauer Str. 12, 10829 Berlin",
+    "url": "www.euref-consulting.de"
+  },
+  {
+    "name": "arne wegner architektur räume, die bewegen",
+    "location": "Torstr. 100, 10119 Berlin",
+    "url": "www.arnewegner.eu"
+  },
+  {
+    "name": "Panatom GmbH",
+    "location": "Torstr. 100, 10119 Berlin",
+    "url": "www.panatom.de"
+  },
+  {
+    "name": "Linie Architektur",
+    "location": "Torstr. 11, 10119 Berlin",
+    "url": "www.linie-berlin.com"
+  },
+  {
+    "name": "ZappeArchitekten",
+    "location": "Torstr. 154, 10115 Berlin",
+    "url": "www.zappearchitekten.de"
+  },
+  {
+    "name": "Arad - Zareh Architekten",
+    "location": "Torstr. 172, 10115 Berlin",
+    "url": "www.arad-zareh.com"
+  },
+  {
+    "name": "hmp hertfelder & montojo planungsgesellschaft mbH",
+    "location": "Torstr. 177, 10115 Berlin",
+    "url": "www.hertfelder-montojo.de"
+  },
+  {
+    "name": "Baasner Möller & Langwald Büro für Architektur und Städtebau GmbH",
+    "location": "Torstr. 179, 10115 Berlin",
+    "url": "www.bml-berlin.de"
+  },
+  {
+    "name": "Kühn Malvezzi Associates GmbH",
+    "location": "Torstr. 84, 10119 Berlin",
+    "url": "www.kuehnmalvezzi.com"
+  },
+  {
+    "name": "Kessel und Züger Architekten PartG mbB",
+    "location": "Torstr. 94, 10119 Berlin",
+    "url": "www.kesselzueger.com"
+  },
+  {
+    "name": "Jan Ulmer Architekten",
+    "location": "Torstr. 94, 10119 Berlin",
+    "url": "www.janulmer.de"
+  },
+  {
+    "name": "-male architekten vera martinez | christiano lepratti",
+    "location": "Tucholskystr. 28, 10117 Berlin",
+    "url": "www.malearc.de"
+  },
+  {
+    "name": "RAPP+RAPP",
+    "location": "Tucholskystr. 36, 10117 Berlin",
+    "url": "www.rappenrapp.com"
+  },
+  {
+    "name": "von Ey Architektur PartG mbB",
+    "location": "Tucholskystr. 36, 10117 Berlin",
+    "url": "www.voney.de"
+  },
+  {
+    "name": "rohstoff - Architektur und Film",
+    "location": "Tucholskystr. 37, 10117 Berlin",
+    "url": "www.rohstoff-berlin.de"
+  },
+  {
+    "name": "Studio Mark Randel",
+    "location": "Tucholskystr. 47, 10117 Berlin",
+    "url": "www.markrandel.de"
+  },
+  {
+    "name": "STATION Architektur",
+    "location": "Ueckermünder Str. 7, 10439 Berlin",
+    "url": "www.stationarchitektur.de"
+  },
+  {
+    "name": "Stephan Braunfels Architekten BDA",
+    "location": "Uhlandstr. 145, 10719 Berlin",
+    "url": "www.braunfels-architekten.de"
+  },
+  {
+    "name": "sommer + sommer architekten bda",
+    "location": "Uhlandstr. 158, 10719 Berlin",
+    "url": "www.sommersommer.de"
+  },
+  {
+    "name": "CG VOGEL ARCHITEKTEN",
+    "location": "Uhlandstr. 160, 10719 Berlin",
+    "url": "www.vogelarchitekten.de"
+  },
+  {
+    "name": "PSP Weltner Louvieaux Architekten GmbH",
+    "location": "Uhlandstr. 181, 10623 Berlin",
+    "url": "www.psp-wl.de"
+  },
+  {
+    "name": "R|R Architekturbüro",
+    "location": "Uhlandstr. 28, 10719 Berlin",
+    "url": "www.r-rarchitektur.de"
+  },
+  {
+    "name": "Fluxstratum",
+    "location": "Uhlandstr. 45, 10719 Berlin",
+    "url": "www.fluxstratum.de"
+  },
+  {
+    "name": "Steffen Duemler Architekten",
+    "location": "Uhlandstr. 47, 10719 Berlin",
+    "url": "www.sdarchitekten.de"
+  },
+  {
+    "name": "eichner bastian architekten",
+    "location": "Uhlandstr. 85, 10717 Berlin",
+    "url": "www.eichner-bastian.de"
+  },
+  {
+    "name": "Gruppe Planwerk GP Planwerk GmbH",
+    "location": "Uhlandstr. 97, 10715 Berlin",
+    "url": "www.gruppeplanwerk.de"
+  },
+  {
+    "name": "Kemmermann Projektmanagement",
+    "location": "Universitätsstr. 2, 10117 Berlin",
+    "url": "www.kemmermann.de"
+  },
+  {
+    "name": "K+P Planungsgesellschaft mbH",
+    "location": "Urbanstr. 116, 10967 Berlin",
+    "url": "www.kochundpartner.de"
+  },
+  {
+    "name": "Kathe Architekten",
+    "location": "Urbanstr. 116, 10967 Berlin",
+    "url": "www.kathe-architekten.de"
+  },
+  {
+    "name": "MALTE LOOFF ARCHITEKTUR",
+    "location": "Urbanstr. 116, 10967 Berlin",
+    "url": "www.looff.de"
+  },
+  {
+    "name": "Müller-Werther Finke Architekten GbR",
+    "location": "Urbanstr. 116, 10967 Berlin",
+    "url": "www.mwf-architekten.de"
+  },
+  {
+    "name": "Studio-U",
+    "location": "Urbanstr. 64, 10967 Berlin",
+    "url": "www.hanen-architekten.de"
+  },
+  {
+    "name": "Kupke und Lambeck Architekten Part mbB",
+    "location": "Urbanstr. 64, 10967 Berlin",
+    "url": "www.kupkelambeck.de"
+  },
+  {
+    "name": "EM2N Architekten Berlin GmbH Mathias Müller | Daniel Niggli",
+    "location": "Urbanstr. 71, 10967 Berlin",
+    "url": "www.em2n.de"
+  },
+  {
+    "name": "Porr Design & Engineering Deutschland GmbH",
+    "location": "Valeska-Gert-Str. 1, 10243 Berlin",
+    "url": "www.porr.at"
+  },
+  {
+    "name": "KUNAT Architekten",
+    "location": "Viktoria-Luise-Platz 7, 10777 Berlin",
+    "url": "www.kunat-architekten.de"
+  },
+  {
+    "name": "aschenbrenner mosler & andere gesellschaft von planern mbh",
+    "location": "Waitzstr. 28, 10629 Berlin",
+    "url": "www.ama-planer.de"
+  },
+  {
+    "name": "Lorenzen Mayer Architekten",
+    "location": "Waldemarstr. 33, 10999 Berlin",
+    "url": "www.lorenzenmayer.de"
+  },
+  {
+    "name": "ST raum a. Gesellschaft von Landschaftsarchitekten mbH",
+    "location": "Waldemarstr. 33, 10999 Berlin",
+    "url": "www.strauma.com"
+  },
+  {
+    "name": "Bureau Ali Saad",
+    "location": "Waldemarstr. 37, 10999 Berlin",
+    "url": "www.ba-au.eu"
+  },
+  {
+    "name": "Thomas Hillig Architekten GmbH",
+    "location": "Waldemarstr. 37, 10999 Berlin",
+    "url": "www.hillig-architekten.de"
+  },
+  {
+    "name": "DARC Architects Bettina Darmawan Architekten",
+    "location": "Waldemarstr. 38, 10999 Berlin",
+    "url": "www.darc-architekten.de"
+  },
+  {
+    "name": "raumzeit Gesellschaft von Architekten mbH",
+    "location": "Waldemarstr. 38, 10999 Berlin",
+    "url": "www.raumzeit.org"
+  },
+  {
+    "name": "ARQ Architekten Rintz und Quack GmbH",
+    "location": "Waldemarstr. 38, 10999 Berlin",
+    "url": "www.rintzquack.de"
+  },
+  {
+    "name": "bauste.",
+    "location": "Waldemarstr. 38, 10999 Berlin",
+    "url": "www.bauste.berlin"
+  },
+  {
+    "name": "tobias buschbeck - architektur",
+    "location": "Waldemarstr. 38, 10999 Berlin",
+    "url": "www.tobiasbuschbeck.de"
+  },
+  {
+    "name": "Henschel Architekten + Generalplaner",
+    "location": "Waldenser Str. 2, 10551 Berlin",
+    "url": "www.henschelarchitekten.de"
+  },
+  {
+    "name": "Bonanni Gesellschaft von Architekten mbH",
+    "location": "Waldenserstr. 2, 10551 Berlin",
+    "url": "www.bonanni.de"
+  },
+  {
+    "name": "FAR frohn&rojas Planungsgesellschaft mbH",
+    "location": "Waldenserstr. 25, 10551 Berlin",
+    "url": "www.f-a-r.net"
+  },
+  {
+    "name": "archiscape",
+    "location": "Wallstr. 37, 10179 Berlin",
+    "url": "www.archiscape.de"
+  },
+  {
+    "name": "Passe.Kaelber",
+    "location": "Warschauer Str. 11, 10243 Berlin",
+    "url": "www.passe-kaelber-architekten.com"
+  },
+  {
+    "name": "bbzl böhm benfer zahiri landschaften städtebau",
+    "location": "Warschauer Str. 57, 10243 Berlin",
+    "url": "www.bbzl.de"
+  },
+  {
+    "name": "maaskant form für raum",
+    "location": "Warschauer Str. 78, 10243 Berlin",
+    "url": "www.maaskant.de"
+  },
+  {
+    "name": "trucks architekten",
+    "location": "Wartburgstr. 40, 10823 Berlin",
+    "url": "www.trucks-architekten.de"
+  },
+  {
+    "name": "DB Station + Service AG Objektentwicklung + Planung",
+    "location": "Washingtonplatz 2, 10557 Berlin",
+    "url": "www.deutschebahn.com"
+  },
+  {
+    "name": "raumdeuter GbR",
+    "location": "Wassertorstr. 2, 10969 Berlin",
+    "url": "www.raumdeuter.de"
+  },
+  {
+    "name": "Nils Wenk Architekten",
+    "location": "Wedekindstr. 18, 10243 Berlin",
+    "url": "www.nilswenk.de"
+  },
+  {
+    "name": "Miller Architekt",
+    "location": "Wegenerstr. 4, 10713 Berlin",
+    "url": "www.miller-architekten.de"
+  },
+  {
+    "name": "Jess Architektur und Städtebau Gesellschaft von Architekten mbH",
+    "location": "Weichselstr. 6, 10247 Berlin",
+    "url": "www.jess-architekten.de"
+  },
+  {
+    "name": "Peters und Wormuth Architekten",
+    "location": "Weimarer Str. 32, 10625 Berlin",
+    "url": "www.petersundwormuth.de"
+  },
+  {
+    "name": "Riccius + Winter Architekten",
+    "location": "Weimarer Str. 6, 10625 Berlin",
+    "url": "www.riccius-winter.de"
+  },
+  {
+    "name": "Maria-Elisabeth Köhler, Dipl.-Ing. Architektin",
+    "location": "Weimarer Str. 6, 10625 Berlin",
+    "url": "www.architektur-mekoehler.de"
+  },
+  {
+    "name": "Klingler Associates GmbH",
+    "location": "Welserstr. 24, 10777 Berlin",
+    "url": "www.klingler-gmbh.de"
+  },
+  {
+    "name": "Iris Steinbeck Architekten",
+    "location": "Welserstr. 5, 10777 Berlin",
+    "url": "www.irissteinbeck.de"
+  },
+  {
+    "name": "Sascha Jung Architektur",
+    "location": "Weserstr. 29, 10247 Berlin",
+    "url": "www.saschajung.com"
+  },
+  {
+    "name": "c/o Moritz",
+    "location": "Westfälische Str. 24, 10709 Berlin",
+    "url": "www.florianoettl.de"
+  },
+  {
+    "name": "Studio Gil Russ",
+    "location": "Westfälische Str. 41, 10711 Berlin",
+    "url": "www.studiogilruss.com"
+  },
+  {
+    "name": "+2 architekten Yvonne Figur, Christan Schneider",
+    "location": "Wichertstr. 2, 10439 Berlin",
+    "url": "www.pluszwei.net"
+  },
+  {
+    "name": "United Architektur",
+    "location": "Wichertstr. 2, 10439 Berlin",
+    "url": "www.unitedarchitektur.com"
+  },
+  {
+    "name": "Planungsbüro Freitag",
+    "location": "Wichertstr. 2, 10439 Berlin",
+    "url": "www.norbertfreitag.net"
+  },
+  {
+    "name": "SMV Bauprojektsteuerung Ingenieurgesellschaft mbH",
+    "location": "Wichmannstr. 5, 10787 Berlin",
+    "url": "smv.com"
+  },
+  {
+    "name": "Pohl-Architektur",
+    "location": "Wiclefstr. 50, 10551 Berlin",
+    "url": "www.pohl-architekten.berlin"
+  },
+  {
+    "name": "PASD Architekten",
+    "location": "Wielandstr. 33, 10629 Berlin",
+    "url": "www.pasd.de"
+  },
+  {
+    "name": "von Bothmer Architekten",
+    "location": "Wielandstr. 37, 10629 Berlin",
+    "url": "www.vba-web.de"
+  },
+  {
+    "name": "Bauatelier Garbers",
+    "location": "Wielandstr. 41, 10629 Berlin",
+    "url": "www.bauatelier-garbers.de"
+  },
+  {
+    "name": "raum317 Architekten",
+    "location": "Wielandstr. 47, 10625 Berlin",
+    "url": "www.bhhs.de"
+  },
+  {
+    "name": "Innenarchitekturbüro Zoe Kafkalia",
+    "location": "Wielandstr. 49, 10625 Berlin",
+    "url": "www.zoesocratous.com"
+  },
+  {
+    "name": "terra.nova Landschaftsarchitektur c/o Frank Kiessling Landschaftsarchitekten",
+    "location": "Wiener Str. 14, 10999 Berlin",
+    "url": "www.tn-l.de"
+  },
+  {
+    "name": "METTLER Landschaftsarchitektur",
+    "location": "Wiener Str. 20, 10999 Berlin",
+    "url": "www.mettler-landschaftsarchitektur.com"
+  },
+  {
+    "name": "Behles & Jochimsen Gesellschaft von Architekten mbH",
+    "location": "Wikingerufer 7, 10555 Berlin",
+    "url": "www.behlesjochimsen.de"
+  },
+  {
+    "name": "Bolwin Wulf Architekten",
+    "location": "Wikingerufer 7, 10555 Berlin",
+    "url": "www.bolwinwulf.de"
+  },
+  {
+    "name": "SEHW Architektur",
+    "location": "Wikingerufer 7, 10555 Berlin",
+    "url": "www.sehw.de"
+  },
+  {
+    "name": "Nickl Architekten Deutschland GmbH",
+    "location": "Wikingerufer 7, 10555 Berlin",
+    "url": "www.nickl-partner.de"
+  },
+  {
+    "name": "Ligne Architekten",
+    "location": "Wilhelm-Kabus-Str. 36, 10829 Berlin",
+    "url": "www.ligne.de"
+  },
+  {
+    "name": "carpaneto.schöningh architekten",
+    "location": "Wilhelmine-Gemberg-Weg 12, 10179 Berlin",
+    "url": "www.carpanetoschoeningh.de"
+  },
+  {
+    "name": "Die Zusammenarbeiter Gesellschaft von Architekten mbH",
+    "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
+    "url": "www.zusammenarbeiter.de"
+  },
+  {
+    "name": "ISSS research | architecture | urbanism Sabatier Schwarz Architekten PartGmbB",
+    "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
+    "url": "isssresearch.com"
+  },
+  {
+    "name": "SCHLIEFER ARCHITEKTEN",
+    "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
+    "url": "www.schliefer--architekten.de"
+  },
+  {
+    "name": "ISSS research | architecture | urbanism Sabatier  Sabatier Schwarz Architekten PartGmbB",
+    "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
+    "url": "www.isssresearch.com"
+  },
+  {
+    "name": "WGA Deutschland GmbH",
+    "location": "Wilhelmine-Gemberg-Weg 6, 10179 Berlin",
+    "url": "www.wg-a.com"
+  },
+  {
+    "name": "GUDER HOFFEND Architekten",
+    "location": "Wilhelmine-Gemberg-Weg 6, 10179 Berlin",
+    "url": "www.guder-hoffend.de"
+  },
+  {
+    "name": "aPLEX GmbH",
+    "location": "Wilhelmine-Gemberg-Weg 6, 10179 Berlin",
+    "url": "www.aplex.de"
+  },
+  {
+    "name": "Chestnutt_Niess Architekten PartGmbB",
+    "location": "Wilhelmine-Gemberg-Weg 6, 10179 Berlin",
+    "url": "www.chestnutt-niess.de"
+  },
+  {
+    "name": "Dipl.-Ing. N. Diller Immobilienbewertung",
+    "location": "Wilhelmsaue 11, 10715 Berlin",
+    "url": "www.immodiller.de"
+  },
+  {
+    "name": "Maßwerk Architektur",
+    "location": "Wilhelmsaue 12, 10715 Berlin",
+    "url": "www.masswerk-architektur.de"
+  },
+  {
+    "name": "WEIDINGER LANDSCHAFTSARCHITEKTEN GmbH",
+    "location": "Wilhelmstr. 118, 10963 Berlin",
+    "url": "www.weidla.de"
+  },
+  {
+    "name": "BTB Berater für Technik und Bauen GmbH & Co. KG",
+    "location": "Wilhelmstr. 138, 10963 Berlin",
+    "url": "www.btb-berater.de"
+  },
+  {
+    "name": "Ingenieurbüro",
+    "location": "Willibald-Alexis-Str. 15, 10965 Berlin",
+    "url": "www.landsucht.de"
+  },
+  {
+    "name": "STORIES WITHIN ARCHITECTURE GMBH",
+    "location": "Willmanndamm 13, 10827 Berlin",
+    "url": "www.sw-architecture.de"
+  },
+  {
+    "name": "Architekturbüro Voigt",
+    "location": "Willmanndamm 7, 10827 Berlin",
+    "url": "www.uwevoigt.de"
+  },
+  {
+    "name": "B VIER GmbH",
+    "location": "Willmanndamm 8, 10827 Berlin",
+    "url": "www.b-vier.de"
+  },
+  {
+    "name": "Bräunlein + Kolb Architekten GbR",
+    "location": "Wilmersdorfer Str. 108, 10627 Berlin",
+    "url": "www.braeunlein-kolb.de"
+  },
+  {
+    "name": "Bräunlein + Kolb Architekten Ingenieure GbR",
+    "location": "Wilmersdorfer Str. 108, 10627 Berlin",
+    "url": "www.braeunlein-kolb.com"
+  },
+  {
+    "name": "Bräunlin + Kolb Architekten Ingenieure GbR",
+    "location": "Wilmersdorfer Str. 108, 10627 Berlin",
+    "url": "www.braeunlin-kolb.com"
+  },
+  {
+    "name": "Architektur und Raumkonzepte Berlin",
+    "location": "Wilmersdorfer Str. 12, 10585 Berlin",
+    "url": "www.arcept.de"
+  },
+  {
+    "name": "Maruhn Real Estate Service GmbH",
+    "location": "Wilmersdorfer Str. 60, 10627 Berlin",
+    "url": "www.mrei.de"
+  },
+  {
+    "name": "Kazanski · Keilhacker Urban Design · Architektur",
+    "location": "Wilsnacker Str. 43, 10559 Berlin",
+    "url": "www.urbandesign-architektur.com"
+  },
+  {
+    "name": "Rupert Ahlborn u. Partner BDA Dipl.-Ing. Architekten und Planer",
+    "location": "Wilsnacker Str. 45, 10559 Berlin",
+    "url": "www.ahlbornundpartner.de"
+  },
+  {
+    "name": "Zahn Architektur",
+    "location": "Windscheidstr. 12, 10627 Berlin",
+    "url": "www.zahn-architektur.de"
+  },
+  {
+    "name": "KLOTZBACH Architekten+Ingenieure",
+    "location": "Windscheidstr. 20, 10627 Berlin",
+    "url": "www.klotzbach.eu"
+  },
+  {
+    "name": "seckler architekten",
+    "location": "Winsstr. 12, 10405 Berlin",
+    "url": "www.secklerarchitekten.de"
+  },
+  {
+    "name": "Lien Tran Interior Design",
+    "location": "Winsstr. 12, 10405 Berlin",
+    "url": "www.lien-tran.com"
+  },
+  {
+    "name": "URBANSKY ARCHITEKTEN",
+    "location": "Winsstr. 12, 10405 Berlin",
+    "url": "www.urbansky-architekten.de"
+  },
+  {
+    "name": "WIEWIORRA STUDIO",
+    "location": "Wolliner Str. 50, 10435 Berlin",
+    "url": "www.wwstudio.de"
+  },
+  {
+    "name": "LANKES KOENGETER Architekten",
+    "location": "Wrangelstr. 100, 10997 Berlin",
+    "url": "www.lankeskoengeter.de"
+  },
+  {
+    "name": "ARCHITEKTUR + MODELL",
+    "location": "Wullenweberstr. 6, 10555 Berlin",
+    "url": "www.henrikhilsbos.de"
+  },
+  {
+    "name": "ALL | Architekten Landenberger + Lösekrug",
+    "location": "Wöhlertstr. 3, 10115 Berlin",
+    "url": "www.all-architekten.de"
+  },
+  {
+    "name": "Pfeiffer Sachse Architekten Unternehmergesellschaft (haftungsbeschränkt)",
+    "location": "Wörther Str. 33, 10405 Berlin",
+    "url": "www.ps-architekten.de"
+  },
+  {
+    "name": "Senatsverwaltung für Stadtentwicklung und Umwelt, Abt. IV",
+    "location": "Württembergische Str. 6, 10707 Berlin",
+    "url": "www.stadtentwicklung.berlin.de"
+  },
+  {
+    "name": "montagarchitekten",
+    "location": "Xantener Str. 8, 10707 Berlin",
+    "url": "www.montagarchitekten.de"
+  },
+  {
+    "name": "motaleb architekten",
+    "location": "Yorckstr. 74, 10965 Berlin",
+    "url": "www.motaleb.de"
+  },
+  {
+    "name": "KAWOKA Architekten",
+    "location": "Yorckstr. 89, 10965 Berlin",
+    "url": "www.kawoka.de"
+  },
+  {
+    "name": "Monari + Zitelli Architekten",
+    "location": "Yorckstraße 68, 10965 Berlin",
+    "url": "www.mozia.eu"
+  },
+  {
+    "name": "GausArchitekten",
+    "location": "Zehdenicker Str. 8, 10119 Berlin",
+    "url": "www.gausarchitekten.de"
+  },
+  {
+    "name": "Büro für Architektur Felicitas Mossmann",
+    "location": "Zellestr. 3, 10247 Berlin",
+    "url": "www.felicitas-mossmann.com"
+  },
+  {
+    "name": "Schirmer-Partner Landschaftsarchitekten BDLA",
+    "location": "Zillestr. 105, 10585 Berlin",
+    "url": "www.schirmer-partner.de"
+  },
+  {
+    "name": "Schirmer-Partner",
+    "location": "Zillestr. 105, 10585 Berlin",
+    "url": "www.scirmer-partner.de"
+  },
+  {
+    "name": "acht + Baumanagement + Immobilienberatung",
+    "location": "Zimmerstraße 90, 10117 Berlin",
+    "url": "www.achtplus.de"
+  },
+  {
+    "name": "spreeformat architekten GmbH",
+    "location": "Zinnowitzer Str. 1, 10115 Berlin",
+    "url": "www.spreeformat.com"
+  },
+  {
+    "name": "Studio Miessen",
+    "location": "Zionskirchstr. 68, 10119 Berlin",
+    "url": "www.studiomiessen.com"
+  },
+  {
+    "name": "BRICK Architekt",
+    "location": "Zionskirchstr. 69, 10119 Berlin",
+    "url": "www.brick.de"
+  },
+  {
+    "name": "JAN RÖSLER ARCHITEKTEN",
+    "location": "Zossener Str. 50, 10961 Berlin",
+    "url": "www.janroesler.de"
+  },
+  {
+    "name": "duos Architektur+",
+    "location": "Zossener Str. 55, 10961 Berlin",
+    "url": "www.duos-architektur.de"
+  },
+  {
+    "name": "dgk architekten GmbH",
+    "location": "Zossener Str. 55, 10961 Berlin",
+    "url": "www.dgk-architekten.de"
+  },
+  {
+    "name": "dkg architekten",
+    "location": "Zossener Str. 55, 10961 Berlin",
+    "url": "www.dgkarchitekten.de"
+  },
+  {
+    "name": "Technische Universität Berlin Inst. für Architektur, Fak. VI, Architekturtheorie",
+    "location": "des 17, 10623 Berlin",
+    "url": "www.architekturtheorie.tu-berlin.de"
+  }
+]

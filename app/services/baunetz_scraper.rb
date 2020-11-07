@@ -3,12 +3,7 @@ require 'json'
 require 'watir'
 
 class BaunetzScraper
-  def self.get_office_projects(office_link, office)
-    url = "https://www.baunetz-architekten.de#{office_link}"
-
-    html_string = open(url).read
-    html_doc = Nokogiri::HTML(html_string)
-
+  def self.get_office_projects(html_doc, office)
     office_banner = html_doc.css('div.profile-image__image').css('img').attribute('src').value
     office[:banner_url] = office_banner
 
@@ -20,7 +15,7 @@ class BaunetzScraper
       project_img_url = element.css('img.teaser-item-image__image').attribute('src').value
 
       project = { project_name: project_name, project_img_url: project_img_url }
-      puts "#{project_name}"
+      puts "- #{project_name}"
 
       projects << project
     end
@@ -28,54 +23,75 @@ class BaunetzScraper
     office[:projects] = projects
   end
 
-  def self.get_office_description(office_link, office)
-    url = "https://www.baunetz-architekten.de#{office_link}"
-
-    html_string = open(url).read
-    html_doc = Nokogiri::HTML(html_string)
-
+  def self.get_office_description(html_doc, office)
     office_description = html_doc.css('div.profile-meta__text').children.text.strip
 
     office[:description] = office_description
   end
 
-  def self.get_office_contact(office_link, office)
-    url = "https://www.baunetz-architekten.de#{office_link}"
+  def self.get_office_contact(html_doc, office, url)
+    office_name = html_doc.css('h1.profile__title').text.strip
+    puts ""
+    puts "// #{office_name}"
 
-    html_string = open(url).read
-    html_doc = Nokogiri::HTML(html_string)
+    street_regex = /[a-zäöüß-]+[\s[a-zäöüß-]]*.?\s+\d+/i
+    zip_regex = /\d+\s+\w+/i
 
-    office_street = html_doc.css('div.profile-meta-contact').children[2].text.strip
-    office_zip = html_doc.css('div.profile-meta-contact').children[4].text.strip
+    if html_doc.css('div.profile-meta-contact__switch').find{|e| e.text.include?("Berlin")}.attribute('class').value.include?("profile-meta-contact__switch--active")
+      office_street = html_doc.css('div.profile-meta-contact--active').children.find{|e| e.text =~ street_regex }.text[street_regex]
+      office_zip = html_doc.css('div.profile-meta-contact--active').children.find{|e| e.text =~ zip_regex}.text[zip_regex]
 
+      puts "#{office_street}, #{office_zip}"
+    else
+      browser = Watir::Browser.new
+      browser.goto("#{url}")
+      browser.div(class: 'profile-meta-contact__switch', text: 'Berlin').click
+
+      office_street = browser.div(class: 'profile-meta-contact--active').text[/[\r\n]+[a-zäöüß-]+[\s[a-zzäöüß-]]*.?\s+\d+/i][street_regex]
+      office_zip = browser.div(class: 'profile-meta-contact--active').text[/[\r\n]+(\w\W)?\d+\s+\w+/i][zip_regex]
+
+      browser.close
+
+      puts "#{office_street}, #{office_zip}"
+    end
+
+    office[:name] = office_name
     office[:location] = "#{office_street}, #{office_zip}"
 
-    office_url = html_doc.css('a:contains("www")').attribute('href').value
+    url_regex = /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/
+
+    office_url = html_doc.css('a:contains("www")').attribute('href').value[url_regex]
+    puts "#{office_url}"
 
     office[:url] = office_url
   end
 
   def self.get_offices
-    url = "https://www.baunetz-architekten.de"
+    index_url = "https://www.baunetz-architekten.de"
 
-    html_string = open(url).read
-    html_doc = Nokogiri::HTML(html_string)
+    index_html_string = open(index_url).read
+    index_html_doc = Nokogiri::HTML(index_html_string)
 
     offices = []
     office = {}
 
-    html_doc.css('a.abc-architect-link').each do |element|
-      office_name = element.css('span.abc-name').text
+    index_html_doc.css('a.abc-architect-link').each do |element|
       office_link = element.attribute('href').value
 
-      office = { name: office_name }
-      puts "=== #{office_name} ==="
+      url = "https://www.baunetz-architekten.de#{office_link}"
 
-      get_office_contact(office_link, office)
+      html_string = open(url).read
+      html_doc = Nokogiri::HTML(html_string)
 
-      get_office_description(office_link, office)
+      next if html_doc.css('div.profile-meta-contact__switch').children.find{|e| e.text == "Berlin"}.nil?
 
-      get_office_projects(office_link, office)
+      office = { baunetz_link: office_link }
+
+      get_office_contact(html_doc, office, url)
+
+      get_office_description(html_doc, office)
+
+      get_office_projects(html_doc, office)
 
       offices << office
     end
@@ -84,7 +100,7 @@ class BaunetzScraper
     offices.uniq!{ |office| office[:url] }
     offices.sort_by!{ |office| office[:name] }
 
-    p offices.count
+    puts "#{offices.count} offices were scraped!"
 
     json = JSON.pretty_generate(offices)
     File.open("db/offices.json", 'w') { |file| file.write(json) }

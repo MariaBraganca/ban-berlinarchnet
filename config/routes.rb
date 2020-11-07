@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     post "post_comment", to: "comments#create_post_comment"
   end
 
-  resources :offices, only: [:index, :show] do
+  resources :offices do
     resources :comments, only: [:destroy]
     post "office_comment", to: "comments#create_office_comment"
   end
@@ -46,7 +46,7 @@ Rails.application.routes.draw do
   end
 
   resources :search, only: [:index]
-  
+
   mount ActionCable.server => "/cable"
 
 end

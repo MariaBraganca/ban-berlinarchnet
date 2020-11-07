@@ -24,7 +24,10 @@
     <% architecture_average = (architecture_ratings.sum / architecture_ratings.size).round %> <!-- ARCHITECTURE -->
   <% end %>
 
-  <% unless office_within.banner_url.nil? || office_within.banner_url.empty? %>
+
+  <% if office_within.photo.attached? %>
+    <%= cl_image_tag(office_within.photo.key, :class => "card-list-img") %>
+  <% elsif office_within.banner_url %>
     <%= cl_image_tag(office_within.banner_url, :class => "card-list-img") %>
   <% end %>
   <section class="card-infos w-100">

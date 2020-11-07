@@ -1,8 +1,20 @@
 <!-- ***************  HEADER OFFICE  **************** -->
-<% unless @office.banner_url.nil? || @office.banner_url.blank? %>
+<% if @office.photo.attached?  %>
   <header class="banner">
     <div class="banner-overlay"></div>
-    <%= cl_image_tag(@office.banner_url, :class => "banner-image") %>
+      <%= cl_image_tag(@office.photo.key, :class => "banner-image") %>
+      <div class="banner-container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-4 font-weight-bold"><%= @office.name %></h1>
+          </div>
+        </div>
+      </div>
+  </header>
+<% elsif @office.banner_url %>
+  <header class="banner">
+    <div class="banner-overlay"></div>
+      <%= cl_image_tag(@office.banner_url, :class => "banner-image") %>
       <div class="banner-container h-100">
         <div class="d-flex h-100 text-center align-items-center">
           <div class="w-100 text-white">
@@ -15,8 +27,19 @@
 
 <main class="container">
   <!-- ***************  OVERVIEW  **************** -->
-  <h5 class="corporate my-5"><span class="red">·ban</span>office</h5>
-  <h1 class="font-weight-bold"><%= @office.name %></h1>
+  <header>
+    <h5 class="corporate my-5"><span class="red">·ban</span>office</h5>
+    <section class="row">
+      <div class="col-lg-9">
+        <h1 class="font-weight-bold"><%= @office.name %></h1>
+      </div>
+      <div class="col-lg-3">
+        <button class="btn btn-call w-100">
+          <%= link_to 'Edit Office', edit_office_path(@office) %>
+        </button>
+      </div>
+    </section>
+  </header>
 
   <section class="row my-5">
     <!-- ***************  ABOUT  **************** -->
@@ -83,6 +106,7 @@
     <section class="col-lg-6 mt-5 mt-lg-0">
       <h2 class="mb-3">Openings</h2>
       <% unless @office.openings.empty? %>
+        <p>Check these job openings: </p>
         <% @office.openings.each do |opening| %>
           <%= link_to opening_path(opening) do %>
             <%= render "shared/card-opening", opening_within: opening %>
