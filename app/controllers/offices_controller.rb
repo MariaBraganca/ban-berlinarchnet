@@ -1,5 +1,5 @@
 class OfficesController < ApplicationController
-  before_action :set_office, only: [:show]
+  before_action :set_office, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
@@ -12,7 +12,7 @@ class OfficesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { office: office })
       }
     end
-    
+
     if params[:query].present? && params[:order].present?
       if params[:order] == "@offices_arch"
         offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
@@ -51,10 +51,42 @@ class OfficesController < ApplicationController
     @comment = Comment.new
   end
 
+  def new
+    @office = Office.new
+    authorize @office
+  end
+
+  def create
+    @office = Office.new(office_params)
+    if @office.save
+      redirect_to office_path(@office)
+    else
+      render :new
+    end
+    authorize @office
+  end
+
+  def edit
+    authorize @office
+  end
+
+  def update
+    if @office.update(office_params)
+      redirect_to office_path(@office)
+    else
+      render :edit
+    end
+    authorize @office
+  end
+
   private
 
   def set_office
     @office = Office.find(params[:id])
+  end
+
+  def office_params
+    params.require(:office).permit(:name, :location, :url, :description, :photo)
   end
 
   def set_average

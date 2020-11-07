@@ -9,12 +9,12 @@ const initFlatpickr = () => {
     altInput: true,
     minDate: "today"
   });
-  const location =document.querySelector('#event_location')
+  const location =document.querySelector('.locationpicker')
   if(location) {
     var placesAutocomplete = places({
       appId: 'pl8XQR7LGT3A',
       apiKey: '97cf4ef438588fd18d8ebb1f470b59bb',
-      container: document.querySelector('#event_location'),
+      container: document.querySelector('.locationpicker'),
       templates: {
       value: function(suggestion) {
       return `${suggestion.name}, ${suggestion.postcode}, ${suggestion.city}`;

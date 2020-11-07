@@ -5,13 +5,13 @@ require 'json'
 
 #Reading Jsons
 
-# filepath = 'db/offices_projects.json'
-# serialized_offices = File.read(filepath)
-# offices = JSON.parse(serialized_offices)
-
 filepath = 'db/offices.json'
 serialized_offices = File.read(filepath)
 offices = JSON.parse(serialized_offices)
+
+filepath = 'db/offices_berlin.json'
+serialized_offices_berlin = File.read(filepath)
+offices_berlin = JSON.parse(serialized_offices_berlin)
 
 filepath = 'db/jobs.json'
 serialized_jobs = File.read(filepath)
@@ -27,6 +27,7 @@ posts = JSON.parse(serialized_posts)
 
 #N of seeds
 n_offices = offices.size
+n_offices_berlin = offices_berlin.size
 n_team_members = TEAM_MEMBER_NAME.size
 n_users = 35
 n_posts = posts.size
@@ -39,7 +40,7 @@ n_comments = 40
 
 #Seedings
 
-phase = "office"
+phase = "offices"
 puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
 terminal_counter = 1
@@ -62,6 +63,29 @@ offices.each do |office|
       end
     end
   puts "=== Office seeded <=> #{terminal_counter} out of #{n_offices} ==="
+  terminal_counter += 1
+end
+puts "
+
+
+"
+puts "Random #{phase} sample:"
+p Office.find(rand(1..Office.all.count))
+puts "
+
+
+"
+phase = "offices in berlin"
+puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
+
+terminal_counter = 1
+
+# Offices from Architekturkammer
+offices_berlin.each do |office|
+  Office.create(name: office["name"],
+                location: office["location"],
+                url: office["url"])
+  puts "=== Office seeded <=> #{terminal_counter} out of #{n_offices_berlin} ==="
   terminal_counter += 1
 end
 puts "

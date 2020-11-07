@@ -1,0 +1,28 @@
+<main class="container min-vh-100">
+  <!-- ***************  OFFICE NEW FORM  **************** -->
+  <section class="row my-5 form-card">
+    <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-12 form-infos">
+      <h1 class="corporate text-center"><span class="red">·ban</span>office new·</h1>
+      <%= simple_form_for(@office, remote: true) do |f| %>
+        <%= f.input :name, as: :string, required: true %> <!-- NAME -->
+        <div class="row">
+          <div class="col-lg-8">
+            <%= f.rich_text_area :description, style: "min-height: 300px;" %> <!-- DESCRIPTION -->
+          </div>
+          <div class="col-lg-4">
+            <%= f.input :url, as: :string, required: true %> <!-- URL -->
+            <%= f.input :location, as: :string, input_html: { class: "locationpicker"}, required: true %> <!-- LOCATION -->
+            <%= f.input :photo,
+                as: :file,
+                label_html: { class: "label-cover" },
+                label: true  %> <!-- BANNER -->
+          </div>
+        </div>
+        <%= f.button :submit, class: 'btn btn-call w-100' %> <!-- SUBMIT -->
+      <% end %>
+    </section>
+  </section>
+</main>
+
+

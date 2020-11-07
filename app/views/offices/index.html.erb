@@ -1,8 +1,17 @@
 <main class="container min-vh-100">
 	<!-- ***************  HEADER OFFICE  **************** -->
-	<header class="text-center my-5">
-		<h1 class="font-weight-bold">Offices</h1>
-		<p>Check out architecture offices in Berlin!</p>
+	<header class="row justify-content-center my-5">
+    <!-- ***************  INFO  **************** -->
+    <section class="col-12 text-center">
+      <h1 class="font-weight-bold">Offices</h1>
+      <p>Check out architecture offices in Berlin!</p>
+    </section>
+    <!-- ***************  ADD AN OFFICE **************** -->
+    <% if user_signed_in? %>
+      <section class="col-lg-6">
+        <button class="btn btn-attend w-100"><%= link_to "Create an office", new_office_path %></button>
+      </section>
+    <% end %>
 	</header>
 
 	<!-- ***************  SEARCH / SORT  **************** -->

@@ -7,7 +7,9 @@
     </div>
     <% if current_user == @user %>
       <div class="col-lg-3">
-        <button class='btn btn-call w-100'><%= link_to 'Edit Dashboard', edit_user_registration_path %></button>
+        <button class='btn btn-call w-100'>
+          <%= link_to 'Edit Dashboard', edit_user_registration_path %>
+        </button>
       </div>
     <% else %>
       <div class="col-lg-3">
@@ -25,7 +27,7 @@
     <!-- ***************  ABOUT  **************** -->
     <section class="col-12 col-lg-6">
       <h2 class="mb-5">About</h2>
-      <div class="text-center mb-3"> 
+      <div class="text-center mb-3">
         <% if @user.photo.attached? %>
           <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
         <% elsif @user.cl_img_tag %>
