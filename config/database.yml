@@ -25,6 +25,8 @@ development:
   <<: *default
   database: ban_berlinarchnet_development
 
+  # encoding: unicode
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -83,3 +85,11 @@ production:
   database: ban_berlinarchnet_production
   username: ban_berlinarchnet
   password: <%= ENV['BAN_BERLINARCHNET_DATABASE_PASSWORD'] %>
+
+# external database
+external_job_database:
+  adapter: postgresql
+  database: d95u1j4larllbi
+  username: <%= ENV.fetch("EXTERNAL_JOB_DATABASE_USERNAME") %>
+  password: <%= ENV.fetch("EXTERNAL_JOB_DATABASE_PASSWORD") %>
+  host: ec2-54-73-90-195.eu-west-1.compute.amazonaws.com
