@@ -88,7 +88,3 @@
   # office: show (if office_id)
 
 # 7. Alternative: Connect databases?
-
-
-
-
