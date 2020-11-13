@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'jobs/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'notifications/index'
   get 'chatrooms/show'
@@ -44,6 +45,8 @@ Rails.application.routes.draw do
       post :mark_as_read
     end
   end
+
+  # resources :jobs, only: [:index]
 
   resources :search, only: [:index]
 

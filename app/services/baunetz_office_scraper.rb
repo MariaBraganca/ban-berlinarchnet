@@ -2,7 +2,7 @@ require 'open-uri'
 require 'json'
 require 'watir'
 
-class BaunetzScraper
+class BaunetzOfficeScraper
   def self.get_office_projects(html_doc, office)
     office_banner = html_doc.css('div.profile-image__image').css('img').attribute('src').value
     office[:banner_url] = office_banner
