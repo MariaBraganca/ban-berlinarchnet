@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'json'
-require 'watir'
+require 'resolv-replace'
 
 class BaunetzOfficeScraper
   def self.get_office_projects(html_doc, office)
@@ -60,7 +60,12 @@ class BaunetzOfficeScraper
 
     url_regex = /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/
 
-    office_url = html_doc.css('a:contains("www")').attribute('href').value[url_regex]
+    office_url = html_doc.css('div.profile-meta-contact.profile-meta-contact--active').css('a').find{|a| !a.attribute('href').value.include?("mail")}.attribute('href').value.downcase[url_regex]
+
+    if !office_url.include?('www.')
+      office_url = "www." + office_url
+    end
+
     puts "#{office_url}"
 
     office[:url] = office_url

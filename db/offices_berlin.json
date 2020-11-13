@@ -40,6 +40,11 @@
     "url": "www.chezweitz.de"
   },
   {
+    "name": "Baumhauer Gesellschaft von Architekten mbH",
+    "location": "Adalbertstr. 5, 10999 Berlin",
+    "url": "www.baumhauer.com"
+  },
+  {
     "name": "Duncan McCauley GmbH und Co. KG",
     "location": "Adalbertstr. 6, 10999 Berlin",
     "url": "www.duncanmccauley.com"
@@ -53,6 +58,11 @@
     "name": "Staab Architekten GmbH",
     "location": "Akazienstr.  21, 10823 Berlin",
     "url": "www.staab-architekten.com"
+  },
+  {
+    "name": "WÜRSCHINGER Architekten Gesellschaft mit beschränkter Haftung",
+    "location": "Akazienstr. 29, 10823 Berlin",
+    "url": "www.wuerschingerarchitekten.com"
   },
   {
     "name": "Dipl.-Ing.(FH) MSc. Dipl.-Kfm.(FH) studio weissschwarz",
@@ -70,7 +80,7 @@
     "url": "www.kadenundlager.de"
   },
   {
-    "name": "Kadawittfeldarchitektur",
+    "name": "kadawittfeldarchitektur GmbH",
     "location": "Alexanderstr. 7, 10178 Berlin",
     "url": "www.kadawittfeldarchitektur.de"
   },
@@ -107,7 +117,7 @@
   {
     "name": "HMGB Architekten",
     "location": "Alt-Moabit 19, 10559 Berlin",
-    "url": "hmgb.net"
+    "url": "www.hmgb.net"
   },
   {
     "name": "Architekturladen-Berlin",
@@ -205,6 +215,11 @@
     "url": "www.ute-vielberth.de"
   },
   {
+    "name": "Simone Krieg",
+    "location": "An der Bucht 71, 10317 Berlin",
+    "url": "www.kber.de"
+  },
+  {
     "name": "BE+ Architekten",
     "location": "Andreasstr. 10, 10243 Berlin",
     "url": "www.beplus-architekten.de"
@@ -232,7 +247,7 @@
   {
     "name": "LA 21 Landschaftsarchitektur",
     "location": "Ansbacher Str. 45, 10777 Berlin",
-    "url": "la-21.com"
+    "url": "www.la-21.com"
   },
   {
     "name": "Büro Phillipp Oswalt",
@@ -290,11 +305,6 @@
     "url": "www.gruentuchernst.de"
   },
   {
-    "name": "Grüntuch Ernst Architekten",
-    "location": "Auguststr. 51, 10119 Berlin",
-    "url": "gruentuchernst.de"
-  },
-  {
     "name": "atelier le balto",
     "location": "Auguststr. 69, 10117 Berlin",
     "url": "www.lebalto.de"
@@ -322,7 +332,7 @@
   {
     "name": "Multiplan Bauplanungs GmbH",
     "location": "Badensche Str. 33, 10715 Berlin",
-    "url": "ugk-berlin.de"
+    "url": "www.ugk-berlin.de"
   },
   {
     "name": "Harms Wulf Landschaftsarchitekten",
@@ -332,7 +342,7 @@
   {
     "name": "Dubois Muhler Neitzke Architekten + Ingenieure GbR",
     "location": "Baerwaldstr.38, 10961 Berlin",
-    "url": "dmn-architekten.de"
+    "url": "www.dmn-architekten.de"
   },
   {
     "name": "sol.id.ar Architekten und Ingenieure",
@@ -782,7 +792,7 @@
   {
     "name": "playze",
     "location": "Choriner Str. 50, 10435 Berlin",
-    "url": "playze.com"
+    "url": "www.playze.com"
   },
   {
     "name": "Patrik Sonntag Architekt",
@@ -967,7 +977,7 @@
   {
     "name": "BBS Landscape Engineering GmbH",
     "location": "Derfflingerstr. 6, 10785 Berlin",
-    "url": "bbs-landscape.com"
+    "url": "www.bbs-landscape.com"
   },
   {
     "name": "ATELIER ZAFARI",
@@ -1260,7 +1270,7 @@
     "url": "www.2a-bauart.de"
   },
   {
-    "name": "Bundesanstalt für Immobilienaufgaben Facility Management",
+    "name": "Bundesanstalt für Immobilienaufgaben",
     "location": "Fasanenstr. 87, 10623 Berlin",
     "url": "www.bundesimmobilien.de"
   },
@@ -1390,6 +1400,11 @@
     "url": "www.gse-architekten.de"
   },
   {
+    "name": "Tom Winter Architects",
+    "location": "Friedrichstr. 171, 10117 Berlin",
+    "url": "www.tomwinter.com"
+  },
+  {
     "name": "Zahra Breshna Consulting",
     "location": "Friedrichstr. 171, 10117 Berlin",
     "url": "www.breshna-consulting.com"
@@ -1438,6 +1453,11 @@
     "name": "raspé_architekten",
     "location": "Fritschestr. 24, 10585 Berlin",
     "url": "www.raspe-architekten.de"
+  },
+  {
+    "name": "Duane Phillips Architekture & Masterplanning",
+    "location": "Fritschestr. 26, 10585 Berlin",
+    "url": "www.dp-arch.de"
   },
   {
     "name": "c/o atelier 8",
@@ -1702,7 +1722,7 @@
   {
     "name": "Preibisz Architekten",
     "location": "Grolmanstr. 27, 10623 Berlin",
-    "url": "apcon-berlin.de"
+    "url": "www.apcon-berlin.de"
   },
   {
     "name": "Georg Bumiller Gesellschaft von Architekten mbH",
@@ -1727,7 +1747,7 @@
   {
     "name": "widak siegert gmbh",
     "location": "Grunewaldstr. 18, 10823 Berlin",
-    "url": "wsg.berlin"
+    "url": "www.wsg.berlin"
   },
   {
     "name": "Julie Biron Architektin",
@@ -2212,7 +2232,7 @@
   {
     "name": "David Chipperfield Architects",
     "location": "Joachimstr. 11, 10119 Berlin",
-    "url": "davidchipperfield.com"
+    "url": "www.davidchipperfield.com"
   },
   {
     "name": "Hübner + Oehmig",
@@ -2545,14 +2565,14 @@
     "url": "www.hlzfr.com"
   },
   {
+    "name": "TSSB architekten.ingenieure",
+    "location": "Klosterstr. 62, 10179 Berlin",
+    "url": "www.tssb.de"
+  },
+  {
     "name": "neo Projektsteuerung und Bau- management GmbH",
     "location": "Klosterstr. 62, 10179 Berlin",
     "url": "www.neo-pb.com"
-  },
-  {
-    "name": "TSSB Berlin",
-    "location": "Klosterstr. 62, 10179 Berlin",
-    "url": "www.tssb.de"
   },
   {
     "name": "Alfred Meistermann Architekt",
@@ -2690,6 +2710,11 @@
     "url": "www.treibhausberlin.de"
   },
   {
+    "name": "Lavaland GmbH Laura Vahl Landschaftsarchitektur",
+    "location": "Kottbusser Damm 74, 10967 Berlin",
+    "url": "www.lavaland.biz"
+  },
+  {
     "name": "Bundesministerium des Inneren, für Bau und Heimat, Ref. BW | 1",
     "location": "Krausenstr. 17, 10117 Berlin",
     "url": "www.bmi.bund.de"
@@ -2757,7 +2782,7 @@
   {
     "name": "A2F Architekten GmbH",
     "location": "Kuglerstr. 16, 10439 Berlin",
-    "url": "a2f.de"
+    "url": "www.a2f.de"
   },
   {
     "name": "Studio Kristina Wiese",
@@ -2905,6 +2930,11 @@
     "url": "www.korzynietz-architekten.de"
   },
   {
+    "name": "Wiese Architekten",
+    "location": "Köpenicker Chaussee 2, 10317 Berlin",
+    "url": "www.wiesearchitekten.de"
+  },
+  {
     "name": "studio O",
     "location": "Köpenicker Chaussee 31, 10317 Berlin",
     "url": "www.studioo.cc"
@@ -2983,6 +3013,11 @@
     "name": "Kampmann Fiedler Fabianski Architekten PartGmbB",
     "location": "Köpenicker Str. 9, 10997 Berlin",
     "url": "www.kampmann-partner.de"
+  },
+  {
+    "name": "BrünjesTyrra Architekten PartGmbB",
+    "location": "Köpenicker Straße 94, 10179 Berlin",
+    "url": "www.bruenjestyrra.de"
   },
   {
     "name": "Fabian Berthold Architekt BDA",
@@ -3092,7 +3127,7 @@
   {
     "name": "EXTERN Garten- und Landschaftsarchitektur",
     "location": "Leibnizstr. 28, 10625 Berlin",
-    "url": "externlandscape.wixsite.com"
+    "url": "www.externlandscape.wixsite.com"
   },
   {
     "name": "se.g architekten (Studio Eichstädt.Gresser)",
@@ -3237,7 +3272,7 @@
   {
     "name": "Ten Brinke.Berlin",
     "location": "Lietzenburger Str. 46, 10789 Berlin",
-    "url": "tenbrinke-berlin.com"
+    "url": "www.tenbrinke-berlin.com"
   },
   {
     "name": "Stauber Associates project-services GmbH",
@@ -3545,6 +3580,11 @@
     "url": "www.bollinger-fehlig.de"
   },
   {
+    "name": "nk Neumann + Kafert Bürogemeinschaft für Architektur und Innenarchitektur",
+    "location": "Mehringdamm 50, 10961 Berlin",
+    "url": "www.neumann-kafert.de"
+  },
+  {
     "name": "Claudius Markworth Architektur",
     "location": "Mehringdamm 89, 10965 Berlin",
     "url": "www.c-markworth.com"
@@ -3595,6 +3635,11 @@
     "url": "www.hesse-partner.de"
   },
   {
+    "name": "Mensing Timofticiuc Architekten",
+    "location": "Mittenwalder Str. 8, 10961 Berlin",
+    "url": "www.mensingtimofticius.com"
+  },
+  {
     "name": "Hoyer Architekten Berlin BDA",
     "location": "Molkenmarkt 2, 10179 Berlin",
     "url": "www.hab-architektur.de"
@@ -3617,7 +3662,7 @@
   {
     "name": "Christoph Kohl Architekten GmbH",
     "location": "Mommsenstr. 5, 10629 Berlin",
-    "url": "christophkohl.com"
+    "url": "www.christophkohl.com"
   },
   {
     "name": "Sting Architekten GmbH",
@@ -3655,6 +3700,11 @@
     "url": "www.stefanbernard.de"
   },
   {
+    "name": "plateau landschaftsarchitekten böringer diehl gleue hilt schäfer Partnerschaft mbB",
+    "location": "Monumentenstr. 33, 10829 Berlin",
+    "url": "www.plateau-la.de"
+  },
+  {
     "name": "Sackmann Payer Architects",
     "location": "Monumentenstr. 33, 10829 Berlin",
     "url": "www.sackmannpayer.com"
@@ -3665,11 +3715,6 @@
     "url": "www.relaisla.de"
   },
   {
-    "name": "plateau landschaftsarchitekten böringer diehl gleue hilt schäfer Partnerschaft mbB",
-    "location": "Monumentenstr. 33, 10829 Berlin",
-    "url": "www.plateau-la.de"
-  },
-  {
     "name": "hb°architektur",
     "location": "Moritzstr. 6, 10969 Berlin",
     "url": "www.hbarchitektur.de"
@@ -3678,11 +3723,6 @@
     "name": "Architekturbüro Dr. Mertens Architekt BDA",
     "location": "Märkisches Ufer 34, 10179 Berlin",
     "url": "www.mertarch.de"
-  },
-  {
-    "name": "Architekturbüro Dr. Mertens, Architekt BDA",
-    "location": "Märkisches Ufer 34, 10179 Berlin",
-    "url": null
   },
   {
     "name": "PLAANPOOL Architekten Tangerding Kurth PartGmbB",
@@ -3867,7 +3907,7 @@
   {
     "name": "THOMAS BEYER ARCHITEKTEN",
     "location": "Oranienburger Str. 16, 10178 Berlin",
-    "url": "beyerarchitekten.de"
+    "url": "www.beyerarchitekten.de"
   },
   {
     "name": "HKA Hastrich Keuthage Architekten",
@@ -3980,6 +4020,11 @@
     "url": "www.hastenteufel.de"
   },
   {
+    "name": "!kc architektur&design",
+    "location": "Paretzer Str. 1, 10713 Berlin",
+    "url": "www.kc-architektur.com"
+  },
+  {
     "name": "Eckert + Honegger Architekten mbH",
     "location": "Pariser Str. 44, 10707 Berlin",
     "url": "www.eckert-honegger.de"
@@ -4083,6 +4128,11 @@
     "name": "Mihlan TGA Baumanagement",
     "location": "Pestalozzistr. 29, 10625 Berlin",
     "url": "www.tga-bau.de"
+  },
+  {
+    "name": "studio2020 Matzat Henkel GbR",
+    "location": "Petersburger Str. 87, 10247 Berlin",
+    "url": "www.studio2020.eu"
   },
   {
     "name": "Obermeyer Planen + Beraten GmbH",
@@ -4207,7 +4257,7 @@
   {
     "name": "TREILING architekten",
     "location": "Potsdamer Str. 105, 10785 Berlin",
-    "url": "treiling.com"
+    "url": "www.treiling.com"
   },
   {
     "name": "KSB Architekten + Ingenieure Kummer Sannig Bausch",
@@ -4270,6 +4320,11 @@
     "url": "www.allenkaufmann.de"
   },
   {
+    "name": "Architektengemeinschaft Dietrich Sukhova",
+    "location": "Prinzessinnenstr. 1, 10961 Berlin",
+    "url": "www.evalmdietrich.com"
+  },
+  {
     "name": "Beusterien . Architekturbüro B.AB",
     "location": "Prinzessinnenstr. 1, 10969 Berlin",
     "url": "www.b-ab.de"
@@ -4283,6 +4338,11 @@
     "name": "Atelier Borgelt + Jost Architektur und Stadtplanung",
     "location": "Prinzessinnenstr. 1, 10969 Berlin",
     "url": "www.atelier-borgelt-jost.de"
+  },
+  {
+    "name": "Simone Boldrin Architettura",
+    "location": "Prinzessinnenstr. 1, 10969 Berlin",
+    "url": "www.sba.berlin"
   },
   {
     "name": "deluse architects",
@@ -4392,7 +4452,7 @@
   {
     "name": "Büro Claus H. Bellmer",
     "location": "Revaler Str. 99, 10245 Berlin",
-    "url": "clausbellmer.wordpress.com"
+    "url": "www.clausbellmer.wordpress.com"
   },
   {
     "name": "SL/A Stefan Lippert / Architekt",
@@ -4522,7 +4582,7 @@
   {
     "name": "Laboratory for Visionary Architecture (LAVA) Berlin GmbH",
     "location": "Saarbrücker Str. 24, 10405 Berlin",
-    "url": "l-a-v-a.net"
+    "url": "www.l-a-v-a.net"
   },
   {
     "name": "McFIT GLOBALGROUP GmbH Creative Office Berlin",
@@ -4585,14 +4645,14 @@
     "url": "www.dgi-bauwerk.de"
   },
   {
-    "name": "DGI Bauwerk",
-    "location": "Schillstr. 9, 10785 Berlin",
-    "url": "dgi-bauwerk.de"
-  },
-  {
     "name": "Herwarth + Holz Planung und Architektur",
     "location": "Schinkelplatz 5, 10117 Berlin",
     "url": "www.herwarth-holz.eu"
+  },
+  {
+    "name": "baulampe architekten",
+    "location": "Schivelbeiner Str. 49, 10439 Berlin",
+    "url": "www.baulampe.de"
   },
   {
     "name": "Casa Nova Architekten BDA Reinhold - von Lengerke - Schulze",
@@ -4805,6 +4865,11 @@
     "url": "www.birkezimmermann.de"
   },
   {
+    "name": "Architekturbüro Hallier",
+    "location": "Schwiebusser Str. 45, 10965 Berlin",
+    "url": "www.architekten-hallier.de"
+  },
+  {
     "name": "blaufisch architekten",
     "location": "Schwiebusser Str.42, 10965 Berlin",
     "url": "www.blaufisch-architekten.de"
@@ -4900,6 +4965,11 @@
     "url": "www.love-home.com"
   },
   {
+    "name": "Busch & Takasaki Architekten PartG mbB",
+    "location": "Schönstedtstr. 7, 10243 Berlin",
+    "url": "www.buschtakasaki.de"
+  },
+  {
     "name": "HPP Architekten GmbH",
     "location": "Schützenstr. 6, 10117 Berlin",
     "url": "www.hpp.com"
@@ -4922,7 +4992,7 @@
   {
     "name": "n|vier Architekten",
     "location": "Seumestr. 25, 10245 Berlin",
-    "url": "n-vier.de"
+    "url": "www.n-vier.de"
   },
   {
     "name": "Hölzer + Co Planungsgesellschaft mbH",
@@ -4975,6 +5045,11 @@
     "url": "www.united-land.de"
   },
   {
+    "name": "moeller raupach",
+    "location": "Sophienstr. 32, 10178 Berlin",
+    "url": "www.moellermoellerraupach.com"
+  },
+  {
     "name": "platena+jagusch.architekten, Partnerschaftsgesellschaft mbB",
     "location": "Sophienstr. 33, 10178 Berlin",
     "url": "www.pja-berlin.de"
@@ -5020,6 +5095,11 @@
     "url": "www.raumstar.de"
   },
   {
+    "name": "ofórm interior & lighting design",
+    "location": "Stendaler Str. 4, 10559 Berlin",
+    "url": "www.oform.de"
+  },
+  {
     "name": "Bezirksamt Pankow Abt. Stadtentwicklung",
     "location": "Storkower Str. 97, 10407 Berlin",
     "url": "www.verwalt-berlin.de"
@@ -5062,7 +5142,7 @@
   {
     "name": "TU Berlin - Urban Design and Architecture",
     "location": "Straße des 17, 10623 Berlin",
-    "url": "cud.architektur.tu-berlin.de"
+    "url": "www.cud.architektur.tu-berlin.de"
   },
   {
     "name": "KLAUS ROTH architekten bda",
@@ -5137,7 +5217,7 @@
   {
     "name": "platena + jagusch.architekten Partnerschaftsgesellschaft mbB",
     "location": "Tauentzienstr. 9, 10789 Berlin",
-    "url": "pja-berlin.com"
+    "url": "www.pja-berlin.com"
   },
   {
     "name": "Jordi & Keller Architekten",
@@ -5350,6 +5430,11 @@
     "url": "www.lorenzenmayer.de"
   },
   {
+    "name": "kubix GmbH",
+    "location": "Waldemarstr. 33, 10999 Berlin",
+    "url": "www.kubix-berlin.de"
+  },
+  {
     "name": "ST raum a. Gesellschaft von Landschaftsarchitekten mbH",
     "location": "Waldemarstr. 33, 10999 Berlin",
     "url": "www.strauma.com"
@@ -5512,7 +5597,7 @@
   {
     "name": "SMV Bauprojektsteuerung Ingenieurgesellschaft mbH",
     "location": "Wichmannstr. 5, 10787 Berlin",
-    "url": "smv.com"
+    "url": "www.smv.com"
   },
   {
     "name": "Pohl-Architektur",
@@ -5592,17 +5677,12 @@
   {
     "name": "ISSS research | architecture | urbanism Sabatier Schwarz Architekten PartGmbB",
     "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
-    "url": "isssresearch.com"
+    "url": "www.isssresearch.com"
   },
   {
     "name": "SCHLIEFER ARCHITEKTEN",
     "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
     "url": "www.schliefer--architekten.de"
-  },
-  {
-    "name": "ISSS research | architecture | urbanism Sabatier  Sabatier Schwarz Architekten PartGmbB",
-    "location": "Wilhelmine-Gemberg-Weg 14, 10179 Berlin",
-    "url": "www.isssresearch.com"
   },
   {
     "name": "WGA Deutschland GmbH",

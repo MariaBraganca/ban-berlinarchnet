@@ -286,6 +286,32 @@
     ]
   },
   {
+    "baunetz_link": "/b-e-h-l-e-s-und-j-o-c-h-i-m-s-e-n/2294927",
+    "name": "B E H L E S & J O C H I M S E N",
+    "location": "Wikingerufer 7, 10555 Berlin",
+    "url": "www.behlesjochimsen.de",
+    "description": "Uns interessiert Architektur, die sowohl körperlich erfahren als auch kulturell verstanden wird. Voraussetzung für das subjektive Erleben des Baukörpers ist seine Wahrnehmung als Entität, zu der sich der Rezipient ins Verhältnis setzen kann und die ihm eine begriffliche Beschreibung seiner Erfahrung ermöglicht.Neben die Wahrnehmung der Architektur an sich tritt ein nachvollziehbares Verhältnis zum Ort, zur Landschaft, zur Stadt. Unter Stadt verstehen wir dabei eine Gesellschaft von Häusern, die fähig sind zum Dialog untereinander, aber auch für sich stehen können. Architektur muss sich jedoch nicht nur am konkreten Ort positionieren, sondern auch in einem kulturellen Raum. Die Bezugnahme auf oder Verarbeitung von kulturellem Material – dieses stammt vor allem aus dem Fundus der Architektur selbst, aber auch aus anderen Sphären – ermöglicht dem Betrachter einen rationalen und/oder assoziativen Zugang zum Werk.Jenseits dieser Ebene der Fremdreferentialität muss der Entwurf eine weitere Schicht einer projektimmanenten, selbstbezüglichen Logik entwickeln. Nur wenn dies gelingt und das Projekt damit auch aus seinen Bedingungen gelöst bestehen kann, hat es die Chance, selbst wieder zu anschlussfähigem kulturellem Material zu werden.",
+    "banner_url": "https://www.baunetz-architekten.de",
+    "projects": [
+      {
+        "project_name": "2Raumwohnung im Haus des Kindes",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/2/2/6/4/3/7/ae5105686a516b9b.jpg"
+      },
+      {
+        "project_name": "Kindertagesstätte in Berlin-Oberschöneweide",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/2/2/6/4/2/9/21c0ab03ab424dbb.jpg"
+      },
+      {
+        "project_name": "Wohnung im Haus See-Eck",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/2/2/6/4/1/9/92c7b9b2864bf6a7.jpg"
+      },
+      {
+        "project_name": "Institutsgebäude Iberoamerikanistik FU Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/2/2/6/4/0/7/c4c30e8718f4957a.jpg"
+      }
+    ]
+  },
+  {
     "baunetz_link": "/b-vier/31419",
     "name": "B VIER",
     "location": "Willmanndamm 8, 10827 Berlin",
@@ -447,7 +473,7 @@
     "location": "Anklamer Straße 32, 10115 Berlin",
     "url": "www.bertron-schwarz-frey.de",
     "description": "",
-    "banner_url": "https://www.baunetz-architekten.de/img/1/4/6/3/7/3/9/bac06a675b92955d.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "Gemäldegalerie im Quistorp-Gebäude",
@@ -522,10 +548,10 @@
   {
     "baunetz_link": "/buero-213/31225",
     "name": "Büro 213",
-    "location": "Sophienstraße 18, 10178 Berlin",
+    "location": "Büro 213, 10178 Berlin",
     "url": "www.zweieinsdrei.de",
     "description": "Multidisziplinäres Arbeiten in Theorie und PraxisKünstler, Theoretiker, Musiker, Grafiker, Softwareexperten, Programmierer, Anwälte, Bauleiter, Fotografen, Landschaftsarchitekten und ...Traditionelle BauaufgabenInitiierung von ProjektenDie Herausforderung hybride und interdisziplinäre Arbeitsformen im planerischen und konzeptionellen Bereich zu erproben, hat im März 1997 zur Gründung des Büro 213 geführt. Neben Planern, Theoretikern und bildenden Künstlern arbeiten wir mit Softwareexperten und Grafikern zusammen. Wir bauen lose Netzwerke auf und arbeiten überwiegend in interdisziplinären Teams.Wir verfolgen traditionelle Bauaufgaben wie Gewerbebauten und Wohnungsbau - unter der Einbeziehung lokaler und regionaler Umstände - genauso intensiv wie die Entwicklung innovativer, multifunktionaler Kleinstarchitekturen.Die Möglichkeit so zu arbeiten, resultiert aus einer intensiven Nutzung von neuen Technologien. Wir sind der festen Überzeugung, dass sich durch den Einsatz neuer Materialien und neuer Technologien kostengünstige, ökologische Projekte verwirklichen lassen.Die Verbreitung unserer Ideen und Projekte nehmen wir selbst in die Hand. Neben realen Gebäuden werden sie in Ausstellungen, Büchern, Texten und Installationen präsentiert. Unser Interesse gilt auch Orten, die abseits liegen - neuen Zusammenhängen und Zwischenräumen, die dringender Aufmerksamkeit bedürfen.",
-    "banner_url": "https://www.baunetz-architekten.de/img/1/4/5/9/7/8/2772d8b873ffcea8.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "Hotel Wedina",
@@ -586,6 +612,32 @@
       {
         "project_name": "LAMAISON hotel****",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/4/5/5/9/3/3/26b3fa794a17c9c6.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/ckrs/2327077",
+    "name": "CKRS Architekten",
+    "location": "Möckernstraße 111, 10963 Berlin",
+    "url": "www.ckrs-architekten.de",
+    "description": "CKRS Architekten arbeiten seit 2013 in den Bereichen Wohnungsbau, Schulbau und Gewerbebau für öffentliche und private Bauherren. Das Ziel unserer Arbeit ist der Entwurf und die Realisierung hochwertiger, innovativer Architektur in enger Zusammenarbeit mit den Bauherren. Für jedes Projekt entwerfen wir individuelle Konzepte, die wir lösungsorientiert, wirtschaftlich und nachhaltig umsetzen.Wir bieten alle Leistungsphasen an – von der Wettbewerbsbearbeitung über die Entwurfsplanung, Ausführungsplanung, Ausschreibung bis zur Bauleitung und Dokumentation (LP 1-9). Regelmäßig sind wir als Generalplaner verantwortlicher Vertragspartner für unsere Auftraggeber und binden alle notwendigen Fachplaner ein.Neben unserer Erfahrung im Massivbau haben wir eine langjährige Holzbau-Expertise im Wohnungs- und Gewerbebau. Einige unserer Projekte sind preisgekrönt und in Zeitschriften und Ausstellungen veröffentlicht.Im Rahmen unserer Lehr- und Forschungstätigkeit an verschiedenen Hochschulen (UdK Berlin, TU Braunschweig, HS Bremen, BTU Cottbus) setzen wir uns kontinuierlich mit aktuellen Tendenzen der zeitgemäßen Architektur auseinander. Darüber hinaus sind wir berufspolitisch engagiert und in der Vertreterversammlung der Architektenkammer Berlin sowie im Bund Deutscher Architekten (BDA) in verschiedenen Ausschüssen und Arbeitskreisen vertreten.CKRS Architekten sind aus den Büros Clarke und Kuhn freie Architekten und Rozynski_Sturm Architekten hervorgegangen.",
+    "banner_url": "https://www.baunetz-architekten.de/img/1/2/4/0/4/1/9/ckrs_projektbild-f38c74c21d0868c1.jpeg",
+    "projects": [
+      {
+        "project_name": "Verwaltungsgebäude Evangelischer Friedhofsverband, Berlin-Neukölln",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/2/1/7/0/2/Unbenannt-5-6997eeab428234b9.jpg"
+      },
+      {
+        "project_name": "JOWAT Haus der Technik, Detmold",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/5/0/6/6/3/CKRS_JOWAT_01__c_Stefan-Mueller-f84f77aaabb5efd0.jpg"
+      },
+      {
+        "project_name": "Wohnen am Schlosspark-Berlin-Pankow",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/5/0/6/8/1/euhfghj-5f85b7b994dc3d50.jpg"
+      },
+      {
+        "project_name": "Quartier Heidestraße, Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/6/3/1/2/8/120352670_0c6f7d9a68-9e8a805c3ac654b9.jpg"
       }
     ]
   },
@@ -1102,6 +1154,28 @@
     ]
   },
   {
+    "baunetz_link": "/glahn-architekten/4749983",
+    "name": "Glahn Architekten",
+    "location": "Sprengelstrasse 4, 13353 Berlin",
+    "url": "www.glahn-architekten.de",
+    "description": "",
+    "banner_url": "https://www.baunetz-architekten.de/img/2/0/2/3/4/1/7/glahn_projektbild-4a8d0c0da020c9ae.jpg",
+    "projects": [
+      {
+        "project_name": "LÖWEN-APOTHEKE",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/0/2/3/4/4/1/2bddd4c2a40b27d3.jpeg"
+      },
+      {
+        "project_name": "HAUS N",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/0/2/3/4/3/4/07ca2b1f8040def9.jpeg"
+      },
+      {
+        "project_name": "MEDLOFT",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/0/2/3/4/4/5/4e6b9a44b9f93879.jpeg"
+      }
+    ]
+  },
+  {
     "baunetz_link": "/goderbauer/4038215",
     "name": "Goderbauer",
     "location": "Klosterstrasse 44, 10179 Berlin",
@@ -1156,7 +1230,7 @@
   {
     "baunetz_link": "/hdr/4516015",
     "name": "HDR",
-    "location": "Geneststraße 5, 10829 Berlin",
+    "location": "HDR GmbH\nGeneststraße 5, 10829 Berlin",
     "url": "www.hdrinc.com",
     "description": "Seit rund 60 Jahren entwerfen und realisieren wir als eines der führenden Architektenbüros in Deutschland hochwertige und funktionale Gebäude im Bereich Gesundheit, Forschung und Lehre.Mehr als 1.000 erfolgreich fertig gestellte Projekte mit einem betreuten Investitionsvolumen von über 7 Mrd. Euro sprechen für sich. Mit rund 340 Mitarbeitern an unseren deutschlandweiten Standorten realisieren wir Projekte – von der ersten Idee bis zur feierlichen Schlüsselübergabe. Als Teil des globalen HDR Netzwerkes mit etwa 10.000 Mitarbeitern sind wir für unsere Kunden ganz im Sinne von „think global – act local“ präsent.",
     "banner_url": "https://www.baunetz-architekten.de/img/1/9/3/2/6/6/7/Startseite_Baunetz-b3aebadcde9c71fe.jpeg",
@@ -1188,6 +1262,10 @@
     "banner_url": "https://www.baunetz-architekten.de/img/2/4/2/9/4/2/4/titelbild-5944a9644b5282b9.jpg",
     "projects": [
       {
+        "project_name": "Kulturportal am Stadtschloss Weimar",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/9/3/2/0/thumbnail_13-eff5b929cf51bf1c.jpg"
+      },
+      {
         "project_name": "Schnitterhaus, Uckermark",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/4/2/9/9/3/9/9c45d09c9694799c.jpeg"
       },
@@ -1198,10 +1276,6 @@
       {
         "project_name": "Haus Waldesruh, Hoppegarten",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/4/2/9/9/0/9/thumb-38c83b32a751adc0.jpeg"
-      },
-      {
-        "project_name": "Wohn- und Atelierhaus Rosé, Berlin",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/2/9/6/2/2/49a2c4732677adc9.png"
       }
     ]
   },
@@ -1332,6 +1406,32 @@
       {
         "project_name": "Wohnhaus Schliemannstraße",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/3/0/3/2/7/9/a27e972157ac9076.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/haberland-architekten/226023",
+    "name": "Haberland Architekten",
+    "location": "Rheingaustraße 14, 12161 Berlin",
+    "url": "www.haberland-berlin.de",
+    "description": "",
+    "banner_url": "https://www.baunetz-architekten.de/img/1/7/1/5/2/7/haberland_projektbild-391d8fa5ac0d6873.jpg",
+    "projects": [
+      {
+        "project_name": "Königlicher Pferdestall Hannover",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/8/2/4/8/0/ad3d18284cad6e76.jpeg"
+      },
+      {
+        "project_name": "ZIT-Verwaltung Potsdam",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/8/2/5/6/3/2ad74fe25dfcbebe.jpeg"
+      },
+      {
+        "project_name": "Energetische Sanierung der Carl-Sonnenschein-Grundschule",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/1/2/0/5/7/7/cfd264b2a87e2260.jpeg"
+      },
+      {
+        "project_name": "Hausaufstockung in Berlin-Kreuzberg",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/8/8/1/3/9/9/Unbenannt-291dd37a7c6a4b66.jpg"
       }
     ]
   },
@@ -1492,6 +1592,32 @@
     ]
   },
   {
+    "baunetz_link": "/ilko-m-mauruschat-architekt/1648189",
+    "name": "Ilko-M. Mauruschat, Architekt",
+    "location": "Roennebergstraße 1, 12161 Berlin",
+    "url": "www.mauruschat.de",
+    "description": "Ilko-M. Mauruschat ist in Berlin geboren und hat dort 1995 sein Architekturstudium abgeschlossen. Vor der Gründung seines eigenen Büros war er in verschiedenen Büros tätig, darunter bei Prof. O.M. Ungers in Frankfurt am Main, bei einsbisneun architekten & ingenieure in Berlin sowie neun Jahre bei Prof. Max Dudler als Projekt- und Büroleiter in Berlin. Sein Profil hat er durch zahlreiche Fortbildungen, Lehrgänge und Fachkongresse abgerundet. Die Arbeitsschwerpunkte des von ihm gegründete Büros liegen in folgenden Leistungsbereichen:-    Architektenleistungen, -    Brandschutzgutachten -    Projektsteuerung und GesamtkoordinationEin weiterer Interessenschwerpunkt ist die Planung von Bauvorhaben mit hohen Anforderungen an die Nachhaltigkeit und Energieoptimierung.Bei der Bearbeitung jedes einzelnen Projektes greifen wir auf das Wissen und die Erfahrungen aus den anderen Arbeitsgebieten zurück. Unser Anspruch ist es, diese drei wichtigen Säulen der Projektrealisierung aus einer Hand zu bearbeiten, ohne sie zu vermeintlichen Gegensätzen werden zu lassen. Ziel ist es, Planungs- und Ausführungskonzepte zu erarbeiten, die gleichwohl eine hohe gestalterische Qualität besitzen, als auch technisch innerhalb eines vorgegebenen und realistischen Kosten- und Terminrahmens umsetzbar sind. Das Zusammenführen aller Projektziele ist unsere Stärke.",
+    "banner_url": "https://www.baunetz-architekten.de",
+    "projects": [
+      {
+        "project_name": "City Tunnel, Leipzig",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/0/5/7/7/6/7/8ccbdd2a8b223f21.jpg"
+      },
+      {
+        "project_name": "OASIS Restaurant, Abu Dhabi",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/0/6/2/3/5/5/44ae8bad7168210f.jpg"
+      },
+      {
+        "project_name": "Wettbewerb Polizeidienststelle Passau",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/0/5/8/4/3/1/6704be0ab960767d.jpg"
+      },
+      {
+        "project_name": "Wohnen am Urban, Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/0/5/7/8/5/9/cb7715462cc03f2b.jpg"
+      }
+    ]
+  },
+  {
     "baunetz_link": "/ippolito-fleitz-group/31509",
     "name": "Ippolito Fleitz Group",
     "location": "Potsdamer Straße 91, 10785 Berlin",
@@ -1540,6 +1666,32 @@
       {
         "project_name": "Miami Museum Garage",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/2/8/9/4/1/2/thumbnail-e7e146c79bf4a965.jpg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/jan-roesler-architekten/4185291",
+    "name": "JAN RÖSLER ARCHITEKTEN",
+    "location": "Zossener Str. 50, 10961 Berlin",
+    "url": "www.janroesler.de",
+    "description": "UNSER PLANUNGSTEAM HAT SICH AUF DEN UM- UND NEUBAU VON PROJEKTEN SPEZIALISIERT, BEI DENEN DER RESSOURCENGERECHTE UMGANG MIT MATERIALIEN EINE EBENSO WICHTIGE ROLLE SPIELT WIE EINE NACHHALTIGE GEBÄUDEKONZEPTION. DIESES ENGAGEMENT WURDE BEREITS MEHRFACH AUSGEZEICHNET. DER BÜROEIGENE HANDWERKSBETRIEB ERMÖGLICHT EINEN KONSTANT HOHEN QUALITÄTSSTANDARD VON DER VORPLANUNG BIS ZUR ÜBERGABE DES OBJEKTES",
+    "banner_url": "https://www.baunetz-architekten.de/img/1/8/0/6/7/5/7/jan_roesler_projektbild-20319a68fc8b1d93.jpg",
+    "projects": [
+      {
+        "project_name": "Bestensee",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/2/0/1/5/6/9ef48c71a5fae694.jpeg"
+      },
+      {
+        "project_name": "Evangelisch-Freikirchliche Gemeinde Kreuzberg",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/1/3/0/1/2/0/94f0fdb5c495df8d.jpeg"
+      },
+      {
+        "project_name": "NEBENANLAGEN DORFKIRCHE ALT-TEMPELHOF, Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/1/0/8/5/1/1/16-08-_Muellraum-JR_SM_A4_01_thumbnail-fd592de36792335c.jpg"
+      },
+      {
+        "project_name": "KitaF 2016, Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/0/0/1/6/4/1/460_307-px2-fa963d162138f2e7.jpg"
       }
     ]
   },
@@ -1705,7 +1857,7 @@
     "location": "Brunnenstraße 196, 10119 Berlin",
     "url": "www.ksv-network.de",
     "description": "KSV Krüger Schuberth Vandreike arbeiten an der Schnittstelle von Architektur, Design und Kommunikation. Vielfältige Kompetenzen innerhalb des Büros ermöglichen ein flexibles Reagieren auf neue Herausforderungen. Das Team setzt sich aus Konzeptionern, Textern, Architekten, Produktdesignern und Grafikern zusammen. Transparente Arbeitsprozesse ermöglichen ein offenes Arbeiten im Dialog. Das Ergebnis sind einprägsame Projekte mit emotionaler Signifikanz.",
-    "banner_url": "https://www.baunetz-architekten.de/img/6/6/7/8/2/4/95a030681f0237a5.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "BMW Motorshow",
@@ -1792,6 +1944,32 @@
       {
         "project_name": "National Park of Mali - Entrance Buildings, Restaurant and Sport Centre",
         "project_img_url": "https://www.baunetz-architekten.de/img/1/4/8/6/4/5/5/b8d81a9c691cd46b.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/lava/3168341",
+    "name": "LAVA Laboratory for Visionary Architecture",
+    "location": "Saarbrücker Strasse 24, 10405 Berlin",
+    "url": "www.l-a-v-a.net",
+    "description": "Architektur war und wird immer ein Spiegel der Gesellschaft sein. Jedes architektonische Projekt trägt zur Baukultur bei und stellt immer eine Reflexion zeitgenössischer Technologie dar. Folglich trägt es eine große Verantwortung gegenüber der Öffentlichkeit und der Umwelt. Wir sehen die Wechselbeziehung zwischen architektonischen bedeutenden Gebäude und einem sich entwickelnden Ökosystems als Ziel und streben einen vollständig integrierten Planungsprozess, für die jeweiligen Projekte, mit all seinen Bestandteilen an. Wir arbeiten mit den neuesten digitalen Entwurfswerkzeugen, von der Konzeption, der Visualisierung, der geometrischen Optimierung bis zur Erstellung von Prototypen.Wir schöpfen unsere Inspiration aus der Natur, der Technologie und dem menschlichen Erfindungsgeist und streben eine Zusammenführung von Raum, Struktur und Ornament zu einer einzigartigen Erfahrung an. Unsere Gebäude sind zukunftsfähig, effizient und nachhaltig konzipiert. NetzwerkLAVA arbeitet als Netzwerk von Spezialisten mit weltweiten Verknüpfungen an visionären architektonischen  sowie städtebaulichen Projekten. Unsere Partner sind unter anderem auf Ausführung spezialisierte Architekten, Projektmanager, Umwelt-ingenieure, Landschaftsarchitekten, Klimaingenieure, Tragwerksplaner und Projektentwickler aus der ganzen Welt. Unsere Partnerschaften entwickeln sich ständig weiter.Forschungspartner Das Fraunhofer Institut für Arbeitsorganisation (IAO) ist ein besonders langjähriger Partner von LAVA. Das Fraunhofer IAO ist spezialisiert auf Aspekte von Arbeiten und Wohnen, Bildung und Gesundheitsversorgung in Kombination mit Technologien der Zukunft. Es arbeitet ständig an der Entwicklung neuer Ansätze zur grundlegenden Probleme, wie z.B. im laufenden Projekt “Flugfeld Böblingen / Sindelfingen “ über die Stadt der Zukunft an dem Aspekt einer neuartigen Kombination von Mobilität mit den Grundbedürfnissen der Menschheit: Sicherheit, Umweltverschmutzung, Energieeinsparung, Flexibilität, Komfort und Individualität. Unsere Partnerschaft unterstützt unsere Arbeit, wir können dadurch aktuelle Forschungsergebnisse im Bereich der virtuellen Räume, revolutionären Büro-Konfigurationen, neue Materialien und Zukunftsszenarien in unsere Projekte integrieren. Leistungsspektrum ArchitekturUnser Leistungsumfang umfasst Machbarkeitsstudien, Konzeptentwicklung, Entwurfs- und Werkplanung unter Integration von Nachhaltigkeit,  Materialforschung und Tragwerksplanung. Unterstützende Dienstleistungen umfassen Animationen, Grafik, 3D-Modelle und Rapid Prototyping. Unsere bisherigen Aufträge umfassen die Planung von Hotels, Bürogebäuden, Hochhäusern, Museen, Sportstadien, Wohn- und Gewerbebauten sowie Resort-Projekte in Deutschland, Australien, Mexiko, China und dem Nahen Osten. Derzeit bearbeiten wir ein prototypisches Projekt für den Bayrischen Jugendherbergsverband in Berchtesgaden, ein Bürogebäude für Züblin in Stuttgart, eine Studie für die Abflugsituation am Flughafen Frankfurt, sowie ein Laborgebäude in Saudi-Arabien und einen Showroom in China.StädtebauLAVA bietet Masterplanung, Entwicklungsstrategien, urbane und stadträumliche Analysen, Tourismus Masterpläne, Machbarkeitsstudien zur Landnutzung sowie Landschaftsplanung an. Ausstattung LAVA unterhält eine Computerausstattung auf dem neusten Stand sowie ein Netzwerk mit Highspeed- Verbindungen zwischen Stuttgart, Sydney und Dubai, das die Kommunikation mit unseren Mitarbeitern, Bauherrn und Berater-Teams weltweit ermöglicht. Unser automatisiertes Backup-System sorgt für eine sichere Archivierung der Dokumente und unserere Ausstattung mit unterschiedlichen Entwurf- und Planungsprogrammen ermöglicht es uns, Visualisierungen, Werkplanung und Publikationen für unsere Auftraggeber zu erstellen.   ",
+    "banner_url": "https://www.baunetz-architekten.de/img/1/5/1/6/3/6/3/lava_projektbild-eb9af94b69b2eb1b.jpg",
+    "projects": [
+      {
+        "project_name": "Eco Kindi",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/9/1/7/5/9/Unbenannt-2-5a173be5e715b7a9.jpg"
+      },
+      {
+        "project_name": "A vertical campus of nature and technology",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/2/8/2/6/0/d8ffb2739f5afe69.jpeg"
+      },
+      {
+        "project_name": "Jugendherberge Bayreuth",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/3/3/7/7/9/Unbenannt-4-5161c148438fbdd1.jpg"
+      },
+      {
+        "project_name": "PSATRI",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/5/2/1/4/7/7/9e509f407fbfa972.jpeg"
       }
     ]
   },
@@ -1992,6 +2170,32 @@
     ]
   },
   {
+    "baunetz_link": "/martin-schmitt/3971385",
+    "name": "Martin Schmitt Architektur",
+    "location": "Prinzenstraße 84, 10969 Berlin",
+    "url": "www.m2sb.de",
+    "description": "Unser Büro steht für eine Architektur, in der sich Menschen treffen und miteinander kommunizieren. Wir arbeiten gerne interdisziplinär. Wir bringen alle Akteure zusammen. Wir strukturieren Prozesse. Wir halten Budgets und Zeitpläne ein. Seit der Gründung von MARTIN SCHMITT ARCHITEKTUR im Jahr 2003 bearbeitet das Büro Projekte im Spektrum von Architektur und Innenarchitektur. Diese zwei Bereiche überschneiden sich, greifen immer wieder ineinander und befruchten sich gegenseitig. Sie bringen zusammen, wofür Martin Schmitt, Architekt, Dozent und gelernter Zimmermann, steht: ein Interesse an theoretischen Zusammenhängen, Mut zur Komplexität, handwerkliches Know-how und eine kommunikative Orientierung.",
+    "banner_url": "https://www.baunetz-architekten.de/img/1/7/2/5/1/4/7/martin_schmitt_projektbild-24b1c16209a717a1.jpeg",
+    "projects": [
+      {
+        "project_name": "Kantine der Ecole Voltaire",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/7/4/7/7/2/1/bd4ef96deb6a97a3.jpeg"
+      },
+      {
+        "project_name": "Karo 5",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/7/2/9/4/5/9/158b140423cbdcc0.jpeg"
+      },
+      {
+        "project_name": "Neugestaltung einer Vorstandsetage",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/7/2/9/4/1/7/de3df5d7b04e63b8.jpeg"
+      },
+      {
+        "project_name": "Kanzlei in der Brauerei",
+        "project_img_url": "https://www.baunetz-architekten.de/img/1/7/2/9/3/6/7/119853092_a3c9282fdb.jpeg-9f9711d1bb272cb2.jpg"
+      }
+    ]
+  },
+  {
     "baunetz_link": "/michels-architekturbuero/7396368",
     "name": "Michels Architekturbüro",
     "location": "Karl-Marx-Allee 90, 10243 Berlin",
@@ -2066,6 +2270,32 @@
       {
         "project_name": "Haus NN, Pöcking",
         "project_img_url": "https://www.baunetz-architekten.de/img/1/6/1/6/0/8/5/Unbenannt-d2d30ac6adc542af.jpg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/naice-architecture-und-design/6443345",
+    "name": "NAICE architecture & design",
+    "location": "Goerzallee 299, 14167 Berlin",
+    "url": "www.naice.one",
+    "description": "",
+    "banner_url": "https://www.baunetz-architekten.de/img/2/3/8/9/2/4/7/NAICE_STARTBILD-6158b67bda689039.jpg",
+    "projects": [
+      {
+        "project_name": "HAUS_IT",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/7/5/7/9/2/naice-2a7739530158a146.jpg"
+      },
+      {
+        "project_name": "WALL.BOX",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/0/2/9/9/6/9a6375748c860ce9.jpeg"
+      },
+      {
+        "project_name": "BORDERLINE",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/6/0/0/8/0/NAICE_Borderline_01_kelin-47b87488d43813fb.jpg"
+      },
+      {
+        "project_name": "Hoverbox",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/8/9/2/8/0/0f9f7306d0144bf1.jpeg"
       }
     ]
   },
@@ -2410,7 +2640,7 @@
   {
     "baunetz_link": "/project-architecture-company/3491015",
     "name": "Project Architecture Company",
-    "location": "Warschauer Str. 58A",
+    "location": "Warschauer Str. 58, 58 A",
     "url": "www.project.ac",
     "description": "Project Architecture Company entdeckt das ungenutzte Potential des Bestehenden, um daraus Neues und Einzigartiges zu schaffen. Unsere Entwurfsarbeit ist gekennzeichnet durch Unvoreingenommenheit, Experimentierfreude und vielfältige internationale Erfahrungen, die wir in jedes Projekt einbringen. Jeder vorhandene Kontext hat seine eigenen programmatischen, strukturellen und räumlichen Prinzipien, aus welchen wir unsere Ideen entwickeln. Manchmal reicht schon eine minimale Intervention, um die Qualität und den spezifischen Charakter eines Ortes oder eines alten Gebäudes zum Vorschein zu bringen. In all unseren Entwürfen versuchen wir, das Alte und Neue in überraschender Weise zu kombinieren und so eine Architektur zu schaffen, die vertraut und doch gleichzeitig ungewöhnlich ist. Wir bearbeiten Projekte jeglichen Maßstabs - vom kleinen Innenausbau bis hin zum Masterplan - und freuen uns auf jede neue Herausforderung. Project Architecture Company ist ein deutsch-englisches Architekturbüro und wurde 2011 von Anne Menke und Richard Sharam in Berlin gegründet.",
     "banner_url": "https://www.baunetz-architekten.de/img/1/6/6/3/9/7/1/project_architecture_company_projektbild-85fab2f0365525ba.jpg",
@@ -2514,10 +2744,10 @@
   {
     "baunetz_link": "/rmp-stephan-lenzen/31449",
     "name": "RMP Stephan Lenzen Landschaftsarchitekten",
-    "location": "Helmholtzstraße 2-9, 10587 Berlin",
+    "location": "Eingang H 02, 10587 Berlin",
     "url": "www.rmpsl.la",
     "description": "Lebendigkeit und Funktionalität, Schönheit und Wirtschaftlichkeit, Einfachheit und Unterscheidung, Respekt und Erneuerung, Planung und Spontanität – aus der wohl kalkulierten Dualität von Gegensätzen schaffen wir Lebensräume und Landschaftserlebnisse. Pflanzen sind der Kern unseres Wirkens. Das Architektonische dient uns dabei, die Wildheit der Pflanzen zu ordnen und zu nutzen. Landschaftsarchitektur verstehen wir nicht als Kunst, sondern als kongeniale Zusammenführung von kreativer Ingenieurleistung und gärtnerischem Handwerk. Allem zugrunde liegt unser Bestreben, Orte zu stärken, zu definieren und mit Hilfe einer konsequenten gestalterischen Qualifikation aus Sicht der Landschaftsarchitektur in Wert zu setzen sowie langfristig in das Bewusstsein der Menschen zu verankern.Was zählt ist in jedem Fall das Ergebnis: das Wohlfühlen der Menschen und die Erfüllung der funktionalen Anforderungen an den Ort.",
-    "banner_url": "https://www.baunetz-architekten.de/img/1/4/6/8/7/3/d6ff2636dc6619b3.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "T-Mobile Stadt",
@@ -2682,6 +2912,32 @@
     ]
   },
   {
+    "baunetz_link": "/sehw-architektur/31421",
+    "name": "SEHW Architektur",
+    "location": "Wikingerufer 7, 10555 Berlin",
+    "url": "www.sehw-architektur.de",
+    "description": "Nicht die Frage Stein oder Glas, Box oder Blob, Metall oder Holz, gerade oder rund treibt uns um, sondern die stete Suche nach einer Antwort auf die Frage, wie wir Menschen in Zukunft leben werden und deren gestalterische Umsetzung.",
+    "banner_url": "https://www.baunetz-architekten.de/img/3/0/6/5/3/sehw_projektbild-070e66c74ddc5c17.jpg",
+    "projects": [
+      {
+        "project_name": "Grundschule am Jungfernsee",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/1/1/7/9/3/SEHW-167f730b0715103f.jpg"
+      },
+      {
+        "project_name": "Polizeidirektion Bergstraße",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/9/0/8/5/7/2812868de6a1edfa.jpeg"
+      },
+      {
+        "project_name": "Wohnung mit Aussicht",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/1/6/2/9/9/391e8ab949a8d700.jpeg"
+      },
+      {
+        "project_name": "Stadt Land Bach",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/0/1/6/1/2/6584f8173b9adada.jpeg"
+      }
+    ]
+  },
+  {
     "baunetz_link": "/smaq/754230",
     "name": "SMAQ",
     "location": "Kastanienallee 10, 10435 Berlin",
@@ -2689,6 +2945,10 @@
     "description": "Gemeinsam leiten Sabine Müller und Andreas Quednau das Büro SMAQ für Architektur und Städtebau in Berlin. Ihre Arbeit wurde mit mehreren internationalen Preisen ausgezeichnet – unter anderem mit dem Architectural Review Award for Emerging Architects und dem Holcim Award for Sustainable Construction – und auf den Architekturbienalen in Maimi, Rotterdam und Venedig gezeigt.",
     "banner_url": "https://www.baunetz-architekten.de/img/6/2/0/8/4/5/smaq_projektbild-14a63b3224121462.jpg",
     "projects": [
+      {
+        "project_name": "Überseeinsel",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/9/3/1/2/89545c5ac27c58d7.jpeg"
+      },
       {
         "project_name": "Wohnungsbau Agnes-Hundoegger-Weg",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/2/4/2/7/0/4/49454a61a509e907.jpeg"
@@ -2700,10 +2960,6 @@
       {
         "project_name": "Neuer Markt",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/2/4/2/6/9/7/80f4ca90ec2a6f40.jpeg"
-      },
-      {
-        "project_name": "Hellwinkel Terrassen",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/4/2/6/9/2/76300c38d3ccf205.jpeg"
       }
     ]
   },
@@ -2742,6 +2998,10 @@
     "banner_url": "https://www.baunetz-architekten.de/img/3/0/3/8/9/staab_projektbild-6ef7d26a93cafc18.jpg",
     "projects": [
       {
+        "project_name": "Erweiterung Jüdisches Museum Frankfurt",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/8/5/0/3/bd701f9f002229bc.jpeg"
+      },
+      {
         "project_name": "Berlin Institute for Medical Systems Biology",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/3/8/3/2/1/4/34657047e497131f.jpeg"
       },
@@ -2752,10 +3012,6 @@
       {
         "project_name": "Jüdisches Gemeindezentrum mit Synagoge",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/3/8/3/3/4/2/Unbenannt-2-a2a24ae8e4f2915a.jpeg"
-      },
-      {
-        "project_name": "Zentraldepot der Stiftung Preußische Schlösser und Gärten in Potsdam",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/9/7/3/5/8/thumbnail-1fd7439c469a99a0.jpg"
       }
     ]
   },
@@ -2765,7 +3021,7 @@
     "location": "Fehrbelliner Str. 31, 10119 Berlin",
     "url": "www.sterfarchitekten.de",
     "description": "",
-    "banner_url": "https://www.baunetz-architekten.de/img/1/4/5/6/1/0/a368361aa061d171.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "Bergbaumuseum Lausitz",
@@ -2785,7 +3041,7 @@
     "baunetz_link": "/sweco-architects/650861",
     "name": "Sweco Architects",
     "location": "Franklinstraße 28, 10587 Berlin",
-    "url": "www.swecoarchitects.com",
+    "url": "www.sweco-gmbh.de",
     "description": "Unter „Sweco Architects“ versammeln sich die über 200 Architekten der Sweco GmbH und ihrer Tochtergesellschaft „Jo. Franzke Generalplaner GmbH“. Sweco steht für eine hohe fachliche Qualität, für Verbindlichkeit in der Kundenbeziehung und die Verantwortung für den Projekterfolg. Gemeinsam mit ihren Kollegen von der TGA und der Tragwerksplanung setzen die Sweco Architects anspruchsvolle Projekte risikofest um. Dabei stehen die ganzheitliche Betreuung von Bauprojekten und die umfassende Berücksichtigung der Kundenwünsche im Mittelpunkt.Im World Architecture 100 Ranking 2019 des britischen Magazins Building Design (BD) belegt Sweco den 6. Platz und platziert sich damit unter den zehn größten Architekturbüros weltweit. Mit mehr als 1.200 Architekten sind wir das größte Architekturbüro in Europa.",
     "banner_url": "https://www.baunetz-architekten.de/img/5/6/6/3/7/4/WH1405-1776-7b4b89e7a9f7acea.jpg",
     "projects": [
@@ -2804,6 +3060,32 @@
       {
         "project_name": "Klinikum Bayreuth",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/4/7/0/7/1/6/58463c2eb7eb4e53.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/tanja-lincke-architekten/7210587",
+    "name": "TANJA LINCKE ARCHITEKTEN",
+    "location": "Baumschulenstrasse 1, 12437 Berlin",
+    "url": "www.tanja-lincke-architekten.com",
+    "description": "",
+    "banner_url": "https://www.baunetz-architekten.de/img/2/5/4/6/1/2/9/projektbild_tanja_lincke-2f1f85c6c6600e98.jpeg",
+    "projects": [
+      {
+        "project_name": "HAUS AN DER SPREE",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/4/6/1/4/4/9393b37a8de83cba.jpeg"
+      },
+      {
+        "project_name": "ERWEITERUNG VERANSTALTUNGSHALLE RHEINSTAHLGELÄNDE",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/4/6/1/4/7/a130f7ad5c00d090.jpeg"
+      },
+      {
+        "project_name": "NEW YORK BAR",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/4/6/1/6/1/5a09f3c1b4d24acc.jpeg"
+      },
+      {
+        "project_name": "GARAGE",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/5/4/6/2/9/1/fcd6ff7c36527ce0.jpeg"
       }
     ]
   },
@@ -2836,7 +3118,7 @@
   {
     "baunetz_link": "/topotek-1/7010423",
     "name": "TOPOTEK 1",
-    "location": "Sophienstraße 18, 10178 Berlin",
+    "location": "TOPOTEK 1, 10178 Berlin",
     "url": "www.topotek1.de",
     "description": "Topotek 1 was founded in 1996 by Martin Rein-Cano in Berlin. Since 1999, he has run the studio in equal partnership with Lorenz Dexler. Francesca Venier has been a joint partner of TOPOTEK 1 since 2014. In 2017 TOPOTEK 1 Architecture was founded by Martin Rein-Cano, Lorenz Dexler, Francesca Venier, and Dan Budik.Topotek 1 is a diverse, lively, and multidisciplinary office composed of a highly qualified international team of architects, landscape architects, and administrative staff. The studio draws upon this wide range of experience during all stages of the design and construction processes, resulting in exceptionally effective design solutions that produce transparent, efficient, and long-term benefits for its clients.Working at the intersection of the fields of landscape architecture, urbanism, and architecture, Topotek 1 considers itself a traveler that explores the fringe areas of typologies and scales. Each project strives to respond to the given context and programmatic necessities with a compelling concept, extraordinary design quality, and efficient implementation. Some of the studio’s key strategies for maintaining an awareness of and vital link to general contemporary discussions include the hybridization of topics and disciplines; the removal, transmission, and re-imagining of objects and design features from their original context to another; and the design and emplacement of scenographic sequences.Global movements in society and culture continually redefine a broad spectrum of possibilities in relation to the design and constitution of public space. Driven by its conceptual approach, Topotek 1 considers public spaces to be an expression of visions and of society as a whole. The studio develops design concepts through a critical understanding of extant contemporary realities as well as of cultural and historical references. Through this holistic strategy, Topotek 1 generates solutions that fulfill the modern requirements of variability, communication, and sensuality, creating contemporary spaces for contemporary uses.",
     "banner_url": "https://www.baunetz-architekten.de/img/2/4/5/3/9/0/8/TOP1_projektbild-0246fa96af757e48.jpeg",
@@ -2894,6 +3176,10 @@
     "banner_url": "https://www.baunetz-architekten.de/img/2/2/0/6/3/2/7/wuv_projektbild-d51ae43fbc8618fb.jpg",
     "projects": [
       {
+        "project_name": "Grundschule Wismar",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/8/5/4/2/91cfaaf138911032.jpeg"
+      },
+      {
         "project_name": "Theaterhaus Leipzig",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/6/4/5/9/0/5/f7f4325cedea1310.jpeg"
       },
@@ -2904,10 +3190,6 @@
       {
         "project_name": "Ziegel Ensemble am Brauereiberg",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/2/0/6/3/9/6/0b7f2891439ff82b.jpeg"
-      },
-      {
-        "project_name": "Stelzenhaus Leipzig",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/0/6/4/1/8/0280636b7d9d4d1a.jpeg"
       }
     ]
   },
@@ -2934,6 +3216,32 @@
       {
         "project_name": "Gedenkstätte Esterwegen",
         "project_img_url": "https://www.baunetz-architekten.de/img/1/2/6/8/5/5/9/4d7f34281a47a014.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/wiewiorra-studio/31113",
+    "name": "Wiewiorra Studio",
+    "location": "Wolliner Str. 50, 10435 Berlin",
+    "url": "www.wwstudio.de",
+    "description": "WW STUDIO baut auf 20 Jahren Büroerfahrung, Zusammenarbeit und Kooperation auf. Wir erschaffen ganzheitliche Werke in der Schnittmenge von Interior, Architektur und Design. Dabei entwickeln wir kreative Raumkonzepte, fertigen Studien und Planungen aller Leistungsphasen nach HOAI an, bis hin zur Betreuung der Realisierung. Je nach Aufgabe werden Design-Lösungen gemeinsam mit unseren Bauherren, Fachplanern und Firmen erarbeitet. Dabei entstehen individuelle Architekturen, maßgefertigte Innenräume und Unikate nachhaltiger Möbel und Objekte sowie experimentelle Projekte. Unsere Leidenschaft: Räume für Menschen.\"Die meisten Bauwerke erleben wir nur von außen, aber über 22h pro Tag verbringen wir Menschen im Inneren von Gebäuden. Das Zusammenspiel von Innen und Aussen und somit von Architektur und Innenarchitektur ist der gestalterischen Fokus von Wiewiorra Studio.\" Carsten Wiewiorra (2016) Das Team besteht aus Kreativdirektor Carsten Wiewiorra, Projektleitung Architektur Marcelo Ercoli, Projektleitung Innenarchitektur Fabian Bettin und Anna Tscherch in der Geschäftsleitung.Gruss Carsten",
+    "banner_url": "https://www.baunetz-architekten.de/img/3/0/3/4/5/Unbenannt-669f19e1a057cf84.jpeg",
+    "projects": [
+      {
+        "project_name": "Finanzamt Oranienburg",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/3/7/7/7/7/0eeae280f016ce1a.jpeg"
+      },
+      {
+        "project_name": "Schwules Museum",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/3/7/6/8/3/1c93b7f4f788671d.jpeg"
+      },
+      {
+        "project_name": "Praxis Dr. Stiller",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/3/7/6/8/0/22121f8d9f38e4af.jpeg"
+      },
+      {
+        "project_name": "Haus Blumenthal",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/3/7/6/7/2/0eb5344884fc9397.jpeg"
       }
     ]
   },
@@ -3125,7 +3433,7 @@
     "location": "Schwedter Str. 47, 10435 Berlin",
     "url": "www.birkezimmermann.de",
     "description": "",
-    "banner_url": "https://www.baunetz-architekten.de/img/1/3/8/4/1/4/9/b779b6a235a23b97.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "Torplatz am Eastgate Berlin Marzahn",
@@ -3175,7 +3483,7 @@
     "baunetz_link": "/blocher-partners/31303",
     "name": "blocher partners",
     "location": "Paul-Lincke-Ufer 41, 10999 Berlin",
-    "url": "www.blocherpartners.com",
+    "url": "www.linkedin.com",
     "description": "Gestaltung heißt für blocher partners – gegründet 1989 von Jutta und Dieter Blocher – zu vernetzen und ganzheitliche Erlebniskonzepte zu kreieren. Experten unterschiedlicher Disziplinen arbeiten Hand in Hand und interdisziplinär: Über 230 Architekten, Innenarchitekten, Produktdesigner, Grafikdesigner, Kommunikationsspezialisten und Soziologen entwickeln an vier Standorten stimmige Projekte, die sämtliche Details berücksichtigen.In Stuttgart, Berlin, Mannheim und im indischen Ahmedabad schaffen blocher partners sowohl Bauvorhaben für die öffentliche Hand als auch private Wohnhäuser, Hotelbauten, Bürogebäude, Shopping-Center, Stores, Department Stores und Hybridbauten.",
     "banner_url": "https://www.baunetz-architekten.de/img/3/0/5/3/5/864_Herdweg_km_highres_27bpklein-a3f24418996feb41.jpeg",
     "projects": [
@@ -3198,28 +3506,54 @@
     ]
   },
   {
-    "baunetz_link": "/dan-pearlman-group/787547",
-    "name": "dan pearlman Group",
-    "location": "Kiefholzstrasse 1, 12435 Berlin",
+    "baunetz_link": "/dan-pearlman-erlebnisarchitektur/4752790",
+    "name": "dan pearlman Erlebnisarchitektur",
+    "location": "Kiefholzstraße 2, 12435 Berlin",
     "url": "www.danpearlman.com",
-    "description": "Marken- und Unternehmensführung wird immer komplexer – immer mehr Touchpoints, größerer Preisdruck, weniger Kundenloyalität. Wir glauben, dass die Herausforderungen der Zukunft weder durch klassische Agenturen und Unternehmensberater noch durch ein Unternehmen allein gemeistert werden können. Unternehmen müssen langfristige Beziehungen zu ihren Kunden aufbauen, und ihnen an jedem Touchpoint ein relevantes Erlebnis bieten.Deshalb haben wir die dan pearlman Group gegründet – als Gruppe spezialisierter Unternehmen, die ein gemeinsames Erlebnis für unsere Kunden erschaffen: emotional, relevant und wirtschaftlich erfolgreich.Unsere Stärke sind ganzheitliche Kreativkonzepte, die durch strategische Prozesse und innovative Methoden gemeinsam entwickelt werden. Durch einen koordinierten Prozess machen wir die gesamte Customer Journey zu einem durchgängigen Markenerlebnis. Umgesetzt werden sie von interdisziplinären und interkulturellen Teams und einem weltweiten Netzwerk an Partnern.Unsere Geschäftfelder setzen sich zusammen aus:BRAND & IDENTITYINTERNAL & EMPLOYER BRANDINGDESTINATION DEVELOPMENTdan pearlman Group members:",
-    "banner_url": "https://www.baunetz-architekten.de/img/6/4/5/7/9/2/dan_pearlman_markenarchitektur_projektbild-c3cc0b9ded0bea37.jpg",
+    "description": "Das Berliner Architekturbüro dan pearlman Erlebnisarchitektur GmbH setzt mit seinen Projekten Maßstäbe in den Freizeitbereichen Zoo und Aquarium, Retail, Wellness und Hospitality und ist weltweit tätig. Aus einer ehemaligen Fabriketage heraus entwirft dan pearlman in einem interdisziplinären Team Marken- und Erlebniswelten, die inspirieren und bereichern.Erlebnisarchitektur definiert einzigartige Räume und Orte, an denen individuelle Begegnungen und Erfahrungen möglich werden und Neugierde sich entfalten kann.Wir definieren Architektur nicht vorrangig über Bauwerke, vielmehr zeichnen sich unsere Projekte durch eine bewusste Wahl in der Abfolge von Raum, Licht, Inhalt, Erlebnis und Erfahrung, Innen und Außen aus und sind angelehnt an die Methoden des Storytelling und der Szenografie.In kurz: Wir bauen Geschichten.Wir glauben, dass sich komplexe Inhalte durch Erlebnisse leicht, intuitiv und nachhaltig vermitteln lassen. Wir hinterfragen konventionelle Dogmen und gehen über einfache logische oder rationale Antworten hinaus, da Fortschritt Innovation erfordert.Wir fördern Zusammenarbeit, arbeiten eng mit unseren Kunden und Experten und benutzen innovative und integrative Methoden.Wenn Wissen eine Bank ist und Phantasie die Währung, ist die ultimative Zukunftsinvestition das Erlebnis.Zoo, Aquarium & ParkWir sind überzeugt, dass Zoos und Aquarien als Bildungs-, Forschungs- und Artenschutzinstitutionen sowie als Freizeitattraktionen eine Zukunft haben. Wir kennen die Herausforderungen, vor denen moderne Zoos stehen. Wir führen die komplexen und unterschiedlichen Anforderungen der Tiere, der Besucher und des operativen Betriebs zusammen und bringen die Arbeit des Zoos und seine Themen den Besuchern nachhaltig näher.Wellness, Hospitality & GastronomieWir entwickeln individuelle Orte, die Raum für Entspannung und Muße, Bewegung, Gesundheit und Genuss bieten. Wir legen Wert auf Details, bereichern Spas, Hotels und Restaurants durch inspirierende Geschichten und machen sie zu einzigartigen Destinationen.Kultur, Ausstellung und RetailWir arbeiten leidenschaftlich mit Räumen, die mehr wollen als komplexe Themen zu vermitteln, und Orten, die mehr sein wollen als ein Dach für Geschäfte und deren Kunden. Durch eine mutige strategische Ausrichtung und die Einbindung von intuitiven Elementen lassen wir die Besucher auf vielfältige Weise mit dem Ort und dem Inhalt interagieren und verführen zum Aufenthalt.",
+    "banner_url": "https://www.baunetz-architekten.de/img/2/0/2/4/4/6/1/dan_pearlman_erlebnisarchitektur_projektbild-be473560c892a0c3.jpg",
     "projects": [
       {
-        "project_name": "Hagemeyer Minden",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/7/9/6/4/0/106147c13e4b14d9.jpeg"
+        "project_name": "Tierpark Hellabrunn München",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/7/9/4/6/2/b4e24f32edd8b9fc.jpeg"
       },
       {
-        "project_name": "fahrrad.de Store",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/7/9/5/9/5/1e58eece2f372f24.jpeg"
+        "project_name": "Erlebnis-Zoo Hannover",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/3/7/9/4/0/8/d6d38c8f880cc781.jpeg"
       },
       {
-        "project_name": "Panda Garden",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/6/0/0/8/3/ab450d39a161b573.jpeg"
+        "project_name": "Panda Garden im Zoo Berlin feiert Richtfest",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/1/3/9/8/3/9/d4511c622c302fc6.jpeg"
       },
       {
-        "project_name": "Mercedes-Benz Brandspace",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/6/0/0/7/1/51669bf9ce01d3f9.jpeg"
+        "project_name": "Ziel- und Entwicklungsplan Zoologischer Garten Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/0/2/4/5/1/2/f761e2f0482b8f8e.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/de-winder-architekten/31465",
+    "name": "de Winder Architekten",
+    "location": "Schlesische Straße 26, 10997 Berlin",
+    "url": "www.dewinder.de",
+    "description": "In einem Fabrikloft am Spreeufer Berlins entwickeln die de Winder Architekten seit 1999 innovative Ideen für hochwertige moderne Innenausbauten. Von den beiden Architekten Klaus und Claudia de Winder gegründet, bietet das Büro mit rund 29 Mitarbeitern alle Serviceleistungen in der Architektur und im Interior Design.Die Expertise reicht von Ausbauten im Altbestand oder Neubau für großflächige Arbeitswelten der Neuen Medien, Kanzleien und Sonderflächen bis hin zu hochklassigen privaten Wohnungs- oder Geschäftsausbauten. Als Berater entwickeln die de Winder Architekten zudem effiziente Vermarktungsstrategien für unterschiedliche Objekte sowie Konzepte für Sonderimmobilien. Durch einen intensiven Dialog mit den Kunden entsteht ein Prozess, der zu individuellen Lösungen für jedes Projekt führt. In die Entwürfe fließen stets Möbelideen ein, die mit dem Raumkonzept verschmelzen. Akzentuierungen durch bewusste Farbigkeit, ein harmonisches Zusammenspiel von künstlicher und natürlicher Beleuchtung sowie ausgetüftelte Varianten für integrierte Raumtechnik sind die Visitenkarte des Architekturbüros. So entstehen lebendige Räume, in denen sich die Nutzer gern aufhalten und wohlfühlen.Claudia de WinderDipl.-Ing. Architektin, Bayerische Architektenkammer, geboren in München, studierte an der FH München und ist seit 1995 als freischaffende Architektin tätig. Klaus de WinderDipl.-Ing. Architekt, Architektenkammer Berlin, geboren in Nordhorn, studierte an der FH Münster und ist seit 1991 als freischaffender Architekt tätig.",
+    "banner_url": "https://www.baunetz-architekten.de/img/3/0/6/9/7/de_winder_projektbild-8d708f8766261c11.jpg",
+    "projects": [
+      {
+        "project_name": "Etventure",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/2/5/9/2/b32f624f956f1644.jpeg"
+      },
+      {
+        "project_name": "EDGE Technologies",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/2/7/7/9/e4723e27de281081.jpeg"
+      },
+      {
+        "project_name": "Mozilla",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/0/9/6/6/4/1084b85cfe0f6ab5.jpeg"
+      },
+      {
+        "project_name": "Axel Springer hy!",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/2/8/3/1/beff0351549f5bbc.jpeg"
       }
     ]
   },
@@ -3385,7 +3719,7 @@
     "location": "Schwedter Straße 263, 10119 Berlin",
     "url": "www.haefner-jimenez.de",
     "description": "In zwei Jahrzehnten sind unter der Regie Planerteams Häfner/Jiménez zahlreicheProjekte und Wettbewerbsbeiträge für menschliche Lebensräume entstandendie sich durch Klarheit und Ordnung auszeichnen.Allgegenwärtiger Reizüberflutung werden stehen Ruhe und Ausgleich gegenüber.Die dem jeweiligen Standort angemessenen Planungsansätze lassen trotz der Gradwanderung einer wirtschaftlich vertretbaren Realisierung nie eine gewisse Großzügigkeit vermissen.",
-    "banner_url": "https://www.baunetz-architekten.de/img/1/3/8/7/4/3/3/b2ae4ecb052e97ce.jpg",
+    "banner_url": "https://www.baunetz-architekten.de",
     "projects": [
       {
         "project_name": "Robert Koch Platz Wolfsburg",
@@ -3409,10 +3743,14 @@
     "baunetz_link": "/kadawittfeldarchitektur/31311",
     "name": "kadawittfeldarchitektur",
     "location": "Alexanderstraße 7, 10178 Berlin",
-    "url": "www.kadawittfeldarchitektur.de",
+    "url": "www.kwa.ac",
     "description": "Wir sind kadawittfeldarchitektur. 1999 in Aachen gegründet, stehen wir heute für weit mehr als architektonisches Gestalten allein. Der interdisziplinäre Ansatz in unserer Arbeit, in der Verknüpfung von Architektur, Innenarchitektur und Design zum einen und an der Schnittstelle von städtebaulichen Planungen und urbanen Projekten zum anderen, spiegelt die Bandbreite unseres kreativen Schaffens wider.kadawittfeldarchitektur entwickelt Mehrwert-Raum. In einem Team von über 150 Mitarbeitern schaffen wir Mehrwert-Architektur als Lebens-Raum, Kommunikations-Raum, Wohn-Raum und Arbeits-Raum. Unser Umgang mit Volumen, Material, Tragwerk und Nutzung ist geprägt von dem Streben nach Integration in das Umfeld – mit dem Ziel, zeitgemäße und nachhaltige Architektur zu schaffen, dem Nutzer wie dem Betrachter verpflichtet.kadawittfeldarchitektur ist Dialog. Gemeinsam mit allen Projektbeteiligten – unseren Bauherrn, den Nutzern, Experten und der Öffentlichkeit – suchen wir die maßgeschneiderte Lösung: zugeschnitten auf die räumlichen wie funktionalen Anforderungen und den soziokulturellen Kontext des jeweiligen Projekts.kadawittfeldarchitektur ist Planungskompetenz. Auf der Basis langjähriger Erfahrung und unseres umfangreichen Netzwerks von internen wie externen Experten und Kooperationspartnern aus den unterschiedlichsten Disziplinen stehen wir für höchste Planungskompetenz und eine termin- und kostengerechte Umsetzung.kadawittfeldarchitektur baut. Projekte wie der Salzburger Hauptbahnhof in Salzburg/ AT, das Direktionsgebäude der AachenMünchener Versicherung in Aachen/ DE, das adidas Laces in Herzogenaurach/ DE und die Grimmwelt in Kassel/ DE stehen stellvertretend für unsere zahlreichen Projekte im In- und Ausland. Darüber hinaus konnten wir zahlreiche, unabhängige Wettbewerbe für uns entscheiden, so den neuen DFB & seine Akademie in Frankfurt/ DE und das Konzerthaus in Padua/ IT.",
     "banner_url": "https://www.baunetz-architekten.de/img/3/0/5/4/3/kadawittfeldarchitektur_titelbild_profil_neu_foto_jens_kirchner-b21f375326023669.jpeg",
     "projects": [
+      {
+        "project_name": "Moringa – Cradle-to-Cradle-inspiriertes Wohnen in der HafenCity Hamburg",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/8/8/1/4/moringa_thumbnail_1-dc7dc0b1241006b9.jpg"
+      },
       {
         "project_name": "Bitzer Headquarters, Sindelfingen",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/5/7/8/1/4/4/0095165dc36e69c0.jpeg"
@@ -3424,10 +3762,6 @@
       {
         "project_name": "Quartier 74°",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/3/8/9/8/1c74748c97117ff4.jpeg"
-      },
-      {
-        "project_name": "Generalvikariat",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/3/9/2/3/4b6cebde7f4b53f7.jpeg"
       }
     ]
   },
@@ -3558,6 +3892,32 @@
       {
         "project_name": "Neubau Büro- und Verwaltungsgebäude der KVBB und der LÄK Brandenburg",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/1/7/1/1/1/7/cffc708a25932dfb.jpeg"
+      }
+    ]
+  },
+  {
+    "baunetz_link": "/plus4930/4787430",
+    "name": "plus4930 Sierig Geddert Krüger",
+    "location": "Görlitzer Str. 52, 4930 Planungsgesellschaft",
+    "url": "www.p4930.de",
+    "description": "Das Berliner Architektenbüro plus4930 wurde 2005 von Florian Geddert, René Krüger und Johannes Sierig gegründet. plus4930 befasst sich in seiner Architektur intensiv mit dem Metathema der Stadtlandschaft. Aus dem Spannungsfeld zwischen Bauherrenwünschen und urbanem Kontext generieren sich die Konzepte für all ihre Projekte. Sporthalle mit Kunstgalerie, Einfamilienhaus mit Garten im innerstädtischen Raum, High-Tech im äthiopischen Hinterland angelehnt an eine Reise in die deutsche Provinz, Boutique Hotel im Industriegebiet von Berlin Lichtenberg. Bei der Planung und Umsetzung greifen die Architekten auf ihre langjährige Erfahrung in der digitalen und parametrischen Entwurfskonzeption zurück.",
+    "banner_url": "https://www.baunetz-architekten.de/img/2/0/3/7/9/2/9/microsonic-f906d38879b2663f.jpg",
+    "projects": [
+      {
+        "project_name": "Dong Xuan Gästehaus",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/4/8/3/1/0/0/6f02d29efeef07ee.jpeg"
+      },
+      {
+        "project_name": "Bürgenstock Resort",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/1/9/4/7/7/0fe7382d8cf425bf.jpeg"
+      },
+      {
+        "project_name": "Fassadensanierung Büro- und Geschäftshaus",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/1/9/4/6/9/ad2961a378cb7c05.jpeg"
+      },
+      {
+        "project_name": "OVERKILL Women",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/2/2/2/4/2/2/fa24c5b44404a4f9.jpeg"
       }
     ]
   },
@@ -3726,6 +4086,10 @@
     "banner_url": "https://www.baunetz-architekten.de/img/1/6/8/4/5/5/7/zanderroth_projektbild-14f633da7d05dc0e.jpg",
     "projects": [
       {
+        "project_name": "th62 - Thulestraße 62, Berlin",
+        "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/8/9/8/0/5fcc086a80d26459.jpeg"
+      },
+      {
         "project_name": "spb - Schmollerplatz, Berlin",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/5/6/4/0/5/9/0c37a28adde059bd.jpeg"
       },
@@ -3736,10 +4100,6 @@
       {
         "project_name": "wa17 - Waldemarstraße 17, Berlin",
         "project_img_url": "https://www.baunetz-architekten.de/img/2/0/3/0/7/8/5/0c8f77aa8f301575.jpeg"
-      },
-      {
-        "project_name": "li01 - Liebigstraße 1, Berlin",
-        "project_img_url": "https://www.baunetz-architekten.de/img/2/0/3/0/7/7/5/bdfe4c038376b559.jpeg"
       }
     ]
   }

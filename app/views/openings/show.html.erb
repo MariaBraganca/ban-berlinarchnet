@@ -4,16 +4,29 @@
 		<h5 class="corporate mb-3"><span class="red">·ban</span>openings</h5>
 		<h1 class="font-weight-bold mb-3"><%= @opening.job_position %></h1>
 
-		<section class="d-flex align-items-center mb-3"> <!-- OFFICE -->
-			<% @offices.each do |office| %>
-				<% if office.url === @opening.office_url %>
-					<%= link_to office_path(office) do %>
-						<%= cl_image_tag(office.banner_url, :class => "avatar-large-square") %>
-					<% end %>
-				<% end %>
-			<% end %>
-			<h3 class="pl-3"><%= @opening.office_name %></h3>
-		</section>
+      <% if @opening.office_id %>
+        <%= link_to office_path(@opening.office) do %>
+		      <section class="d-flex align-items-center mb-3"> <!-- OFFICE -->
+            <% if !@opening.office.banner_url.blank? %>
+              <%= cl_image_tag(@opening.office.banner_url, :class => "avatar-square mr-2") %>
+            <% elsif !@opening.office_logo.blank? %>
+              <%= cl_image_tag(@opening.office_logo, :class => "avatar-square mr-2") %>
+            <% else %>
+              <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+            <% end %>
+            <h3 class="pl-3"><%= @opening.office.name %></h3>
+		      </section>
+        <% end %>
+      <% else %>
+        <section class="d-flex align-items-center mb-3">
+          <% if !@opening.office_logo.blank? %>
+            <%= cl_image_tag(@opening.office_logo, :class => "avatar-square mr-2") %>
+          <% else %>
+            <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+          <% end %>
+  			  <h3 class="pl-3"><%= @opening.office_name %></h3>
+        </section>
+      <% end %>
 	</header>
 	<hr>
 

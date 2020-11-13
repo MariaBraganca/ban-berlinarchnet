@@ -6,11 +6,29 @@
     </header>
     <h2><%= opening_within.job_position %></h2>
     <div class="d-flex align-items-center">
-      <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
-      <div>
-        <p class="my-0">@ <%= opening_within.office_name %></p>
-        <p class="my-0">on <%= opening_within.job_site %></p>
-      </div>
+      <% if opening_within.office_id %>
+        <% if !opening_within.office.banner_url.blank? %>
+          <%= cl_image_tag(opening_within.office.banner_url, :class => "avatar-square mr-2") %>
+        <% elsif !opening_within.office_logo.blank? %>
+          <%= cl_image_tag(opening_within.office_logo, :class => "avatar-square mr-2") %>
+        <% else %>
+          <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+        <% end %>
+        <div>
+          <p class="my-0">@ <%= opening_within.office.name %></p>
+          <p class="my-0">on <%= opening_within.job_site %></p>
+        </div>
+      <% else %>
+        <% if !opening_within.office_logo.empty? %>
+           <%= cl_image_tag(opening_within.office_logo, :class => "avatar-square mr-2") %>
+        <% else %>
+          <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+        <% end %>
+        <div>
+          <p class="my-0">@ <%= opening_within.office_name %></p>
+          <p class="my-0">on <%= opening_within.job_site %></p>
+        </div>
+      <% end %>
     </div>
   </section>
 </article>
