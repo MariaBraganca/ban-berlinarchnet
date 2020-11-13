@@ -24,6 +24,6 @@ env :PATH, ENV['PATH']
 set :environment, "development"
 set :output, "log/cron.log"
 
-every 1.day, at: ['1:00 am', '16:00 pm'] do
+every 1.day, at: ['1:20 am', '1:20 pm'] do
   rake 'job_scraping'
 end

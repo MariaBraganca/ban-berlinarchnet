@@ -217,7 +217,6 @@ puts "
 
 
 "
-
 # terminal_counter = 1
 # experienced_user = 1
 # n_users.times do
@@ -269,8 +268,9 @@ puts "
 
 
 "
+# run - rake job_scraping - to seed jobs
 
-# "
+
 # phase = "jobs"
 # puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
