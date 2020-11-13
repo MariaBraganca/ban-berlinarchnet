@@ -5,13 +5,12 @@
       <h3 class="corporate red"><%= opening_within.date.strftime('%d.%m.%Y') %></h3>
     </header>
     <h2><%= opening_within.job_position %></h2>
-    <% if opening_within.office.banner_url %>
-      <div class="d-flex align-items-center">
-        <%= cl_image_tag(opening_within.office.banner_url, :class => "avatar-square mr-2") %>
-        <p class="my-0"> <%= opening_within.office.name %></p>
+    <div class="d-flex align-items-center">
+      <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+      <div>
+        <p class="my-0">@ <%= opening_within.office_name %></p>
+        <p class="my-0">on <%= opening_within.job_site %></p>
       </div>
-    <% else %>
-      <p>@ <%= opening_within.office.name %></p>
-    <% end %>
+    </div>
   </section>
 </article>

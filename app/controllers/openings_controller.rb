@@ -2,7 +2,7 @@ class OpeningsController < ApplicationController
 	skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-  	@openings = policy_scope(Opening).order(date: :asc)
+  	@openings = policy_scope(Opening).order(date: :desc)
   end
 
   def show

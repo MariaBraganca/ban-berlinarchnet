@@ -10,7 +10,7 @@ class Office < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
 
   has_many :experiences
-  has_many :openings
+  has_many :openings, dependent: :nullify
   has_many :users, through: :experiences
 
   has_many :ratings

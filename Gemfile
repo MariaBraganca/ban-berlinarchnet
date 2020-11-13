@@ -23,6 +23,8 @@ gem 'redis', '~> 4.0'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 # Watir gem
 gem 'watir', '~> 6.16', '>= 6.16.5'
+# Whenever gem
+gem 'whenever', '~> 0.9.4', require: false
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Act-as-taggable-on gem

@@ -6,13 +6,13 @@
 
 		<section class="d-flex align-items-center mb-3"> <!-- OFFICE -->
 			<% @offices.each do |office| %>
-				<% if office.name === @opening.office.name %>
+				<% if office.url === @opening.office_url %>
 					<%= link_to office_path(office) do %>
 						<%= cl_image_tag(office.banner_url, :class => "avatar-large-square") %>
 					<% end %>
 				<% end %>
 			<% end %>
-			<h3 class="pl-3"><%= @opening.office.name %></h3>
+			<h3 class="pl-3"><%= @opening.office_name %></h3>
 		</section>
 	</header>
 	<hr>

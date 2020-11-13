@@ -13,9 +13,9 @@ filepath = 'db/offices_berlin.json'
 serialized_offices_berlin = File.read(filepath)
 offices_berlin = JSON.parse(serialized_offices_berlin)
 
-filepath = 'db/jobs.json'
-serialized_jobs = File.read(filepath)
-jobs = JSON.parse(serialized_jobs)
+# filepath = 'db/jobs.json'
+# serialized_jobs = File.read(filepath)
+# jobs = JSON.parse(serialized_jobs)
 
 filepath = 'db/events.json'
 serialized_events = File.read(filepath)
@@ -265,31 +265,31 @@ puts "
 "
 puts "Random #{phase} sample:"
 p Experience.where(user_id: 3)
-puts "
+# puts "
 
 
 
-"
-phase = "jobs"
-puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
+# "
+# phase = "jobs"
+# puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
 
-terminal_counter = 1
+# terminal_counter = 1
 
-jobs.each do |job|
-  office_ids = Office.pluck(:id)
-  office_id = office_ids.sample
-  Opening.create!(date: Faker::Time.forward(days: rand(10..40), period: :evening),
-                 job_position: job["job_position"],
-                 description: JOB_DESCRIPTIONS.sample,
-                 office_id: office_id)
+# jobs.each do |job|
+#   office_ids = Office.pluck(:id)
+#   office_id = office_ids.sample
+#   Opening.create!(date: Faker::Time.forward(days: rand(10..40), period: :evening),
+#                  job_position: job["job_position"],
+#                  description: JOB_DESCRIPTIONS.sample,
+#                  office_id: office_id)
 
-  puts "=== #{terminal_counter} out of #{n_jobs} #{phase} seeded ==="
-  terminal_counter += 1
-end
-puts ""
-puts "Random #{phase} sample:"
-p Opening.find(rand(1..Opening.all.count))
-puts "
+#   puts "=== #{terminal_counter} out of #{n_jobs} #{phase} seeded ==="
+#   terminal_counter += 1
+# end
+# puts ""
+# puts "Random #{phase} sample:"
+# p Opening.find(rand(1..Opening.all.count))
+# puts "
 
 
 
