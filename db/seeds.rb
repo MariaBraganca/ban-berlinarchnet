@@ -33,7 +33,7 @@ n_users = 35
 n_posts = posts.size
 n_events = events.size
 n_experiences_per_user = 3
-n_jobs = jobs.size
+# n_jobs = jobs.size
 n_ratings = 100
 n_rsvps = 10
 n_comments = 40
@@ -265,9 +265,10 @@ puts "
 "
 puts "Random #{phase} sample:"
 p Experience.where(user_id: 3)
-# puts "
+puts "
 
 
+"
 
 # "
 # phase = "jobs"
@@ -289,8 +290,7 @@ p Experience.where(user_id: 3)
 # puts ""
 # puts "Random #{phase} sample:"
 # p Opening.find(rand(1..Opening.all.count))
-# puts "
-
+puts "
 
 
 "

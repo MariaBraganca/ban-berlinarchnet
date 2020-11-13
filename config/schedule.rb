@@ -19,9 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
+env :PATH, ENV['PATH']
+
 set :environment, "development"
 set :output, "log/cron.log"
 
-every :day, at: ['1:00 AM', '12:50 PM'] do
+every 1.day, at: ['1:00 am', '16:00 pm'] do
   rake 'job_scraping'
 end

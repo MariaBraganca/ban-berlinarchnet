@@ -11,7 +11,7 @@
         </div>
       </div>
   </header>
-<% elsif @office.banner_url %>
+<% elsif !@office.banner_url.blank? %>
   <header class="banner">
     <div class="banner-overlay"></div>
       <%= cl_image_tag(@office.banner_url, :class => "banner-image") %>
