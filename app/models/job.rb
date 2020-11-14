@@ -1,5 +1,5 @@
 class Job < ActiveRecord::Base
-  establish_connection :external_job_database
+  # establish_connection :external_job_database
 
-  self.table_name = "job"
+  # self.table_name = "job"
 end
