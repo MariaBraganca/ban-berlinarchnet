@@ -9,9 +9,15 @@
 	<section class="row justify-content-center mb-5">
 		<div class="col-lg-6 px-3">
 			<% @openings.each do |opening| %>
-				<%= link_to opening_path(opening) do %>
-					<%= render "shared/card-opening", opening_within: opening %>
-				<% end %>
+        <% if !opening.job_url.blank?  %>
+          <%= link_to url_for("#{opening.job_url}"), :target => '_blank' do %>
+            <%= render "shared/card-opening", opening_within: opening %>
+          <% end %>
+        <% else %>
+  				<%= link_to opening_path(opening) do %>
+  					<%= render "shared/card-opening", opening_within: opening %>
+  				<% end %>
+        <% end %>
 			<% end %>
 		</div>
 	</section>
