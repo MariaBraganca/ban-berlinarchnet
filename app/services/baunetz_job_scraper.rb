@@ -3,12 +3,12 @@ require 'json'
 
 class BaunetzJobScraper
   def self.get_job_description(html_doc, job)
-    job_description_selector = html_doc.css('p.job-detail-kategorie').find{|k| k.text.include?("Stellenbeschreibung")}.next_element
+    job_description_selector = html_doc.at_css('div.job-detail-body div')
 
-    if job_description_selector.text.blank?
-      job_description = job_description_selector.next_element.text
-    else
+    if job_description_selector
       job_description = job_description_selector.text
+    else
+      job_description = html_doc.at_css('div.job-detail-body p').next_element.text
     end
 
     job[:job_description] = job_description
@@ -81,8 +81,11 @@ class BaunetzJobScraper
       jobs << job
     end
 
-    phase = "jobs"
     n_jobs = jobs.size
+
+    phase = "jobs"
+    puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="
+
     terminal_counter = 1
 
     jobs.each do |job|
@@ -106,8 +109,7 @@ class BaunetzJobScraper
                       url: job[:office_url],
                       location: job[:office_location],
                       banner_url: job[:office_logo])
-        puts ""
-        puts "Office: #{Office.last.name} created"
+        puts "= Office: #{Office.last.name} seeded ="
 
         opening = Opening.new(date: job[:job_date],
                               job_position: job[:job_position],
@@ -116,7 +118,6 @@ class BaunetzJobScraper
                               office_id: Office.last.id)
       end
 
-      puts ""
       if opening.save
         puts "=== #{terminal_counter} out of #{n_jobs} #{phase} seeded ==="
       else
@@ -124,6 +125,11 @@ class BaunetzJobScraper
       end
       terminal_counter += 1
     end
+
+    puts ""
+    puts "Random #{phase} sample:"
+    p Opening.find(rand(1..Opening.all.count))
+    puts ""
 
   end
 end

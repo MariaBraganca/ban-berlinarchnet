@@ -59,7 +59,7 @@ offices.each do |office|
                               project_img_url: project["project_img_url"],
                               project_year: project["project_year"],
                               project_typology: project["project_typology"])
-        puts "=== Project seeded ==="
+        puts "= Project seeded ="
       end
     end
   puts "=== Office seeded <=> #{terminal_counter} out of #{n_offices} ==="
@@ -268,8 +268,8 @@ puts "
 
 
 "
-# run - rake job_scraping - to seed jobs
 
+BaunetzJobScraper.get_jobs
 
 # phase = "jobs"
 # puts "===:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::#{phase}:::::::::::==="

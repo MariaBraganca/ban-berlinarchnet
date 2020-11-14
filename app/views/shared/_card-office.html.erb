@@ -27,7 +27,7 @@
 
   <% if office_within.photo.attached? %>
     <%= cl_image_tag(office_within.photo.key, :class => "card-list-img") %>
-  <% elsif office_within.banner_url %>
+  <% elsif !office_within.banner_url.blank? %>
     <%= cl_image_tag(office_within.banner_url, :class => "card-list-img") %>
   <% end %>
   <section class="card-infos w-100">
