@@ -16,7 +16,11 @@
         <% end %>
         <div>
           <p class="my-0">@ <%= opening_within.office.name %></p>
-          <p class="my-0">on <%= opening_within.job_site %></p>
+          <% if opening_within.job_site == "·ban" %>
+            <p class="my-0">on <span class="corporate red"><%= opening_within.job_site %></span></p>
+          <% else %>
+            <p class="my-0">on <%= opening_within.job_site %></p>
+          <% end %>
         </div>
       <% else %>
         <% if !opening_within.office_logo.blank? %>

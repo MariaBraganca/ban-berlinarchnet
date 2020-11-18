@@ -38,7 +38,7 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
-  resources :openings, only: [:index, :show]
+  resources :openings
 
   resources :notifications, only: [:index] do
     collection do

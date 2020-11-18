@@ -1,0 +1,19 @@
+<main class="container min-vh-100">
+  <!-- ***************  OPENING NEW FORM  **************** -->
+  <section class="row my-5 form-card">
+    <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-12 form-infos">
+      <h1 class="corporate text-center"><span class="red">·ban</span>job new·</h1>
+      <%= simple_form_for(@opening, remote: true) do |f| %>
+        <%= f.input :job_position, as: :string %> <!-- JOB POSITION -->
+        <%= f.rich_text_area :description, style: "min-height: 300px;" %> <!-- CONTENT -->
+        <%= f.association :office, collection: Office.all.order(:name), prompt: "Choose an office" %> <!-- OFFICE -->
+        <div class="row align-items-end">
+          <div class="col-12"> <!-- SUBMIT -->
+            <%= f.button :submit, class: 'btn btn-call w-100' %>
+          </div>
+        </div>
+      <% end %>
+    </section>
+  </section>
+</main>

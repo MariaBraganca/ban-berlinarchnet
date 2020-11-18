@@ -6,11 +6,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- ***************  COLLAPSE  **************** -->
+  <!-- Collapse -->
   <section class="collapse navbar-collapse" id="navbarSupportedContent">
-
-    <!-- ***************  MAIN MENU  **************** -->
-    <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav mx-auto"> <!-- Main menu -->
       <li class="nav-item">
         <%= link_to "Events", events_path, class: "nav-link" %>
       </li>
@@ -28,8 +26,7 @@
       </li>
     </ul>
 
-    <!-- ***************  USER MENU  **************** -->
-    <ul class="navbar-nav">
+    <ul class="navbar-nav"> <!-- User dropdown menu -->
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
@@ -43,6 +40,7 @@
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Create event", new_event_path, class: "dropdown-item" %>
             <%= link_to "Create office", new_office_path, class: "dropdown-item" %>
+            <%= link_to "Create job", new_opening_path, class: "dropdown-item" %>
             <%= link_to "Create post", new_post_path, class: "dropdown-item" %>
             <%# if user received messages is not empty, link_to the last received message %>
             <% if !current_user.chatrooms_as_user_two.empty? %>

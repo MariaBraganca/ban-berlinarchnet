@@ -54,7 +54,7 @@ class BaunetzJobScraper
     job = {}
 
     index_html_doc.css('div.jobs-liste-eintrag').each do |element|
-      job_date = element.css('p.jobs-liste-eintrag-datum').text
+      job_date = Time.at(element.css('p.jobs-liste-eintrag-datum').attribute('data-timestamp').value.to_i)
       job_position = element.css('p.jobs-liste-eintrag-titel').text.strip
       job_office_name = element.css('p.jobs-liste-eintrag-untertitel').text.strip
 
@@ -79,8 +79,6 @@ class BaunetzJobScraper
 
       # puts ""
       # puts job.values
-
-      binding.pry
 
       jobs << job
     end

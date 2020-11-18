@@ -37,13 +37,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- ***************  NAVBAR  **************** -->
     <%= render 'shared/navbar' %>
-    <!-- Devise Alert and Notice -->
     <%= render 'shared/flashes' %>
-    <!-- Views -->
+    <!-- ***************  VIEWS  **************** -->
     <%= yield %>
-    <!-- Footer -->
+    <!-- ***************  FOOTER  **************** -->
     <%= render 'shared/footer' unless @disabled_footer %>
   </body>
 </html>
