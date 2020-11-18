@@ -34,9 +34,11 @@
         <h1 class="font-weight-bold"><%= @office.name %></h1>
       </div>
       <div class="col-lg-3">
-        <button class="btn btn-call w-100">
-          <%= link_to 'Edit Office', edit_office_path(@office) %>
-        </button>
+        <% if user_signed_in? %>
+          <button class="btn btn-call w-100">
+            <%= link_to 'Edit Office', edit_office_path(@office) %>
+          </button>
+        <% end %>
       </div>
     </section>
   </header>
