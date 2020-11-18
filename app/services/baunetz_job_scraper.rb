@@ -15,12 +15,12 @@ class BaunetzJobScraper
   end
 
   def self.get_office_contact(html_doc, job)
-    url_regex = /^(www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
+    url_regex = /^(www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}(:[0-9]{1,5})?(\/.*)?$/
     job_office_url_selector = html_doc.css('a.content_link').find{|l| l.attribute('href').value.downcase =~ url_regex }
 
     if job_office_url_selector
       # Trim url to its domain name, example: webpage.com or www.webpage.com
-      domain_regex = /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/
+      domain_regex = /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9](\/[a-z0-9-]+)*/
       job_office_url = job_office_url_selector.text.downcase[domain_regex]
 
       if !job_office_url.include?('www.')
@@ -33,7 +33,7 @@ class BaunetzJobScraper
     end
 
     street_regex = /[a-zäöüß-]+[\s[a-zäöüß-]]*.?\s+\d+/i
-    job_office_location_selector = html_doc.css('p.job-detail-kategorie').find{|k| k.text.include?("Kontakt")}.next_element.children.find{|e| e.text =~ street_regex}
+    job_office_location_selector = html_doc.css('p.job-detail-kategorie').find{|k| k.text.include?("Kontakt")}.next_element.children.find{|e| e.text =~ street_regex && e.text.downcase.include?('berlin')}
 
     if job_office_location_selector
       job_office_location = job_office_location_selector.text.strip
@@ -91,7 +91,7 @@ class BaunetzJobScraper
     terminal_counter = 1
 
     jobs.each do |job|
-      if job[:office_url].blank?
+      if job[:office_url].blank? || job[:office_location].blank?
         opening = Opening.new(date: job[:job_date],
                               job_position: job[:job_position],
                               job_site: job[:job_site],

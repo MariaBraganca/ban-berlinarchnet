@@ -3,7 +3,7 @@ class OpeningsController < ApplicationController
   before_action :set_opening, only: [:show, :edit, :update, :destroy]
 
   def index
-  	@openings = policy_scope(Opening).order(date: :desc)
+  	@openings = policy_scope(Opening).order(date: :desc).order(:id)
   end
 
   def show
