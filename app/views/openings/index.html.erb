@@ -1,11 +1,19 @@
 <main class="container min-vh-100">
-	<!-- ***************  HEADER OPENINGS  **************** -->
-	<header class="text-center my-5">
-		<h1 class="font-weight-bold">Job openings</h1>
-		<p>Check out job openings for architects in Berlin!</p>
+	<!-- ***************  HEADER JOBS  **************** -->
+	<header class="row justify-content-center my-5">
+    <section class="col-12 text-center">
+  		<h1 class="font-weight-bold">Job openings</h1>
+  		<p>Check out job openings for architects in Berlin!</p>
+    </section>
+    <!-- Add an Opening -->
+    <% if user_signed_in? %>
+      <section class="col-lg-6">
+        <button class="btn btn-attend w-100"><%= link_to "Create an opening", new_opening_path %></button>
+      </section>
+    <% end %>
 	</header>
 
-	<!-- ***************  OPENINGS  **************** -->
+	<!-- ***************  JOBS **************** -->
 	<section class="row justify-content-center mb-5">
 		<div class="col-lg-6 px-3">
 			<% @openings.each do |opening| %>

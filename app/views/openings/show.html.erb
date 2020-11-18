@@ -1,22 +1,34 @@
 <main class="container min-vh-100">
-	<!-- ***************  HEADER OPENING  **************** -->
-	<header class="my-5">
-		<h5 class="corporate mb-3"><span class="red">·ban</span>openings</h5>
-		<h1 class="font-weight-bold mb-3"><%= @opening.job_position %></h1>
+	<!-- ***************  HEADER JOB  **************** -->
+	<header class="row justify-content-between align-items-end mt-5 mb-3">
+    <div class="col-lg-9"> <!-- Job position -->
+		  <h5 class="corporate mb-3"><span class="red">·ban</span>openings</h5>
+		  <h1 class="font-weight-bold mb-0"><%= @opening.job_position %></h1>
+    </div>
+    <div class="col-lg-3"> <!-- Edit button -->
+      <% if user_signed_in? %>
+        <button class="btn btn-call w-100">
+          <%= link_to 'Edit Opening', edit_opening_path(@opening) %>
+        </button>
+      <% end %>
+    </div>
+	</header>
 
-      <% if @opening.office_id %>
-        <%= link_to office_path(@opening.office) do %>
-		      <section class="d-flex align-items-center mb-3"> <!-- OFFICE -->
-            <% if !@opening.office.banner_url.blank? %>
-              <%= cl_image_tag(@opening.office.banner_url, :class => "avatar-square mr-2") %>
-            <% elsif !@opening.office_logo.blank? %>
-              <%= cl_image_tag(@opening.office_logo, :class => "avatar-square mr-2") %>
-            <% else %>
-              <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
-            <% end %>
-            <h3 class="pl-3"><%= @opening.office.name %></h3>
-		      </section>
-        <% end %>
+  <!-- ***************  OFFICE  **************** -->
+  <section>
+    <% if @opening.office_id %>
+      <%= link_to office_path(@opening.office) do %>
+	      <section class="d-flex align-items-center mb-3">
+          <% if !@opening.office.banner_url.blank? %>
+            <%= cl_image_tag(@opening.office.banner_url, :class => "avatar-square mr-2") %>
+          <% elsif !@opening.office_logo.blank? %>
+            <%= cl_image_tag(@opening.office_logo, :class => "avatar-square mr-2") %>
+          <% else %>
+            <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+          <% end %>
+          <h3 class="pl-3 mb-0"><%= @opening.office.name %></h3>
+	      </section>
+      <% end %>
       <% else %>
         <section class="d-flex align-items-center mb-3">
           <% if !@opening.office_logo.blank? %>
@@ -24,20 +36,20 @@
           <% else %>
             <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
           <% end %>
-  			  <h3 class="pl-3"><%= @opening.office_name %></h3>
+  			  <h3 class="pl-3 mb-0"><%= @opening.office_name %></h3>
         </section>
       <% end %>
-	</header>
+    </section>
 	<hr>
 
 	<!-- ***************  DESCRIPTION / DATE **************** -->
   <section class="row my-5">
-		<section class="col-lg-9"> <!-- DESCRIPTION -->
+		<section class="col-lg-9"> <!-- Description -->
 			<h2 class="mb-3">Job description</h2>
 			<p><%= @opening.description %></p>
 		</section>
 
-		<section class="col-lg-3"> <!-- DATE -->
+		<section class="col-lg-3"> <!-- Date -->
 			<h3 class="mb-3">Details</h3>
 			<p><i class="fas fa-calendar-check fa-lg"></i> <%= @opening.date.strftime("%d. %B %Y") %></p>
 		</section>
