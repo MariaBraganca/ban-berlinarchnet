@@ -15,11 +15,13 @@ class BaunetzJobScraper
   end
 
   def self.get_office_contact(html_doc, job)
-    job_office_url_selector = html_doc.css('a.content_link').find{|link| !link.text.include?("@")}
+    url_regex = /^(www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
+    job_office_url_selector = html_doc.css('a.content_link').find{|l| l.attribute('href').value.downcase =~ url_regex }
 
     if job_office_url_selector
-      url_regex = /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/
-      job_office_url = job_office_url_selector.text[url_regex]
+      # Trim url to its domain name, example: webpage.com or www.webpage.com
+      domain_regex = /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/
+      job_office_url = job_office_url_selector.text.downcase[domain_regex]
 
       if !job_office_url.include?('www.')
         job_office_url = "www." + job_office_url
@@ -31,7 +33,7 @@ class BaunetzJobScraper
     end
 
     street_regex = /[a-zäöüß-]+[\s[a-zäöüß-]]*.?\s+\d+/i
-    job_office_location_selector = html_doc.css('p.job-detail-kategorie').find{|k| k.text.include?("Kontakt")}.next_element.children.find{|e| e.text =~ street_regex }
+    job_office_location_selector = html_doc.css('p.job-detail-kategorie').find{|k| k.text.include?("Kontakt")}.next_element.children.find{|e| e.text =~ street_regex}
 
     if job_office_location_selector
       job_office_location = job_office_location_selector.text.strip
@@ -78,6 +80,8 @@ class BaunetzJobScraper
       # puts ""
       # puts job.values
 
+      binding.pry
+
       jobs << job
     end
 
@@ -89,7 +93,7 @@ class BaunetzJobScraper
     terminal_counter = 1
 
     jobs.each do |job|
-      if job[:office_url].empty?
+      if job[:office_url].blank?
         opening = Opening.new(date: job[:job_date],
                               job_position: job[:job_position],
                               job_site: job[:job_site],
@@ -128,7 +132,8 @@ class BaunetzJobScraper
 
     puts ""
     puts "Random #{phase} sample:"
-    p Opening.find(rand(1..Opening.all.count))
+    p Opening.last
+    # p Opening.find(rand(1..Opening.all.count))
     puts ""
 
   end
