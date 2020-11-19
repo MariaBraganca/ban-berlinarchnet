@@ -32,7 +32,7 @@ class BaunetzJobScraper
       job[:office_url] = ""
     end
 
-    street_regex = /[a-zäöüß-]+[\s[a-zäöüß-]]*.?\s+\d+/i
+    street_regex = /[a-zäöüß-]+[\s[a-zäöüß-]]*.?\s?\d+/i
     job_office_location_selector = html_doc.css('p.job-detail-kategorie').find{|k| k.text.include?("Kontakt")}.next_element.children.find{|e| e.text =~ street_regex && e.text.downcase.include?('berlin')}
 
     if job_office_location_selector
