@@ -19,14 +19,12 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, "log/cron.log"
-# env :PATH, '~'
 env :PATH, ENV['PATH']
-env :GEM_PATH, ENV['GEM_PATH']
 
 set :environment, "development"
+set :output, "log/cron.log"
 
-every :day, at: ['1:20 am', '9:54 am'] do
+every :day, at: ['11:00 am', '11:00 pm'] do
   rake 'job_scraping'
 end
 
