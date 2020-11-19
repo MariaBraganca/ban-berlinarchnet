@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'office_projects/index'
   get 'jobs/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'notifications/index'
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
 
   resources :offices do
     resources :comments, only: [:destroy]
+    resources :office_projects, only: [:new, :create]
     post "office_comment", to: "comments#create_office_comment"
   end
 

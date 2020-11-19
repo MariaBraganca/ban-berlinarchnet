@@ -123,14 +123,29 @@
   <hr>
 
   <!-- ***************  PROJECTS  **************** -->
-  <section class="row my-5">
-    <h2 class="col-12 mb-3">Projects</h2>
-    <% @office.office_projects.each do |project| %>
-      <div class="col-12 col-lg-3 overlay-container mb-3">
-        <%= image_tag(project.project_img_url, :class => 'photos-gallery') %>
-        <div class="overlay-text mx-3"><%= project.project_name %></div>
+  <section class="my-5">
+    <div class="row justify-content-start mb-3">
+      <div class="col-9">
+        <h2>Projects</h2>
       </div>
-    <% end %>
+      <div class="col-3">
+        <button class="btn btn-upload w-100">
+          <%= link_to 'Add project', new_office_office_project_path(@office) %>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <% @office.office_projects.each do |project| %>
+        <div class="col-12 col-lg-3 overlay-container mb-3">
+          <% if project.photo.attached? %>
+            <%= cl_image_tag(project.photo.key, :class => "photos-gallery") %>
+          <% else %>
+            <%= image_tag(project.project_img_url, :class => 'photos-gallery') %>
+          <% end %>
+          <div class="overlay-text mx-3"><%= project.project_name %></div>
+        </div>
+      <% end %>
+    </div>
   </section>
   <hr>
 

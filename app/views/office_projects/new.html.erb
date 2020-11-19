@@ -1,0 +1,21 @@
+<main class="container min-vh-100">
+  <!-- ***************  PROJECT NEW FORM  **************** -->
+  <section class="row my-5 form-card">
+    <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-12 form-infos">
+      <h1 class="corporate text-center"><span class="red">·ban</span>project new·</h1>
+      <%= simple_form_for([@office, @office_project], remote: true) do |f| %>
+        <%= f.input :project_name, as: :string %> <!-- Project name -->
+        <%= f.input :photo,
+                    as: :file,
+                    label_html: { class: "label-cover mb-3" },
+                    label: true  %>
+        <div class="row align-items-end">
+          <div class="col-12"> <!-- Submit -->
+            <%= f.button :submit, class: 'btn btn-call w-100' %>
+          </div>
+        </div>
+      <% end %>
+    </section>
+  </section>
+</main>
