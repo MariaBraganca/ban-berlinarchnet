@@ -13,11 +13,13 @@ class OfficeProjectsController < ApplicationController
   def create
     @office_project = OfficeProject.new(office_project_params)
     @office_project.office = @office
+
     if @office_project.save
       redirect_to office_path(@office)
     else
       render :new
     end
+
     authorize @office_project
   end
 

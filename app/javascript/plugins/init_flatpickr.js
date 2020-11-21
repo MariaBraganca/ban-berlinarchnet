@@ -3,6 +3,10 @@ import 'flatpickr/dist/flatpickr.min.css'
 
 const initFlatpickr = () => {
   flatpickr(".datepicker", {
+    dateFormat: "Y-m-d",
+    altInput: true,
+  });
+  flatpickr(".datetimepicker", {
     enableTime: true,
     time_24hr: true,
     dateFormat: "Y-m-d H:i",

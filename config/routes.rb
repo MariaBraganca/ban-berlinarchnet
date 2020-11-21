@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :users do
-    resources :experiences
+    resources :experiences, only: [:new, :create]
     resources :chatrooms, only: [:create]
   end
 
-  resources :experiences, only: [] do
-    resources :ratings, only: :create
-  end
+  # resources :experiences, only: [] do
+  #   resources :ratings, only: :create
+  # end
 
   resources :rsvps, only: :destroy
 

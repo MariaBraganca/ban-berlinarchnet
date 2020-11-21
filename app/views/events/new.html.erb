@@ -18,8 +18,8 @@
             <%= f.rich_text_area :description, style: "min-height: 475px;", required: true %>
           </div>
           <div class="col-lg-4 mt-2"> <!-- START TIME / END TIME / ONLINE / LINK / LOCATION / VENUE  -->
-            <%= f.input :start_date, as: :string, input_html: { class: "datepicker"}, required: true %>
-            <%= f.input :end_date, as: :string, input_html: { class: "datepicker"} %>
+            <%= f.input :start_date, as: :string, input_html: { class: "datetimepicker"}, required: true %>
+            <%= f.input :end_date, as: :string, input_html: { class: "datetimepicker"} %>
             <%= f.input :online, as: :boolean, boolean_style: :inline, label:"Online Event" %>
             <%= f.input :online_link, as: :string, label: "Link", required: true %>
             <%= f.input :location, as: :string, input_html: { class: "locationpicker"}, required: true %>

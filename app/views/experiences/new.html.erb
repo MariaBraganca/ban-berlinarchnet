@@ -1,0 +1,26 @@
+<main class="container min-vh-100">
+  <!-- ***************  PROJECT NEW FORM  **************** -->
+  <section class="row my-5 form-card">
+    <!-- ***************  FORM ENTRIES  **************** -->
+    <section class="col-12 form-infos">
+      <h1 class="corporate text-center"><span class="red">·ban</span>experience new·</h1>
+      <%= simple_form_for([@user, @experience], remote: true) do |f| %>
+        <%= f.association :office, collection: Office.all.order(:name), prompt: "Choose an office" %> <!-- Office -->
+        <%= f.input :job_position, as: :string %> <!-- Job position-->
+        <div class="row">
+          <div class="col-lg-6">
+            <%= f.input :start_date, as: :string, input_html: { class: "datepicker"} %> <!-- Start date -->
+          </div>
+          <div class="col-lg-6">
+            <%= f.input :end_date, as: :string, input_html: { class: "datepicker"}, hint: "If this is your current job, leave this field empty" %> <!-- End date -->
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col-12"> <!-- Submit -->
+            <%= f.button :submit, class: 'btn btn-call w-100', value: "Create experience" %>
+          </div>
+        </div>
+      <% end %>
+    </section>
+  </section>
+</main>
