@@ -53,6 +53,7 @@
           <p><%= @user.first_name %> hasn't added any working experiences yet.</p>
         <% end %>
       <% end %>
+      <%= link_to 'Add experience', new_user_experience_path(@user), class: "btn btn-upload w-100" %>
     </section>
   </section>
   <hr>

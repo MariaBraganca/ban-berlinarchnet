@@ -20,11 +20,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 # Nokogiri gem
-gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'nokogiri', '~> 1.10', '>= 1.10.10'
 # Watir gem
 gem 'watir', '~> 6.16', '>= 6.16.5'
 # Whenever gem
 gem 'whenever', '~> 0.9.4', require: false
+# PG Search
+gem 'pg_search', '~> 2.3', '>= 2.3.5'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Act-as-taggable-on gem
@@ -39,25 +42,25 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Devise gem
-gem 'devise'
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 # Pundit gem
-gem 'pundit'
+gem 'pundit', '~> 2.1'
 
 # Act as taggable
 gem 'acts-as-taggable-on', '~> 6.0'
 
 # Cloudinary gem
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary', '~> 1.18', '>= 1.18.1'
 
 # Rails Admin gem
-gem 'rails_admin', '~> 2.0'
+gem 'rails_admin', '~> 2.0', '>= 2.0.2'
 
 # Faker gem
-gem 'faker'
+gem 'faker', '~> 2.14'
 
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '~> 10.0', '>= 10.0.2.0'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
@@ -80,17 +83,17 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  gem 'capybara', '~> 3.33'
+  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  gem 'webdriver', '~> 0.17.0'
+  gem 'launchy', '~> 2.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Geocoder gemfile
-
 gem 'geocoder'
 gem 'turbolinks_render'
-gem 'pg_search', '~> 2.3.0'
+

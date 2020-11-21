@@ -1,21 +1,28 @@
 <article class="card-list mb-3">
   <section class="card-infos">
     <header class="d-flex justify-content-between mb-2">
-      <h3 class="corporate"><span class="red">·ban</span>job</h3>
+      <h3 class="corporate"><span class="red">·ban</span>experience</h3>
     </header>
     <h2><%= experience_within.job_position %></h2>
-    
+
     <section class="d-flex align-items-start">
       <% if experience_within.office.banner_url %>
-        <%= cl_image_tag(experience_within.office.banner_url, :class => "avatar-square mr-2") %>      
+        <%= cl_image_tag(experience_within.office.banner_url, :class => "avatar-square mr-2") %>
       <% end %>
       <div>
-        <% if experience_within.end_date > DateTime.now()   %>
+        <% if experience_within.end_date.nil? %>
           <p class="mb-1">Currently working @ <b><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></b></p>
+          <p class="mb-1">
+            <%= experience_within.start_date.strftime("%B %Y") %> - present |
+            <%= distance_of_time_in_words_to_now(experience_within.start_date) %>
+          </p>
         <% else   %>
           <p class="mb-1">Worked @ <b><%= link_to "#{experience_within.office.name}", "/offices/#{experience_within.office.id}" %></b></p>
+          <p class="mb-1">
+            <%= experience_within.start_date.strftime("%B %Y") %> - <%= experience_within.end_date.strftime("%B %Y") %> |
+            <%= distance_of_time_in_words(experience_within.end_date, experience_within.start_date) %>
+          </p>
         <% end %>
-        <p class="mb-0"><%= experience_within.start_date.strftime("%m.%Y") %> - <%= experience_within.end_date > DateTime.now() ? "present" : experience_within.end_date.strftime("%m.%Y") %></p>
       </div>
     </section>
   </section>
