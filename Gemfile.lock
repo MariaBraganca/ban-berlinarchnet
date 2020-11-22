@@ -326,8 +326,6 @@ GEM
     thread_safe (0.3.6)
     thread_safe (0.3.6-java)
     tilt (2.0.10)
-    time_difference (0.6.0.pre.activesupport42)
-      activesupport
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -342,8 +340,6 @@ GEM
       unf_ext
     unf (0.1.4-java)
     unf_ext (0.0.7.7)
-    unf_ext (0.0.7.7-x64-mingw32)
-    unf_ext (0.0.7.7-x86-mingw32)
     warden (1.2.9)
       rack (>= 2.0.9)
     watir (6.17.0)
@@ -408,7 +404,6 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  time_difference (~> 0.6.0.pre.activesupport42)
   turbolinks (~> 5)
   turbolinks_render
   tzinfo-data
