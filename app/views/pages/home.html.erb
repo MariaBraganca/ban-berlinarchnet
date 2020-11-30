@@ -24,7 +24,7 @@
 			<h2 class="font-weight-bold">Events</h2>
 			<p class="link mb-5"><%= link_to "Check out the latest events >", events_path %></p>
 		</header>
-		<!-- ***************  EVENT CARDS  **************** -->
+		<!-- Event cards-->
 		<section class="row justify-content-between">
 			<% @events.each do |event| %>
 				<div class="col-md-6 col-lg-3 mb-3">
@@ -46,7 +46,7 @@
 				<h2 class="font-weight-bold">Offices</h2>
 				<p class="link mb-5"><%= link_to "Check out the best rated offices >", offices_path %></p>
 			</header>
-			<!-- ***************  OFFICE CARDS  **************** -->
+			<!-- Office cards -->
 			<section class="row">
 				<div class="col-12">
 					<% @offices.each do |office| %>
@@ -64,7 +64,7 @@
 				<h2 class="font-weight-bold">Jobs</h2>
 				<p class="link mb-5"><%= link_to "Check out the latest job openings >", openings_path %></p>
 			</header>
-			<!-- ***************  OPENING CARDS  **************** -->
+			<!-- Opening cards -->
 			<section class="row">
 				<div class="col-12">
 					<% @openings.each do |opening| %>
@@ -91,6 +91,7 @@
 			<h2 class="font-weight-bold">Blog</h2>
 			<p class="link mb-5"><%= link_to "Check out the latest blog posts >", posts_path %></p>
 		</header>
+    <!-- Post cards -->
 		<section class="row justify-content-between">
 			<% @posts.each do |post| %>
 				<div class="col-md-6 col-lg-3 mb-3">
