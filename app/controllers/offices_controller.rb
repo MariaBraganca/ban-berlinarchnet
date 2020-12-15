@@ -5,7 +5,7 @@ class OfficesController < ApplicationController
   def index
     @offices = policy_scope(Office).includes(:ratings, photo_attachment: :blob).order(:name)
 
-    @markers = @offices.geocoded.map do |office|
+    @markers = policy_scope(Office).geocoded.map do |office|
       {
         lat: office.latitude,
         lng: office.longitude,
