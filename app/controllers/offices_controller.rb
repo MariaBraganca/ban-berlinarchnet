@@ -3,7 +3,7 @@ class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-    @offices = policy_scope(Office).order(:name)
+    @offices = policy_scope(Office.includes(:ratings, photo_attachment: :blob)).order(:name)
 
     @markers = @offices.geocoded.map do |office|
       {
@@ -13,28 +13,7 @@ class OfficesController < ApplicationController
       }
     end
 
-    if params[:query].present? && params[:order].present?
-      if params[:order] == "@offices_arch"
-        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
-      elsif params[:order] == "@offices_cult"
-        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
-      elsif params[:order] == "@offices_sala"
-        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
-      end
-      offices_search = Office.office_search(params[:query])
-      @offices = offices_ordered & offices_search
-
-    elsif params[:order].present?
-      if params[:order] == "@offices_arch"
-        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
-      elsif params[:order] == "@offices_cult"
-        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
-      elsif params[:order] == "@offices_sala"
-        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
-      end
-    elsif params[:query].present?
-      @offices = Office.office_search(params[:query])
-    end
+    search_and_sort()
   end
 
   def show
@@ -48,6 +27,7 @@ class OfficesController < ApplicationController
       }]
 
     set_average()
+
     @comment = Comment.new
   end
 
@@ -87,6 +67,31 @@ class OfficesController < ApplicationController
 
   def office_params
     params.require(:office).permit(:name, :location, :url, :description, :photo)
+  end
+
+  def search_and_sort
+    if params[:query].present? && params[:order].present?
+      if params[:order] == "@offices_arch"
+        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
+      elsif params[:order] == "@offices_cult"
+        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
+      elsif params[:order] == "@offices_sala"
+        offices_ordered = Office.joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
+      end
+      offices_search = Office.office_search(params[:query])
+      @offices = offices_ordered & offices_search
+
+    elsif params[:order].present?
+      if params[:order] == "@offices_arch"
+        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc')
+      elsif params[:order] == "@offices_cult"
+        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.culture) desc')
+      elsif params[:order] == "@offices_sala"
+        @offices = Office.joins(:ratings).group('offices.id').order('avg(ratings.salary) desc')
+      end
+    elsif params[:query].present?
+      @offices = Office.office_search(params[:query])
+    end
   end
 
   def set_average
