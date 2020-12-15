@@ -3,7 +3,7 @@ class OfficesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-    @offices = policy_scope(Office.includes(:ratings, photo_attachment: :blob)).order(:name)
+    @offices = policy_scope(Office).includes(:ratings, photo_attachment: :blob).order(:name)
 
     @markers = @offices.geocoded.map do |office|
       {
