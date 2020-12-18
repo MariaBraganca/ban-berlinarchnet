@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  # associations
   has_many :experiences
   has_many :offices, through: :experiences
   has_many :rsvps
@@ -13,7 +14,13 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_many_attached :portfolio_photos
 
-  # PgSearch for users
+  # validations
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
+
+  # PgSearch
   include PgSearch::Model
   pg_search_scope :search_by_name,
     against: [ :first_name, :last_name ],
@@ -26,13 +33,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def full_name
+    [first_name.capitalize, last_name.capitalize].join(' ')
+  end
+
   # def chatrooms
     # chatrooms_as_user_one + chatrooms_as_user_two
   # end
 
   # after_create :welcome_send
+  # def welcome_send
+  #   UserMailer.welcome_send(self).deliver
+  # end
 
-  def welcome_send
-    UserMailer.welcome_send(self).deliver
-  end
 end
