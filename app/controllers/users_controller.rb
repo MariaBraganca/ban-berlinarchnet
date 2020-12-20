@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @users = policy_scope(User).order(:last_name)
+    @users = policy_scope(User).includes(photo_attachment: :blob).order(:last_name)
 
     if params[:query].present?
       @users = User.search_by_name(params[:query])
@@ -10,12 +10,12 @@ class UsersController < ApplicationController
       @users
     end
   end
-  
+
   def show
     @user = User.find(params[:id])
     authorize @user
   end
-  
+
   def create
     @user = User.new(params[:user])
 
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       end
     end
   end
-  
+
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
@@ -42,9 +42,9 @@ class UsersController < ApplicationController
     end
     authorize @user
   end
-  
+
   private
-  
+
   def user_params
     params.require(:user).permit(:first_name, :last_name, :description, :photo, portfolio_photos: [])
   end
