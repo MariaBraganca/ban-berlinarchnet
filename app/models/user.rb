@@ -45,5 +45,4 @@ class User < ApplicationRecord
   # def welcome_send
   #   UserMailer.welcome_send(self).deliver
   # end
-
 end
