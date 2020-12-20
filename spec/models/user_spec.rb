@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe "validations" do
+  describe "Validations" do
     describe "validates first name" do
       it { should have_db_column(:first_name)  }
       it { should validate_presence_of(:first_name) }
@@ -22,31 +22,26 @@ RSpec.describe User, type: :model do
       it { should have_db_column(:encrypted_password)  }
       it { should validate_presence_of(:encrypted_password) }
     end
-
-    context "if valid attributes are provided" do
-      it "validates user" do
-        harry = User.new(
-          first_name: 'Harry',
-          last_name: 'Potter',
-          email: 'harry.potter@gmail.com',
-          password: '123456')
-        harry.save
-
-        expect(harry).to be_valid
-      end
-    end
   end
 
-  context "if user is valid" do
-    it "retrieves user's full name" do
-      harry = User.new(
+  describe "Subject" do
+    subject { User.new(first_name: 'harry', last_name: 'potter', email: 'harrypotter@gmail.com', password: '123456') }
+    # let(:user) { User.new(first_name: 'Harry', last_name: 'Potter', email: 'harrypotter@gmail.com', password: '123456') }
+
+    it "is valid and an instance of the User class" do
+      expect(subject).to be_valid & be_an_instance_of(User)
+    end
+
+    it "has and responds to attributes" do
+      expect(subject).to have_attributes(
         first_name: 'harry',
         last_name: 'potter',
-        email: 'harry.potter@gmail.com',
+        email: 'harrypotter@gmail.com',
         password: '123456')
-      harry.save
+    end
 
-      expect(harry.full_name).to eq('Harry Potter')
+    it "retrieves a full name" do
+      expect(subject.full_name).to eq('Harry Potter')
     end
   end
 end
