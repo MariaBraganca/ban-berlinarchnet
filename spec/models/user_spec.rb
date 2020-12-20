@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe "Validations" do
+  describe "validations" do
     describe "validates first name" do
       it { should have_db_column(:first_name)  }
       it { should validate_presence_of(:first_name) }
@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "Subject" do
+  describe "an user" do
     subject { User.new(first_name: 'harry', last_name: 'potter', email: 'harrypotter@gmail.com', password: '123456') }
     # let(:user) { User.new(first_name: 'Harry', last_name: 'Potter', email: 'harrypotter@gmail.com', password: '123456') }
 
