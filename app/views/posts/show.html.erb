@@ -6,7 +6,7 @@
       <h5 class="corporate"><span class="red">·ban</span>post</h5>
       <h1 class="font-weight-bold mb-3"><%= @post.title%></h1>
       <div class="d-flex align-items-center"> <!-- USER -->
-        <%= link_to user_path(@post.user) do %>         
+        <%= link_to user_path(@post.user) do %>
           <% if @post.user.photo.attached? %>
             <%= cl_image_tag(@post.user.photo.key, gravity: :face, :class => "avatar mb-3") %>
           <% elsif @post.user.cl_img_tag %>
@@ -69,9 +69,9 @@
           </div>
         </div>
       <% end %>
-    
+
       <% if user_signed_in? %> <!-- FORM -->
-        <div class = "form" id= "comment-form">
+        <div class="form" id="comment-form">
           <%= form_tag post_post_comment_path(@post, url: (post_path([@post], anchor:'comments'))), method: :post do |f| %>
             <%= text_field_tag :content %>
             <%= submit_tag 'Post', class: 'btn btn-upload' %>

@@ -19,7 +19,7 @@
       </div>
     </section>
 
-    <!-- ***************  RSVP  **************** -->    
+    <!-- ***************  RSVP  **************** -->
     <section class="col-lg-4">
       <% if user_signed_in? %>
         <%= link_to "Edit event", edit_event_path(@event), class: "btn btn-call w-100 mb-3" if current_user == @event.user %>
@@ -38,11 +38,11 @@
     </section>
   </header>
   <hr>
-  
+
   <!-- ***************  CONTENT  **************** -->
   <section class='row my-5'>
     <div class="col-lg-8"> <!-- PHOTO / DESCRIPTION -->
-      <% if @event.cover_photo.attached? %> 
+      <% if @event.cover_photo.attached? %>
         <%= cl_image_tag(@event.cover_photo.key, :class => "cover-img mb-5") %>
       <% elsif @event.cl_img_tag %>
         <%= cl_image_tag(@event.cl_img_tag, :class => "cover-img mb-5") %>
@@ -63,7 +63,7 @@
       <h2 class="mb-3">Details</h2>
       <p><i class="fas fa-calendar-check fa-lg gray mr-2"></i> <%= @event.start_date.strftime('%d. %B, %Y from %H:%M') %> <%= @event.end_date.strftime('to %H:%M') if @event.end_date %></p>
       <% if @event.online %>
-        <p><i class="fas fa-signal fa-lg green mr-2"></i> Online Event</p>                    
+        <p><i class="fas fa-signal fa-lg green mr-2"></i> Online Event</p>
         <%= link_to url_for(@event.online_link), :target => '_blank' do %>
           <p class="link"><i class="fas fa-link fa-lg red mr-2"></i> <%= @event.online_link %></p>
         <% end %>
@@ -107,7 +107,7 @@
     <!-- ***************  MEMBERS  **************** -->
     <section class='col-lg-6' id = "attending">
       <h2>Attending <span class="badge-number"><%= @event.users.length %></span></h2>
-      
+
       <div class="row mt-3"> <!-- ATTENDING -->
         <% @event.users.each do |user| %>
           <div class="col-6 col-lg-4 text-center mb-3">
@@ -119,12 +119,12 @@
               <% else  %>
                 <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large mb-3") %>
               <% end %>
-            <% end %>         
+            <% end %>
             <p><%= user.first_name %> <%= user.last_name %></p>
           </div>
         <% end %>
       </div>
-      
+
       <% if user_signed_in? %> <!-- RSVP -->
         <% unless @user_attending %>
           <%= render "shared/attendModal" %>
@@ -161,7 +161,7 @@
       <% end %>
 
       <% if user_signed_in? %> <!-- FORM -->
-        <div class = "form" id= "comment-form">
+        <div class="form" id="comment-form">
           <%= form_tag event_event_comment_path(@event, url: (event_path([@event], anchor:'comments'))), method: :post do |f| %>
             <%= text_field_tag :content %>
             <%= submit_tag 'Post', class: 'btn btn-upload' %>
