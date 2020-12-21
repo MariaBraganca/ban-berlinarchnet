@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
         if @comment.save
             redirect_to office_path(@office, anchor: "comment-#{@comment.id}")
         else
-            redirect_to office_path(@office, anchor: "comment-office")
+            redirect_to office_path(@office, anchor: "comment-form")
             flash[:validation] = "Comment cannot be empty!"
         end
     end

@@ -182,7 +182,7 @@
     <section class="col-lg-6">
       <h2 class="mb-3">Comments <span class="badge-number"><%= @office.comments.size %></span></h2>
       <% @office.comments.order(date: :desc).each do |comment| %>
-        <div class="card-comment mb-3 px-3" id="comments-<%= comment.id %>">
+        <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
           <% if comment.user.photo.attached? %>
             <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
           <% else %>
@@ -197,7 +197,7 @@
       <% end %>
 
       <% if user_signed_in? %> <!-- FORM -->
-        <div class = "form" id= "comment-office" >
+        <div class="form" id="comment-form" >
           <%= form_tag office_office_comment_path(@office, url: (office_path([@office], anchor:'comments'))), method: :post do |f| %>
               <%= text_field_tag :content %>
               <%= submit_tag 'Post', class: 'btn btn-upload' %>
