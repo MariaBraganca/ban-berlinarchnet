@@ -26,8 +26,6 @@ class OfficesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { office: @office })
       }]
 
-    set_average()
-
     @comment = Comment.new
   end
 
@@ -92,34 +90,6 @@ class OfficesController < ApplicationController
       end
     elsif params[:query].present?
       @offices = Office.office_search(params[:query])
-    end
-  end
-
-  def set_average
-    # Averages
-    if @office.ratings.empty?
-      @culture_average = 0
-      @salary_average = 0
-      @architecture_average = 0
-    else
-      # Average Ratings for Culture
-      culture_ratings = []
-      @office.ratings.each do |rating|
-        culture_ratings << rating.culture
-      end
-      @culture_average = (culture_ratings.sum / culture_ratings.size).round
-      # Average Ratings for Salary
-      salary_ratings = []
-      @office.ratings.each do |rating|
-        salary_ratings << rating.salary
-      end
-      @salary_average = (salary_ratings.sum / salary_ratings.size).round
-      # Average Ratings for Architecture
-      architecture_ratings = []
-      @office.ratings.each do |rating|
-        architecture_ratings << rating.architecture
-      end
-      @architecture_average = (architecture_ratings.sum / architecture_ratings.size).round
     end
   end
 end

@@ -60,35 +60,47 @@
       <h2 class="mb-3">Ratings</h2>
       <div class="row">
         <div class="col-6">
-          <p>CULTURE</p>
-          <p>SALARY</p>
-          <p>ARCHITECTURE</p>
+          <p>Architecture quality</p>
+          <p>Company's culture</p>
+          <p>Career and salary</p>
         </div>
-        <div class="col-6">
-          <p>
-            <% @culture_average.times do %>
-              <i class="fas fa-heart red"></i>
+        <div class="col-4">
+          <div class="row mb-3 justify-content-between px-3">
+            <% @office.average_architecture_rating.times do %>
+              <div class="col px-0 text-center">
+                <i class="fas fa-star fa-lg yellow"></i>
+              </div>
             <% end %>
-            <% (5-@culture_average).times do %>
-              <i class="fas fa-heart light-gray"></i>
+            <% (5 - @office.average_architecture_rating).times do %>
+              <div class="col px-0 text-center">
+                <i class="fas fa-star fa-lg light-gray"></i>
+              </div>
             <% end %>
-          </p>
-          <p>
-            <% @salary_average.times do %>
-              <i class="fas fa-euro-sign green"></i>
+          </div>
+          <div class="row mb-3 justify-content-between px-3">
+            <% @office.average_culture_rating.times do %>
+              <div class="col px-0 text-center">
+                <i class="fas fa-heart fa-lg red"></i>
+              </div>
             <% end %>
-            <% (5-@salary_average).times do %>
-              <i class="fas fa-euro-sign light-gray"></i>
+            <% (5 - @office.average_culture_rating).times do %>
+              <div class="col px-0 text-center">
+                <i class="fas fa-heart fa-lg light-gray"></i>
+              </div>
             <% end %>
-          </p>
-          <p>
-            <% @architecture_average.times do %>
-              <i class="fas fa-star yellow"></i>
+          </div>
+          <div class="row mb-3 justify-content-between px-3">
+            <% @office.average_salary_rating.times do %>
+              <div class="col px-0 text-center">
+                <i class="fas fa-euro-sign fa-lg green"></i>
+              </div>
             <% end %>
-            <% (5-@architecture_average).times do %>
-              <i class="fas fa-star light-gray"></i>
+            <% (5 - @office.average_salary_rating).times do %>
+              <div class="col px-0 text-center">
+                <i class="fas fa-euro-sign fa-lg light-gray"></i>
+              </div>
             <% end %>
-          </p>
+          </div>
         </div>
       </div>
     </section>

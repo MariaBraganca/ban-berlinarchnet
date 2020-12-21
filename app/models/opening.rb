@@ -10,6 +10,7 @@ class Opening < ApplicationRecord
   # rich text
   has_rich_text :description
 
+  # smart methods
   def recent?
     date > 1.month.ago
   end

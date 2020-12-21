@@ -1,3 +1,4 @@
 class Rating < ApplicationRecord
-    belongs_to :office
+  # associations
+  belongs_to :office
 end

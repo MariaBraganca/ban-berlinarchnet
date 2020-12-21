@@ -1,18 +1,14 @@
 class Event < ApplicationRecord
-  geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_location?
-
+  # associations
   belongs_to :user
   has_many :rsvps, dependent: :destroy
   has_many :users, through: :rsvps
   has_many :comments, dependent: :nullify
-  has_one_attached :cover_photo
-  has_many_attached :event_photos
 
-  has_rich_text :description
-
+  # collection
   $format = ["··bannetworking", "-·bantalks", "<·banwalks", "×·banworkshop"]
-  
+
+  # validations
   validates :start_date, presence: true
   validates :format, inclusion: { in: $format }
   validates :title, presence: true
@@ -20,4 +16,15 @@ class Event < ApplicationRecord
   validates :online, presence: true, unless: :location
   validates :online_link, presence: true, if: :online
   validates :description, presence: true
+
+  # active storage
+  has_one_attached :cover_photo
+  has_many_attached :event_photos
+
+  # action text
+  has_rich_text :description
+
+  # mapbox
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end

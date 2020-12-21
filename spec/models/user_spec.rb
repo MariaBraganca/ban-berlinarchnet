@@ -40,7 +40,7 @@ RSpec.describe User, type: :model do
         password: '123456')
     end
 
-    it "retrieves a full name" do
+    it "retrieves a capitalized full name" do
       expect(subject.full_name).to eq('Harry Potter')
     end
   end

@@ -19,7 +19,7 @@ RSpec.describe Opening, type: :model do
   end
 
   describe "an opening" do
-    subject { Opening.new(date: Time.new(2020,10,17), job_position: 'Auror') }
+    subject { Opening.new(date: Date.new(2020,11,18), job_position: 'Auror') }
 
     it "validates opening and is an instance of the Opening class" do
       expect(subject).to be_valid & be_an_instance_of(Opening)
@@ -27,12 +27,12 @@ RSpec.describe Opening, type: :model do
 
     it "has and responds to attributes" do
       expect(subject).to have_attributes(
-        date: Time.new(2020,10,17),
+        date: Date.new(2020,11,18),
         job_position: 'Auror')
     end
 
     it "is recent if date is not older than 1 month" do
-      expect(subject.recent?).to be(false)
+      expect{ subject.date = Date.today }.to change(subject, :recent?).from(false).to(true)
     end
   end
 end
