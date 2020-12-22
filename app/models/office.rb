@@ -15,9 +15,13 @@ class Office < ApplicationRecord
 
   # active storage
   has_one_attached :photo
-
-  # action text
   has_rich_text :description
+
+  # named scope
+  scope :starts_with, lambda { |character|
+    where("LOWER(name) LIKE :prefix", prefix: "#{character.downcase}%")
+  }
+  scope :sorted, lambda { order(:name) }
 
   # pgsearch
   include PgSearch::Model
