@@ -18,6 +18,17 @@ class Event < ApplicationRecord
   validates :online, presence: true, unless: :location
   validates :online_link, presence: true, if: :online
 
+  # named scopes
+  scope :next, lambda { where("start_date > ?", Time.now) }
+  scope :past, lambda { where("start_date < ?", Time.now) }
+  scope :sorted, lambda { order(start_date: :desc) }
+  scope :by_format, lambda { |format|
+    where("LOWER(format) LIKE :suffix", suffix: "%#{format.downcase}")
+  }
+  scope :by_user, lambda { |user_id|
+    where("user_id = ?", user_id)
+  }
+
   # active storage
   has_one_attached :cover_photo
   has_many_attached :event_photos

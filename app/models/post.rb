@@ -8,6 +8,14 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
 
+  # named scopes
+  scope :recent, lambda { where("date > ?", 1.month.ago) }
+  scope :old, lambda { where("date < ?", 1.month.ago) }
+  scope :sorted, lambda { order(date: :desc) }
+  scope :by_user, lambda { |user_id|
+    where("user_id = ?", user_id)
+  }
+
   # active storage
   has_one_attached :photo
 
