@@ -4,9 +4,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :nullify
 
   # validations
-  validates :date, presence: true
-  validates :title, presence: true
-  validates :content, presence: true
+  validates_presence_of :date, :title, :content
 
   # named scopes
   scope :recent, lambda { where("date > ?", 1.month.ago) }

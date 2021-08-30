@@ -15,10 +15,8 @@ class User < ApplicationRecord
   has_many_attached :portfolio_photos
 
   # validations
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :email, presence: true
-  validates :encrypted_password, presence: true
+  validates_presence_of :first_name, :last_name, :email, :encrypted_password
+
 
   # PgSearch
   include PgSearch::Model

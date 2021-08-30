@@ -6,6 +6,5 @@ class Comment < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :date, presence: true
-  validates :content, presence: true
+  validates_presence_of :date, :content
 end

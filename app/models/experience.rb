@@ -4,8 +4,7 @@ class Experience < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :start_date, presence: true
-  validates :job_position, presence: true
+  validates_presence_of :start_date, :job_position
 
   # smart methods
   def current?

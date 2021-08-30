@@ -3,7 +3,7 @@ class OfficeProject < ApplicationRecord
   belongs_to :office
 
   # validations
-  validates :project_name, presence: true
+  validates_presence_of :project_name
 
   # active storage
   has_one_attached :photo

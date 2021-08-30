@@ -9,9 +9,8 @@ class Office < ApplicationRecord
   has_many :comments, dependent: :nullify
 
   # validations
-  validates :name, presence: true, uniqueness: true
-  validates :location, presence: true
-  validates :url, presence: true, uniqueness: true
+  validates_presence_of :name, :url, :location
+  validates_uniqueness_of :name, :url
 
   # active storage
   has_one_attached :photo

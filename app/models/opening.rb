@@ -3,9 +3,9 @@ class Opening < ApplicationRecord
   belongs_to :office, optional: true
 
   # validations
-  validates :date, presence: true
-  validates :job_position, presence: true
-  validates :job_url, uniqueness: true
+  validates_presence_of :date, :job_position
+  validates_uniqueness_of :job_url
+
 
   # rich text
   has_rich_text :description
