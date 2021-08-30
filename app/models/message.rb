@@ -4,5 +4,5 @@ class Message < ApplicationRecord
   belongs_to :chatroom
 
   # validations
-  validates :content, presence: true
+  validates_presence_of :content
 end
