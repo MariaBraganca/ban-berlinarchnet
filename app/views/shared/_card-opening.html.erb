@@ -7,9 +7,9 @@
     <h2><%= opening_within.job_position %></h2>
     <div class="d-flex align-items-center">
       <% if opening_within.office_id %>
-        <% if !opening_within.office.banner_url.blank? %>
+        <% if opening_within.office.banner_url.present? %>
           <%= cl_image_tag(opening_within.office.banner_url, :class => "avatar-square mr-2") %>
-        <% elsif !opening_within.office_logo.blank? %>
+        <% elsif opening_within.office_logo.present? %>
           <%= cl_image_tag(opening_within.office_logo, :class => "avatar-square mr-2") %>
         <% else %>
           <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
@@ -23,7 +23,7 @@
           <% end %>
         </div>
       <% else %>
-        <% if !opening_within.office_logo.blank? %>
+        <% if opening_within.office_logo.present? %>
            <%= cl_image_tag(opening_within.office_logo, :class => "avatar-square mr-2") %>
         <% else %>
           <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>

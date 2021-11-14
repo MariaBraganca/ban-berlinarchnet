@@ -15,6 +15,6 @@
     </section>
     <h2><%= post_within.title %></h2>
     <p>Posted by: <%= post_within.user.first_name %> <%= post_within.user.last_name %></p>
-    <p><i class="fas fa-tags fa-lg blue mr-1"></i> <%= post_within.tag_list %></p>
+    <p><i class="fas fa-tags fa-lg blue mr-1"></i> <%= post_within.tags.map(&:name).join(', ') %></p>
   </section>
 </article>

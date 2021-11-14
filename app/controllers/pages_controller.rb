@@ -4,9 +4,9 @@ class PagesController < ApplicationController
   def home
     @user = User.new
 
-    @events = Event.order(start_date: :desc).limit(4)
-    @offices = Office.order(:name).limit(3)
-    @openings = Opening.order(date: :desc).limit(3).order(:id)
-    @posts = Post.order(date: :desc).limit(4)
+    @events = policy_scope(Event).includes(cover_photo_attachment: :blob).order(start_date: :desc).limit(4)
+    @offices = policy_scope(Office).includes(:ratings, photo_attachment: :blob).order(:name).limit(3)
+    @openings = policy_scope(Opening).includes(:office).order(date: :desc).limit(3).order(:id)
+    @posts = policy_scope(Post).includes(:tags, user: :photo_attachment).order(date: :desc).limit(4)
   end
 end
