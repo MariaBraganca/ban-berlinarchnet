@@ -3,10 +3,11 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-    @posts = policy_scope(Post).order(created_at: :desc)
+    @posts = policy_scope(Post).includes(:tags, user: :photo_attachment).order(created_at: :desc)
   end
 
   def show
+    @post_comments = @post.comments.includes(user: :photo_attachment).order(date: :desc)
     @comment = Comment.new
     authorize @post
   end

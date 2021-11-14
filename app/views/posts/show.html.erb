@@ -53,7 +53,7 @@
   <section class = 'row my-5'>
     <div class = 'col-lg-6'>
       <h2 class="mb-3">Comments <span class="badge-number"><%= @post.comments.length %></span></h2>
-      <% @post.comments.each do |comment| %>
+      <% @post_comments.each do |comment| %>
         <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
           <% if comment.user.photo.attached? %>
             <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>

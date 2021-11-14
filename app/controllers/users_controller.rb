@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :update]
   skip_before_action :authenticate_user!, only: :index
 
   def index
@@ -12,7 +13,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user_experiences = @user.experiences.includes(:office)
+    @user_events = @user.events.includes(cover_photo_attachment: :blob)
+    @user_posts = @user.posts.includes(:tags)
     authorize @user
   end
 
@@ -34,7 +37,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)
       redirect_to user_path(@user)
     else
@@ -44,6 +46,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :description, :photo, portfolio_photos: [])

@@ -3,18 +3,14 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show]
 
   def index
-    @events = policy_scope(Event).order(start_date: :desc)
-    @user = User.find_by(email: @user)
+    @events = policy_scope(Event).includes(cover_photo_attachment: :blob).order(start_date: :desc)
   end
 
   def show
-    @comment = Comment.new
-    @events = Event.all
-    @user_attending = !@event.users.none?{|user| user == current_user}
-    if @user_attending
-      @rsvp = @event.rsvps.find{|rsvp|rsvp.user == current_user}
-      #retrieve the corresponding rsvp
-    end
+    @event_users = @event.users.includes(photo_attachment: :blob)
+    @user_attending = @event_users.any? { |user| user == current_user }
+    @rsvp = @event.rsvps.find { |rsvp| rsvp.user == current_user } if @user_attending
+
     authorize @event
 
     @marker = [
@@ -23,17 +19,19 @@ class EventsController < ApplicationController
         lng: @event.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { event: @event })
       }]
+
+    @comment = Comment.new
   end
 
   def new
     @event = Event.new
-    # @user = current_user
     authorize @event
   end
 
   def create
     @event = Event.new(event_params)
     @event.user = current_user
+
     if @event.save
       redirect_to event_path(@event)
     else
@@ -66,7 +64,7 @@ class EventsController < ApplicationController
   private
 
   def set_event
-    @event = Event.find(params[:id])
+    @event = policy_scope(Event).find(params[:id])
   end
 
   def event_params

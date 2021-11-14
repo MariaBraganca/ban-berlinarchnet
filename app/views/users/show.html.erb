@@ -42,8 +42,8 @@
     <!-- ***************  EXPERIENCE  **************** -->
     <section class="col-12 col-lg-6">
       <h2 class="mb-3">Experience</h2>
-      <% unless @user.experiences.empty? %>
-        <% @user.experiences.each do |experience|  %>
+      <% unless @user_experiences.empty? %>
+        <% @user_experiences.each do |experience|  %>
           <%= render "shared/card-experience", experience_within: experience %>
         <% end %>
       <% else %>
@@ -98,9 +98,9 @@
   <!-- ***************  EVENTS  **************** -->
   <section class="my-5">
     <h2 class="mb-3">My Events</h2>
-    <% unless @user.events.empty? %>
+    <% unless @user_events.empty? %>
         <div class="row">
-          <% @user.events.each do |event|  %>
+          <% @user_events.each do |event|  %>
             <div class='col-md-6 col-lg-3 mb-3'>
               <%= link_to event_path(event) do %>
                 <%= render "shared/card-event", event_within: event %>
@@ -121,9 +121,9 @@
   <!-- ***************  POSTS  **************** -->
   <section class="my-5">
     <h2 class="mb-3">My Posts</h2>
-    <% unless @user.posts.empty? %>
+    <% unless @user_posts.empty? %>
       <div class="row">
-        <% @user.posts.each do |post| %>
+        <% @user_posts.each do |post| %>
           <div class="col-md-6 col-lg-3 mb-3">
             <%= link_to post_path(post) do %>
               <%= render "shared/card-post",  post_within: post %>
