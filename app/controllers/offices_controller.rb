@@ -17,6 +17,9 @@ class OfficesController < ApplicationController
   end
 
   def show
+    @office_users = @office.users.includes(photo_attachment: :blob)
+    @office_projects = @office.office_projects.includes(photo_attachment: :blob)
+    @office_comments = @office.comments.includes(user: :photo_attachment).order(date: :desc)
     authorize @office
 
     @marker = [

@@ -109,7 +109,7 @@
       <h2>Attending <span class="badge-number"><%= @event.users.length %></span></h2>
 
       <div class="row mt-3"> <!-- ATTENDING -->
-        <% @event.users.each do |user| %>
+        <% @event_users.each do |user| %>
           <div class="col-6 col-lg-4 text-center mb-3">
             <%= link_to user_path(user) do %>
               <% if user.photo.attached? %>
