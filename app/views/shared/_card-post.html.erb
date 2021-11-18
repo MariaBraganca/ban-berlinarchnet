@@ -5,13 +5,7 @@
       <h3 class="corporate red"><%= post_within.date.strftime('%d.%m.%Y') %></h3>
     </header>
     <section class="text-center mt-3 mb-4">
-      <% if post_within.user.photo.attached? %>
-        <%= cl_image_tag(post_within.user.photo.key, gravity: :face, :class => "avatar-large") %>
-      <% elsif post_within.user.cl_img_tag %>
-        <%= cl_image_tag(post_within.user.cl_img_tag, gravity: :face, :class => "avatar-large") %>
-      <% else  %>
-        <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large") %>
-      <% end %>
+      <%= image_tag(image_path_selector(post_within.user.photo, post_within.user.cl_img_tag), class: 'avatar-large') %>
     </section>
     <h2><%= post_within.title %></h2>
     <p>Posted by: <%= post_within.user.first_name %> <%= post_within.user.last_name %></p>

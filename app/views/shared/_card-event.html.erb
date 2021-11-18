@@ -1,12 +1,6 @@
 <article class="card-square">
   <!-- ***************  CARD IMAGE **************** -->
-  <% if event_within.cover_photo.attached?  %>
-    <%= cl_image_tag(event_within.cover_photo.key, :class => "card-square-img") %>
-  <% elsif event_within.cl_img_tag %>
-    <%= cl_image_tag(event_within.cl_img_tag, :class => "card-square-img") %>
-  <% else %>
-    <%= cl_image_tag("logo/logo-placeholder", gravity: :face, :class => "card-square-img border-bottom") %>
-  <% end %>
+  <%= image_tag(image_path_selector(event_within.cover_photo, event_within.cl_img_tag), class: 'card-square-img') %>
   <!-- ***************  CARD INFOS **************** -->
   <section class="card-infos">
     <header class="d-flex justify-content-between mb-2">

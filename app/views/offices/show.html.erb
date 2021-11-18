@@ -2,7 +2,7 @@
 <% if @office.photo.attached?  %>
   <header class="banner">
     <div class="banner-overlay"></div>
-      <%= cl_image_tag(@office.photo.key, :class => "banner-image") %>
+      <%= image_tag(image_path_generator(@office.photo.key, 900), class: 'banner-image') %>
       <div class="banner-container h-100">
         <div class="d-flex h-100 text-center align-items-center">
           <div class="w-100 text-white">
@@ -11,10 +11,10 @@
         </div>
       </div>
   </header>
-<% elsif !@office.banner_url.blank? %>
+<% elsif @office.banner_url.present? %>
   <header class="banner">
     <div class="banner-overlay"></div>
-      <%= cl_image_tag(@office.banner_url, :class => "banner-image") %>
+      <%= image_tag(@office.banner_url, class: 'banner-image') %>
       <div class="banner-container h-100">
         <div class="d-flex h-100 text-center align-items-center">
           <div class="w-100 text-white">
@@ -147,15 +147,13 @@
       </div>
     </div>
     <div class="row">
-      <% @office_projects.each do |project| %>
-        <div class="col-12 col-lg-3 overlay-container mb-3">
-          <% if project.photo.attached? %>
-            <%= cl_image_tag(project.photo.key, :class => "photos-gallery") %>
-          <% else %>
-            <%= image_tag(project.project_img_url, :class => 'photos-gallery') %>
-          <% end %>
-          <div class="overlay-text mx-3"><%= project.project_name %></div>
-        </div>
+      <% if @office_projects.present? %> <!-- PHOTOS -->
+        <% @office_projects.each do |project| %>
+          <div class="col-12 col-lg-3 overlay-container mb-3">
+            <%= image_tag(image_path_selector(project.photo, project.project_img_url), class: 'photos-gallery') %>
+            <div class="overlay-text mx-3"><%= project.project_name %></div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </section>
@@ -170,7 +168,7 @@
         <% @office_users.each do |user| %>
           <div class="col-6 col-lg-4 text-center mb-3">
             <%= link_to user_path(user) do %>
-              <%= cl_image_tag(user.cl_img_tag, :class => 'avatar-large mb-3') %>
+              <%= image_tag(image_path_selector(user.photo, user.cl_img_tag), class: 'avatar-large mb-3') %>
             <% end %>
             <p><%= user.first_name %> <%= user.last_name %></p>
           </div>
@@ -183,11 +181,7 @@
       <h2 class="mb-3">Comments <span class="badge-number"><%= @office.comments.size %></span></h2>
       <% @office_comments.each do |comment| %>
         <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
-          <% if comment.user.photo.attached? %>
-            <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
-          <% else %>
-            <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-          <% end %>
+          <%= image_tag(image_path_selector(comment.user.photo, comment.user.cl_img_tag), class: 'avatar-large') %>
           <div class="card-infos">
             <p><%= comment.date.strftime("%H:%M | %d.%m.%Y") %> </p>
             <h6><%= comment.content %></h6>

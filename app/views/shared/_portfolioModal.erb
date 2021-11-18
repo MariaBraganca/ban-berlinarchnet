@@ -7,21 +7,15 @@
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
 							<% if @user.portfolio_photos.attached?  %>
-								<% @user.portfolio_photos.map do |photo| %>
-									<% if @user.portfolio_photos.first == photo %>
-										<div class="carousel-item active">
-											<%= cl_image_tag(photo.key, :class => "carousel-filter") %>
-										</div>
-									<% else %>
-										<div class="carousel-item">
-											<%= cl_image_tag(photo.key, :class => "carousel-filter") %>
-										</div>
-									<% end %>
+								<% @user.portfolio_photos.each do |photo| %>
+                  <div class="carousel-item <%= "active" if @user.portfolio_photos.first == photo %>">
+                    <%= image_tag(image_path_generator(photo.key, 600), class: "carousel-filter") %>
+                  </div>
 								<% end %>
 							<% else %>
 								<% @user.seed_portfolio.each do |portfolio| %>
 									<div class="carousel-item <%= "active" if @user.seed_portfolio.first == portfolio %>">
-										<%= cl_image_tag(portfolio, :class => "carousel-filter") %>
+										<%= image_tag(image_path_generator(portfolio, 600), class: 'carousel-filter') %>
 									</div>
 								<% end %>
 							<% end %>    

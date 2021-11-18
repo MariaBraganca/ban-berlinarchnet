@@ -26,13 +26,7 @@
 		<% @users.each do |user| %>
 			<div class="col-6 col-lg-3 text-center mb-5">
 				<%= link_to user_path(user) do %>
-					<% if user.photo.attached? %>
-						<%= cl_image_tag(user.photo.key, gravity: :face, :class => 'avatar-large mb-3') %>
-					<% elsif user.cl_img_tag %>
-						<%= cl_image_tag(user.cl_img_tag, gravity: :face, :class => 'avatar-large mb-3') %>
-					<% else %>
-						<%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large mb-3") %>
-					<% end %>
+					<%= image_tag(image_path_selector(user.photo, user.cl_img_tag), class: 'avatar-large mb-3') %>
 				<% end %>
 				<p><%= user.first_name %> <%= user.last_name %></p>
 			</div>
