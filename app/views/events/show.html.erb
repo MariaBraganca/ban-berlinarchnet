@@ -7,13 +7,7 @@
       <h1 class="font-weight-bold mb-3"><%= @event.title%></h1>
       <div class="d-flex align-items-center mb-3 mb-lg-0"> <!-- USER -->
         <%= link_to user_path(@event.user) do %>
-          <% if @event.user.photo.attached? %>
-            <%= cl_image_tag(@event.user.photo.key, gravity: :face, :class => "avatar") %>
-          <% elsif @event.user.cl_img_tag %>
-            <%= cl_image_tag(@event.user.cl_img_tag, gravity: :face, :class => "avatar") %>
-          <% else  %>
-            <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar") %>
-          <% end %>
+          <%= image_tag(image_path_selector(@event.user.photo, @event.user.cl_img_tag), class: 'avatar') %>
         <% end %>
         <p class="mb-0 pl-3">Hosted by: <%= @event.user.first_name %> <%= @event.user.last_name %></p>
       </div>
@@ -42,13 +36,7 @@
   <!-- ***************  CONTENT  **************** -->
   <section class='row my-5'>
     <div class="col-lg-8"> <!-- PHOTO / DESCRIPTION -->
-      <% if @event.cover_photo.attached? %>
-        <%= cl_image_tag(@event.cover_photo.key, :class => "cover-img mb-5") %>
-      <% elsif @event.cl_img_tag %>
-        <%= cl_image_tag(@event.cl_img_tag, :class => "cover-img mb-5") %>
-      <% else %>
-        <%= cl_image_tag("logo/logo-placeholder", gravity: :face, :class => "cover-img mb-5") %>
-      <% end %>
+      <%= image_tag(image_path_selector(@event.cover_photo, @event.cl_img_tag, placeholder: 'logo/logo-placeholder', width: 600), class: 'cover-img mb-5') %>
       <h2 class="mb-3">About</h2>
       <p><%= @event.description %></p>
     </div>
@@ -79,19 +67,13 @@
     <h2 class="mb-3">Photos</h2>
     <div id="gallery" data-toggle="modal" data-target="#photoModal">
       <div class="row mb-5">
-        <% if @event.cover_photo.attached? %> <!-- COVER PHOTO -->
-          <div class ='col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
-            <%= cl_image_tag @event.cover_photo.key, :class => 'photos-gallery clickable w-100' %>
-          </div>
-        <% else %>
-          <div class ='col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
-            <%= cl_image_tag @event.cl_img_tag, :class => 'photos-gallery clickable w-100' %>
-          </div>
-        <% end %>
-        <% unless @event.event_photos.empty? %> <!-- PHOTOS -->
+        <div class ='col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
+          <%= image_tag(image_path_selector(@event.cover_photo, @event.cl_img_tag, placeholder:'logo/logo-placeholder'), class: 'photos-gallery clickable w-100') %>
+        </div>
+        <% if @event.event_photos.present? %> <!-- PHOTOS -->
           <% @event.event_photos.each do |photo| %>
             <div class ='col-lg-3 mb-3' data-target="#carouselExample" data-slide-to="0">
-              <%= cl_image_tag photo.key, :class => 'photos-gallery clickable w-100' %>
+              <%= image_tag(image_path_generator(photo.key), class: 'photos-gallery clickable w-100') %>
             </div>
           <% end %>
         <% end %>
@@ -112,13 +94,7 @@
         <% @event_users.each do |user| %>
           <div class="col-6 col-lg-4 text-center mb-3">
             <%= link_to user_path(user) do %>
-              <% if user.photo.attached? %>
-                <%= cl_image_tag(user.photo.key, gravity: :face, :class => 'avatar-large mb-3') %>
-              <%  elsif user.cl_img_tag %>
-                <%= cl_image_tag(user.cl_img_tag, gravity: :face, :class => 'avatar-large mb-3') %>
-              <% else  %>
-                <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large mb-3") %>
-              <% end %>
+              <%= image_tag(image_path_selector(user.photo, user.cl_img_tag), class: 'avatar-large mb-3') %>
             <% end %>
             <p><%= user.first_name %> <%= user.last_name %></p>
           </div>
@@ -145,13 +121,7 @@
       <h2 class="mb-3">Comments <span class="badge-number"><%= @event.comments.length %></span></h2>
       <% @event.comments.each do |comment| %>
         <div class="card-comment mb-3 px-3" id="comment-<%= comment.id %>">
-          <% if comment.user.photo.attached? %>
-            <%= cl_image_tag(comment.user.photo.key, :class => "avatar-large") %>
-          <% elsif comment.user.cl_img_tag %>
-            <%= cl_image_tag(comment.user.cl_img_tag, :class => 'avatar-large') %>
-          <% else %>
-            <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-large") %>
-          <% end %>
+          <%= image_tag(image_path_selector(comment.user.photo, comment.user.cl_img_tag), class: 'avatar-large') %>
           <div class="card-infos">
             <p><%= comment.date.strftime("%H:%M | %d.%m.%Y") %> </p>
             <h6><%= comment.content %></h6>

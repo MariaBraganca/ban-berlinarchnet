@@ -28,13 +28,7 @@
     <section class="col-12 col-lg-6">
       <h2 class="mb-5">About</h2>
       <div class="text-center mb-3">
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
-        <% elsif @user.cl_img_tag %>
-          <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
-        <% else  %>
-          <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-xl") %>
-        <% end %>
+        <%= image_tag(image_path_selector(@user.photo, @user.cl_img_tag), class: 'avatar-xl') %>
       </div>
       <p><%= @user.description %></p>
     </section>
@@ -76,13 +70,13 @@
           <% if @user.portfolio_photos.attached?  %> <!-- USER UPLOAD -->
               <% @user.portfolio_photos.each do |photo| %>
                 <div class="col-12 col-lg-3 mb-3">
-                  <%= cl_image_tag photo.key, :class => "photos-gallery clickable"%>
+                  <%= image_tag(image_path_generator(photo.key), class:'photos-gallery clickable') %>
                 </div>
               <% end %>
           <% else %> <!-- SEED -->
             <% @user.seed_portfolio.each do |portfolio| %>
               <div class="col-12 col-lg-3 mb-3">
-                <%= cl_image_tag(portfolio, :class => "photos-gallery clickable") %>
+                <%= image_tag(image_path_generator(portfolio), class:'photos-gallery clickable') %>
               </div>
             <% end %>
           <% end %>

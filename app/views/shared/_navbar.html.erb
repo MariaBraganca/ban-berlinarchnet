@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-ban">
   <%= link_to root_path, class: "" do %>
-    <%= cl_image_tag("logo/logo1", :class => 'avatar') %>
+    <%= image_tag(image_path_generator('logo/logo1'), class: 'avatar') %>
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,13 +29,7 @@
     <ul class="navbar-nav"> <!-- User dropdown menu -->
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% elsif current_user.cl_img_tag %>
-            <%= cl_image_tag current_user.cl_img_tag, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% else %>
-            <%= cl_image_tag "logo/logo1-gray", gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% end %>
+          <%= image_tag(image_path_selector(current_user.photo, current_user.cl_img_tag), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item", id: "dropdownDashboard" %>
             <%= link_to "Create event", new_event_path, class: "dropdown-item", id: "dropdownEvent" %>

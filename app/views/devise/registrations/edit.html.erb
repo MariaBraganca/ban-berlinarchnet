@@ -9,13 +9,7 @@
         <div class="row">
           <div class="col-lg-6"> 
             <div class="text-center mb-4 mt-4 mt-lg-0">
-              <% if @user.photo.attached? %>
-                <%= cl_image_tag(@user.photo.key, gravity: :face, :class => "avatar-xl")  %>
-              <% elsif @user.cl_img_tag  %>
-                <%= cl_image_tag(@user.cl_img_tag, gravity: :face, :class => "avatar-xl") %>
-              <% else  %>
-                <%= cl_image_tag("logo/logo1-gray", gravity: :face, :class => "avatar-xl") %>
-              <% end %>
+              <%= image_tag(image_path_selector(@user.photo, @user.cl_img_tag), class: 'avatar-xl') %>
             </div>
             <%= f.input :description,
                         input_html: { style: "height: 300px;", autocomplete: "Description" },

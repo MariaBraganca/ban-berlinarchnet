@@ -6,19 +6,13 @@
         <div class="modal-body">
           <div id="carouselExample" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <% if @event.cover_photo.attached? %>
-                <div class="carousel-item active">
-                  <%= cl_image_tag @event.cover_photo.key, :class => 'd-block w-100' %>
-                </div>
-              <% else %>
-                <div class="carousel-item active">
-                  <%= cl_image_tag @event.cl_img_tag, :class => 'd-block w-100' %>
-                </div>
-              <% end %>
-              <% unless @event.event_photos.empty? %>
+              <div class="carousel-item active">
+                <%= image_tag(image_path_selector(@event.cover_photo, @event.cl_img_tag, placeholder: 'logo/logo-placeholder', width: 600), class: 'd-block w-100') %>
+              </div>
+              <% if @event.event_photos.present? %>
                 <% @event.event_photos.each do |photo| %>
                   <div class="carousel-item">
-                    <%= cl_image_tag photo.key, :class => 'd-block w-100' %>
+                    <%= image_tag(image_path_generator(photo.key, 600), class: 'd-block w-100') %>
                   </div>
                 <% end %>
               <% end %>

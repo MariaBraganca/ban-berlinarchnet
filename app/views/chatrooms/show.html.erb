@@ -1,7 +1,7 @@
 <main class="container min-vh-100" id="chatroom">
   <!-- ***************  CHATROOM  **************** -->
   <section class="row chatroom-card justify-content-center my-5">
-    <!-- ***************  INDEX  **************** -->
+    <!-- ***************  SIDEBAR  **************** -->
     <section class="col-3 border-right">
       <div class="border-bottom">
         <h3 class="corporate text-center py-3 mb-0"><span class="red">ban</span><span class="d-none d-md-inline-block">chat</span></h3>
@@ -15,17 +15,9 @@
             <section class="chat-card">
               <%# if the user is the current user, we are checking if he has a photo, if not we display the one that is already given; else we do the same for the other user but we are checking it on the chats "summary"%>
               <% if chatroom.user_one == current_user %>
-                <% if chatroom.user_two.photo.attached? %>
-                  <%= cl_image_tag(chatroom.user_two.photo.key, :class => "avatar") %>
-                <% else %>
-                  <%= cl_image_tag (chatroom.user_two.cl_img_tag), gravity: :face, class: "avatar" %>
-                <% end %>
+                <%= image_tag(image_path_selector(chatroom.user_two.photo, chatroom.user_two.cl_img_tag), class: 'avatar') %>
               <% else %>
-                <% if chatroom.user_one.photo.attached? %>
-                  <%= cl_image_tag(chatroom.user_one.photo.key, :class => "avatar") %>
-                <% else %>
-                  <%= cl_image_tag (chatroom.user_one.cl_img_tag), gravity: :face, class: "avatar" %>
-                <% end %>
+                <%= image_tag(image_path_selector(chatroom.user_one.photo, chatroom.user_one.cl_img_tag), class: 'avatar') %>
               <% end %>
               <div class="d-none d-md-block ml-md-3">
                 <% if chatroom.user_one == current_user %>
@@ -44,8 +36,7 @@
         <% end %>
       </div>
     </section>
-
-    <!-- ***************  SHOW  **************** -->
+    <!-- ***************  CONTENT  **************** -->
     <section class="col-9 px-0">
       <div  class="border-bottom" id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
