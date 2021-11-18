@@ -61,6 +61,13 @@
 .sort-btn:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+// pagination
+.pagination-link {
+  transition: color 0.3s ease;
+}
+.pagination-link:hover {
+  color: $call;
+}
 // link im text
 p.link {
   color: $call;

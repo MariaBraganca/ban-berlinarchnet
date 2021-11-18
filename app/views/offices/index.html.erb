@@ -47,7 +47,17 @@
 				<button class="btn sort-btn w-100 mb-3"><i class="fas fa-euro-sign green"></i> <%= link_to "Salary", offices_path(order: '@offices_sala') %></button>
 			</div>
 		</section>
-	</section>
+
+        <!-- ***************  PAGINATION  **************** -->
+        <section class="row justify-content-between">
+            <div class="col-6">
+                <%= link_to '<< Previous Page', request.params.merge(page: @page - 1 ), class: 'pagination-link' unless @page.zero? %>
+            </div>
+            <div class="col-6">
+                <%= link_to 'Next Page >>', request.params.merge(page: @page + 1), class: 'pagination-link float-right' unless @offices.length <  OfficesController::OFFICES_PER_PAGE %>
+            </div>
+        </section>
+    </section>
 
 	<!-- ***************  MAP / OFFICES  **************** -->
 	<section class="row justify-content-center">
