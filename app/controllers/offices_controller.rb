@@ -85,7 +85,7 @@ class OfficesController < ApplicationController
       Queries::OfficesQueries.new(@scope, @page, OFFICES_PER_PAGE).alphabetic
     end
   rescue StandardError => error
-    Rails.logger("Error: #{error.message}. Couldn't find any records for the search or sort criteria.")
+    Rails.logger.info("Error: #{error.message}. Couldn't find any records for the search or sort criteria.")
     []
   end
 end
