@@ -22,14 +22,6 @@ class Office < ApplicationRecord
   }
   scope :sorted, lambda { order(:name) }
 
-  # pgsearch
-  include PgSearch::Model
-  pg_search_scope :office_search,
-    against: [ :name, :location ],
-    using: {
-      tsearch: { prefix: true }
-  }
-
   # mapbox
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?

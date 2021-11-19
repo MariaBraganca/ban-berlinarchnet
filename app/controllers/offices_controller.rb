@@ -6,14 +6,9 @@ class OfficesController < ApplicationController
 
   def index
     @page = params.fetch(:page, 0).to_i
+    @scope = policy_scope(Office)
 
-    @offices = policy_scope(Office)
-      .includes(:ratings, photo_attachment: :blob)
-      .order(:name)
-      .limit(OFFICES_PER_PAGE)
-      .offset(@page * OFFICES_PER_PAGE)
-
-    search_and_sort()
+    @offices = search_and_sort()
 
     @markers = @offices.geocoded.map do |office|
       {
@@ -80,27 +75,17 @@ class OfficesController < ApplicationController
   end
 
   def search_and_sort
-    if params[:query].present? && params[:order].present?
-      if params[:order] == "@offices_arch"
-        offices_ordered = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc').limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      elsif params[:order] == "@offices_cult"
-        offices_ordered = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.culture) desc').limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      elsif params[:order] == "@offices_sala"
-        offices_ordered = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.salary) desc').limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      end
-      offices_search = policy_scope(Office).office_search(params[:query]).limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      @offices = offices_ordered & offices_search
-
-    elsif params[:order].present?
-      if params[:order] == "@offices_arch"
-        @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.architecture) desc').limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      elsif params[:order] == "@offices_cult"
-        @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.culture) desc').limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      elsif params[:order] == "@offices_sala"
-        @offices = policy_scope(Office).joins(:ratings).group('offices.id').order('avg(ratings.salary) desc').limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
-      end
+    if params[:order].present?
+      return Queries::OfficesQueries.new(@scope, @page, OFFICES_PER_PAGE).averages('architecture') if params[:order] == '@offices_arch'
+      return Queries::OfficesQueries.new(@scope, @page, OFFICES_PER_PAGE).averages('culture') if params[:order] == '@offices_cult'
+      return Queries::OfficesQueries.new(@scope, @page, OFFICES_PER_PAGE).averages('salary') if params[:order] == '@offices_sala'
     elsif params[:query].present?
-      @offices = policy_scope(Office).office_search(params[:query]).limit(OFFICES_PER_PAGE).offset(@page * OFFICES_PER_PAGE)
+      Queries::OfficesQueries.new(@scope, @page, OFFICES_PER_PAGE).search(params[:query])
+    else
+      Queries::OfficesQueries.new(@scope, @page, OFFICES_PER_PAGE).alphabetic
     end
+  rescue StandardError => error
+    Rails.logger.info("Error: #{error.message}. Couldn't find any records for the search or sort criteria.")
+    []
   end
 end
