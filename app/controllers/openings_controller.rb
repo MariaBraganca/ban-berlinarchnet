@@ -3,7 +3,7 @@ class OpeningsController < ApplicationController
   before_action :set_opening, only: [:show, :edit, :update, :destroy]
 
   def index
-    @openings = policy_scope(Opening).includes(:office).recent(2.weeks.ago).order(date: :desc).order(:id)
+    @openings = policy_scope(Opening).includes(:office).recent(2.weeks.ago).order(date: :desc)
   end
 
   def show
