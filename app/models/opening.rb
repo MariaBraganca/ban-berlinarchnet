@@ -11,7 +11,9 @@ class Opening < ApplicationRecord
   has_rich_text :description
 
   # named scopes
-  scope :recent, lambda { where("date > ?", 1.month.ago) }
+  scope :recent, lambda { |date|
+    where("date > ?", date)
+  }
   scope :old, lambda { where("date < ?", 1.month.ago) }
   scope :sorted, lambda { order(date: :desc) }
 
