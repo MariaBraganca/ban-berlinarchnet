@@ -3,11 +3,43 @@ $body-font: 'Open Sans', sans-serif;
 $headers-font: 'Open Sans', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+/* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+        url('open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+        url('open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+        url('open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+        url('open-sans-v27-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+        url('open-sans-v27-latin-700.woff') format('woff'), /* Modern Browsers */
+}
+/* share-tech-mono-regular - latin */
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('share-tech-mono-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('share-tech-mono-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+}
