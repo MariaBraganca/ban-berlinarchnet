@@ -9,7 +9,7 @@ module ApplicationHelper
     args[:width] ||= 300
 
     return image_path_generator(photo.key, args[:width]) if photo.attached?
-    return image_path_generator(tag, args[:width]) if tag
+    return image_path_generator(tag, args[:width]) if tag.present?
 
     image_path_generator(args[:placeholder], args[:width])
   end
