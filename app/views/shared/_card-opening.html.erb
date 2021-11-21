@@ -18,9 +18,9 @@
         </div>
       <% else %>
         <% if opening_within.office_logo.present? %>
-           <%= cl_image_tag(opening_within.office_logo, :class => "avatar-square mr-2") %>
+          <%= image_tag(image_path_generator(opening_within.office_logo), class: 'avatar-square mr-2') %>
         <% else %>
-          <%= cl_image_tag("logo/logo-sq-job", :class => "avatar-square mr-2") %>
+          <%= image_tag(image_path_generator('logo/logo-sq-job'), class: 'avatar-square mr-2') %>
         <% end %>
         <div>
           <p class="my-0">@ <%= opening_within.office_name %></p>
