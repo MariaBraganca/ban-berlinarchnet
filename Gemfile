@@ -100,3 +100,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'geocoder'
 gem 'turbolinks_render'
 
+# HTTP client api for Ruby.
+gem "net-http"

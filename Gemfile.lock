@@ -170,6 +170,8 @@ GEM
     minitest (5.18.0)
     msgpack (1.7.0)
     nested_form (0.3.2)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.4)
       date
       net-protocol
@@ -342,6 +344,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
+    uri (0.12.1)
     warden (1.2.9)
       rack (>= 2.0.9)
     watir (6.19.1)
@@ -386,6 +389,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   launchy (~> 2.5)
   listen (~> 3.2)
+  net-http
   nokogiri (~> 1.10, >= 1.10.10)
   pg (>= 0.18, < 2.0)
   pg_search (~> 2.3, >= 2.3.5)
