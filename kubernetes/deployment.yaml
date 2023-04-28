@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ban-berlinarchnet-deployment
+  namespace: ban-berlinarchnet-production
+  labels:
+    environment: production
+    app: ban-berlinarchnet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ban-berlinarchnet
+  template:
+    metadata:
+      labels: 
+        app: ban-berlinarchnet
+    spec:
+      containers:
+        - name: ban-berlinarchnet
+          image: mbraganca/ban-berlinarchnet-web:0.0.6
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: RAILS_ENV
+              value: "production"
+            - name: RAILS_LOG_TO_STDOUT
+              value: "true"
+            - name: RAILS_SERVE_STATIC_FILES
+              value: "true"
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "250m"
+            limits:
+              memory: "3Gi"
+              cpu: "500m"
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            runAsGroup: 1000
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - all
+                
