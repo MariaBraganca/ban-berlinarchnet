@@ -4,7 +4,7 @@ FROM ruby:2.7.7
 ARG USERNAME=ban-berlinarchnet-developer
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
-ARG APP_PATH=ban-berlinarchnet
+ARG APP_PATH=/opt/ban-berlinarchnet
 
 # Create non-root user
 RUN groupadd --gid $USER_GID $USERNAME
@@ -30,7 +30,7 @@ RUN chmod +x /usr/bin/entrypoint.sh
 
 # Create directory for Rails application and set it as working directory
 RUN mkdir $APP_PATH
-WORKDIR /$APP_PATH
+WORKDIR $APP_PATH
 
 # Copy the package.json
 COPY --chown=$USERNAME:$USERNAME package.json yarn.lock ./
