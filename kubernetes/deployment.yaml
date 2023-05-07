@@ -18,15 +18,13 @@ spec:
     spec:
       containers:
         - name: ban-berlinarchnet
-          image: mbraganca/ban-berlinarchnet-web:0.0.6
+          image: mbraganca/ban-berlinarchnet-web:0.0.1
           imagePullPolicy: IfNotPresent
-          env:
-            - name: RAILS_ENV
-              value: "production"
-            - name: RAILS_LOG_TO_STDOUT
-              value: "true"
-            - name: RAILS_SERVE_STATIC_FILES
-              value: "true"
+          envFrom:
+            - configMapRef:
+                name: ban-berlinarchnet-configmap
+            - secretRef:
+                name: ban-berlinarchnet-secret
           ports:
             - containerPort: 3000
           resources:

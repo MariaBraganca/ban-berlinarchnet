@@ -28,6 +28,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore kubernetes secret
+kubernetes/secret.yaml
+
 /public/packs
 /public/packs-test
 /node_modules
@@ -42,5 +45,3 @@ yarn-debug.log*
 .env*
 .env*
 .env*
-
-/config/credentials/development.key
