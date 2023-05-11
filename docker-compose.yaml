@@ -1,13 +1,19 @@
 services:
   db:
-    image: postgres:latest
+    image: postgres:15
     volumes:
       - ban-db-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
   web:
-    build: .
+    build:
+      context: .
+      args:
+        - USER_UID=1000
+        - USER_GID=1000
+    env_file:
+      - .env
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/ban-berlinarchnet

@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ban-berlinarchnet-deployment
+  namespace: ban-berlinarchnet-production
+  labels:
+    environment: production
+    app: ban-berlinarchnet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ban-berlinarchnet
+  template:
+    metadata:
+      labels: 
+        app: ban-berlinarchnet
+    spec:
+      containers:
+        - name: ban-berlinarchnet
+          image: mbraganca/ban-berlinarchnet-web:0.0.1
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: ban-berlinarchnet-configmap
+            - secretRef:
+                name: ban-berlinarchnet-secret
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "250m"
+            limits:
+              memory: "3Gi"
+              cpu: "500m"
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            runAsGroup: 1000
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - all
+                
