@@ -1,0 +1,26 @@
+[
+  {
+    "user_id": 1,
+    "title": "The birth of Berlin Architectural Network",
+    "date": "2023-05-15",
+    "content": "Fusce efficitur, metus a mollis interdum, metus diam sodales urna, vitae facilisis ex odio et ante. Integer velit mi, sagittis non sagittis ac, commodo sed arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis augue in tortor venenatis, ut ornare libero dapibus. Nam suscipit, lectus at dictum tempor, velit nulla imperdiet dui, ut consectetur arcu urna eu quam. Integer turpis dui, viverra a dolor sed, auctor pulvinar urna. Donec a velit elementum, mollis nulla sit amet, tincidunt quam. Suspendisse nec ante ultrices, rutrum purus gravida, interdum tellus. Curabitur finibus iaculis dui, at efficitur elit placerat in. Curabitur tincidunt lectus ut felis sagittis laoreet. Proin quis placerat turpis. Curabitur malesuada tincidunt quam, a posuere magna imperdiet in. Morbi tempus libero et tempus imperdiet. Nullam facilisis urna eget ipsum ornare vulputate. Morbi non risus id nibh euismod viverra. Praesent fermentum rutrum pretium."
+  },
+  {
+    "user_id": 1,
+    "title": "From architect to software developer",
+    "date": "2023-05-15",
+    "content": "Fusce efficitur, metus a mollis interdum, metus diam sodales urna, vitae facilisis ex odio et ante. Integer velit mi, sagittis non sagittis ac, commodo sed arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis augue in tortor venenatis, ut ornare libero dapibus. Nam suscipit, lectus at dictum tempor, velit nulla imperdiet dui, ut consectetur arcu urna eu quam. Integer turpis dui, viverra a dolor sed, auctor pulvinar urna. Donec a velit elementum, mollis nulla sit amet, tincidunt quam. Suspendisse nec ante ultrices, rutrum purus gravida, interdum tellus. Curabitur finibus iaculis dui, at efficitur elit placerat in. Curabitur tincidunt lectus ut felis sagittis laoreet. Proin quis placerat turpis. Curabitur malesuada tincidunt quam, a posuere magna imperdiet in. Morbi tempus libero et tempus imperdiet. Nullam facilisis urna eget ipsum ornare vulputate. Morbi non risus id nibh euismod viverra. Praesent fermentum rutrum pretium."
+  },
+  {
+    "user_id": 1,
+    "title": "Parametric architecture",
+    "date": "2023-05-15",
+    "content": "Fusce efficitur, metus a mollis interdum, metus diam sodales urna, vitae facilisis ex odio et ante. Integer velit mi, sagittis non sagittis ac, commodo sed arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis augue in tortor venenatis, ut ornare libero dapibus. Nam suscipit, lectus at dictum tempor, velit nulla imperdiet dui, ut consectetur arcu urna eu quam. Integer turpis dui, viverra a dolor sed, auctor pulvinar urna. Donec a velit elementum, mollis nulla sit amet, tincidunt quam. Suspendisse nec ante ultrices, rutrum purus gravida, interdum tellus. Curabitur finibus iaculis dui, at efficitur elit placerat in. Curabitur tincidunt lectus ut felis sagittis laoreet. Proin quis placerat turpis. Curabitur malesuada tincidunt quam, a posuere magna imperdiet in. Morbi tempus libero et tempus imperdiet. Nullam facilisis urna eget ipsum ornare vulputate. Morbi non risus id nibh euismod viverra. Praesent fermentum rutrum pretium."
+  },
+  {
+    "user_id": 1,
+    "title": "Architecture and society",
+    "date": "2023-05-15",
+    "content": "Fusce efficitur, metus a mollis interdum, metus diam sodales urna, vitae facilisis ex odio et ante. Integer velit mi, sagittis non sagittis ac, commodo sed arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis augue in tortor venenatis, ut ornare libero dapibus. Nam suscipit, lectus at dictum tempor, velit nulla imperdiet dui, ut consectetur arcu urna eu quam. Integer turpis dui, viverra a dolor sed, auctor pulvinar urna. Donec a velit elementum, mollis nulla sit amet, tincidunt quam. Suspendisse nec ante ultrices, rutrum purus gravida, interdum tellus. Curabitur finibus iaculis dui, at efficitur elit placerat in. Curabitur tincidunt lectus ut felis sagittis laoreet. Proin quis placerat turpis. Curabitur malesuada tincidunt quam, a posuere magna imperdiet in. Morbi tempus libero et tempus imperdiet. Nullam facilisis urna eget ipsum ornare vulputate. Morbi non risus id nibh euismod viverra. Praesent fermentum rutrum pretium."
+  }
+]

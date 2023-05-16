@@ -1,0 +1,242 @@
+[
+  {
+    "office_id": 1,
+    "project_name": "Shenzhen Art Museum & Library, Shenzhen",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/1/7/2/4/6/9/28b5e842c87c0b6c.jpeg"
+  },
+  {
+    "office_id": 1,
+    "project_name": "Siemens Campus, Erlangen",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/1/7/2/4/5/5/100905434_99d9bacfb7.jpeg-75f17dd4c465f2fd.jpg"
+  },
+  {
+    "office_id": 1,
+    "project_name": "UPPER WEST, Berlin",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/1/7/2/4/6/7/2c9ed403b3787fb2.jpeg"
+  },
+  {
+    "office_id": 1,
+    "project_name": "Meixi Urban Helix, Changsha",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/1/7/2/3/9/4/1f6ef07351024210.jpeg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Trumpf Betriebskindertagesstätte",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/9/7/5/0/1de0de444f837ff6.jpeg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Belvedere",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/0/5/6/0/3/0881ccfcf6f421ec.jpeg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Harvard ArtLab, Cambridge",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/1/3/7/4/6/4bf9c99688f83faa.jpeg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Empfang der Schaubühne Berlin",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/2/9/3/8/7/3/Thumbnail_Schaubuehne-0c1acccc8efcfd20.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Moringa – Cradle-to-Cradle-inspiriertes Wohnen in der HafenCity Hamburg",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/8/8/1/4/moringa_thumbnail_1-dc7dc0b1241006b9.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Bitzer Headquarters, Sindelfingen",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/5/7/8/1/4/4/0095165dc36e69c0.jpeg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Welterbe Zollverein",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/2/9/5/1/6/2/thumbnail-0fb502ea94730119.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Quartier 74°",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/9/3/8/9/8/1c74748c97117ff4.jpeg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "Experimenta, Heilbronn",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/9/5/3/8/7/285f3449cc63a501.jpeg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "M9 Museum, Venedig-Mestre",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/0/1/9/8/6/5/460_307-px-30d672d998d3d3bf.jpeg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "oxymoron",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/2/7/9/7/6/7/Sauerbruch_Hutton_Venedig-88b3468f244566e1.jpg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "Exhibition Design for Ola Kolehmainen",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/2/3/2/5/6/2/2d616d255368583c.jpeg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "GDA Plaza in Hangzhou",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/4/9/2/8/6/de9dde5bede83392.jpeg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "U-Bahnhof Elbbrücken in Hamburg",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/3/7/5/8/9/dbbc578a29502883.jpeg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "Caohejing Xinzhou Plaza",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/2/9/4/7/8/8eff7a472f718a40.jpeg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "Guangxi Culture & Art Center",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/1/0/4/1/6/Teaser-ea8e5f26be3559ab.jpg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "Bricks",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/2/2/9/8/Graft-1519a28b870ad508.jpg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "Wave",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/6/6/8/2/0/f2b6de7e5bb464df.jpeg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "Internationaler Retail Markenauftritt",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/3/1/5/2/4/37df98452ddca195.jpeg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "AIR TAXI VOLO-PORTS",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/3/1/5/1/9/97741df985f0f2a3.jpeg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "UGM - Großmarkthalle",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/2/7/6/7/1/d341727e3ab721f8.jpeg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "Siemensstadt 2.0",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/2/7/6/5/3/Unbenannt-2-9dcc9ea67606c029.jpeg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "DER bogen",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/2/7/0/9/7/d811452709a7d1c0.jpeg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "Gebäude Z",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/2/8/4/2/7/Unbenannt-1-adf45ff7a4edac44.jpeg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "Grundschule Dresden-Hellerau",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/6/0/2/0/1/62873a201d2ad407.jpeg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "DKFZ Heidelberg",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/2/9/7/7/9/1b47dcf40a58ccb6.jpeg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "Neubau Laborgebäude MAIN, TU Chemnitz",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/0/2/3/6/4/9838ddbffbb75af9.jpeg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "Sanierung und Umbau historisches Wirtschaftsgebäude zum Simulationszentrum",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/3/1/7/6/0/548cfe8682c00815.jpeg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "DSGV Newsroom",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/5/3/2/9/1/5/Unbenannt-1-4a0082b1df385e4c.jpg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "AmorePacific F21",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/5/2/3/3/9/4/e14a6c4e17e48e92.jpeg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "Unit",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/1/4/2/5/5/2/1ce00ab6385f4090.jpeg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "SieMatic",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/1/4/2/5/4/5/3d636dc64156fe72.jpeg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Erweiterung Jüdisches Museum Frankfurt",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/6/9/8/5/0/3/bd701f9f002229bc.jpeg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Berlin Institute for Medical Systems Biology",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/8/3/2/1/4/34657047e497131f.jpeg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Design-Fakultät der Hochschule München",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/7/0/4/8/2/ff330142b7a5f723.jpeg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Jüdisches Gemeindezentrum mit Synagoge",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/8/3/3/4/2/Unbenannt-2-a2a24ae8e4f2915a.jpeg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "Wohnquartier Südcampus, Bad Homburg vor der Höhe",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/5/1/6/2/8/8/f2ac63d7c836a3fd.jpeg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "AOK Centrum für Gesundheit in Berlin",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/5/1/6/2/8/3/5da038ffe86c5f4f.jpeg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "Klinikum Fürth",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/5/1/5/5/5/4/f11f0f1e472ab43e.jpeg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "Klinikum Bayreuth",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/7/0/7/1/6/58463c2eb7eb4e53.jpeg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "Casa.Morgana",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/4/4/7/3/3/9679675c2b741947.jpeg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "BJÖRN STEIGER DENKMAL – Winnenden, Germany",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/4/2/0/9/5/2/d4acc41cf0cafb56.jpeg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "Straßenbahnhaltestelle in Kehl",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/3/9/2/1/1/4/0abb1c84f71eb829.jpeg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "Miami Museum Garage",
+    "project_img_url": "https://www.baunetz-architekten.de/img/2/2/8/9/4/1/2/thumbnail-e7e146c79bf4a965.jpg"
+  }
+]
