@@ -1,0 +1,242 @@
+[
+  {
+    "office_id": 1,
+    "project_name": "SAP, Eschborn",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_1_1.jpg"
+  },
+  {
+    "office_id": 1,
+    "project_name": "Siemens Campus, Erlangen",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_1_2.jpg"
+  },
+  {
+    "office_id": 1,
+    "project_name": "HumboldtHafenEins, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_1_3.jpg"
+  },
+  {
+    "office_id": 1,
+    "project_name": "Meixi Urban Helix, Changsha",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_1_4.jpg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Trumpf Smart Factory, Chicago",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_2_1.jpg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Wohnhaus Prenzlauer Berg, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_2_2.jpg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Trumpf Vertriebs- und Servicezentrum, Warschau",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_2_3.jpg"
+  },
+  {
+    "office_id": 2,
+    "project_name": "Empfang der Schaubühne, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_2_4.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Moringa – Cradle-to-Cradle-inspiriertes Wohnen, Hamburg",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_3_1.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "THE SHELF, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_3_2.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Welterbe Zollverein, Essen",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_3_3.jpg"
+  },
+  {
+    "office_id": 3,
+    "project_name": "Grimmwelt, Kassel",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_3_4.jpg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "Experimenta, Heilbronn",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_4_1.jpg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "M9 Museum, Venedig-Mestre",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_4_2.jpg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "oxymoron, Venedig",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_4_3.jpg"
+  },
+  {
+    "office_id": 4,
+    "project_name": "Luisenblock West, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_4_4.jpg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "GDA Plaza, Hangzhou",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_5_1.jpg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "U-Bahnhof Elbbrücken, Hamburg",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_5_2.jpg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "Caohejing Xinzhou Plaza, Shanghai",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_5_3.jpg"
+  },
+  {
+    "office_id": 5,
+    "project_name": "Culture & Art Center, Guangxi",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_5_4.jpg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "Bricks, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_6_1.jpg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "Wave, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_6_2.jpg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "Eiswerk, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_6_3.jpg"
+  },
+  {
+    "office_id": 6,
+    "project_name": "AIR TAXI VOLO-PORTS",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_6_4.jpg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "UGM - Großmarkthalle, Munich",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_7_1.jpg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "Robatherm Hauptverwaltung, Jettingen-Scheppach",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_7_2.jpg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "DER bogen, Munich",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_7_3.jpg"
+  },
+  {
+    "office_id": 7,
+    "project_name": "Gebäude Z, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_7_4.jpg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "DAS MINSK Museum, Potsdam",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_8_1.jpg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "Translationale Forschung im Zentrum, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_8_2.jpg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "Neubau Laborgebäude MAIN, TU Chemnitz",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_8_3.jpg"
+  },
+  {
+    "office_id": 8,
+    "project_name": "Sanierung und Umbau historisches Wirtschaftsgebäude zum Simulationszentrum, Breslau",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_8_4.jpg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "DSGV Newsroom, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_9_1.jpg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "AmorePacific F21, Seoul",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_9_2.jpg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "Unit",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_9_3.jpg"
+  },
+  {
+    "office_id": 9,
+    "project_name": "SieMatic, Milan",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_9_4.jpg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Erweiterung Jüdisches Museum, Frankfurt",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_10_1.jpg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Institute for Medical Systems Biology, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_10_2.jpg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Design-Fakultät der Hochschule, München",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_10_3.jpg"
+  },
+  {
+    "office_id": 10,
+    "project_name": "Thünen-Institut, Bremerhaven",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_10_4.jpg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "Wohnquartier Südcampus, Bad Homburg vor der Höhe",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_11_1.jpg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "AOK Centrum für Gesundheit, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_11_2.jpg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "Klinikum, Fürth",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_11_3.jpg"
+  },
+  {
+    "office_id": 11,
+    "project_name": "Freie Universität, Berlin",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_11_4.jpg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "FOM University, Düsseldorf",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_12_1.jpg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "BJÖRN STEIGER DENKMAL, Winnenden",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_12_2.jpg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "Completion Railway Station, Georgia",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_12_3.jpg"
+  },
+  {
+    "office_id": 12,
+    "project_name": "Museum Garage, Miami",
+    "project_img_url": "https://res.cloudinary.com/db5jh0zwo/image/upload/office_projects/office_project_12_4.jpg"
+  }
+]

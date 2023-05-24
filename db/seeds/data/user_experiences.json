@@ -1,0 +1,16 @@
+[
+  {
+    "user_id": 1,
+    "start_date": "2012-07-01",
+    "end_date": "2016-12-31",
+    "job_position": "Dipl.-Ing. Architektin",
+    "office_id": 1
+  },
+  {
+    "user_id": 1,
+    "start_date": "2017-01-01",
+    "end_date": "2020-04-20",
+    "job_position": "Dipl.-Ing. Architektin",
+    "office_id": 8
+  }
+]
