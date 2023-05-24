@@ -1,5 +1,5 @@
 class SeedJson
-  BATCH_LIMIT = 25
+  BATCH_SIZE = 25
 
   attr_reader :type, :filepath
 
@@ -12,7 +12,7 @@ class SeedJson
     puts
     puts "===:::::::::::#{type}:::::::::::#{type}:::::::::::#{type}:::::::::::#{type}:::::::::::==="
 
-    objects.each_slice(BATCH_LIMIT) do |batch|
+    objects.each_slice(BATCH_SIZE) do |batch|
       creator.call(batch)
       print '.'
     end
