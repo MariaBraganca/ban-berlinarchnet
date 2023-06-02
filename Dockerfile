@@ -53,7 +53,7 @@ EXPOSE 3000
 USER $USERNAME
 
 # Precompile the Rails assets
-RUN rake assets:precompile
+RUN bundle exec rake assets:precompile
 
 # Execute entrypoint script
 ENTRYPOINT ["entrypoint.sh"]
