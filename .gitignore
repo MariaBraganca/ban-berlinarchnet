@@ -22,6 +22,9 @@
 /storage/*
 !/storage/.keep
 
+# Ignore vendor folder
+/vendor/*
+
 /public/assets
 .byebug_history
 
