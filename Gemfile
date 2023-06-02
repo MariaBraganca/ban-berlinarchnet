@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+gem 'rails', '~> 6.1', '>= 6.1.7'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -48,7 +48,7 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'pundit', '~> 2.1'
 
 # Act as taggable
-gem 'acts-as-taggable-on', '~> 6.0'
+gem 'acts-as-taggable-on', '~> 9.0', '>= 9.0.1'
 
 # Cloudinary gem
 gem 'cloudinary', '~> 1.18', '>= 1.18.1'
