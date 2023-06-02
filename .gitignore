@@ -24,6 +24,7 @@
 
 # Ignore vendor folder
 /vendor/*
+!/vendor/.keep
 
 /public/assets
 .byebug_history
