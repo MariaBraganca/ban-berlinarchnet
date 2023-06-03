@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'berlinarchnet@gmail.com'
+  default from: 'ban-berlinarchnet@gmail.com'
   layout 'mailer'
 end
