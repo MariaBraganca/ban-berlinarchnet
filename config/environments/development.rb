@@ -56,7 +56,7 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
@@ -76,14 +76,14 @@ Rails.application.configure do
 
   # Action Mailer configuration
   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
-  config.action_mailer.default_options = {from: 'ban-berlinarchnet@gmail.com'}
+  config.action_mailer.default_options = {from: 'berlinarchnet@gmail.com'}
   config.action_mailer.perform_deliveries = true
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               Rails.application.credentials.dig(:google, :domain),
+    domain:               'gmail.com',
     user_name:            Rails.application.credentials.dig(:google, :user_name),
     password:             Rails.application.credentials.dig(:google, :password),
     authentication:       'plain',
