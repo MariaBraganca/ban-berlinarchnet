@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :description, :photo, portfolio_photos: []])
   end
 
-  include Pundit
+  include Pundit::Authorization
 
   # Pundit: white-list approach.
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
