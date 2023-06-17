@@ -1,23 +1,13 @@
 Rails.application.routes.draw do
-  get 'office_projects/index'
-  get 'jobs/index'
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'notifications/index'
-  get 'chatrooms/show'
-  devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "pages#home"
+  
+  devise_for :users
 
   resources :users do
     resources :experiences, only: [:new, :create]
     resources :chatrooms, only: [:create]
   end
-
-  # resources :experiences, only: [] do
-  #   resources :ratings, only: :create
-  # end
-
-  resources :rsvps, only: :destroy
 
   resources :events do
     resources :rsvps, only: [:create]
@@ -25,10 +15,7 @@ Rails.application.routes.draw do
     post "event_comment", to: "comments#create_event_comment"
   end
 
-  resources :posts do
-    resources :comments, only: [:destroy]
-    post "post_comment", to: "comments#create_post_comment"
-  end
+  resources :rsvps, only: [:destroy]
 
   resources :offices do
     resources :comments, only: [:destroy]
@@ -36,11 +23,16 @@ Rails.application.routes.draw do
     post "office_comment", to: "comments#create_office_comment"
   end
 
-  resources :chatrooms, only: [:index, :show] do
-    resources :messages, only: :create
+  resources :posts do
+    resources :comments, only: [:destroy]
+    post "post_comment", to: "comments#create_post_comment"
   end
 
   resources :openings
+
+  resources :chatrooms, only: [:index, :show] do
+    resources :messages, only: [:create]
+  end
 
   resources :notifications, only: [:index] do
     collection do
@@ -48,8 +40,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :search, only: [:index]
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   mount ActionCable.server => "/cable"
-
 end
