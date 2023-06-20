@@ -1,4 +1,4 @@
-FROM ruby:2.7.7
+FROM ruby:3.2.2
 
 # Set arguments
 ARG USERNAME=ban-berlinarchnet-developer
@@ -10,8 +10,12 @@ ARG APP_PATH=/opt/ban-berlinarchnet
 RUN groupadd --gid $USER_GID $USERNAME
 RUN useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
 
+# Set Environment variables
+ENV BUNDLER_VERSION="2.4.14"
+ENV NODE_OPTIONS="--openssl-legacy-provider"
+
 # Node.js
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 
 # Yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
