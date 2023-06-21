@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_02_120128) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_06_20_074057) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,8 +19,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.text "body"
     t.string "record_type", null: false
     t.bigint "record_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
   end
 
@@ -30,7 +29,7 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -41,8 +40,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "content_type"
     t.text "metadata"
     t.bigint "byte_size", null: false
-    t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.string "checksum"
+    t.datetime "created_at", precision: nil, null: false
     t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
@@ -54,8 +53,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
   end
 
   create_table "chatrooms", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "user_one_id"
     t.bigint "user_two_id"
     t.index ["user_one_id"], name: "index_chatrooms_on_user_one_id"
@@ -63,14 +62,14 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.datetime "date"
+    t.datetime "date", precision: nil
     t.text "content"
     t.bigint "post_id"
     t.bigint "event_id"
     t.bigint "office_id"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_comments_on_event_id"
     t.index ["office_id"], name: "index_comments_on_office_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
@@ -81,8 +80,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.datetime "start_date"
     t.string "location"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "title"
     t.string "cl_img_tag"
     t.float "latitude"
@@ -91,7 +90,7 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.boolean "online", default: false
     t.string "online_link"
     t.string "format"
-    t.datetime "end_date"
+    t.datetime "end_date", precision: nil
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -101,19 +100,19 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "job_position"
     t.bigint "office_id", null: false
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["office_id"], name: "index_experiences_on_office_id"
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
-    t.datetime "date_time"
+    t.datetime "date_time", precision: nil
     t.text "content"
     t.bigint "user_id", null: false
     t.bigint "chatroom_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
@@ -121,12 +120,12 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
   create_table "notifications", force: :cascade do |t|
     t.integer "recipient_id"
     t.integer "actor_id"
-    t.datetime "read_at"
+    t.datetime "read_at", precision: nil
     t.string "action"
     t.integer "notifiable_id"
     t.string "notifiable_type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "office_projects", force: :cascade do |t|
@@ -135,8 +134,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "project_year"
     t.string "project_typology"
     t.bigint "office_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["office_id"], name: "index_office_projects_on_office_id"
   end
 
@@ -144,8 +143,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "name"
     t.string "location"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "url"
     t.float "latitude"
     t.float "longitude"
@@ -153,12 +152,12 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
   end
 
   create_table "openings", force: :cascade do |t|
-    t.datetime "date"
+    t.datetime "date", precision: nil
     t.string "job_position"
     t.text "description"
     t.bigint "office_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "job_site"
     t.string "job_url"
     t.string "office_name"
@@ -168,11 +167,11 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.datetime "date"
+    t.datetime "date", precision: nil
     t.string "title"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -181,16 +180,16 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.float "salary"
     t.float "architecture"
     t.bigint "office_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["office_id"], name: "index_ratings_on_office_id"
   end
 
   create_table "rsvps", force: :cascade do |t|
     t.bigint "event_id", null: false
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_rsvps_on_event_id"
     t.index ["user_id"], name: "index_rsvps_on_user_id"
   end
@@ -202,7 +201,7 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "tagger_type"
     t.integer "tagger_id"
     t.string "context", limit: 128
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["context"], name: "index_taggings_on_context"
     t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
@@ -216,8 +215,8 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
 
   create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
@@ -226,13 +225,13 @@ ActiveRecord::Schema.define(version: 2023_06_02_120128) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
     t.string "first_name"
     t.string "last_name"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "cl_img_tag"
     t.text "seed_portfolio", default: [], array: true
     t.boolean "admin"

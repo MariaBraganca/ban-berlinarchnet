@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1', '>= 6.1.7'
+gem 'rails', '~> 7.0', '>= 7.0.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.4.3'
+gem 'webpacker', '~> 5.4', '>= 5.4.4'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -54,7 +54,7 @@ gem 'acts-as-taggable-on', '~> 9.0', '>= 9.0.1'
 gem 'cloudinary', '~> 1.18', '>= 1.18.1'
 
 # Rails Admin gem
-gem 'rails_admin', '~> 2.0', '>= 2.0.2'
+gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
 # Faker gem
 gem 'faker', '~> 2.14'
@@ -80,8 +80,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', '~> 4.1', '>= 4.1.1'
 end
 
 group :test do
