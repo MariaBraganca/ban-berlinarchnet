@@ -290,8 +290,6 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -317,7 +315,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     thor (1.2.2)
-    tilt (2.1.0)
+    tilt (2.2.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -395,10 +393,11 @@ DEPENDENCIES
   redis (~> 4.0)
   rspec-html-matchers
   rspec-rails
-  sass-rails (>= 6)
+  sassc-rails (~> 2.1, >= 2.1.2)
   selenium-webdriver (~> 3.142, >= 3.142.7)
   shoulda-matchers (= 4.0.0.rc1)
   simple_form
+  sprockets-rails (~> 3.4, >= 3.4.2)
   turbolinks (~> 5)
   turbolinks_render
   tzinfo-data
