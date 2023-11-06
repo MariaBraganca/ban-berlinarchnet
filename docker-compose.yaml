@@ -1,24 +1,27 @@
 services:
   db:
-    image: postgres:15
+    image: "postgres:${DATABASE_VERSION}"
+    restart: always
+    environment:
+      POSTGRES_USER: "${DATABASE_USER}"
+      POSTGRES_PASSWORD: "${DATABASE_PASSWORD}"
     volumes:
       - ban-db-data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+    ports:
+      - "${DATABASE_PORT}:${DATABASE_PORT}"
   web:
     build:
       context: .
-      args:
-        - USER_UID=1000
-        - USER_GID=1000
+      dockerfile: Dockerfile
+    image: "ban-berlinarchnet-web:${DOCKER_IMAGE_TAG}"
     env_file:
       - .env
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    user: "${USER_ID}:${GROUP_ID}"
+    command: "bundle exec rails s -b 0.0.0.0 -p ${RAILS_PORT}"
     volumes:
       - .:/opt/ban-berlinarchnet
     ports:
-      - "3000:3000"
+      - "${RAILS_PORT}:${RAILS_PORT}"
     depends_on:
       - db
 volumes:
