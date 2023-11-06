@@ -84,17 +84,3 @@ group :test do
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rspec-html-matchers'
 end
-
-
-# Remove
-#-------------------------------------------------------------------------------
-# gem 'image_processing', '~> 1.2'
-# gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-# gem 'listen', '~> 3.2'
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# gem "net-http"
-# gem 'capybara', '~> 3.33'
-# gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
-# gem 'webdriver', '~> 0.17.0'
-# gem 'launchy', '~> 2.5'
-# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
