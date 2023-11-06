@@ -15,7 +15,6 @@ RUN useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 
-
 # Packages
 #-------------------------------------------------------------------------------
 ARG KEYRINGS_PATH=/etc/apt/keyrings
@@ -43,7 +42,6 @@ RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ bookworm-pgdg main" > $S
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get update && apt-get install -y nodejs yarn postgresql-client
-
 
 # Rails
 #-------------------------------------------------------------------------------
