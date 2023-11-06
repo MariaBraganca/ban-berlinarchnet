@@ -26,7 +26,7 @@ default: &default
 
 development:
   <<: *default
-  database:  <%= ENV.fetch("DATABASE_NAME") { 'ban_berlinarchnet_development' } %>
+  database:  <%= ENV.fetch("DATABASE_NAME_DEVELOPMENT") { 'ban_berlinarchnet_development' } %>
 
   # encoding: unicode
 
@@ -62,7 +62,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database:  <%= ENV.fetch("DATABASE_NAME") { 'ban_berlinarchnet_test' } %>
+  database:  <%= ENV.fetch("DATABASE_NAME_TEST") { 'ban_berlinarchnet_test' } %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,4 +85,4 @@ test:
 #
 production:
   <<: *default
-  database:  <%= ENV.fetch("DATABASE_NAME") { 'ban_berlinarchnet_production' } %>
+  database:  <%= ENV.fetch("DATABASE_NAME_PRODUCTION") { 'ban_berlinarchnet_production' } %>
