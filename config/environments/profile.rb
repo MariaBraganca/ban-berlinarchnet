@@ -58,4 +58,6 @@ Rails.application.configure do
 
   # Customize any additional options below...
 
+  # Store uploaded files on the local file system (see config/storage.yml for options).
+  config.active_storage.service = :cloudinary
 end
