@@ -13,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: "ban-berlinarchnet-web:${DOCKER_IMAGE_TAG}"
+    image: "ban-berlinarchnet-web:${BAN-BERLINARCHNET-VERSION}"
     env_file:
       - .env
     user: "${USER_ID}:${GROUP_ID}"

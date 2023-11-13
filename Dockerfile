@@ -1,7 +1,7 @@
 FROM ruby:3.2.2
 
 # System
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 EXPOSE 3000
 WORKDIR /opt/ban-berlinarchnet
 
@@ -16,7 +16,7 @@ COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 
 # Packages
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ARG KEYRINGS_PATH=/etc/apt/keyrings
 ARG SOURCES_PATH=/etc/apt/sources.list.d
 
@@ -44,7 +44,7 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-k
 RUN apt-get update && apt-get install -y nodejs yarn postgresql-client
 
 # Rails
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 COPY --chown=$USERNAME:$USERNAME package.json yarn.lock ./
 RUN yarn install
 
