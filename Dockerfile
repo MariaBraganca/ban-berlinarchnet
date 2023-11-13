@@ -1,66 +1,63 @@
 FROM ruby:3.2.2
 
-# Set arguments
+# System
+# ------------------------------------------------------------------------------
+EXPOSE 3000
+WORKDIR /opt/ban-berlinarchnet
+
 ARG USERNAME=ban-berlinarchnet-developer
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
-ARG APP_PATH=/opt/ban-berlinarchnet
 
-# Create non-root user
 RUN groupadd --gid $USER_GID $USERNAME
 RUN useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
 
-# Set Environment variables
-ENV BUNDLER_VERSION="2.4.14"
-ENV NODE_OPTIONS="--openssl-legacy-provider"
-
-# Node.js
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-
-# Yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-# PostgreSQL client
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
-# Install Node.js, Yarn and PostgresSQL client
-RUN apt-get update -qq && apt-get install -y nodejs yarn postgresql-client
-
-# Script to be executed every time the container starts
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 
-# Create directory for Rails application and set it as working directory
-RUN mkdir $APP_PATH
-WORKDIR $APP_PATH
+# Packages
+# ------------------------------------------------------------------------------
+ARG KEYRINGS_PATH=/etc/apt/keyrings
+ARG SOURCES_PATH=/etc/apt/sources.list.d
 
-# Copy the package.json
+ENV NODE_OPTIONS="--openssl-legacy-provider"
+
+# --------------------------
+# Node.js
+# --------------------------
+RUN apt-get update && apt-get install -y ca-certificates curl gnupg
+RUN mkdir -p $KEYRINGS_PATH
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o $KEYRINGS_PATH/nodesource.gpg
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee $SOURCES_PATH/nodesource.list
+# --------------------------
+# Yarn
+# --------------------------
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee $SOURCES_PATH/yarn.list
+
+# --------------------------
+# PostgreSQL client
+# --------------------------
+RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ bookworm-pgdg main" > $SOURCES_PATH/pgdg.list
+RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+
+RUN apt-get update && apt-get install -y nodejs yarn postgresql-client
+
+# Rails
+# ------------------------------------------------------------------------------
 COPY --chown=$USERNAME:$USERNAME package.json yarn.lock ./
-# Run yarn install
 RUN yarn install
 
-# Copy the Gemfile
 COPY --chown=$USERNAME:$USERNAME Gemfile Gemfile.lock ./
-# Install bundler and run bundle install
 RUN gem install bundler
 RUN bundle install
 
-# Copy the Rails application code
 COPY --chown=$USERNAME:$USERNAME . .
 
-# Expose Rails app
-EXPOSE 3000
-
-# Use non-root user
 USER $USERNAME
 
-# Precompile the Rails assets
 RUN bundle exec rake assets:precompile
 
-# Execute entrypoint script
 ENTRYPOINT ["entrypoint.sh"]
 
-# Run Rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
