@@ -63,7 +63,7 @@ gem 'cloudinary', '~> 1.18', '>= 1.18.1'
 
 # Miscellaneous gems
 #-------------------------------------------------------------------------------
-gem 'faker', '~> 2.14'
+gem 'faker', require: false
 gem 'acts-as-taggable-on', '~> 9.0', '>= 9.0.1'
 gem 'pry-rails'
 
