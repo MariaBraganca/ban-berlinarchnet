@@ -84,3 +84,8 @@ group :test do
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rspec-html-matchers'
 end
+
+# Profile CPU & memory
+group :profile do
+  gem 'ruby-prof'
+end

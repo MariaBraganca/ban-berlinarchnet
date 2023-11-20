@@ -48,7 +48,7 @@ default: &default
     - .jpeg
     - .jpg
 
-development:
+development: &development
   <<: *default
   compile: true
 
@@ -94,3 +94,6 @@ production:
 
   # Cache manifest.json for performance
   cache_manifest: true
+
+profile:
+  <<: *development

@@ -11,6 +11,13 @@ module BanBerlinarchnet
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Add the ruby prof rack adapter to the middleware stack.
+    # The path is where profiling results will be stored.
+    # By default the rack adapter will generate a html call graph report and flat text report.
+    if Rails.env.profile?
+      config.middleware.use Rack::RubyProf, :path => './tmp/profile'
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
