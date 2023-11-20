@@ -29,7 +29,7 @@ namespace :data_generators do
           Rails.logger.error { "Uniqueness constraint was violated: #{e.message}" }
         rescue StandardError => e
           Rails.logger.error e.message
-          Rails.logger.error e.backtrace.take(5).join('\n')
+          Rails.logger.error { e.backtrace.take(5).join("\n") }
         end
       end
     end
