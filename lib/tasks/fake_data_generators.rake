@@ -3,10 +3,10 @@ require 'faker'
 namespace :data_generators do
   desc 'Generates users'
   task :users, [:total, :batch_size] => [:environment] do |t, args|
-    time = Benchmark.measure do
-      TOTAL = args.fetch(:total, 20_000)
-      BATCH_SIZE = args.fetch(:batch_size, 10_000)
+    TOTAL = args.fetch(:total, 20_000)
+    BATCH_SIZE = args.fetch(:batch_size, 10_000)
 
+    time = Benchmark.measure do
       TOTAL.times.each_slice(BATCH_SIZE) do |batch|
         users = batch.map do |i|
           first_name = Faker::Name.first_name
