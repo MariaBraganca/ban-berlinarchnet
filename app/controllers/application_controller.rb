@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action do
+    if current_user && current_user.admin
+      Rack::MiniProfiler.authorize_request
+    end
+  end
   add_flash_types :validation
 
   def configure_permitted_parameters
