@@ -6,11 +6,10 @@ WORKDIR /opt/ban-berlinarchnet
 # Dedicated user account
 # ------------------------------------------------------------------------------
 ARG USERNAME=ban-berlinarchnet-developer
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+ARG USERID=1000
 
-RUN groupadd --gid $USER_GID $USERNAME
-RUN useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
+RUN groupadd --gid $USERID $USERNAME
+RUN useradd --uid $USERID --gid $USERID -m $USERNAME
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
