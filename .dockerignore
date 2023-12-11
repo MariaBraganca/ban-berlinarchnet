@@ -32,3 +32,6 @@ kubernetes/secret.yaml
 /yarn-error.log
 yarn-debug.log*
 .git
+
+# Asdf version management
+.tool-versions

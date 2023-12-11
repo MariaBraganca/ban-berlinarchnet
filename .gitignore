@@ -49,3 +49,6 @@ yarn-debug.log*
 .env*
 .env*
 .env*
+
+# Asdf version management
+.tool-versions
