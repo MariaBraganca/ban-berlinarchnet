@@ -64,6 +64,10 @@ gem 'memory_profiler' # For memory profiling
 gem 'stackprof' # For call-stack profiling flamegraphs
 gem 'flamegraph'
 
+# Storage
+#-------------------------------------------------------------------------------
+gem "image_processing", ">= 1.2" # Required by Active Storage
+
 # External Services
 #-------------------------------------------------------------------------------
 gem 'cloudinary', '~> 1.18', '>= 1.18.1'

@@ -21,16 +21,18 @@ ARG SOURCES_PATH=/etc/apt/sources.list.d
 
 ENV NODE_OPTIONS="--openssl-legacy-provider"
 
+RUN apt-get update && apt-get install -y \
+    ca-certificates curl gnupg \
+    lsb-release libvips \
+&& rm -rf /var/lib/apt/lists/*
+
 # --------------------------
 # Node.js
 # --------------------------
-RUN apt-get update && apt-get install -y \
-    ca-certificates curl gnupg lsb-release \
-&& rm -rf /var/lib/apt/lists/*
-
 RUN mkdir -p $KEYRINGS_PATH
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o $KEYRINGS_PATH/nodesource.gpg
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee $SOURCES_PATH/nodesource.list
+
 # --------------------------
 # Yarn
 # --------------------------
