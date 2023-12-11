@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '3.2.2'
+ruby '3.1.2'
 
 # Rails
 #-------------------------------------------------------------------------------
@@ -56,6 +56,13 @@ gem 'geocoder'
 #-------------------------------------------------------------------------------
 gem 'nokogiri', '~> 1.10', '>= 1.10.10'
 gem 'watir', '~> 6.16', '>= 6.16.5'
+
+# Profiling
+#-------------------------------------------------------------------------------
+gem 'rack-mini-profiler'
+gem 'memory_profiler' # For memory profiling
+gem 'stackprof' # For call-stack profiling flamegraphs
+gem 'flamegraph'
 
 # External Services
 #-------------------------------------------------------------------------------
