@@ -25,7 +25,6 @@ gem 'simple_form'
 #-------------------------------------------------------------------------------
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # Use SCSS for stylesheets
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
-gem 'webpacker', '~> 5.4', '>= 5.4.4' # Transpile app-like JavaScript
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster
 gem 'turbolinks_render'
 gem 'autoprefixer-rails', '~> 10.0', '>= 10.0.2.0' # Parse CSS and add vendor prefixes to CSS rules

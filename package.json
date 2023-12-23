@@ -10,7 +10,6 @@
     "@rails/actiontext": "^7.0.4-3",
     "@rails/activestorage": "^7.0.4-3",
     "@rails/ujs": "^7.0.4-3",
-    "@rails/webpacker": "^5.4.4",
     "bootstrap": "^4.5.2",
     "flatpickr": "^4.6.6",
     "jquery": "^3.5.1",
