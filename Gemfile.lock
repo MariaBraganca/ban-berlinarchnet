@@ -119,6 +119,10 @@ GEM
       domain_name (~> 0.5)
     i18n (1.14.0)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.2.3)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -339,6 +343,7 @@ DEPENDENCIES
   flamegraph
   font-awesome-sass
   geocoder
+  importmap-rails (~> 1.2)
   jbuilder (~> 2.7)
   memory_profiler
   nokogiri (~> 1.10, >= 1.10.10)
