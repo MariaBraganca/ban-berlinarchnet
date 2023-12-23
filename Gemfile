@@ -24,10 +24,8 @@ gem 'simple_form'
 # Asset Pipeline
 #-------------------------------------------------------------------------------
 gem "importmap-rails", "~> 1.2"
-gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # Use SCSS for stylesheets
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
-gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster
-gem 'turbolinks_render'
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # C implementation of Sass in order to compile faster
 gem 'autoprefixer-rails', '~> 10.0', '>= 10.0.2.0' # Parse CSS and add vendor prefixes to CSS rules
 gem 'font-awesome-sass' # Sass-powered version of Font Awesome for Ruby projects with specific support for Ruby on Rails and Sprockets
 

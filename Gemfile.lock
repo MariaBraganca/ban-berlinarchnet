@@ -299,14 +299,6 @@ GEM
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
-    turbolinks_render (0.9.21)
-      actionpack (>= 5.2.0)
-      activesupport (>= 5.2.0)
-      railties (>= 5.2.0)
-      turbolinks-source (~> 5.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -366,8 +358,6 @@ DEPENDENCIES
   simple_form
   sprockets-rails (~> 3.4, >= 3.4.2)
   stackprof
-  turbolinks (~> 5)
-  turbolinks_render
   watir (~> 6.16, >= 6.16.5)
   web-console (>= 3.3.0)
   whenever (~> 0.9.4)
