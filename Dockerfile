@@ -25,17 +25,12 @@ ENV NODE_OPTIONS="--openssl-legacy-provider"
 # Node.js
 # --------------------------
 RUN apt-get update && apt-get install -y \
-    ca-certificates curl gnupg lsb-release \
+    ca-certificates curl gnupg lsb-release libvips \
 && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p $KEYRINGS_PATH
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o $KEYRINGS_PATH/nodesource.gpg
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee $SOURCES_PATH/nodesource.list
-# --------------------------
-# Yarn
-# --------------------------
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee $SOURCES_PATH/yarn.list
 
 # --------------------------
 # PostgreSQL client
@@ -44,14 +39,11 @@ RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg 
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get update -qq && apt-get install -y \
-    nodejs yarn postgresql-client \
+    nodejs postgresql-client \
 && rm -rf /var/lib/apt/lists/*
 
 # Rails
 # ------------------------------------------------------------------------------
-COPY --chown=$USERNAME:$USERNAME package.json yarn.lock ./
-RUN yarn install
-
 COPY --chown=$USERNAME:$USERNAME Gemfile Gemfile.lock ./
 RUN gem install bundler
 RUN bundle install
