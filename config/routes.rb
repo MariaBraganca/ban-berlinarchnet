@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "pages#home"
-  
+
   devise_for :users
 
   resources :users do
@@ -39,8 +39,6 @@ Rails.application.routes.draw do
       post :mark_as_read
     end
   end
-
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   mount ActionCable.server => "/cable"
 end

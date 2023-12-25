@@ -34,10 +34,6 @@ gem 'font-awesome-sass' # Sass-powered version of Font Awesome for Ruby projects
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'pundit', '~> 2.1'
 
-# Monitoring/Alerting/Comparing
-#-------------------------------------------------------------------------------
-gem 'rails_admin', '~> 3.1', '>= 3.1.2'
-
 # Background processing
 #-------------------------------------------------------------------------------
 gem 'whenever', '~> 0.9.4', require: false
