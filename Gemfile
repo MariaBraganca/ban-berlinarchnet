@@ -21,8 +21,6 @@ gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 #-------------------------------------------------------------------------------
 gem "importmap-rails", "~> 1.2"
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
-gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # C implementation of Sass in order to compile faster
-
 gem "image_processing", ">= 1.2" # Active Storage requirement
 
 # Authentication & Authorisation
