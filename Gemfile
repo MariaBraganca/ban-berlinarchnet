@@ -17,19 +17,13 @@ gem 'pg_search', '~> 2.3', '>= 2.3.5'
 #-------------------------------------------------------------------------------
 gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 
-# Views
-#-------------------------------------------------------------------------------
-gem 'simple_form'
-
 # Asset Pipeline
 #-------------------------------------------------------------------------------
 gem "importmap-rails", "~> 1.2"
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # C implementation of Sass in order to compile faster
-gem 'autoprefixer-rails', '~> 10.0', '>= 10.0.2.0' # Parse CSS and add vendor prefixes to CSS rules
-gem 'font-awesome-sass' # Sass-powered version of Font Awesome for Ruby projects with specific support for Ruby on Rails and Sprockets
-gem "image_processing", ">= 1.2" # Active Storage requirement
 
+gem "image_processing", ">= 1.2" # Active Storage requirement
 
 # Authentication & Authorisation
 #-------------------------------------------------------------------------------
