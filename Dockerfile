@@ -1,4 +1,4 @@
-FROM ruby:3.1.2
+FROM ruby:3.1.2-bullseye
 
 EXPOSE 3000
 WORKDIR /opt/ban-berlinarchnet
@@ -16,30 +16,11 @@ RUN chmod +x /usr/bin/entrypoint.sh
 
 # Required packages
 # ------------------------------------------------------------------------------
-ARG KEYRINGS_PATH=/etc/apt/keyrings
-ARG SOURCES_PATH=/etc/apt/sources.list.d
-
-ENV NODE_OPTIONS="--openssl-legacy-provider"
-
-# --------------------------
-# Node.js
-# --------------------------
-RUN apt-get update && apt-get install -y \
-    ca-certificates curl gnupg lsb-release libvips \
-&& rm -rf /var/lib/apt/lists/*
-
-RUN mkdir -p $KEYRINGS_PATH
-RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o $KEYRINGS_PATH/nodesource.gpg
-RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee $SOURCES_PATH/nodesource.list
-
-# --------------------------
-# PostgreSQL client
-# --------------------------
-RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > $SOURCES_PATH/pgdg.list
+RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get update -qq && apt-get install -y \
-    nodejs postgresql-client \
+    libvips postgresql-client \
 && rm -rf /var/lib/apt/lists/*
 
 # Rails
