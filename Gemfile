@@ -28,6 +28,8 @@ gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional depen
 gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # C implementation of Sass in order to compile faster
 gem 'autoprefixer-rails', '~> 10.0', '>= 10.0.2.0' # Parse CSS and add vendor prefixes to CSS rules
 gem 'font-awesome-sass' # Sass-powered version of Font Awesome for Ruby projects with specific support for Ruby on Rails and Sprockets
+gem "image_processing", ">= 1.2" # Active Storage requirement
+
 
 # Authentication & Authorisation
 #-------------------------------------------------------------------------------
