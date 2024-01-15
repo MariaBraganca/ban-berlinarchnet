@@ -22,6 +22,7 @@ gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 gem "importmap-rails", "~> 1.2"
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
 gem "image_processing", ">= 1.2" # Active Storage requirement
+gem "tailwindcss-rails", "~> 2.3"
 
 # Authentication & Authorisation
 #-------------------------------------------------------------------------------

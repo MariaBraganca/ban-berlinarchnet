@@ -25,8 +25,10 @@ RUN apt-get update -qq && apt-get install -y \
 
 # Rails
 # ------------------------------------------------------------------------------
+ENV BUNDLER_VERSION=2.5.4
+
 COPY --chown=$USERNAME:$USERNAME Gemfile Gemfile.lock ./
-RUN gem install bundler
+RUN gem install bundler:${BUNDLER_VERSION}
 RUN bundle install
 
 COPY --chown=$USERNAME:$USERNAME . .

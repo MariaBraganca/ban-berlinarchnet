@@ -259,6 +259,8 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     stackprof (0.2.25)
+    tailwindcss-rails (2.3.0)
+      railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.3.2)
     tzinfo (2.0.6)
@@ -316,6 +318,7 @@ DEPENDENCIES
   shoulda-matchers (= 4.0.0.rc1)
   sprockets-rails (~> 3.4, >= 3.4.2)
   stackprof
+  tailwindcss-rails (~> 2.3)
   watir (~> 6.16, >= 6.16.5)
   web-console (>= 3.3.0)
   whenever (~> 0.9.4)
@@ -324,4 +327,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.4.21
+   2.5.4
