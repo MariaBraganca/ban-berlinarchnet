@@ -8,10 +8,18 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}'
   ],
   theme: {
+    fontFamily: {
+      sans: ['OpenSans', 'sans-serif'],
+      tech: ['ShareTechMono', 'monospace']
+    },
     extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
+      colors: {
+        'cherry': '#E53E3E',
+        'grass': '#90be6d',
+        'star': '#e9c46a',
+        'ocean': '#3b89aa',
+        'plum': '#3b89aa'
+      }
     },
   },
   plugins: [

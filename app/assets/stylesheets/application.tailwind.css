@@ -1,3 +1,8 @@
+/* Custom Imports */
+@import 'fonts.css';
+@import 'actiontext.css';
+
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
