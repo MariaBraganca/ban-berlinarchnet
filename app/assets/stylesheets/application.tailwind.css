@@ -1,8 +1,18 @@
 /* Custom Imports */
+/* ---------------------------------------------------------------------------------- */
+/* Google Fonts */
 @import 'fonts.css';
+
+/* Fontawesome */
+@import 'fontawesome.css';
+@import 'brands.css';
+@import 'solid.css';
+
+/* Rails */
 @import 'actiontext.css';
 
 /* Tailwind directives */
+/* ---------------------------------------------------------------------------------- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
