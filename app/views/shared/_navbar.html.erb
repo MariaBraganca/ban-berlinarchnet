@@ -1,59 +1,34 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-ban">
-  <%= link_to root_path, class: "" do %>
-    <%= image_tag(image_path_generator('logo/logo1'), class: 'avatar') %>
-  <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!-- Collapse -->
-  <section class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto"> <!-- Main menu -->
-      <li class="nav-item">
-        <%= link_to "Events", events_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Offices", offices_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Jobs", openings_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Blog", posts_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Community", users_path, class: "nav-link" %>
-      </li>
-    </ul>
-
-    <ul class="navbar-nav"> <!-- User dropdown menu -->
-      <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <%= image_tag(image_path_selector(current_user.photo, current_user.cl_img_tag), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item", id: "dropdownDashboard" %>
-            <%= link_to "Create event", new_event_path, class: "dropdown-item", id: "dropdownEvent" %>
-            <%= link_to "Create office", new_office_path, class: "dropdown-item", id: "dropdownOffice" %>
-            <%= link_to "Create job", new_opening_path, class: "dropdown-item", id: "dropdownJob" %>
-            <%= link_to "Create post", new_post_path, class: "dropdown-item", id: "dropdownPost" %>
-            <%# if user received messages is not empty, link_to the last received message %>
-            <% if !current_user.chatrooms_as_user_two.empty? %>
-              <%= link_to "Messages", chatroom_path(current_user.chatrooms_as_user_two.last.id), class: "dropdown-item" %>
-              <%# elsif user created messages is not empty, link_to the last sent message %>
-            <% elsif !current_user.chatrooms_as_user_one.empty? %>
-              <%= link_to "Messages", chatroom_path(current_user.chatrooms_as_user_one.last.id), class: "dropdown-item" %>
-            <% else %>
-              <%= link_to "Messages", chatrooms_path, class: "dropdown-item", id: "dropdownMessages" %>
-            <% end %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link pl-0" %>
-        </li>
-      <% end %>
-    </ul>
-  </section>
+<nav>
+  <div class="flex justify-between pb-10">
+    <div class="font-tech">
+      <p>|</p>
+      <p><span class="text-cherry">· b</span>erlin</p>
+      <p>| <span class="text-cherry">a</span>rchitectural</p>
+      <p>| <span class="text-cherry">n</span>etwork</p>
+    </div>
+    <div>
+      <ul class="flex flex-row justify-end font-medium">
+        <li><a class="pr-1 text-xs" href="">DE</a></li>
+        <li><a class="pl-1 text-xs text-cherry"href="">EN</a></li>
+      </ul>
+      <div class="flex justify-end">
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+      </div>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-bold flex flex-row">
+          <li><a class="block px-3 hover:text-cherry" href="">Events</a></li>
+          <li><a class="block px-3 hover:text-cherry" href="">Offices</a></li>
+          <li><a class="block px-3 hover:text-cherry" href="">Jobs</a></li>
+          <li><a class="block px-3 hover:text-cherry" href="">Posts</a></li>
+          <li><a class="block px-3 hover:text-cherry" href="">Community</a></li>
+          <li><a class="block pl-3 hover:text-cherry" href="">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>
