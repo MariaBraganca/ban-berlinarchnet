@@ -85,7 +85,7 @@ test:
 #
 production:
   <<: *default
-  database:  <%= ENV.fetch("DATABASE_NAME_PRODUCTION") { 'ban_berlinarchnet_production' } %>
+  database:  <%= ENV.fetch("DATABASE_NAME_PRODUCTION") { 'ban-berlinarchnet-production' } %>
 
 profile:
   <<: *default

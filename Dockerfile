@@ -1,7 +1,5 @@
-FROM ruby:3.1.2-bullseye
-
-EXPOSE 3000
-WORKDIR /opt/ban-berlinarchnet
+ARG RUBY_VERSION=3.1.2
+FROM ruby:$RUBY_VERSION
 
 # Dedicated user account
 # ------------------------------------------------------------------------------
@@ -11,32 +9,32 @@ ARG USERID=1000
 RUN groupadd --gid $USERID $USERNAME
 RUN useradd --uid $USERID --gid $USERID -m $USERNAME
 
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-
 # Required packages
 # ------------------------------------------------------------------------------
-RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
-RUN apt-get update -qq && apt-get install -y \
-    libvips postgresql-client \
-&& rm -rf /var/lib/apt/lists/*
+RUN apt-get update -qq \
+    && apt-get install -y \
+        build-essential \
+        libvips \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
 
 # Rails
 # ------------------------------------------------------------------------------
-ENV BUNDLER_VERSION=2.5.4
+ARG APP_DIR=/opt/ban-berlinarchnet
+WORKDIR $APP_DIR
 
 COPY --chown=$USERNAME:$USERNAME Gemfile Gemfile.lock ./
-RUN gem install bundler:${BUNDLER_VERSION}
 RUN bundle install
 
 COPY --chown=$USERNAME:$USERNAME . .
 
+RUN bundle exec bootsnap precompile --gemfile $APP_DIR/app/ $APP_DIR/lib/
+
+RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
+
+ENTRYPOINT ["/opt/ban-berlinarchnet/bin/docker-entrypoint"]
+
 USER $USERNAME
 
-RUN bundle exec rake assets:precompile
-
-ENTRYPOINT ["entrypoint.sh"]
-
-CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
+EXPOSE 3000
+CMD ["/opt/ban-berlinarchnet/bin/rails", "server"]

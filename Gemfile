@@ -85,3 +85,5 @@ end
 group :profile do
   gem 'ruby-prof'
 end
+
+gem "dockerfile-rails", ">= 1.6", :group => :development

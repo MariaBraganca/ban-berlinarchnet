@@ -91,6 +91,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dockerfile-rails (1.6.5)
+      rails (>= 3.0.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.8.1)
@@ -152,6 +154,10 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.15.2-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.6)
@@ -261,6 +267,10 @@ GEM
     stackprof (0.2.25)
     tailwindcss-rails (2.3.0)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.3.0-aarch64-linux)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.3.0-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.3.2)
     tzinfo (2.0.6)
@@ -286,13 +296,16 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  aarch64-linux
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   acts-as-taggable-on (~> 9.0, >= 9.0.1)
   bootsnap (>= 1.4.2)
   cloudinary (~> 1.18, >= 1.18.1)
   devise (~> 4.7, >= 4.7.3)
+  dockerfile-rails (>= 1.6)
   dotenv-rails
   faker
   flamegraph
