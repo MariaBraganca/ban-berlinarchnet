@@ -1,0 +1,9 @@
+de:
+  hello: 'Hallo Welt'
+  navbar:
+    events: 'Veranstaltungen'
+    offices: 'Architekturbüros'
+    jobs: 'Stellenbörse'
+    posts: 'Beiträge'
+    community: 'Netzwerk'
+    login: 'Login'

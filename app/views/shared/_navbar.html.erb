@@ -1,7 +1,7 @@
 <nav>
   <ul class="flex flex-row justify-end">
-    <li><a class="pr-1 text-sm" href="">DE</a></li>
-    <li><a class="pl-1 text-sm text-cherry" href="">EN</a></li>
+    <li><%= link_to 'EN', url_for(locale: 'en'), class: "px-2 text-sm #{ 'text-cherry' if I18n.locale == :en }" %></li>
+    <li><%= link_to 'DE', url_for(locale: 'de'), class: "pl-2 text-sm #{ 'text-cherry' if I18n.locale == :de }" %></li>
   </ul>
   <div class="flex flex-wrap items-center justify-between mx-auto pb-10">
     <%= link_to root_path do %>
@@ -20,12 +20,12 @@
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-bold flex flex-col mt-5 md:flex-row md:p-0 md:mt-0">
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href="">Events</a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href="">Offices</a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href="">Jobs</a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href="">Posts</a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href="">Community</a></li>
-        <li><a class="block py-2 md:py-0 md:pl-3 hover:text-cherry" href="">Login</a></li>
+        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
+        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
+        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
+        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
+        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
+        <li><a class="block py-2 md:py-0 md:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
       </ul>
     </div>
   </div>

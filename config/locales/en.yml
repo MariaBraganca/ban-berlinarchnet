@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  navbar:
+    events: 'Events'
+    offices: 'Offices'
+    jobs: 'Jobs'
+    posts: 'Posts'
+    community: 'Community'
+    login: 'Login'

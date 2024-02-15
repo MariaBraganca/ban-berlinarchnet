@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_locale
   before_action { Rack::MiniProfiler.authorize_request if params[:rmp] }
   add_flash_types :validation
 
@@ -24,18 +25,21 @@ class ApplicationController < ActionController::Base
   #   flash[:alert] = "You are not authorized to perform this action."
   #   redirect_to(root_path)
   # end
-  
-  def disabled_footer
-    @disabled_footer = true
-  end
 
   private
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
 
   def default_url_options
-    { host: ENV["DOMAIN"] || "localhost:3000" }
+    {
+      host: ENV["DOMAIN"] || "localhost:3000",
+      locale: I18n.locale
+    }
   end
 end
