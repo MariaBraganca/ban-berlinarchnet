@@ -23,6 +23,7 @@ gem "importmap-rails", "~> 1.2"
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
 gem "image_processing", ">= 1.2" # Active Storage requirement
 gem "tailwindcss-rails", "~> 2.3"
+gem 'turbo-rails', '~> 2.0', '>= 2.0.2'
 
 # Authentication & Authorisation
 #-------------------------------------------------------------------------------

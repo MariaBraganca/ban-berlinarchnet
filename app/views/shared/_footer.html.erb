@@ -1,8 +1,10 @@
 <footer>
-  <div class="flex justify-center pt-10">
-    <p class="text-center lg:w-1/2"><strong>Berlin Architectural Network</strong> was created as a Meetup group in 2017 and has since attracted hundreds of architecture lovers who come together to support each other through collaboration and networked learning.<br><br>We believe in transparency and adding value to the architecture ecosystem.</p>
-  </div>
-  <ul class="flex flex-row justify-center pt-6">
+  <%= turbo_frame_tag "localize-footer-about" do %>
+    <div class="flex justify-center pt-10 pb-5">
+      <p class="text-center lg:w-1/2"><%= t('footer.about_html') %></p>
+    </div>
+  <% end %>
+  <ul class="flex flex-row items-center justify-center">
     <li>
       <a href="https://www.instagram.com/berlin_architectural_network/" aria-label="Check us on Instagram" class="px-3 hover:text-cherry">
         <i class="fa-brands fa-square-instagram"></i>

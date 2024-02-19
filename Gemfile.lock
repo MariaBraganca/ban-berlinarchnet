@@ -273,6 +273,10 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.3.2)
+    turbo-rails (2.0.2)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -332,6 +336,7 @@ DEPENDENCIES
   sprockets-rails (~> 3.4, >= 3.4.2)
   stackprof
   tailwindcss-rails (~> 2.3)
+  turbo-rails (~> 2.0, >= 2.0.2)
   watir (~> 6.16, >= 6.16.5)
   web-console (>= 3.3.0)
   whenever (~> 0.9.4)
