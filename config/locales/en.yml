@@ -30,7 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello world'
   navbar:
     events: 'Events'
     offices: 'Offices'
@@ -38,3 +38,11 @@ en:
     posts: 'Posts'
     community: 'Community'
     login: 'Login'
+  footer:
+    about_html: |
+      <strong>Berlin Architectural Network</strong> was created as a Meetup group in 2017 and has since attracted hundreds of architecture lovers who come together to support each other through collaboration and networked learning.<br>
+      We believe in transparency and adding value to the architecture ecosystem.
+  warnings:
+    under_construction_html: |
+      <strong>Dear Visitors</strong><br>
+      This website is currently under construction.

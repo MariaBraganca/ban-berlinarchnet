@@ -12,31 +12,43 @@
         <p>| <span class="text-cherry">n</span>etwork</p>
       </div>
     <% end %>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
       </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-bold flex flex-col mt-5 md:flex-row md:p-0 md:mt-0">
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
-        <li><a class="block py-2 md:py-0 md:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
-        <li><a class="block py-2 md:py-0 md:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
-      </ul>
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+      <%= turbo_frame_tag "localize-navbar-links" do %>
+        <ul class="font-bold flex flex-col mt-5 lg:flex-row lg:p-0 lg:mt-0">
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
+        </ul>
+      <% end %>
     </div>
   </div>
 </nav>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener("turbo:load", initializeToggleButton);
+  document.addEventListener("turbo:frame-load", initializeToggleButton); // Ensure functionality after frame navigation
+
+  function initializeToggleButton() {
     const toggleButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
     const menu = document.getElementById('navbar-default');
 
-    toggleButton.addEventListener('click', function () {
-      menu.classList.toggle('hidden');
-    });
-  });
+    // Remove any existing event listener to avoid duplicates
+    toggleButton.removeEventListener('click', toggleMenu);
+
+    // Add the event listener
+    toggleButton.addEventListener('click', toggleMenu);
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById('navbar-default');
+    menu.classList.toggle('hidden');
+  }
 </script>
