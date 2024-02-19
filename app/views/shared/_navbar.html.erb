@@ -1,5 +1,5 @@
 <nav>
-  <ul class="flex flex-row justify-end">
+  <ul class="flex flex-row items-center justify-end">
     <li><%= link_to 'EN', url_for(locale: 'en'), class: "px-2 text-sm #{ 'text-cherry' if I18n.locale == :en }" %></li>
     <li><%= link_to 'DE', url_for(locale: 'de'), class: "pl-2 text-sm #{ 'text-cherry' if I18n.locale == :de }" %></li>
   </ul>
