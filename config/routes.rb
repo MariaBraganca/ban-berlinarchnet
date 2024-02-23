@@ -40,7 +40,11 @@ Rails.application.routes.draw do
         post :mark_as_read
       end
     end
+  end
 
-    mount ActionCable.server => "/cable"
+  mount ActionCable.server => "/cable"
+
+  authenticate :user, -> (user) { user.admin? } do
+    mount PgHero::Engine, at: "pghero"
   end
 end
