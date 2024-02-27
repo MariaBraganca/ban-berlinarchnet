@@ -8,7 +8,7 @@ primary_region = 'ams'
 console_command = '/opt/ban-berlinarchnet/bin/rails console'
 
 [build]
-  image = 'mbraganca/ban-berlinarchnet-web:1.0.1'
+  image = 'mbraganca/ban-berlinarchnet-web:1.0.2'
 
 [deploy]
   release_command = '/opt/ban-berlinarchnet/bin/rails db:prepare'
