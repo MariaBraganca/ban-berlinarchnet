@@ -19,16 +19,20 @@
       </svg>
     </button>
     <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-      <%= turbo_frame_tag "localize-navbar-links" do %>
-        <ul class="font-bold flex flex-col mt-5 lg:flex-row lg:p-0 lg:mt-0">
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
-        </ul>
-      <% end %>
+      <ul class="font-bold flex flex-col mt-5 lg:flex-row lg:p-0 lg:mt-0">
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to t('navbar.logout'), destroy_user_session_path, data: { turbo_method: :delete }, class: "block py-2 lg:py-0 lg:pl-3 hover:text-cherry" %>
+          <% else %>
+            <%= link_to t('navbar.login'), new_user_session_path, class: "block py-2 lg:py-0 lg:pl-3 hover:text-cherry" %>
+          <% end %>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

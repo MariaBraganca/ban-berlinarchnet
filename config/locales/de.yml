@@ -6,7 +6,8 @@ de:
     jobs: 'Stellenbörse'
     posts: 'Beiträge'
     community: 'Netzwerk'
-    login: 'Login'
+    login: 'Einloggen'
+    logout: 'Ausloggen'
   footer:
     about_html: |
       <strong>Berlin Architectural Network</strong> wurde 2017 als Meetup-Gruppe gegründet und hat seitdem Hunderte von Architekturliebhabern angezogen, die zusammenkommen, um sich gegenseitig durch Zusammenarbeit und vernetztes Lernen zu unterstützen.<br>
@@ -15,3 +16,4 @@ de:
     under_construction_html: |
       <strong>Liebe Besucher</strong><br>
       Diese Website befindet sich derzeit im Aufbau.
+
