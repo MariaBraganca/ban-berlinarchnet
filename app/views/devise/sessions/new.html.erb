@@ -1,41 +1,13 @@
-<main class="container min-vh-100">
-  <!-- ***************  LOGIN FORM  **************** -->
-  <section class="row justify-content-center my-5">
-    <div class="col-lg-6 form-card px-0">
-      <div id="login-img"></div>
-      <!-- ***************  FORM ENTRIES  **************** -->
-      <section class="form-infos">
-        <h1 class="corporate text-center"><span class="red">·ban</span>login·</h1>
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="row"> 
-            <div class="col-lg-12"> <!-- EMAIL -->
-              <%= f.input :email,
-                          required: false,
-                          autofocus: true,
-                          input_html: { autocomplete: "email" } %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12"> <!-- PASSWORD -->
-              <%= f.input :password,
-                          required: false,
-                          input_html: { autocomplete: "current-password" } %>
-            </div>
-          </div>
-          <div class="row"> <!-- PASSWORD REMEMBER/FORGOTTEN -->
-            <div class="col-lg-6">
-              <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-            </div>
-            <div class="col-lg-6 text-lg-right mb-3">
-              <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-                <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-              <% end %>
-            </div>
-          </div>
-          <%= f.button :submit, "Log in", :class => "btn btn-call w-100 mb-3"%> <!-- SUBMIT -->
-        <% end %>
-        <%= render "devise/shared/links" %>
-      </section>
-    </div>
-  </section>
-</main>
+<%= form_with(model: resource, as: resource_name, url: session_path(resource_name), local: true) do |form| %>
+  <div class="flex flex-col md:flex-row md:justify-between md:items-center md:border-0 md:border-b md:border-cherry">
+    <%= form.email_field :email,
+                          required: true,
+                          placeholder: "maria@example.com",
+                          class: "block w-full border-0 border-b border-gray-500 md:border-0 focus:border-cherry leading-8 focus:ring-0 px-0 placeholder:text-gray-300" %>
+    <%= form.password_field :password, 
+                            required: true,
+                            placeholder: "********", 
+                            class: "block w-full border-0 border-b border-gray-500 md:border-0 focus:border-cherry leading-8 px-0 focus:ring-0 px-0 placeholder:text-gray-300" %>
+    <%= form.button t('navbar.login'), class: "block w-full bg-cherry px-3 py-1 rounded-sm text-white font-bold mt-6 md:w-auto md:mt-0" %>
+  </div>
+<% end %>
