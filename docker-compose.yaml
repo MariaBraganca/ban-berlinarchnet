@@ -13,6 +13,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      platforms:
+        - "linux/amd64"
     image: "ban-berlinarchnet-web:${BAN_BERLINARCHNET_VERSION}"
     env_file:
       - .env

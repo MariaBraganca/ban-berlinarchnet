@@ -1,0 +1,37 @@
+# fly.toml app configuration file generated for ban-berlinarchnet on 2024-02-07T17:59:38+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'ban-berlinarchnet'
+primary_region = 'ams'
+console_command = '/opt/ban-berlinarchnet/bin/rails console'
+
+[build]
+  image = 'mbraganca/ban-berlinarchnet-web:1.0.2'
+
+[deploy]
+  release_command = '/opt/ban-berlinarchnet/bin/rails db:prepare'
+
+[env]
+  BUNDLE_WITHOUT = 'development'
+  RAILS_ENV = 'production'
+  RAILS_LOG_TO_STDOUT = '1'
+  RAILS_SERVE_STATIC_FILES = 'true'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 256
+
+[[statics]]
+  guest_path = '/opt/ban-berlinarchnet/public'
+  url_prefix = '/'

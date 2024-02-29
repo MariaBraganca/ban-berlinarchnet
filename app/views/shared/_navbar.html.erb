@@ -1,59 +1,54 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-ban">
-  <%= link_to root_path, class: "" do %>
-    <%= image_tag(image_path_generator('logo/logo1'), class: 'avatar') %>
-  <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!-- Collapse -->
-  <section class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto"> <!-- Main menu -->
-      <li class="nav-item">
-        <%= link_to "Events", events_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Offices", offices_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Jobs", openings_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Blog", posts_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Community", users_path, class: "nav-link" %>
-      </li>
-    </ul>
-
-    <ul class="navbar-nav"> <!-- User dropdown menu -->
-      <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <%= image_tag(image_path_selector(current_user.photo, current_user.cl_img_tag), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item", id: "dropdownDashboard" %>
-            <%= link_to "Create event", new_event_path, class: "dropdown-item", id: "dropdownEvent" %>
-            <%= link_to "Create office", new_office_path, class: "dropdown-item", id: "dropdownOffice" %>
-            <%= link_to "Create job", new_opening_path, class: "dropdown-item", id: "dropdownJob" %>
-            <%= link_to "Create post", new_post_path, class: "dropdown-item", id: "dropdownPost" %>
-            <%# if user received messages is not empty, link_to the last received message %>
-            <% if !current_user.chatrooms_as_user_two.empty? %>
-              <%= link_to "Messages", chatroom_path(current_user.chatrooms_as_user_two.last.id), class: "dropdown-item" %>
-              <%# elsif user created messages is not empty, link_to the last sent message %>
-            <% elsif !current_user.chatrooms_as_user_one.empty? %>
-              <%= link_to "Messages", chatroom_path(current_user.chatrooms_as_user_one.last.id), class: "dropdown-item" %>
-            <% else %>
-              <%= link_to "Messages", chatrooms_path, class: "dropdown-item", id: "dropdownMessages" %>
-            <% end %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link pl-0" %>
-        </li>
+<nav>
+  <ul class="flex flex-row items-center justify-end">
+    <li><%= link_to 'EN', url_for(locale: 'en'), class: "px-2 text-sm #{ 'text-cherry' if I18n.locale == :en }" %></li>
+    <li><%= link_to 'DE', url_for(locale: 'de'), class: "pl-2 text-sm #{ 'text-cherry' if I18n.locale == :de }" %></li>
+  </ul>
+  <div class="flex flex-wrap items-center justify-between mx-auto pb-10">
+    <%= link_to root_path do %>
+      <div class="w-48 font-tech">
+        <p>|</p>
+        <p><span class="text-cherry">· b</span>erlin</p>
+        <p>| <span class="text-cherry">a</span>rchitectural</p>
+        <p>| <span class="text-cherry">n</span>etwork</p>
+      </div>
+    <% end %>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+      <%= turbo_frame_tag "localize-navbar-links" do %>
+        <ul class="font-bold flex flex-col mt-5 lg:flex-row lg:p-0 lg:mt-0">
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
+          <li><a class="block py-2 lg:py-0 lg:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
+        </ul>
       <% end %>
-    </ul>
-  </section>
+    </div>
+  </div>
 </nav>
+<script>
+  document.addEventListener("turbo:load", initializeToggleButton);
+  document.addEventListener("turbo:frame-load", initializeToggleButton); // Ensure functionality after frame navigation
+
+  function initializeToggleButton() {
+    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const menu = document.getElementById('navbar-default');
+
+    // Remove any existing event listener to avoid duplicates
+    toggleButton.removeEventListener('click', toggleMenu);
+
+    // Add the event listener
+    toggleButton.addEventListener('click', toggleMenu);
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById('navbar-default');
+    menu.classList.toggle('hidden');
+  }
+</script>

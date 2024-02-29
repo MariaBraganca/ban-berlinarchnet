@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '3.1.2'
+ruby '3.2.2'
 
 # Rails
 #-------------------------------------------------------------------------------
@@ -17,28 +17,18 @@ gem 'pg_search', '~> 2.3', '>= 2.3.5'
 #-------------------------------------------------------------------------------
 gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 
-# Views
-#-------------------------------------------------------------------------------
-gem 'simple_form'
-
 # Asset Pipeline
 #-------------------------------------------------------------------------------
-gem 'sassc-rails', '~> 2.1', '>= 2.1.2' # Use SCSS for stylesheets
+gem "importmap-rails", "~> 1.2"
 gem 'sprockets-rails', '~> 3.4', '>= 3.4.2' # Sprockets is now an optional dependency
-gem 'webpacker', '~> 5.4', '>= 5.4.4' # Transpile app-like JavaScript
-gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster
-gem 'turbolinks_render'
-gem 'autoprefixer-rails', '~> 10.0', '>= 10.0.2.0' # Parse CSS and add vendor prefixes to CSS rules
-gem 'font-awesome-sass' # Sass-powered version of Font Awesome for Ruby projects with specific support for Ruby on Rails and Sprockets
+gem "image_processing", ">= 1.2" # Active Storage requirement
+gem "tailwindcss-rails", "~> 2.3"
+gem 'turbo-rails', '~> 2.0', '>= 2.0.2'
 
 # Authentication & Authorisation
 #-------------------------------------------------------------------------------
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'pundit', '~> 2.1'
-
-# Monitoring/Alerting/Comparing
-#-------------------------------------------------------------------------------
-gem 'rails_admin', '~> 3.1', '>= 3.1.2'
 
 # Background processing
 #-------------------------------------------------------------------------------
@@ -96,3 +86,5 @@ end
 group :profile do
   gem 'ruby-prof'
 end
+
+gem "dockerfile-rails", ">= 1.6", :group => :development

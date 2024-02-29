@@ -1,7 +1,5 @@
-FROM ruby:3.1.2
-
-EXPOSE 3000
-WORKDIR /opt/ban-berlinarchnet
+ARG RUBY_VERSION=3.2.2
+FROM ruby:$RUBY_VERSION
 
 # Dedicated user account
 # ------------------------------------------------------------------------------
@@ -11,57 +9,32 @@ ARG USERID=1000
 RUN groupadd --gid $USERID $USERNAME
 RUN useradd --uid $USERID --gid $USERID -m $USERNAME
 
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-
 # Required packages
 # ------------------------------------------------------------------------------
-ARG KEYRINGS_PATH=/etc/apt/keyrings
-ARG SOURCES_PATH=/etc/apt/sources.list.d
-
-ENV NODE_OPTIONS="--openssl-legacy-provider"
-
-# --------------------------
-# Node.js
-# --------------------------
-RUN apt-get update && apt-get install -y \
-    ca-certificates curl gnupg lsb-release \
-&& rm -rf /var/lib/apt/lists/*
-
-RUN mkdir -p $KEYRINGS_PATH
-RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o $KEYRINGS_PATH/nodesource.gpg
-RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee $SOURCES_PATH/nodesource.list
-# --------------------------
-# Yarn
-# --------------------------
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee $SOURCES_PATH/yarn.list
-
-# --------------------------
-# PostgreSQL client
-# --------------------------
-RUN echo "deb https://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > $SOURCES_PATH/pgdg.list
-RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-
-RUN apt-get update -qq && apt-get install -y \
-    nodejs yarn postgresql-client \
-&& rm -rf /var/lib/apt/lists/*
+RUN apt-get update -qq \
+    && apt-get install -y \
+        build-essential \
+        libvips \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
 
 # Rails
 # ------------------------------------------------------------------------------
-COPY --chown=$USERNAME:$USERNAME package.json yarn.lock ./
-RUN yarn install
+ARG APP_DIR=/opt/ban-berlinarchnet
+WORKDIR $APP_DIR
 
 COPY --chown=$USERNAME:$USERNAME Gemfile Gemfile.lock ./
-RUN gem install bundler
 RUN bundle install
 
 COPY --chown=$USERNAME:$USERNAME . .
 
+RUN bundle exec bootsnap precompile --gemfile $APP_DIR/app/ $APP_DIR/lib/
+
+RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
+
+ENTRYPOINT ["/opt/ban-berlinarchnet/bin/docker-entrypoint"]
+
 USER $USERNAME
 
-RUN bundle exec rake assets:precompile
-
-ENTRYPOINT ["entrypoint.sh"]
-
-CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
+EXPOSE 3000
+CMD ["/opt/ban-berlinarchnet/bin/rails", "server"]
