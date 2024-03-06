@@ -53,6 +53,7 @@ gem 'rack-mini-profiler'
 gem 'memory_profiler' # For memory profiling
 gem 'stackprof' # For call-stack profiling flamegraphs
 gem 'flamegraph'
+gem "skylight"
 
 # External Services
 #-------------------------------------------------------------------------------
