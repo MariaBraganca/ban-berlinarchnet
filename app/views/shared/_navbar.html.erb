@@ -19,16 +19,14 @@
       </svg>
     </button>
     <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-      <%= turbo_frame_tag "localize-navbar-links" do %>
-        <ul class="font-bold flex flex-col mt-5 lg:flex-row lg:p-0 lg:mt-0">
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
-          <li><a class="block py-2 lg:py-0 lg:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
-        </ul>
-      <% end %>
+      <ul class="font-bold flex flex-col mt-5 lg:flex-row lg:p-0 lg:mt-0">
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.events') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.offices') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.jobs') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.posts') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:px-3 hover:text-cherry" href=""><%= t('navbar.community') %></a></li>
+        <li><a class="block py-2 lg:py-0 lg:pl-3 hover:text-cherry" href=""><%= t('navbar.login') %></a></li>
+      </ul>
     </div>
   </div>
 </nav>

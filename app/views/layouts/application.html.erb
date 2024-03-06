@@ -14,10 +14,9 @@
     <div class="py-5 px-10">
       <%= render 'shared/navbar' %>
       <div class="bg-gray-100 border-l-4 border-gray-500 text-gray-700 p-4" role="alert">
-        <%= turbo_frame_tag "localize-warning-under-construction" do %>
-          <p><%= t('warnings.under_construction_html') %></p>
-        <% end %>
+        <p><%= t('warnings.under_construction_html') %></p>
       </div>
+      <%= yield %>
       <%= render 'shared/footer' %>
     </div>
   </body>
