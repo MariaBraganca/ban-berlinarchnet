@@ -40,7 +40,7 @@ Rails.application.routes.draw do
         post :mark_as_read
       end
     end
-
-    mount ActionCable.server => "/cable"
   end
+
+  mount ActionCable.server => "/cable"
 end
