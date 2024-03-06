@@ -28,18 +28,24 @@ class Office < ApplicationRecord
 
   # smart methods
   def average_architecture_rating
+    return 0 if ratings.empty?
+
     average = ratings.map{|rating| rating.architecture}
-    (average.sum / average.length).to_i rescue 0
+    (average.sum / average.size).to_i
   end
 
   def average_culture_rating
+    return 0 if ratings.empty?
+
     average = ratings.map{|rating| rating.culture}
-    (average.sum / average.length).to_i rescue 0
+    (average.sum / average.size).to_i rescue 0
   end
 
   def average_salary_rating
+    return 0 if ratings.empty?
+
     average = ratings.map{|rating| rating.salary}
-    (average.sum / average.length).to_i rescue 0
+    (average.sum / average.size).to_i rescue 0
   end
 
   # def average_rating
