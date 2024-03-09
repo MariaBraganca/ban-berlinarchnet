@@ -267,6 +267,8 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     stackprof (0.2.25)
+    strong_migrations (1.7.0)
+      activerecord (>= 5.2)
     tailwindcss-rails (2.3.0)
       railties (>= 6.0.0)
     tailwindcss-rails (2.3.0-aarch64-linux)
@@ -338,6 +340,7 @@ DEPENDENCIES
   skylight
   sprockets-rails (~> 3.4, >= 3.4.2)
   stackprof
+  strong_migrations (~> 1.7)
   tailwindcss-rails (~> 2.3)
   turbo-rails (~> 2.0, >= 2.0.2)
   watir (~> 6.16, >= 6.16.5)
