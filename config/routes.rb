@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   scope "(:locale)", locale: /en|de/ do
-    root to: "pages#home"
+    # TODO's:
+    # temporarily changing root to events controller/index action
+    # should be set back to root to: "pages#home"
+    root to: "events#index"
 
     devise_for :users
 
