@@ -10,8 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_074057) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_17_175730) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
@@ -77,21 +78,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_074057) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "start_date"
-    t.string "location"
-    t.bigint "user_id", null: false
+    t.string "location", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
-    t.string "cl_img_tag"
-    t.float "latitude"
-    t.float "longitude"
-    t.string "venue"
-    t.boolean "online", default: false
-    t.string "online_link"
-    t.string "format"
-    t.datetime "end_date", precision: nil
-    t.index ["user_id"], name: "index_events_on_user_id"
+    t.string "title", null: false
+    t.datetime "date", null: false
+    t.string "meetup_id", null: false
+    t.index ["date"], name: "index_events_on_date"
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -247,7 +240,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_074057) do
   add_foreign_key "comments", "offices"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "events", "users"
   add_foreign_key "experiences", "offices"
   add_foreign_key "experiences", "users"
   add_foreign_key "messages", "chatrooms"
