@@ -1,44 +1,50 @@
-class Event < ApplicationRecord
-  # associations
-  belongs_to :user
-  has_many :rsvps, dependent: :destroy
-  has_many :users, through: :rsvps
-  has_many :comments, dependent: :nullify
+# TODO's:
+#
+# Photos:
+# development :local
+# resize images for web usage, card 1/4 viewport width
+# review images (midjourney?)
+# production: add s3 for storage
+#
+# Front End:
+# make cards bigger on hover
+# change icon for online events
+#
+# Backend:
+# change event policy
+# add anchor pagination, on date
+# load on scroll
 
-  # collection
-  $format = ["··bannetworking", "-·bantalks", "<·banwalks", "×·banworkshop"]
+class Event < ApplicationRecord
+  BERLIN_TZ = 'Berlin'
+  MEETUP_URL = "https://www.meetup.com/ban-berlin-architectural-network/events/".freeze
 
   # validations
-  validates_presence_of :start_date, :title, :description
-  validates :format, presence: true, inclusion: { in: $format }
-  validates :location, presence: true, unless: :online
-  validates :online, presence: true, unless: :location
-  validates :online_link, presence: true, if: :online
+  validates_presence_of :date, :title, :location, :meetup_id
 
   # named scopes
-  scope :next, lambda { where("start_date > ?", Time.now) }
-  scope :past, lambda { where("start_date < ?", Time.now) }
-  scope :sorted, lambda { order(start_date: :desc) }
-  scope :by_format, lambda { |format|
-    where("LOWER(format) LIKE :suffix", suffix: "%#{format.downcase}")
-  }
-  scope :by_user, lambda { |user_id|
-    where("user_id = ?", user_id)
-  }
+  scope :next, lambda { where("date > ?", Time.now) }
+  scope :past, lambda { where("date < ?", Time.now) }
+  scope :sorted, lambda { order(date: :desc) }
 
   # active storage
-  has_one_attached :cover_photo
-  has_many_attached :event_photos
-
-  # action text
-  has_rich_text :description
-
-  # mapbox
-  geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_location?
+  has_one_attached :photo do |attachable|
+    attachable.variant :card,
+      resize_to_limit: [250, 250],
+      format: :jpeg,
+      saver: { subsample_mode: "on", strip: true, interlace: true, quality: 80 }
+  end
 
   # smart methods
   def next?
-    start_date > Time.now
+    date > Time.now
+  end
+
+  def formatted_date
+    date.in_time_zone(BERLIN_TZ).strftime('%d.%b %Y')
+  end
+
+  def meetup_url
+    MEETUP_URL + meetup_id
   end
 end

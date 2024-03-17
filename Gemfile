@@ -12,6 +12,7 @@ gem 'rails', '~> 7.0', '>= 7.0.5'
 #-------------------------------------------------------------------------------
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'pg_search', '~> 2.3', '>= 2.3.5'
+gem 'strong_migrations', '~> 1.7'
 
 # Redis
 #-------------------------------------------------------------------------------
@@ -54,6 +55,15 @@ gem 'memory_profiler' # For memory profiling
 gem 'stackprof' # For call-stack profiling flamegraphs
 gem 'flamegraph'
 
+# Monitoring
+# ------------------------------------------------------------------------------
+gem "skylight"
+
+# Benchmarking
+# ------------------------------------------------------------------------------
+gem "benchmark-memory"
+gem 'benchmark-ips'
+
 # External Services
 #-------------------------------------------------------------------------------
 gem 'cloudinary', '~> 1.18', '>= 1.18.1'
@@ -68,6 +78,7 @@ gem 'pry-rails'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
+  gem 'debug'
   gem 'rspec-rails'
   gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
 end
