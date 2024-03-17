@@ -54,7 +54,15 @@ gem 'rack-mini-profiler'
 gem 'memory_profiler' # For memory profiling
 gem 'stackprof' # For call-stack profiling flamegraphs
 gem 'flamegraph'
+
+# Monitoring
+# ------------------------------------------------------------------------------
 gem "skylight"
+
+# Benchmarking
+# ------------------------------------------------------------------------------
+gem "benchmark-memory"
+gem 'benchmark-ips'
 
 # External Services
 #-------------------------------------------------------------------------------
@@ -70,6 +78,7 @@ gem 'pry-rails'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
+  gem 'debug'
   gem 'rspec-rails'
   gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
 end
