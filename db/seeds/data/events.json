@@ -1,470 +1,219 @@
 [
   {
-    "user_id": 1,
-    "start_date": "2017-12-02 16:00",
-    "end_date": "2017-12-02 19:00",
-    "format": "··bannetworking",
     "title": "Exchange your ideas, stories and experiences!",
-    "venue": "Companion Coffee",
+    "date": "2017-12-02 16:00",
     "location": "Oranienstraße 24, 10999 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Hi everyone! This meet-up is for everyone who is interested in Architecture. It's an opportunity to network and exchange ideas, stories or experiences...! On our first Meetup we will be gathering on the 2nd of December at 16:00 in Companion Coffee, Oranienstr. 24. In this creative environment, we will get together and introduce ourselves. Everyone is invited to bring an image of one of their favorite architectural projects. We'll then discuss our choices and exchange ideas! Thank you for joining and see you soon!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event1.jpg"
+    "meetup_id": "245228801"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-01-08 15:00",
-    "end_date": "2018-01-08 16:00",
-    "format": "<·banwalks",
     "title": "Tiny Houses meet global Challenges",
-    "venue": "Bauhaus Archiv",
+    "date": "2018-01-08 15:00",
     "location": "Klingelhöferstraße, 10785 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, throughout time, people always come across the following question: how should we live in society? From the small cabin to the big city, our environment is constantly evolving in an attempt to find answers to new challenges and opportunities. The project \"Tiny Houses meet global Challenges\" in Bauhaus Campus Berlin is a case study and confirmation of how it's crucial to rethink architecture in order to design the landscape of tomorrow. „Are there alternatives to container villages? How do we shape neighborhoods in an immigration society? How do we have to work, learn and teach to master the great challenges of the future?“ - Bauhaus Campus Berlin. This is where our next Meetup will take place. On Monday the 08.01.2018 at 15:00, we’ll have the opportunity to participate on a guided tour, get to know the concept and see the Tiny Houses on site. Are you interested in housing architecture and exploring news ways of living? Then come along!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event2.jpg"
+    "meetup_id": "245790958"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-02-12 18:30",
-    "end_date": "2018-02-12 20:30",
-    "format": "-·bantalks",
     "title": "Housing Architecture",
-    "venue": "Kontist GmbH",
+    "date": "2018-02-12 18:30",
     "location": "Torstraße 177, 10115 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, did you ever got through the experience of searching for an apartment in Berlin? There was a time when Berlin had to promote itself as a city to attract people and assure its own growth. One way of achieving that was to define its own identity around the idea of youth, fun and space for creative freedom. Nowadays, Berlin is facing new challenges. World events such as economy crisis and wars led people to migrate and concentrate particularly on cities. On the other hand, you've certainly heard of the airbnb effect connected with massive tourism or saw protest against gentrification on the news. All these society themes have impact on our environment. They set the terms of our time and frame the context upon which architects are about to design. Having said that, one of the hottest topics on the current architectural scene, is \"Housing Architecture\". The demand on urban areas is very high, which immediately leads to the question: how should we live in the future? Our next meetup will take place at a very special venue, the Kontist Headquarters in Torstraße 177. We will brainstorm around the following topics: how to deal with existing/new buildings, city identity, affordability, inclusion, collective versus individual living... Furthermore, we'll also have as a guest Oliver Pritzkow the spokesman of the Tiny House Project at the Bauhaus Campus Berlin, bringing his own experience and knowledge to our session. If you're into exploring and getting to know new concepts on housing architecture, come along! You're most welcome to share your ideas or projects that inspire you. Let's take this opportunity to brainstorm together and hopefully develop more awareness around this exciting architecture field!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event3.jpg"
+    "meetup_id": "246591618"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-03-16 19:30",
-    "end_date": "2018-03-16 21:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "Fahimi Bar",
+    "date": "2018-03-16 19:30",
     "location": "Skalitzer Str. 133, 10999 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members,as some of you may already know our next Meetup will be all about... Networking! On the last Brainstorming Session our group consisted of a cartographer, a painter, a graphic designer, a journalist and a couple of architects. A very rich dialog with different perspectives took place here. So, if you're looking forward to meet other members, get to know what they’re doing at the moment and exchange ideas on diverse creative fields, this is the chance! We will get together on Friday 16.03 in Fahimi Bar, Skalitzer Str. 133 at 19h30. Come along and take this opportunity to enjoy yourself while expanding your network!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event4.jpg"
+    "meetup_id": "248368000"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-04-27 18:30",
-    "end_date": "2018-04-27 20:00",
-    "format": "<·banwalks",
     "title": "Gallery Weekend Berlin",
-    "venue": "Johann König, St. Agnes",
+    "date": "2018-04-27 18:30",
     "location": "Alexandrinenstr. 118-121, 10969 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, Gallery Weekend Berlin is taking off this Friday. For those of you who‘d like to get to know better berlin’s contemporary art scene, here‘s a great opportunity. Let‘s get together at the König Galerie and make a small tour, visit all the nearby galleries. Looking forward to meetup again!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event5.jpg"
+    "meetup_id": "250059021"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-06-19 18:30",
-    "end_date": "2018-06-19 20:30",
-    "format": "<·banwalks",
     "title": "Animalesque!",
-    "venue": "Meinblau Projektraum",
+    "date": "2018-06-19 18:30",
     "location": "Christinenstraße 18-19, 10119 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, it is a well known fact that due to agriculture activity, industrial logging, as well as building human settlement, land has, throughout history of mankind, been successively and permanently converted for human use. One result of intensive human exploration of land and natural resources, is the following habitat destruction and its brutal impact on our planet's biodiversity. This is not only a main driver of species extinction but a threat to ecosystems, upon which we as human beings are ultimately dependable. An increasing awareness around this topic has led to a new architectural challenge. Can we as architects contribute to a better balance between animal life and people in urban contexts? \"The Animalesque Visiting School is aiming to understand and experience the Animal Kingdom in the urban and cultural space of Berlin. In order to understand how people and animals co-habit, we will investigate the collective behaviours of a wide range of animals from insects, birds and mammals, their patterns of displacement and territorial domains in the city.\" - http://animalesque.aaschool.ac.uk/ On our upcoming Meetup we will have the opportunity to discuss this exciting subject at Cafe Aedes and see onsite the results of a design experiment throughout the work of students regarding the behavior of bees. If you want to get to know more about this new architectural trend, come along!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event6.jpg"
+    "meetup_id": "251026441"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-08-16 14:00",
-    "end_date": "2018-08-16 15:00",
-    "format": "··bannetworking",
     "title": "Architecture is dead?",
-    "venue": "Westberlin Coffee Bar & Media Shop",
+    "date": "2018-08-16 14:00",
     "location": "Friedrichstraße 215, 10969 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, have you ever thought of sharing your project or an idea about architecture through a Meetup session? As architects one could say that things are changing around us. There‘s a lot going on from drawing to bim modelling, big data, scripting, 3D printing, virtual reality, social platforms... Architects should get together again and develop new business models. Based on this current evolution, we should be thinking about methods on how to optimize our tasks. Yet, how exactly? On our upcoming Meetup, you are all invited to network again. Meet other architects and through an open debate discuss on how we imagine the future of our profession. Please feel free as well to take advantage of this Platform by making it more meaningful and useful for our group. For instance: you want to make a Meetup about a specific subject, make a job advertisement, inform others of upcoming architecture events, in order to do this the only thing you have to do is to POST! ;-) Looking forward to meetup again!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event7.jpg"
+    "meetup_id": "253589431"
   },
   {
-    "user_id": 1,
-    "start_date": "2018-10-02 18:00",
-    "end_date": "2018-10-02 20:00",
-    "format": "-·bantalks",
     "title": "Members talk",
-    "venue": "WeWork Atrium Tower",
+    "date": "2018-10-02 18:00",
     "location": "Eichhornstraße 3, 10785 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, do you have a project, a blog or even a life experience about architecture that you would like to share? Along our path as architects, we create visions, change landscapes, mirror the spirit of times... One could say that behind every building or the smallest detail there’s a story to tell. Perhaps you’ve been abroad, want to write a book or talk about your latest revit script? On our upcoming Meetup series „BAN Talks“ the time has come to stand up and share your own story! Let us show the world that architecture is not dead. On the contrary, it’s well alive and ready to speak out! ;-) In order to have an overview of the content of our next Meetup session, i ask those who feel compelled, to post a comment with the theme of their stories. Weather if you‘re a good listener or a charismatic storyteller, you‘re all invited to come! Looking forward!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event8.jpg"
+    "meetup_id": "254532472"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-05-21 18:30",
-    "end_date": "2019-05-21 20:00",
-    "format": "-·bantalks",
     "title": "Archislavery",
-    "venue": "The Castle Berlin Mitte",
+    "date": "2019-05-21 18:30",
     "location": "Invalidenstraße 129, 10115 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "We all know that our profession can be quite hard sometimes. From grueling all-nighter at school, through cancelled weekends during our unpaid internships, to postpone vacations in our 60-hour senior level position; it is hard to find an architect who was never a victim of “archislavery”. The term came, is currently in the spotlight, recently in the architecture media, with some architects claiming it “a good tradition”, while others were asking for a ban of the practice. What about you? Have you ever worked for free? Did you ever feel victim of archislavery? But, most important, was it worth it? Do you think it is a justified practice? Let’s meet up and talk about it in our next BAN Meeting!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event9.jpg"
+    "meetup_id": "261070355"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-06-04 18:30",
-    "end_date": "2019-06-04 20:00",
-    "format": "-·bantalks",
     "title": "Architectural Vision Board",
-    "venue": "The Castle Berlin Mitte",
+    "date": "2019-06-04 18:30",
     "location": "Invalidenstraße 129, 10115 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, on our next Meetup Session, you’re all invited to build an architectural vision board. Vision boards are tools that allow people to visualize their dreams and set their goals for the future. What do we, as architects, want to achieve in the next 100 years? In order to formulate an idealised vision of the architectural future, we first need to identify our wishes and desires. On our vision board, these will be arranged according to the following 5 sectors: Construction, Technology, Marketing, Workplace and Design. 1. Construction - How do we want buildings be built in the future? 3D Printing, new Materials, Construction Site Live Scanning. 2. Technology - Can we use technology to our profit? BIM, Programming, Generative Design. 3. Marketing - How should architecture be merchandised and presented? As Art, as a Brand? AR VR Playrooms. 4. Workplace - What should be the ideal office strategy? Business models, mobile workplace, fair salaries. 5. Design - How will buildings aesthetically look like in 100 years? responsive components, algorithmic architecture. The next step will consist of collecting visualisation mediums such as photographs, sentences, quotes or drawings that mirror our architectural ambitions. The sources are up to us, it could be Pinterest, Websites, Magazines, Books, Music, Objects... You can participate by uploading your visualisation medium - named after “sector_name.jpg” - directly to our meetup web page under photo album \"Vision Board\". Short before the meetup date, we’ll put all the images together according to each sector and post a preview of the board. An architectural vision board acts as powerful motivator to enact on achieving our goals and to be more conscious about the direction that we want to pursue as architects on a long term future. This will be the starting point of our architectural debate. Join us on upcoming Meetup Session to share your own experience or ideas about the future of the architecture world! :-) Looking forward!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event10.jpg"
+    "meetup_id": "261070469"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-06-18 18:30",
-    "end_date": "2019-06-18 20:00",
-    "format": "-·bantalks",
     "title": "Fast Architecture",
-    "venue": "The Castle Berlin Mitte",
+    "date": "2019-06-18 18:30",
     "location": "Invalidenstraße 129, 10115 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, have you ever asked yourself: Why do architects work so many extra hours? One could say that with the introduction of internet, communication has never been so fast and easy. In today’s society, where growth and profit are above quality the ultimative goal, the schedule planning of projects has been according to this evolution drastically reduced. Fast food, fast fashion, fast architecture? Is it possible for us to adapt to the speed of our society without compromising the quality of your projects? It is a fact, that as architects we have to deal on daily basis with the pressure of fast driven architecture. The question is... how should we deal with it? 1. Should we continue to make extra hours in order to compensate the lack of time? How many nights have you spent at the office because of a project deadline? 2. Should we start a “slow architecture” movement - pay more for better planned architecture? Are clients willing to pay more for better architectural design? Why is it worth it? 3. Should we rethink the business models of architecture offices in order to be faster? Is there anything in our working routines, that in your opinion, could be improved? Does the introduction of BIM really make us work more efficiently? Or is it the way we communicate with each other, working methods and design processes that should be rethought in order to keep up with the world’s new pace? Join us on our next Meetup to share your own experience or ideas about this exciting and often overlooked subject! :-)",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event11.jpg"
+    "meetup_id": "261070558"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-06-30 14:00",
-    "end_date": "2019-06-30 16:00",
-    "format": "<·banwalks",
     "title": "Hansaviertel",
-    "venue": "Bahnhof Berlin Bellevue",
+    "date": "2019-06-30 14:00",
     "location": "Bellevue, 10557 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "In our first ever BAN Walks event, we'll go to Hansaviertel. It is a social housing experiment from the 60s located in on the edge of Tiergarten in former West Berlin. Our improvised guide Daniel will guide us among buildings from Alvar Aalto, Oscar Niemeyer, Le Corbusier, Walter Gropius, and many other master architects.And bring your cameras! This will also be a Photo Walk, and any photo sent to us will be published on the group page.It's time to get your Bresson out to explore great modernist architecture!It's time to get your Bresson out to explore great modernist architecture!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event12.jpg"
+    "meetup_id": "262170722"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-07-14 15:00",
-    "end_date": "2019-07-14 17:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "Café Dix in der Berlinischen Galerie in Kreuzberg",
+    "date": "2019-07-14 15:00",
     "location": "Alte Jakobstraße 124, 10969 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, are you looking for a new job? or aiming to expand your network by meeting other architects?Our upcoming Meetup it's going to be all about socializing and getting to know each other. If you're looking forward to meet members from different offices, explore what they’re doing at the moment and exchange ideas, this is the chance!Come along and take this opportunity to enjoy yourself while expanding your architectural network.Our upcoming Meetup it's going to be all about socializing and getting to know each other. If you're looking forward to meet members from different offices, explore what they’re doing at the moment and exchange ideas, this is the chance!Come along and take this opportunity to enjoy yourself while expanding your architectural network.",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event13.jpg"
+    "meetup_id": "262194734"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-08-11 15:00",
-    "end_date": "2019-08-11 17:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "Café Dix in der Berlinischen Galerie in Kreuzberg",
+    "date": "2019-08-11 15:00",
     "location": "Alte Jakobstraße 124, 10969 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, are you looking for a new job? or aiming to expand your network by meeting other architects?Our upcoming Meetup it's going to be all about socializing and getting to know each other. If you're looking forward to meet members from different offices, explore what they’re doing at the moment and exchange ideas, this is the chance!Come along and take this opportunity to enjoy yourself while expanding your architectural network.Our upcoming Meetup it's going to be all about socializing and getting to know each other. If you're looking forward to meet members from different offices, explore what they’re doing at the moment and exchange ideas, this is the chance!Come along and take this opportunity to enjoy yourself while expanding your architectural network.",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event14.jpg"
+    "meetup_id": ""
+
   },
   {
-    "user_id": 1,
-    "start_date": "2019-08-22 18:00",
-    "end_date": "2019-08-22 20:00",
-    "format": "-·bantalks",
     "title": "Members talk",
-    "venue": "WeWork Atrium Tower",
+    "date": "2019-08-22 18:00",
     "location": "Eichhornstraße 3, 10785 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN Members, do you have a project, a blog or even a life experience about architecture that you would like to share?Along our path as architects, we create visions, change landscapes, mirror the spirit of times... One could say that behind every building or the smallest detail there’s a story to tell.Perhaps you’ve been abroad, want to write a book or talk about your latest Revit script? On our second Meetup of the series „BAN Talks“ the time has come to stand up and share your own story!Whether if you‘re a good listener or a charismatic storyteller, you‘re all invited to come. Let us show the world that architecture is not dead. On the contrary, it’s well alive and ready to speak out! ;-)Along our path as architects, we create visions, change landscapes, mirror the spirit of times... One could say that behind every building or the smallest detail there’s a story to tell.Perhaps you’ve been abroad, want to write a book or talk about your latest Revit script? On our second Meetup of the series „BAN Talks“ the time has come to stand up and share your own story!Whether if you‘re a good listener or a charismatic storyteller, you‘re all invited to come. Let us show the world that architecture is not dead. On the contrary, it’s well alive and ready to speak out! ;-)If you feel like giving a talk, let us know in the comments below which topic you'd like to present, so that we can get organized.Looking forward!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event15.jpg"
+    "meetup_id": "262194810"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-09-01 8:30",
-    "end_date": "2019-09-01 19:00",
-    "format": "<·banwalks",
     "title": "Bauhaus 100",
-    "venue": "S-Bahn Kundenzentrum Alexanderplatz",
+    "date": "2019-09-01 8:30",
     "location": "Alexanderplatz, 10178 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, we are doing our first BAN Trip to Dessau. This old, quaint little town in Saxony-Anhalt was home to one of the biggest movements in the 20th Century: the Bauhaus. Under the direction of Water Gropius, followed by Hannes Meyer and Mies van der Rohe, it revolutionized not only architecture but also arts, design, literature, and many other fields. It brought modernism to the foreground and transformed design education throughout the world.This year, Bauhaus is commemorating its centenary. For that, buildings were renovated and exhibitions were set up, which makes it a perfect opportunity for a trip to Dessau to check it all out.This is the proposed transportation schedule:9:07 (arrival 10:53) Alexanderplatz to Dessau HbfThis year, Bauhaus is commemorating its centenary. For that, buildings were renovated and exhibitions were set up, which makes it a perfect opportunity for a trip to Dessau to check it all out.This is the proposed transportation schedule:9:07 (arrival 10:53) Alexanderplatz to Dessau Hbf17:05 (arrival 18:54) Dessau Hbf to AlexanderplatzDepending on the number of attendees, we can buy Brandenburger Tickets; it costs 29EUR, but allows for up to five people to travel both ways. For that, we should meet about half an hour before the scheduled time.",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event16.jpg"
+    "meetup_id": "263138394"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-09-08 13:15",
-    "end_date": "2019-09-08 15:15",
-    "format": "<·banwalks",
     "title": "PUSH - Für das Grundrecht auf wohnen",
-    "venue": "Zeiss Major Planetarium",
+    "date": "2019-09-08 13:15",
     "location": "Prenzlauer Allee 80, 10405 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN Members, for the kick off of our brand new BAN Kino series, we're going to watch a film about one of the greatest challenges of our time. Here's the synopsis:\"Housing prices are skyrocketing in cities around the world. Incomes are not. PUSH sheds light on a new kind of faceless landlord, our increasingly unliveable cities and an escalating crisis that has an effect on us all. This is not gentrification, it’s a different kind of monster. The film follows Leilani Farha, the UN Special Rapporteur on Adequate Housing, as she’s travelling the globe, trying to understand who’s being pushed out of the city and why.\"“I believe there’s a huge difference between housing as a commodity and gold as a commodity. Gold is not a human right, housing is,” – Leilani Farha.Come along if you want to get a better understanding and insight about this crisis affecting our cities world wide. We'll watch the film together and start a small discussion afterwards. Looking forward!\"Housing prices are skyrocketing in cities around the world. Incomes are not. PUSH sheds light on a new kind of faceless landlord, our increasingly unliveable cities and an escalating crisis that has an effect on us all. This is not gentrification, it’s a different kind of monster. The film follows Leilani Farha, the UN Special Rapporteur on Adequate Housing, as she’s travelling the globe, trying to understand who’s being pushed out of the city and why.\"“I believe there’s a huge difference between housing as a commodity and gold as a commodity. Gold is not a human right, housing is,” – Leilani Farha.Come along if you want to get a better understanding and insight about this crisis affecting our cities world wide. We'll watch the film together and start a small discussion afterwards. Looking forward!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event17.jpg"
+    "meetup_id": "263296610"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-09-15 14:00",
-    "end_date": "2019-09-15 16:00",
-    "format": "<·banwalks",
     "title": "Spreepark!",
-    "venue": "Spreepark",
+    "date": "2019-09-15 14:00",
     "location": "Kiehnwerderallee 1, 12437 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, on our upcoming meetup we will have the oportunity to visit the \"Spreepark\" in Berlin. This is an oficial open-day event, so there are going to be discussions about future visions, performances as well as workshops for free.The Spreepark was once a very popular East Germany amusement park and has been, since November 2001, abandoned to it's own fate. It's history is surrounded by tragic and controversial events, as you can read on the links below:Feel free to bring your camera as well as your sketchbook in case you want to register the spooky atmosphere of this lost location in Berlin.Looking forward to see you on our next BAN Walk!The Spreepark was once a very popular East Germany amusement park and has been, since November 2001, abandoned to it's own fate. It's history is surrounded by tragic and controversial events, as you can read on the links below:Feel free to bring your camera as well as your sketchbook in case you want to register the spooky atmosphere of this lost location in Berlin.Looking forward to see you on our next BAN Walk!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event18.jpg"
+    "meetup_id": "264660743"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-09-29 15:00",
-    "end_date": "2019-09-29 17:00",
-    "format": "<·banwalks",
     "title": "Walking through Walls",
-    "venue": "Martin-Gropius-Bau",
+    "date": "2019-09-29 15:00",
     "location": "Niederkirchnerstraße 7, 10963 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, 30 years have gone by since the Fall of the Berliner Wall, one of the most symbolic events of the 20th century.On our next meetup we're going to an exhibition, which explores the concepts of dividing and separating space through physical boundaries. What impact does a wall have on our spatial perception and environment? How do we deal with and react to it?Artists around the world were invited to brainstorm around this topic and bring their work together in this exhibition. Here's some more information:Come along, let's meet at the Gropius Bau and celebrate together the 30th anniversary of this historic event!On our next meetup we're going to an exhibition, which explores the concepts of dividing and separating space through physical boundaries. What impact does a wall have on our spatial perception and environment? How do we deal with and react to it?Artists around the world were invited to brainstorm around this topic and bring their work together in this exhibition. Here's some more information:Come along, let's meet at the Gropius Bau and celebrate together the 30th anniversary of this historic event!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event19.jpg"
+    "meetup_id": "264838603"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-10-30 19:00",
-    "end_date": "2019-10-30 21:00",
-    "format": "-·bantalks",
     "title": "Doomsday Architecture",
-    "venue": "The Castle Berlin Mitte",
+    "date": "2019-10-30 19:00",
     "location": "Invalidenstraße 129, 10115 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "In the USA more and more wealthy citizens are preparing for a doomsday scenario by building underground bunkers and other protective structures to defend themselves from the collapse of society. Let's meet and have a fun discussion. What if we knew for sure that in 2020 the society will collapse into chaos, how would we design buildings to protect our wealthy clients from it. Maybe the old castle designs will be resurrected to life again.We are meeting in the “Dungeon room” in the Castle pub. It is a dark room in the basement. Just to have that feeling of the doomsday...you know. Join us for a lot of crazy ideas inspired by alcohol or by our fantasy. Bring your sketch books if you like.",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event20.jpg"
+    "meetup_id": "265949982"
   },
   {
-    "user_id": 1,
-    "start_date": "2019-11-16 16:35",
-    "end_date": "2019-11-16 18:35",
-    "format": "-·bantalks",
     "title": "Humanitarian Work - dream job or nightmare?",
-    "venue": "MEININGER Hotel Berlin Tiergarten",
+    "date": "2019-11-16 16:35",
     "location": "Turmstraße 25, 10559 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "George Papa will speak about his experience working as a humanitarian worker in Ethiopia, South Sudan, Burundi, Rwanda, Haiti and Kosovo. We will have an open discussion on the pros and cons of Humanitarian Work.",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event21.jpg"
+    "meetup_id": "266334480"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-04-30 18:30",
-    "end_date": "2020-04-30 20:00",
-    "format": "-·bantalks",
     "title": "Remote Work in Architecture",
-    "venue": "",
-    "location": "",
-    "online": "true",
-    "online_link": "https://us04web.zoom.us/j/73823227013",
-    "description": "The current crisis is forcing architects all over the world to work remotely for the first time.And we want to know how is it working.What part of our jobs work and don't work in a remote setting?What tools are people using to get the work done?What are the best advantages of working from home?What part of our jobs work and don't work in a remote setting?What tools are people using to get the work done?What are the best advantages of working from home?What are the biggest issues?And, of course, the biggest question: will remote working finally find a place in our profession?",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event22.jpg"
+    "date": "2020-04-30 18:30",
+    "location": "Online",
+    "meetup_id": "270084232"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-09-09 18:30",
-    "end_date": "2020-09-09 20:30",
-    "format": "-·bantalks",
     "title": "Agile Architecture",
-    "venue": "",
-    "location": "",
-    "online": "true",
-    "online_link": "https://us02web.zoom.us/j/8951463530",
-    "description": "Dear BAN-Members, have you ever heard of Agile Management?Agile practices have been known to the tech world for a long time now. Several frameworks such as Scrum, Kanban, or XP have been developed in order to manage the workflow of complex software projects.Late in the '90s software development was becoming, due to its increasing complexity, more and more difficult to manage. Projects were out of budget, out of schedule, and ultimately lacking to respond to the client's demands.Does this ring a bell, fellow architects?Agile practices have been known to the tech world for a long time now. Several frameworks such as Scrum, Kanban, or XP have been developed in order to manage the workflow of complex software projects.Late in the '90s software development was becoming, due to its increasing complexity, more and more difficult to manage. Projects were out of budget, out of schedule, and ultimately lacking to respond to the client's demands.Does this ring a bell, fellow architects?In 2001, the release of the Agile Manifesto () transformed the project management world.",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event23.jpg"
+    "date": "2020-09-09 18:30",
+    "location": "Online",
+    "meetup_id": "268922841"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-06-30 18:30",
-    "end_date": "2020-06-30 20:30",
-    "format": "··bannetworking",
     "title": "Get back together!",
-    "venue": "James June Event GmbH",
+    "date": "2020-06-30 18:30",
     "location": "Karl-Marx-Allee 93, 10243 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear ban-members, it's time to get back together! On June the 30th we would like to gather a small group in a safe event environment. We will meet outdoors in a Biergarten and mantain the required 1.5m distance between everyone so that you can feel safe and comfortable.Furthermore, by hosting a safe event over the next 14 days, Meetup will make a donation to Global Giving's Coronavirus Relief Fund.Come along if you’re looking forward to meet other architects in Berlin and help this cause.Hope you're all doing well.Furthermore, by hosting a safe event over the next 14 days, Meetup will make a donation to Global Giving's Coronavirus Relief Fund.Come along if you’re looking forward to meet other architects in Berlin and help this cause.Hope you're all doing well.Looking forward to see you in person again!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event24.jpg"
+    "meetup_id": "271376074"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-07-06 19:00",
-    "end_date": "2020-07-06 21:00",
-    "format": "-·bantalks",
     "title": "Circular Economy in Construction",
-    "venue": "",
-    "location": "",
-    "online": "true",
-    "online_link": "https://us02web.zoom.us/j/84747101272",
-    "description": "Dear BAN-members, cities play a central role in the global economy. Home to more than half of the world’s population, they are creative, innovative centres of growth. Explore how applying the principles of the circular economy to urban development will create cities that are able to thrive in the long-term, bringing prosperity to their citizens within planetary boundaries.Furthermore, Circular Berlin is providing a workshop. Check it out:Tag 1 \"Circular Economy im Bauwesen\",Donnerstag,[masked], 14.00 - 17.00 UhrFurthermore, Circular Berlin is providing a workshop. Check it out:Tag 1 \"Circular Economy im Bauwesen\",Donnerstag,[masked], 14.00 - 17.00 UhrTag 2 \"Werkzeuge für Circular Economy\"Freitag,[masked], 14.00 - 17.30 Uhr",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event25.jpg"
+    "date": "2020-07-06 19:00",
+    "location": "Online",
+    "meetup_id": "271494054"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-07-14 18:30",
-    "end_date": "2020-07-14 20:30",
-    "format": "×·banworkshop",
     "title": "Master your Portfolio",
-    "venue": "",
-    "location": "",
-    "online": "true",
-    "online_link": "https://us02web.zoom.us/j/85070256601",
-    "description": "Dear BAN-Members, you may well know as an architect how painful the process of finding a job can be. In most cases, the decision on whether or not to invite someone to an interview, is made within first seconds of looking at a portfolio. The thing about it is, once you do it right, you will thrive!On our next Meetup we would love to help you redesign your architecture portfolio. We'll start by giving you an 101 introduction, showing you a case study and then applying the core principles by adjusting your portfolio live on screen.If you’re interested in improving your portfolio according to the best architecture practices and get feedback from other members, send it to [masked] as a pdf file until the 28th of June.*** Please keep in mind that, depending on the number of portfolios we receive, we will have to decide upon making a selection. ***On our next Meetup we would love to help you redesign your architecture portfolio. We'll start by giving you an 101 introduction, showing you a case study and then applying the core principles by adjusting your portfolio live on screen.If you’re interested in improving your portfolio according to the best architecture practices and get feedback from other members, send it to [masked] as a pdf file until the 28th of June.*** Please keep in mind that, depending on the number of portfolios we receive, we will have to decide upon making a selection. ***We can also do it anonymously, in case you prefer. We are really excited to support you on this, so if you have any further questions let us know!Our goal is for you to increase the chances of being interviewed!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event26.jpg"
+    "date": "2020-07-14 18:30",
+    "location": "Online",
+    "meetup_id": "269017036"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-07-28 19:00",
-    "end_date": "2020-07-28 21:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "James June Event GmbH",
+    "date": "2020-07-28 19:00",
     "location": "Karl-Marx-Allee 93, 10243 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN members, once again, we'll meet for a drink in our monthly networking event.Every last Tuesday of the month, we invite all members to come together and meet each other. It is a great opportunity to make new connections, have good conversations, and relax in a safe and inclusive environment.Hope to see you all there!PS: Unfortunately, we are still limiting the number of participants due to COVID19 restrictions. But the plan is to soon open it up to anyone who wants to join!Every last Tuesday of the month, we invite all members to come together and meet each other. It is a great opportunity to make new connections, have good conversations, and relax in a safe and inclusive environment.Hope to see you all there!PS: Unfortunately, we are still limiting the number of participants due to COVID19 restrictions. But the plan is to soon open it up to anyone who wants to join!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event27.jpg"
+    "meetup_id": ""
   },
   {
-    "user_id": 1,
-    "start_date": "2020-08-09 14:00",
-    "end_date": "2020-08-09 15:00",
-    "format": "<·banwalks",
     "title": "Arctic Nordic Alpine - in Dialog with Landscape, Snøhetta",
-    "venue": "Aedes Architekturforum",
+    "date": "2020-08-09 14:00",
     "location": "Christinenstraße 18, 10119 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "It's exhibition time! In our next event, we’ll meet at Aedes to check out the exhibition “Arctic Nordic Alpine,” dedicated to contemporary architecture in vulnerable landscapes and featuring pioneering projects by the internationally renowned architecture and design firm Snøhetta.You can find more details about the exhibition here: We'll meet in front of Aedes, check the exhibition, and sit down for a little coffee afterward.(many thanks to Lucas, for the tip!)You can find more details about the exhibition here: We'll meet in front of Aedes, check the exhibition, and sit down for a little coffee afterward.(many thanks to Lucas, for the tip!)",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event28.jpg"
+    "meetup_id": "272246003"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-08-15 10:00",
-    "end_date": "2020-08-15 16:00",
-    "format": "<·banwalks",
     "title": "The modern housing estates: Unesco world heritage in Berlin",
-    "venue": "Bahnhof Siemensdamm Berlin",
+    "date": "2020-08-15 10:00",
     "location": "Siemensdamm, 13629 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear members, our first walking event in 2020 will be on two wheels: we’ll ride our bikes and visit three modernist housing estates in the north of Berlin: the Siemensstadt Großsiedlung, the Schillerpark Siedlung, and the Weiße Stadt.Part of the six UNESCO-awarded housing estates in Berlin, they were built between 1913 and 1934. Architects of classical modernism, in particular Bruno Taut, Hans Scharoun, and Walter Gropius responded to the housing shortage after the First World War at the highest architectural level: modern, affordable apartments with kitchens, bathrooms, and balconies, in houses without a backyard and side wings, but with light, air and sun. The high-quality architecture, the design language, the floor plans, and the urban figures of the settlements became the model for the 20th century.We are planning a relaxed and fun Saturday, with stops for food and coffee along the way. This is our proposed schedule:10:00 Meet at U-Bhf. SiemensdammPart of the six UNESCO-awarded housing estates in Berlin, they were built between 1913 and 1934. Architects of classical modernism, in particular Bruno Taut, Hans Scharoun, and Walter Gropius responded to the housing shortage after the First World War at the highest architectural level: modern, affordable apartments with kitchens, bathrooms, and balconies, in houses without a backyard and side wings, but with light, air and sun. The high-quality architecture, the design language, the floor plans, and the urban figures of the settlements became the model for the 20th century.We are planning a relaxed and fun Saturday, with stops for food and coffee along the way. This is our proposed schedule:10:00 Meet at U-Bhf. Siemensdamm10:15 Visit Siemenstadt Großsiedlung12:00 Ride to Siedlung Schillerpark with a stop for lunch on the way (location TBD)",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event29.jpg"
+    "meetup_id": "271893775"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-08-22 14:00",
-    "end_date": "2020-08-22 15:00",
-    "format": "<·banwalks",
     "title": "MVRDV Haus Berlin",
-    "venue": "Architecture Gallery Berlin",
+    "date": "2020-08-22 14:00",
     "location": "Friedrichshain, 96, Karl-Marx-Allee, 10243 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "In our next event, let’s meet at the Architektur Galerie Berlin to visit the exhibition “MVRDV Haus Berlin,” where the Dutch studio presents its entire “German oeuvre” for the first time, consisting of more than 50 completed projects and designs.You can find more details about the exhibition here: We'll meet in front of the Architektur Galerie Berlin, check the exhibition, and sit down for a little coffee afterward.(many thanks to Lucas, for the tip!)We'll meet in front of the Architektur Galerie Berlin, check the exhibition, and sit down for a little coffee afterward.(many thanks to Lucas, for the tip!)",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event30.jpg"
+    "meetup_id": "272246257"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-08-25 19:00",
-    "end_date": "2020-08-25 21:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "James June Event GmbH",
+    "date": "2020-08-25 19:00",
     "location": "Karl-Marx-Allee 93, 10243 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, once again, we'll meet for a drink in our monthly networking event. Every last Tuesday of the month, we invite all members to come together and meet each other. It is a great opportunity to make new connections, have good conversations, and relax in a safe and inclusive environment. Hope to see you all there!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event31.jpg"
+    "meetup_id": "272246257"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-09-19 10:00",
-    "end_date": "2020-09-19 15:00",
-    "format": "<·banwalks",
     "title": "The architecture of Hinrich Baller in Berlin",
-    "venue": "Richard-Wagner-Platz",
+    "date": "2020-09-19 10:00",
     "location": "Richard-Wagner-Straße, 10585 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear members, before the Summer is over, we'll once again ride our bikes together to see some architecture in Berlin. This time, as per suggestion from our member Daniele, we’ll visit the buildings from German architect Hinrich Baller. Curved concrete balcony shells, railings the color of oxidized copper in front of generous glazing - Heinrich Baller's visions of living stand out on the western face of the capital. Bring your bikes and let do some Baller-hopping from Charlottenburg, through Schöneberg, to Kreuzberg. We are planning a relaxed and fun Saturday, with stops for food and coffee along the way. We'll meet at 10:00 (U-Bhf. Richard-Wagner-Platz) and start riding at 10:15. There are 12 stops along the way, with brief explanations about the buildings. The total riding distance will be around 17km. We will end at the Admiralsbruecke, where we'll grab a drink and enjoy the end of the day overlooking the canal (and one of the most popular Baller buildings!) We’ll post more details soon. In the meantime, get your bikes ready to explore some weird architecture :)",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event32.jpg"
+    "meetup_id": "273093952"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-09-29 19:00",
-    "end_date": "2020-09-29 21:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "James June Event GmbH",
+    "date": "2020-09-29 19:00",
     "location": "Karl-Marx-Allee 93, 10243 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear BAN-Members, once again, we'll meet for a drink in our monthly networking event. Every last Tuesday of the month, we invite all members to come together and meet each other. It is a great opportunity to make new connections, have good conversations, and relax in a safe and inclusive environment. Hope to see you all there!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event33.jpg"
+    "meetup_id": "272755665"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-10-11 14:00",
-    "end_date": "2020-10-11 16:00",
-    "format": "<·banwalks",
     "title": "Drawing the City: Paper-Based Works from 1945 to the Present",
-    "venue": "Berlinische Galerie",
+    "date": "2020-10-11 14:00",
     "location": "Alte Jakobstraße 124, 10969 Berlin",
-    "online": "false",
-    "online_link": "",
-    "description": "Dear ·ban members, on our next event, let’s meet at the Berlinische Galerie to visit the exhibition “Drawing the City: Paper-Based Works from 1945 to the Present.” \"Berlin has been drawn by its history, by triumphs and fiascos, by feudalism, pragmatism, liberalism, democracies, and dictatorships. It has also been drawn and painted by many artists. The Berlinische Galerie holds one of the biggest and most significant collections of art about the city of Berlin. A special selection will go on display from 7 August, in many cases for the first time. More than 175 works by 22 women and 47 men will be on show: mostly drawings in all formats from big to small, much in color, much in black-and-white, in very different techniques and in a variegated bouquet of representational art, photorealism, surrealism, late Expressionism, abstract styles, illustrations, and comics.\" You can find more details about it here: https://berlinischegalerie.de/en/exhibition/drawing-the-city/ We'll meet in front of the Berlinische Galerie, check out the exhibition, and sit down for a little coffee afterwards. Please, keep in mind you need to pay an entrance fee at the Galerie (more information: https://berlinischegalerie.de/en/visit/your-visit/#c2539) (many thanks to Cherry Tuen, for the tip!)",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event34.jpg"
+    "meetup_id": "272747120"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-10-27 19:00",
-    "end_date": "2020-10-27 21:00",
-    "format": "··bannetworking",
     "title": "Happy Hour!",
-    "venue": "",
-    "location": "",
-    "online": "true",
-    "online_link": "meet.google.com/hsp-mygy-oha",
-    "description": "Dear BAN-Members, as much as we'd love to keep with our regular Biergarten meetings, Winter is on its way and a little virus is forcing us to move our networking events online. But, fear not! This won't be your regular Zoom meeting: we are taking this chance to try out some incredible tools that popped up lately due to everyone's Zoom-fatigue. We'll try our best to make it fun and exciting, and also a little messy! Grab your drinks and let's go! PS: We'll post more details here soon!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event35.jpg"
+    "date": "2020-10-27 19:00",
+    "location": "Online",
+    "meetup_id": "273920077"
   },
   {
-    "user_id": 1,
-    "start_date": "2020-11-11 19:00",
-    "end_date": "2020-11-11 21:00",
-    "format": "-·bantalks",
     "title": "Members talk",
-    "venue": "",
-    "location": "",
-    "online": "true",
-    "online_link": "soon to be announced",
-    "description": "Dear BAN-Members, do you have a project, a blog or even a life experience about architecture that you would like to share? Along our path as architects we create visions, change landscapes, mirror the spirit of times... One could say that behind every building and smallest detail there’s a story to tell. Perhaps you’ve been abroad, want to write a book or talk about your latest Revit script? On our next Meetup of the series „Member talks“ the time has come to stand up and share your own story! At the moment we've scheduled the following talks: - Cherry Cheung and Vian Ho - Public Space and Social Movement. - Sasha – Artwork. - Alejandro Del Pino - Construction Materials. Whether if you‘re a good listener or a charismatic storyteller, you‘re all invited to come. Let us show the world that architecture is not dead, on the contrary, it’s well alive and ready to speak out! ;-) Looking forward to see you there!",
-    "cl_img_tag": "https://res.cloudinary.com/db5jh0zwo/image/upload/v1603105183/events/event36.jpg"
+    "date": "2020-11-11 19:00",
+    "location": "Online",
+    "meetup_id": "273994480"
   }
 ]
